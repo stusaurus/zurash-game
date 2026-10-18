@@ -17,6 +17,8 @@ let state = initial(),
   selected = null,
   mode = "cpu",
   history = [],
+  moveLog = [],
+  resultSeen = false,
   seen = new Map(),
   busy = false,
   epoch = 0,
@@ -28,6 +30,9 @@ const tokenEls = [0, 1].map((p) => {
   $("tokens").append(el);
   return el;
 });
+function shiftArrow(from, to) {
+  return ({ [-7]: "↑", [1]: "→", [7]: "↓", [-1]: "←" })[to - from] || "";
+}
 function cpuTurn() {
   return mode === "cpu" && state.turn === 1 && state.winner === null;
 }
@@ -72,7 +77,7 @@ function render() {
         (phase === "wall" && moves.some((m) => m.wall === wall))
       );
     if (state.stars.includes(i)) b.innerHTML = '<span class="star">★</span>';
-    if (target) b.textContent = "↟";
+    if (target) b.textContent = shiftArrow(state.walls[target.wall], target.to);
     b.onclick = () => {
       if (target) {
         state = moveWall(state, target);
@@ -157,7 +162,16 @@ async function playSlide(dir) {
   } catch {
     return;
   }
+  const player = state.turn;
+  const wallIndex = state.walls.findIndex((v, i) => v !== turnStart.walls[i]);
+  const lastAction = {
+    player, dir,
+    wallDirection: wallIndex === -1
+      ? null : shiftArrow(turnStart.walls[wallIndex], state.walls[wallIndex]),
+    scored: next.scores[player] > state.scores[player],
+  };
   history.push(clone(turnStart));
+  moveLog.push(lastAction);
   state = next;
   busy = true;
   selected = null;
@@ -227,6 +241,7 @@ function reset() {
   phase = "wall";
   selected = null;
   history = [];
+  moveLog = [];
   seen = new Map();
   remember();
   turnStart = clone(state);
