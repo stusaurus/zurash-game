@@ -178,6 +178,7 @@ for (let layout=0;layout<LAYOUTS.length;layout++) {
   assert.ok(valid(original, false), "Existing stage invalid: " + layout);
   const trainingOffset = PARAMS.seed + layout * 1_000_000;
   let frontier = [{...original, mutation:"unchanged"}], bestLoss=Infinity, unchangedRounds=0;
+  let bestOverall = null;
   const rounds=[];
   for (let round=0;round<PARAMS.rounds;round++) {
     if (Date.now()-started >= PARAMS.maxSeconds*1000) break;
@@ -186,19 +187,28 @@ for (let layout=0;layout<LAYOUTS.length;layout++) {
       options.set(canonical(parent), parent);
       for (const m of mutations(parent)) options.set(canonical(m), m);
     }
-    // Always keep the baseline in the pool, even if random candidate selection is used.
+    // Carry the global training champion forward, even when the final round
+    // does not improve. Otherwise the "winner" can become a worse last-round
+    // proposal merely because it was one of the sampled neighbors.
+    if (bestOverall) options.set(canonical(bestOverall.spec), bestOverall.spec);
     options.set(canonical(original), {...original,mutation:"original"});
     const all = [...options.values()];
-    const selected = shuffled(all.filter(s=>canonical(s)!==canonical(original)),
-      PARAMS.seed + layout*101+round*3107).slice(0,Math.max(0,PARAMS.variants-1));
-    selected.unshift({...original,mutation:"original"});
+    const mandatory = bestOverall && canonical(bestOverall.spec)!==canonical(original)
+      ? [bestOverall.spec] : [];
+    const mandatoryKeys = new Set(mandatory.map(canonical));
+    const selected = shuffled(all.filter(s=>canonical(s)!==canonical(original)&&!mandatoryKeys.has(canonical(s))),
+      PARAMS.seed + layout*101+round*3107).slice(0,Math.max(0,PARAMS.variants-1-mandatory.length));
+    selected.unshift({...original,mutation:"original"}, ...mandatory);
     const scores = selected.map(spec=>{
       // Multi-agent screening: greed-only optimization produced severe
       // route/search overfitting in the first 1,152-game round.
       const greedy=evaluate(spec,"greedy",PARAMS.trainPairs,trainingOffset);
       const search=evaluate(spec,"search",PARAMS.searchTrainPairs,trainingOffset + 31_007);
       const route=evaluate(spec,"route",PARAMS.routeTrainPairs,trainingOffset + 61_009);
-      const loss=.30*trainingLoss(greedy)+.30*trainingLoss(search)+.40*trainingLoss(route);
+      // Optimize the weakest policy: averaging hid 20-point initiative bias
+      // under a coincidental 50/50 result for another AI.
+      const losses=[trainingLoss(greedy),trainingLoss(search),trainingLoss(route)];
+      const loss=.75*Math.max(...losses)+.25*losses.reduce((a,b)=>a+b,0)/losses.length;
       return { spec, loss, training:{greedy,search,route} };
     }).sort((a,b)=>a.loss-b.loss || canonical(a.spec).localeCompare(canonical(b.spec)));
     const champion=scores[0];
@@ -207,12 +217,15 @@ for (let layout=0;layout<LAYOUTS.length;layout++) {
         loss:+champion.loss.toFixed(5),training:champion.training},
       baselineTraining:scores.find(x=>x.spec.mutation==="original")?.training,
     });
-    frontier=scores.slice(0,2).map(x=>x.spec);
-    if(champion.loss + PAD < bestLoss){bestLoss=champion.loss;unchangedRounds=0;}
-    else unchangedRounds++;
+    if(champion.loss + PAD < bestLoss){
+      bestLoss=champion.loss;bestOverall=champion;unchangedRounds=0;
+    } else unchangedRounds++;
+    frontier=[bestOverall?.spec,...scores.slice(0,2).map(x=>x.spec)].filter(Boolean)
+      .filter((spec,i,all)=>all.findIndex(x=>canonical(x)===canonical(spec))===i)
+      .slice(0,2);
     if(unchangedRounds>=2)break;
   }
-  const champ=frontier[0] || original;
+  const champ=bestOverall?.spec || original;
   const same=canonical(champ) === canonical(original);
   const checks=[];
   // Training and validation use disjoint seed bands, and each is independent of the
