@@ -17,6 +17,8 @@ let state = initial(),
   selected = null,
   mode = "cpu",
   history = [],
+  moveLog = [],
+  resultSeen = false,
   seen = new Map(),
   busy = false,
   epoch = 0,
@@ -28,6 +30,9 @@ const tokenEls = [0, 1].map((p) => {
   $("tokens").append(el);
   return el;
 });
+function shiftArrow(from, to) {
+  return ({ [-7]: "↑", [1]: "→", [7]: "↓", [-1]: "←" })[to - from] || "";
+}
 function cpuTurn() {
   return mode === "cpu" && state.turn === 1 && state.winner === null;
 }
@@ -72,7 +77,7 @@ function render() {
         (phase === "wall" && moves.some((m) => m.wall === wall))
       );
     if (state.stars.includes(i)) b.innerHTML = '<span class="star">★</span>';
-    if (target) b.textContent = "↟";
+    if (target) b.textContent = shiftArrow(state.walls[target.wall], target.to);
     b.onclick = () => {
       if (target) {
         state = moveWall(state, target);
@@ -94,9 +99,20 @@ function render() {
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? "CPU" : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / 3</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === 2 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? "CPU" : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / 3${state.scores[p] === 2 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
     )
     .join("");
+  const last = moveLog.at(-1);
+  const recap = $("lastMove");
+  recap.hidden = !last;
+  recap.classList.toggle("scored", Boolean(last?.scored));
+  if (last) {
+    const player = mode === "cpu"
+      ? (last.player === 0 ? "あなた" : "CPU")
+      : `プレイヤー${last.player + 1}`;
+    recap.textContent =
+      `${player}：${last.wallDirection ? `壁を${last.wallDirection}に移動` : "壁はそのまま"} → ${DIRS[last.dir].name}に滑走${last.scored ? " → ★ゲット！" : ""}`;
+  }
   $("phaseBadge").textContent = phase === "wall" ? "1" : "2";
   $("phaseTitle").textContent =
     state.winner !== null
@@ -133,11 +149,22 @@ function render() {
   $("localMode").classList.toggle("active", mode === "local");
   $("cpuMode").setAttribute("aria-pressed", mode === "cpu");
   $("localMode").setAttribute("aria-pressed", mode === "local");
-  $("result").hidden = state.winner === null;
   if (state.winner !== null) {
     $("resultTitle").textContent =
       `${mode === "cpu" ? (state.winner === 0 ? "あなた" : "CPU") : `プレイヤー${state.winner + 1}`}の勝ち！`;
-    $("resultText").textContent = `${state.ply}手で決着。星を3個、つかまえた！`;
+    $("resultText").textContent =
+      `最終スコア ${state.scores[0]}対${state.scores[1]}。${state.ply}手目、${last?.wallDirection ? `壁を${last.wallDirection}へずらし` : "壁を動かさずに"}${DIRS[last?.dir ?? 0].name}へ滑走し、決勝の星をゲット！`;
+    $("result").classList.toggle("defeat", mode === "cpu" && state.winner === 1);
+    if (!busy && !resultSeen) {
+      resultSeen = true;
+      const token = epoch;
+      setTimeout(() => {
+        if (epoch === token && state.winner !== null && !$("result").open) {
+          $("result").showModal();
+          $("rematch").focus();
+        }
+      }, 420);
+    }
   }
 }
 function flash() {
@@ -157,7 +184,16 @@ async function playSlide(dir) {
   } catch {
     return;
   }
+  const player = state.turn;
+  const wallIndex = state.walls.findIndex((v, i) => v !== turnStart.walls[i]);
+  const lastAction = {
+    player, dir,
+    wallDirection: wallIndex === -1
+      ? null : shiftArrow(turnStart.walls[wallIndex], state.walls[wallIndex]),
+    scored: next.scores[player] > state.scores[player],
+  };
   history.push(clone(turnStart));
+  moveLog.push(lastAction);
   state = next;
   busy = true;
   selected = null;
@@ -222,11 +258,14 @@ function acceptCPU(action, id) {
 }
 function reset() {
   epoch++;
+  if ($("result").open) $("result").close();
+  resultSeen = false;
   busy = false;
   state = initial(Number($("layout").value), Number($("starter").value));
   phase = "wall";
   selected = null;
   history = [];
+  moveLog = [];
   seen = new Map();
   remember();
   turnStart = clone(state);
@@ -252,6 +291,8 @@ $("undo").onclick = () => {
   }
   phase = "wall";
   selected = null;
+  resultSeen = false;
+  moveLog.length = history.length;
   turnStart = clone(state);
   seen = new Map();
   history.forEach((s) => seen.set(key(s), (seen.get(key(s)) || 0) + 1));
@@ -269,6 +310,7 @@ function openSetup(nextMode) {
 }
 $("settings").onclick = () => openSetup(mode);
 $("rematch").onclick = reset;
+$("reviewFinal").onclick = () => $("result").close();
 // Mode changes are staged in the new-match dialog; cancellation leaves the active match intact.
 let pendingMode = null;
 for (const [id, m] of [
