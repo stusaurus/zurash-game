@@ -203,3 +203,18 @@ test('wall choices always leave a legal sliding continuation',async({page})=>{
  await doAction(page,s,{wall:null,dir:3});
  await expect(page.locator('#turnCount')).toHaveText('3手目');
 });
+
+test("stage choices exclude unverified maps and display the active stage", async ({ page }, testInfo) => {
+  const press = testInfo.project.use.hasTouch ? "tap" : "click";
+  await page.goto("/");
+  await expect(page.locator("#currentStage")).toContainText("はじまりの氷原");
+  await page.locator("#settings")[press]();
+  await expect(page.locator("#layout option")).toHaveCount(3);
+  await page.locator("#layout").selectOption("2");
+  await page.locator("#start")[press]();
+  await expect(page.locator("#currentStage")).toContainText("こおりの回廊");
+  await expect(page.locator(".cell")).toHaveCount(49);
+  await page.locator("#skip")[press]();
+  await page.locator("#directions button:not([disabled])").first()[press]();
+  await expect(page.locator("#turnCount")).toHaveText("3手目", { timeout: 30000 });
+});

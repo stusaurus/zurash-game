@@ -42,6 +42,7 @@
           </div>
           <button id="settings" class="quiet">新しい対戦</button>
         </div>
+        <p id="currentStage" class="stage-label" aria-live="polite"></p>
         <div id="scores" class="scores"></div>
         <div class="instruction" aria-live="polite">
           <span id="phaseBadge">1</span>
@@ -118,10 +119,13 @@
       <h2>氷原へ、出発。</h2>
       <label
         >盤面<select id="layout">
-          <option value="0">はじまりの氷原</option>
-          <option value="1">ふたつの谷</option>
-          <option value="2">こおりの回廊</option>
-        </select></label
+          <optgroup label="現在の3ステージ">
+            <option value="0">はじまりの氷原</option>
+            <option value="1">ふたつの谷</option>
+            <option value="2">こおりの回廊</option>
+          </optgroup>
+        </select>
+      </label
       ><label
         >先に動くプレイヤー<select id="starter">
           <option value="0">プレイヤー1（あなた）</option>

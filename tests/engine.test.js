@@ -161,3 +161,11 @@ test('wall phase cannot offer a shift with no legal slide continuation', () => {
   assert.throws(()=>moveWall(s,{wall:0,to:7}));
   for(const w of movableWalls(s))assert.ok(slideOptions(moveWall(s,w)).length);
 });
+
+test("do not publish uncertified stage candidates", () => {
+  // A new stage must pass the documented fair-play gate before this roster is extended.
+  assert.deepEqual(LAYOUTS.map((s) => s.name), [
+    "はじまりの氷原", "ふたつの谷", "こおりの回廊",
+  ]);
+  assert.ok(LAYOUTS.every((s) => !s.experimental));
+});
