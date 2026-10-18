@@ -675,6 +675,7 @@ h1 {
   color: #74521b;
 }
 dialog.result {
+  margin: auto;
   width: calc(100% - 36px);
   max-width: 420px;
   padding: 27px 22px 24px;
