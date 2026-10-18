@@ -2,7 +2,9 @@ name: Game quality
 on:
   push:
     branches: [main, "feat/**"]
+    paths-ignore: ["README.md", "reports/**"]
   pull_request:
+    paths-ignore: ["README.md", "reports/**"]
 permissions:
   contents: read
 jobs:

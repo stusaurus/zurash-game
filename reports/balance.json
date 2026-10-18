@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-18T04:09:48.338Z",
+  "date": "2026-10-18T04:13:06.848Z",
   "pairs": 20,
   "limit": 160,
   "search": "two-ply minimax, beam=6, opponent replies with early rejection, fixed seed; UI beam=8",

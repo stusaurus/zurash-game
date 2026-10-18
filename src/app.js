@@ -260,11 +260,14 @@ $("undo").onclick = () => {
   if (cpuTurn()) runCPU();
 };
 $("help").onclick = () => $("helpDialog").showModal();
-$("settings").onclick = () => $("setupDialog").showModal();
-$("start").onclick = () => {
-  $("setupDialog").close();
-  reset();
-};
+function openSetup(nextMode) {
+  $("starter").options[0].textContent =
+    nextMode === "cpu" ? "プレイヤー1（あなた）" : "プレイヤー1";
+  $("starter").options[1].textContent =
+    nextMode === "cpu" ? "プレイヤー2（CPU）" : "プレイヤー2";
+  $("setupDialog").showModal();
+}
+$("settings").onclick = () => openSetup(mode);
 $("rematch").onclick = reset;
 // Mode changes are staged in the new-match dialog; cancellation leaves the active match intact.
 let pendingMode = null;
@@ -275,7 +278,7 @@ for (const [id, m] of [
   $(id).onclick = () => {
     if (m === mode) return;
     pendingMode = m;
-    $("setupDialog").showModal();
+    openSetup(m);
   };
 $("setupDialog").addEventListener("close", () => {
   pendingMode = null;
