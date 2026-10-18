@@ -135,7 +135,9 @@ function reset(){
  stopCPU();mode=el("mode").value;layout=Number(el("layout").value);
  starter=Number(el("starter").value);seed=globalThis.crypto?.getRandomValues?
    crypto.getRandomValues(new Uint32Array(1))[0]:Math.floor(Math.random()*4294967296);
- state=initialCurry(layout,starter,PAIR[layout]);
+ el("curryPair").disabled=layout!==2;
+ const foodPair=layout===2?el("curryPair").value.split(",").map(Number):PAIR[layout];
+ state=initialCurry(layout,starter,foodPair);
  history=[];moveLog=[];seen=new Map();phase="wall";selectedWall=null;pendingWall=null;
  if(el("result").open)el("result").close();
  remember();render();
@@ -158,6 +160,7 @@ el("undo").onclick=()=>{
  render();
  if(mode==="cpu"&&state.turn===1)runCPU();
 };
+el("layout").addEventListener("change",()=>{el("curryPair").disabled=Number(el("layout").value)!==2;});
 el("new").onclick=reset;
 el("replay").onclick=reset;
 el("closeResult").onclick=()=>el("result").close();
