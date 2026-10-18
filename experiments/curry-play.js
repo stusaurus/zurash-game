@@ -4,7 +4,8 @@ import {turnSeed} from "../src/cpu-seed.js";
 import {initialCurry,successorsCurry,stateKeyCurry} from "./curry-power.js";
 import {chooseCurry} from "./curry-ai.js";
 const el=id=>document.getElementById(id);
-const PAIR={0:[7,41],1:[7,41],2:[13,35]};
+// The strongest candidate of the two tested corridor setups. Experimental only.
+const PAIR={0:[7,41],1:[7,41],2:[21,27]};
 let state,phase="wall",selectedWall=null,pendingWall=null,seen=new Map(),history=[],
     moveLog=[],mode="cpu",layout=2,starter=0,worker=null,epoch=0,waiting=false,seed=37;
 const cloneState=s=>structuredClone(s);
