@@ -20,12 +20,29 @@ function evaluate(s, p) {
   if(s.scores[opponent]===2)v-=125;
   return v;
 }
+// Ignore wall coordinates only for measuring repeatedly unproductive motion:
+// a player can otherwise oscillate by moving different walls while returning
+// to the same pawn/star/food/score situation.
+export function progressKey(s) {
+  return JSON.stringify([
+    [...s.stars].sort((a,b)=>a-b), s.players, s.scores, s.turn,
+    [...s.curries].sort((a,b)=>a-b), s.powers,
+  ]);
+}
 export function chooseCurry(s,{rng=Math.random,seen=new Map(),extra=2,level="strong"}={}) {
   const options=successorsCurry(s,extra);
   if(!options.length)return null;
   if(level==="random")return options[Math.floor(rng()*options.length)].a;
-  const me=s.turn,opponent=1-me;
-  const repetition=n=>(seen.get(stateKeyCurry(n))||0)*110;
+  const me=s.turn;
+  const progress = level === "progress";
+  const progressSeen=new Map();
+  if(progress)for(const [stored,count] of seen){
+    const [walls,stars,players,scores,turn,curries,powers] = JSON.parse(stored);
+    const compact=JSON.stringify([stars,players,scores,turn,curries,powers]);
+    progressSeen.set(compact,(progressSeen.get(compact)||0)+count);
+  }
+  const repetition=n=>(seen.get(stateKeyCurry(n))||0)*110
+    +(progress ? Math.min(5,progressSeen.get(progressKey(n))||0)*135 : 0);
   const scored=options.map(x=>({
     ...x,priority:evaluate(x.n,me)-repetition(x.n),tie:rng(),
   })).sort((a,b)=>b.priority-a.priority||a.tie-b.tie);
