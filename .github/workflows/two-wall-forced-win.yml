@@ -1,0 +1,40 @@
+name: Two-wall forced-win exhaustive tactical audit
+on:
+  push:
+    branches: [experiment/two-wall-forced-win-audit]
+    paths:
+      - .github/workflows/two-wall-forced-win.yml
+      - scripts/two-wall-forced-win.js
+      - tests/two-wall-forced-win.test.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  forced-tactic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Check all existing and research unit tests
+        run: npm test
+      - name: Generate fully verified local forced-win proofs
+        env:
+          GAMES: "14"
+          PLY_CAP: "22"
+          STATES: "32"
+          CALL_BUDGET: "14000"
+          CLOCK_MS: "900000"
+          SEED: "872903"
+          CURRY_PAIRS: "21,27;5,43"
+          REPORT: reports/two-wall-forced-win.json
+        run: node scripts/two-wall-forced-win.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: two-wall-forced-win-proof
+          path: reports/two-wall-forced-win.json
+          retention-days: 90
