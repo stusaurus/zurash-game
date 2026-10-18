@@ -17,11 +17,15 @@ export function rotateCurryState(s){
  };
 }
 export function rotateTwoWallAction(a){
- return a===null?null:{
-  wall:a.wall===null?null:{wall:a.wall.wall,to:flip(a.wall.to)},
-  secondWall:a.secondWall===null?null:{wall:a.secondWall.wall,to:flip(a.secondWall.to)},
-  dir:(a.dir+2)%4,
- };
+ if(a===null)return null;
+ // Preserve property insertion order from existing valid actions:
+ // one-wall actions have {wall,dir,secondWall}, two-wall actions have
+ // {wall,secondWall,dir}. The UI and research matcher serialize them.
+ return Object.fromEntries(Object.entries(a).map(([field,value])=>{
+  if(field==="dir")return [field,(value+2)%4];
+  if(value===null)return [field,null];
+  return [field,{wall:value.wall,to:flip(value.to)}];
+ }));
 }
 export function rotateCurryHistory(seen){
  const out=new Map();
