@@ -141,3 +141,21 @@ test("CPU worker responds and undo returns to human turn; reset cancels pending 
   await expect(page.locator("#skip")).toBeEnabled();
   expect(errors).toEqual([]);
 });
+
+test("CPU continues on turn four (second worker response)", async ({ page }, testInfo) => {
+  const press = testInfo.project.use.hasTouch ? "tap" : "click";
+  const errors = [];
+  page.on("pageerror", (e) => errors.push(String(e)));
+  await page.goto("/");
+  for (let humanTurn = 0; humanTurn < 2; humanTurn++) {
+    await expect(page.locator("#skip")).toBeEnabled({ timeout: 30000 });
+    await page.locator("#skip")[press]();
+    await page.locator("#directions button:not([disabled])").first()[press]();
+    await expect(page.locator("#turnCount")).toHaveText(
+      `${2 * humanTurn + 3}手目`, { timeout: 30000 },
+    );
+    await expect(page.locator("#skip")).toBeEnabled();
+  }
+  await expect(page.locator("#phaseTitle")).toContainText("あなた");
+  expect(errors).toEqual([]);
+});
