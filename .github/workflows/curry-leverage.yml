@@ -25,9 +25,30 @@ jobs:
           MAX_PLIES: "120"
           REPORT: reports/curry-tactical-leverage.json
         run: node scripts/curry-tactical-leverage.js
+      - name: Validate three shortlisted placements against a new seed set
+        env:
+          PAIRS: "48"
+          MAX_PLIES: "160"
+          SEED_OFFSET: "12500987"
+          POLICIES: strong
+          PLACEMENTS: "5,43;13,35;21,27"
+          REPORT: reports/curry-leverage-holdout.json
+        run: node scripts/curry-tactical-leverage.js
+      - name: Independently revalidate the three placements with disjoint seeds
+        env:
+          PAIRS: "48"
+          MAX_PLIES: "160"
+          SEED_OFFSET: "39000839"
+          POLICIES: strong
+          PLACEMENTS: "5,43;13,35;21,27"
+          REPORT: reports/curry-leverage-validation.json
+        run: node scripts/curry-tactical-leverage.js
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: curry-tactical-opportunity-scan
-          path: reports/curry-tactical-leverage.json
+          path: |
+            reports/curry-tactical-leverage.json
+            reports/curry-leverage-holdout.json
+            reports/curry-leverage-validation.json
           retention-days: 90
