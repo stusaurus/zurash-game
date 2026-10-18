@@ -1,5 +1,6 @@
 import {
   initial,
+  LAYOUTS,
   clone,
   DIRS,
   movableWalls,
@@ -44,6 +45,7 @@ function remember() {
   seen.set(k, (seen.get(k) || 0) + 1);
 }
 function render() {
+  $("currentStage").textContent = `ステージ：${LAYOUTS[activeSettings.layout].name}`;
   const locked = busy || cpuTurn() || state.winner !== null,
     moves = phase === "wall" ? movableWalls(state) : [],
     stops = phase === "slide" ? slideOptions(state) : [];
