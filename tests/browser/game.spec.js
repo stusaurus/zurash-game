@@ -143,3 +143,28 @@ test("CPU responds on its second turn (fourth ply), not just the first", async (
   await expect(page.locator("#phaseTitle")).toContainText("あなた");
   expect(errors).toEqual([]);
 });
+test("challenge mode is selectable, survives CPU turns, and can switch to normal", async ({ page }, testInfo) => {
+  const press = testInfo.project.use.hasTouch ? "tap" : "click";
+  const errors = [];
+  page.on("pageerror", (e) => errors.push(String(e)));
+  await page.goto("/");
+  await expect(page.locator("#scores")).toContainText("CPU（つよい）");
+  await page.locator("#settings")[press]();
+  await expect(page.locator("#cpuLevel")).toHaveValue("strong");
+  await page.locator("#cpuLevel").selectOption("search");
+  await page.locator("#start")[press]();
+  await expect(page.locator("#scores")).toContainText("CPU（ふつう）");
+  await page.locator("#skip")[press]();
+  await page.locator("#directions button:not([disabled])").first()[press]();
+  await expect(page.locator("#turnCount")).toHaveText("3手目", { timeout: 30000 });
+  await page.locator("#settings")[press]();
+  await page.locator("#cpuLevel").selectOption("strong");
+  await page.locator("#start")[press]();
+  await expect(page.locator("#scores")).toContainText("CPU（つよい）");
+  for (let i = 0; i < 2; i++) {
+    await page.locator("#skip")[press]();
+    await page.locator("#directions button:not([disabled])").first()[press]();
+    await expect(page.locator("#turnCount")).toHaveText(`${i * 2 + 3}手目`, { timeout: 30000 });
+  }
+  expect(errors).toEqual([]);
+});
