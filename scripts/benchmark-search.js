@@ -1,6 +1,8 @@
+// Historical PR #6 validation. New route CPU uses benchmark-route-ai.js.
 import fs from 'node:fs';
 import {initial,apply,key} from '../src/engine.js';
-import {choose,seeded} from '../src/ai.js';
+import {seeded} from '../src/ai.js';
+import {choose} from './reference/ai-pre-route.js';
 import {choose as baseline} from './reference/ai-v1.js';
 const corpus=[];
 for(let l=0;l<3;l++){

@@ -1,0 +1,8 @@
+{
+  "positions": 7180,
+  "queries": 14360,
+  "certificates": 3980,
+  "exactlyMatchedExhaustiveSuccessors": true,
+  "seedBase": 700001,
+  "notes": "Reachable random-play positions across three layouts, both player perspectives. Not a proof over the entire state space."
+}

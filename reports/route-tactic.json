@@ -1,0 +1,867 @@
+{
+  "found": true,
+  "checked": 4,
+  "fixture": {
+    "state": {
+      "walls": [
+        8,
+        19,
+        9,
+        18,
+        44,
+        32,
+        46,
+        41
+      ],
+      "stars": [
+        17,
+        24,
+        31
+      ],
+      "players": [
+        3,
+        43
+      ],
+      "scores": [
+        2,
+        0
+      ],
+      "turn": 0,
+      "ply": 9,
+      "winner": null
+    },
+    "seen": [
+      [
+        "[[8,12,16,18,30,32,36,40],[3,17,24,31,45],[42,6],[0,0],1]",
+        1
+      ],
+      [
+        "[[8,16,18,19,30,32,36,40],[3,17,24,31,45],[42,48],[0,0],0]",
+        1
+      ],
+      [
+        "[[8,16,18,19,30,32,37,40],[3,17,24,31,45],[47,48],[0,0],1]",
+        1
+      ],
+      [
+        "[[8,16,18,19,30,32,38,40],[3,17,24,31,45],[47,6],[0,0],0]",
+        1
+      ],
+      [
+        "[[8,16,18,19,32,37,38,40],[3,17,24,31,45],[48,6],[0,0],1]",
+        1
+      ],
+      [
+        "[[8,9,18,19,32,37,38,40],[3,17,24,31,45],[48,0],[0,0],0]",
+        1
+      ],
+      [
+        "[[8,9,18,19,32,38,40,44],[3,17,24,31],[45,0],[1,0],1]",
+        1
+      ],
+      [
+        "[[8,9,18,19,32,38,41,44],[3,17,24,31],[45,42],[1,0],0]",
+        1
+      ],
+      [
+        "[[8,9,18,19,32,39,41,44],[17,24,31],[3,42],[2,0],1]",
+        1
+      ],
+      [
+        "[[8,9,18,19,32,41,44,46],[17,24,31],[3,43],[2,0],0]",
+        1
+      ]
+    ],
+    "rngSeed": 823,
+    "oldAction": {
+      "wall": {
+        "wall": 2,
+        "to": 16
+      },
+      "dir": 1
+    },
+    "newAction": {
+      "wall": {
+        "wall": 3,
+        "to": 11
+      },
+      "dir": 2
+    },
+    "winningResponses": [
+      {
+        "reply": {
+          "wall": null,
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": null,
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 0,
+            "to": 1
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 0,
+            "to": 1
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 0,
+            "to": 15
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 0,
+            "to": 15
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 0,
+            "to": 7
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 0,
+            "to": 7
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 1,
+            "to": 12
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 1,
+            "to": 12
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 1,
+            "to": 20
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 1,
+            "to": 20
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 1,
+            "to": 26
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 1,
+            "to": 26
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 1,
+            "to": 18
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 1,
+            "to": 18
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 2,
+            "to": 2
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 3,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 2,
+            "to": 2
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 3,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": null,
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": null,
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 2,
+            "to": 16
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 3,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 2,
+            "to": 16
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 3,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 3,
+            "to": 4
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 3,
+            "to": 4
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 3,
+            "to": 12
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 3,
+            "to": 12
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 3,
+            "to": 18
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 3,
+            "to": 18
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 3,
+            "to": 10
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": null,
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 3,
+            "to": 10
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": null,
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 4,
+            "to": 37
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 4,
+            "to": 37
+          },
+          "dir": 1
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 4,
+            "to": 37
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 5,
+            "to": 25
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 5,
+            "to": 25
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 5,
+            "to": 33
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 5,
+            "to": 33
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 5,
+            "to": 39
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 5,
+            "to": 39
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 6,
+            "to": 39
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 6,
+            "to": 39
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 6,
+            "to": 47
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 6,
+            "to": 47
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 7,
+            "to": 34
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 7,
+            "to": 34
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 7,
+            "to": 48
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 7,
+            "to": 48
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 7,
+            "to": 40
+          },
+          "dir": 0
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      },
+      {
+        "reply": {
+          "wall": {
+            "wall": 7,
+            "to": 40
+          },
+          "dir": 3
+        },
+        "response": {
+          "wall": {
+            "wall": 2,
+            "to": 10
+          },
+          "dir": 0
+        }
+      }
+    ],
+    "source": {
+      "layout": 0,
+      "seed": 4000210,
+      "starter": 1,
+      "ply": 9
+    },
+    "checked": 4,
+    "notes": "New action forces a win on our next turn against every legal opponent reply. Old action does not. This is a three-ply tactical certificate, not a proof of overall optimal play."
+  }
+}

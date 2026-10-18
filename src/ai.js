@@ -1,3 +1,4 @@
+import { chooseRoute } from './route-ai.js';
 import { actions, distances, key, successors } from "./engine.js";
 export function seeded(seed = 1) {
   return () => {
@@ -20,11 +21,13 @@ export function evaluate(s, p) {
   }
   return value;
 }
-// Beam-limited two-ply minimax. Opponent replies are searched with early rejection of weak candidates.
+// Normal CPU uses the original two-ply minimax. Challenge CPU additionally
+// evaluates exact scoring routes available after one legal wall shift.
 export function choose(
   s,
   { level = "search", rng = Math.random, seen = new Map(), beam = 8 } = {},
 ) {
+  if (level === "strong") return chooseRoute(s, { rng, seen });
   const all = actions(s);
   if (!all.length) return null;
   if (level === "random") return all[Math.floor(rng() * all.length)];
@@ -40,18 +43,9 @@ export function choose(
     })
     .sort((a, b) => b.score - a.score || a.tie - b.tie);
   if (level === "greedy" || ranked[0].n.winner === p) return ranked[0].a;
-  // In challenge mode, do not allow an immediate defeat while a legal escape exists.
-  // A normal beam can discard these defensive moves before reply search starts.
-  let candidates = ranked;
-  if (level === "strong" && s.scores[1 - p] === 2) {
-    const safe = ranked.filter(({ n }) =>
-      !successors(n).some(({ n: reply }) => reply.winner === 1 - p),
-    );
-    if (safe.length) candidates = safe;
-  }
   let best = -Infinity,
-    pick = candidates[0].a;
-  for (const c of candidates.slice(0, level === "strong" ? 12 : beam)) {
+    pick = ranked[0].a;
+  for (const c of ranked.slice(0, beam)) {
     let worst = Infinity;
     for (const { n } of successors(c.n)) {
       worst = Math.min(worst, evaluate(n, p));

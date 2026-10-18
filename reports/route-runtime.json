@@ -1,0 +1,19 @@
+{
+  "runtime": "v24.19.0",
+  "corpus": 110,
+  "method": "First four route-selfplay games per layout, every sixth position, two repetitions, alternating algorithm order. Desktop Node timing, not real-iPhone measurements.",
+  "baselineMs": {
+    "n": 220,
+    "median": 6.193445000000338,
+    "p90": 14.947921000000065,
+    "max": 30.580408999999918,
+    "over6000": 0
+  },
+  "routeMs": {
+    "n": 220,
+    "median": 4.123697999999877,
+    "p90": 8.30703799999992,
+    "max": 21.091161000000056,
+    "over6000": 0
+  }
+}

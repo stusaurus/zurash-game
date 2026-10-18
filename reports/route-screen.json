@@ -1,0 +1,906 @@
+{
+  "version": 2,
+  "sourceCommit": "2ff5a21b086cc29e81234889bc1d4684a05d8204",
+  "params": {
+    "pairs": 4,
+    "cap": 120,
+    "matchups": [
+      [
+        "route",
+        "strong"
+      ],
+      [
+        "route-progress",
+        "strong"
+      ],
+      [
+        "route",
+        "route"
+      ],
+      [
+        "route-progress",
+        "route-progress"
+      ],
+      [
+        "strong",
+        "strong"
+      ]
+    ],
+    "seedOffset": 1000001
+  },
+  "notes": "Shared per-game RNG, paired initiative swap; capped is NOT draw. CI resamples seed pairs, conditional on decided games; initiative bounds allocate all capped games to either side. Duration in plies, NOT human minutes. Comeback means winner trailed in score at least once. Canonical openings rotate starter 1 by 180 degrees; wall target plus direction, not wall index. Experimental policies are not deployed.",
+  "elapsedSeconds": 28.196,
+  "totalGames": 120,
+  "rows": [
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "policies": "route/strong",
+      "games": 8,
+      "firstWins": 4,
+      "secondWins": 4,
+      "agent0Wins": 8,
+      "capped": 0,
+      "decidedFirstRate": 0.5,
+      "pairedBootstrap95": [
+        0.5,
+        0.5
+      ],
+      "initiativeRateBounds": [
+        0.5,
+        0.5
+      ],
+      "decidedPlies": {
+        "n": 8,
+        "mean": 26.75,
+        "median": 10,
+        "p90": 112,
+        "max": 112
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 26.75,
+        "median": 10,
+        "p90": 112,
+        "max": 112
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 8.25,
+        "median": 5,
+        "p90": 17,
+        "max": 17
+      },
+      "scoreGap": {
+        "n": 8,
+        "mean": 2.5,
+        "median": 2,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 0,
+      "comebacks": 0,
+      "wallMoves": 212,
+      "skips": 2,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 1,
+      "stalled20": 1,
+      "canonicalFirstChoices": 5,
+      "canonicalSixPlyLines": 8,
+      "canonicalSixPlyStates": 8
+    },
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "policies": "route-progress/strong",
+      "games": 8,
+      "firstWins": 4,
+      "secondWins": 4,
+      "agent0Wins": 8,
+      "capped": 0,
+      "decidedFirstRate": 0.5,
+      "pairedBootstrap95": [
+        0.5,
+        0.5
+      ],
+      "initiativeRateBounds": [
+        0.5,
+        0.5
+      ],
+      "decidedPlies": {
+        "n": 8,
+        "mean": 16.75,
+        "median": 10,
+        "p90": 29,
+        "max": 29
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 16.75,
+        "median": 10,
+        "p90": 29,
+        "max": 29
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 9,
+        "median": 5,
+        "p90": 17,
+        "max": 17
+      },
+      "scoreGap": {
+        "n": 8,
+        "mean": 2.625,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 0,
+      "comebacks": 0,
+      "wallMoves": 132,
+      "skips": 2,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 0,
+      "stalled20": 0,
+      "canonicalFirstChoices": 5,
+      "canonicalSixPlyLines": 8,
+      "canonicalSixPlyStates": 8
+    },
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "policies": "route/route",
+      "games": 8,
+      "firstWins": 4,
+      "secondWins": 4,
+      "agent0Wins": 6,
+      "capped": 0,
+      "decidedFirstRate": 0.5,
+      "pairedBootstrap95": [
+        0.125,
+        0.875
+      ],
+      "initiativeRateBounds": [
+        0.5,
+        0.5
+      ],
+      "decidedPlies": {
+        "n": 8,
+        "mean": 28.25,
+        "median": 25,
+        "p90": 40,
+        "max": 40
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 28.25,
+        "median": 25,
+        "p90": 40,
+        "max": 40
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 20.5,
+        "median": 19,
+        "p90": 34,
+        "max": 34
+      },
+      "scoreGap": {
+        "n": 8,
+        "mean": 2.25,
+        "median": 2,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 2,
+      "comebacks": 2,
+      "wallMoves": 226,
+      "skips": 0,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 0,
+      "stalled20": 4,
+      "canonicalFirstChoices": 1,
+      "canonicalSixPlyLines": 7,
+      "canonicalSixPlyStates": 6
+    },
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "policies": "route-progress/route-progress",
+      "games": 8,
+      "firstWins": 3,
+      "secondWins": 5,
+      "agent0Wins": 5,
+      "capped": 0,
+      "decidedFirstRate": 0.375,
+      "pairedBootstrap95": [
+        0,
+        0.75
+      ],
+      "initiativeRateBounds": [
+        0.375,
+        0.375
+      ],
+      "decidedPlies": {
+        "n": 8,
+        "mean": 30.125,
+        "median": 29,
+        "p90": 41,
+        "max": 41
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 30.125,
+        "median": 29,
+        "p90": 41,
+        "max": 41
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 21.375,
+        "median": 21,
+        "p90": 28,
+        "max": 28
+      },
+      "scoreGap": {
+        "n": 8,
+        "mean": 2,
+        "median": 2,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 3,
+      "comebacks": 2,
+      "wallMoves": 241,
+      "skips": 0,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 0,
+      "stalled20": 6,
+      "canonicalFirstChoices": 1,
+      "canonicalSixPlyLines": 4,
+      "canonicalSixPlyStates": 4
+    },
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "policies": "strong/strong",
+      "games": 8,
+      "firstWins": 2,
+      "secondWins": 3,
+      "agent0Wins": 4,
+      "capped": 3,
+      "decidedFirstRate": 0.4,
+      "pairedBootstrap95": [
+        0,
+        1
+      ],
+      "initiativeRateBounds": [
+        0.25,
+        0.625
+      ],
+      "decidedPlies": {
+        "n": 5,
+        "mean": 22,
+        "median": 21,
+        "p90": 36,
+        "max": 36
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 58.75,
+        "median": 24,
+        "p90": 120,
+        "max": 120
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 16.375,
+        "median": 17,
+        "p90": 32,
+        "max": 32
+      },
+      "scoreGap": {
+        "n": 5,
+        "mean": 3,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 1,
+      "comebacks": 0,
+      "wallMoves": 446,
+      "skips": 24,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 3,
+      "stalled20": 4,
+      "canonicalFirstChoices": 6,
+      "canonicalSixPlyLines": 8,
+      "canonicalSixPlyStates": 8
+    },
+    {
+      "layout": 1,
+      "name": "ふたつの谷",
+      "policies": "route/strong",
+      "games": 8,
+      "firstWins": 2,
+      "secondWins": 4,
+      "agent0Wins": 5,
+      "capped": 2,
+      "decidedFirstRate": 0.3333333333333333,
+      "pairedBootstrap95": [
+        0,
+        0.75
+      ],
+      "initiativeRateBounds": [
+        0.25,
+        0.5
+      ],
+      "decidedPlies": {
+        "n": 6,
+        "mean": 27,
+        "median": 14,
+        "p90": 58,
+        "max": 58
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 50.25,
+        "median": 19,
+        "p90": 120,
+        "max": 120
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 1,
+        "median": 1,
+        "p90": 1,
+        "max": 1
+      },
+      "scoreGap": {
+        "n": 6,
+        "mean": 1.1666666666666667,
+        "median": 1,
+        "p90": 2,
+        "max": 2
+      },
+      "tiedAtTwo": 6,
+      "comebacks": 4,
+      "wallMoves": 395,
+      "skips": 7,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 2,
+      "stalled20": 4,
+      "canonicalFirstChoices": 1,
+      "canonicalSixPlyLines": 7,
+      "canonicalSixPlyStates": 7
+    },
+    {
+      "layout": 1,
+      "name": "ふたつの谷",
+      "policies": "route-progress/strong",
+      "games": 8,
+      "firstWins": 4,
+      "secondWins": 3,
+      "agent0Wins": 6,
+      "capped": 1,
+      "decidedFirstRate": 0.5714285714285714,
+      "pairedBootstrap95": [
+        0.2,
+        0.875
+      ],
+      "initiativeRateBounds": [
+        0.5,
+        0.625
+      ],
+      "decidedPlies": {
+        "n": 7,
+        "mean": 42,
+        "median": 21,
+        "p90": 105,
+        "max": 105
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 51.75,
+        "median": 21,
+        "p90": 120,
+        "max": 120
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 1,
+        "median": 1,
+        "p90": 1,
+        "max": 1
+      },
+      "scoreGap": {
+        "n": 7,
+        "mean": 1.2857142857142858,
+        "median": 1,
+        "p90": 2,
+        "max": 2
+      },
+      "tiedAtTwo": 5,
+      "comebacks": 4,
+      "wallMoves": 408,
+      "skips": 6,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 3,
+      "stalled20": 4,
+      "canonicalFirstChoices": 1,
+      "canonicalSixPlyLines": 7,
+      "canonicalSixPlyStates": 7
+    },
+    {
+      "layout": 1,
+      "name": "ふたつの谷",
+      "policies": "route/route",
+      "games": 8,
+      "firstWins": 3,
+      "secondWins": 4,
+      "agent0Wins": 6,
+      "capped": 1,
+      "decidedFirstRate": 0.42857142857142855,
+      "pairedBootstrap95": [
+        0.125,
+        0.8
+      ],
+      "initiativeRateBounds": [
+        0.375,
+        0.5
+      ],
+      "decidedPlies": {
+        "n": 7,
+        "mean": 45,
+        "median": 32,
+        "p90": 94,
+        "max": 94
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 54.375,
+        "median": 32,
+        "p90": 120,
+        "max": 120
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 1,
+        "median": 1,
+        "p90": 1,
+        "max": 1
+      },
+      "scoreGap": {
+        "n": 7,
+        "mean": 1.5714285714285714,
+        "median": 2,
+        "p90": 2,
+        "max": 2
+      },
+      "tiedAtTwo": 4,
+      "comebacks": 5,
+      "wallMoves": 424,
+      "skips": 11,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 3,
+      "stalled20": 3,
+      "canonicalFirstChoices": 1,
+      "canonicalSixPlyLines": 4,
+      "canonicalSixPlyStates": 3
+    },
+    {
+      "layout": 1,
+      "name": "ふたつの谷",
+      "policies": "route-progress/route-progress",
+      "games": 8,
+      "firstWins": 4,
+      "secondWins": 2,
+      "agent0Wins": 5,
+      "capped": 2,
+      "decidedFirstRate": 0.6666666666666666,
+      "pairedBootstrap95": [
+        0.5,
+        1
+      ],
+      "initiativeRateBounds": [
+        0.5,
+        0.75
+      ],
+      "decidedPlies": {
+        "n": 6,
+        "mean": 50.666666666666664,
+        "median": 29,
+        "p90": 119,
+        "max": 119
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 68,
+        "median": 39,
+        "p90": 120,
+        "max": 120
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 1,
+        "median": 1,
+        "p90": 1,
+        "max": 1
+      },
+      "scoreGap": {
+        "n": 6,
+        "mean": 1.1666666666666667,
+        "median": 1,
+        "p90": 2,
+        "max": 2
+      },
+      "tiedAtTwo": 5,
+      "comebacks": 3,
+      "wallMoves": 530,
+      "skips": 14,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 4,
+      "stalled20": 4,
+      "canonicalFirstChoices": 1,
+      "canonicalSixPlyLines": 4,
+      "canonicalSixPlyStates": 3
+    },
+    {
+      "layout": 1,
+      "name": "ふたつの谷",
+      "policies": "strong/strong",
+      "games": 8,
+      "firstWins": 2,
+      "secondWins": 1,
+      "agent0Wins": 0,
+      "capped": 5,
+      "decidedFirstRate": 0.6666666666666666,
+      "pairedBootstrap95": [
+        0.5,
+        1
+      ],
+      "initiativeRateBounds": [
+        0.25,
+        0.875
+      ],
+      "decidedPlies": {
+        "n": 3,
+        "mean": 77.33333333333333,
+        "median": 95,
+        "p90": 108,
+        "max": 108
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 104,
+        "median": 120,
+        "p90": 120,
+        "max": 120
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 1,
+        "median": 1,
+        "p90": 1,
+        "max": 1
+      },
+      "scoreGap": {
+        "n": 3,
+        "mean": 2,
+        "median": 2,
+        "p90": 2,
+        "max": 2
+      },
+      "tiedAtTwo": 3,
+      "comebacks": 1,
+      "wallMoves": 806,
+      "skips": 26,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 7,
+      "stalled20": 7,
+      "canonicalFirstChoices": 1,
+      "canonicalSixPlyLines": 8,
+      "canonicalSixPlyStates": 8
+    },
+    {
+      "layout": 2,
+      "name": "こおりの回廊",
+      "policies": "route/strong",
+      "games": 8,
+      "firstWins": 3,
+      "secondWins": 5,
+      "agent0Wins": 7,
+      "capped": 0,
+      "decidedFirstRate": 0.375,
+      "pairedBootstrap95": [
+        0.125,
+        0.5
+      ],
+      "initiativeRateBounds": [
+        0.375,
+        0.375
+      ],
+      "decidedPlies": {
+        "n": 8,
+        "mean": 20.625,
+        "median": 10,
+        "p90": 48,
+        "max": 48
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 20.625,
+        "median": 10,
+        "p90": 48,
+        "max": 48
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 15.875,
+        "median": 6,
+        "p90": 44,
+        "max": 44
+      },
+      "scoreGap": {
+        "n": 8,
+        "mean": 3,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 0,
+      "comebacks": 0,
+      "wallMoves": 165,
+      "skips": 0,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 0,
+      "stalled20": 3,
+      "canonicalFirstChoices": 6,
+      "canonicalSixPlyLines": 8,
+      "canonicalSixPlyStates": 8
+    },
+    {
+      "layout": 2,
+      "name": "こおりの回廊",
+      "policies": "route-progress/strong",
+      "games": 8,
+      "firstWins": 4,
+      "secondWins": 4,
+      "agent0Wins": 8,
+      "capped": 0,
+      "decidedFirstRate": 0.5,
+      "pairedBootstrap95": [
+        0.5,
+        0.5
+      ],
+      "initiativeRateBounds": [
+        0.5,
+        0.5
+      ],
+      "decidedPlies": {
+        "n": 8,
+        "mean": 17.5,
+        "median": 10,
+        "p90": 46,
+        "max": 46
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 17.5,
+        "median": 10,
+        "p90": 46,
+        "max": 46
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 11.25,
+        "median": 6,
+        "p90": 32,
+        "max": 32
+      },
+      "scoreGap": {
+        "n": 8,
+        "mean": 2.75,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 0,
+      "comebacks": 0,
+      "wallMoves": 140,
+      "skips": 0,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 0,
+      "stalled20": 2,
+      "canonicalFirstChoices": 6,
+      "canonicalSixPlyLines": 8,
+      "canonicalSixPlyStates": 8
+    },
+    {
+      "layout": 2,
+      "name": "こおりの回廊",
+      "policies": "route/route",
+      "games": 8,
+      "firstWins": 4,
+      "secondWins": 3,
+      "agent0Wins": 3,
+      "capped": 1,
+      "decidedFirstRate": 0.5714285714285714,
+      "pairedBootstrap95": [
+        0.2,
+        0.875
+      ],
+      "initiativeRateBounds": [
+        0.5,
+        0.625
+      ],
+      "decidedPlies": {
+        "n": 7,
+        "mean": 42.57142857142857,
+        "median": 36,
+        "p90": 91,
+        "max": 91
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 52.25,
+        "median": 36,
+        "p90": 120,
+        "max": 120
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 36.875,
+        "median": 26,
+        "p90": 107,
+        "max": 107
+      },
+      "scoreGap": {
+        "n": 7,
+        "mean": 2.2857142857142856,
+        "median": 2,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 1,
+      "comebacks": 2,
+      "wallMoves": 411,
+      "skips": 7,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 2,
+      "stalled20": 7,
+      "canonicalFirstChoices": 2,
+      "canonicalSixPlyLines": 8,
+      "canonicalSixPlyStates": 7
+    },
+    {
+      "layout": 2,
+      "name": "こおりの回廊",
+      "policies": "route-progress/route-progress",
+      "games": 8,
+      "firstWins": 3,
+      "secondWins": 5,
+      "agent0Wins": 7,
+      "capped": 0,
+      "decidedFirstRate": 0.375,
+      "pairedBootstrap95": [
+        0.125,
+        0.5
+      ],
+      "initiativeRateBounds": [
+        0.375,
+        0.375
+      ],
+      "decidedPlies": {
+        "n": 8,
+        "mean": 32.875,
+        "median": 28,
+        "p90": 80,
+        "max": 80
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 32.875,
+        "median": 28,
+        "p90": 80,
+        "max": 80
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 21.625,
+        "median": 24,
+        "p90": 26,
+        "max": 26
+      },
+      "scoreGap": {
+        "n": 8,
+        "mean": 2,
+        "median": 1,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 4,
+      "comebacks": 2,
+      "wallMoves": 262,
+      "skips": 1,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 1,
+      "stalled20": 6,
+      "canonicalFirstChoices": 2,
+      "canonicalSixPlyLines": 6,
+      "canonicalSixPlyStates": 5
+    },
+    {
+      "layout": 2,
+      "name": "こおりの回廊",
+      "policies": "strong/strong",
+      "games": 8,
+      "firstWins": 0,
+      "secondWins": 3,
+      "agent0Wins": 2,
+      "capped": 5,
+      "decidedFirstRate": 0,
+      "pairedBootstrap95": [
+        0,
+        0
+      ],
+      "initiativeRateBounds": [
+        0,
+        0.625
+      ],
+      "decidedPlies": {
+        "n": 3,
+        "mean": 54,
+        "median": 24,
+        "p90": 114,
+        "max": 114
+      },
+      "observedPlies": {
+        "n": 8,
+        "mean": 95.25,
+        "median": 120,
+        "p90": 120,
+        "max": 120
+      },
+      "firstStar": {
+        "n": 8,
+        "mean": 22,
+        "median": 18,
+        "p90": 48,
+        "max": 48
+      },
+      "scoreGap": {
+        "n": 3,
+        "mean": 1.6666666666666667,
+        "median": 1,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 3,
+      "comebacks": 0,
+      "wallMoves": 717,
+      "skips": 45,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 6,
+      "stalled20": 6,
+      "canonicalFirstChoices": 7,
+      "canonicalSixPlyLines": 8,
+      "canonicalSixPlyStates": 8
+    }
+  ]
+}

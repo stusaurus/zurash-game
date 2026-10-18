@@ -1,12 +1,13 @@
 import { choose, seeded } from "./ai.js";
+import {turnSeed} from "./cpu-seed.js";
 self.onmessage = ({ data }) => {
-  const { id, state, history, level = "search" } = data;
+  const { id, state, history, seed, level = "search" } = data;
   try {
     self.postMessage({
       id,
       action: choose(state, {
         level,
-        rng: seeded(state.ply + 137),
+        rng: seeded(Number.isInteger(seed) ? turnSeed(seed,state.ply) : state.ply + 137),
         seen: new Map(history),
       }),
     });

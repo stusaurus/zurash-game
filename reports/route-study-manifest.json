@@ -1,0 +1,345 @@
+{
+  "batches": [
+    {
+      "batch": "route-screen",
+      "conditions": {
+        "pairs": 4,
+        "cap": 120,
+        "matchups": [
+          [
+            "route",
+            "strong"
+          ],
+          [
+            "route-progress",
+            "strong"
+          ],
+          [
+            "route",
+            "route"
+          ],
+          [
+            "route-progress",
+            "route-progress"
+          ],
+          [
+            "strong",
+            "strong"
+          ]
+        ],
+        "seedOffset": 1000001
+      },
+      "games": 120,
+      "plies": 5660,
+      "role": "development"
+    },
+    {
+      "batch": "route-holdout-0",
+      "conditions": {
+        "pairs": 30,
+        "cap": 160,
+        "matchups": [
+          [
+            "route",
+            "strong"
+          ],
+          [
+            "route-progress",
+            "strong"
+          ],
+          [
+            "route",
+            "route"
+          ],
+          [
+            "route-progress",
+            "route-progress"
+          ],
+          [
+            "strong",
+            "strong"
+          ]
+        ],
+        "seedOffset": 4000037,
+        "layoutIds": [
+          0
+        ]
+      },
+      "games": 300,
+      "plies": 13315,
+      "role": "first-independent-comparison"
+    },
+    {
+      "batch": "route-holdout-1",
+      "conditions": {
+        "pairs": 30,
+        "cap": 160,
+        "matchups": [
+          [
+            "route",
+            "strong"
+          ],
+          [
+            "route-progress",
+            "strong"
+          ],
+          [
+            "route",
+            "route"
+          ],
+          [
+            "route-progress",
+            "route-progress"
+          ],
+          [
+            "strong",
+            "strong"
+          ]
+        ],
+        "seedOffset": 4000037,
+        "layoutIds": [
+          1
+        ]
+      },
+      "games": 300,
+      "plies": 23280,
+      "role": "first-independent-comparison"
+    },
+    {
+      "batch": "route-holdout-2",
+      "conditions": {
+        "pairs": 30,
+        "cap": 160,
+        "matchups": [
+          [
+            "route",
+            "strong"
+          ],
+          [
+            "route-progress",
+            "strong"
+          ],
+          [
+            "route",
+            "route"
+          ],
+          [
+            "route-progress",
+            "route-progress"
+          ],
+          [
+            "strong",
+            "strong"
+          ]
+        ],
+        "seedOffset": 4000037,
+        "layoutIds": [
+          2
+        ]
+      },
+      "games": 300,
+      "plies": 12719,
+      "role": "first-independent-comparison"
+    },
+    {
+      "batch": "route-vs-normal",
+      "conditions": {
+        "pairs": 10,
+        "cap": 160,
+        "matchups": [
+          [
+            "route",
+            "search"
+          ]
+        ],
+        "seedOffset": 5000039,
+        "layoutIds": [
+          0,
+          1,
+          2
+        ]
+      },
+      "games": 60,
+      "plies": 983,
+      "role": "difficulty-check"
+    },
+    {
+      "batch": "route-mix-screen",
+      "conditions": {
+        "pairs": 4,
+        "cap": 160,
+        "matchups": [
+          [
+            "route-mix",
+            "legacy-strong"
+          ],
+          [
+            "route-mix",
+            "route-mix"
+          ],
+          [
+            "route",
+            "route"
+          ]
+        ],
+        "seedOffset": 6000043,
+        "layoutIds": [
+          0,
+          1,
+          2
+        ]
+      },
+      "games": 72,
+      "plies": 3372,
+      "role": "development"
+    },
+    {
+      "batch": "route-mix-holdout-0",
+      "conditions": {
+        "pairs": 30,
+        "cap": 160,
+        "matchups": [
+          [
+            "route-mix",
+            "legacy-strong"
+          ],
+          [
+            "route-mix",
+            "route"
+          ],
+          [
+            "route-mix",
+            "route-mix"
+          ],
+          [
+            "route",
+            "route"
+          ],
+          [
+            "legacy-strong",
+            "legacy-strong"
+          ]
+        ],
+        "seedOffset": 7000049,
+        "layoutIds": [
+          0
+        ]
+      },
+      "games": 300,
+      "plies": 13815,
+      "role": "second-independent-comparison"
+    },
+    {
+      "batch": "route-mix-holdout-1",
+      "conditions": {
+        "pairs": 30,
+        "cap": 160,
+        "matchups": [
+          [
+            "route-mix",
+            "legacy-strong"
+          ],
+          [
+            "route-mix",
+            "route"
+          ],
+          [
+            "route-mix",
+            "route-mix"
+          ],
+          [
+            "route",
+            "route"
+          ],
+          [
+            "legacy-strong",
+            "legacy-strong"
+          ]
+        ],
+        "seedOffset": 7000049,
+        "layoutIds": [
+          1
+        ]
+      },
+      "games": 300,
+      "plies": 23157,
+      "role": "second-independent-comparison"
+    },
+    {
+      "batch": "route-mix-holdout-2",
+      "conditions": {
+        "pairs": 30,
+        "cap": 160,
+        "matchups": [
+          [
+            "route-mix",
+            "legacy-strong"
+          ],
+          [
+            "route-mix",
+            "route"
+          ],
+          [
+            "route-mix",
+            "route-mix"
+          ],
+          [
+            "route",
+            "route"
+          ],
+          [
+            "legacy-strong",
+            "legacy-strong"
+          ]
+        ],
+        "seedOffset": 7000049,
+        "layoutIds": [
+          2
+        ]
+      },
+      "games": 300,
+      "plies": 13476,
+      "role": "second-independent-comparison"
+    },
+    {
+      "batch": "route-worker-protocol",
+      "conditions": {
+        "pairs": 10,
+        "cap": 160,
+        "matchups": [
+          [
+            "route",
+            "legacy-strong"
+          ],
+          [
+            "route",
+            "route"
+          ],
+          [
+            "legacy-strong",
+            "legacy-strong"
+          ]
+        ],
+        "seedOffset": 8000063,
+        "layoutIds": [
+          0,
+          1,
+          2
+        ],
+        "rngMode": "worker"
+      },
+      "games": 180,
+      "plies": 11550,
+      "role": "runtime-protocol-check"
+    }
+  ],
+  "totalExecutions": 2232,
+  "totalPlies": 121327,
+  "codeHashes": {
+    "src/route-ai.js": "e7f3b4b9e2810d96daa2b73863b1b07984ca09e873aaa3904becf3b7a6f6561f",
+    "src/engine.js": "992ab9129501bb51b9e7f9b0f33203a42d18c79ef521538d4fff8728769156fe",
+    "scripts/reference/ai-pre-route.js": "44f81a6ade3d115daa36e320f1d84397ab920702146c19cbe8c6cc91d498b1d4",
+    "src/cpu-seed.js": "01c4cb86f91ef8f1f68f1416ffaa2bd4d81d2f6ccffde65252fe9012d80868ba"
+  },
+  "note": "Policy groups share seeds within each batch. Screens are excluded from confirmatory claims. First and second holdout seed offsets are disjoint. Numeric metadata sourceCommit may refer to the local development checkpoint; exact final source files are identified by SHA256 and included in this PR."
+}

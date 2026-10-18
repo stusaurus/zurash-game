@@ -1,0 +1,255 @@
+{
+  "conditions": [
+    {
+      "pairs": 30,
+      "cap": 160,
+      "matchups": [
+        [
+          "route",
+          "strong"
+        ],
+        [
+          "route-progress",
+          "strong"
+        ],
+        [
+          "route",
+          "route"
+        ],
+        [
+          "route-progress",
+          "route-progress"
+        ],
+        [
+          "strong",
+          "strong"
+        ]
+      ],
+      "seedOffset": 4000037,
+      "layoutIds": [
+        0
+      ]
+    },
+    {
+      "pairs": 30,
+      "cap": 160,
+      "matchups": [
+        [
+          "route",
+          "strong"
+        ],
+        [
+          "route-progress",
+          "strong"
+        ],
+        [
+          "route",
+          "route"
+        ],
+        [
+          "route-progress",
+          "route-progress"
+        ],
+        [
+          "strong",
+          "strong"
+        ]
+      ],
+      "seedOffset": 4000037,
+      "layoutIds": [
+        1
+      ]
+    },
+    {
+      "pairs": 30,
+      "cap": 160,
+      "matchups": [
+        [
+          "route",
+          "strong"
+        ],
+        [
+          "route-progress",
+          "strong"
+        ],
+        [
+          "route",
+          "route"
+        ],
+        [
+          "route-progress",
+          "route-progress"
+        ],
+        [
+          "strong",
+          "strong"
+        ]
+      ],
+      "seedOffset": 4000037,
+      "layoutIds": [
+        2
+      ]
+    }
+  ],
+  "ablation": {
+    "progressMinusRouteWinRate95": [
+      -0.005555555555555556,
+      0.09444444444444444
+    ],
+    "progressMinusRouteSelfMean95": [
+      -3.566666666666667,
+      12.5
+    ]
+  },
+  "totalGames": 900,
+  "totalPlies": 49314,
+  "method": "5000 stratified-by-layout seed-pair bootstrap resamples. Head-to-head caps count as nonwins. Selfplay differences pair same layout/seed/starter. 900 trials share seeds across policies; do not pool as 900 independent observations.",
+  "findings": [
+    {
+      "name": "route",
+      "versus": {
+        "games": 180,
+        "wins": 136,
+        "losses": 30,
+        "capped": 14,
+        "conservativeWinRate": 0.7555555555555555,
+        "pairedStratified95": [
+          0.7,
+          0.8111111111111111
+        ]
+      },
+      "byLayout": [
+        {
+          "layout": 0,
+          "wins": 48,
+          "losses": 7,
+          "capped": 5,
+          "selfCapped": 3,
+          "baselineCapped": 20,
+          "selfMean": 39.11666666666667,
+          "baselineMean": 79.56666666666666
+        },
+        {
+          "layout": 1,
+          "wins": 36,
+          "losses": 16,
+          "capped": 8,
+          "selfCapped": 12,
+          "baselineCapped": 46,
+          "selfMean": 67.83333333333333,
+          "baselineMean": 135.65
+        },
+        {
+          "layout": 2,
+          "wins": 52,
+          "losses": 7,
+          "capped": 1,
+          "selfCapped": 3,
+          "baselineCapped": 18,
+          "selfMean": 45.25,
+          "baselineMean": 69.08333333333333
+        }
+      ],
+      "self": {
+        "games": 180,
+        "capped": 18,
+        "baselineCapped": 84,
+        "mean": 50.733333333333334,
+        "baselineMean": 94.76666666666667,
+        "capDelta95": [
+          -0.4388888888888889,
+          -0.28888888888888886
+        ],
+        "meanPliesDelta95": [
+          -54.294444444444444,
+          -33.61666666666667
+        ],
+        "stalled20": 112,
+        "baselineStalled20": 136,
+        "scoreGapMeanDecided": 2.117283950617284
+      },
+      "eligibility": {
+        "winsEveryLayout": true,
+        "conservativeWin95LowerOverHalf": true,
+        "selfCapsDecrease": true,
+        "selfObservedMeanDecrease": true,
+        "noLayoutCapWorseOver5pp": true,
+        "noLegalFailures": true
+      },
+      "numericGatePassed": true
+    },
+    {
+      "name": "route-progress",
+      "versus": {
+        "games": 180,
+        "wins": 144,
+        "losses": 27,
+        "capped": 9,
+        "conservativeWinRate": 0.8,
+        "pairedStratified95": [
+          0.7388888888888889,
+          0.8555555555555555
+        ]
+      },
+      "byLayout": [
+        {
+          "layout": 0,
+          "wins": 53,
+          "losses": 6,
+          "capped": 1,
+          "selfCapped": 4,
+          "baselineCapped": 20,
+          "selfMean": 45.45,
+          "baselineMean": 79.56666666666666
+        },
+        {
+          "layout": 1,
+          "wins": 38,
+          "losses": 15,
+          "capped": 7,
+          "selfCapped": 9,
+          "baselineCapped": 46,
+          "selfMean": 67.63333333333334,
+          "baselineMean": 135.65
+        },
+        {
+          "layout": 2,
+          "wins": 53,
+          "losses": 6,
+          "capped": 1,
+          "selfCapped": 5,
+          "baselineCapped": 18,
+          "selfMean": 52.46666666666667,
+          "baselineMean": 69.08333333333333
+        }
+      ],
+      "self": {
+        "games": 180,
+        "capped": 18,
+        "baselineCapped": 84,
+        "mean": 55.18333333333333,
+        "baselineMean": 94.76666666666667,
+        "capDelta95": [
+          -0.4388888888888889,
+          -0.29444444444444445
+        ],
+        "meanPliesDelta95": [
+          -50.24444444444445,
+          -28.444444444444443
+        ],
+        "stalled20": 112,
+        "baselineStalled20": 136,
+        "scoreGapMeanDecided": 2.0185185185185186
+      },
+      "eligibility": {
+        "winsEveryLayout": true,
+        "conservativeWin95LowerOverHalf": true,
+        "selfCapsDecrease": true,
+        "selfObservedMeanDecrease": true,
+        "noLayoutCapWorseOver5pp": true,
+        "noLegalFailures": true
+      },
+      "numericGatePassed": true
+    }
+  ]
+}

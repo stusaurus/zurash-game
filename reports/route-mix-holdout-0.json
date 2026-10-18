@@ -1,0 +1,329 @@
+{
+  "version": 2,
+  "sourceCommit": "eb7cbd6db1238ed27404464ab150084e42b9b09d",
+  "params": {
+    "pairs": 30,
+    "cap": 160,
+    "matchups": [
+      [
+        "route-mix",
+        "legacy-strong"
+      ],
+      [
+        "route-mix",
+        "route"
+      ],
+      [
+        "route-mix",
+        "route-mix"
+      ],
+      [
+        "route",
+        "route"
+      ],
+      [
+        "legacy-strong",
+        "legacy-strong"
+      ]
+    ],
+    "seedOffset": 7000049,
+    "layoutIds": [
+      0
+    ]
+  },
+  "notes": "Shared per-game RNG, paired initiative swap; capped is NOT draw. CI resamples seed pairs, conditional on decided games; initiative bounds allocate all capped games to either side. Duration in plies, NOT human minutes. Comeback means winner trailed in score at least once. Canonical openings rotate starter 1 by 180 degrees; wall target plus direction, not wall index. Experimental policies are not deployed.",
+  "elapsedSeconds": 74.502,
+  "totalGames": 300,
+  "rows": [
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "policies": "route-mix/legacy-strong",
+      "games": 60,
+      "firstWins": 31,
+      "secondWins": 25,
+      "agent0Wins": 47,
+      "capped": 4,
+      "decidedFirstRate": 0.5535714285714286,
+      "pairedBootstrap95": [
+        0.45454545454545453,
+        0.6545454545454545
+      ],
+      "initiativeRateBounds": [
+        0.5166666666666667,
+        0.5833333333333334
+      ],
+      "decidedPlies": {
+        "n": 56,
+        "mean": 32.625,
+        "median": 18,
+        "p90": 112,
+        "max": 152
+      },
+      "observedPlies": {
+        "n": 60,
+        "mean": 41.11666666666667,
+        "median": 18,
+        "p90": 135,
+        "max": 160
+      },
+      "firstStar": {
+        "n": 60,
+        "mean": 10.366666666666667,
+        "median": 9,
+        "p90": 17,
+        "max": 49
+      },
+      "scoreGap": {
+        "n": 56,
+        "mean": 2.267857142857143,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 16,
+      "comebacks": 11,
+      "wallMoves": 2417,
+      "skips": 50,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 11,
+      "stalled20": 16,
+      "canonicalFirstChoices": 15,
+      "canonicalSixPlyLines": 48,
+      "canonicalSixPlyStates": 47
+    },
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "policies": "route-mix/route",
+      "games": 60,
+      "firstWins": 34,
+      "secondWins": 26,
+      "agent0Wins": 30,
+      "capped": 0,
+      "decidedFirstRate": 0.5666666666666667,
+      "pairedBootstrap95": [
+        0.4166666666666667,
+        0.7
+      ],
+      "initiativeRateBounds": [
+        0.5666666666666667,
+        0.5666666666666667
+      ],
+      "decidedPlies": {
+        "n": 60,
+        "mean": 29.466666666666665,
+        "median": 24,
+        "p90": 42,
+        "max": 138
+      },
+      "observedPlies": {
+        "n": 60,
+        "mean": 29.466666666666665,
+        "median": 24,
+        "p90": 42,
+        "max": 138
+      },
+      "firstStar": {
+        "n": 60,
+        "mean": 21.316666666666666,
+        "median": 18,
+        "p90": 34,
+        "max": 52
+      },
+      "scoreGap": {
+        "n": 60,
+        "mean": 2.5166666666666666,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 5,
+      "comebacks": 1,
+      "wallMoves": 1765,
+      "skips": 3,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 3,
+      "stalled20": 25,
+      "canonicalFirstChoices": 2,
+      "canonicalSixPlyLines": 24,
+      "canonicalSixPlyStates": 16
+    },
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "policies": "route-mix/route-mix",
+      "games": 60,
+      "firstWins": 31,
+      "secondWins": 26,
+      "agent0Wins": 24,
+      "capped": 3,
+      "decidedFirstRate": 0.543859649122807,
+      "pairedBootstrap95": [
+        0.4074074074074074,
+        0.6727272727272727
+      ],
+      "initiativeRateBounds": [
+        0.5166666666666667,
+        0.5666666666666667
+      ],
+      "decidedPlies": {
+        "n": 57,
+        "mean": 39.35087719298246,
+        "median": 31,
+        "p90": 70,
+        "max": 132
+      },
+      "observedPlies": {
+        "n": 60,
+        "mean": 45.38333333333333,
+        "median": 31,
+        "p90": 95,
+        "max": 160
+      },
+      "firstStar": {
+        "n": 60,
+        "mean": 25.066666666666666,
+        "median": 23,
+        "p90": 38,
+        "max": 67
+      },
+      "scoreGap": {
+        "n": 57,
+        "mean": 2.1403508771929824,
+        "median": 2,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 18,
+      "comebacks": 9,
+      "wallMoves": 2681,
+      "skips": 42,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 11,
+      "stalled20": 42,
+      "canonicalFirstChoices": 2,
+      "canonicalSixPlyLines": 24,
+      "canonicalSixPlyStates": 18
+    },
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "policies": "route/route",
+      "games": 60,
+      "firstWins": 29,
+      "secondWins": 30,
+      "agent0Wins": 27,
+      "capped": 1,
+      "decidedFirstRate": 0.4915254237288136,
+      "pairedBootstrap95": [
+        0.3559322033898305,
+        0.631578947368421
+      ],
+      "initiativeRateBounds": [
+        0.48333333333333334,
+        0.5
+      ],
+      "decidedPlies": {
+        "n": 59,
+        "mean": 35.983050847457626,
+        "median": 29,
+        "p90": 68,
+        "max": 147
+      },
+      "observedPlies": {
+        "n": 60,
+        "mean": 38.05,
+        "median": 29,
+        "p90": 68,
+        "max": 160
+      },
+      "firstStar": {
+        "n": 60,
+        "mean": 26.1,
+        "median": 22,
+        "p90": 39,
+        "max": 103
+      },
+      "scoreGap": {
+        "n": 59,
+        "mean": 2.23728813559322,
+        "median": 2,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 14,
+      "comebacks": 6,
+      "wallMoves": 2259,
+      "skips": 24,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 8,
+      "stalled20": 34,
+      "canonicalFirstChoices": 1,
+      "canonicalSixPlyLines": 20,
+      "canonicalSixPlyStates": 13
+    },
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "policies": "legacy-strong/legacy-strong",
+      "games": 60,
+      "firstWins": 22,
+      "secondWins": 19,
+      "agent0Wins": 20,
+      "capped": 19,
+      "decidedFirstRate": 0.5365853658536586,
+      "pairedBootstrap95": [
+        0.37777777777777777,
+        0.6923076923076923
+      ],
+      "initiativeRateBounds": [
+        0.36666666666666664,
+        0.6833333333333333
+      ],
+      "decidedPlies": {
+        "n": 41,
+        "mean": 37.41463414634146,
+        "median": 25,
+        "p90": 81,
+        "max": 143
+      },
+      "observedPlies": {
+        "n": 60,
+        "mean": 76.23333333333333,
+        "median": 43,
+        "p90": 160,
+        "max": 160
+      },
+      "firstStar": {
+        "n": 59,
+        "mean": 23.423728813559322,
+        "median": 19,
+        "p90": 45,
+        "max": 94
+      },
+      "scoreGap": {
+        "n": 41,
+        "mean": 2.6097560975609757,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 12,
+      "comebacks": 1,
+      "wallMoves": 4381,
+      "skips": 193,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 25,
+      "stalled20": 37,
+      "canonicalFirstChoices": 16,
+      "canonicalSixPlyLines": 60,
+      "canonicalSixPlyStates": 56
+    }
+  ]
+}

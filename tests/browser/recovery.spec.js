@@ -50,3 +50,16 @@ test('cancelled setup does not change active difficulty or rematch configuration
  await page.locator('#settings').click();
  await expect(page.locator('#cpuLevel')).toHaveValue('strong');await expect(page.locator('#layout')).toHaveValue('0');await expect(page.locator('#starter')).toHaveValue('0');
 });
+
+test('undo keeps match seed; confirmed new match replaces it',async({page})=>{
+ await page.addInitScript(()=>{
+  let nextSeed=1000;window.cpuRequests=[];
+  Object.defineProperty(crypto,'getRandomValues',{value:a=>{a[0]=++nextSeed;return a;}});
+  window.Worker=class {postMessage(data){window.cpuRequests.push(data.seed);setTimeout(()=>this.onmessage?.({data:{id:data.id,error:'injected'}}),5);}terminate(){}};
+ });
+ await page.goto('/');
+ const turn=async()=>{await page.locator('#skip').click();await page.locator('#directions button:not([disabled])').first().click();await expect(page.locator('#turnCount')).toHaveText('3手目');};
+ await turn();await page.locator('#undo').click();await turn();
+ await page.locator('#settings').click();await page.locator('#start').click();await turn();
+ expect(await page.evaluate(()=>window.cpuRequests)).toEqual([1001,1001,1002]);
+});

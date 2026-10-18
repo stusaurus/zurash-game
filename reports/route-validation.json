@@ -1,0 +1,37 @@
+{
+  "localNodeTests": {
+    "passed": 21,
+    "failed": 0
+  },
+  "localBrowserTests": {
+    "passed": 45,
+    "failed": 0,
+    "projects": [
+      "chromium",
+      "webkit",
+      "iphone-webkit"
+    ],
+    "realIphone": false
+  },
+  "allReplay": {
+    "games": 2232,
+    "plies": 121327,
+    "matched": true
+  },
+  "captureRouteAudit": {
+    "positions": 7180,
+    "queries": 14360,
+    "certificates": 3980,
+    "matchedExhaustive": true
+  },
+  "forcedWinFixture": {
+    "allOpponentReplies": 49,
+    "nextTurnWinAfterEveryReply": true
+  },
+  "adopted": "route only; no progress penalty or near-best sampling",
+  "limitations": [
+    "opening concentration",
+    "AI-dependent initiative bias in valley/corridor",
+    "human fun and real iPhone untested"
+  ]
+}
