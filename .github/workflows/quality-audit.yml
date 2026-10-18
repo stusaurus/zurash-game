@@ -1,0 +1,44 @@
+name: Reproducible quality audit
+on:
+  workflow_dispatch:
+    inputs:
+      pairs:
+        description: "Number of paired seeds for each layout and matchup (default 20)"
+        required: true
+        type: number
+        default: 20
+      max_plies:
+        description: "Maximum measured half-moves (not a rule change)"
+        required: true
+        type: number
+        default: 120
+      matchups:
+        description: "Comma-separated policies (e.g. greedy/greedy,strong/greedy)"
+        required: true
+        type: string
+        default: "greedy/greedy,greedy/random,random/random,strong/greedy"
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Verify rules and turn/rotation invariance
+        run: npm run check && npm test
+      - name: Simulate paired matches and create reproducible report
+        env:
+          PAIRS: ${{ inputs.pairs }}
+          MAX_PLIES: ${{ inputs.max_plies }}
+          MATCHUPS: ${{ inputs.matchups }}
+        run: npm run quality:audit
+      - uses: actions/upload-artifact@v4
+        with:
+          name: quality-audit-results
+          path: reports/quality-audit.json
+          retention-days: 90
