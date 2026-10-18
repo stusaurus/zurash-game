@@ -43,6 +43,8 @@ test("curry experimental CPU responds without blocking and resets",async({page})
 test("a human can collect curry and move one wall THREE cells on the next own turn",async({page})=>{
  await page.goto("/experiments/curry-play.html");
  await page.locator("#mode").selectOption("local");
+ // Historical route is specific to the old comparison placement.
+ await page.locator("#curryPair").selectOption("13,35");
  await page.locator("#new").click();
  const move=async(wallFrom,wallTo,dir)=>{
    if(wallFrom===null)await page.locator("#skip").click();
@@ -70,7 +72,11 @@ test("a human can collect curry and move one wall THREE cells on the next own tu
 
 test("research setup switches between both symmetric curry placements",async({page})=>{
  await page.goto("/experiments/curry-play.html");
- await expect(page.locator("#curryPair")).toHaveValue("13,35");
+ await expect(page.locator("#curryPair")).toHaveValue("21,27");
+ await expect(page.locator('[data-cell="21"]')).toContainText("🍛");
+ await expect(page.locator('[data-cell="27"]')).toContainText("🍛");
+ await page.locator("#curryPair").selectOption("13,35");
+ await page.locator("#new").click();
  await expect(page.locator('[data-cell="13"]')).toContainText("🍛");
  await expect(page.locator('[data-cell="35"]')).toContainText("🍛");
  await page.locator("#curryPair").selectOption("21,27");
