@@ -183,10 +183,10 @@ function runCPU() {
       worker.onmessage = ({ data }) => {
         if (data.id !== epoch) return;
         if (data.error) {
-          fallback(id);
+          fallback(data.id);
           return;
         }
-        acceptCPU(data.action, id);
+        acceptCPU(data.action, data.id);
       };
       worker.onerror = () => {
         worker?.terminate();
