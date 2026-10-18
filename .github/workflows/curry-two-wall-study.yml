@@ -1,0 +1,36 @@
+name: Curry two-wall versus three-cell comparison
+on:
+  push:
+    branches: [experiment/curry-two-wall-power]
+    paths:
+      - .github/workflows/curry-two-wall-study.yml
+      - scripts/curry-two-wall-study.js
+      - experiments/curry-two-wall.js
+      - experiments/curry-two-wall-ai.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npm test
+      - name: Paired comparison of curry powers (small initial screening)
+        env:
+          PAIRS: "12"
+          MAX_PLIES: "120"
+          SEED_OFFSET: "8612401"
+          REPORT: reports/curry-two-wall-comparison.json
+        run: node scripts/curry-two-wall-study.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: curry-two-wall-comparison
+          path: reports/curry-two-wall-comparison.json
+          retention-days: 90
