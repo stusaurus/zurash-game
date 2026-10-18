@@ -19,6 +19,9 @@ const STATES=parse("STATES",30,300);
 const CALL_BUDGET=parse("CALL_BUDGET",16000,150000);
 const CLOCK_MS=parse("CLOCK_MS",1200000,3600000);
 const SEED=parse("SEED",880031,2000000000);
+const OPPONENT_MIN_SCORE=Number(process.env.OPPONENT_MIN_SCORE??0);
+const REQUIRE_POWER=process.env.REQUIRE_POWER==="1";
+if(!Number.isInteger(OPPONENT_MIN_SCORE)||OPPONENT_MIN_SCORE<0||OPPONENT_MIN_SCORE>2)throw Error("bad opponent score filter");
 const PAIRS=(process.env.CURRY_PAIRS??"21,27;5,43").split(";").map(x=>x.split(",").map(Number));
 const REPORT=process.env.REPORT??"reports/two-wall-forced-win-audit.json";
 const start=Date.now();
@@ -32,7 +35,9 @@ function legalAction(s,a){
  return options(s).find(x=>JSON.stringify(x.a)===JSON.stringify(a));
 }
 function addPosition(s,trace,label,pair){
- if(s.winner!==null||s.scores[s.turn]!==2)return;
+ if(s.winner!==null||s.scores[s.turn]!==2 ||
+    s.scores[1-s.turn]<OPPONENT_MIN_SCORE ||
+    (REQUIRE_POWER&&s.powers[s.turn]!==1))return;
  const id=stateKeyCurry(s);
  if(!pool.has(id))pool.set(id,{state:structuredClone(s),trace,pair,label});
 }
@@ -137,7 +142,7 @@ for(const p of proofs){
 }
 const result={
  version:1,commit:process.env.GITHUB_SHA??"local",
- config:{GAMES,PLY_CAP,STATES,CALL_BUDGET,CLOCK_MS,SEED,PAIRS},
+ config:{GAMES,PLY_CAP,STATES,CALL_BUDGET,CLOCK_MS,SEED,PAIRS,OPPONENT_MIN_SCORE,REQUIRE_POWER},
  sample:{uniqueTwoStarPositions:pool.size,examined:examined.length,successorCalls:calls},
  proofCount:proofs.length,
  proofs:proofs.map(x=>({...x,search:x.search})),
