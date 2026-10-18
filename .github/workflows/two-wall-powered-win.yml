@@ -4,6 +4,7 @@ on:
     branches: [experiment/two-wall-forced-win-audit]
     paths:
       - .github/workflows/two-wall-powered-win.yml
+      - tests/two-wall-contested-forced-win-proof.test.js
   workflow_dispatch:
 permissions:
   contents: read
