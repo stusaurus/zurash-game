@@ -5,7 +5,16 @@ import fs from "node:fs";
 import {initialCurry,stateKeyCurry} from "../experiments/curry-power.js";
 import {successorsTwoWall} from "../experiments/curry-two-wall.js";
 import {chooseTwoWall} from "../experiments/curry-two-wall-ai.js";
-import {isRotationallyRestored} from "./two-wall-mirror-recipe.js";
+const flip=n=>48-n;
+function isRotationallyRestored(s){
+ if(s.winner!==null||s.players[0]!==flip(s.players[1])||
+ s.scores[0]!==s.scores[1]||s.powers[0]!==s.powers[1])return false;
+ for(const property of ["walls","stars","curries"]){
+  const sorted=x=>[...x].sort((a,b)=>a-b);
+  if(JSON.stringify(sorted(s[property]))!==JSON.stringify(sorted(s[property].map(flip))))return false;
+ }
+ return true;
+}
 import {seeded} from "../src/ai.js";
 import {turnSeed} from "../src/cpu-seed.js";
 
