@@ -70,9 +70,11 @@
 - 最初のCI：Chromium/WebKitの6実操作テスト成功。
   壁選択・移動・省略・滑走・星取得・勝利・再戦・戻る・CPU応答・CPU待ち中リセットを再現。
 - 最終CI：同じ操作に加え、モバイルWebKit（390×844、DPR3、タッチ有効）を追加。
-  CPU応答と戻る・リセットをtapで実行。最終結果はPRのChecksを参照。
+  CPU応答と戻る・リセットをtapで実行。最終版の9テストがすべて成功。
+  [最終実装のCI結果](https://github.com/stusaurus/zurash-game/actions/runs/39096420824)（ルール9件・ブラウザ9件）。
 - 320 / 390 / 768 / 1200pxで横はみ出しなし、49マス、盤の正方形、各マスの正方形、
   戻るボタンの折り返しなしをアサートし、スクリーンショットを保存。
+  最終レイアウトの [390px画面](preview-mobile-390.png) と [320px画面](preview-mobile-320.png) を保存。
 - 目視で見つけた320pxタイトル折り返しと行の高さの不揃いを修正。
 - 実行中の操作ではJavaScriptのpageerrorが0件であることを検査。
 - iPhone実機のSafari・低電力時の性能・VoiceOver・実物ボードの検証は未実施。
