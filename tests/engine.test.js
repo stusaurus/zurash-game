@@ -130,3 +130,24 @@ test("repetition identity ignores interchangeable wall ordering", () => {
   n.stars.reverse();
   assert.equal(key(n), key(s));
 });
+
+test("challenge CPU avoids a preventable immediate defeat at 2–2", () => {
+  // Reached by legal play. Six safe choices exist, but a narrow beam can discard them.
+  const s = {
+    walls: [7, 12, 2, 18, 38, 32, 36, 40],
+    stars: [24],
+    players: [45, 31],
+    scores: [2, 2],
+    turn: 0, ply: 7, winner: null,
+  };
+  const avoidsDefeat = (a) => {
+    const n = apply(s, a);
+    return !actions(n).some((reply) => apply(n, reply).winner === 1);
+  };
+  const safe = actions(s).filter(avoidsDefeat);
+  assert.equal(safe.length, 6);
+  for (const seed of [1, 5, 17, 73]) {
+    const move = choose(s, { level: "strong", rng: seeded(seed) });
+    assert.ok(avoidsDefeat(move), `seed ${seed} conceded an avoidable win`);
+  }
+});

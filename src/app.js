@@ -20,7 +20,8 @@ let state = initial(),
   seen = new Map(),
   busy = false,
   epoch = 0,
-  worker = null;
+  worker = null,
+  cpuTimer = null;
 const tokenEls = [0, 1].map((p) => {
   const el = document.createElement("div");
   el.className = `token p${p + 1}`;
@@ -94,7 +95,7 @@ function render() {
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? "CPU" : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / 3</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${$("cpuLevel").value === "strong" ? "つよい" : "ふつう"}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / 3</small></div>`,
     )
     .join("");
   $("phaseBadge").textContent = phase === "wall" ? "1" : "2";
@@ -174,6 +175,17 @@ async function playSlide(dir) {
 }
 function runCPU() {
   const id = ++epoch;
+  clearTimeout(cpuTimer);
+  cpuTimer = setTimeout(() => {
+    if (id !== epoch || !cpuTurn() || phase !== "wall") return;
+    if (worker) {
+      worker.onmessage = null;
+      worker.onerror = null;
+      worker.terminate();
+      worker = null;
+    }
+    fallback(id);
+  }, 6000);
   render();
   if (!worker) {
     try {
@@ -181,7 +193,8 @@ function runCPU() {
         type: "module",
       });
       worker.onmessage = ({ data }) => {
-        if (data.id !== epoch) return;
+        if (data.id !== epoch || phase !== "wall") return;
+        clearTimeout(cpuTimer);
         if (data.error) {
           fallback(data.id);
           return;
@@ -189,6 +202,7 @@ function runCPU() {
         acceptCPU(data.action, data.id);
       };
       worker.onerror = () => {
+        clearTimeout(cpuTimer);
         worker?.terminate();
         worker = null;
         fallback(epoch);
@@ -198,7 +212,7 @@ function runCPU() {
       return;
     }
   }
-  worker.postMessage({ id, state: clone(state), history: [...seen] });
+  worker.postMessage({ id, state: clone(state), history: [...seen], level: $("cpuLevel").value });
 }
 function fallback(id) {
   setTimeout(() => {
@@ -207,7 +221,8 @@ function fallback(id) {
   }, 30);
 }
 function acceptCPU(action, id) {
-  if (id !== epoch || !cpuTurn()) return;
+  if (id !== epoch || !cpuTurn() || phase !== "wall") return;
+  clearTimeout(cpuTimer);
   if (!action) {
     $("message").textContent =
       "合法手がありません。戻るか、新しい対戦を選んでください。";
@@ -222,6 +237,7 @@ function acceptCPU(action, id) {
 }
 function reset() {
   epoch++;
+  clearTimeout(cpuTimer);
   busy = false;
   state = initial(Number($("layout").value), Number($("starter").value));
   phase = "wall";
@@ -240,6 +256,7 @@ $("skip").onclick = () => {
 };
 $("undo").onclick = () => {
   epoch++;
+  clearTimeout(cpuTimer);
   busy = false;
   if (phase === "slide" && !cpuTurn()) {
     state = clone(turnStart);
@@ -261,6 +278,7 @@ $("undo").onclick = () => {
 };
 $("help").onclick = () => $("helpDialog").showModal();
 function openSetup(nextMode) {
+  $("cpuLevelRow").hidden = nextMode !== "cpu";
   $("starter").options[0].textContent =
     nextMode === "cpu" ? "プレイヤー1（あなた）" : "プレイヤー1";
   $("starter").options[1].textContent =

@@ -638,3 +638,6 @@ h1 {
     height: 80px;
   }
 }
+
+/* Hide difficulty choices in local two-player mode. */
+#cpuLevelRow[hidden] { display: none; }
