@@ -127,6 +127,14 @@ for(const {state,trace,pair,label} of candidates){
  }catch(e){if(e.message==="RESEARCH_BUDGET_REACHED")break;throw e;}
 }
 const proofs=examined.filter(x=>x.certified);
+for(const p of proofs){
+ console.log("FORCED_TACTIC_REPLAY "+JSON.stringify({
+   pair:p.pair,player:p.player,scores:p.scores,ply:p.ply,
+   openingTrace:p.priorActions,position:p.state,
+   root:p.search.root,allOpponentReplies:p.search.opponentReplies,
+   firstReplyExample:p.search.example,proofVerified:p.certified
+ }));
+}
 const result={
  version:1,commit:process.env.GITHUB_SHA??"local",
  config:{GAMES,PLY_CAP,STATES,CALL_BUDGET,CLOCK_MS,SEED,PAIRS},
