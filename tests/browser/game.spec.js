@@ -73,22 +73,40 @@ test("wall selection, shift, undo, skip, slide, local handoff, victory and remat
   const wall = movableWalls(state)[0];
   await page.locator(`[data-cell="${state.walls[wall.wall]}"]`).click();
   await expect(page.locator(".target")).not.toHaveCount(0);
+  const delta = wall.to - state.walls[wall.wall];
+  const arrow = ({ [-7]: "↑", [1]: "→", [7]: "↓", [-1]: "←" })[delta];
+  await expect(page.locator(`[data-cell="${wall.to}"]`)).toHaveText(arrow);
   await page.locator(`[data-cell="${wall.to}"]`).click();
   await expect(page.locator("#phaseBadge")).toHaveText("2");
   await page.locator("#undo").click();
   await expect(page.locator("#phaseBadge")).toHaveText("1");
   const rng = seeded(99),
     seen = new Map();
+  let finalState, finalAction;
   for (let turn = 0; turn < 100 && state.winner === null; turn++) {
     seen.set(key(state), (seen.get(key(state)) || 0) + 1);
     const action = choose(state, { level: "greedy", rng, seen });
+    if (apply(state, action).winner !== null) {
+      finalState = state;
+      finalAction = action;
+    }
     state = await doAction(page, state, action);
   }
   expect(state.winner).not.toBeNull();
   await expect(page.locator("#result")).toBeVisible();
+  await expect(page.locator("#result")).toHaveAttribute("open", "");
+  await expect(page.locator("#resultText")).toContainText("最終スコア");
+  await expect(page.locator("#lastMove")).toContainText("★ゲット！");
   await expect(page.locator("#resultTitle")).toContainText(
     `プレイヤー${state.winner + 1}`,
   );
+  await page.locator("#reviewFinal").click();
+  await expect(page.locator("#result")).toBeHidden();
+  await expect(page.locator("#board")).toBeVisible();
+  await page.locator("#undo").click();
+  expect(finalAction).toBeDefined();
+  await doAction(page, finalState, finalAction);
+  await expect(page.locator("#result")).toBeVisible();
   await page.locator("#rematch").click();
   await expect(page.locator("#result")).toBeHidden();
   await expect(page.locator("#turnCount")).toHaveText("1手目");
