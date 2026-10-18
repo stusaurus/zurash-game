@@ -97,3 +97,16 @@ test("powered play is symmetric under swapping seats and rotating 180 degrees",(
     }
   }
 });
+
+
+test("top candidate curry placement [21,27] preserves rotational setup for either starter",()=>{
+ for(const starter of [0,1]){
+  const s=initialCurry(2,starter,[21,27]);
+  assert.deepEqual(s.curries,[21,27]);
+  assert.equal(s.curries[0]+s.curries[1],48);
+  assert.equal(new Set([...s.walls,...s.stars,...s.players,...s.curries]).size,17);
+  assert.equal(successorsCurry(s).some(x=>x.picked),false,
+    "neither player may collect curry on opening move");
+  assert.ok(successorsCurry(s).length>0);
+ }
+});
