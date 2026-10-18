@@ -215,6 +215,7 @@ test("experimental 2-player stages are selectable and playable on mobile", async
   await expect(page.locator("#layout optgroup")).toHaveCount(2);
   await page.locator("#layout").selectOption("3");
   await page.locator("#start")[press]();
+  await expect(page.locator("#currentStage")).toContainText("ほしの分かれ道");
   await expect(page.locator(".cell")).toHaveCount(49);
   await expect(page.locator(".star")).toHaveCount(5);
   await expect(page.locator("#turnCount")).toHaveText("1手目");
@@ -225,6 +226,7 @@ test("experimental 2-player stages are selectable and playable on mobile", async
   await expect(page.locator("#layout")).toHaveValue("3");
   await page.locator("#layout").selectOption("4");
   await page.locator("#start")[press]();
+  await expect(page.locator("#currentStage")).toContainText("こおりの交差路");
   await expect(page.locator(".cell")).toHaveCount(49);
   await expect(page.locator(".star")).toHaveCount(5);
   await expect(page.locator("#turnCount")).toHaveText("1手目");
