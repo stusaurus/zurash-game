@@ -161,3 +161,31 @@ test('wall phase cannot offer a shift with no legal slide continuation', () => {
   assert.throws(()=>moveWall(s,{wall:0,to:7}));
   for(const w of movableWalls(s))assert.ok(slideOptions(moveWall(s,w)).length);
 });
+
+
+test("experimental stages preserve valid rules and symmetric initial play", () => {
+  assert.equal(LAYOUTS.length, 5);
+  for (const layout of [3, 4]) {
+    assert.equal(LAYOUTS[layout].experimental, true);
+    for (const starter of [0, 1]) {
+      const s = initial(layout, starter);
+      assert.equal(s.stars.length, 5);
+      assert.equal(s.walls.length, 8);
+      assert.equal(new Set([...s.walls, ...s.stars, ...s.players]).size, 15);
+      assert.ok(actions(s).length >= 40, "stage should offer many legal opening moves");
+      assert.equal(actions(s).some((a) => apply(s, a).scores[starter] > 0), false,
+        "one-move star capture would undercut the stage's setup-play idea");
+      for (const star of s.stars) assert.ok(s.stars.includes(48 - star));
+      for (const wall of s.walls) assert.ok(s.walls.includes(48 - wall));
+      for (let i = 0; i < 7; i++) {
+        const a = actions(s)[i];
+        assert.ok(a);
+        const n = apply(s, a);
+        assert.equal(n.turn, 1 - starter);
+        assert.equal(n.ply, 1);
+        assert.equal(n.winner, null);
+        assert.ok(actions(n).length > 0);
+      }
+    }
+  }
+});
