@@ -12,7 +12,8 @@
     "quality:layouts": "node scripts/layout-lab.js",
     "quality:study": "node scripts/strategy-study.js",
     "quality:replay": "node scripts/verify-study.js",
-    "quality:curry": "node scripts/curry-study.js"
+    "quality:curry": "node scripts/curry-study.js",
+    "quality:curry-placement": "node scripts/curry-placement-search.js"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"
