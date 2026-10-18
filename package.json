@@ -1,0 +1,15 @@
+{
+  "name": "zurash-game",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "balance": "node scripts/balance.js",
+    "check": "node --check src/app.js && node --check src/engine.js && node --check src/ai.js",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}
