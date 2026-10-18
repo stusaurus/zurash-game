@@ -27,7 +27,7 @@ const started = Date.now();
 const source = process.env.GITHUB_SHA || "local";
 const LIMIT = PARAMS.maxPlies;
 const PAD = 0.000001;
-const canonical = (spec) => JSON.stringify([[...spec.walls].sort((a, b) => a - b), [...spec.stars].sort((a, b) => a - b)]);
+const canonical = (spec) => JSON.stringify([[...spec.walls].sort((a, b) => a - b), [...spec.stars].sort((a, b) => a - b),spec.players]);
 const rotated = (i) => SIZE * SIZE - 1 - i;
 const baseSpec = (layout) => {
   const s = LAYOUTS[layout];
@@ -43,7 +43,8 @@ const overlaps = (spec) => {
 };
 function valid(spec, requireNoFirstCapture = true) {
   if (spec.walls.length !== 8 || spec.stars.length !== 5 ||
-      overlaps(spec) || spec.players.join(",") !== "42,6") return false;
+      spec.players.length !== 2 || spec.players[1] !== rotated(spec.players[0]) ||
+      spec.players[0] === 24 || overlaps(spec)) return false;
   if (![...spec.walls, ...spec.stars].every(n => Number.isInteger(n) && n >= 0 && n < 49)) return false;
   if (!spec.walls.every(n => spec.walls.includes(rotated(n))) ||
       !spec.stars.every(n => spec.stars.includes(rotated(n)))) return false;
@@ -56,6 +57,16 @@ function valid(spec, requireNoFirstCapture = true) {
   return true;
 }
 function* mutations(spec) {
+  // Alternative symmetric starting cells are a board SETUP change,
+  // not a rules change. They offer another way to reduce initiative bias
+  // after wall/star-only tuning failed multiple holdouts.
+  for (let dir=0;dir<4;dir++){
+    const nextAt=step(spec.players[0],dir);
+    if(nextAt===null || nextAt===24)continue;
+    const next={walls:[...spec.walls],stars:[...spec.stars],
+      players:[nextAt,rotated(nextAt)]};
+    if(valid(next))yield {...next,mutation:"start:"+spec.players[0]+">"+nextAt};
+  }
   for (const type of ["walls", "stars"]) {
     const group = [...spec[type]].filter(n => n < 24).sort((a, b) => a - b);
     for (const old of group) for (let dir = 0; dir < 4; dir++) {
