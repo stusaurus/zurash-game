@@ -13,7 +13,7 @@ const SELECTED_PAIRS=process.env.PLACEMENTS
 if(!Number.isSafeInteger(OFFSET)||OFFSET<1 || 
    POLICY_LIST.some(p=>!["strong","greedy"].includes(p)))throw Error("invalid validation arguments");
 const OUT=process.env.REPORT??"reports/curry-tactical-leverage.json";
-if(!Number.isInteger(PAIRS)||PAIRS<1||PAIRS>30||!Number.isInteger(CAP)||CAP<10||CAP>200)
+if(!Number.isInteger(PAIRS)||PAIRS<1||PAIRS>100||!Number.isInteger(CAP)||CAP<10||CAP>200)
  throw Error("invalid trial bounds");
 // All rotated curry pairs that avoid an immediate pickup in the corridor.
 // A low-cost opportunity search, not a stage-certification experiment.
