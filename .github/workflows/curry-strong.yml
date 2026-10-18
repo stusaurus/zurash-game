@@ -1,0 +1,36 @@
+name: Curry strong CPU experiment
+on:
+  push:
+    branches: [experiment/curry-powerup-two-player]
+    paths:
+      - .github/workflows/curry-strong.yml
+      - scripts/curry-strong-study.js
+      - experiments/curry-ai.js
+      - experiments/curry-power.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  strong-cpu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Unit check before matchups
+        run: npm test
+      - name: Simulate strong versus strong and greedy, swapped initiative
+        env:
+          PAIRS: "8"
+          MAX_PLIES: "100"
+          REPORT: reports/curry-strong-study.json
+        run: node scripts/curry-strong-study.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: curry-strong-study
+          path: reports/curry-strong-study.json
+          retention-days: 90
