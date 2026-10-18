@@ -99,9 +99,20 @@ function render() {
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? "CPU" : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / 3</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === 2 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? "CPU" : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / 3${state.scores[p] === 2 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
     )
     .join("");
+  const last = moveLog.at(-1);
+  const recap = $("lastMove");
+  recap.hidden = !last;
+  recap.classList.toggle("scored", Boolean(last?.scored));
+  if (last) {
+    const player = mode === "cpu"
+      ? (last.player === 0 ? "あなた" : "CPU")
+      : `プレイヤー${last.player + 1}`;
+    recap.textContent =
+      `${player}：${last.wallDirection ? `壁を${last.wallDirection}に移動` : "壁はそのまま"} → ${DIRS[last.dir].name}に滑走${last.scored ? " → ★ゲット！" : ""}`;
+  }
   $("phaseBadge").textContent = phase === "wall" ? "1" : "2";
   $("phaseTitle").textContent =
     state.winner !== null
