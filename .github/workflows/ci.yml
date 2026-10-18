@@ -17,6 +17,7 @@ jobs:
           node-version: 22
       - run: npm ci
       - run: npm run check && npm test
+      - run: PAIRS=2 MAX_PLIES=35 MATCHUPS=greedy/greedy npm run quality:audit
   browsers:
     runs-on: ubuntu-latest
     steps:
