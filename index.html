@@ -61,18 +61,21 @@
           <div id="tokens" class="tokens" aria-hidden="true"></div>
           <div id="celebration" class="celebration" aria-hidden="true"></div>
         </div>
+        <p id="lastMove" class="last-move" aria-live="polite" hidden></p>
         <div id="directions" class="directions" aria-label="滑る方向"></div>
         <div class="actions">
           <button id="undo">↶ 戻る</button
           ><button id="skip" class="primary">壁を動かさずに滑る →</button>
         </div>
         <p class="hint">★ は止まってゲット。通りすぎたら取れないよ。</p>
-        <div id="result" class="result" hidden aria-live="assertive">
+        <dialog id="result" class="result" aria-labelledby="resultTitle">
           <p class="eyebrow">ZURASH! FINISH</p>
+          <div class="result-stars" aria-hidden="true">★ ★ ★</div>
           <h2 id="resultTitle"></h2>
           <p id="resultText"></p>
           <button id="rematch" class="primary">もう一度あそぶ</button>
-        </div>
+          <button id="reviewFinal" class="quiet">最後の盤面を見る</button>
+        </dialog>
       </section>
       <footer>
         少ないルール。何度でも、新しい一手。<span>ZURASH! · TIRANON</span>

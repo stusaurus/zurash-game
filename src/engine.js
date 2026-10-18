@@ -72,7 +72,9 @@ export function movableWalls(s) {
       )
         continue;
       const n = { ...s, walls: s.walls.map((v, i) => (i === w ? to : v)) };
-      if (mobility(n, 0).length && mobility(n, 1).length)
+      // A selectable wall shift must admit a complete legal turn. Merely
+      // checking mobility can leave only slides that trap the opponent.
+      if (mobility(n, 0).length && mobility(n, 1).length && slideOptions(n).length)
         out.push({ wall: w, to });
     }
   return out;
@@ -125,6 +127,26 @@ function moveWallUnchecked(s, w) {
 }
 export function apply(s, a) {
   return finishSlide(a.wall === null ? s : moveWall(s, a.wall), a.dir);
+}
+// Search-only enumeration: validate each wall/slide once instead of validating
+// every generated action again through apply(). Results are fresh value states.
+export function successors(s) {
+  if (s.winner !== null) return [];
+  const out = [];
+  for (const wall of [null, ...movableWalls(s)]) {
+    const n = wall === null ? s : moveWallUnchecked(s, wall);
+    for (const { dir, to } of slideOptions(n)) {
+      const p = s.turn, scored = s.stars.includes(to);
+      const scores = s.scores.map((v, i) => v + (i === p && scored ? 1 : 0));
+      const winner = scores[p] >= 3 ? p : null;
+      out.push({ a: { wall, dir }, n: {
+        ...s, walls: [...n.walls], stars: s.stars.filter((v) => !scored || v !== to),
+        players: s.players.map((v, i) => i === p ? to : v), scores,
+        ply: s.ply + 1, winner, turn: winner === null ? 1 - p : p,
+      }});
+    }
+  }
+  return out;
 }
 export function key(s) {
   return JSON.stringify([

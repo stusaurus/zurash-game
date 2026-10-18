@@ -1,0 +1,7254 @@
+{
+  "openings": [
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "metric": "All legal actions and all opponent replies, two-ply static evaluation; within 50 units is a heuristic band, NOT proof of equal strategy or best play.",
+      "best": 0,
+      "nearCount": 22,
+      "nearLandingSquares": [
+        0,
+        48
+      ],
+      "nearSkip": 2,
+      "nearWallTargets": [
+        15,
+        7,
+        5,
+        13,
+        19,
+        29,
+        33,
+        47
+      ],
+      "ranked": [
+        {
+          "action": {
+            "wall": null,
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": null,
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 1
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 1
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 9
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 15
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -90,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 15
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 7
+            },
+            "dir": 0
+          },
+          "landing": 14,
+          "scored": 0,
+          "worst": -117,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 7
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 5
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 5
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 13
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 13
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 19
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 19
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 11
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -72,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 11
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -54,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 9
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 23
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -117,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 23
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -90,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 15
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 15
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 11
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -117,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 11
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -117,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 25
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -90,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 25
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -108,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 23
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -144,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 23
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -144,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 37
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -217,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 37
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -144,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 29
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 29
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 25
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -271,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 25
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -271,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 33
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 33
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 39
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -271,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 39
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -271,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 29
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 29
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 37
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -217,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 37
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -108,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 43
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -217,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 35
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -144,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 33
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 33
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -117,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 41
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -271,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 41
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -271,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 47
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 47
+            },
+            "dir": 1
+          },
+          "landing": 46,
+          "scored": 0,
+          "worst": -99,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 39
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -72,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 39
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -108,
+          "opponentCanScore": false
+        }
+      ]
+    },
+    {
+      "layout": 1,
+      "name": "ふたつの谷",
+      "metric": "All legal actions and all opponent replies, two-ply static evaluation; within 50 units is a heuristic band, NOT proof of equal strategy or best play.",
+      "best": 0,
+      "nearCount": 2,
+      "nearLandingSquares": [
+        21,
+        48
+      ],
+      "nearSkip": 0,
+      "nearWallTargets": [
+        14,
+        20
+      ],
+      "ranked": [
+        {
+          "action": {
+            "wall": null,
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -845,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": null,
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 2
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -845,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 2
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 16
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -890,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 16
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 8
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -845,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 8
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 4
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -881,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 4
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 12
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -845,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 12
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 18
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -845,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 18
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 8
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -845,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 8
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 16
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -845,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 16
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 22
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -700,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 22
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -700,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 14
+            },
+            "dir": 0
+          },
+          "landing": 21,
+          "scored": 1,
+          "worst": 0,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 14
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -809,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 12
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 12
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 20
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -154,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 20
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -33,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 26
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -700,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 26
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -700,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 18
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 18
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 22
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -700,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 22
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -700,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 30
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -845,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 30
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 36
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -845,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 36
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 28
+            },
+            "dir": 0
+          },
+          "landing": 35,
+          "scored": 0,
+          "worst": -818,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 28
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 26
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -54,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 26
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -163,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 34
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -890,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 34
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 40
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -108,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 40
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -163,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 32
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -108,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 32
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -163,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 30
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -845,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 30
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 44
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -854,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 44
+            },
+            "dir": 1
+          },
+          "landing": 43,
+          "scored": 0,
+          "worst": -809,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 36
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -845,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 36
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -827,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 32
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -854,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 32
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -809,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 40
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 40
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 46
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 46
+            },
+            "dir": 1
+          },
+          "landing": 45,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        }
+      ]
+    },
+    {
+      "layout": 2,
+      "name": "こおりの回廊",
+      "metric": "All legal actions and all opponent replies, two-ply static evaluation; within 50 units is a heuristic band, NOT proof of equal strategy or best play.",
+      "best": 0,
+      "nearCount": 41,
+      "nearLandingSquares": [
+        0,
+        48,
+        14,
+        28
+      ],
+      "nearSkip": 2,
+      "nearWallTargets": [
+        15,
+        7,
+        11,
+        5,
+        13,
+        19,
+        23,
+        29,
+        21,
+        27,
+        33,
+        25,
+        37,
+        35,
+        39,
+        41,
+        47
+      ],
+      "ranked": [
+        {
+          "action": {
+            "wall": null,
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": null,
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 1
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -700,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 1
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -700,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -700,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 9
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -700,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 15
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -90,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 15
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 7
+            },
+            "dir": 0
+          },
+          "landing": 14,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 7
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 11
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -90,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 11
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 9
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -863,
+          "opponentCanScore": true
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 5
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 5
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 13
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 13
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 19
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 19
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 11
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 11
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 15
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 15
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 23
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 23
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 29
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 29
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 21
+            },
+            "dir": 0
+          },
+          "landing": 28,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 21
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 19
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 19
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 27
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 27
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 33
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 33
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 25
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 25
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 29
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 29
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 37
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -163,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 37
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 43
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -163,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 35
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 39
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 39
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -99,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 37
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": -217,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 37
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -108,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 33
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 33
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -108,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 41
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 41
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 47
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 47
+            },
+            "dir": 1
+          },
+          "landing": 46,
+          "scored": 0,
+          "worst": -99,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 39
+            },
+            "dir": 0
+          },
+          "landing": 0,
+          "scored": 0,
+          "worst": 0,
+          "opponentCanScore": false
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 39
+            },
+            "dir": 1
+          },
+          "landing": 48,
+          "scored": 0,
+          "worst": -27,
+          "opponentCanScore": false
+        }
+      ]
+    }
+  ],
+  "fixtures": {
+    "blocksWin": {
+      "state": {
+        "walls": [
+          8,
+          12,
+          22,
+          18,
+          30,
+          34,
+          44,
+          48
+        ],
+        "stars": [
+          17,
+          24,
+          31
+        ],
+        "players": [
+          3,
+          27
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "turn": 1,
+        "ply": 10,
+        "winner": null
+      },
+      "unsafeAction": {
+        "wall": {
+          "wall": 2,
+          "to": 23
+        },
+        "dir": 3
+      },
+      "safeAction": {
+        "wall": null,
+        "dir": 0
+      },
+      "safeCount": 46,
+      "unsafeCount": 8
+    },
+    "skipWins": {
+      "state": {
+        "walls": [
+          14,
+          5,
+          16,
+          25,
+          23,
+          32,
+          21,
+          40
+        ],
+        "stars": [
+          3,
+          17,
+          24
+        ],
+        "players": [
+          45,
+          18
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "turn": 0,
+        "ply": 10,
+        "winner": null
+      },
+      "action": {
+        "wall": null,
+        "dir": 0
+      },
+      "result": {
+        "walls": [
+          14,
+          5,
+          16,
+          25,
+          23,
+          32,
+          21,
+          40
+        ],
+        "stars": [
+          17,
+          24
+        ],
+        "players": [
+          3,
+          18
+        ],
+        "scores": [
+          3,
+          0
+        ],
+        "turn": 0,
+        "ply": 11,
+        "winner": 0
+      },
+      "source": {
+        "layout": 0,
+        "seed": 2322,
+        "starter": 0
+      }
+    }
+  },
+  "capped": [
+    {
+      "layout": 0,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 480,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 79,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          37,
+          27,
+          28,
+          34,
+          45,
+          38,
+          26,
+          39
+        ],
+        "stars": [
+          17
+        ],
+        "players": [
+          6,
+          42
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 787,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 86,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          7,
+          20,
+          10,
+          13,
+          38,
+          45,
+          31,
+          12
+        ],
+        "stars": [
+          17
+        ],
+        "players": [
+          37,
+          44
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 1401,
+      "starter": 0,
+      "scores": [
+        1,
+        2
+      ],
+      "starvationPlies": 81,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          13,
+          34,
+          22,
+          6,
+          39,
+          45,
+          36,
+          27
+        ],
+        "stars": [
+          17,
+          24
+        ],
+        "players": [
+          47,
+          40
+        ],
+        "scores": [
+          1,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 1708,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 86,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          8,
+          19,
+          16,
+          40,
+          21,
+          34,
+          28,
+          13
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          46,
+          3
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 173,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 98,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          11,
+          17,
+          28,
+          24,
+          12,
+          33,
+          36,
+          27
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          10,
+          20
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 480,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 75,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          21,
+          27,
+          16,
+          6,
+          28,
+          22,
+          42,
+          17
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          0,
+          41
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 787,
+      "starter": 0,
+      "scores": [
+        1,
+        1
+      ],
+      "starvationPlies": 100,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        3
+      ],
+      "final": {
+        "walls": [
+          15,
+          2,
+          43,
+          47,
+          35,
+          20,
+          44,
+          41
+        ],
+        "stars": [
+          17,
+          24,
+          31
+        ],
+        "players": [
+          1,
+          34
+        ],
+        "scores": [
+          1,
+          1
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 1401,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 71,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          14,
+          26,
+          25,
+          5,
+          35,
+          37,
+          28,
+          39
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          0,
+          7
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 1401,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 80,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          29,
+          39,
+          8,
+          11,
+          38,
+          41,
+          25,
+          48
+        ],
+        "stars": [
+          17
+        ],
+        "players": [
+          0,
+          40
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 2322,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 96,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          36,
+          20,
+          29,
+          13,
+          3,
+          46,
+          44,
+          34
+        ],
+        "stars": [
+          17
+        ],
+        "players": [
+          6,
+          22
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 2936,
+      "starter": 0,
+      "scores": [
+        2,
+        0
+      ],
+      "starvationPlies": 103,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        3
+      ],
+      "final": {
+        "walls": [
+          0,
+          5,
+          1,
+          4,
+          7,
+          41,
+          45,
+          26
+        ],
+        "stars": [
+          17,
+          24,
+          31
+        ],
+        "players": [
+          14,
+          34
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 3550,
+      "starter": 1,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 74,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          29,
+          11,
+          7,
+          45,
+          30,
+          26,
+          28,
+          36
+        ],
+        "stars": [
+          17,
+          24
+        ],
+        "players": [
+          6,
+          48
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 3550,
+      "starter": 0,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 65,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          2,
+          12,
+          21,
+          20,
+          28,
+          4,
+          37,
+          48
+        ],
+        "stars": [
+          24,
+          31
+        ],
+        "players": [
+          6,
+          47
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 3550,
+      "starter": 1,
+      "scores": [
+        0,
+        0
+      ],
+      "starvationPlies": 120,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        5,
+        5
+      ],
+      "final": {
+        "walls": [
+          22,
+          40,
+          28,
+          48,
+          36,
+          6,
+          35,
+          38
+        ],
+        "stars": [
+          3,
+          17,
+          24,
+          31,
+          45
+        ],
+        "players": [
+          14,
+          7
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 173,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 98,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          11,
+          17,
+          28,
+          24,
+          12,
+          33,
+          36,
+          27
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          10,
+          20
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 480,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 75,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          21,
+          27,
+          16,
+          6,
+          28,
+          22,
+          42,
+          17
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          0,
+          41
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 787,
+      "starter": 0,
+      "scores": [
+        2,
+        0
+      ],
+      "starvationPlies": 90,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        3
+      ],
+      "final": {
+        "walls": [
+          16,
+          12,
+          37,
+          39,
+          42,
+          20,
+          44,
+          47
+        ],
+        "stars": [
+          17,
+          24,
+          31
+        ],
+        "players": [
+          43,
+          13
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 1401,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 71,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          14,
+          26,
+          25,
+          5,
+          35,
+          37,
+          28,
+          39
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          0,
+          7
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 1401,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 80,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          29,
+          39,
+          8,
+          11,
+          38,
+          41,
+          25,
+          48
+        ],
+        "stars": [
+          17
+        ],
+        "players": [
+          0,
+          40
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 1708,
+      "starter": 1,
+      "scores": [
+        0,
+        2
+      ],
+      "starvationPlies": 75,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        3
+      ],
+      "final": {
+        "walls": [
+          21,
+          2,
+          15,
+          27,
+          22,
+          19,
+          44,
+          47
+        ],
+        "stars": [
+          17,
+          24,
+          31
+        ],
+        "players": [
+          28,
+          6
+        ],
+        "scores": [
+          0,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 2322,
+      "starter": 1,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 55,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          29,
+          32,
+          22,
+          48,
+          37,
+          43,
+          36,
+          38
+        ],
+        "stars": [
+          24,
+          31
+        ],
+        "players": [
+          47,
+          41
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 2936,
+      "starter": 0,
+      "scores": [
+        2,
+        0
+      ],
+      "starvationPlies": 103,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        3
+      ],
+      "final": {
+        "walls": [
+          0,
+          5,
+          1,
+          4,
+          7,
+          41,
+          45,
+          26
+        ],
+        "stars": [
+          17,
+          24,
+          31
+        ],
+        "players": [
+          14,
+          34
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 3550,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 97,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          7,
+          6,
+          29,
+          48,
+          36,
+          38,
+          42,
+          37
+        ],
+        "stars": [
+          17
+        ],
+        "players": [
+          43,
+          13
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 0,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 3550,
+      "starter": 1,
+      "scores": [
+        1,
+        1
+      ],
+      "starvationPlies": 90,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        3
+      ],
+      "final": {
+        "walls": [
+          11,
+          27,
+          1,
+          20,
+          35,
+          6,
+          19,
+          41
+        ],
+        "stars": [
+          17,
+          24,
+          31
+        ],
+        "players": [
+          10,
+          42
+        ],
+        "scores": [
+          1,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 964,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 111,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          24,
+          12,
+          15,
+          16,
+          26,
+          20,
+          37,
+          41
+        ],
+        "stars": [
+          10
+        ],
+        "players": [
+          28,
+          48
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 964,
+      "starter": 1,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 102,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          0,
+          34,
+          22,
+          20,
+          7,
+          41,
+          36,
+          29
+        ],
+        "stars": [
+          24,
+          38
+        ],
+        "players": [
+          4,
+          5
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 1578,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 68,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          8,
+          20,
+          36,
+          6,
+          44,
+          26,
+          30,
+          47
+        ],
+        "stars": [
+          10
+        ],
+        "players": [
+          42,
+          1
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 1885,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 106,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          8,
+          36,
+          28,
+          12,
+          29,
+          39,
+          42,
+          48
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          27,
+          6
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 3727,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 75,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          29,
+          26,
+          21,
+          13,
+          40,
+          32,
+          35,
+          48
+        ],
+        "stars": [
+          24
+        ],
+        "players": [
+          0,
+          1
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 4034,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 111,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          23,
+          12,
+          1,
+          47,
+          10,
+          13,
+          11,
+          26
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          20,
+          14
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 4341,
+      "starter": 1,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 98,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          15,
+          5,
+          24,
+          19,
+          34,
+          26,
+          22,
+          43
+        ],
+        "stars": [
+          10,
+          38
+        ],
+        "players": [
+          35,
+          4
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 964,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 111,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          24,
+          12,
+          15,
+          16,
+          26,
+          20,
+          37,
+          41
+        ],
+        "stars": [
+          10
+        ],
+        "players": [
+          28,
+          48
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 964,
+      "starter": 1,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 102,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          9,
+          3,
+          22,
+          6,
+          8,
+          41,
+          42,
+          35
+        ],
+        "stars": [
+          24,
+          38
+        ],
+        "players": [
+          28,
+          1
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 1271,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 91,
+      "threefold": false,
+      "scoringActionsNow": [
+        1,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          10,
+          20,
+          3,
+          11,
+          28,
+          40,
+          37,
+          46
+        ],
+        "stars": [
+          24
+        ],
+        "players": [
+          45,
+          29
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 1578,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 88,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          21,
+          13,
+          35,
+          32,
+          31,
+          41,
+          36,
+          39
+        ],
+        "stars": [
+          24
+        ],
+        "players": [
+          43,
+          29
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 1885,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 62,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          0,
+          6,
+          24,
+          17,
+          36,
+          18,
+          26,
+          22
+        ],
+        "stars": [
+          10
+        ],
+        "players": [
+          13,
+          48
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 1885,
+      "starter": 1,
+      "scores": [
+        1,
+        1
+      ],
+      "starvationPlies": 118,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        3
+      ],
+      "final": {
+        "walls": [
+          0,
+          27,
+          1,
+          33,
+          29,
+          41,
+          43,
+          19
+        ],
+        "stars": [
+          10,
+          24,
+          38
+        ],
+        "players": [
+          48,
+          2
+        ],
+        "scores": [
+          1,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 2806,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 105,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          12,
+          2,
+          10,
+          13,
+          20,
+          32,
+          7,
+          41
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          48,
+          6
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 2806,
+      "starter": 1,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 102,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          8,
+          34,
+          21,
+          12,
+          42,
+          26,
+          30,
+          28
+        ],
+        "stars": [
+          10,
+          24
+        ],
+        "players": [
+          27,
+          35
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 3113,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 84,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          14,
+          47,
+          4,
+          40,
+          37,
+          20,
+          46,
+          41
+        ],
+        "stars": [
+          24
+        ],
+        "players": [
+          27,
+          5
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 3113,
+      "starter": 1,
+      "scores": [
+        1,
+        2
+      ],
+      "starvationPlies": 107,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          9,
+          0,
+          16,
+          2,
+          28,
+          47,
+          22,
+          40
+        ],
+        "stars": [
+          24,
+          38
+        ],
+        "players": [
+          3,
+          8
+        ],
+        "scores": [
+          1,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 3420,
+      "starter": 1,
+      "scores": [
+        1,
+        2
+      ],
+      "starvationPlies": 107,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          7,
+          6,
+          14,
+          41,
+          11,
+          48,
+          38,
+          39
+        ],
+        "stars": [
+          10,
+          24
+        ],
+        "players": [
+          28,
+          42
+        ],
+        "scores": [
+          1,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 3727,
+      "starter": 0,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 90,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          1,
+          32,
+          47,
+          18,
+          29,
+          33,
+          43,
+          26
+        ],
+        "stars": [
+          10,
+          38
+        ],
+        "players": [
+          44,
+          6
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 3727,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 72,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          26,
+          13,
+          2,
+          40,
+          38,
+          47,
+          7,
+          32
+        ],
+        "stars": [
+          10
+        ],
+        "players": [
+          14,
+          20
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 4341,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 96,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          22,
+          20,
+          2,
+          17,
+          5,
+          41,
+          43,
+          44
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          15,
+          7
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 4341,
+      "starter": 1,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 90,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          14,
+          6,
+          35,
+          40,
+          21,
+          39,
+          29,
+          27
+        ],
+        "stars": [
+          10,
+          24
+        ],
+        "players": [
+          48,
+          0
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 964,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 111,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          24,
+          12,
+          15,
+          16,
+          26,
+          20,
+          37,
+          41
+        ],
+        "stars": [
+          10
+        ],
+        "players": [
+          28,
+          48
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 964,
+      "starter": 1,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 102,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          0,
+          27,
+          22,
+          11,
+          7,
+          48,
+          43,
+          29
+        ],
+        "stars": [
+          24,
+          38
+        ],
+        "players": [
+          14,
+          44
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 1885,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 68,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          41,
+          34,
+          46,
+          18,
+          8,
+          31,
+          28,
+          37
+        ],
+        "stars": [
+          10
+        ],
+        "players": [
+          35,
+          27
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 2499,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 94,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          5,
+          4,
+          22,
+          26,
+          36,
+          44,
+          40,
+          41
+        ],
+        "stars": [
+          24
+        ],
+        "players": [
+          3,
+          7
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 2806,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 105,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          12,
+          2,
+          10,
+          13,
+          20,
+          32,
+          7,
+          41
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          48,
+          6
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 2806,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 95,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          35,
+          18,
+          15,
+          17,
+          42,
+          40,
+          45,
+          7
+        ],
+        "stars": [
+          10
+        ],
+        "players": [
+          44,
+          48
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 3113,
+      "starter": 1,
+      "scores": [
+        1,
+        2
+      ],
+      "starvationPlies": 107,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          9,
+          0,
+          16,
+          2,
+          28,
+          47,
+          22,
+          40
+        ],
+        "stars": [
+          24,
+          38
+        ],
+        "players": [
+          3,
+          8
+        ],
+        "scores": [
+          1,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 3727,
+      "starter": 0,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 78,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          8,
+          19,
+          16,
+          33,
+          30,
+          31,
+          44,
+          39
+        ],
+        "stars": [
+          10,
+          24
+        ],
+        "players": [
+          35,
+          28
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 3727,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 111,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          6,
+          26,
+          12,
+          20,
+          42,
+          9,
+          7,
+          47
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          19,
+          0
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 4341,
+      "starter": 1,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 98,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          15,
+          5,
+          24,
+          19,
+          34,
+          26,
+          22,
+          43
+        ],
+        "stars": [
+          10,
+          38
+        ],
+        "players": [
+          35,
+          4
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 964,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 111,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          24,
+          12,
+          15,
+          16,
+          26,
+          20,
+          37,
+          41
+        ],
+        "stars": [
+          10
+        ],
+        "players": [
+          28,
+          48
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 964,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 112,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          28,
+          3,
+          15,
+          5,
+          9,
+          34,
+          27,
+          41
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          13,
+          48
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 1271,
+      "starter": 0,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 105,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          17,
+          26,
+          8,
+          25,
+          21,
+          41,
+          12,
+          33
+        ],
+        "stars": [
+          10,
+          38
+        ],
+        "players": [
+          16,
+          28
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 1271,
+      "starter": 1,
+      "scores": [
+        1,
+        1
+      ],
+      "starvationPlies": 118,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        3
+      ],
+      "final": {
+        "walls": [
+          1,
+          23,
+          22,
+          25,
+          7,
+          33,
+          37,
+          13
+        ],
+        "stars": [
+          10,
+          24,
+          38
+        ],
+        "players": [
+          43,
+          42
+        ],
+        "scores": [
+          1,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 1578,
+      "starter": 0,
+      "scores": [
+        1,
+        1
+      ],
+      "starvationPlies": 118,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        2
+      ],
+      "final": {
+        "walls": [
+          16,
+          17,
+          8,
+          26,
+          23,
+          31,
+          27,
+          44
+        ],
+        "stars": [
+          10,
+          24,
+          38
+        ],
+        "players": [
+          14,
+          18
+        ],
+        "scores": [
+          1,
+          1
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 1578,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 112,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          35,
+          25,
+          28,
+          1,
+          42,
+          11,
+          24,
+          26
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          6,
+          2
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 1885,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 102,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          8,
+          32,
+          23,
+          40,
+          31,
+          10,
+          9,
+          27
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          34,
+          22
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 1885,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 112,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          0,
+          30,
+          1,
+          41,
+          24,
+          27,
+          32,
+          40
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          20,
+          14
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 2192,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 110,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          29,
+          22,
+          25,
+          33,
+          18,
+          34,
+          11,
+          39
+        ],
+        "stars": [
+          10
+        ],
+        "players": [
+          41,
+          42
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 2499,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 112,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          23,
+          6,
+          9,
+          0,
+          35,
+          32,
+          36,
+          20
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          5,
+          27
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 2806,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 101,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          43,
+          9,
+          22,
+          19,
+          7,
+          30,
+          36,
+          21
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          10,
+          42
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 2806,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 112,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          31,
+          34,
+          24,
+          3,
+          11,
+          26,
+          22,
+          40
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          0,
+          48
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 3113,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 84,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          14,
+          47,
+          4,
+          40,
+          37,
+          20,
+          46,
+          41
+        ],
+        "stars": [
+          24
+        ],
+        "players": [
+          27,
+          5
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 3113,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 112,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          27,
+          13,
+          7,
+          40,
+          35,
+          41,
+          42,
+          17
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          1,
+          46
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 3420,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 62,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          30,
+          40,
+          15,
+          19,
+          38,
+          48,
+          43,
+          21
+        ],
+        "stars": [
+          24
+        ],
+        "players": [
+          36,
+          39
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 3727,
+      "starter": 0,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 90,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          1,
+          32,
+          47,
+          18,
+          29,
+          33,
+          43,
+          26
+        ],
+        "stars": [
+          10,
+          38
+        ],
+        "players": [
+          44,
+          6
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 3727,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 112,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          21,
+          27,
+          9,
+          24,
+          43,
+          34,
+          16,
+          17
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          5,
+          35
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 4034,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 92,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          9,
+          6,
+          28,
+          13,
+          39,
+          40,
+          45,
+          46
+        ],
+        "stars": [
+          24
+        ],
+        "players": [
+          48,
+          42
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 4034,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 112,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          17,
+          12,
+          8,
+          46,
+          45,
+          47,
+          29,
+          33
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          5,
+          6
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 4341,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 97,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          9,
+          4,
+          1,
+          12,
+          39,
+          19,
+          47,
+          21
+        ],
+        "stars": [
+          24
+        ],
+        "players": [
+          6,
+          46
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 1,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 4341,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 112,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          19,
+          48,
+          16,
+          34,
+          35,
+          41,
+          10,
+          25
+        ],
+        "stars": [
+          38
+        ],
+        "players": [
+          1,
+          33
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 2676,
+      "starter": 0,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 76,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          8,
+          12,
+          26,
+          28,
+          33,
+          22,
+          21,
+          40
+        ],
+        "stars": [
+          17,
+          24
+        ],
+        "players": [
+          42,
+          6
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 3597,
+      "starter": 1,
+      "scores": [
+        1,
+        2
+      ],
+      "starvationPlies": 102,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          3,
+          5,
+          34,
+          14,
+          20,
+          28,
+          42,
+          27
+        ],
+        "stars": [
+          24,
+          31
+        ],
+        "players": [
+          43,
+          35
+        ],
+        "scores": [
+          1,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "search",
+        "search"
+      ],
+      "seed": 5132,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 102,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          14,
+          28,
+          4,
+          16,
+          23,
+          29,
+          15,
+          25
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          48,
+          7
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 2062,
+      "starter": 0,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 60,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          3,
+          14,
+          12,
+          43,
+          6,
+          28,
+          27,
+          40
+        ],
+        "stars": [
+          24,
+          31
+        ],
+        "players": [
+          34,
+          5
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 2369,
+      "starter": 1,
+      "scores": [
+        2,
+        0
+      ],
+      "starvationPlies": 82,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        3
+      ],
+      "final": {
+        "walls": [
+          3,
+          1,
+          12,
+          42,
+          27,
+          29,
+          41,
+          4
+        ],
+        "stars": [
+          17,
+          24,
+          31
+        ],
+        "players": [
+          43,
+          14
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 3597,
+      "starter": 0,
+      "scores": [
+        2,
+        0
+      ],
+      "starvationPlies": 77,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        19
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          37,
+          2,
+          12,
+          35,
+          38,
+          43,
+          32,
+          39
+        ],
+        "stars": [
+          17,
+          24,
+          31
+        ],
+        "players": [
+          19,
+          3
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 3597,
+      "starter": 1,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 95,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          2,
+          0,
+          4,
+          37,
+          5,
+          36,
+          38,
+          13
+        ],
+        "stars": [
+          17,
+          24
+        ],
+        "players": [
+          42,
+          12
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 4211,
+      "starter": 0,
+      "scores": [
+        0,
+        0
+      ],
+      "starvationPlies": 120,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        5,
+        5
+      ],
+      "final": {
+        "walls": [
+          7,
+          11,
+          40,
+          15,
+          41,
+          14,
+          20,
+          47
+        ],
+        "stars": [
+          3,
+          17,
+          24,
+          31,
+          45
+        ],
+        "players": [
+          27,
+          6
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 4518,
+      "starter": 0,
+      "scores": [
+        1,
+        2
+      ],
+      "starvationPlies": 79,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          14,
+          9,
+          12,
+          22,
+          41,
+          38,
+          44,
+          39
+        ],
+        "stars": [
+          17,
+          24
+        ],
+        "players": [
+          0,
+          1
+        ],
+        "scores": [
+          1,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 4825,
+      "starter": 0,
+      "scores": [
+        2,
+        0
+      ],
+      "starvationPlies": 101,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        3
+      ],
+      "final": {
+        "walls": [
+          21,
+          8,
+          13,
+          15,
+          20,
+          30,
+          34,
+          41
+        ],
+        "stars": [
+          17,
+          24,
+          31
+        ],
+        "players": [
+          7,
+          42
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "strong",
+        "strong"
+      ],
+      "seed": 5132,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 102,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          24,
+          13,
+          6,
+          15,
+          26,
+          21,
+          2,
+          1
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          0,
+          16
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 2676,
+      "starter": 0,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 74,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          14,
+          0,
+          5,
+          30,
+          33,
+          9,
+          43,
+          44
+        ],
+        "stars": [
+          17,
+          31
+        ],
+        "players": [
+          23,
+          4
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 4211,
+      "starter": 0,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 53,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          1,
+          11,
+          19,
+          22,
+          46,
+          42,
+          27,
+          39
+        ],
+        "stars": [
+          24
+        ],
+        "players": [
+          35,
+          45
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "strong",
+        "search"
+      ],
+      "seed": 5132,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 102,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          24,
+          13,
+          6,
+          15,
+          26,
+          21,
+          2,
+          1
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          0,
+          16
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 2062,
+      "starter": 0,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 60,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          3,
+          14,
+          12,
+          43,
+          6,
+          28,
+          27,
+          40
+        ],
+        "stars": [
+          24,
+          31
+        ],
+        "players": [
+          34,
+          5
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 2062,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 103,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          3,
+          9,
+          18,
+          22,
+          11,
+          17,
+          25,
+          24
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          2,
+          48
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 2369,
+      "starter": 1,
+      "scores": [
+        2,
+        0
+      ],
+      "starvationPlies": 82,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        3,
+        3
+      ],
+      "final": {
+        "walls": [
+          3,
+          1,
+          12,
+          42,
+          27,
+          29,
+          41,
+          4
+        ],
+        "stars": [
+          17,
+          24,
+          31
+        ],
+        "players": [
+          43,
+          14
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 3597,
+      "starter": 1,
+      "scores": [
+        2,
+        1
+      ],
+      "starvationPlies": 95,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          3,
+          31,
+          5,
+          15,
+          20,
+          36,
+          33,
+          26
+        ],
+        "stars": [
+          17,
+          24
+        ],
+        "players": [
+          4,
+          42
+        ],
+        "scores": [
+          2,
+          1
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 4211,
+      "starter": 0,
+      "scores": [
+        0,
+        0
+      ],
+      "starvationPlies": 120,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        5,
+        5
+      ],
+      "final": {
+        "walls": [
+          7,
+          11,
+          40,
+          15,
+          41,
+          14,
+          20,
+          47
+        ],
+        "stars": [
+          3,
+          17,
+          24,
+          31,
+          45
+        ],
+        "players": [
+          27,
+          6
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 4825,
+      "starter": 1,
+      "scores": [
+        1,
+        2
+      ],
+      "starvationPlies": 93,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        2,
+        2
+      ],
+      "final": {
+        "walls": [
+          10,
+          9,
+          4,
+          0,
+          32,
+          15,
+          43,
+          38
+        ],
+        "stars": [
+          24,
+          31
+        ],
+        "players": [
+          1,
+          48
+        ],
+        "scores": [
+          1,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    },
+    {
+      "layout": 2,
+      "policies": [
+        "defensive",
+        "strong"
+      ],
+      "seed": 5132,
+      "starter": 1,
+      "scores": [
+        2,
+        2
+      ],
+      "starvationPlies": 102,
+      "threefold": false,
+      "scoringActionsNow": [
+        0,
+        0
+      ],
+      "staticUnreachable": [
+        1,
+        1
+      ],
+      "final": {
+        "walls": [
+          24,
+          13,
+          6,
+          15,
+          26,
+          21,
+          2,
+          1
+        ],
+        "stars": [
+          31
+        ],
+        "players": [
+          0,
+          16
+        ],
+        "scores": [
+          2,
+          2
+        ],
+        "turn": 1,
+        "ply": 120,
+        "winner": null
+      }
+    }
+  ],
+  "warning": "No repeat is not evidence of progress: changing irrelevant wall positions can avoid identical-position repetition. Static unreachable is NOT permanent unreachable with movable walls."
+}

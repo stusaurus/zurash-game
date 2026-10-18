@@ -1,0 +1,193 @@
+{
+  "version": 2,
+  "base": "57f92725115f73fa6d265eb9da7361fd09fde9e3",
+  "params": {
+    "pairs": 40,
+    "cap": 160,
+    "matchups": [
+      [
+        "strong",
+        "strong"
+      ]
+    ]
+  },
+  "notes": "Shared per-game RNG, paired initiative swap; capped is NOT draw. CI resamples seed pairs, conditional on decided games; initiative bounds allocate all capped games to either side. Duration in plies, NOT human minutes. Comeback means winner trailed in score at least once. Canonical openings rotate starter 1 by 180 degrees; wall target plus direction, not wall index. Experimental policies are not deployed.",
+  "elapsedSeconds": 112.461,
+  "totalGames": 240,
+  "rows": [
+    {
+      "layout": 0,
+      "name": "はじまりの氷原",
+      "policies": "strong/strong",
+      "games": 80,
+      "firstWins": 25,
+      "secondWins": 26,
+      "agent0Wins": 16,
+      "capped": 29,
+      "decidedFirstRate": 0.49019607843137253,
+      "pairedBootstrap95": [
+        0.36363636363636365,
+        0.6078431372549019
+      ],
+      "initiativeRateBounds": [
+        0.3125,
+        0.675
+      ],
+      "decidedPlies": {
+        "n": 51,
+        "mean": 37.78431372549019,
+        "median": 29,
+        "p90": 78,
+        "max": 154
+      },
+      "observedPlies": {
+        "n": 80,
+        "mean": 82.0875,
+        "median": 48,
+        "p90": 160,
+        "max": 160
+      },
+      "firstStar": {
+        "n": 80,
+        "mean": 26.5875,
+        "median": 21,
+        "p90": 49,
+        "max": 103
+      },
+      "scoreGap": {
+        "n": 51,
+        "mean": 2.764705882352941,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 16,
+      "comebacks": 3,
+      "wallMoves": 6283,
+      "skips": 284,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 37,
+      "stalled20": 58,
+      "canonicalFirstChoices": 16,
+      "canonicalSixPlyLines": 80,
+      "canonicalSixPlyStates": 78
+    },
+    {
+      "layout": 1,
+      "name": "ふたつの谷",
+      "policies": "strong/strong",
+      "games": 80,
+      "firstWins": 14,
+      "secondWins": 14,
+      "agent0Wins": 13,
+      "capped": 52,
+      "decidedFirstRate": 0.5,
+      "pairedBootstrap95": [
+        0.2916666666666667,
+        0.6944444444444444
+      ],
+      "initiativeRateBounds": [
+        0.175,
+        0.825
+      ],
+      "decidedPlies": {
+        "n": 28,
+        "mean": 66.57142857142857,
+        "median": 47,
+        "p90": 136,
+        "max": 140
+      },
+      "observedPlies": {
+        "n": 80,
+        "mean": 127.3,
+        "median": 160,
+        "p90": 160,
+        "max": 160
+      },
+      "firstStar": {
+        "n": 80,
+        "mean": 1,
+        "median": 1,
+        "p90": 1,
+        "max": 1
+      },
+      "scoreGap": {
+        "n": 28,
+        "mean": 1.6071428571428572,
+        "median": 2,
+        "p90": 2,
+        "max": 2
+      },
+      "tiedAtTwo": 43,
+      "comebacks": 17,
+      "wallMoves": 9822,
+      "skips": 362,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 65,
+      "stalled20": 70,
+      "canonicalFirstChoices": 1,
+      "canonicalSixPlyLines": 48,
+      "canonicalSixPlyStates": 39
+    },
+    {
+      "layout": 2,
+      "name": "こおりの回廊",
+      "policies": "strong/strong",
+      "games": 80,
+      "firstWins": 27,
+      "secondWins": 31,
+      "agent0Wins": 27,
+      "capped": 22,
+      "decidedFirstRate": 0.46551724137931033,
+      "pairedBootstrap95": [
+        0.3333333333333333,
+        0.5967741935483871
+      ],
+      "initiativeRateBounds": [
+        0.3375,
+        0.6125
+      ],
+      "decidedPlies": {
+        "n": 58,
+        "mean": 38.12068965517241,
+        "median": 24,
+        "p90": 107,
+        "max": 157
+      },
+      "observedPlies": {
+        "n": 80,
+        "mean": 71.6375,
+        "median": 35,
+        "p90": 160,
+        "max": 160
+      },
+      "firstStar": {
+        "n": 80,
+        "mean": 26.7625,
+        "median": 18,
+        "p90": 45,
+        "max": 141
+      },
+      "scoreGap": {
+        "n": 58,
+        "mean": 2.586206896551724,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "tiedAtTwo": 14,
+      "comebacks": 5,
+      "wallMoves": 5467,
+      "skips": 264,
+      "repeatedGames": 0,
+      "noLegal": 0,
+      "longGames60": 31,
+      "stalled20": 47,
+      "canonicalFirstChoices": 26,
+      "canonicalSixPlyLines": 80,
+      "canonicalSixPlyStates": 79
+    }
+  ]
+}

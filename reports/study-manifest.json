@@ -1,0 +1,14 @@
+{
+  "batches": [
+    "strategy-fast",
+    "strategy-light",
+    "strategy-search",
+    "strategy-strong-extended",
+    "strategy-planner"
+  ],
+  "executedRecordedGames": 7866,
+  "plies": 339693,
+  "uniqueLayoutPolicySeedStarter": 5994,
+  "note": "Batches overlap: fast/light share 1800 games; search/extended reuse 72 strong-selfplay seeds with different caps. Never pool them as independent observations. Historical 1440-game reproduction is contained in fast and excluded from this count.",
+  "allNoLegal": 0
+}

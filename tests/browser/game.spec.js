@@ -65,30 +65,58 @@ test("responsive board, dialogs, and exact reference asset", async ({
 });
 test("wall selection, shift, undo, skip, slide, local handoff, victory and rematch", async ({
   page,
-}) => {
+}, testInfo) => {
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
   await local(page);
   let state = initial();
+  for (const delta of [-7, 1, 7, -1]) {
+    const move = movableWalls(state).find(m => m.to - state.walls[m.wall] === delta);
+    expect(move).toBeDefined();
+    await page.locator(`[data-cell="${state.walls[move.wall]}"]`).click();
+    await expect(page.locator(`[data-cell="${move.to}"]`)).toHaveText(({[-7]: "↑", [1]: "→", [7]: "↓", [-1]: "←"})[delta]);
+  }
   const wall = movableWalls(state)[0];
   await page.locator(`[data-cell="${state.walls[wall.wall]}"]`).click();
   await expect(page.locator(".target")).not.toHaveCount(0);
+  const delta = wall.to - state.walls[wall.wall];
+  const arrow = ({ [-7]: "↑", [1]: "→", [7]: "↓", [-1]: "←" })[delta];
+  await expect(page.locator(`[data-cell="${wall.to}"]`)).toHaveText(arrow);
   await page.locator(`[data-cell="${wall.to}"]`).click();
   await expect(page.locator("#phaseBadge")).toHaveText("2");
   await page.locator("#undo").click();
   await expect(page.locator("#phaseBadge")).toHaveText("1");
   const rng = seeded(99),
     seen = new Map();
+  let finalState, finalAction;
   for (let turn = 0; turn < 100 && state.winner === null; turn++) {
     seen.set(key(state), (seen.get(key(state)) || 0) + 1);
     const action = choose(state, { level: "greedy", rng, seen });
+    if (apply(state, action).winner !== null) {
+      finalState = state;
+      finalAction = action;
+    }
     state = await doAction(page, state, action);
   }
   expect(state.winner).not.toBeNull();
   await expect(page.locator("#result")).toBeVisible();
+  await expect(page.locator("#result")).toHaveAttribute("open", "");
+  await expect(page.locator("#resultText")).toContainText("最終スコア");
+  await expect(page.locator("#lastMove")).toContainText("★ゲット！");
   await expect(page.locator("#resultTitle")).toContainText(
     `プレイヤー${state.winner + 1}`,
   );
+  await expect(page.locator("#turnCount")).toHaveText(`${state.ply}手目`);
+  await expect(page.locator("#result")).toHaveCSS("opacity", "1");
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.screenshot({ path: testInfo.outputPath("victory.png"), fullPage: true });
+  await page.locator("#reviewFinal").click();
+  await expect(page.locator("#result")).toBeHidden();
+  await expect(page.locator("#board")).toBeVisible();
+  await page.locator("#undo").click();
+  expect(finalAction).toBeDefined();
+  await doAction(page, finalState, finalAction);
+  await expect(page.locator("#result")).toBeVisible();
   await page.locator("#rematch").click();
   await expect(page.locator("#result")).toBeHidden();
   await expect(page.locator("#turnCount")).toHaveText("1手目");
@@ -124,9 +152,7 @@ test("CPU worker responds and undo returns to human turn; reset cancels pending 
   expect(errors).toEqual([]);
 });
 
-test("CPU responds on its second turn (fourth ply), not just the first", async ({
-  page,
-}, testInfo) => {
+test("CPU continues on turn four (second worker response)", async ({ page }, testInfo) => {
   const press = testInfo.project.use.hasTouch ? "tap" : "click";
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
@@ -167,4 +193,13 @@ test("challenge mode is selectable, survives CPU turns, and can switch to normal
     await expect(page.locator("#turnCount")).toHaveText(`${i * 2 + 3}手目`, { timeout: 30000 });
   }
   expect(errors).toEqual([]);
+});
+test('wall choices always leave a legal sliding continuation',async({page})=>{
+ await local(page);
+ let s=await doAction(page,initial(),{wall:{wall:1,to:13},dir:0});
+ await page.locator('[data-cell="8"]').click();
+ await expect(page.locator('[data-cell="7"]')).toBeDisabled();
+ await expect(page.locator('[data-cell="7"]')).not.toHaveClass(/target/);
+ await doAction(page,s,{wall:null,dir:3});
+ await expect(page.locator('#turnCount')).toHaveText('3手目');
 });

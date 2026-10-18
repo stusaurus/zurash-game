@@ -486,7 +486,7 @@ select {
   font-size: 65px;
   color: #eba622;
 }
-.celebration.pop {
+.celebration.pop > span {
   animation: pop 0.65s both;
 }
 @keyframes pop {
@@ -639,5 +639,94 @@ h1 {
   }
 }
 
-/* Hide difficulty choices in local two-player mode. */
+
+/* Play-feel polish: show what changed without giving away future tactics. */
+.score.match-point {
+  background: #fff0bd;
+  border-color: #dda535;
+}
+.score.match-point.p2 {
+  background: #dcf5ef;
+  border-color: #4d9e94;
+}
+.score.match-point small {
+  color: #634d2b;
+  font-weight: 800;
+}
+.cell.target {
+  font-weight: 900;
+  font-size: clamp(22px, 5vw, 32px);
+}
+.last-move {
+  margin: 13px 2px -3px;
+  padding: 10px 13px;
+  border-radius: 12px;
+  background: #e9f2f3;
+  border: 1px solid #d2e3e4;
+  color: #365b62;
+  font-size: 11px;
+  line-height: 1.6;
+  font-weight: 700;
+}
+.last-move[hidden] { display: none; }
+.last-move.scored {
+  background: #fff0c6;
+  border-color: #e9c46a;
+  color: #74521b;
+}
+dialog.result {
+  margin: auto;
+  width: calc(100% - 36px);
+  max-width: 420px;
+  padding: 27px 22px 24px;
+  border-radius: 24px;
+  border: 3px solid #ecc56e;
+  background: #fff8e7;
+  color: #315258;
+  text-align: center;
+  box-shadow: 0 25px 90px #16343a66;
+}
+dialog.result::backdrop {
+  background: #122e37b8;
+  backdrop-filter: blur(5px);
+}
+dialog.result[open] { animation: result-enter 360ms cubic-bezier(.2,.85,.22,1) both; }
+dialog.result .result-stars {
+  color: #e7a126;
+  font-size: 29px;
+  letter-spacing: 5px;
+  margin: 4px 0 8px;
+  text-shadow: 0 2px 0 #fff;
+}
+dialog.result h2 {
+  font-size: clamp(25px, 6vw, 32px);
+  margin: 10px 0 14px;
+}
+dialog.result p:not(.eyebrow) {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 18px;
+}
+dialog.result .primary {
+  width: 100%;
+  font-size: 15px;
+  min-height: 50px;
+}
+dialog.result #reviewFinal {
+  width: 100%;
+  margin-top: 9px;
+  font-size: 13px;
+}
+dialog.result.defeat {
+  border-color: #b2d8d9;
+  background: #f2f8f8;
+}
+@keyframes result-enter {
+  from { opacity: 0; transform: translateY(24px) scale(.92); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  dialog.result[open] { animation: none; }
+}
+/* Keep the main-branch local-mode difficulty control behavior. */
 #cpuLevelRow[hidden] { display: none; }

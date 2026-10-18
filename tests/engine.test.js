@@ -151,3 +151,13 @@ test("challenge CPU avoids a preventable immediate defeat at 2–2", () => {
     assert.ok(avoidsDefeat(move), `seed ${seed} conceded an avoidable win`);
   }
 });
+test('wall phase cannot offer a shift with no legal slide continuation', () => {
+  // Reachable after one legal turn: wall 12 -> 13, then player 0 slides up.
+  const s = apply(initial(), {wall:{wall:1,to:13},dir:0});
+  assert.deepEqual(s.players,[0,6]);
+  // 8 -> 7 leaves physical mobility, but player 1's only stop (1)
+  // would completely trap player 0. There is no legal completed turn.
+  assert.ok(!movableWalls(s).some(w=>w.wall===0&&w.to===7));
+  assert.throws(()=>moveWall(s,{wall:0,to:7}));
+  for(const w of movableWalls(s))assert.ok(slideOptions(moveWall(s,w)).length);
+});

@@ -1,4 +1,4 @@
-import { actions, apply, distances, key } from "./engine.js";
+import { actions, distances, key, successors } from "./engine.js";
 export function seeded(seed = 1) {
   return () => {
     seed |= 0;
@@ -29,9 +29,8 @@ export function choose(
   if (!all.length) return null;
   if (level === "random") return all[Math.floor(rng() * all.length)];
   const p = s.turn;
-  const ranked = all
-    .map((a) => {
-      const n = apply(s, a);
+  const ranked = successors(s)
+    .map(({ a, n }) => {
       return {
         a,
         n,
@@ -46,7 +45,7 @@ export function choose(
   let candidates = ranked;
   if (level === "strong" && s.scores[1 - p] === 2) {
     const safe = ranked.filter(({ n }) =>
-      !actions(n).some((reply) => apply(n, reply).winner === 1 - p),
+      !successors(n).some(({ n: reply }) => reply.winner === 1 - p),
     );
     if (safe.length) candidates = safe;
   }
@@ -54,8 +53,7 @@ export function choose(
     pick = candidates[0].a;
   for (const c of candidates.slice(0, level === "strong" ? 12 : beam)) {
     let worst = Infinity;
-    for (const reply of actions(c.n)) {
-      const n = apply(c.n, reply);
+    for (const { n } of successors(c.n)) {
       worst = Math.min(worst, evaluate(n, p));
       if (worst < best - 150) break;
     }
