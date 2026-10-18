@@ -1,0 +1,46 @@
+name: Two-wall curry fairness and pickup opportunity
+on:
+  push:
+    branches: [experiment/curry-two-wall-power]
+    paths:
+      - .github/workflows/curry-two-wall-fairness.yml
+      - scripts/curry-two-wall-fairness.js
+      - experiments/curry-two-wall-symmetry.js
+      - tests/curry-two-wall-symmetry.test.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fairness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Rule invariants and seat-swap CPU symmetry
+        run: npm run check && npm test
+      - name: Paired starter-swap holdout for three symmetric placements
+        env:
+          PAIRS: "48"
+          MAX_PLIES: "120"
+          SEED_OFFSET: "5211131"
+          REPORT: reports/curry-two-wall-fairness-holdout.json
+        run: node scripts/curry-two-wall-fairness.js
+      - name: Independent same-protocol seed block
+        env:
+          PAIRS: "48"
+          MAX_PLIES: "120"
+          SEED_OFFSET: "7211199"
+          REPORT: reports/curry-two-wall-fairness-validation.json
+        run: node scripts/curry-two-wall-fairness.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: two-wall-curry-fairness-evidence
+          path: |
+            reports/curry-two-wall-fairness-holdout.json
+            reports/curry-two-wall-fairness-validation.json
+          retention-days: 90
