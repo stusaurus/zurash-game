@@ -1,7 +1,12 @@
 // Laboratory policies only; these are not selectable CPU levels.
 import { successors, distances, key } from '../src/engine.js';
+import {choose as chooseLegacy} from './reference/ai-pre-route.js';
+import {chooseRoute} from '../src/route-ai.js';
 import { choose, evaluate } from '../src/ai.js';
 export function experimental(s, { level, rng, seen }) {
+  if(level==='legacy-strong')return chooseLegacy(s,{level:'strong',rng,seen});
+  if(level==='route-mix')return chooseRoute(s,{rng,seen,variety:25});
+  if(level==='route'||level==='route-progress')return chooseRoute(s,{rng,seen,progress:level==='route-progress'});
   if (!['defensive', 'planner'].includes(level)) return choose(s, { level, rng, seen });
   const p = s.turn;
   const score = n => {

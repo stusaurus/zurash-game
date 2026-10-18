@@ -2,3 +2,5 @@ node_modules/
 playwright-report/
 test-results/
 dist/
+# Uncompressed intermediate simulation traces; keep reproducible .jsonl.gz files.
+reports/*.jsonl

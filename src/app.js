@@ -24,7 +24,8 @@ let state = initial(),
   epoch = 0,
   worker = null,
   cpuTimer = null,
-  activeSettings = { layout: 0, starter: 0, level: "strong" };
+  activeSettings = { layout: 0, starter: 0, level: "strong" },
+  matchSeed = 0;
 const tokenEls = [0, 1].map((p) => {
   const el = document.createElement("div");
   el.className = `token p${p + 1}`;
@@ -255,7 +256,7 @@ function runCPU() {
     }
   }
   try {
-    worker.postMessage({ id, state: clone(state), history: [...seen], level: activeSettings.level });
+    worker.postMessage({ id, state: clone(state), history: [...seen], seed: matchSeed, level: activeSettings.level });
   } catch {
     stopCPU();
     fallback(id);
@@ -293,6 +294,9 @@ function acceptCPU(action, id) {
 }
 function reset() {
   epoch++;
+  matchSeed = globalThis.crypto?.getRandomValues
+    ? crypto.getRandomValues(new Uint32Array(1))[0]
+    : Math.floor(Math.random() * 4294967296);
   stopCPU();
   if ($("result").open) $("result").close();
   resultSeen = false;

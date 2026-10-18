@@ -21,6 +21,8 @@ jobs:
       - run: LAYOUT_TRIALS=20 PAIRS=2 MAX_PLIES=25 npm run quality:layouts
       - run: PAIRS=1 MAX_PLIES=12 MATCHUPS=greedy/greedy REPORT=/tmp/strategy-smoke.json npm run quality:study
       - run: npm run quality:replay -- /tmp/strategy-smoke.json
+      - run: PAIRS=1 MAX_PLIES=20 SEED_OFFSET=9000071 RNG_MODE=worker MATCHUPS=route/legacy-strong REPORT=/tmp/route-smoke.json npm run quality:study
+      - run: npm run quality:replay -- /tmp/route-smoke.json
   browsers:
     runs-on: ubuntu-latest
     steps:
