@@ -66,3 +66,20 @@ test("a human can collect curry and move one wall THREE cells on the next own tu
  await expect(page.locator("#scores")).not.toContainText("🍛 次の自分の番");
  await expect(page.locator(".curry")).toHaveCount(1);
 });
+
+
+test("research setup switches between both symmetric curry placements",async({page})=>{
+ await page.goto("/experiments/curry-play.html");
+ await expect(page.locator("#curryPair")).toHaveValue("13,35");
+ await expect(page.locator('[data-cell="13"]')).toContainText("🍛");
+ await expect(page.locator('[data-cell="35"]')).toContainText("🍛");
+ await page.locator("#curryPair").selectOption("21,27");
+ await page.locator("#new").click();
+ await expect(page.locator('[data-cell="21"]')).toContainText("🍛");
+ await expect(page.locator('[data-cell="27"]')).toContainText("🍛");
+ await expect(page.locator(".curry")).toHaveCount(2);
+ await page.locator("#layout").selectOption("0");
+ await expect(page.locator("#curryPair")).toBeDisabled();
+ await page.locator("#new").click();
+ await expect(page.locator(".curry")).toHaveCount(2);
+});
