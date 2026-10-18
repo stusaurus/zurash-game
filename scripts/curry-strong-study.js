@@ -5,6 +5,8 @@ import {seeded} from "../src/ai.js";
 import {turnSeed} from "../src/cpu-seed.js";
 const PAIRS=Number(process.env.PAIRS??10), CAP=Number(process.env.MAX_PLIES??120);
 const OUT=process.env.REPORT??"reports/curry-strong-study.json";
+const SEED_OFFSET=Number(process.env.SEED_OFFSET??9000053);
+if(!Number.isInteger(SEED_OFFSET)||SEED_OFFSET<0||SEED_OFFSET>1000000000)throw Error("invalid seed offset");
 if(!Number.isInteger(PAIRS)||PAIRS<1||PAIRS>250||!Number.isInteger(CAP)||CAP<10||CAP>500)throw Error("invalid experiment parameters");
 const cases=[
  {name:"curry-plus-two-strong-self",extra:2,levels:["strong","strong"]},
@@ -40,7 +42,7 @@ function play(spec,starter,seed,matchup){
 for(const matchup of cases){
  const games=[];
  for(let pair=0;pair<PAIRS;pair++)for(let starter=0;starter<2;starter++){
-  const seed=9000053+pair*1009;
+  const seed=SEED_OFFSET+pair*1009;
   games.push({...play(null,starter,seed,matchup),seed,pair});
  }
  const decided=games.filter(x=>x.winner!==null),
@@ -58,7 +60,7 @@ for(const matchup of cases){
  console.log("CURRY_STRONG_ROW "+JSON.stringify({...metrics,raw:undefined}));
 }
 const doc={version:1,source:process.env.GITHUB_SHA??"local",
- config:{pairs:PAIRS,maxPlies:CAP,layout:"こおりの回廊",curryPair:[13,35],workerSeedMode:"turnSeed"},
+ config:{pairs:PAIRS,maxPlies:CAP,seedOffset:SEED_OFFSET,layout:"こおりの回廊",curryPair:[13,35],workerSeedMode:"turnSeed"},
  note:"Research only, no production changes. Paired seeds and swapped initiative. Strong is curry-aware two-ply bounded CPU. At these samples no claim of human fairness; capped is NOT a game draw.",
  elapsedSeconds:+((Date.now()-start)/1000).toFixed(1),rows:result};
 fs.mkdirSync("reports",{recursive:true});
