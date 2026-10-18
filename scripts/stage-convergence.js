@@ -118,6 +118,23 @@ function evaluate(spec, policy, pairCount, seedOffset) {
     if (g.first !== null) opening.add(g.first);
   }
   const games = out.length, decided = out.filter(g=>!g.capped);
+  // Pair bootstrap, not independent-game Wilson, controls for the correlation
+  // between opposite-start games that reuse the same seed.
+  const pairUnits = Array.from({length:pairCount},(_,i)=>out.slice(i*2,i*2+2));
+  const bootRng = seeded(seedOffset ^ pairCount ^ policy.length ^ 927431);
+  const bootRates=[];
+  for(let iteration=0;iteration<2000;iteration++){
+    let wins=0,completed=0;
+    for(let k=0;k<pairCount;k++) for(const g of pairUnits[Math.floor(bootRng()*pairCount)]){
+      if(g.winner!==null){completed++;if(g.winner===g.starter)wins++;}
+    }
+    if(completed)bootRates.push(wins/completed);
+  }
+  bootRates.sort((a,b)=>a-b);
+  const pairedBootstrap95 = bootRates.length ? [
+    +bootRates[Math.floor((bootRates.length-1)*.025)].toFixed(4),
+    +bootRates[Math.floor((bootRates.length-1)*.975)].toFixed(4),
+  ] : [0,1];
   const firstWins = decided.filter(g=>g.winner === g.starter).length;
   const secondWins = decided.length - firstWins;
   const capped = games - decided.length;
@@ -129,6 +146,7 @@ function evaluate(spec, policy, pairCount, seedOffset) {
   return { policy, seedOffset, pairs: pairCount, games, decided:decided.length,
     firstWins, secondWins, capped, rate:rate === null ? null : +rate.toFixed(4),
     wilson95: wilson(firstWins, decided.length),
+    pairedBootstrap95,
     initiativeUncertainty:[+(firstWins/games).toFixed(4),+((firstWins+capped)/games).toFixed(4)],
     cappedRate:+(capped/games).toFixed(4),
     stalled20, stalledRate:+(stalled20/games).toFixed(4),
@@ -146,10 +164,10 @@ function trainingLoss(m) {
     (m.distinctFirstMoves<=2 ? .15 : 0);
 }
 function certified(m) {
-  // Strict gate: point estimate within 45..55%; confidence interval inside 40..60%.
+  // Strict gate: point estimate within 45..55%; PAIR-RESAMPLED CI inside 40..60%.
   // Censored games must be rare and are NEVER silently counted as draws.
   return m.decided >= 100 && m.rate !== null && m.rate>=.45 && m.rate<=.55 &&
-    m.wilson95[0]>=.40 && m.wilson95[1]<=.60 &&
+    m.pairedBootstrap95[0]>=.40 && m.pairedBootstrap95[1]<=.60 &&
     m.cappedRate<=.10 && m.stalledRate<=.35 && m.noLegal===0;
 }
 const results = [];
@@ -207,7 +225,7 @@ for (let layout=0;layout<LAYOUTS.length;layout++) {
   results.push({layout,name:LAYOUTS[layout].name,original,selected:champ,
     changed:!same,rounds,checks,converged,
     status:converged?"CONVERGED_UNDER_MEASUREMENT_GATE":"NOT_CERTIFIED",
-    warning:"95% Wilson intervals are per-decided-game; paired-seed correlation and policy dependence mean this is not a mathematical proof of fair human play."});
+    warning:"Paired bootstrap resamples complete two-game seed units, but policy dependence and finite coverage mean this is not a mathematical proof of fair human play."});
   console.log("STAGE_RESULT "+JSON.stringify({layout,name:LAYOUTS[layout].name,
     changed:!same,rounds:rounds.length,converged,
     holdout:checks[0].policies.map(x=>({policy:x.policy,baseline:x.baseline,
