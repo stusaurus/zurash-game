@@ -31,7 +31,7 @@ function heuristic(s,entry,policy,rng){
      -(n.stars.length?nearStar:0)*16
      -(n.curries.length?nearCurry:0)*nearFood
      -(n.scores[op]===2 && n.scores[p]<2?15:0)
-     +(entry.boostUsed?65:0)+rng()*0.000001;
+     +rng()*0.000001;
 }
 function play(layout,variant,policy,starter,seed){
  const rng=seeded(seed);
