@@ -1,0 +1,33 @@
+name: Curry tactical opportunity scan
+on:
+  push:
+    branches: [experiment/curry-powerup-two-player]
+    paths:
+      - .github/workflows/curry-leverage.yml
+      - scripts/curry-tactical-leverage.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  leverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npm test
+      - name: Check whether +2 cells create otherwise unavailable star routes
+        env:
+          PAIRS: "8"
+          MAX_PLIES: "120"
+          REPORT: reports/curry-tactical-leverage.json
+        run: node scripts/curry-tactical-leverage.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: curry-tactical-opportunity-scan
+          path: reports/curry-tactical-leverage.json
+          retention-days: 90
