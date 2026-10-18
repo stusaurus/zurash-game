@@ -15,6 +15,8 @@ const PARAMS = {
   rounds: intParam("ROUNDS", 2, 12),
   variants: intParam("VARIANTS", 10, 100),
   trainPairs: intParam("TRAIN_PAIRS", 8, 200),
+  routeTrainPairs: intParam("ROUTE_TRAIN_PAIRS", 3, 100),
+  searchTrainPairs: intParam("SEARCH_TRAIN_PAIRS", 3, 100),
   holdoutPairs: intParam("HOLDOUT_PAIRS", 12, 500),
   maxPlies: intParam("MAX_PLIES", 120, 500),
   maxSeconds: intParam("MAX_SECONDS", 1200, 7200),
@@ -191,8 +193,13 @@ for (let layout=0;layout<LAYOUTS.length;layout++) {
       PARAMS.seed + layout*101+round*3107).slice(0,Math.max(0,PARAMS.variants-1));
     selected.unshift({...original,mutation:"original"});
     const scores = selected.map(spec=>{
-      const m=evaluate(spec,"greedy",PARAMS.trainPairs,trainingOffset);
-      return { spec, loss: trainingLoss(m), training:m };
+      // Multi-agent screening: greed-only optimization produced severe
+      // route/search overfitting in the first 1,152-game round.
+      const greedy=evaluate(spec,"greedy",PARAMS.trainPairs,trainingOffset);
+      const search=evaluate(spec,"search",PARAMS.searchTrainPairs,trainingOffset + 31_007);
+      const route=evaluate(spec,"route",PARAMS.routeTrainPairs,trainingOffset + 61_009);
+      const loss=.30*trainingLoss(greedy)+.30*trainingLoss(search)+.40*trainingLoss(route);
+      return { spec, loss, training:{greedy,search,route} };
     }).sort((a,b)=>a.loss-b.loss || canonical(a.spec).localeCompare(canonical(b.spec)));
     const champion=scores[0];
     rounds.push({round,considered:all.length,evaluated:selected.length,
@@ -237,7 +244,7 @@ for (let layout=0;layout<LAYOUTS.length;layout++) {
 const totalSeconds=+((Date.now()-started)/1000).toFixed(2);
 const result={
   version:1,source,params:PARAMS,totalSeconds,
-  note:"Bounded two-player layout research: no deployed changes. No artificial game draws. Search training uses greedy policy; two disjoint unseen-seed checks with greedy, search and route self-play. Gates must pass for every policy and block. Not a mathematical fairness proof.",
+  note:"Bounded two-player layout research: no deployed changes. No artificial game draws. Multi-policy training (greedy, search, route) and two disjoint unseen-seed checks. Gates must pass for every policy and block. Paired bootstrap CI is used for certification; mathematical human-play fairness remains unproven.",
   convergence:results.every(x=>x.converged)?"CONVERGED_UNDER_MEASUREMENT_GATE":"NOT_CERTIFIED",
   stopReason:results.every(x=>x.converged)?"all measurement gates passed":"round/sample/time budget or fairness gate not passed",
   results,
