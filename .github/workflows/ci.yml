@@ -1,7 +1,7 @@
 name: Game quality
 on:
   push:
-    branches: [main, 'feat/**']
+    branches: [main, "feat/**"]
   pull_request:
 permissions:
   contents: read
