@@ -1,0 +1,298 @@
+{
+  "baseline": "57f9272 strong CPU",
+  "candidate": "successors-based strong CPU",
+  "conditions": "3 layouts x 4 paired seeds x 2 starters; 120-ply measurement cap; complete action-by-action old/new comparison with independent identical RNG streams and identical history.",
+  "games": 24,
+  "actionComparisons": 1758,
+  "allIdentical": true,
+  "results": [
+    {
+      "layout": 0,
+      "pair": 0,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "scores": [
+        2,
+        2
+      ],
+      "capped": true
+    },
+    {
+      "layout": 0,
+      "pair": 0,
+      "starter": 1,
+      "winner": 0,
+      "plies": 18,
+      "scores": [
+        3,
+        1
+      ],
+      "capped": false
+    },
+    {
+      "layout": 0,
+      "pair": 1,
+      "starter": 0,
+      "winner": 1,
+      "plies": 78,
+      "scores": [
+        0,
+        3
+      ],
+      "capped": false
+    },
+    {
+      "layout": 0,
+      "pair": 1,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "scores": [
+        2,
+        2
+      ],
+      "capped": true
+    },
+    {
+      "layout": 0,
+      "pair": 2,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "scores": [
+        1,
+        1
+      ],
+      "capped": true
+    },
+    {
+      "layout": 0,
+      "pair": 2,
+      "starter": 1,
+      "winner": 1,
+      "plies": 19,
+      "scores": [
+        0,
+        3
+      ],
+      "capped": false
+    },
+    {
+      "layout": 0,
+      "pair": 3,
+      "starter": 0,
+      "winner": 1,
+      "plies": 26,
+      "scores": [
+        0,
+        3
+      ],
+      "capped": false
+    },
+    {
+      "layout": 0,
+      "pair": 3,
+      "starter": 1,
+      "winner": 1,
+      "plies": 13,
+      "scores": [
+        0,
+        3
+      ],
+      "capped": false
+    },
+    {
+      "layout": 1,
+      "pair": 0,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "scores": [
+        2,
+        2
+      ],
+      "capped": true
+    },
+    {
+      "layout": 1,
+      "pair": 0,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "scores": [
+        2,
+        1
+      ],
+      "capped": true
+    },
+    {
+      "layout": 1,
+      "pair": 1,
+      "starter": 0,
+      "winner": 0,
+      "plies": 21,
+      "scores": [
+        3,
+        1
+      ],
+      "capped": false
+    },
+    {
+      "layout": 1,
+      "pair": 1,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "scores": [
+        2,
+        2
+      ],
+      "capped": true
+    },
+    {
+      "layout": 1,
+      "pair": 2,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "scores": [
+        2,
+        2
+      ],
+      "capped": true
+    },
+    {
+      "layout": 1,
+      "pair": 2,
+      "starter": 1,
+      "winner": 1,
+      "plies": 43,
+      "scores": [
+        1,
+        3
+      ],
+      "capped": false
+    },
+    {
+      "layout": 1,
+      "pair": 3,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "scores": [
+        2,
+        2
+      ],
+      "capped": true
+    },
+    {
+      "layout": 1,
+      "pair": 3,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "scores": [
+        1,
+        1
+      ],
+      "capped": true
+    },
+    {
+      "layout": 2,
+      "pair": 0,
+      "starter": 0,
+      "winner": 0,
+      "plies": 25,
+      "scores": [
+        3,
+        1
+      ],
+      "capped": false
+    },
+    {
+      "layout": 2,
+      "pair": 0,
+      "starter": 1,
+      "winner": 1,
+      "plies": 53,
+      "scores": [
+        0,
+        3
+      ],
+      "capped": false
+    },
+    {
+      "layout": 2,
+      "pair": 1,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "scores": [
+        2,
+        1
+      ],
+      "capped": true
+    },
+    {
+      "layout": 2,
+      "pair": 1,
+      "starter": 1,
+      "winner": 1,
+      "plies": 19,
+      "scores": [
+        2,
+        3
+      ],
+      "capped": false
+    },
+    {
+      "layout": 2,
+      "pair": 2,
+      "starter": 0,
+      "winner": 0,
+      "plies": 23,
+      "scores": [
+        3,
+        0
+      ],
+      "capped": false
+    },
+    {
+      "layout": 2,
+      "pair": 2,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "scores": [
+        2,
+        0
+      ],
+      "capped": true
+    },
+    {
+      "layout": 2,
+      "pair": 3,
+      "starter": 0,
+      "winner": 1,
+      "plies": 84,
+      "scores": [
+        0,
+        3
+      ],
+      "capped": false
+    },
+    {
+      "layout": 2,
+      "pair": 3,
+      "starter": 1,
+      "winner": 0,
+      "plies": 16,
+      "scores": [
+        3,
+        0
+      ],
+      "capped": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {gunzipSync} from 'node:zlib';
+const names=['strategy-fast','strategy-light','strategy-search','strategy-strong-extended','strategy-planner'];
+const csv=[['batch','layout','policies','n','firstWins','secondWins','capped','firstRateDecided','CI95low','CI95high','meanDecidedPlies','medianDecidedPlies','p90DecidedPlies','meanObservedPlies','firstStarMedian','meanScoreGap','tiedAtTwo','comebacks','wallMoves','skips','threefold','stalled20','long60','canonicalInitialChoices','sixPlyStates'].join(',')];
+for(const name of names)for(const r of JSON.parse(fs.readFileSync(`reports/${name}.json`)).rows)csv.push([name,r.name,r.policies,r.games,r.firstWins,r.secondWins,r.capped,r.decidedFirstRate,...r.pairedBootstrap95,r.decidedPlies.mean,r.decidedPlies.median,r.decidedPlies.p90,r.observedPlies.mean,r.firstStar.median,r.scoreGap.mean,r.tiedAtTwo,r.comebacks,r.wallMoves,r.skips,r.repeatedGames,r.stalled20,r.longGames60,r.canonicalFirstChoices,r.canonicalSixPlyStates].join(','));
+fs.writeFileSync('reports/strategy-summary.csv','\ufeff'+csv.join('\n')+'\n');
+const rows=names.flatMap(name=>JSON.parse(fs.readFileSync(`reports/${name}.json`)).rows);
+const raw=names.flatMap(name=>gunzipSync(fs.readFileSync(`reports/${name}.jsonl.gz`)).toString('utf8').trim().split('\n').map(JSON.parse));
+const identities=new Set(raw.map(g=>JSON.stringify([g.layout,g.policies,g.seed,g.starter])));
+fs.writeFileSync('reports/study-manifest.json',JSON.stringify({batches:names,executedRecordedGames:raw.length,plies:raw.reduce((n,g)=>n+g.plies,0),uniqueLayoutPolicySeedStarter:identities.size,note:'Batches overlap: fast/light share 1800 games; search/extended reuse 72 strong-selfplay seeds with different caps. Never pool them as independent observations. Historical 1440-game reproduction is contained in fast and excluded from this count.',allNoLegal:rows.reduce((n,r)=>n+r.noLegal,0)},null,2)+'\n');

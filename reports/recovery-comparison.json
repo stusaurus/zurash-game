@@ -1,0 +1,63 @@
+{
+  "notes": "Real Chromium with injected Worker faults. 1.75 seconds after human move; baseline postMessage watchdog may recover after 6 seconds, invalid action clears watchdog and stalls. Baseline assets loaded from main commit, candidate from worktree.",
+  "results": [
+    {
+      "version": "baseline",
+      "fault": "postMessage",
+      "turn": "2手目",
+      "terminated": 0,
+      "errors": [
+        "Error: fixture send failure"
+      ]
+    },
+    {
+      "version": "baseline",
+      "fault": "invalid",
+      "turn": "2手目",
+      "terminated": 0,
+      "errors": [
+        "Error: 不正な壁移動"
+      ]
+    },
+    {
+      "version": "baseline",
+      "fault": "reset",
+      "turn": "1手目",
+      "terminated": 0,
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "fault": "cancel",
+      "activeDifficulty": "☆☆☆\nあなた\nオレンジ · 0 / 3\n☆☆☆\nCPU（ふつう）\nみずいろ · 0 / 3",
+      "errors": []
+    },
+    {
+      "version": "candidate",
+      "fault": "postMessage",
+      "turn": "3手目",
+      "terminated": 1,
+      "errors": []
+    },
+    {
+      "version": "candidate",
+      "fault": "invalid",
+      "turn": "3手目",
+      "terminated": 1,
+      "errors": []
+    },
+    {
+      "version": "candidate",
+      "fault": "reset",
+      "turn": "1手目",
+      "terminated": 1,
+      "errors": []
+    },
+    {
+      "version": "candidate",
+      "fault": "cancel",
+      "activeDifficulty": "☆☆☆\nあなた\nオレンジ · 0 / 3\n☆☆☆\nCPU（つよい）\nみずいろ · 0 / 3",
+      "errors": []
+    }
+  ]
+}

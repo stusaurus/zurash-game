@@ -1,0 +1,48 @@
+{
+  "nodeTests": {
+    "passed": 17,
+    "failed": 0
+  },
+  "browserTests": {
+    "passed": 39,
+    "failed": 0,
+    "projects": [
+      "chromium",
+      "webkit",
+      "iphone-webkit"
+    ],
+    "realIphone": false
+  },
+  "recordedReplay": {
+    "games": 7866,
+    "plies": 339693,
+    "allMatched": true
+  },
+  "baselinePolicyEquivalence": {
+    "games": 24,
+    "choices": 1758,
+    "allMatched": true
+  },
+  "originalAuditReproduction": {
+    "games": 1440,
+    "plies": 57139
+  },
+  "screenshots": [
+    "qa/mobile-320.png",
+    "qa/mobile-390.png",
+    "qa/victory-iphone-webkit.png"
+  ],
+  "humanFun": "UNTESTED",
+  "productionChanged": false,
+  "wallContinuationAudit": {
+    "positions": 2000,
+    "deadEndsBefore": 14,
+    "deadEndsAfter": 0,
+    "completeActionListsUnchanged": true
+  },
+  "postScoreMobileWidth": {
+    "viewport": 390,
+    "before": 496,
+    "after": 390
+  }
+}

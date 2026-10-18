@@ -1,0 +1,52 @@
+{
+  "positions": 2000,
+  "offered": {
+    "baseline": 43436,
+    "candidate": 43422
+  },
+  "deadEnds": {
+    "baseline": 14,
+    "candidate": 0
+  },
+  "allCompleteActionListsIdentical": true,
+  "first": {
+    "state": {
+      "walls": [
+        8,
+        13,
+        16,
+        18,
+        30,
+        32,
+        36,
+        40
+      ],
+      "stars": [
+        3,
+        17,
+        24,
+        31,
+        45
+      ],
+      "players": [
+        0,
+        6
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 1,
+      "ply": 1,
+      "winner": null
+    },
+    "wall": {
+      "wall": 0,
+      "to": 7
+    },
+    "seed": 1094,
+    "layout": 0,
+    "starter": 0
+  },
+  "notes": "First 2000 reachable positions in recorded fast batch, not an exhaustive state-space proof. Removes only wall-phase offers that could never finish a legal turn."
+}
