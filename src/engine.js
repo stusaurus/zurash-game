@@ -25,6 +25,22 @@ export const LAYOUTS = [
     stars: [3, 17, 24, 31, 45],
     players: [42, 6],
   },
+  // Experimental 2-player stages; not yet certified for strong-CPU fairness.
+  // Both keep the rules and the rotational symmetry of the original stages.
+  {
+    name: "ほしの分かれ道（試作）",
+    experimental: true,
+    walls: [18, 30, 3, 45, 16, 32, 21, 27],
+    stars: [24, 15, 33, 9, 39],
+    players: [42, 6],
+  },
+  {
+    name: "こおりの交差路（試作）",
+    experimental: true,
+    walls: [18, 30, 3, 45, 12, 36, 21, 27],
+    stars: [24, 15, 33, 9, 39],
+    players: [42, 6],
+  },
 ];
 export const clone = (s) => structuredClone(s);
 export function initial(layout = 0, starter = 0) {
