@@ -5,6 +5,7 @@ on:
     paths:
       - .github/workflows/two-wall-opening-threats.yml
       - scripts/two-wall-opening-threats.js
+      - tests/two-wall-opening-threats.test.js
   workflow_dispatch:
 permissions:
   contents: read
