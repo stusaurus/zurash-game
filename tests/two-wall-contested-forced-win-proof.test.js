@@ -24,7 +24,8 @@ const trace=[
 ];
 const winningThreat={wall:{wall:1,to:16},dir:2,secondWall:null};
 test("after 17 legal moves at 2:1, moving wall then down forces victory against every reply",()=>{
- let s=initialCurry(2,0,[5,43]);
+ // The recorded 17-ply trace began with player 2, hence player 1 acts at ply 18.
+ let s=initialCurry(2,1,[5,43]);
  for(const [i,a] of trace.entries()){
   const next=successorsTwoWall(s).find(x=>JSON.stringify(x.a)===JSON.stringify(a));
   assert.ok(next,"Replay action "+i+" must be legal");
