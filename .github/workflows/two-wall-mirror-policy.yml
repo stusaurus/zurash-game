@@ -1,0 +1,35 @@
+name: Two-wall naive mirror policy stress test
+on:
+  push:
+    branches: [experiment/two-wall-forced-win-audit]
+    paths:
+      - .github/workflows/two-wall-mirror-policy.yml
+      - scripts/two-wall-mirror-policy.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mirror-policy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Test game rules before mirror-play simulations
+        run: npm test
+      - name: Challenge mirror reply with greedy/search/random policies
+        env:
+          GAMES: "24"
+          MAX_PLIES: "60"
+          SEED_OFFSET: "783301"
+          REPORT: reports/two-wall-mirror-policy.json
+        run: node scripts/two-wall-mirror-policy.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mirror-recipe-stress-results
+          path: reports/two-wall-mirror-policy.json
+          retention-days: 90
