@@ -6,6 +6,12 @@ import { seeded } from "../src/ai.js";
 import { turnSeed } from "../src/cpu-seed.js";
 
 const PAIRS=Number(process.env.PAIRS??6), CAP=Number(process.env.MAX_PLIES??120);
+const OFFSET=Number(process.env.SEED_OFFSET??880113);
+const POLICY_LIST=(process.env.POLICIES??"strong,greedy").split(",").filter(Boolean);
+const SELECTED_PAIRS=process.env.PLACEMENTS
+ ? new Set(process.env.PLACEMENTS.split(";").map(s=>s.split(",").map(Number).join(","))) : null;
+if(!Number.isSafeInteger(OFFSET)||OFFSET<1 || 
+   POLICY_LIST.some(p=>!["strong","greedy"].includes(p)))throw Error("invalid validation arguments");
 const OUT=process.env.REPORT??"reports/curry-tactical-leverage.json";
 if(!Number.isInteger(PAIRS)||PAIRS<1||PAIRS>30||!Number.isInteger(CAP)||CAP<10||CAP>200)
  throw Error("invalid trial bounds");
@@ -57,10 +63,12 @@ function one(pair,policy,starter,seed){
   plies:s.ply,stalled20:maxQuiet>=20};
 }
 const started=Date.now(),rows=[];
-for(const pair of placements)for(const policy of ["strong","greedy"]){
+const planned=SELECTED_PAIRS?placements.filter(p=>SELECTED_PAIRS.has(p.join(","))):placements;
+if(!planned.length)throw Error("No valid curry placements selected");
+for(const pair of planned)for(const policy of POLICY_LIST){
  const games=[];
  for(let seedIndex=0;seedIndex<PAIRS;seedIndex++)for(const starter of [0,1]){
-  const seed=880113+seedIndex*7129;
+  const seed=OFFSET+seedIndex*7129;
   games.push(one(pair,policy,starter,seed));
  }
  const sum=k=>games.reduce((a,g)=>a+g[k],0),decided=games.filter(g=>g.winner!==null);
@@ -76,13 +84,13 @@ for(const pair of placements)for(const policy of ["strong","greedy"]){
 }
 const report={version:1,source:process.env.GITHUB_SHA??"local",
  description:"Preliminary reachability and power leverage for all legal initial 180-degree curry pairs in corridor. Same-seed initiative swapping, 2 AI policies. Small sample; not a fairness certification.",
- parameters:{pairs:PAIRS,cap:CAP,layout:2},
+ parameters:{pairs:PAIRS,cap:CAP,layout:2,seedOffset:OFFSET,policies:POLICY_LIST,selectedPairs:[...planned]},
  elapsedSeconds:+((Date.now()-started)/1000).toFixed(1),rows};
 fs.mkdirSync("reports",{recursive:true});
 fs.writeFileSync(OUT,JSON.stringify(report,null,2)+"\n");
 console.log("CURRY_LEVERAGE_COMPLETE "+JSON.stringify({
   games:rows.reduce((x,y)=>x+y.games,0),
-  pairs:placements.length,
+  pairs:planned.length,
   powers:rows.reduce((x,y)=>x+y.poweredTurns,0),
   onlyStar:rows.reduce((x,y)=>x+y.poweredOnlyStar,0),
   onlyLanding:rows.reduce((x,y)=>x+y.poweredOnlyLanding,0),
