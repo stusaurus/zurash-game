@@ -14,7 +14,7 @@ if(!["stream","worker"].includes(rngMode))throw Error("Invalid RNG_MODE");
 const layoutIds=(process.env.LAYOUT_IDS??'0,1,2').split(',').map(Number);
 if(!layoutIds.length||new Set(layoutIds).size!==layoutIds.length||layoutIds.some(x=>!Number.isInteger(x)||x<0||x>=LAYOUTS.length))throw Error('Invalid LAYOUT_IDS');
 if(!Number.isInteger(seedOffset)||seedOffset<0)throw Error('Invalid SEED_OFFSET');
-if(!Number.isInteger(pairs)||pairs<1||pairs>500||!Number.isInteger(cap)||cap<1||cap>500||matchups.some(m=>m.length!==2||m.some(x=>!['random','greedy','search','strong','defensive','planner','route','route-progress','legacy-strong','route-mix'].includes(x)))) throw Error('Invalid experiment parameters');
+if(!Number.isInteger(pairs)||pairs<1||pairs>500||!Number.isInteger(cap)||cap<1||cap>500||matchups.some(m=>m.length!==2||m.some(x=>!['random','greedy','search','strong','defensive','planner','route','route-progress','legacy-strong','route-mix','sym-route'].includes(x)))) throw Error('Invalid experiment parameters');
 const percentile=(a,q)=>a.length?[...a].sort((a,b)=>a-b)[Math.max(0,Math.ceil(a.length*q)-1)]:null;
 const stats=a=>({n:a.length,mean:a.length?a.reduce((a,b)=>a+b,0)/a.length:null,median:percentile(a,.5),p90:percentile(a,.9),max:a.length?Math.max(...a):null});
 function interval(games) {
