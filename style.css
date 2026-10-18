@@ -730,3 +730,17 @@ dialog.result.defeat {
 }
 /* Keep the main-branch local-mode difficulty control behavior. */
 #cpuLevelRow[hidden] { display: none; }
+
+.stage-label {
+  color: #476a70;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 8px 0 12px;
+}
+.stageNote {
+  display: block;
+  margin-top: 6px;
+  color: #567579;
+  font-size: 11px;
+  line-height: 1.5;
+}
