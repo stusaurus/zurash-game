@@ -41,9 +41,18 @@ export function choose(
     })
     .sort((a, b) => b.score - a.score || a.tie - b.tie);
   if (level === "greedy" || ranked[0].n.winner === p) return ranked[0].a;
+  // In challenge mode, do not allow an immediate defeat while a legal escape exists.
+  // A normal beam can discard these defensive moves before reply search starts.
+  let candidates = ranked;
+  if (level === "strong" && s.scores[1 - p] === 2) {
+    const safe = ranked.filter(({ n }) =>
+      !actions(n).some((reply) => apply(n, reply).winner === 1 - p),
+    );
+    if (safe.length) candidates = safe;
+  }
   let best = -Infinity,
-    pick = ranked[0].a;
-  for (const c of ranked.slice(0, beam)) {
+    pick = candidates[0].a;
+  for (const c of candidates.slice(0, level === "strong" ? 12 : beam)) {
     let worst = Infinity;
     for (const reply of actions(c.n)) {
       const n = apply(c.n, reply);
