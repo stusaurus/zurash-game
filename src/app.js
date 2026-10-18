@@ -149,11 +149,22 @@ function render() {
   $("localMode").classList.toggle("active", mode === "local");
   $("cpuMode").setAttribute("aria-pressed", mode === "cpu");
   $("localMode").setAttribute("aria-pressed", mode === "local");
-  $("result").hidden = state.winner === null;
   if (state.winner !== null) {
     $("resultTitle").textContent =
       `${mode === "cpu" ? (state.winner === 0 ? "あなた" : "CPU") : `プレイヤー${state.winner + 1}`}の勝ち！`;
-    $("resultText").textContent = `${state.ply}手で決着。星を3個、つかまえた！`;
+    $("resultText").textContent =
+      `最終スコア ${state.scores[0]}対${state.scores[1]}。${state.ply}手目、${last?.wallDirection ? `壁を${last.wallDirection}へずらし` : "壁を動かさずに"}${DIRS[last?.dir ?? 0].name}へ滑走し、決勝の星をゲット！`;
+    $("result").classList.toggle("defeat", mode === "cpu" && state.winner === 1);
+    if (!busy && !resultSeen) {
+      resultSeen = true;
+      const token = epoch;
+      setTimeout(() => {
+        if (epoch === token && state.winner !== null && !$("result").open) {
+          $("result").showModal();
+          $("rematch").focus();
+        }
+      }, 420);
+    }
   }
 }
 function flash() {
@@ -247,6 +258,8 @@ function acceptCPU(action, id) {
 }
 function reset() {
   epoch++;
+  if ($("result").open) $("result").close();
+  resultSeen = false;
   busy = false;
   state = initial(Number($("layout").value), Number($("starter").value));
   phase = "wall";
@@ -278,6 +291,8 @@ $("undo").onclick = () => {
   }
   phase = "wall";
   selected = null;
+  resultSeen = false;
+  moveLog.length = history.length;
   turnStart = clone(state);
   seen = new Map();
   history.forEach((s) => seen.set(key(s), (seen.get(key(s)) || 0) + 1));
@@ -295,6 +310,7 @@ function openSetup(nextMode) {
 }
 $("settings").onclick = () => openSetup(mode);
 $("rematch").onclick = reset;
+$("reviewFinal").onclick = () => $("result").close();
 // Mode changes are staged in the new-match dialog; cancellation leaves the active match intact.
 let pendingMode = null;
 for (const [id, m] of [
