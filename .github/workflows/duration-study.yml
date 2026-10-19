@@ -24,7 +24,7 @@ jobs:
         run: npm test
       - name: Screen 3 board scenarios with and without curry
         env:
-          PAIRS: "5"
+          PAIRS: "40"
           MAX_PLIES: "90"
           STUDY_SEED: "20261019"
           REPORT: reports/duration-lab-study.json
