@@ -16,6 +16,15 @@ for(let i=0;i<40;i++){
  const j=80-i;
  if(!occupied.has(i)&&!occupied.has(j))choices.push([i,j]);
 }
+if(process.env.CURRY_PAIRS){
+ const selected=process.env.CURRY_PAIRS.split(";").map(x=>x.split(",").map(Number));
+ for(const pair of selected){
+  if(pair.length!==2||!pair.every(Number.isInteger)||pair[0]+pair[1]!==80||
+    !choices.some(x=>x[0]===pair[0]&&x[1]===pair[1]))
+    throw Error("Invalid curry pair "+pair);
+ }
+ choices.splice(0,choices.length,...selected);
+}
 function manhattan(s,me){
  const at=s.players[me],x=at%9,y=Math.floor(at/9);
  return Math.min(...s.stars.map(t=>Math.abs(t%9-x)+Math.abs(Math.floor(t/9)-y)));
