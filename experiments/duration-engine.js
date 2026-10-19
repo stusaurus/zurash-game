@@ -26,7 +26,7 @@ export const MODES={
     id:"wide9",name:"10分候補 · 9×9",subtitle:"星5個先取・12枚の壁",
     size:9,target:5,players:[72,8],
     walls:[10,14,20,24,28,32,48,52,56,60,66,70],
-    stars:[4,13,22,30,40,50,58,67,76],curries:[25,55],
+    stars:[4,13,22,30,40,50,58,67,76],curries:[31,49],
     targetMinutes:10,
   },
 };
