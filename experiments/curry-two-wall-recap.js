@@ -36,7 +36,7 @@ export function matchRecap({curryEnabled, scores, ply, winner, events}) {
   if (!curryEnabled) {
     comment = comeback
       ? "相手が先に星を2個集めたところから逆転！ 壁1個ルールの読み合いで決着しました。"
-      : "壁は1手に1個まで。シンプルなルールで、最後の星まで勝負が決まりました。";
+      : "壁1個ルールでも、星の取り合いでしっかり決着しました。";
   } else if (totals[winner].doubleWalls > 0) {
     comment = "勝者はカレーパワーで壁を2個動かす手を" +
       totals[winner].doubleWalls + "回使いました！" +
