@@ -1,0 +1,40 @@
+name: Two-wall contested-score forced-win audit
+on:
+  push:
+    branches: [experiment/two-wall-forced-win-audit]
+    paths:
+      - .github/workflows/two-wall-contested-win.yml
+      - scripts/two-wall-forced-win.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contested:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Reverify basic and forced-mate proof tests
+        run: npm test
+      - name: Search for three-ply forced win with opponent at least one star
+        env:
+          GAMES: "30"
+          PLY_CAP: "25"
+          STATES: "100"
+          OPPONENT_MIN_SCORE: "1"
+          CALL_BUDGET: "30000"
+          CLOCK_MS: "780000"
+          SEED: "2301121"
+          CURRY_PAIRS: "21,27;5,43"
+          REPORT: reports/two-wall-contested-forced-win.json
+        run: node scripts/two-wall-forced-win.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: two-wall-contested-mate-evidence
+          path: reports/two-wall-contested-forced-win.json
+          retention-days: 90

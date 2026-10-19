@@ -1,0 +1,35 @@
+name: Two-wall opening star-threat audit
+on:
+  push:
+    branches: [experiment/two-wall-forced-win-audit]
+    paths:
+      - .github/workflows/two-wall-opening-threats.yml
+      - scripts/two-wall-opening-threats.js
+      - tests/two-wall-opening-threats.test.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  opening:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npm test
+      - name: Exhaust opponent response trees for opening star threats
+        env:
+          CLOCK_MS: "450000"
+          CALL_BUDGET: "22000"
+          CURRY_PAIRS: "21,27;5,43"
+          REPORT: reports/two-wall-opening-threat-audit.json
+        run: node scripts/two-wall-opening-threats.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: two-wall-opening-star-threats
+          path: reports/two-wall-opening-threat-audit.json
+          retention-days: 90

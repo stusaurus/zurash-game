@@ -1,0 +1,30 @@
+name: Two-wall mirror strategy audit
+on:
+  push:
+    branches: [experiment/two-wall-forced-win-audit]
+    paths:
+      - .github/workflows/two-wall-mirror.yml
+      - scripts/two-wall-mirror-recipe.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Check legal rules
+        run: npm test
+      - name: Search for legal mirror-breaker moves
+        run: node scripts/two-wall-mirror-recipe.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: two-wall-mirror-recipe-audit
+          path: reports/two-wall-mirror-recipe.json
+          retention-days: 90
