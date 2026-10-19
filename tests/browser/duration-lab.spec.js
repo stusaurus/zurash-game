@@ -3,7 +3,7 @@ import {initialDuration,successorsDuration} from "../../experiments/duration-eng
 import {chooseDuration} from "../../experiments/duration-ai.js";
 import {seeded} from "../../src/ai.js";
 for(const [id,size,stars,target,curries] of [
- ["quick7",7,5,3,2],["deep7",7,7,4,2],["wide9",9,7,4,2]
+ ["quick7",7,5,3,2],["deep7",7,9,5,2],["wide9",9,9,5,2]
 ]){
  test("duration mode "+id+" displays "+size+"x"+size+" and accepts a real turn",async({page})=>{
   test.setTimeout(60000);
