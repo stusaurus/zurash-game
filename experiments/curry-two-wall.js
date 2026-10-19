@@ -2,7 +2,14 @@
 // one square each, on their next turn. Then slide exactly once.
 // Legal 0 or 1-wall actions remain available. Does NOT change normal ZURASH.
 import {movableWalls, moveWall, slideOptions} from "../src/engine.js";
-import {successorsCurry} from "./curry-power.js";
+import {initialCurry,successorsCurry} from "./curry-power.js";
+
+// Both rule variants share the same map, slide mechanics and victory condition.
+// Without curry, there is no pickup tile or boosted turn at any point.
+export function initialTwoWall(layout=2,starter=0,{curryEnabled=true,pair=[21,27]}={}){
+  const state=initialCurry(layout,starter,pair);
+  return curryEnabled?state:{...state,curries:[],powers:[0,0]};
+}
 
 function finishSecondShift(s,shifted,first,second,{dir,to}){
   const player=s.turn;
