@@ -1,8 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {initial,step} from "../src/engine.js";
+import {initial,step,successors} from "../src/engine.js";
 import {initialCurry,successorsCurry,stateKeyCurry} from "../experiments/curry-power.js";
-import {successorsTwoWall} from "../experiments/curry-two-wall.js";
+import {initialTwoWall,successorsTwoWall} from "../experiments/curry-two-wall.js";
 import {chooseTwoWall} from "../experiments/curry-two-wall-ai.js";
 import {seeded} from "../src/ai.js";
 function move(s,wall,dir,secondWall=null){
@@ -86,4 +86,47 @@ test("powered two-wall outcomes preserve symmetry under 180-degree rotation",()=
  const a=outcome(successorsTwoWall(s));
  const b=outcome(successorsTwoWall(rotate(s)).map(x=>({n:rotate(x.n)})));
  assert.deepEqual(a,b);
+});
+
+
+test("curry-off mode has no food or boosts and precisely matches core game legal outcomes",()=>{
+ for(let layout=0;layout<3;layout++)for(let starter=0;starter<2;starter++){
+  const pair=layout===2?[21,27]:[7,41];
+  const s=initialTwoWall(layout,starter,{curryEnabled:false,pair});
+  const basic=initial(layout,starter);
+  assert.deepEqual(s,{...basic,curries:[],powers:[0,0]});
+  for(let ply=0;ply<5&&s.winner===null;ply++){
+   const moves=successorsTwoWall(s);
+   const vanilla=successors(basic);
+   assert.deepEqual(
+    moves.map(({a,n})=>{
+      const {secondWall,...plain}=a;
+      assert.equal(secondWall,null);
+      assert.equal(n.powers[0]+n.powers[1],0);
+      assert.equal(n.curries.length,0);
+      const {curries,powers,...naked}=n;
+      return JSON.stringify([plain,naked]);
+    }).sort(),
+    vanilla.map(({a,n})=>JSON.stringify([a,n])).sort(),
+    "curry-off must be exactly classic: layout="+layout+" starter="+starter+" turn="+ply
+   );
+   if(!moves.length)break;
+   const m=moves[(ply*7+starter+layout)%moves.length];
+   const original=vanilla.find(v=>JSON.stringify(v.a)===JSON.stringify(
+      (({secondWall,...a})=>a)(m.a)));
+   assert.ok(original);
+   Object.assign(s,m.n);Object.assign(basic,original.n);
+  }
+ }
+});
+
+test("curry-on mode keeps pickup power and no-curry mode cannot accidentally enable it",()=>{
+ const enabled=initialTwoWall(2,0,{curryEnabled:true,pair:[21,27]});
+ const disabled=initialTwoWall(2,0,{curryEnabled:false,pair:[21,27]});
+ assert.deepEqual(enabled.curries,[21,27]);
+ assert.deepEqual(disabled.curries,[]);
+ assert.deepEqual(disabled.powers,[0,0]);
+ for(const variant of [enabled,disabled]){
+  assert.ok(successorsTwoWall(variant).length>0);
+ }
 });
