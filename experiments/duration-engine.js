@@ -9,21 +9,21 @@ export const DIRECTIONS=[
 ];
 export const MODES={
   quick7:{
-    id:"quick7",name:"5分候補 · 7×7",subtitle:"星3個先取・シンプル対戦",
+    id:"quick7",name:"スプリント",english:"SPRINT",subtitle:"ひらめきが勝負を決める、スピード対戦。",
     size:7,target:3,players:[42,6],
     walls:[8,10,12,22,26,36,38,40],
     stars:[3,17,24,31,45],curries:[21,27],
     targetMinutes:5,
   },
   deep7:{
-    id:"deep7",name:"10分候補 · 7×7",subtitle:"星5個先取・今の盤でじっくり",
+    id:"deep7",name:"タクティクス",english:"TACTICS",subtitle:"同じ盤面で、最後の星まで読み合う。",
     size:7,target:5,players:[42,6],
     walls:[8,10,12,22,26,36,38,40],
     stars:[2,3,17,21,24,27,31,45,46],curries:[5,43],
     targetMinutes:10,
   },
   wide9:{
-    id:"wide9",name:"10分候補 · 9×9",subtitle:"星5個先取・12枚の壁",
+    id:"wide9",name:"グランド",english:"GRAND",subtitle:"広い盤面を舞台に、じっくり攻め合う。",
     size:9,target:5,players:[72,8],
     walls:[10,14,20,24,28,32,48,52,56,60,66,70],
     stars:[4,13,22,30,40,50,58,67,76],curries:[31,49],
