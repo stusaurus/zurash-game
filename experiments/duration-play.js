@@ -121,7 +121,8 @@ function recap(){
   stars:turns.filter(t=>t.star).length,
   moves:turns.length,
  }));
- el("resultMode").textContent=MODES[modeId].name+(curryEnabled?" ／ 🍛 カレーあり":" ／ カレーなし");
+ el("resultMode").textContent=MODES[modeId].english+" · "+MODES[modeId].name+
+  (curryEnabled?" ／ 🍛 カレーあり":" ／ カレーなし");
  el("resultTitle").textContent=(opponent==="cpu"?(winner===0?"あなた":"CPU"):win)+"の勝ち！";
  el("resultText").textContent="星 "+state.scores[0]+"対"+state.scores[1]+"・"+
   formatTime(durationSeconds())+"で決着（"+state.ply+"手）。"+
@@ -206,6 +207,11 @@ function reset(){
  seed=globalThis.crypto?.getRandomValues?
   crypto.getRandomValues(new Uint32Array(1))[0]:Math.floor(Math.random()*10000000);
  const p=MODES[modeId];
+ el("modeEnglish").textContent=p.english;
+ el("modeTitle").textContent=p.name;
+ el("modeTagline").textContent=p.subtitle;
+ el("modeSpec").textContent=p.size+"×"+p.size+" ／ 星"+p.target+
+  "個先取 ／ 約"+p.targetMinutes+"分目標（未検証）";
  el("sizeChip").textContent=p.size+"×"+p.size;
  el("goalChip").textContent="星"+p.target+"個先取";
  el("modeInfo").textContent=p.name+"："+
