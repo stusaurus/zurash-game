@@ -16,17 +16,17 @@ export const MODES={
     targetMinutes:5,
   },
   deep7:{
-    id:"deep7",name:"10分候補 · 7×7",subtitle:"星4個先取・今の盤でじっくり",
-    size:7,target:4,players:[42,6],
+    id:"deep7",name:"10分候補 · 7×7",subtitle:"星5個先取・今の盤でじっくり",
+    size:7,target:5,players:[42,6],
     walls:[8,10,12,22,26,36,38,40],
-    stars:[3,17,21,24,27,31,45],curries:[5,43],
+    stars:[2,3,17,21,24,27,31,45,46],curries:[5,43],
     targetMinutes:10,
   },
   wide9:{
-    id:"wide9",name:"10分候補 · 9×9",subtitle:"星4個先取・12枚の壁",
-    size:9,target:4,players:[72,8],
+    id:"wide9",name:"10分候補 · 9×9",subtitle:"星5個先取・12枚の壁",
+    size:9,target:5,players:[72,8],
     walls:[10,14,20,24,28,32,48,52,56,60,66,70],
-    stars:[4,22,30,40,50,58,76],curries:[25,55],
+    stars:[4,13,22,30,40,50,58,67,76],curries:[25,55],
     targetMinutes:10,
   },
 };
