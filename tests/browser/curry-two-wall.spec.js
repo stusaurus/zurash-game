@@ -12,7 +12,14 @@ test("iPhone-sized double-wall page opens with symmetric curry and original rule
  await expect(page.locator("#status")).toContainText("壁を1個選ぼう");
  const box=await page.locator("#board").boundingBox();
  expect(Math.abs(box.width-box.height)).toBeLessThan(2);
- expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ expect(await page.evaluate(()=>({
+  viewport:innerWidth,
+  documentWidth:document.documentElement.scrollWidth,
+  outliers:[...document.querySelectorAll("body *")].filter(x=>x.getBoundingClientRect().right>innerWidth+1)
+   .slice(0,10).map(x=>({tag:x.tagName,id:x.id,className:typeof x.className==="string"?x.className:"",
+   right:Math.round(x.getBoundingClientRect().right),width:Math.round(x.getBoundingClientRect().width),
+   text:(x.textContent||"").slice(0,38)})),
+ }))).toMatchObject({viewport:expect.any(Number),documentWidth:expect.any(Number),outliers:[]});
  expect(errors).toEqual([]);
 });
 test("player picks curry and can visibly move TWO different walls before sliding once",async({page})=>{
@@ -99,7 +106,14 @@ test("curry-on/off switch starts a clean classic game and back to curry without 
  await expect(page.locator("#curryPairLabel")).toBeVisible();
  await expect(page.locator("#curryPair")).toBeEnabled();
  await expect(page.locator("#last")).toBeEmpty();
- expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ expect(await page.evaluate(()=>({
+  viewport:innerWidth,
+  documentWidth:document.documentElement.scrollWidth,
+  outliers:[...document.querySelectorAll("body *")].filter(x=>x.getBoundingClientRect().right>innerWidth+1)
+   .slice(0,10).map(x=>({tag:x.tagName,id:x.id,className:typeof x.className==="string"?x.className:"",
+   right:Math.round(x.getBoundingClientRect().right),width:Math.round(x.getBoundingClientRect().width),
+   text:(x.textContent||"").slice(0,38)})),
+ }))).toMatchObject({viewport:expect.any(Number),documentWidth:expect.any(Number),outliers:[]});
  expect(errors).toEqual([]);
 });
 
