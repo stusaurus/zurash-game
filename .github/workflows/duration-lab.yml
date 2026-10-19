@@ -1,0 +1,41 @@
+name: ZURASH 5-10 minute modes laboratory
+on:
+  push:
+    branches: [experiment/duration-5-10-lab]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rules:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Existing rules and variable-board experiments
+        run: npm run check && npm test
+      - name: Audit research modules syntax
+        run: node --check experiments/duration-engine.js && node --check experiments/duration-ai.js && node --check experiments/duration-play.js && node --check scripts/duration-study.js
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: 7x7 and 9x9 real touch and CPU games including mobile
+        run: npx playwright test tests/browser/duration-lab.spec.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: duration-modes-browser
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14

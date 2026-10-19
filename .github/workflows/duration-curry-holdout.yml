@@ -1,0 +1,33 @@
+name: ZURASH 9x9 curry placement holdout
+on:
+  push:
+    branches: [experiment/duration-5-10-lab]
+    paths:
+      - .github/workflows/duration-curry-holdout.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  holdout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Validate current and candidate curry locations with unseen seeds
+        env:
+          PAIRS: "40"
+          MAX_PLIES: "90"
+          STUDY_SEED: "9274511"
+          CURRY_PAIRS: "25,55;6,74;31,49;23,57"
+          REPORT: reports/duration-curry-holdout.json
+        run: node scripts/duration-curry-placement.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: duration-curry-holdout
+          path: reports/duration-curry-holdout.json
+          retention-days: 90
