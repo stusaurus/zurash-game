@@ -28,5 +28,5 @@
  <p id="last" class="last" aria-live="polite"></p>
  <p id="how" class="how">① 動かしたい壁をタップ → ② 光る移動先をタップ → ③ 滑る方向を選ぶ。ふだんは壁1個を1マス。カレーの次の自分の番だけ壁を2個まで、それぞれ1マスずつ動かせます。2個目は省略してOK。同じ壁は2回動かせません。最後に1回滑ります。</p>
 </section>
-<dialog id="result"><h2 id="resultTitle"></h2><p id="resultText"></p><button id="replay">もう一度</button><button id="closeResult" class="secondary">盤面を見る</button></dialog>
+<dialog id="result" aria-labelledby="resultTitle"><p id="resultMode" class="result-mode"></p><h2 id="resultTitle"></h2><p id="resultText"></p><ul id="resultStats" class="result-stats" aria-label="今回の対局データ"></ul><button id="replay">もう一度</button><button id="closeResult" class="secondary">盤面を見る</button></dialog>
 </main><script type="module" src="./curry-two-wall-play.js"></script></body></html>
