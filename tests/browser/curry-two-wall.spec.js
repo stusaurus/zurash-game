@@ -68,3 +68,50 @@ test("experimental CPU takes its turn and new match resets",async({page})=>{
  await expect(page.locator(".curry")).toHaveCount(2);
  expect(errors).toEqual([]);
 });
+
+
+test("curry-on/off switch starts a clean classic game and back to curry without ghost tiles",async({page})=>{
+ const errors=[];page.on("pageerror",e=>errors.push(String(e)));
+ await page.goto("/experiments/curry-two-wall.html");
+ await expect(page.locator("#curryMode")).toHaveValue("on");
+ await expect(page.locator(".curry")).toHaveCount(2);
+ await page.locator("#curryMode").selectOption("off");
+ await expect(page.locator(".curry")).toHaveCount(0);
+ await expect(page.locator("#modeDescription")).toContainText("カレーなし");
+ await expect(page.locator("#legendCurry")).toBeHidden();
+ await expect(page.locator("#curryPair")).toBeDisabled();
+ await expect(page.locator("#curryPairLabel")).toBeHidden();
+ await expect(page.locator("#board .cell")).toHaveCount(49);
+ await expect(page.locator("#scores")).not.toContainText("🍛");
+ await page.locator("#mode").selectOption("local");
+ await page.locator("#new").click();
+ await page.locator("#skip").click();
+ await page.locator("#directions button:not([disabled])").first().click();
+ await expect(page.locator("#last")).toContainText("プレイヤー1");
+ await expect(page.locator(".curry")).toHaveCount(0);
+ await expect(page.locator("#scores")).not.toContainText("🍛");
+ await page.locator("#undo").click();
+ await expect(page.locator("#last")).toBeEmpty();
+ await expect(page.locator(".curry")).toHaveCount(0);
+ await page.locator("#curryMode").selectOption("on");
+ await expect(page.locator(".curry")).toHaveCount(2);
+ await expect(page.locator("#legendCurry")).toBeVisible();
+ await expect(page.locator("#curryPairLabel")).toBeVisible();
+ await expect(page.locator("#curryPair")).toBeEnabled();
+ await expect(page.locator("#last")).toBeEmpty();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ expect(errors).toEqual([]);
+});
+
+test("CPU plays a turn without curry and never produces a power bonus",async({page})=>{
+ const errors=[];page.on("pageerror",e=>errors.push(String(e)));
+ await page.goto("/experiments/curry-two-wall.html");
+ await page.locator("#curryMode").selectOption("off");
+ await page.locator("#skip").click();
+ await page.locator("#directions button:not([disabled])").first().click();
+ await expect(page.locator("#last")).toContainText("プレイヤー2",{timeout:30000});
+ await expect(page.locator("#skip")).toBeEnabled({timeout:30000});
+ await expect(page.locator(".curry")).toHaveCount(0);
+ await expect(page.locator("#scores")).not.toContainText("🍛");
+ expect(errors).toEqual([]);
+});
