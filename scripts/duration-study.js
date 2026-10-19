@@ -18,7 +18,13 @@ function distance(s,player){
 function choice(s,rng,seen,policy){
  const moves=successorsDuration(s);
  if(!moves.length)return null;
- if(policy==="random")return moves[Math.floor(rng()*moves.length)];
+ const stats={
+  options:moves.length,
+  scoringMoves:moves.filter(x=>x.gotStar).length,
+  curryMoves:moves.filter(x=>x.pickedCurry).length,
+  doubleWallMoves:moves.filter(x=>x.a.secondWall!==null).length,
+ };
+ if(policy==="random")return {selected:moves[Math.floor(rng()*moves.length)],stats};
  const me=s.turn,foe=1-me;
  let best=-Infinity,chosen=null;
  for(const x of moves){
@@ -30,23 +36,33 @@ function choice(s,rng,seen,policy){
   v+=(rng()-.5)*(policy==="noisy" ? 200 : 2);
   if(v>best){best=v;chosen=x;}
  }
- return chosen;
+ return {selected:chosen,stats};
 }
 function run(id,curryEnabled,starter,seed,policy){
  let s=initialDuration(id,curryEnabled,starter),longest=0,quiet=0;
  const seen=new Map(),rng=seeded(seed),firstStarTurn=null,firstCurryTurn=null;
  let stars=0,food=0,twoWalls=0,steps=0,illegal=false;
+ let totalOptions=0,scoringOpportunityTurns=0,multipleScoreTurns=0,
+     curryOpportunityTurns=0,doubleOpportunityTurns=0;
  for(;s.winner===null&&steps<MAX_PLIES;steps++){
   const k=stateKeyDuration(s);seen.set(k,(seen.get(k)||0)+1);
-  const x=choice(s,rng,seen,policy);
-  if(!x){illegal=true;break;}
+  const choiceData=choice(s,rng,seen,policy);
+  if(!choiceData){illegal=true;break;}
+  const {selected:x,stats}=choiceData;
+  totalOptions+=stats.options;
+  scoringOpportunityTurns+=Number(stats.scoringMoves>0);
+  multipleScoreTurns+=Number(stats.scoringMoves>=2);
+  curryOpportunityTurns+=Number(stats.curryMoves>0);
+  doubleOpportunityTurns+=Number(stats.doubleWallMoves>0);
   if(x.gotStar){stars++;quiet=0;}else{quiet++;longest=Math.max(longest,quiet);}
   if(x.pickedCurry)food++;
   if(x.a.secondWall!==null)twoWalls++;
   s=x.n;
  }
  return {winner:s.winner,starter,plies:s.ply,capped:s.winner===null,
-  stalled20:longest>=20,food,twoWalls,stars,illegal};
+  stalled20:longest>=20,food,twoWalls,stars,illegal,
+  totalOptions,scoringOpportunityTurns,multipleScoreTurns,
+  curryOpportunityTurns,doubleOpportunityTurns};
 }
 const results=[],started=Date.now();
 for(const id of Object.keys(MODES))for(const curryEnabled of [false,true]){
@@ -64,6 +80,11 @@ for(const id of Object.keys(MODES))for(const curryEnabled of [false,true]){
    pliesMean:mean,pliesMedian:sorted.length?sorted[Math.floor((sorted.length-1)/2)]:null,
    pliesP90:sorted.length?sorted[Math.floor((sorted.length-1)*.9)]:null,
    pickups:sum("food"),doubleWallMoves:sum("twoWalls"),
+   meanLegalActionsPerTurn:+(sum("totalOptions")/Math.max(1,sum("plies"))).toFixed(1),
+   fractionTurnsWithStarOpportunity:+(sum("scoringOpportunityTurns")/Math.max(1,sum("plies"))).toFixed(3),
+   fractionTurnsWithMultipleScoreMoves:+(sum("multipleScoreTurns")/Math.max(1,sum("plies"))).toFixed(3),
+   fractionTurnsWithCurryOpportunity:+(sum("curryOpportunityTurns")/Math.max(1,sum("plies"))).toFixed(3),
+   fractionTurnsWithTwoWallOpportunity:+(sum("doubleOpportunityTurns")/Math.max(1,sum("plies"))).toFixed(3),
    hypotheticalMinutesPerTurn:{
     sec10:+(mean*10/60).toFixed(1),
     sec15:+(mean*15/60).toFixed(1),
