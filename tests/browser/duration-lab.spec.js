@@ -11,6 +11,16 @@ for(const [id,size,stars,target,curries] of [
   await page.goto("/experiments/duration-lab.html");
   await page.locator("#opponent").selectOption("local");
   await page.locator("#durationMode").selectOption(id);
+  const labels={
+   quick7:{ja:"スプリント",en:"SPRINT",target:"約5分目標"},
+   deep7:{ja:"タクティクス",en:"TACTICS",target:"約10分目標"},
+   wide9:{ja:"グランド",en:"GRAND",target:"約10分目標"},
+  };
+  await expect(page.locator("#modeTitle")).toHaveText(labels[id].ja);
+  await expect(page.locator("#modeEnglish")).toHaveText(labels[id].en);
+  await expect(page.locator("#modeSpec")).toContainText(labels[id].target);
+  await expect(page.locator("#modeSpec")).toContainText(size+"×"+size);
+  await expect(page.locator("#modeInfo")).toContainText(labels[id].ja);
   await expect(page.locator("#board .cell")).toHaveCount(size*size);
   await expect(page.locator("#board")).toHaveAttribute("data-size",String(size));
   await expect(page.locator(".star")).toHaveCount(stars);
@@ -69,11 +79,33 @@ test("a completed 5-minute candidate records actual elapsed and never claims a g
  }
  expect(s.winner).not.toBeNull();
  await expect(page.locator("#result")).toBeVisible();
- await expect(page.locator("#resultMode")).toContainText("5分候補");
+ await expect(page.locator("#resultMode")).toContainText("SPRINT · スプリント");
  await expect(page.locator("#resultMode")).toContainText("カレーなし");
  await expect(page.locator("#resultText")).toContainText("星 "+s.scores[0]+"対"+s.scores[1]);
  await expect(page.locator("#resultText")).toContainText("手");
  await expect(page.locator("#resultStats")).not.toContainText("カレー獲得");
  await expect(page.locator("#turnCount")).toContainText(String(s.ply));
+ expect(errors).toEqual([]);
+});
+
+test("the three final mode names remain consistent when switching rule modes",async({page})=>{
+ const errors=[];page.on("pageerror",e=>errors.push(String(e)));
+ await page.goto("/experiments/duration-lab.html");
+ await expect(page).toHaveTitle("ズラッシュ！｜スプリント・タクティクス・グランド");
+ for(const [value,ja,en] of [
+  ["quick7","スプリント","SPRINT"],
+  ["deep7","タクティクス","TACTICS"],
+  ["wide9","グランド","GRAND"],
+ ]){
+  await page.locator("#durationMode").selectOption(value);
+  await expect(page.locator("#modeTitle")).toHaveText(ja);
+  await expect(page.locator("#modeEnglish")).toHaveText(en);
+  for(const curry of ["on","off"]){
+   await page.locator("#curryMode").selectOption(curry);
+   await expect(page.locator("#modeTitle")).toHaveText(ja);
+   await expect(page.locator("#modeInfo")).toContainText(curry==="on"?"カレーあり":"カレーなし");
+  }
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ }
  expect(errors).toEqual([]);
 });
