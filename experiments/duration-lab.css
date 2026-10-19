@@ -20,3 +20,11 @@
  #board{gap:2px;padding:3px}
  header{font-size:11px}
 }
+
+/* Three flagship rulesets: name first, specification second. */
+.mode-preview{background:linear-gradient(125deg,#e4f1ee,#f6f9ec);border:1px solid #c8e1da;border-radius:17px;padding:16px 18px;margin:12px 0 6px}
+.mode-english{font-size:11px;line-height:1.1;letter-spacing:.24em;font-weight:900;color:#3a8583;margin:0 0 5px}
+.mode-preview h2{font-size:clamp(22px,5.2vw,29px);line-height:1.18;margin:0 0 7px;color:#183f4b;letter-spacing:.03em}
+.mode-preview #modeTagline{margin:0 0 9px;font-size:13px;line-height:1.55;color:#3c6264}
+.mode-spec{margin:0!important;font-size:12px;line-height:1.6;font-weight:750;color:#547177}
+@media(max-width:400px){.mode-preview{padding:13px 14px}}
