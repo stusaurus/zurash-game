@@ -1,13 +1,13 @@
 import {DIRS} from "../src/engine.js";
 import {seeded} from "../src/ai.js";
 import {turnSeed} from "../src/cpu-seed.js";
-import {initialCurry,stateKeyCurry} from "./curry-power.js";
-import {successorsTwoWall,matchesShift} from "./curry-two-wall.js";
+import {stateKeyCurry} from "./curry-power.js";
+import {initialTwoWall,successorsTwoWall,matchesShift} from "./curry-two-wall.js";
 import {chooseTwoWall} from "./curry-two-wall-ai.js";
 const el=id=>document.getElementById(id);
 const PAIR={0:[7,41],1:[7,41],2:[21,27]};
 let state,phase="first",selectedWall=null,firstWall=null,secondWall=null,seen=new Map(),history=[],
-    moveLog=[],mode="cpu",layout=2,starter=0,worker=null,epoch=0,waiting=false,seed=37;
+    moveLog=[],mode="cpu",layout=2,starter=0,curryEnabled=true,worker=null,epoch=0,waiting=false,seed=37;
 const copy=s=>structuredClone(s);
 const successors=()=>successorsTwoWall(state);
 const boosted=()=>state.powers[state.turn]===1;
@@ -152,11 +152,20 @@ function reset(){
  mode=el("mode").value;
  layout=Number(el("layout").value);
  starter=Number(el("starter").value);
+ curryEnabled=el("curryMode").value==="on";
  seed=globalThis.crypto?.getRandomValues?
   crypto.getRandomValues(new Uint32Array(1))[0]:Math.floor(Math.random()*4294967296);
- el("curryPair").disabled=layout!==2;
+ el("curryPair").disabled=!curryEnabled||layout!==2;
+ el("curryPairLabel").hidden=!curryEnabled||layout!==2;
  const pair=layout===2?el("curryPair").value.split(",").map(Number):PAIR[layout];
- state=initialCurry(layout,starter,pair);
+ state=initialTwoWall(layout,starter,{curryEnabled,pair});
+ el("legendCurry").hidden=!curryEnabled;
+ el("modeDescription").textContent=curryEnabled?
+  "🍛 カレーあり：取った次の自分の番だけ違う壁を2個まで、それぞれ1マス動かせる。先に星3個で勝利。":
+  "カレーなし：カレーは出現しません。毎ターン壁を0〜1個、1マス動かしてから滑るシンプルな勝負です。先に星3個で勝利。";
+ el("how").textContent=curryEnabled?
+  "① 動かしたい壁をタップ → ② 光る移動先をタップ → ③ 滑る方向を選ぶ。ふだんは壁1個を1マス。カレーの次の自分の番だけ壁を2個まで、それぞれ1マスずつ動かせます。2個目は省略してOK。":
+  "① 動かしたい壁をタップ → ② 光る移動先をタップ → ③ 滑る方向を選ぶ。壁は毎ターン1個だけ1マス移動。壁を動かさずに滑ってもOK。";
  seen=new Map();history=[];moveLog=[];
  phase="first";selectedWall=null;firstWall=null;secondWall=null;
  if(el("result").open)el("result").close();
@@ -201,8 +210,11 @@ el("undo").onclick=()=>{
  if(mode==="cpu"&&state.turn===1)runCPU();
 };
 el("layout").addEventListener("change",()=>{
- el("curryPair").disabled=Number(el("layout").value)!==2;
+ const showFood=el("curryMode").value==="on"&&Number(el("layout").value)===2;
+ el("curryPair").disabled=!showFood;
+ el("curryPairLabel").hidden=!showFood;
 });
+el("curryMode").addEventListener("change",reset);
 el("new").onclick=reset;
 el("replay").onclick=reset;
 el("closeResult").onclick=()=>el("result").close();
