@@ -1,0 +1,36 @@
+name: Two-wall curry final-seat candidate comparison
+on:
+  push:
+    branches: [experiment/curry-two-wall-power]
+    paths:
+      - .github/workflows/curry-two-wall-third-holdout.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  final-holdout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Test two-wall game rules and symmetric CPU legality
+        run: npm run check && npm test
+      - name: Third unseen-seed candidate verification, swapped starters
+        env:
+          PAIRS: "150"
+          MAX_PLIES: "120"
+          SEED_OFFSET: "98112043"
+          CURRY_PAIRS: "5,43;21,27"
+          POLICIES: "search,symmetric-search"
+          REPORT: reports/curry-two-wall-third-holdout.json
+        run: node scripts/curry-two-wall-fairness.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: curry-two-wall-independent-third-block
+          path: reports/curry-two-wall-third-holdout.json
+          retention-days: 90

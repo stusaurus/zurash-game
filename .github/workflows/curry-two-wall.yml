@@ -1,0 +1,39 @@
+name: Two-wall curry playtest
+on:
+  push:
+    branches: [experiment/curry-two-wall-power]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rules:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Test original game, 3-cell curry and new two-wall rule
+        run: npm run check && npm test
+  playtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Play new 2-wall variant in desktop and iPhone browser emulation
+        run: npx playwright test tests/browser/curry-two-wall.spec.js tests/browser/curry-two-wall-recap.spec.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: double-wall-playtest-browser
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
