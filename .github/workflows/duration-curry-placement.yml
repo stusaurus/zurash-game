@@ -1,0 +1,33 @@
+name: ZURASH wide-field curry placement study
+on:
+  push:
+    branches: [experiment/duration-5-10-lab]
+    paths:
+      - .github/workflows/duration-curry-placement.yml
+      - scripts/duration-curry-placement.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  placement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npm test
+      - name: Sweep all legal symmetric two-curry placements on wide mode
+        env:
+          PAIRS: "8"
+          MAX_PLIES: "70"
+          REPORT: reports/duration-curry-placement.json
+        run: node scripts/duration-curry-placement.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: duration-curry-placement-results
+          path: reports/duration-curry-placement.json
+          retention-days: 90
