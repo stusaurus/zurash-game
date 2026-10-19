@@ -4,10 +4,11 @@ import {turnSeed} from "../src/cpu-seed.js";
 import {stateKeyCurry} from "./curry-power.js";
 import {initialTwoWall,successorsTwoWall,matchesShift} from "./curry-two-wall.js";
 import {chooseTwoWall} from "./curry-two-wall-ai.js";
+import {matchRecap} from "./curry-two-wall-recap.js";
 const el=id=>document.getElementById(id);
 const PAIR={0:[7,41],1:[7,41],2:[21,27]};
 let state,phase="first",selectedWall=null,firstWall=null,secondWall=null,seen=new Map(),history=[],
-    moveLog=[],mode="cpu",layout=2,starter=0,curryEnabled=true,worker=null,epoch=0,waiting=false,seed=37;
+    moveLog=[],events=[],mode="cpu",layout=2,starter=0,curryEnabled=true,worker=null,epoch=0,waiting=false,seed=37;
 const copy=s=>structuredClone(s);
 const successors=()=>successorsTwoWall(state);
 const boosted=()=>state.powers[state.turn]===1;
@@ -106,6 +107,10 @@ function complete(entry){
   const previous=state;
   state=copy(found.n);
   const count=Number(found.a.wall!==null)+Number(found.a.secondWall!==null);
+  events.push({
+    player:p,gotStar:state.scores[p]>previous.scores[p],
+    pickedCurry:Boolean(found.picked),wallCount:count,
+  });
   moveLog.push("プレイヤー"+(p+1)+"：壁を"+count+"個移動 → "+
      DIRS[found.a.dir].name+"に滑走"+(found.picked?" 🍛ゲット！":"")+
      (count===2?" 🍛壁2個！":"")+
@@ -113,7 +118,18 @@ function complete(entry){
   phase="first";selectedWall=null;firstWall=null;secondWall=null;remember();render();
   if(state.winner!==null){
     el("resultTitle").textContent=(mode==="cpu"?(state.winner===0?"あなた":"CPU"):"プレイヤー"+(state.winner+1))+"の勝ち！";
-    el("resultText").textContent=state.scores.join("対")+"、"+state.ply+"手。カレー効果は次の自分の番だけ！";
+    const recap=matchRecap({
+      curryEnabled,scores:state.scores,ply:state.ply,winner:state.winner,events
+    });
+    el("resultMode").textContent=recap.label;
+    el("resultText").textContent=recap.scoreLine+"。"+recap.comment;
+    const stats=el("resultStats");
+    stats.replaceChildren();
+    for(const detail of recap.stats){
+      const li=document.createElement("li");
+      li.textContent=detail;
+      stats.append(li);
+    }
     if(!el("result").open)el("result").showModal();
   }else if(mode==="cpu"&&state.turn===1)runCPU();
 }
@@ -166,7 +182,7 @@ function reset(){
  el("how").textContent=curryEnabled?
   "① 動かしたい壁をタップ → ② 光る移動先をタップ → ③ 滑る方向を選ぶ。ふだんは壁1個を1マス。カレーの次の自分の番だけ壁を2個まで、それぞれ1マスずつ動かせます。2個目は省略してOK。":
   "① 動かしたい壁をタップ → ② 光る移動先をタップ → ③ 滑る方向を選ぶ。壁は毎ターン1個だけ1マス移動。壁を動かさずに滑ってもOK。";
- seen=new Map();history=[];moveLog=[];
+ seen=new Map();history=[];moveLog=[];events=[];
  phase="first";selectedWall=null;firstWall=null;secondWall=null;
  if(el("result").open)el("result").close();
  remember();render();
@@ -196,9 +212,9 @@ el("undo").onclick=()=>{
  }
  if(!history.length)return;
  stopCPU();
- state=history.pop();moveLog.pop();
+ state=history.pop();moveLog.pop();events.pop();
  if(mode==="cpu")while(state.turn!==0&&history.length){
-  state=history.pop();moveLog.pop();
+  state=history.pop();moveLog.pop();events.pop();
  }
  seen=new Map();
  history.forEach(s=>{
