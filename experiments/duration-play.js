@@ -134,7 +134,7 @@ function recap(){
   "星の獲得：プレイヤー1 "+stats[0].stars+"個 ／ プレイヤー2 "+stats[1].stars+"個",
   curryEnabled?
    "カレー獲得：プレイヤー1 "+stats[0].food+"回 ／ プレイヤー2 "+stats[1].food+"回":
-   "動かした手：プレイヤー1 "+stats[0].moves+"手中 ／ プレイヤー2 "+stats[1].moves+"手中",
+   "行動回数：プレイヤー1 "+stats[0].moves+"手 ／ プレイヤー2 "+stats[1].moves+"手",
  ];
  const list=el("resultStats");list.replaceChildren();
  for(const str of entries){const li=document.createElement("li");li.textContent=str;list.append(li);}
