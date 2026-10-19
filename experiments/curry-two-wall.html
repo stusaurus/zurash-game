@@ -1,30 +1,32 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ズラッシュ！🍛 壁を2個動かす実験版</title>
+<title>ズラッシュ！ カレーあり・なし 比較試遊版</title>
 <link rel="stylesheet" href="./curry-play.css">
 </head><body><main>
-<header><a href="../">← 通常版に戻る</a><span>🍛 2個の壁版 · 実験中</span></header>
-<section class="hero"><div><p class="overline">ZURASH! · CURRY LAB</p><h1>ズラッシュ！ <span>🍛</span></h1><p>カレーを取ると、次の自分の手番だけ違う壁を2個まで動かせる！</p></div><img src="../assets/triken-reference.jpeg" alt="恐竜のトリケン"></section>
+<header><a href="../">← 通常版に戻る</a><span>2人戦 · モード比較実験</span></header>
+<section class="hero"><div><p class="overline">ZURASH! · CURRY LAB</p><h1>ズラッシュ！ <span>🍛</span></h1><p>「カレーあり」と「カレーなし」を選んで遊び比べよう！</p></div><img src="../assets/triken-reference.jpeg" alt="恐竜のトリケン"></section>
 <section class="controls">
+ <label>ルール <select id="curryMode" aria-label="カレーの有無"><option value="on" selected>🍛 カレーあり（壁2個パワー）</option><option value="off">カレーなし（通常ルール）</option></select></label>
  <label>対戦相手 <select id="mode"><option value="cpu">CPU（実験用）</option><option value="local">ふたりで対戦</option></select></label>
  <label>盤面 <select id="layout"><option value="2">こおりの回廊（優先試作）</option><option value="0">はじまりの氷原（未認証）</option><option value="1">ふたつの谷（未認証）</option></select></label>
- <label>カレー配置 <select id="curryPair">
+ <label id="curryPairLabel">カレー配置 <select id="curryPair">
    <option value="21,27" selected>B：推奨配置（21 / 27・検証中）</option>
    <option value="13,35">A：比較用（13 / 35）</option>
  </select></label>
  <label>先手 <select id="starter"><option value="0">プレイヤー1</option><option value="1">プレイヤー2 / CPU</option></select></label>
  <button id="new" class="secondary">新しい対戦</button>
 </section>
-<p class="warning">🍛 比較実験中：これまでの<a href="./curry-play.html">「壁を3マス動かす版」</a>も遊べます。2個動かす版の公平性はまだ検証中です。</p>
+<p id="modeDescription" class="warning" aria-live="polite">🍛 カレーあり：取った次の自分の番だけ違う壁を2個まで動かせます。カレーなしも選べます。どちらも先に星3個で勝利。</p>
+<p class="warning">この画面は比較試遊用です。カレーあり版の公平性はまだ検証中です。以前の<a href="./curry-play.html">壁3マス版</a>も残しています。</p>
 <section class="arena">
  <div id="scores" class="scores" aria-live="polite"></div>
  <div id="status" class="status" aria-live="polite"></div>
  <div class="board" id="board" role="group" aria-label="7×7の盤面"></div>
- <p class="legend"><span>★ 星：先に3個で勝ち</span><span>🍛 カレー：次の自分の番に違う壁を2個まで</span><span>🟠/🔵 コマ</span></p>
+ <p class="legend"><span>★ 星：先に3個で勝ち</span><span id="legendCurry">🍛 カレー：次の自分の番に違う壁を2個まで</span><span>🟠/🔵 コマ</span></p>
  <div id="directions" class="directions" aria-label="滑走方向"></div>
  <div class="actions"><button id="skip">壁は動かさずに滑る →</button><button id="undo" class="secondary">↶ 戻る</button></div>
  <p id="last" class="last" aria-live="polite"></p>
- <p class="how">① 動かしたい壁をタップ → ② 光る移動先をタップ → ③ 滑る方向を選ぶ。ふだんは壁1個を1マス。カレーの次の自分の番だけ壁を2個まで、それぞれ1マスずつ動かせます。2個目は省略してOK。同じ壁は2回動かせません。最後に1回滑ります。</p>
+ <p id="how" class="how">① 動かしたい壁をタップ → ② 光る移動先をタップ → ③ 滑る方向を選ぶ。ふだんは壁1個を1マス。カレーの次の自分の番だけ壁を2個まで、それぞれ1マスずつ動かせます。2個目は省略してOK。同じ壁は2回動かせません。最後に1回滑ります。</p>
 </section>
 <dialog id="result"><h2 id="resultTitle"></h2><p id="resultText"></p><button id="replay">もう一度</button><button id="closeResult" class="secondary">盤面を見る</button></dialog>
 </main><script type="module" src="./curry-two-wall-play.js"></script></body></html>
