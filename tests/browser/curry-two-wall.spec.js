@@ -15,6 +15,23 @@ test("iPhone-sized double-wall page opens with symmetric curry and original rule
  const overflow=await page.evaluate(()=>({
   viewport:innerWidth,
   documentWidth:document.documentElement.scrollWidth,
+  scrollBoxes:[...document.querySelectorAll("html,body,main,section,header,select,button,label,div")]
+   .filter(x=>x.scrollWidth>x.clientWidth+2)
+   .slice(0,15).map(x=>({tag:x.tagName,id:x.id,
+     className:typeof x.className==="string"?x.className:"",
+     scrollWidth:x.scrollWidth,clientWidth:x.clientWidth})),
+  overflowText:(()=>{
+   const walk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),found=[];
+   let node;
+   while((node=walk.nextNode())){
+    if(!node.textContent.trim())continue;
+    const range=document.createRange();range.selectNodeContents(node);
+    if([...range.getClientRects()].some(r=>r.right>innerWidth+1))
+      found.push({text:node.textContent.trim().slice(0,36),
+        right:Math.round(range.getBoundingClientRect().right)});
+   }
+   return found.slice(0,10);
+  })(),
   outliers:[...document.querySelectorAll("body *")].filter(x=>x.getBoundingClientRect().right>innerWidth+1)
    .slice(0,10).map(x=>({tag:x.tagName,id:x.id,className:typeof x.className==="string"?x.className:"",
    right:Math.round(x.getBoundingClientRect().right),width:Math.round(x.getBoundingClientRect().width),
@@ -111,6 +128,23 @@ test("curry-on/off switch starts a clean classic game and back to curry without 
  const overflow=await page.evaluate(()=>({
   viewport:innerWidth,
   documentWidth:document.documentElement.scrollWidth,
+  scrollBoxes:[...document.querySelectorAll("html,body,main,section,header,select,button,label,div")]
+   .filter(x=>x.scrollWidth>x.clientWidth+2)
+   .slice(0,15).map(x=>({tag:x.tagName,id:x.id,
+     className:typeof x.className==="string"?x.className:"",
+     scrollWidth:x.scrollWidth,clientWidth:x.clientWidth})),
+  overflowText:(()=>{
+   const walk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),found=[];
+   let node;
+   while((node=walk.nextNode())){
+    if(!node.textContent.trim())continue;
+    const range=document.createRange();range.selectNodeContents(node);
+    if([...range.getClientRects()].some(r=>r.right>innerWidth+1))
+      found.push({text:node.textContent.trim().slice(0,36),
+        right:Math.round(range.getBoundingClientRect().right)});
+   }
+   return found.slice(0,10);
+  })(),
   outliers:[...document.querySelectorAll("body *")].filter(x=>x.getBoundingClientRect().right>innerWidth+1)
    .slice(0,10).map(x=>({tag:x.tagName,id:x.id,className:typeof x.className==="string"?x.className:"",
    right:Math.round(x.getBoundingClientRect().right),width:Math.round(x.getBoundingClientRect().width),
