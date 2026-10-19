@@ -1,0 +1,37 @@
+name: ZURASH playtime proxy study
+on:
+  push:
+    branches: [experiment/duration-5-10-lab]
+    paths:
+      - .github/workflows/duration-study.yml
+      - scripts/duration-study.js
+      - experiments/duration-engine.js
+      - experiments/duration-ai.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  duration-study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Verify board invariants
+        run: npm test
+      - name: Screen 3 board scenarios with and without curry
+        env:
+          PAIRS: "5"
+          MAX_PLIES: "90"
+          STUDY_SEED: "20261019"
+          REPORT: reports/duration-lab-study.json
+        run: node scripts/duration-study.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: duration-study-results
+          path: reports/duration-lab-study.json
+          retention-days: 90
