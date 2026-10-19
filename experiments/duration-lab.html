@@ -1,25 +1,26 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ズラッシュ！ 5分・10分モード比較ラボ</title>
+<title>ズラッシュ！｜スプリント・タクティクス・グランド</title>
 <link rel="stylesheet" href="./curry-play.css"><link rel="stylesheet" href="./duration-lab.css">
 </head><body><main>
-<header><a href="../">← 通常版に戻る</a><span>5分・10分 · 時間比較ラボ</span></header>
+<header><a href="../">← 通常版に戻る</a><span>3 MODES · 比較試遊版</span></header>
 <section class="hero">
-<div><p class="overline">ZURASH! · PLAYTIME LAB</p><h1>ズラッシュ！ <span>⏱️</span></h1>
+<div><p class="overline">ZURASH! · THREE WAYS TO PLAY</p><h1>ズラッシュ！ <span>★</span></h1>
 <p>短い勝負も、じっくり考える勝負も。盤の広さと目標の星の数を比べよう。</p></div>
 <img src="../assets/triken-reference.jpeg" alt="恐竜のトリケン"></section>
 <section class="controls">
-<label class="wide-setting">遊ぶ長さ <select id="durationMode">
-<option value="quick7">5分候補（7×7・星3個）</option>
-<option value="deep7">10分候補（7×7・星5個）</option>
-<option value="wide9">10分候補（9×9・星5個）</option>
+<label class="wide-setting">ゲームモード <select id="durationMode" aria-label="ゲームモード">
+<option value="quick7">スプリント｜7×7・星3</option>
+<option value="deep7">タクティクス｜7×7・星5</option>
+<option value="wide9">グランド｜9×9・星5</option>
 </select></label>
 <label>カレー <select id="curryMode"><option value="on">🍛 あり</option><option value="off">なし</option></select></label>
 <label>対戦 <select id="opponent"><option value="cpu">CPU（実験用）</option><option value="local">ふたりで対戦</option></select></label>
 <label>先手 <select id="starter"><option value="0">プレイヤー1</option><option value="1">プレイヤー2 / CPU</option></select></label>
 <button id="new" class="secondary">新しい対戦</button>
 </section>
-<p class="warning" id="modeInfo">試遊用の時間目標です。実際の5分・10分はまだ保証できません。</p>
+<section class="mode-preview" aria-label="選択したゲームモード"><p id="modeEnglish" class="mode-english">SPRINT</p><h2 id="modeTitle">スプリント</h2><p id="modeTagline">ひらめきが勝負を決める、スピード対戦。</p><p id="modeSpec" class="mode-spec">7×7 ／ 星3個先取 ／ 約5分目標</p></section>
+<p class="warning" id="modeInfo">目安時間は設計上の目標です。実際の対局時間は未検証です。</p>
 <section class="arena">
 <div class="lab-metrics"><span id="sizeChip">7×7</span><span id="goalChip">星3個先取</span><span id="clock">00:00</span><span id="turnCount">0手</span></div>
 <div id="scores" class="scores" aria-live="polite"></div>
