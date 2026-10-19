@@ -28,7 +28,7 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium webkit
       - name: Play new 2-wall variant in desktop and iPhone browser emulation
-        run: npx playwright test tests/browser/curry-two-wall.spec.js
+        run: npx playwright test tests/browser/curry-two-wall.spec.js tests/browser/curry-two-wall-recap.spec.js
       - uses: actions/upload-artifact@v4
         if: always()
         with:
