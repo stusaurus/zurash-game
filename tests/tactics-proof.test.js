@@ -28,7 +28,7 @@ test("limited budget never pretends to prove a multi-ply result",()=>{
 
 test("immediate scoring victory is proved even with a one-node budget",()=>{
   const base=initial(0);
-  const s={...base, players:[10,6], scores:[2,0], stars:[3,17,24,31,45], target:3, turn:0};
+  const s={...base, players:[2,4], scores:[2,0], stars:[3,17,24,31,45], target:3, turn:0};
   const winning=successors(s).filter(({n})=>n.winner===0);
   assert.ok(winning.length>0,"fixture must contain a legal immediate winning move");
   const r=prove(s,{horizon:3,nodeBudget:1});
