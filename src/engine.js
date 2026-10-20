@@ -25,6 +25,12 @@ export const LAYOUTS = [
     stars: [3, 17, 24, 31, 45],
     players: [42, 6],
   },
+  {
+    name: "タクティクス試遊（候補12）",
+    walls: [21, 27, 2, 46, 10, 38, 18, 30],
+    stars: [24, 19, 29, 5, 43],
+    players: [42, 6],
+  },
 ];
 export const clone = (s) => structuredClone(s);
 export function initial(layout = 0, starter = 0) {

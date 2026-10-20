@@ -1,0 +1,39 @@
+name: Tactics candidate search
+on:
+  push:
+    branches: [research/tactics-mode-baseline-20261020]
+    paths: ['.github/workflows/tactics-candidates.yml']
+  pull_request:
+    paths: ['.github/workflows/tactics-candidates.yml']
+  workflow_dispatch:
+jobs:
+  candidate-search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate existing engine
+        run: npm run check && npm test
+      - name: Search 180-degree symmetric layouts
+        env:
+          LAYOUT_TRIALS: '100'
+          PAIRS: '6'
+          MAX_PLIES: '100'
+          REPORT: reports/tactics-layout-candidates.json
+        run: node scripts/layout-lab.js
+      - name: Summarize candidate rankings
+        run: |
+          node --input-type=module -e '
+          import fs from "node:fs";
+          const r=JSON.parse(fs.readFileSync("reports/tactics-layout-candidates.json","utf8"));
+          console.log(JSON.stringify({trials:r.trials,preliminaryPass:r.preliminaryPass,accepted:r.accepted,top:r.candidates.slice(0,10).map(({trial,walls,stars,games,capped,firstWins,meanPlies,distinctFirstMoves,accepted})=>({trial,walls,stars,games,capped,firstWins,meanPlies,distinctFirstMoves,accepted}))},null,2));
+          '
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tactics-layout-candidates
+          path: reports/tactics-layout-candidates.json
+          if-no-files-found: warn

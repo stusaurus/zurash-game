@@ -1,0 +1,50 @@
+name: Tactics baseline research
+on:
+  push:
+    branches:
+      - research/tactics-mode-baseline-20261020
+    paths:
+      - '.github/workflows/tactics-baseline.yml'
+      - 'reports/tactics-mode-plan.md'
+  pull_request:
+    paths:
+      - '.github/workflows/tactics-baseline.yml'
+      - 'reports/tactics-mode-plan.md'
+  workflow_dispatch:
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate rules and scripts
+        run: |
+          npm run check
+          npm test
+      - name: Fast baseline across three layouts
+        env:
+          PAIRS: '60'
+          MAX_PLIES: '120'
+          MATCHUPS: 'greedy/greedy'
+          REPORT: reports/tactics-greedy-baseline.json
+        run: npm run quality:study
+      - name: Strong baseline across three layouts
+        env:
+          PAIRS: '12'
+          MAX_PLIES: '120'
+          MATCHUPS: 'strong/strong'
+          REPORT: reports/tactics-strong-baseline.json
+        run: npm run quality:study
+      - name: Replay and verify all actions
+        run: node scripts/verify-study.js reports/tactics-greedy-baseline.json reports/tactics-strong-baseline.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tactics-baseline-reports
+          path: |
+            reports/tactics-*-baseline.json
+            reports/tactics-*-baseline.jsonl.gz
+          if-no-files-found: warn
