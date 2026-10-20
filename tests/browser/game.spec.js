@@ -203,3 +203,12 @@ test('wall choices always leave a legal sliding continuation',async({page})=>{
  await doAction(page,s,{wall:null,dir:3});
  await expect(page.locator('#turnCount')).toHaveText('3手目');
 });
+test('existing 7x7 Tactics trial remains opt-in and respects the second starting seat',async({page})=>{
+ const errors=[];page.on('pageerror',e=>errors.push(String(e)));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+ await page.goto('/');await page.locator('#localMode').click();await page.locator('#layout').selectOption('3');await page.locator('#starter').selectOption('1');await page.locator('#start').click();
+ await expect(page.locator('.cell')).toHaveCount(49);
+ await expect(page.locator('#phaseTitle')).toContainText('プレイヤー2');
+ let s=initial(3,1);const rng=seeded(8711);
+ for(let i=0;i<12&&s.winner===null;i++)s=await doAction(page,s,choose(s,{level:'greedy',rng}));
+ expect(s.stars.length).toBeLessThan(5);expect(errors).toEqual([]);
+});

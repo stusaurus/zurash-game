@@ -1,3 +1,5 @@
+> Historical proposal. Current engine implementation, 5–7 minute target and measured results supersede the prerequisites and original target below. See [2026-10-21 audit](tactics-audit-2026-10-21.md) and [release gates](tactics-release-gates.md).
+
 # Tactics board-size experiment (proposal; no results yet)
 
 ## Player observation and goal
