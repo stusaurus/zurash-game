@@ -1,7 +1,7 @@
 // Exact finite-horizon solver. No heuristic scores: only proven outcomes.
 // A nonterminal position at the move cap is a draw by the analysis convention,
 // NOT an official ZURASH rule. Exhausted budgets produce UNKNOWN, never a claim.
-import {successors,key} from "../src/engine.js";
+import {successors} from "../src/engine.js";
 // Normalize player labels: the root player is always represented as player 0.
 // Wall indices are not normalized because legal actions reference those indices.
 function canonical(s,remaining,root){
