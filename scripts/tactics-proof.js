@@ -2,6 +2,13 @@
 // A nonterminal position at the move cap is a draw by the analysis convention,
 // NOT an official ZURASH rule. Exhausted budgets produce UNKNOWN, never a claim.
 import {successors,key} from "../src/engine.js";
+// Normalize player labels: the root player is always represented as player 0.
+// Wall indices are not normalized because legal actions reference those indices.
+function canonical(s,remaining,root){
+  const p=root===0?s.players:[s.players[1],s.players[0]];
+  const sc=root===0?s.scores:[s.scores[1],s.scores[0]];
+  return JSON.stringify([s.size,s.target,[...s.walls].sort((a,b)=>a-b),[...s.stars].sort((a,b)=>a-b),p,sc,s.turn===root?0:1,remaining]);
+}
 export const WIN=1,DRAW=0,LOSS=-1,UNKNOWN=null;
 export function prove(state,{horizon=120,nodeBudget=100000}={}){
   if(!Number.isInteger(horizon)||horizon<0||horizon>120||!Number.isInteger(nodeBudget)||nodeBudget<1)throw Error("Invalid proof limits");
@@ -10,7 +17,7 @@ export function prove(state,{horizon=120,nodeBudget=100000}={}){
   function solve(s,remaining){
     if(s.winner!==null)return s.winner===root?WIN:LOSS;
     if(remaining===0)return DRAW;
-    const id=key(s)+"|"+remaining;
+    const id=canonical(s,remaining,root);
     if(table.has(id)){cacheHits++;return table.get(id);}
     if(nodes>=nodeBudget)return UNKNOWN;
     nodes++;
