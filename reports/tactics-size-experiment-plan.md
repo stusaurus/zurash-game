@@ -47,3 +47,17 @@ A candidate that fails fairness is rejected regardless of playtime or entertainm
 - If no candidate passes, **do not ship Tactics**. Revise placement, wall density, star distribution, or board dimensions and rerun the same independent holdout protocol.
 
 The proposed 45–55% band is a design target to be revisited with data; no candidate is currently certified fair.
+
+## First automated screening (2026-10-20; exploratory, NOT acceptance)
+Run: https://github.com/stusaurus/zurash-game/actions/runs/39430519566 ; artifact: tactics-fairness-screen (4 seeds/layout, 80-ply cap, random and lightweight greedy). This is a smoke test, not a powered balance study.
+
+| Size | Policy | Decided first wins | Decided second wins | Capped / all |
+|---|---|---:|---:|---:|
+| 8×8 | random | 3 | 1 | 12/16 |
+| 8×8 | greedy | 5 | 3 | 8/16 |
+| 9×9 | random | 0 | 0 | 8/8 |
+| 9×9 | greedy | 4 | 1 | 3/8 |
+| 10×10 | random | 0 | 0 | 16/16 |
+| 10×10 | greedy | 4 | 3 | 9/16 |
+
+**Decision:** no candidate passes. High cap rates make first-seat win fractions unstable; the 9×9 greedy 4–1 split is not statistically conclusive. Random agents may be weak, so their cap rate alone does not establish a game-rule defect. First inspect star reachability and scoring opportunities, then test wall counts/placements, improve policies, and rerun larger paired samples. Do not call 80 plies a human playtime measurement.
