@@ -3,6 +3,8 @@ on:
   push:
     branches: [research/tactics-mode-baseline-20261020]
     paths: ['.github/workflows/tactics-candidates.yml']
+  pull_request:
+    paths: ['.github/workflows/tactics-candidates.yml']
   workflow_dispatch:
 jobs:
   candidate-search:
