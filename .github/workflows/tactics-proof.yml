@@ -1,0 +1,33 @@
+name: Tactics exact proof depth
+on:
+  workflow_dispatch:
+  push:
+    branches: [tactics-size-experiment]
+    paths:
+      - 'scripts/tactics-proof*.js'
+      - 'tests/tactics-proof.test.js'
+      - '.github/workflows/tactics-proof.yml'
+permissions:
+  contents: read
+jobs:
+  prove:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test proof correctness
+        run: node --test tests/tactics-proof.test.js
+      - name: Measure proof limits
+        env:
+          PROOF_BUDGET: '20000'
+          PROOF_DEPTH: '4'
+        run: node scripts/tactics-proof-study.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tactics-exact-proof-depth
+          path: reports/tactics-proof-depth.json
+          if-no-files-found: ignore
