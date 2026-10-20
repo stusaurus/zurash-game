@@ -1,11 +1,11 @@
 // Research only: deterministic, seat-swapped Tactics screening.
 // Usage: PAIRS=12 CAP=120 node scripts/tactics-fairness-study.js
 import fs from "node:fs";
-import {actions,apply,key} from "../src/engine.js";
+import {actions,apply,key,successors} from "../src/engine.js";
 import {seeded} from "../src/ai.js";
 import {CANDIDATES,makeCandidate,geometryVariants} from "./tactics-candidates.js";
 
-const pairs=Number(process.env.PAIRS??12),cap=Number(process.env.CAP??120);
+const pairs=Number(process.env.PAIRS??4),cap=Number(process.env.CAP??80);
 if(!Number.isInteger(pairs)||pairs<1||pairs>500||!Number.isInteger(cap)||cap<1||cap>500)throw Error("Invalid PAIRS or CAP");
 const output=process.env.OUTPUT??"reports/tactics-fairness-screen.json";
 const rows=[];
@@ -15,8 +15,7 @@ function pick(s,policy,rng){
   if(policy==="random")return options[Math.floor(rng()*options.length)];
   // A lightweight greedy baseline; not a strong-agent fairness certificate.
   let best=-Infinity,choices=[];
-  for(const a of options){
-    const n=apply(s,a);
+  for(const {a,n} of successors(s)){
     const gain=n.scores[s.turn]-s.scores[s.turn];
     const score=(n.winner===s.turn?1000:0)+gain*100+(a.wall?0:1);
     if(score>best){best=score;choices=[a];}
