@@ -19,15 +19,15 @@ jobs:
         run: npm run check && npm test
       - name: Compare candidate 12 and 47 to current icefield
         env:
-          PAIRS: '8'
+          PAIRS: '24'
           MAX_PLIES: '120'
           POLICIES: greedy,strong
-          SEED_OFFSET: '500000'
-          REPORT: reports/tactics-candidate-headtohead.json
+          SEED_OFFSET: '700000'
+          REPORT: reports/tactics-candidate-holdout.json
         run: node scripts/tactics-headtohead.js
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: tactics-headtohead
-          path: reports/tactics-candidate-headtohead.json
+          name: tactics-holdout
+          path: reports/tactics-candidate-holdout.json
           if-no-files-found: warn
