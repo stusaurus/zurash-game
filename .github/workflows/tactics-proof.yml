@@ -1,5 +1,10 @@
 name: Tactics exact proof depth
 on:
+  pull_request:
+    paths:
+      - 'scripts/tactics-proof*.js'
+      - 'tests/tactics-proof.test.js'
+      - '.github/workflows/tactics-proof.yml'
   workflow_dispatch:
   push:
     branches: [tactics-size-experiment]
