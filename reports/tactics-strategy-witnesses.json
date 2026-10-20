@@ -1,0 +1,770 @@
+{
+  "elapsedMs": 2174,
+  "examples": [
+    {
+      "size": 8,
+      "seed": 10002,
+      "state": {
+        "size": 8,
+        "target": 4,
+        "walls": [
+          53,
+          36,
+          25,
+          23,
+          37,
+          27,
+          8,
+          24,
+          39,
+          5
+        ],
+        "stars": [
+          41,
+          42
+        ],
+        "players": [
+          47,
+          4
+        ],
+        "scores": [
+          3,
+          2
+        ],
+        "turn": 1,
+        "ply": 11,
+        "winner": null
+      },
+      "history": [
+        {
+          "wall": {
+            "wall": 0,
+            "to": 51
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 9,
+            "to": 5
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 8,
+            "to": 31
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 36
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 4,
+            "to": 37
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 3,
+            "to": 23
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 4,
+            "to": 29
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 4,
+            "to": 37
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 0,
+            "to": 52
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 8,
+            "to": 39
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 0,
+            "to": 53
+          },
+          "dir": 0
+        }
+      ],
+      "legalMoves": 62,
+      "unsafeMoves": 2,
+      "safeMoves": 60,
+      "bad": {
+        "action": {
+          "wall": {
+            "wall": 7,
+            "to": 32
+          },
+          "dir": 2
+        },
+        "scored": false,
+        "winning": false,
+        "losesNext": true,
+        "opponentWinningReply": {
+          "wall": {
+            "wall": 7,
+            "to": 40
+          },
+          "dir": 3
+        }
+      },
+      "safe": {
+        "action": {
+          "wall": null,
+          "dir": 2
+        },
+        "scored": false,
+        "winning": false,
+        "losesNext": false,
+        "opponentWinningReply": null
+      },
+      "scope": "Bad action permits a legal immediate opponent win; safe action prevents ALL immediate wins, not a guarantee of winning later."
+    },
+    {
+      "size": 9,
+      "seed": 10001,
+      "state": {
+        "size": 9,
+        "target": 5,
+        "walls": [
+          14,
+          56,
+          4,
+          76,
+          20,
+          51,
+          35,
+          45,
+          17,
+          63,
+          1,
+          79
+        ],
+        "stars": [
+          40,
+          33
+        ],
+        "players": [
+          34,
+          75
+        ],
+        "scores": [
+          4,
+          3
+        ],
+        "turn": 1,
+        "ply": 17,
+        "winner": null
+      },
+      "history": [
+        {
+          "wall": {
+            "wall": 0,
+            "to": 32
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 58
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 57
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 0,
+            "to": 23
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 35
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 26
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 35
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 45
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 4,
+            "to": 38
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 56
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 4,
+            "to": 29
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 55
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 56
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 0,
+            "to": 14
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 4,
+            "to": 20
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 44
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 35
+          },
+          "dir": 1
+        }
+      ],
+      "legalMoves": 80,
+      "unsafeMoves": 2,
+      "safeMoves": 78,
+      "bad": {
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 23
+          },
+          "dir": 0
+        },
+        "scored": false,
+        "winning": false,
+        "losesNext": true,
+        "opponentWinningReply": {
+          "wall": {
+            "wall": 0,
+            "to": 32
+          },
+          "dir": 3
+        }
+      },
+      "safe": {
+        "action": {
+          "wall": null,
+          "dir": 0
+        },
+        "scored": false,
+        "winning": false,
+        "losesNext": false,
+        "opponentWinningReply": null
+      },
+      "scope": "Bad action permits a legal immediate opponent win; safe action prevents ALL immediate wins, not a guarantee of winning later."
+    },
+    {
+      "size": 10,
+      "seed": 10001,
+      "state": {
+        "size": 10,
+        "target": 6,
+        "walls": [
+          45,
+          57,
+          76,
+          85,
+          89,
+          84,
+          63,
+          32,
+          90,
+          39,
+          36,
+          74,
+          96,
+          5
+        ],
+        "stars": [
+          23
+        ],
+        "players": [
+          26,
+          22
+        ],
+        "scores": [
+          5,
+          5
+        ],
+        "turn": 1,
+        "ply": 51,
+        "winner": null
+      },
+      "history": [
+        {
+          "wall": {
+            "wall": 8,
+            "to": 81
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 10,
+            "to": 18
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 10,
+            "to": 28
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 10,
+            "to": 38
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 11,
+            "to": 64
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 2,
+            "to": 77
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 45
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 61
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 62
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 61
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 10,
+            "to": 37
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 57
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 56
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 11,
+            "to": 74
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 11,
+            "to": 75
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 66
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 56
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 0,
+            "to": 48
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 66
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 44
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 2,
+            "to": 76
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 5,
+            "to": 94
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 12,
+            "to": 95
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 56
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 45
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 44
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 45
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 44
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 10,
+            "to": 38
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 10,
+            "to": 37
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 55
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 56
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 62
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 3,
+            "to": 85
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 34
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 4,
+            "to": 89
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 8,
+            "to": 91
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 0,
+            "to": 47
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 11,
+            "to": 74
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 1,
+            "to": 57
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 12,
+            "to": 96
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 0,
+            "to": 46
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 8,
+            "to": 90
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 72
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 62
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 63
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 5,
+            "to": 84
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 0,
+            "to": 45
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 33
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 32
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 10,
+            "to": 36
+          },
+          "dir": 2
+        }
+      ],
+      "legalMoves": 138,
+      "unsafeMoves": 84,
+      "safeMoves": 54,
+      "bad": {
+        "action": {
+          "wall": null,
+          "dir": 0
+        },
+        "scored": false,
+        "winning": false,
+        "losesNext": true,
+        "opponentWinningReply": {
+          "wall": {
+            "wall": 7,
+            "to": 22
+          },
+          "dir": 3
+        }
+      },
+      "safe": {
+        "action": {
+          "wall": null,
+          "dir": 1
+        },
+        "scored": false,
+        "winning": false,
+        "losesNext": false,
+        "opponentWinningReply": null
+      },
+      "scope": "Bad action permits a legal immediate opponent win; safe action prevents ALL immediate wins, not a guarantee of winning later."
+    }
+  ]
+}

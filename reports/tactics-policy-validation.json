@@ -1,0 +1,9035 @@
+{
+  "version": 2,
+  "method": "Exploratory paired-seat study. positional=distance heuristic, search=beam-8 two-ply heuristic; positional/search remember repeated states, neither is exact minimax. Capped games are not draws.",
+  "params": {
+    "pairs": 20,
+    "cap": 120,
+    "shard": 0,
+    "policies": [
+      "positional",
+      "search"
+    ],
+    "timeBudgetMs": 300000
+  },
+  "completed": true,
+  "elapsedMs": 205431,
+  "summary": [
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "policy": "positional",
+      "games": 80,
+      "clusters": 20,
+      "decided": 80,
+      "firstWins": 46,
+      "secondWins": 34,
+      "firstSeatDecidedRate": 0.575,
+      "secondSeatDecidedRate": 0.42500000000000004,
+      "undecidedRate": 0,
+      "reach120Rate": 0,
+      "wilson95IndependentGames": [
+        0.4656928984656916,
+        0.6774343821039797
+      ],
+      "pairedLayoutBootstrap95": [
+        0.45,
+        0.7
+      ],
+      "meanAllPlies": 23.975,
+      "medianAllPlies": 15.5,
+      "meanDecidedPlies": 23.975,
+      "medianDecidedPlies": 15.5,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 1.9979166666666666,
+          "medianDecided": 1.2916666666666667
+        },
+        "10": {
+          "meanAll": 3.995833333333333,
+          "medianDecided": 2.5833333333333335
+        },
+        "15": {
+          "meanAll": 5.99375,
+          "medianDecided": 3.875
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "policy": "search",
+      "games": 80,
+      "clusters": 20,
+      "decided": 52,
+      "firstWins": 32,
+      "secondWins": 20,
+      "firstSeatDecidedRate": 0.6153846153846154,
+      "secondSeatDecidedRate": 0.3846153846153846,
+      "undecidedRate": 0.35,
+      "reach120Rate": 0.35,
+      "wilson95IndependentGames": [
+        0.4795987371581977,
+        0.735295362197835
+      ],
+      "pairedLayoutBootstrap95": [
+        0.4528301886792453,
+        0.7719298245614035
+      ],
+      "meanAllPlies": 65,
+      "medianAllPlies": 41,
+      "meanDecidedPlies": 35.38461538461539,
+      "medianDecidedPlies": 23,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 5.416666666666667,
+          "medianDecided": 1.9166666666666667
+        },
+        "10": {
+          "meanAll": 10.833333333333334,
+          "medianDecided": 3.8333333333333335
+        },
+        "15": {
+          "meanAll": 16.25,
+          "medianDecided": 5.75
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "policy": "positional",
+      "games": 40,
+      "clusters": 20,
+      "decided": 40,
+      "firstWins": 27,
+      "secondWins": 13,
+      "firstSeatDecidedRate": 0.675,
+      "secondSeatDecidedRate": 0.32499999999999996,
+      "undecidedRate": 0,
+      "reach120Rate": 0,
+      "wilson95IndependentGames": [
+        0.5201774618987811,
+        0.7991549776821703
+      ],
+      "pairedLayoutBootstrap95": [
+        0.525,
+        0.825
+      ],
+      "meanAllPlies": 25.375,
+      "medianAllPlies": 21,
+      "meanDecidedPlies": 25.375,
+      "medianDecidedPlies": 21,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 2.1145833333333335,
+          "medianDecided": 1.75
+        },
+        "10": {
+          "meanAll": 4.229166666666667,
+          "medianDecided": 3.5
+        },
+        "15": {
+          "meanAll": 6.34375,
+          "medianDecided": 5.25
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "policy": "search",
+      "games": 40,
+      "clusters": 20,
+      "decided": 26,
+      "firstWins": 14,
+      "secondWins": 12,
+      "firstSeatDecidedRate": 0.5384615384615384,
+      "secondSeatDecidedRate": 0.46153846153846156,
+      "undecidedRate": 0.35,
+      "reach120Rate": 0.35,
+      "wilson95IndependentGames": [
+        0.35457938746859247,
+        0.7124414646960837
+      ],
+      "pairedLayoutBootstrap95": [
+        0.3333333333333333,
+        0.75
+      ],
+      "meanAllPlies": 82.7,
+      "medianAllPlies": 82.5,
+      "meanDecidedPlies": 62.61538461538461,
+      "medianDecidedPlies": 66.5,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 6.891666666666667,
+          "medianDecided": 5.541666666666667
+        },
+        "10": {
+          "meanAll": 13.783333333333333,
+          "medianDecided": 11.083333333333334
+        },
+        "15": {
+          "meanAll": 20.675,
+          "medianDecided": 16.625
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "policy": "positional",
+      "games": 80,
+      "clusters": 20,
+      "decided": 74,
+      "firstWins": 36,
+      "secondWins": 38,
+      "firstSeatDecidedRate": 0.4864864864864865,
+      "secondSeatDecidedRate": 0.5135135135135135,
+      "undecidedRate": 0.075,
+      "reach120Rate": 0.075,
+      "wilson95IndependentGames": [
+        0.3761178964834906,
+        0.5981888543110063
+      ],
+      "pairedLayoutBootstrap95": [
+        0.3698630136986301,
+        0.6111111111111112
+      ],
+      "meanAllPlies": 44.925,
+      "medianAllPlies": 33,
+      "meanDecidedPlies": 38.83783783783784,
+      "medianDecidedPlies": 31.5,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 3.74375,
+          "medianDecided": 2.625
+        },
+        "10": {
+          "meanAll": 7.4875,
+          "medianDecided": 5.25
+        },
+        "15": {
+          "meanAll": 11.23125,
+          "medianDecided": 7.875
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "policy": "search",
+      "games": 80,
+      "clusters": 20,
+      "decided": 46,
+      "firstWins": 27,
+      "secondWins": 19,
+      "firstSeatDecidedRate": 0.5869565217391305,
+      "secondSeatDecidedRate": 0.4130434782608695,
+      "undecidedRate": 0.425,
+      "reach120Rate": 0.4375,
+      "wilson95IndependentGames": [
+        0.4433949777984654,
+        0.7171139677518692
+      ],
+      "pairedLayoutBootstrap95": [
+        0.4528301886792453,
+        0.7254901960784313
+      ],
+      "meanAllPlies": 81.5625,
+      "medianAllPlies": 87.5,
+      "meanDecidedPlies": 53.15217391304348,
+      "medianDecidedPlies": 41,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 6.796875,
+          "medianDecided": 3.4166666666666665
+        },
+        "10": {
+          "meanAll": 13.59375,
+          "medianDecided": 6.833333333333333
+        },
+        "15": {
+          "meanAll": 20.390625,
+          "medianDecided": 10.25
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    }
+  ],
+  "games": [
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 16,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 14,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 8,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 0,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 16,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 0,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 14,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 0,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 23,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 11,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 0,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 54,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 25,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 16,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        1
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 81,
+      "repeated": false,
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        1,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 2,
+      "longestQuiet": 47,
+      "repeated": false,
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 1,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        3,
+        0
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 99,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 66,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 1,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 70,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 53,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 1,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        1,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 70,
+      "repeated": false,
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 1,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        1,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 2,
+      "longestQuiet": 103,
+      "repeated": false,
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 14,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 13,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 14,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 2,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 2,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 14,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 2,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 13,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 2,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 42,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 28,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 27,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 19,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 115,
+      "repeated": false,
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 3,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 3,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 17,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 3,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 110,
+      "repeated": false,
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 3,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 33,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 23,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 114,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 72,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 41,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 24,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 4,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 4,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 14,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 4,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 115,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 92,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 4,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 22,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 11,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 13,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 64,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 40,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 104,
+      "repeated": false,
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 5,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 14,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 5,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 13,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 5,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 91,
+      "repeated": false,
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 5,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 17,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 27,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 8,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 28,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 13,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 35,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 19,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 6,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 6,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 6,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 68,
+      "repeated": false,
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 6,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 99,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 89,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 88,
+      "repeated": false,
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 106,
+      "repeated": false,
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 7,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 7,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 7,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 13,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 7,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 60,
+      "repeated": false,
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 7,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 1,
+      "repeated": false,
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 10,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 90,
+      "repeated": false,
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 2,
+      "longestQuiet": 101,
+      "repeated": false,
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 8,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 7,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 1,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 8,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 10,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 8,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 13,
+      "repeated": false,
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 8,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 18,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 47,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 25,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 17,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 4,
+      "longestQuiet": 92,
+      "repeated": false,
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 13,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 9,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 9,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 17,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 9,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 114,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 94,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 9,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 13,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": [
+        3,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 89,
+      "capped": false,
+      "firstStar": 8,
+      "longestQuiet": 71,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 13,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 12,
+      "longestQuiet": 73,
+      "repeated": false,
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        1,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 38,
+      "longestQuiet": 46,
+      "repeated": false,
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 10,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 18,
+      "capped": false,
+      "firstStar": 8,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 10,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        2,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 93,
+      "capped": false,
+      "firstStar": 12,
+      "longestQuiet": 71,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 10,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 31,
+      "capped": false,
+      "firstStar": 23,
+      "longestQuiet": 22,
+      "repeated": false,
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 10,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 16,
+      "longestQuiet": 82,
+      "repeated": false,
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 23,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 16,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 87,
+      "repeated": false,
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        1,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 115,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 70,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 11,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 39,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 15,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 11,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 11,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 11,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        1,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 102,
+      "repeated": false,
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 11,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        1,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 59,
+      "repeated": false,
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 40,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 26,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 51,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 35,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 106,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 89,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 40,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 19,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 12,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 107,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 93,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 12,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 41,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 25,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 12,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 30,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 12,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 12,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 4,
+      "longestQuiet": 73,
+      "repeated": false,
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 22,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 9,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 14,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 26,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 13,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 18,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 13,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 18,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 13,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 53,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 34,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 13,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 112,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 89,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 42,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 30,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 31,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 19,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 14,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 14,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 17,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 14,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 41,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 29,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 14,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 85,
+      "repeated": false,
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 26,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 10,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 25,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 15,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 13,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 15,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 15,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 51,
+      "repeated": false,
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 15,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 44,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 28,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 37,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 23,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 7,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 1,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 16,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 16,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 16,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 23,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 10,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 16,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 7,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 1,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 10,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 17,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 17,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 17,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 17,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 14,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 33,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 38,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 19,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 35,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 15,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 2,
+      "longestQuiet": 97,
+      "repeated": false,
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 18,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 46,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 23,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 18,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 18,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 22,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 18,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 24,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 11,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 34,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 9,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 43,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 25,
+      "repeated": false,
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 105,
+      "repeated": false,
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 2,
+      "longestQuiet": 76,
+      "repeated": false,
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 19,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 19,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 39,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 16,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 19,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 23,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 10,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 8,
+      "target": 4,
+      "wallCount": 10,
+      "pair": 19,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 2,
+      "longestQuiet": 109,
+      "repeated": false,
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 23,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        5,
+        2
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 43,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 15,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 46,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 23,
+      "repeated": false,
+      "score": [
+        2,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 93,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 58,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        5,
+        2
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 28,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 8,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 9,
+      "repeated": false,
+      "score": [
+        5,
+        1
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        1,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 63,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 17,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 24,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 11,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 116,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 95,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 115,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 95,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 38,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 20,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 45,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 17,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 93,
+      "repeated": false,
+      "score": [
+        4,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 68,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 39,
+      "repeated": false,
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 17,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 59,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 32,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 62,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 46,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 68,
+      "capped": false,
+      "firstStar": 6,
+      "longestQuiet": 48,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 36,
+      "capped": false,
+      "firstStar": 6,
+      "longestQuiet": 16,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 17,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 17,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 84,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 39,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 44,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 27,
+      "repeated": false,
+      "score": [
+        5,
+        2
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 27,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 17,
+      "repeated": false,
+      "score": [
+        5,
+        0
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 13,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        0,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 9,
+      "repeated": false,
+      "score": [
+        5,
+        0
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        1,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 81,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 60,
+      "repeated": false,
+      "score": [
+        1,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 74,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 19,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 28,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 13,
+      "repeated": false,
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 86,
+      "repeated": false,
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 53,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        5,
+        2
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        2,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 105,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 105,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 23,
+      "capped": false,
+      "firstStar": 7,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        5,
+        1
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 7,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        1,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 39,
+      "capped": false,
+      "firstStar": 8,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 77,
+      "capped": false,
+      "firstStar": 7,
+      "longestQuiet": 52,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        2,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        5,
+        0
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        0
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 11,
+      "longestQuiet": 90,
+      "repeated": false,
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 8,
+      "longestQuiet": 93,
+      "repeated": false,
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 58,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 25,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        0,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 5,
+      "longestQuiet": 53,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        1,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 5,
+      "longestQuiet": 72,
+      "repeated": false,
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 9,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 0,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 9,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 0,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 104,
+      "repeated": false,
+      "score": [
+        4,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 43,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 35,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 41,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 24,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 32,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 13,
+      "repeated": false,
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 58,
+      "repeated": false,
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 18,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 20,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        2,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 32,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 12,
+      "repeated": false,
+      "score": [
+        5,
+        2
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 24,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 65,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 44,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 102,
+      "repeated": false,
+      "score": [
+        4,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 65,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 49,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 12,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        5
+      ],
+      "winnerAt80": 1,
+      "starter": 0,
+      "winner": 1,
+      "plies": 80,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 69,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 103,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 68,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 40,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 13,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 23,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 93,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 35,
+      "repeated": false,
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 69,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 51,
+      "repeated": false,
+      "score": [
+        2,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 11,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        5,
+        2
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 13,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        2,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 78,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 39,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 9,
+      "target": 5,
+      "wallCount": 12,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 98,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 31,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 34,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 8,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        6,
+        1
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 0,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 27,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        0,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 0,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        6
+      ],
+      "winnerAt80": 1,
+      "starter": 0,
+      "winner": 1,
+      "plies": 80,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 43,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 0,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 54,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 25,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 0,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 111,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 78,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 0,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 39,
+      "repeated": false,
+      "score": [
+        5,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 60,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 15,
+      "repeated": false,
+      "score": [
+        4,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        1,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 2,
+      "longestQuiet": 101,
+      "repeated": false,
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 1,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 41,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 18,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 1,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 40,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 1,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 19,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        1,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 1,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 2,
+      "longestQuiet": 76,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 1,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        1,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 50,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 19,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": [
+        4,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 4,
+      "longestQuiet": 68,
+      "repeated": false,
+      "score": [
+        4,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 87,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 58,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 2,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 4,
+      "longestQuiet": 45,
+      "repeated": false,
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 2,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 62,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 23,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 2,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 84,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 59,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 2,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 67,
+      "repeated": false,
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 2,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 4,
+      "longestQuiet": 90,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 18,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 24,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        4,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 3,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 32,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 3,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 18,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 3,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 3,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 37,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 13,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 3,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 44,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 15,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 31,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 50,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 12,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 86,
+      "repeated": false,
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 4,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 4,
+      "longestQuiet": 71,
+      "repeated": false,
+      "score": [
+        5,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 4,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 31,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 13,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 4,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 20,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 4,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 27,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 4,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 4,
+      "longestQuiet": 92,
+      "repeated": false,
+      "score": [
+        5,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 81,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 50,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 27,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 83,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 37,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 5,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 77,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 30,
+      "repeated": false,
+      "score": [
+        4,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 5,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 45,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 16,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 5,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 26,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 5,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 2,
+      "longestQuiet": 78,
+      "repeated": false,
+      "score": [
+        5,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 5,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 36,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 15,
+      "repeated": false,
+      "score": [
+        6,
+        1
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 25,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 30,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 12,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 6,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 46,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 25,
+      "repeated": false,
+      "score": [
+        6,
+        1
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 6,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 35,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 12,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 6,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 6,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 80,
+      "repeated": false,
+      "score": [
+        2,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 6,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 76,
+      "repeated": false,
+      "score": [
+        5,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 52,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 13,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 30,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 8,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 82,
+      "capped": false,
+      "firstStar": 18,
+      "longestQuiet": 28,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 7,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        1
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 4,
+      "longestQuiet": 70,
+      "repeated": false,
+      "score": [
+        5,
+        1
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 7,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 41,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 21,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 7,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 20,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 7,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 14,
+      "longestQuiet": 44,
+      "repeated": false,
+      "score": [
+        4,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 7,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 4,
+      "longestQuiet": 61,
+      "repeated": false,
+      "score": [
+        5,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 82,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 56,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 24,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 25,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        6,
+        1
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 8,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 94,
+      "repeated": false,
+      "score": [
+        5,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 8,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 83,
+      "repeated": false,
+      "score": [
+        5,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 8,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 42,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 13,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 8,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 54,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 8,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 103,
+      "repeated": false,
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 36,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        4,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 32,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 37,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 9,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 9,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 36,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 16,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 9,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 23,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 9,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 33,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        4,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 9,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 69,
+      "capped": false,
+      "firstStar": 5,
+      "longestQuiet": 20,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 9,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 95,
+      "repeated": false,
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 24,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        4,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 22,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 28,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 8,
+      "repeated": false,
+      "score": [
+        4,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 10,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 41,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 19,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 10,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 24,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 4,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 10,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 33,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 10,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 30,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 8,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 10,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 43,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 21,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 63,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 21,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 72,
+      "repeated": false,
+      "score": [
+        5,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        1,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 92,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 39,
+      "repeated": false,
+      "score": [
+        1,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 11,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 108,
+      "repeated": false,
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 11,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 56,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 15,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 11,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 37,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 10,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 11,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 68,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 35,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 11,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 87,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 47,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 59,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 18,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": [
+        3,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 85,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 69,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 6,
+      "longestQuiet": 97,
+      "repeated": false,
+      "score": [
+        4,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 12,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 73,
+      "repeated": false,
+      "score": [
+        4,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 12,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 51,
+      "capped": false,
+      "firstStar": 4,
+      "longestQuiet": 27,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 12,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 3,
+      "longestQuiet": 80,
+      "repeated": false,
+      "score": [
+        5,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 12,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 6,
+      "longestQuiet": 104,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 12,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 39,
+      "capped": false,
+      "firstStar": 3,
+      "longestQuiet": 14,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 16,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        1,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 32,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 16,
+      "repeated": false,
+      "score": [
+        1,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 13,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 29,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 10,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 13,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 16,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        1,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 13,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 13,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 54,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 16,
+      "repeated": false,
+      "score": [
+        4,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 13,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 25,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 8,
+      "repeated": false,
+      "score": [
+        1,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 46,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 8,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 55,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 29,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 88,
+      "repeated": false,
+      "score": [
+        2,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 14,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 7,
+      "longestQuiet": 77,
+      "repeated": false,
+      "score": [
+        2,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 14,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 28,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        1,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 14,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 46,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 14,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 75,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 14,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        2,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 7,
+      "longestQuiet": 102,
+      "repeated": false,
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 48,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 12,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 34,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 41,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 22,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 15,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 36,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 9,
+      "repeated": false,
+      "score": [
+        6,
+        1
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 15,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 50,
+      "repeated": false,
+      "score": [
+        5,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 15,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 30,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 15,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 83,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 18,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 15,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 76,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 41,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 33,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 9,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 27,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 9,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 47,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 27,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 16,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 88,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 58,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 16,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 86,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 44,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 16,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 15,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 2,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 16,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 42,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 16,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 17,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 27,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 22,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 27,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 9,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 17,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        3
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 120,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 52,
+      "repeated": false,
+      "score": [
+        6,
+        3
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 17,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 17,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 3,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 17,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 0,
+      "plies": 22,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        6,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 17,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 87,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 17,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 57,
+      "repeated": false,
+      "score": [
+        5,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 26,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 5,
+      "repeated": false,
+      "score": [
+        2,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 39,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        2
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 2,
+      "longestQuiet": 47,
+      "repeated": false,
+      "score": [
+        5,
+        2
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 18,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 51,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 18,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        6
+      ],
+      "winnerAt80": 1,
+      "starter": 0,
+      "winner": 1,
+      "plies": 80,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 24,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 18,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 115,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 60,
+      "repeated": false,
+      "score": [
+        5,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 18,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 1,
+      "plies": 60,
+      "capped": false,
+      "firstStar": 2,
+      "longestQuiet": 29,
+      "repeated": false,
+      "score": [
+        4,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 18,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        3,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 61,
+      "repeated": false,
+      "score": [
+        3,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 97,
+      "repeated": false,
+      "score": [
+        5,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 25,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 6,
+      "repeated": false,
+      "score": [
+        4,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": [
+        5,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 111,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 86,
+      "repeated": false,
+      "score": [
+        6,
+        4
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 19,
+      "orientation": 0,
+      "policy": "search",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 69,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 30,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 19,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": [
+        5,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": 0,
+      "plies": 93,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 73,
+      "repeated": false,
+      "score": [
+        6,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 19,
+      "orientation": 1,
+      "policy": "positional",
+      "scoreAt80": null,
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 21,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 7,
+      "repeated": false,
+      "score": [
+        3,
+        6
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 19,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        5
+      ],
+      "winnerAt80": null,
+      "starter": 0,
+      "winner": null,
+      "plies": 120,
+      "capped": true,
+      "firstStar": 1,
+      "longestQuiet": 89,
+      "repeated": false,
+      "score": [
+        4,
+        5
+      ]
+    },
+    {
+      "size": 10,
+      "target": 6,
+      "wallCount": 14,
+      "pair": 19,
+      "orientation": 1,
+      "policy": "search",
+      "scoreAt80": [
+        4,
+        4
+      ],
+      "winnerAt80": null,
+      "starter": 1,
+      "winner": 1,
+      "plies": 115,
+      "capped": false,
+      "firstStar": 1,
+      "longestQuiet": 60,
+      "repeated": false,
+      "score": [
+        4,
+        6
+      ]
+    }
+  ]
+}

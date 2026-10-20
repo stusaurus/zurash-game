@@ -2,7 +2,8 @@
 // Usage: PAIRS=12 CAP=120 node scripts/tactics-fairness-study.js
 import fs from "node:fs";
 import {actions,apply,key,successors} from "../src/engine.js";
-import {seeded} from "../src/ai.js";
+import {summarize} from "./tactics-statistics.js";
+import {choose,seeded} from "../src/ai.js";
 import {CANDIDATES,makeCandidate,geometryVariants} from "./tactics-candidates.js";
 
 const pairs=Number(process.env.PAIRS??25),cap=Number(process.env.CAP??120);
@@ -10,8 +11,14 @@ const shard=Number(process.env.SHARD??0);
 if(!Number.isInteger(shard)||shard<0||shard>999)throw Error("Invalid SHARD");
 if(!Number.isInteger(pairs)||pairs<1||pairs>500||!Number.isInteger(cap)||cap<1||cap>500)throw Error("Invalid PAIRS or CAP");
 const output=process.env.OUTPUT??"reports/tactics-fairness-screen.json";
+const policies=(process.env.POLICIES??"random,greedy").split(",");
+if(policies.some(p=>!["random","greedy","positional","search"].includes(p)))throw Error("Invalid policy");
+const timeBudgetMs=Number(process.env.STUDY_TIME_MS??180000),started=Date.now();
+if(!Number.isInteger(timeBudgetMs)||timeBudgetMs<1||timeBudgetMs>3600000)throw Error("Invalid time budget");
 const rows=[];
-function pick(s,policy,rng){
+let completed=true;
+function pick(s,policy,rng,seen){
+  if(policy==="positional"||policy==="search")return choose(s,{level:policy==="positional"?"greedy":"search",rng,seen});
   const options=actions(s);
   if(!options.length)return null;
   if(policy==="random")return options[Math.floor(rng()*options.length)];
@@ -32,7 +39,7 @@ function play(base,starter,policy,seed){
   let firstStar=null,quiet=0,longestQuiet=0,repeated=false,scoreAt80=null,winnerAt80=null;
   while(s.winner===null&&s.ply<cap){
     const k=key(s);seen.set(k,(seen.get(k)||0)+1);repeated ||= seen.get(k)>=3;
-    const a=pick(s,policy,rng);
+    const a=pick(s,policy,rng,seen);
     if(!a)break;
     const n=apply(s,a);
     if(n.stars.length<s.stars.length){firstStar??=n.ply;longestQuiet=Math.max(longestQuiet,quiet);quiet=0;}else quiet++;
@@ -41,8 +48,9 @@ function play(base,starter,policy,seed){
   }
   return {scoreAt80,winnerAt80,starter,winner:s.winner,plies:s.ply,capped:s.winner===null,firstStar,longestQuiet:Math.max(longestQuiet,quiet),repeated,score:s.scores};
 }
-for(const config of CANDIDATES){
+outer: for(const config of CANDIDATES){
   for(let pair=0;pair<pairs;pair++){
+    if(Date.now()-started>=timeBudgetMs){completed=false;break outer;}
     let base;
     // Some random placements have no legal opening; retry deterministically.
     for(let attempt=0;attempt<100;attempt++){
@@ -50,7 +58,7 @@ for(const config of CANDIDATES){
     }
     if(!base)throw Error(`Could not generate playable layout: ${config.size}, pair ${pair}`);
     for(const [orientation,geometry] of geometryVariants(base).entries()){
-      for(const policy of ["random","greedy"]){
+      for(const policy of policies){
         // Same geometry, seed, and policy, swapping only who moves first.
         for(const starter of [0,1]){
           const seed=400000+(shard*pairs+pair)*31+orientation*7+config.size*1000+(policy==="greedy"?1:0);
@@ -61,15 +69,11 @@ for(const config of CANDIDATES){
   }
 }
 const summary=[];
-for(const config of CANDIDATES)for(const policy of ["random","greedy"]){
+for(const config of CANDIDATES)for(const policy of policies){
   const games=rows.filter(r=>r.size===config.size&&r.policy===policy);
-  const decided=games.filter(r=>!r.capped);
-  const firstWins=decided.filter(r=>r.winner===r.starter).length;
-  const secondWins=decided.length-firstWins;
-  const sorted=decided.map(r=>r.plies).sort((a,b)=>a-b);
-  summary.push({size:config.size,target:config.target,wallCount:config.walls,policy,games:games.length,firstWins,secondWins,capped:games.length-decided.length,firstSeatDecidedRate:decided.length?firstWins/decided.length:null,medianDecidedPlies:sorted.length?sorted[Math.floor((sorted.length-1)/2)]:null,stalled20:games.filter(r=>r.longestQuiet>=20).length,repeated:games.filter(r=>r.repeated).length});
+  summary.push({size:config.size,target:config.target,wallCount:config.walls,policy,...summarize(games)});
 }
-const report={version:1,method:"Screening only; random/greedy policies; mirrored even-board orientations and paired starting seats; capped games are not draws; no human time or strong AI results",params:{pairs,cap,shard},summary,games:rows};
+const report={version:2,method:"Exploratory paired-seat study. positional=distance heuristic, search=beam-8 two-ply heuristic; positional/search remember repeated states, neither is exact minimax. Capped games are not draws.",params:{pairs,cap,shard,policies,timeBudgetMs},completed,elapsedMs:Date.now()-started,summary,games:rows};
 fs.writeFileSync(output,JSON.stringify(report,null,2)+"\n");
 console.log(JSON.stringify(summary,null,2));
 console.log("Wrote "+output);

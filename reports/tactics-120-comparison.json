@@ -1,0 +1,78 @@
+{
+  "shards": 50,
+  "totalGames": 25000,
+  "summary": [
+    {
+      "board": "10",
+      "policy": "greedy",
+      "games": 5000,
+      "decided80": 1586,
+      "decided120": 1970,
+      "convertedAfter80": 384,
+      "undecided80": 3414,
+      "undecided120": 3030,
+      "firstSeatWinRate80": 0.5157629255989912,
+      "firstSeatWinRate120": 0.5197969543147208
+    },
+    {
+      "board": "10",
+      "policy": "random",
+      "games": 5000,
+      "decided80": 33,
+      "decided120": 141,
+      "convertedAfter80": 108,
+      "undecided80": 4967,
+      "undecided120": 4859,
+      "firstSeatWinRate80": 0.6060606060606061,
+      "firstSeatWinRate120": 0.5390070921985816
+    },
+    {
+      "board": "8",
+      "policy": "greedy",
+      "games": 5000,
+      "decided80": 2665,
+      "decided120": 3013,
+      "convertedAfter80": 348,
+      "undecided80": 2335,
+      "undecided120": 1987,
+      "firstSeatWinRate80": 0.5335834896810506,
+      "firstSeatWinRate120": 0.528377032857617
+    },
+    {
+      "board": "8",
+      "policy": "random",
+      "games": 5000,
+      "decided80": 509,
+      "decided120": 1095,
+      "convertedAfter80": 586,
+      "undecided80": 4491,
+      "undecided120": 3905,
+      "firstSeatWinRate80": 0.4577603143418468,
+      "firstSeatWinRate120": 0.4657534246575342
+    },
+    {
+      "board": "9",
+      "policy": "greedy",
+      "games": 2500,
+      "decided80": 836,
+      "decided120": 977,
+      "convertedAfter80": 141,
+      "undecided80": 1664,
+      "undecided120": 1523,
+      "firstSeatWinRate80": 0.562200956937799,
+      "firstSeatWinRate120": 0.5680655066530195
+    },
+    {
+      "board": "9",
+      "policy": "random",
+      "games": 2500,
+      "decided80": 69,
+      "decided120": 208,
+      "convertedAfter80": 139,
+      "undecided80": 2431,
+      "undecided120": 2292,
+      "firstSeatWinRate80": 0.6231884057971014,
+      "firstSeatWinRate120": 0.4951923076923077
+    }
+  ]
+}
