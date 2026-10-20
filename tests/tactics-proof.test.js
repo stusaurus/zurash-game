@@ -37,3 +37,18 @@ test("immediate scoring victory is proved even with a one-node budget",()=>{
   assert.equal(r.nodes,1);
   assert.ok(r.cutoffs>=1);
 });
+
+test("forced loss is proved when every legal reply lets the opponent win",()=>{
+  // In a two-ply game tree, an opponent win is a LOSS only when every
+  // legal first move allows it; a single threatening reply is insufficient.
+  const base=initial(0);
+  const s={...base,players:[2,4],scores:[0,2],stars:[3,17,24,31,45],target:3,turn:0};
+  const replies=successors(s);
+  assert.ok(replies.length>0);
+  const r=prove(s,{horizon:2,nodeBudget:200000});
+  // No assertion of forced loss here: this is a consistency check against
+  // the exact two-ply successor quantifiers, including legal wall moves.
+  const everyMoveLoses=replies.every(({n})=>successors(n).some(({n:next})=>next.winner===1));
+  if(everyMoveLoses)assert.equal(r.result,-1);
+  else assert.notEqual(r.result,-1);
+});
