@@ -10,7 +10,11 @@ on:
 jobs:
   screen:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -18,21 +22,17 @@ jobs:
           node-version: '22'
       - name: Verify engine and candidate generation
         run: node --test tests/variable-board.test.js tests/tactics-candidates.test.js
-      - name: Diagnose star accessibility
-        env:
-          SEEDS: '20'
-        run: node scripts/tactics-accessibility.js
       - name: Paired-seat screening
         env:
-          PAIRS: '4'
+          PAIRS: '25'
+          SHARD: ${{ matrix.shard }}
           CAP: '80'
         run: node scripts/tactics-fairness-study.js
       - name: Upload raw game outcomes and summary
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: tactics-fairness-screen
+          name: tactics-fairness-screen-${{ matrix.shard }}
           path: |
             reports/tactics-fairness-screen.json
-            reports/tactics-accessibility.json
           if-no-files-found: warn
