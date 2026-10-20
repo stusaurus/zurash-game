@@ -5,7 +5,7 @@ import {actions,apply,key,successors} from "../src/engine.js";
 import {seeded} from "../src/ai.js";
 import {CANDIDATES,makeCandidate,geometryVariants} from "./tactics-candidates.js";
 
-const pairs=Number(process.env.PAIRS??25),cap=Number(process.env.CAP??80);
+const pairs=Number(process.env.PAIRS??25),cap=Number(process.env.CAP??120);
 const shard=Number(process.env.SHARD??0);
 if(!Number.isInteger(shard)||shard<0||shard>999)throw Error("Invalid SHARD");
 if(!Number.isInteger(pairs)||pairs<1||pairs>500||!Number.isInteger(cap)||cap<1||cap>500)throw Error("Invalid PAIRS or CAP");
@@ -29,7 +29,7 @@ function play(base,starter,policy,seed){
   const rng=seeded(seed);
   let s={...base,walls:[...base.walls],stars:[...base.stars],players:[...base.players],scores:[0,0],turn:starter,ply:0,winner:null};
   const seen=new Map();
-  let firstStar=null,quiet=0,longestQuiet=0,repeated=false;
+  let firstStar=null,quiet=0,longestQuiet=0,repeated=false,scoreAt80=null,winnerAt80=null;
   while(s.winner===null&&s.ply<cap){
     const k=key(s);seen.set(k,(seen.get(k)||0)+1);repeated ||= seen.get(k)>=3;
     const a=pick(s,policy,rng);
@@ -37,8 +37,9 @@ function play(base,starter,policy,seed){
     const n=apply(s,a);
     if(n.stars.length<s.stars.length){firstStar??=n.ply;longestQuiet=Math.max(longestQuiet,quiet);quiet=0;}else quiet++;
     s=n;
+    if(s.ply===80){scoreAt80=[...s.scores];winnerAt80=s.winner;}
   }
-  return {starter,winner:s.winner,plies:s.ply,capped:s.winner===null,firstStar,longestQuiet:Math.max(longestQuiet,quiet),repeated,score:s.scores};
+  return {scoreAt80,winnerAt80,starter,winner:s.winner,plies:s.ply,capped:s.winner===null,firstStar,longestQuiet:Math.max(longestQuiet,quiet),repeated,score:s.scores};
 }
 for(const config of CANDIDATES){
   for(let pair=0;pair<pairs;pair++){
