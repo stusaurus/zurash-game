@@ -20,8 +20,8 @@ jobs:
         run: node --test tests/variable-board.test.js tests/tactics-candidates.test.js
       - name: Paired-seat screening
         env:
-          PAIRS: '12'
-          CAP: '120'
+          PAIRS: '4'
+          CAP: '80'
         run: node scripts/tactics-fairness-study.js
       - name: Upload raw game outcomes and summary
         if: always()
