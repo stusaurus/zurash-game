@@ -6,6 +6,10 @@ on:
     paths:
       - '.github/workflows/tactics-baseline.yml'
       - 'reports/tactics-mode-plan.md'
+  pull_request:
+    paths:
+      - '.github/workflows/tactics-baseline.yml'
+      - 'reports/tactics-mode-plan.md'
   workflow_dispatch:
 jobs:
   benchmark:
