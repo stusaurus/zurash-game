@@ -18,6 +18,10 @@ jobs:
           node-version: '22'
       - name: Verify engine and candidate generation
         run: node --test tests/variable-board.test.js tests/tactics-candidates.test.js
+      - name: Diagnose star accessibility
+        env:
+          SEEDS: '20'
+        run: node scripts/tactics-accessibility.js
       - name: Paired-seat screening
         env:
           PAIRS: '4'
@@ -28,5 +32,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: tactics-fairness-screen
-          path: reports/tactics-fairness-screen.json
+          path: |
+            reports/tactics-fairness-screen.json
+            reports/tactics-accessibility.json
           if-no-files-found: warn
