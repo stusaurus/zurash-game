@@ -4,6 +4,7 @@ on:
     paths:
       - 'scripts/tactics-proof*.js'
       - 'tests/tactics-proof.test.js'
+      - 'tests/tactics-oracle*.js'
       - '.github/workflows/tactics-proof.yml'
   workflow_dispatch:
   push:
@@ -11,9 +12,10 @@ on:
     paths:
       - 'scripts/tactics-proof*.js'
       - 'tests/tactics-proof.test.js'
+      - 'tests/tactics-oracle*.js'
       - '.github/workflows/tactics-proof.yml'
 concurrency:
-  group: tactics-proof-${{ github.event.pull_request.number || github.ref }}
+  group: tactics-proof-${{ github.event.pull_request.head.ref || github.ref_name }}
   cancel-in-progress: true
 permissions:
   contents: read
@@ -27,22 +29,24 @@ jobs:
         with:
           node-version: '22'
       - name: Validate exact solver independently of long-running research
-        run: node --test tests/tactics-proof.test.js
+        run: node --test tests/tactics-proof.test.js tests/tactics-oracle.test.js
   prove:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Test proof correctness
-        run: node --test tests/tactics-proof.test.js
+        run: node --test tests/tactics-proof.test.js tests/tactics-oracle.test.js
       - name: Measure proof limits
         env:
-          PROOF_BUDGET: '200000'
-          PROOF_DEPTH: '5'
-        run: node scripts/tactics-proof-study.js
+          PROOF_BUDGET: '1000000'
+          PROOF_DEPTH: '16'
+          PROOF_TIME_MS: '5000'
+          PROOF_TOTAL_MS: '90000'
+        run: node --max-old-space-size=768 scripts/tactics-proof-study.js
       - uses: actions/upload-artifact@v4
         if: always()
         with:

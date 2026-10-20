@@ -14,21 +14,26 @@ export function examine(state, depth = 2, budget = 10000) {
     }
     if (left === 0 || s.winner !== null) return evaluate(s, root);
     const id = key(s) + ":" + left;
-    if (cache.has(id)) return cache.get(id);
+    const originalAlpha=alpha,originalBeta=beta;
+    const hit=cache.get(id);
+    if(hit){
+      if(hit.flag==="exact")return hit.value;
+      if(hit.flag==="lower")alpha=Math.max(alpha,hit.value);else beta=Math.min(beta,hit.value);
+      if(alpha>=beta)return hit.value;
+    }
     const next = successors(s);
     if (!next.length) return evaluate(s, root);
     const max = s.turn === root;
     let value = max ? -Infinity : Infinity;
-    let pruned = false;
     for (const child of next) {
       const score = solve(child.n, left - 1, alpha, beta);
       value = max ? Math.max(value, score) : Math.min(value, score);
       if (max) alpha = Math.max(alpha, value);
       else beta = Math.min(beta, value);
-      if (beta <= alpha) { pruned = true; break; }
+      if (beta <= alpha) break;
       if (exhausted) break;
     }
-    if (!pruned && !exhausted) cache.set(id, value);
+    if (!exhausted) cache.set(id, {value,flag:value<=originalAlpha?"upper":value>=originalBeta?"lower":"exact"});
     return value;
   }
   const moves = successors(state).map(({a,n}) => ({

@@ -9,6 +9,7 @@ permissions:
   contents: read
 jobs:
   rules:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,6 +25,7 @@ jobs:
       - run: PAIRS=1 MAX_PLIES=20 SEED_OFFSET=9000071 RNG_MODE=worker MATCHUPS=route/legacy-strong REPORT=/tmp/route-smoke.json npm run quality:study
       - run: npm run quality:replay -- /tmp/route-smoke.json
   browsers:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

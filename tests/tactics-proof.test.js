@@ -14,14 +14,14 @@ test("zero horizon is an analytical draw, not an official draw",()=>{
 });
 test("one-ply proof enumerates all available actions",()=>{
   const s=initial(0);
-  const r=prove(s,{horizon:1,nodeBudget:10000});
+  const r=prove(s,{horizon:1,nodeBudget:10000,horizonPruning:false});
   assert.equal(r.proven,true);
   assert.equal(r.result,DRAW);
   assert.equal(r.nodes,1);
   assert.ok(successors(s).length>1);
 });
 test("limited budget never pretends to prove a multi-ply result",()=>{
-  const r=prove(initial(0),{horizon:3,nodeBudget:1});
+  const r=prove(initial(0),{horizon:3,nodeBudget:1,horizonPruning:false});
   assert.equal(r.result,UNKNOWN);
   assert.equal(r.proven,false);
 });
@@ -31,7 +31,7 @@ test("immediate scoring victory is proved even with a one-node budget",()=>{
   const s={...base, players:[2,4], scores:[2,0], stars:[3,17,24,31,45], target:3, turn:0};
   const winning=successors(s).filter(({n})=>n.winner===0);
   assert.ok(winning.length>0,"fixture must contain a legal immediate winning move");
-  const r=prove(s,{horizon:3,nodeBudget:1});
+  const r=prove(s,{horizon:3,nodeBudget:1,horizonPruning:false});
   assert.equal(r.result,WIN);
   assert.equal(r.proven,true);
   assert.equal(r.nodes,1);
