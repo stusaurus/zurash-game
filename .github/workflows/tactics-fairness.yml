@@ -1,12 +1,5 @@
 name: Tactics fairness 120-ply study
 on:
-  pull_request:
-    paths:
-      - 'scripts/tactics-fairness-study.js'
-      - 'scripts/tactics-candidates.js'
-      - 'src/engine.js'
-      - 'tests/tactics-candidates.test.js'
-      - '.github/workflows/tactics-fairness.yml'
   workflow_dispatch:
 jobs:
   screen:
