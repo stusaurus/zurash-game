@@ -26,6 +26,15 @@ export function prove(state,{horizon=120,nodeBudget=100000}={}){
     const children=successors(s);
     if(children.length===0)return DRAW; // no legal continuation, analytical draw
     const maximize=s.turn===root;
+    // A terminal win for the player to move is an exact minimax bound.
+    // No sibling can overturn it, so return without exploring the tree.
+    const immediate=children.find(({n})=>n.winner===s.turn);
+    if(immediate){
+      const result=maximize?WIN:LOSS;
+      table.set(id,result);
+      cutoffs++;
+      return result;
+    }
     let sawUnknown=false,sawDraw=false;
     for(const {n} of children){
       const result=solve(n,remaining-1);
