@@ -12,6 +12,9 @@ on:
       - 'scripts/tactics-proof*.js'
       - 'tests/tactics-proof.test.js'
       - '.github/workflows/tactics-proof.yml'
+concurrency:
+  group: tactics-proof-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
