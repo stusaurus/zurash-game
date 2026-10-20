@@ -48,7 +48,7 @@ test("forced loss is proved when every legal reply lets the opponent win",()=>{
   const r=prove(s,{horizon:2,nodeBudget:200000});
   // No assertion of forced loss here: this is a consistency check against
   // the exact two-ply successor quantifiers, including legal wall moves.
-  const everyMoveLoses=replies.every(({n})=>successors(n).some(({n:next})=>next.winner===1));
-  if(everyMoveLoses)assert.equal(r.result,-1);
-  else assert.notEqual(r.result,-1);
+  const everyMoveLoses=replies.every(({n})=>n.winner===1 || successors(n).some(({n:next})=>next.winner===1));
+  assert.equal(r.result===-1,everyMoveLoses);
+  assert.equal(r.proven,true);
 });
