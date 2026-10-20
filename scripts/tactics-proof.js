@@ -13,6 +13,8 @@ export const WIN=1,DRAW=0,LOSS=-1,UNKNOWN=null;
 export function prove(state,{horizon=120,nodeBudget=100000}={}){
   if(!Number.isInteger(horizon)||horizon<0||horizon>120||!Number.isInteger(nodeBudget)||nodeBudget<1)throw Error("Invalid proof limits");
   const root=state.turn,table=new Map();
+  // Exact result bounds: +1 forced win, -1 forced loss, 0 cap draw.
+  // Search a winning child first to avoid exploring irrelevant replies.
   let nodes=0,cacheHits=0,cutoffs=0;
   function solve(s,remaining){
     if(s.winner!==null)return s.winner===root?WIN:LOSS;
