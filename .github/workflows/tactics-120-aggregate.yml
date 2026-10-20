@@ -1,6 +1,10 @@
 name: Aggregate 120-ply Tactics outcomes
 on:
   workflow_dispatch:
+  push:
+    branches: [tactics-size-experiment]
+    paths:
+      - '.github/workflows/tactics-120-aggregate.yml'
 permissions:
   actions: read
   contents: read
