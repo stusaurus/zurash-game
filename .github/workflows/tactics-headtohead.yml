@@ -1,0 +1,33 @@
+name: Tactics candidate head-to-head
+on:
+  push:
+    branches: [research/tactics-mode-baseline-20261020]
+    paths: ['scripts/tactics-headtohead.js','.github/workflows/tactics-headtohead.yml']
+  pull_request:
+    paths: ['scripts/tactics-headtohead.js','.github/workflows/tactics-headtohead.yml']
+  workflow_dispatch:
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate rules
+        run: npm run check && npm test
+      - name: Compare candidate 12 and 47 to current icefield
+        env:
+          PAIRS: '8'
+          MAX_PLIES: '120'
+          POLICIES: greedy,strong
+          SEED_OFFSET: '500000'
+          REPORT: reports/tactics-candidate-headtohead.json
+        run: node scripts/tactics-headtohead.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tactics-headtohead
+          path: reports/tactics-candidate-headtohead.json
+          if-no-files-found: warn
