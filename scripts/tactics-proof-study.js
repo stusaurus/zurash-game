@@ -6,6 +6,9 @@ import {prove} from "./tactics-proof.js";
 const budget=Number(process.env.PROOF_BUDGET??20000);
 const maxDepth=Number(process.env.PROOF_DEPTH??4);
 const rows=[];
+fs.mkdirSync("reports",{recursive:true});
+function save(){fs.writeFileSync("reports/tactics-proof-depth.json",JSON.stringify({budget,maxDepth,rows},null,2)+"\n");}
+process.on("SIGTERM",()=>{save();process.exit(143);});
 for(const c of CANDIDATES){
   let s;
   for(let attempt=0;attempt<100;attempt++){
@@ -19,9 +22,9 @@ for(const c of CANDIDATES){
       const r=prove(state,{horizon:depth,nodeBudget:budget});
       rows.push({size:c.size,starter,depth,...r});
       console.log(JSON.stringify(rows[rows.length-1]));
+      save();
       if(!r.proven)break;
     }
   }
 }
-fs.mkdirSync("reports",{recursive:true});
-fs.writeFileSync("reports/tactics-proof-depth.json",JSON.stringify({budget,maxDepth,rows},null,2)+"\n");
+save();
