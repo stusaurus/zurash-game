@@ -1,0 +1,32 @@
+name: Tactics fairness screening
+on:
+  pull_request:
+    paths:
+      - 'scripts/tactics-*.js'
+      - 'src/engine.js'
+      - 'tests/tactics-candidates.test.js'
+      - '.github/workflows/tactics-fairness.yml'
+  workflow_dispatch:
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify engine and candidate generation
+        run: node --test tests/variable-board.test.js tests/tactics-candidates.test.js
+      - name: Paired-seat screening
+        env:
+          PAIRS: '12'
+          CAP: '120'
+        run: node scripts/tactics-fairness-study.js
+      - name: Upload raw game outcomes and summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tactics-fairness-screen
+          path: reports/tactics-fairness-screen.json
+          if-no-files-found: warn
