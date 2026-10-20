@@ -34,3 +34,16 @@ Human duration is not CPU duration: log human turn start/end times, total elapse
 
 ## Decision gate
 Do not deploy Tactics as the default until (1) Sprint regression and browser tests pass, (2) both starting seats can win and severe first-player bias is not observed, (3) stalemates are acceptably rare, and (4) human play confirms longer **meaningful** decisions rather than empty travel. If all candidates are weak, iterate instead of selecting 9×9 by fiat.
+
+## Fairness is a mandatory release gate (not a weighted bonus)
+A candidate that fails fairness is rejected regardless of playtime or entertainment scores. Evaluate seat advantage separately from player/AI skill by swapping the **same two policies** between first and second seats under matched seeds. Report win/loss/capped separately; never hide capped games inside a win-rate denominator.
+
+- **Initial screening target:** first-seat win share among decided games 45–55%, with sufficient sample size and uncertainty shown. This is a screening target, **not** proof of balance; a 50% result from few or highly capped games is inconclusive.
+- Require a predeclared statistical equivalence test or sufficiently narrow confidence interval around 50%, rather than accepting a nonsignificant difference from 50% as proof of equality. Increase sample sizes if the interval is too wide.
+- Analyze strong-vs-strong, greedy-vs-greedy, and both directions of strong-vs-greedy. Flag consistent seat advantages even if aggregate results cancel.
+- Compare identical layouts with starter swapped; for non-centrosymmetric layouts also run 180°-rotated and/or color-swapped mirrored layouts, balancing all orientation/starter combinations.
+- Record early-star access, legal action count, forced openings, no-legal-move and stall rates for each seat. Inspect exploitability with deeper search and opening enumeration; empirical balance cannot rule out a forced win.
+- Require actual human A/B seat-swapped trials before final release. Human sample sizes and time are reported separately from AI simulations.
+- If no candidate passes, **do not ship Tactics**. Revise placement, wall density, star distribution, or board dimensions and rerun the same independent holdout protocol.
+
+The proposed 45–55% band is a design target to be revisited with data; no candidate is currently certified fair.
