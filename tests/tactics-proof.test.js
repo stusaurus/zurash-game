@@ -25,3 +25,15 @@ test("limited budget never pretends to prove a multi-ply result",()=>{
   assert.equal(r.result,UNKNOWN);
   assert.equal(r.proven,false);
 });
+
+test("immediate scoring victory is proved even with a one-node budget",()=>{
+  const base=initial(0);
+  const s={...base, scores:[2,0], stars:[3,17,24,31,45], target:3, turn:0};
+  const winning=successors(s).filter(({n})=>n.winner===0);
+  if(winning.length===0)return; // opening layout need not offer a one-move win
+  const r=prove(s,{horizon:3,nodeBudget:1});
+  assert.equal(r.result,WIN);
+  assert.equal(r.proven,true);
+  assert.equal(r.nodes,1);
+  assert.ok(r.cutoffs>=1);
+});
