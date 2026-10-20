@@ -5,7 +5,9 @@ import {actions,apply,key,successors} from "../src/engine.js";
 import {seeded} from "../src/ai.js";
 import {CANDIDATES,makeCandidate,geometryVariants} from "./tactics-candidates.js";
 
-const pairs=Number(process.env.PAIRS??4),cap=Number(process.env.CAP??80);
+const pairs=Number(process.env.PAIRS??25),cap=Number(process.env.CAP??80);
+const shard=Number(process.env.SHARD??0);
+if(!Number.isInteger(shard)||shard<0||shard>999)throw Error("Invalid SHARD");
 if(!Number.isInteger(pairs)||pairs<1||pairs>500||!Number.isInteger(cap)||cap<1||cap>500)throw Error("Invalid PAIRS or CAP");
 const output=process.env.OUTPUT??"reports/tactics-fairness-screen.json";
 const rows=[];
@@ -43,14 +45,14 @@ for(const config of CANDIDATES){
     let base;
     // Some random placements have no legal opening; retry deterministically.
     for(let attempt=0;attempt<100;attempt++){
-      try{base=makeCandidate(config,10000+pair*101+attempt);break;}catch(e){if(e.message!=="No legal opening")throw e;}
+      try{base=makeCandidate(config,10000+(shard*pairs+pair)*101+attempt);break;}catch(e){if(e.message!=="No legal opening")throw e;}
     }
     if(!base)throw Error(`Could not generate playable layout: ${config.size}, pair ${pair}`);
     for(const [orientation,geometry] of geometryVariants(base).entries()){
       for(const policy of ["random","greedy"]){
         // Same geometry, seed, and policy, swapping only who moves first.
         for(const starter of [0,1]){
-          const seed=400000+pair*31+orientation*7+config.size*1000+(policy==="greedy"?1:0);
+          const seed=400000+(shard*pairs+pair)*31+orientation*7+config.size*1000+(policy==="greedy"?1:0);
           rows.push({size:config.size,target:config.target,wallCount:config.walls,pair,orientation,policy,...play(geometry,starter,policy,seed)});
         }
       }
@@ -66,7 +68,7 @@ for(const config of CANDIDATES)for(const policy of ["random","greedy"]){
   const sorted=decided.map(r=>r.plies).sort((a,b)=>a-b);
   summary.push({size:config.size,target:config.target,wallCount:config.walls,policy,games:games.length,firstWins,secondWins,capped:games.length-decided.length,firstSeatDecidedRate:decided.length?firstWins/decided.length:null,medianDecidedPlies:sorted.length?sorted[Math.floor((sorted.length-1)/2)]:null,stalled20:games.filter(r=>r.longestQuiet>=20).length,repeated:games.filter(r=>r.repeated).length});
 }
-const report={version:1,method:"Screening only; random/greedy policies; mirrored even-board orientations and paired starting seats; capped games are not draws; no human time or strong AI results",params:{pairs,cap},summary,games:rows};
+const report={version:1,method:"Screening only; random/greedy policies; mirrored even-board orientations and paired starting seats; capped games are not draws; no human time or strong AI results",params:{pairs,cap,shard},summary,games:rows};
 fs.writeFileSync(output,JSON.stringify(report,null,2)+"\n");
 console.log(JSON.stringify(summary,null,2));
 console.log("Wrote "+output);
