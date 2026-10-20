@@ -7,7 +7,12 @@ const budget=Number(process.env.PROOF_BUDGET??20000);
 const maxDepth=Number(process.env.PROOF_DEPTH??4);
 const rows=[];
 for(const c of CANDIDATES){
-  const s=makeCandidate(c,20261020+c.size);
+  let s;
+  for(let attempt=0;attempt<100;attempt++){
+    try{s=makeCandidate(c,20261020+c.size+attempt);break;}
+    catch(e){if(e.message!=="No legal opening")throw e;}
+  }
+  if(!s)throw Error(`No playable opening for size ${c.size}`);
   for(const starter of [0,1]){
     const state={...s,turn:starter};
     for(let depth=1;depth<=maxDepth;depth++){
