@@ -1,0 +1,2126 @@
+{
+  "results": [
+    {
+      "id": "A",
+      "seed": 1037,
+      "family": "corridor",
+      "strategy": {
+        "captures": 322,
+        "wallEssentialCaptures": 237,
+        "wallEnablesWin": 31
+      },
+      "spec": {
+        "size": 8,
+        "stars": 7,
+        "walls": 8,
+        "target": 4
+      },
+      "all": {
+        "n": 68,
+        "first": 25,
+        "second": 20,
+        "unresolved": 23,
+        "firstAmongDecided": 0.5555555555555556,
+        "completion": 0.6617647058823529,
+        "firstFinalBounds": [
+          0.36764705882352944,
+          0.7058823529411765
+        ],
+        "clusterBootstrap95Envelope": [
+          0.29411764705882354,
+          0.7941176470588235
+        ],
+        "pairedClusters": 34,
+        "formalDraw": 0,
+        "anomalies": 0,
+        "repetition": 17,
+        "plies": {
+          "median": 52,
+          "p90": 175,
+          "min": 17,
+          "max": 400
+        },
+        "wallMoveFraction": 0.9372885766328389,
+        "leadChanges": 22,
+        "nearVictoryReversals": 3
+      },
+      "stages": {
+        "precision": {
+          "n": 32,
+          "first": 10,
+          "second": 12,
+          "unresolved": 10,
+          "firstAmongDecided": 0.45454545454545453,
+          "completion": 0.6875,
+          "firstFinalBounds": [
+            0.3125,
+            0.625
+          ],
+          "clusterBootstrap95Envelope": [
+            0.1875,
+            0.75
+          ],
+          "pairedClusters": 16,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 10,
+          "plies": {
+            "median": 37,
+            "p90": 108,
+            "min": 17,
+            "max": 400
+          },
+          "wallMoveFraction": 0.8985112182847557,
+          "leadChanges": 9,
+          "nearVictoryReversals": 1
+        },
+        "holdout": {
+          "n": 24,
+          "first": 9,
+          "second": 3,
+          "unresolved": 12,
+          "firstAmongDecided": 0.75,
+          "completion": 0.5,
+          "firstFinalBounds": [
+            0.375,
+            0.875
+          ],
+          "clusterBootstrap95Envelope": [
+            0.25,
+            1
+          ],
+          "pairedClusters": 12,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 7,
+          "plies": {
+            "median": 152,
+            "p90": 175,
+            "min": 49,
+            "max": 305
+          },
+          "wallMoveFraction": 0.9638989169675091,
+          "leadChanges": 9,
+          "nearVictoryReversals": 1
+        },
+        "route-holdout": {
+          "n": 12,
+          "first": 6,
+          "second": 5,
+          "unresolved": 1,
+          "firstAmongDecided": 0.5454545454545454,
+          "completion": 0.9166666666666666,
+          "firstFinalBounds": [
+            0.5,
+            0.5833333333333334
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.75
+          ],
+          "pairedClusters": 6,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 52,
+            "p90": 85,
+            "min": 17,
+            "max": 134
+          },
+          "wallMoveFraction": 0.9692470837751855,
+          "leadChanges": 4,
+          "nearVictoryReversals": 1
+        }
+      },
+      "strata": {
+        "search/search": {
+          "n": 8,
+          "first": 1,
+          "second": 3,
+          "unresolved": 4,
+          "firstAmongDecided": 0.25,
+          "completion": 0.5,
+          "firstFinalBounds": [
+            0.125,
+            0.625
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 97,
+            "p90": 108,
+            "min": 34,
+            "max": 400
+          },
+          "wallMoveFraction": 0.9668016194331984,
+          "leadChanges": 3,
+          "nearVictoryReversals": 1
+        },
+        "mixed/mixed": {
+          "n": 8,
+          "first": 1,
+          "second": 1,
+          "unresolved": 6,
+          "firstAmongDecided": 0.5,
+          "completion": 0.25,
+          "firstFinalBounds": [
+            0.125,
+            0.875
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 4,
+          "plies": {
+            "median": 38,
+            "p90": 38,
+            "min": 38,
+            "max": 203
+          },
+          "wallMoveFraction": 0.9663970130678282,
+          "leadChanges": 2,
+          "nearVictoryReversals": 0
+        },
+        "star/defensive": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 4,
+          "plies": {
+            "median": 37,
+            "p90": 78,
+            "min": 26,
+            "max": 180
+          },
+          "wallMoveFraction": 0.4978448275862069,
+          "leadChanges": 4,
+          "nearVictoryReversals": 0
+        },
+        "defensive/star": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 2,
+          "plies": {
+            "median": 20,
+            "p90": 44,
+            "min": 17,
+            "max": 52
+          },
+          "wallMoveFraction": 0.4956140350877193,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "search-progress/search-progress": {
+          "n": 8,
+          "first": 3,
+          "second": 2,
+          "unresolved": 3,
+          "firstAmongDecided": 0.6,
+          "completion": 0.625,
+          "firstFinalBounds": [
+            0.375,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0.125,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 174,
+            "p90": 175,
+            "min": 49,
+            "max": 268
+          },
+          "wallMoveFraction": 0.9634020618556701,
+          "leadChanges": 3,
+          "nearVictoryReversals": 0
+        },
+        "search/mixed": {
+          "n": 8,
+          "first": 3,
+          "second": 1,
+          "unresolved": 4,
+          "firstAmongDecided": 0.75,
+          "completion": 0.5,
+          "firstFinalBounds": [
+            0.375,
+            0.875
+          ],
+          "clusterBootstrap95Envelope": [
+            0.125,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 3,
+          "plies": {
+            "median": 152,
+            "p90": 155,
+            "min": 107,
+            "max": 175
+          },
+          "wallMoveFraction": 0.9655537890832009,
+          "leadChanges": 3,
+          "nearVictoryReversals": 1
+        },
+        "mixed/search": {
+          "n": 8,
+          "first": 3,
+          "second": 0,
+          "unresolved": 5,
+          "firstAmongDecided": 1,
+          "completion": 0.375,
+          "firstFinalBounds": [
+            0.375,
+            1
+          ],
+          "clusterBootstrap95Envelope": [
+            0.125,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 4,
+          "plies": {
+            "median": 77,
+            "p90": 77,
+            "min": 49,
+            "max": 305
+          },
+          "wallMoveFraction": 0.9628140703517588,
+          "leadChanges": 3,
+          "nearVictoryReversals": 0
+        },
+        "route/route": {
+          "n": 4,
+          "first": 2,
+          "second": 1,
+          "unresolved": 1,
+          "firstAmongDecided": 0.6666666666666666,
+          "completion": 0.75,
+          "firstFinalBounds": [
+            0.5,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            1
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 85,
+            "p90": 85,
+            "min": 17,
+            "max": 134
+          },
+          "wallMoveFraction": 0.9691252144082333,
+          "leadChanges": 2,
+          "nearVictoryReversals": 0
+        },
+        "route/search": {
+          "n": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 28,
+            "p90": 52,
+            "min": 21,
+            "max": 73
+          },
+          "wallMoveFraction": 0.9770114942528736,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "search/route": {
+          "n": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 34,
+            "p90": 66,
+            "min": 19,
+            "max": 67
+          },
+          "wallMoveFraction": 0.9623655913978495,
+          "leadChanges": 2,
+          "nearVictoryReversals": 1
+        }
+      }
+    },
+    {
+      "id": "B",
+      "seed": 1057,
+      "family": "mirror",
+      "strategy": {
+        "captures": 240,
+        "wallEssentialCaptures": 168,
+        "wallEnablesWin": 23
+      },
+      "spec": {
+        "size": 9,
+        "stars": 5,
+        "walls": 10,
+        "target": 3
+      },
+      "all": {
+        "n": 68,
+        "first": 34,
+        "second": 11,
+        "unresolved": 23,
+        "firstAmongDecided": 0.7555555555555555,
+        "completion": 0.6617647058823529,
+        "firstFinalBounds": [
+          0.5,
+          0.8382352941176471
+        ],
+        "clusterBootstrap95Envelope": [
+          0.38235294117647056,
+          0.9117647058823529
+        ],
+        "pairedClusters": 34,
+        "formalDraw": 0,
+        "anomalies": 0,
+        "repetition": 3,
+        "plies": {
+          "median": 15,
+          "p90": 102,
+          "min": 5,
+          "max": 156
+        },
+        "wallMoveFraction": 0.9120016109544905,
+        "leadChanges": 8,
+        "nearVictoryReversals": 5
+      },
+      "stages": {
+        "precision": {
+          "n": 32,
+          "first": 18,
+          "second": 8,
+          "unresolved": 6,
+          "firstAmongDecided": 0.6923076923076923,
+          "completion": 0.8125,
+          "firstFinalBounds": [
+            0.5625,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0.40625,
+            0.875
+          ],
+          "pairedClusters": 16,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 3,
+          "plies": {
+            "median": 15,
+            "p90": 72,
+            "min": 5,
+            "max": 131
+          },
+          "wallMoveFraction": 0.8183221821924859,
+          "leadChanges": 4,
+          "nearVictoryReversals": 4
+        },
+        "holdout": {
+          "n": 24,
+          "first": 9,
+          "second": 0,
+          "unresolved": 15,
+          "firstAmongDecided": 1,
+          "completion": 0.375,
+          "firstFinalBounds": [
+            0.375,
+            1
+          ],
+          "clusterBootstrap95Envelope": [
+            0.16666666666666666,
+            1
+          ],
+          "pairedClusters": 12,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 15,
+            "p90": 15,
+            "min": 9,
+            "max": 125
+          },
+          "wallMoveFraction": 0.9670084707980383,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "route-holdout": {
+          "n": 12,
+          "first": 7,
+          "second": 3,
+          "unresolved": 2,
+          "firstAmongDecided": 0.7,
+          "completion": 0.8333333333333334,
+          "firstFinalBounds": [
+            0.5833333333333334,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.9166666666666666
+          ],
+          "pairedClusters": 6,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 14,
+            "p90": 147,
+            "min": 9,
+            "max": 156
+          },
+          "wallMoveFraction": 0.9871794871794872,
+          "leadChanges": 4,
+          "nearVictoryReversals": 1
+        }
+      },
+      "strata": {
+        "search/search": {
+          "n": 8,
+          "first": 5,
+          "second": 1,
+          "unresolved": 2,
+          "firstAmongDecided": 0.8333333333333334,
+          "completion": 0.75,
+          "firstFinalBounds": [
+            0.625,
+            0.875
+          ],
+          "clusterBootstrap95Envelope": [
+            0.25,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 9,
+            "p90": 116,
+            "min": 9,
+            "max": 131
+          },
+          "wallMoveFraction": 0.965556831228473,
+          "leadChanges": 1,
+          "nearVictoryReversals": 1
+        },
+        "mixed/mixed": {
+          "n": 8,
+          "first": 5,
+          "second": 0,
+          "unresolved": 3,
+          "firstAmongDecided": 1,
+          "completion": 0.625,
+          "firstFinalBounds": [
+            0.625,
+            1
+          ],
+          "clusterBootstrap95Envelope": [
+            0.125,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 1,
+          "plies": {
+            "median": 33,
+            "p90": 53,
+            "min": 15,
+            "max": 59
+          },
+          "wallMoveFraction": 0.9684684684684685,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "star/defensive": {
+          "n": 8,
+          "first": 4,
+          "second": 3,
+          "unresolved": 1,
+          "firstAmongDecided": 0.5714285714285714,
+          "completion": 0.875,
+          "firstFinalBounds": [
+            0.5,
+            0.625
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.875
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 2,
+          "plies": {
+            "median": 13,
+            "p90": 72,
+            "min": 9,
+            "max": 102
+          },
+          "wallMoveFraction": 0.5,
+          "leadChanges": 3,
+          "nearVictoryReversals": 3
+        },
+        "defensive/star": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 5,
+            "p90": 18,
+            "min": 5,
+            "max": 70
+          },
+          "wallMoveFraction": 0.5367647058823529,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "search-progress/search-progress": {
+          "n": 8,
+          "first": 2,
+          "second": 0,
+          "unresolved": 6,
+          "firstAmongDecided": 1,
+          "completion": 0.25,
+          "firstFinalBounds": [
+            0.25,
+            1
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 15,
+            "p90": 15,
+            "min": 15,
+            "max": 15
+          },
+          "wallMoveFraction": 0.9673202614379085,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "search/mixed": {
+          "n": 8,
+          "first": 3,
+          "second": 0,
+          "unresolved": 5,
+          "firstAmongDecided": 1,
+          "completion": 0.375,
+          "firstFinalBounds": [
+            0.375,
+            1
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 15,
+            "p90": 15,
+            "min": 15,
+            "max": 125
+          },
+          "wallMoveFraction": 0.9640564826700898,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "mixed/search": {
+          "n": 8,
+          "first": 4,
+          "second": 0,
+          "unresolved": 4,
+          "firstAmongDecided": 1,
+          "completion": 0.5,
+          "firstFinalBounds": [
+            0.5,
+            1
+          ],
+          "clusterBootstrap95Envelope": [
+            0.125,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 9,
+            "p90": 9,
+            "min": 9,
+            "max": 15
+          },
+          "wallMoveFraction": 0.9706959706959707,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "route/route": {
+          "n": 4,
+          "first": 3,
+          "second": 0,
+          "unresolved": 1,
+          "firstAmongDecided": 1,
+          "completion": 0.75,
+          "firstFinalBounds": [
+            0.75,
+            1
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            1
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 29,
+            "p90": 29,
+            "min": 13,
+            "max": 147
+          },
+          "wallMoveFraction": 0.9918918918918919,
+          "leadChanges": 1,
+          "nearVictoryReversals": 0
+        },
+        "route/search": {
+          "n": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 9,
+            "p90": 14,
+            "min": 9,
+            "max": 24
+          },
+          "wallMoveFraction": 0.9821428571428571,
+          "leadChanges": 2,
+          "nearVictoryReversals": 0
+        },
+        "search/route": {
+          "n": 4,
+          "first": 2,
+          "second": 1,
+          "unresolved": 1,
+          "firstAmongDecided": 0.6666666666666666,
+          "completion": 0.75,
+          "firstFinalBounds": [
+            0.5,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            1
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 23,
+            "p90": 23,
+            "min": 13,
+            "max": 156
+          },
+          "wallMoveFraction": 0.9830508474576272,
+          "leadChanges": 1,
+          "nearVictoryReversals": 1
+        }
+      }
+    },
+    {
+      "id": "C",
+      "seed": 1113,
+      "family": "central",
+      "strategy": {
+        "captures": 205,
+        "wallEssentialCaptures": 142,
+        "wallEnablesWin": 31
+      },
+      "spec": {
+        "size": 10,
+        "stars": 5,
+        "walls": 12,
+        "target": 3
+      },
+      "all": {
+        "n": 68,
+        "first": 27,
+        "second": 24,
+        "unresolved": 17,
+        "firstAmongDecided": 0.5294117647058824,
+        "completion": 0.75,
+        "firstFinalBounds": [
+          0.39705882352941174,
+          0.6470588235294118
+        ],
+        "clusterBootstrap95Envelope": [
+          0.3088235294117647,
+          0.7352941176470589
+        ],
+        "pairedClusters": 34,
+        "formalDraw": 0,
+        "anomalies": 0,
+        "repetition": 3,
+        "plies": {
+          "median": 9,
+          "p90": 25,
+          "min": 7,
+          "max": 70
+        },
+        "wallMoveFraction": 0.9254689042448174,
+        "leadChanges": 7,
+        "nearVictoryReversals": 3
+      },
+      "stages": {
+        "precision": {
+          "n": 32,
+          "first": 12,
+          "second": 12,
+          "unresolved": 8,
+          "firstAmongDecided": 0.5,
+          "completion": 0.75,
+          "firstFinalBounds": [
+            0.375,
+            0.625
+          ],
+          "clusterBootstrap95Envelope": [
+            0.25,
+            0.75
+          ],
+          "pairedClusters": 16,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 3,
+          "plies": {
+            "median": 9,
+            "p90": 25,
+            "min": 7,
+            "max": 26
+          },
+          "wallMoveFraction": 0.815114709851552,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "holdout": {
+          "n": 24,
+          "first": 9,
+          "second": 8,
+          "unresolved": 7,
+          "firstAmongDecided": 0.5294117647058824,
+          "completion": 0.7083333333333334,
+          "firstFinalBounds": [
+            0.375,
+            0.6666666666666666
+          ],
+          "clusterBootstrap95Envelope": [
+            0.25,
+            0.8333333333333334
+          ],
+          "pairedClusters": 12,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 8,
+            "p90": 16,
+            "min": 7,
+            "max": 70
+          },
+          "wallMoveFraction": 0.9869215291750503,
+          "leadChanges": 5,
+          "nearVictoryReversals": 1
+        },
+        "route-holdout": {
+          "n": 12,
+          "first": 6,
+          "second": 4,
+          "unresolved": 2,
+          "firstAmongDecided": 0.6,
+          "completion": 0.8333333333333334,
+          "firstFinalBounds": [
+            0.5,
+            0.6666666666666666
+          ],
+          "clusterBootstrap95Envelope": [
+            0.25,
+            0.8333333333333334
+          ],
+          "pairedClusters": 6,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 9,
+            "p90": 27,
+            "min": 7,
+            "max": 32
+          },
+          "wallMoveFraction": 0.9965635738831615,
+          "leadChanges": 2,
+          "nearVictoryReversals": 2
+        }
+      },
+      "strata": {
+        "search/search": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 8,
+            "p90": 8,
+            "min": 7,
+            "max": 9
+          },
+          "wallMoveFraction": 1,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "mixed/mixed": {
+          "n": 8,
+          "first": 0,
+          "second": 0,
+          "unresolved": 8,
+          "firstAmongDecided": null,
+          "completion": 0,
+          "firstFinalBounds": [
+            0,
+            1
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 1,
+          "plies": null,
+          "wallMoveFraction": 0.9714964370546318,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "star/defensive": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 2,
+          "plies": {
+            "median": 22,
+            "p90": 25,
+            "min": 18,
+            "max": 26
+          },
+          "wallMoveFraction": 0.5163043478260869,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "defensive/star": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 9,
+            "p90": 10,
+            "min": 8,
+            "max": 10
+          },
+          "wallMoveFraction": 0.5135135135135135,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "search-progress/search-progress": {
+          "n": 8,
+          "first": 4,
+          "second": 3,
+          "unresolved": 1,
+          "firstAmongDecided": 0.5714285714285714,
+          "completion": 0.875,
+          "firstFinalBounds": [
+            0.5,
+            0.625
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.875
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 8,
+            "p90": 8,
+            "min": 7,
+            "max": 9
+          },
+          "wallMoveFraction": 1,
+          "leadChanges": 1,
+          "nearVictoryReversals": 0
+        },
+        "search/mixed": {
+          "n": 8,
+          "first": 1,
+          "second": 2,
+          "unresolved": 5,
+          "firstAmongDecided": 0.3333333333333333,
+          "completion": 0.375,
+          "firstFinalBounds": [
+            0.125,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 69,
+            "p90": 69,
+            "min": 16,
+            "max": 70
+          },
+          "wallMoveFraction": 0.9850746268656716,
+          "leadChanges": 4,
+          "nearVictoryReversals": 1
+        },
+        "mixed/search": {
+          "n": 8,
+          "first": 4,
+          "second": 3,
+          "unresolved": 1,
+          "firstAmongDecided": 0.5714285714285714,
+          "completion": 0.875,
+          "firstFinalBounds": [
+            0.5,
+            0.625
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.875
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 8,
+            "p90": 8,
+            "min": 7,
+            "max": 9
+          },
+          "wallMoveFraction": 0.9829545454545454,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "route/route": {
+          "n": 4,
+          "first": 2,
+          "second": 1,
+          "unresolved": 1,
+          "firstAmongDecided": 0.6666666666666666,
+          "completion": 0.75,
+          "firstFinalBounds": [
+            0.5,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            1
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 9,
+            "p90": 9,
+            "min": 9,
+            "max": 32
+          },
+          "wallMoveFraction": 0.9940119760479041,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "route/search": {
+          "n": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 8,
+            "p90": 8,
+            "min": 7,
+            "max": 9
+          },
+          "wallMoveFraction": 1,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "search/route": {
+          "n": 4,
+          "first": 2,
+          "second": 1,
+          "unresolved": 1,
+          "firstAmongDecided": 0.6666666666666666,
+          "completion": 0.75,
+          "firstFinalBounds": [
+            0.5,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            1
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 24,
+            "p90": 24,
+            "min": 23,
+            "max": 27
+          },
+          "wallMoveFraction": 1,
+          "leadChanges": 2,
+          "nearVictoryReversals": 2
+        }
+      }
+    },
+    {
+      "id": "D",
+      "seed": 1151,
+      "family": "rotation",
+      "strategy": {
+        "captures": 448,
+        "wallEssentialCaptures": 323,
+        "wallEnablesWin": 47
+      },
+      "spec": {
+        "size": 6,
+        "stars": 7,
+        "walls": 7,
+        "target": 4
+      },
+      "all": {
+        "n": 68,
+        "first": 37,
+        "second": 28,
+        "unresolved": 3,
+        "firstAmongDecided": 0.5692307692307692,
+        "completion": 0.9558823529411765,
+        "firstFinalBounds": [
+          0.5441176470588235,
+          0.5882352941176471
+        ],
+        "clusterBootstrap95Envelope": [
+          0.4852941176470588,
+          0.6617647058823529
+        ],
+        "pairedClusters": 34,
+        "formalDraw": 0,
+        "anomalies": 0,
+        "repetition": 7,
+        "plies": {
+          "median": 27,
+          "p90": 152,
+          "min": 11,
+          "max": 365
+        },
+        "wallMoveFraction": 0.9407139821504462,
+        "leadChanges": 34,
+        "nearVictoryReversals": 21
+      },
+      "stages": {
+        "precision": {
+          "n": 32,
+          "first": 15,
+          "second": 14,
+          "unresolved": 3,
+          "firstAmongDecided": 0.5172413793103449,
+          "completion": 0.90625,
+          "firstFinalBounds": [
+            0.46875,
+            0.5625
+          ],
+          "clusterBootstrap95Envelope": [
+            0.40625,
+            0.65625
+          ],
+          "pairedClusters": 16,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 5,
+          "plies": {
+            "median": 17,
+            "p90": 123,
+            "min": 11,
+            "max": 292
+          },
+          "wallMoveFraction": 0.9134701159678859,
+          "leadChanges": 12,
+          "nearVictoryReversals": 8
+        },
+        "holdout": {
+          "n": 24,
+          "first": 15,
+          "second": 9,
+          "unresolved": 0,
+          "firstAmongDecided": 0.625,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.625,
+            0.625
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.75
+          ],
+          "pairedClusters": 12,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 2,
+          "plies": {
+            "median": 50,
+            "p90": 224,
+            "min": 15,
+            "max": 365
+          },
+          "wallMoveFraction": 0.9619896762083529,
+          "leadChanges": 9,
+          "nearVictoryReversals": 9
+        },
+        "route-holdout": {
+          "n": 12,
+          "first": 7,
+          "second": 5,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5833333333333334,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5833333333333334,
+            0.5833333333333334
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.75
+          ],
+          "pairedClusters": 6,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 23,
+            "p90": 28,
+            "min": 17,
+            "max": 59
+          },
+          "wallMoveFraction": 0.987987987987988,
+          "leadChanges": 13,
+          "nearVictoryReversals": 4
+        }
+      },
+      "strata": {
+        "search/search": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 35,
+            "p90": 152,
+            "min": 12,
+            "max": 292
+          },
+          "wallMoveFraction": 0.9503105590062112,
+          "leadChanges": 4,
+          "nearVictoryReversals": 4
+        },
+        "mixed/mixed": {
+          "n": 8,
+          "first": 3,
+          "second": 2,
+          "unresolved": 3,
+          "firstAmongDecided": 0.6,
+          "completion": 0.625,
+          "firstFinalBounds": [
+            0.375,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0.125,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 5,
+          "plies": {
+            "median": 104,
+            "p90": 123,
+            "min": 97,
+            "max": 246
+          },
+          "wallMoveFraction": 0.9466374269005848,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "star/defensive": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 12,
+            "p90": 12,
+            "min": 11,
+            "max": 13
+          },
+          "wallMoveFraction": 0.6276595744680851,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "defensive/star": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 16,
+            "p90": 20,
+            "min": 13,
+            "max": 24
+          },
+          "wallMoveFraction": 0.6029411764705882,
+          "leadChanges": 8,
+          "nearVictoryReversals": 4
+        },
+        "search-progress/search-progress": {
+          "n": 8,
+          "first": 5,
+          "second": 3,
+          "unresolved": 0,
+          "firstAmongDecided": 0.625,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.625,
+            0.625
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.875
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 41,
+            "p90": 224,
+            "min": 15,
+            "max": 229
+          },
+          "wallMoveFraction": 0.9652042360060514,
+          "leadChanges": 3,
+          "nearVictoryReversals": 3
+        },
+        "search/mixed": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 66,
+            "p90": 115,
+            "min": 15,
+            "max": 157
+          },
+          "wallMoveFraction": 0.9630225080385852,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "mixed/search": {
+          "n": 8,
+          "first": 6,
+          "second": 2,
+          "unresolved": 0,
+          "firstAmongDecided": 0.75,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.75,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 2,
+          "plies": {
+            "median": 43,
+            "p90": 247,
+            "min": 15,
+            "max": 365
+          },
+          "wallMoveFraction": 0.9587264150943396,
+          "leadChanges": 6,
+          "nearVictoryReversals": 6
+        },
+        "route/route": {
+          "n": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 22,
+            "p90": 27,
+            "min": 20,
+            "max": 49
+          },
+          "wallMoveFraction": 0.9745762711864406,
+          "leadChanges": 6,
+          "nearVictoryReversals": 1
+        },
+        "route/search": {
+          "n": 4,
+          "first": 3,
+          "second": 1,
+          "unresolved": 0,
+          "firstAmongDecided": 0.75,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.75,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            1
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 23,
+            "p90": 28,
+            "min": 17,
+            "max": 59
+          },
+          "wallMoveFraction": 0.9921259842519685,
+          "leadChanges": 7,
+          "nearVictoryReversals": 3
+        },
+        "search/route": {
+          "n": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 22,
+            "p90": 23,
+            "min": 18,
+            "max": 25
+          },
+          "wallMoveFraction": 1,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        }
+      }
+    },
+    {
+      "id": "E",
+      "seed": 1233,
+      "family": "perturbed",
+      "strategy": {
+        "captures": 211,
+        "wallEssentialCaptures": 111,
+        "wallEnablesWin": 18
+      },
+      "spec": {
+        "size": 11,
+        "stars": 5,
+        "walls": 15,
+        "target": 3
+      },
+      "all": {
+        "n": 68,
+        "first": 22,
+        "second": 20,
+        "unresolved": 26,
+        "firstAmongDecided": 0.5238095238095238,
+        "completion": 0.6176470588235294,
+        "firstFinalBounds": [
+          0.3235294117647059,
+          0.7058823529411765
+        ],
+        "clusterBootstrap95Envelope": [
+          0.23529411764705882,
+          0.7941176470588235
+        ],
+        "pairedClusters": 34,
+        "formalDraw": 0,
+        "anomalies": 0,
+        "repetition": 4,
+        "plies": {
+          "median": 23,
+          "p90": 42,
+          "min": 11,
+          "max": 71
+        },
+        "wallMoveFraction": 0.9225239616613419,
+        "leadChanges": 22,
+        "nearVictoryReversals": 3
+      },
+      "stages": {
+        "precision": {
+          "n": 32,
+          "first": 10,
+          "second": 11,
+          "unresolved": 11,
+          "firstAmongDecided": 0.47619047619047616,
+          "completion": 0.65625,
+          "firstFinalBounds": [
+            0.3125,
+            0.65625
+          ],
+          "clusterBootstrap95Envelope": [
+            0.1875,
+            0.78125
+          ],
+          "pairedClusters": 16,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 2,
+          "plies": {
+            "median": 20,
+            "p90": 40,
+            "min": 15,
+            "max": 44
+          },
+          "wallMoveFraction": 0.829465186680121,
+          "leadChanges": 8,
+          "nearVictoryReversals": 1
+        },
+        "holdout": {
+          "n": 24,
+          "first": 7,
+          "second": 5,
+          "unresolved": 12,
+          "firstAmongDecided": 0.5833333333333334,
+          "completion": 0.5,
+          "firstFinalBounds": [
+            0.2916666666666667,
+            0.7916666666666666
+          ],
+          "clusterBootstrap95Envelope": [
+            0.16666666666666666,
+            0.9166666666666666
+          ],
+          "pairedClusters": 12,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 2,
+          "plies": {
+            "median": 34,
+            "p90": 67,
+            "min": 23,
+            "max": 71
+          },
+          "wallMoveFraction": 0.9812925170068028,
+          "leadChanges": 11,
+          "nearVictoryReversals": 0
+        },
+        "route-holdout": {
+          "n": 12,
+          "first": 5,
+          "second": 4,
+          "unresolved": 3,
+          "firstAmongDecided": 0.5555555555555556,
+          "completion": 0.75,
+          "firstFinalBounds": [
+            0.4166666666666667,
+            0.6666666666666666
+          ],
+          "clusterBootstrap95Envelope": [
+            0.16666666666666666,
+            0.8333333333333334
+          ],
+          "pairedClusters": 6,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 18,
+            "p90": 28,
+            "min": 11,
+            "max": 50
+          },
+          "wallMoveFraction": 0.9910979228486647,
+          "leadChanges": 3,
+          "nearVictoryReversals": 2
+        }
+      },
+      "strata": {
+        "search/search": {
+          "n": 8,
+          "first": 2,
+          "second": 3,
+          "unresolved": 3,
+          "firstAmongDecided": 0.4,
+          "completion": 0.625,
+          "firstFinalBounds": [
+            0.25,
+            0.625
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            0.875
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 34,
+            "p90": 39,
+            "min": 26,
+            "max": 44
+          },
+          "wallMoveFraction": 0.9973753280839895,
+          "leadChanges": 6,
+          "nearVictoryReversals": 1
+        },
+        "mixed/mixed": {
+          "n": 8,
+          "first": 0,
+          "second": 0,
+          "unresolved": 8,
+          "firstAmongDecided": null,
+          "completion": 0,
+          "firstFinalBounds": [
+            0,
+            1
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 1,
+          "plies": null,
+          "wallMoveFraction": 0.9925925925925926,
+          "leadChanges": 2,
+          "nearVictoryReversals": 0
+        },
+        "star/defensive": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 19,
+            "p90": 28,
+            "min": 15,
+            "max": 40
+          },
+          "wallMoveFraction": 0.5114942528735632,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "defensive/star": {
+          "n": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 1,
+          "plies": {
+            "median": 18,
+            "p90": 23,
+            "min": 15,
+            "max": 42
+          },
+          "wallMoveFraction": 0.5120481927710844,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "search-progress/search-progress": {
+          "n": 8,
+          "first": 2,
+          "second": 1,
+          "unresolved": 5,
+          "firstAmongDecided": 0.6666666666666666,
+          "completion": 0.375,
+          "firstFinalBounds": [
+            0.25,
+            0.875
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 38,
+            "p90": 38,
+            "min": 25,
+            "max": 67
+          },
+          "wallMoveFraction": 0.9791183294663574,
+          "leadChanges": 4,
+          "nearVictoryReversals": 0
+        },
+        "search/mixed": {
+          "n": 8,
+          "first": 3,
+          "second": 2,
+          "unresolved": 3,
+          "firstAmongDecided": 0.6,
+          "completion": 0.625,
+          "firstFinalBounds": [
+            0.375,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0.125,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 1,
+          "plies": {
+            "median": 34,
+            "p90": 38,
+            "min": 23,
+            "max": 71
+          },
+          "wallMoveFraction": 0.97953216374269,
+          "leadChanges": 4,
+          "nearVictoryReversals": 0
+        },
+        "mixed/search": {
+          "n": 8,
+          "first": 2,
+          "second": 2,
+          "unresolved": 4,
+          "firstAmongDecided": 0.5,
+          "completion": 0.5,
+          "firstFinalBounds": [
+            0.25,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            1
+          ],
+          "pairedClusters": 4,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 1,
+          "plies": {
+            "median": 34,
+            "p90": 38,
+            "min": 25,
+            "max": 67
+          },
+          "wallMoveFraction": 0.9851116625310173,
+          "leadChanges": 3,
+          "nearVictoryReversals": 0
+        },
+        "route/route": {
+          "n": 4,
+          "first": 0,
+          "second": 1,
+          "unresolved": 3,
+          "firstAmongDecided": null,
+          "completion": 0.25,
+          "firstFinalBounds": [
+            0,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0,
+            1
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 50,
+            "p90": 50,
+            "min": 50,
+            "max": 50
+          },
+          "wallMoveFraction": 0.99,
+          "leadChanges": 0,
+          "nearVictoryReversals": 0
+        },
+        "route/search": {
+          "n": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstAmongDecided": 0.5,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.5,
+            0.5
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            0.5
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 11,
+            "p90": 18,
+            "min": 11,
+            "max": 28
+          },
+          "wallMoveFraction": 0.9852941176470589,
+          "leadChanges": 2,
+          "nearVictoryReversals": 1
+        },
+        "search/route": {
+          "n": 4,
+          "first": 3,
+          "second": 1,
+          "unresolved": 0,
+          "firstAmongDecided": 0.75,
+          "completion": 1,
+          "firstFinalBounds": [
+            0.75,
+            0.75
+          ],
+          "clusterBootstrap95Envelope": [
+            0.5,
+            1
+          ],
+          "pairedClusters": 2,
+          "formalDraw": 0,
+          "anomalies": 0,
+          "repetition": 0,
+          "plies": {
+            "median": 15,
+            "p90": 18,
+            "min": 13,
+            "max": 23
+          },
+          "wallMoveFraction": 1,
+          "leadChanges": 1,
+          "nearVictoryReversals": 1
+        }
+      }
+    }
+  ],
+  "verifiedGames": 400,
+  "verifiedPlies": 26703
+}

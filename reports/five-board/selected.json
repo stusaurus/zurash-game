@@ -1,0 +1,258 @@
+[
+  {
+    "id": "A",
+    "family": "corridor",
+    "seed": 1037,
+    "state": {
+      "size": 8,
+      "target": 4,
+      "walls": [
+        18,
+        36,
+        29,
+        25,
+        26,
+        8,
+        34,
+        27
+      ],
+      "stars": [
+        24,
+        45,
+        43,
+        9,
+        50,
+        33,
+        61
+      ],
+      "players": [
+        56,
+        7
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        40,
+        40
+      ],
+      "reachable": [
+        1,
+        1
+      ],
+      "distanceGap": 0
+    }
+  },
+  {
+    "id": "B",
+    "family": "mirror",
+    "seed": 1057,
+    "state": {
+      "size": 9,
+      "target": 3,
+      "walls": [
+        50,
+        48,
+        61,
+        55,
+        74,
+        78,
+        7,
+        1,
+        41,
+        39
+      ],
+      "stars": [
+        71,
+        63,
+        12,
+        14,
+        17
+      ],
+      "players": [
+        72,
+        8
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        63,
+        34
+      ],
+      "reachable": [
+        3,
+        2
+      ],
+      "distanceGap": 18
+    }
+  },
+  {
+    "id": "C",
+    "family": "central",
+    "seed": 1113,
+    "state": {
+      "size": 10,
+      "target": 3,
+      "walls": [
+        54,
+        32,
+        83,
+        47,
+        13,
+        73,
+        63,
+        49,
+        34,
+        16,
+        36,
+        93
+      ],
+      "stars": [
+        44,
+        52,
+        65,
+        42,
+        53
+      ],
+      "players": [
+        90,
+        9
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        72,
+        72
+      ],
+      "reachable": [
+        1,
+        1
+      ],
+      "distanceGap": 2
+    }
+  },
+  {
+    "id": "D",
+    "family": "rotation",
+    "seed": 1151,
+    "state": {
+      "size": 6,
+      "target": 4,
+      "walls": [
+        4,
+        31,
+        2,
+        33,
+        9,
+        26,
+        23
+      ],
+      "stars": [
+        10,
+        25,
+        20,
+        15,
+        24,
+        11,
+        35
+      ],
+      "players": [
+        30,
+        5
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        17,
+        17
+      ],
+      "reachable": [
+        2,
+        2
+      ],
+      "distanceGap": 0
+    }
+  },
+  {
+    "id": "E",
+    "family": "perturbed",
+    "seed": 1233,
+    "state": {
+      "size": 11,
+      "target": 3,
+      "walls": [
+        31,
+        51,
+        5,
+        115,
+        9,
+        111,
+        13,
+        107,
+        7,
+        113,
+        87,
+        33,
+        104,
+        16,
+        23
+      ],
+      "stars": [
+        91,
+        29,
+        88,
+        32,
+        86
+      ],
+      "players": [
+        110,
+        10
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        47,
+        47
+      ],
+      "reachable": [
+        1,
+        1
+      ],
+      "distanceGap": 2
+    }
+  }
+]
