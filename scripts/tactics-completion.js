@@ -2,6 +2,7 @@
 import {successors,key,apply} from '../src/engine.js';
 import {choose,evaluate} from '../src/ai.js';
 export const POLICY_SPEC={
+ route:{depth:2,beam:8,description:'Production strong CPU with size-aware exhaustive immediate capture routes'},
  star:{depth:1,description:'Immediate star gain, then prefer no wall; seeded ties'},
  positional:{depth:1,description:'Existing distance-based evaluate(); seeded ties'},
  defensive:{depth:2,description:'Distance evaluation minus 180 if opponent can capture next turn; exhaustive immediate-defeat shield'},
@@ -19,6 +20,7 @@ export function policyMove(s,policy,rng,seen=new Map(),options=successors(s)){
  if(!POLICY_SPEC[policy])throw Error('Unknown policy');
  if(!options.length)return null;
  // Archived policy is retained byte-for-byte via its existing entry point.
+ if(policy==='route')return choose(s,{level:'strong',rng,seen});
  if(policy==='search')return choose(s,{level:'search',rng,seen,beam:8});
  const p=s.turn,win=options.filter(c=>c.n.winner===p);
  if(win.length)return win[Math.floor(rng()*win.length)].a;

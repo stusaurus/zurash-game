@@ -9,7 +9,7 @@ concurrency:
 jobs:
   research:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -17,6 +17,8 @@ jobs:
           node-version: '22'
       - run: timeout 10m node --max-old-space-size=768 scripts/five-board-study.js
       - run: timeout 16m node --max-old-space-size=768 scripts/five-board-extend.js
+      - run: timeout 3m node --max-old-space-size=768 scripts/five-board-route-holdout.js
+      - run: node scripts/five-board-witness.js
       - run: node scripts/five-board-report.js
       - uses: actions/upload-artifact@v4
         if: always()
