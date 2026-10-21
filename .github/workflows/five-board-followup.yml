@@ -1,0 +1,28 @@
+name: Five-board independent followup
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: five-board-followup-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check scripts/five-board-followup.js && node --check scripts/five-board-followup-report.js
+      - run: timeout 30m node --max-old-space-size=768 scripts/five-board-followup.js
+      - run: node scripts/five-board-followup-report.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: five-board-independent-followup
+          path: |
+            reports/five-board-followup-2026-10-22/
+            reports/five-board-followup-2026-10-22.md
+          retention-days: 30
