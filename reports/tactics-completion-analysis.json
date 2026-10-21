@@ -1,0 +1,428 @@
+{
+  "method": "Observed opportunity/behavior frequencies, not proof of optimality or causal effect. Capture decline may be rational defense. Ply bands: 0-39, 40-119, >=120. Hypothetical threat-tail diagnostics are in final summary.",
+  "aggregates": [
+    {
+      "id": "varied:8",
+      "games": 336,
+      "plies": 24121,
+      "captureOpportunities": 1905,
+      "declinedCapture": 6,
+      "immediateWinsOffered": 308,
+      "immediateWinsMissed": 0,
+      "wallMoves": 19563,
+      "wallBacktracks": 529,
+      "pawnBacktracks": 7195,
+      "repeatedGames": 24,
+      "quietRepeatedUnresolved": 4,
+      "nearVictoryReversals": 37,
+      "leadChanges": 150,
+      "legalCounts": [
+        548658,
+        355713,
+        603816
+      ],
+      "bandPlies": [
+        8678,
+        5879,
+        9564
+      ],
+      "medianScoreInterval": 3,
+      "p95ScoreInterval": 27,
+      "captureOpportunityRate": 0.0789768251730857,
+      "declinedCaptureRate": 0.0031496062992125984,
+      "meanLegalByPlyBand": [
+        63.224014749942384,
+        60.50569824800136,
+        63.13425345043915
+      ]
+    },
+    {
+      "id": "fixed:8",
+      "games": 192,
+      "plies": 65821,
+      "captureOpportunities": 1188,
+      "declinedCapture": 4,
+      "immediateWinsOffered": 174,
+      "immediateWinsMissed": 0,
+      "wallMoves": 15858,
+      "wallBacktracks": 443,
+      "pawnBacktracks": 28682,
+      "repeatedGames": 8,
+      "quietRepeatedUnresolved": 7,
+      "nearVictoryReversals": 37,
+      "leadChanges": 139,
+      "legalCounts": [
+        368193,
+        343110,
+        3429748
+      ],
+      "bandPlies": [
+        5754,
+        5511,
+        54556
+      ],
+      "medianScoreInterval": 3,
+      "p95ScoreInterval": 55,
+      "captureOpportunityRate": 0.018048950942708253,
+      "declinedCaptureRate": 0.003367003367003367,
+      "meanLegalByPlyBand": [
+        63.98905109489051,
+        62.2591181273816,
+        62.86655913190116
+      ]
+    },
+    {
+      "id": "varied:9",
+      "games": 168,
+      "plies": 55735,
+      "captureOpportunities": 1256,
+      "declinedCapture": 7,
+      "immediateWinsOffered": 146,
+      "immediateWinsMissed": 0,
+      "wallMoves": 8207,
+      "wallBacktracks": 152,
+      "pawnBacktracks": 22250,
+      "repeatedGames": 12,
+      "quietRepeatedUnresolved": 6,
+      "nearVictoryReversals": 18,
+      "leadChanges": 103,
+      "legalCounts": [
+        461332,
+        286152,
+        3719738
+      ],
+      "bandPlies": [
+        5478,
+        3640,
+        46617
+      ],
+      "medianScoreInterval": 3,
+      "p95ScoreInterval": 25,
+      "captureOpportunityRate": 0.022535211267605635,
+      "declinedCaptureRate": 0.005573248407643312,
+      "meanLegalByPlyBand": [
+        84.21540708287696,
+        78.61318681318681,
+        79.79359461140785
+      ]
+    },
+    {
+      "id": "fixed:9",
+      "games": 96,
+      "plies": 18018,
+      "captureOpportunities": 777,
+      "declinedCapture": 1,
+      "immediateWinsOffered": 72,
+      "immediateWinsMissed": 0,
+      "wallMoves": 9814,
+      "wallBacktracks": 223,
+      "pawnBacktracks": 6781,
+      "repeatedGames": 4,
+      "quietRepeatedUnresolved": 1,
+      "nearVictoryReversals": 18,
+      "leadChanges": 80,
+      "legalCounts": [
+        284574,
+        277175,
+        858816
+      ],
+      "bandPlies": [
+        3277,
+        3632,
+        11109
+      ],
+      "medianScoreInterval": 1,
+      "p95ScoreInterval": 45,
+      "captureOpportunityRate": 0.04312354312354312,
+      "declinedCaptureRate": 0.001287001287001287,
+      "meanLegalByPlyBand": [
+        86.83979249313397,
+        76.31470264317181,
+        77.30812854442344
+      ]
+    },
+    {
+      "id": "varied:10",
+      "games": 336,
+      "plies": 92120,
+      "captureOpportunities": 2950,
+      "declinedCapture": 10,
+      "immediateWinsOffered": 246,
+      "immediateWinsMissed": 0,
+      "wallMoves": 24198,
+      "wallBacktracks": 513,
+      "pawnBacktracks": 41691,
+      "repeatedGames": 24,
+      "quietRepeatedUnresolved": 8,
+      "nearVictoryReversals": 23,
+      "leadChanges": 225,
+      "legalCounts": [
+        1068949,
+        1027604,
+        5463649
+      ],
+      "bandPlies": [
+        11610,
+        11317,
+        69193
+      ],
+      "medianScoreInterval": 3,
+      "p95ScoreInterval": 34,
+      "captureOpportunityRate": 0.032023447676943116,
+      "declinedCaptureRate": 0.003389830508474576,
+      "meanLegalByPlyBand": [
+        92.07140396210164,
+        90.80180259786162,
+        78.96245284927666
+      ]
+    },
+    {
+      "id": "fixed:10",
+      "games": 192,
+      "plies": 10508,
+      "captureOpportunities": 1905,
+      "declinedCapture": 2,
+      "immediateWinsOffered": 162,
+      "immediateWinsMissed": 0,
+      "wallMoves": 9942,
+      "wallBacktracks": 141,
+      "pawnBacktracks": 2283,
+      "repeatedGames": 5,
+      "quietRepeatedUnresolved": 0,
+      "nearVictoryReversals": 20,
+      "leadChanges": 151,
+      "legalCounts": [
+        641378,
+        339197,
+        99935
+      ],
+      "bandPlies": [
+        5893,
+        3557,
+        1058
+      ],
+      "medianScoreInterval": 2,
+      "p95ScoreInterval": 9,
+      "captureOpportunityRate": 0.18129044537495242,
+      "declinedCaptureRate": 0.0010498687664041995,
+      "meanLegalByPlyBand": [
+        108.83726455116239,
+        95.36041608096711,
+        94.45652173913044
+      ]
+    }
+  ],
+  "crossMatchups": [
+    {
+      "id": "varied:8:star/search",
+      "games": 48,
+      "wins": {
+        "search": 47,
+        "star": 1
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "varied:8:positional/search",
+      "games": 48,
+      "wins": {
+        "search": 32,
+        "positional": 16
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "varied:8:defensive/search",
+      "games": 48,
+      "wins": {
+        "search": 30,
+        "defensive": 16
+      },
+      "unresolved": 2
+    },
+    {
+      "id": "varied:8:search/search-progress",
+      "games": 48,
+      "wins": {
+        "search-progress": 24,
+        "search": 14
+      },
+      "unresolved": 10
+    },
+    {
+      "id": "fixed:8:star/search",
+      "games": 16,
+      "wins": {
+        "search": 16
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "fixed:8:positional/search",
+      "games": 16,
+      "wins": {
+        "positional": 10,
+        "search": 6
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "fixed:8:defensive/search",
+      "games": 16,
+      "wins": {
+        "defensive": 11,
+        "search": 5
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "fixed:8:search/search-progress",
+      "games": 16,
+      "wins": {
+        "search-progress": 9,
+        "search": 6
+      },
+      "unresolved": 1
+    },
+    {
+      "id": "varied:9:star/search",
+      "games": 24,
+      "wins": {
+        "search": 24
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "varied:9:positional/search",
+      "games": 24,
+      "wins": {
+        "search": 21,
+        "positional": 3
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "varied:9:defensive/search",
+      "games": 24,
+      "wins": {
+        "search": 17,
+        "defensive": 6
+      },
+      "unresolved": 1
+    },
+    {
+      "id": "varied:9:search/search-progress",
+      "games": 24,
+      "wins": {
+        "search-progress": 11,
+        "search": 8
+      },
+      "unresolved": 5
+    },
+    {
+      "id": "fixed:9:star/search",
+      "games": 8,
+      "wins": {
+        "search": 8
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "fixed:9:positional/search",
+      "games": 8,
+      "wins": {
+        "search": 6,
+        "positional": 2
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "fixed:9:defensive/search",
+      "games": 8,
+      "wins": {
+        "search": 6,
+        "defensive": 2
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "fixed:9:search/search-progress",
+      "games": 8,
+      "wins": {
+        "search-progress": 4,
+        "search": 1
+      },
+      "unresolved": 3
+    },
+    {
+      "id": "varied:10:star/search",
+      "games": 48,
+      "wins": {
+        "search": 48
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "varied:10:positional/search",
+      "games": 48,
+      "wins": {
+        "search": 36,
+        "positional": 8
+      },
+      "unresolved": 4
+    },
+    {
+      "id": "varied:10:defensive/search",
+      "games": 48,
+      "wins": {
+        "defensive": 12,
+        "search": 25
+      },
+      "unresolved": 11
+    },
+    {
+      "id": "varied:10:search/search-progress",
+      "games": 48,
+      "wins": {
+        "search": 9,
+        "search-progress": 17
+      },
+      "unresolved": 22
+    },
+    {
+      "id": "fixed:10:star/search",
+      "games": 16,
+      "wins": {
+        "search": 16
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "fixed:10:positional/search",
+      "games": 16,
+      "wins": {
+        "positional": 6,
+        "search": 10
+      },
+      "unresolved": 0
+    },
+    {
+      "id": "fixed:10:defensive/search",
+      "games": 16,
+      "wins": {
+        "defensive": 3,
+        "search": 10
+      },
+      "unresolved": 3
+    },
+    {
+      "id": "fixed:10:search/search-progress",
+      "games": 16,
+      "wins": {
+        "search-progress": 7,
+        "search": 4
+      },
+      "unresolved": 5
+    }
+  ]
+}

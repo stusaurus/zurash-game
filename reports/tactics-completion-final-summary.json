@@ -1,0 +1,6120 @@
+{
+  "budgetMs": 90000,
+  "elapsedMs": 49933,
+  "followed": 18,
+  "originalNewDecisions": 7,
+  "counterfactualDecisions": 1,
+  "extension": {
+    "planned": 289,
+    "extended": 289,
+    "newDecisions": 77,
+    "budgetMs": 180000,
+    "elapsedMs": 131954,
+    "limits": {
+      "maxPlies": 16384,
+      "timeBudgetMs": 2000
+    },
+    "rows": [
+      {
+        "id": "8:varied:0:0:defensive/search:1",
+        "reason": "budget-time",
+        "ply": 156,
+        "winner": null
+      },
+      {
+        "id": "8:varied:0:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 133,
+        "winner": null
+      },
+      {
+        "id": "8:varied:0:1:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 138,
+        "winner": null
+      },
+      {
+        "id": "8:varied:0:1:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 165,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:0:0:defensive/defensive:1",
+        "reason": "win",
+        "ply": 152,
+        "winner": 0
+      },
+      {
+        "id": "8:fixed:0:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 121,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:0:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 110,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:0:1:star/star:0",
+        "reason": "budget-time",
+        "ply": 5656,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:0:1:star/star:1",
+        "reason": "budget-time",
+        "ply": 7347,
+        "winner": null
+      },
+      {
+        "id": "9:varied:0:0:star/star:0",
+        "reason": "budget-time",
+        "ply": 6528,
+        "winner": null
+      },
+      {
+        "id": "9:varied:0:0:star/star:1",
+        "reason": "budget-time",
+        "ply": 6206,
+        "winner": null
+      },
+      {
+        "id": "9:varied:0:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 93,
+        "winner": null
+      },
+      {
+        "id": "9:varied:0:0:search/defensive:1",
+        "reason": "win",
+        "ply": 124,
+        "winner": 0
+      },
+      {
+        "id": "9:varied:0:0:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 99,
+        "winner": null
+      },
+      {
+        "id": "9:varied:0:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 151,
+        "winner": null
+      },
+      {
+        "id": "9:varied:0:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 53,
+        "winner": null
+      },
+      {
+        "id": "9:varied:0:0:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 144,
+        "winner": null
+      },
+      {
+        "id": "9:varied:0:0:search-progress/search:1",
+        "reason": "budget-time",
+        "ply": 98,
+        "winner": null
+      },
+      {
+        "id": "9:varied:0:0:search/search-progress:1",
+        "reason": "budget-time",
+        "ply": 114,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:0:0:defensive/defensive:1",
+        "reason": "budget-time",
+        "ply": 67,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:0:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 82,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:0:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 126,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:0:0:defensive/search:0",
+        "reason": "win",
+        "ply": 84,
+        "winner": 1
+      },
+      {
+        "id": "9:fixed:0:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 88,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:0:0:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 120,
+        "winner": null
+      },
+      {
+        "id": "10:varied:0:0:mixed/mixed:1",
+        "reason": "win",
+        "ply": 74,
+        "winner": 0
+      },
+      {
+        "id": "9:fixed:0:0:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 169,
+        "winner": null
+      },
+      {
+        "id": "10:varied:0:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 237,
+        "winner": null
+      },
+      {
+        "id": "10:varied:0:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 63,
+        "winner": null
+      },
+      {
+        "id": "10:varied:0:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 128,
+        "winner": null
+      },
+      {
+        "id": "10:varied:0:0:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 223,
+        "winner": null
+      },
+      {
+        "id": "10:varied:0:0:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 146,
+        "winner": null
+      },
+      {
+        "id": "10:varied:0:1:positional/search:0",
+        "reason": "budget-time",
+        "ply": 167,
+        "winner": null
+      },
+      {
+        "id": "10:varied:0:1:search/defensive:1",
+        "reason": "budget-time",
+        "ply": 129,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:0:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 62,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:0:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 110,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:0:0:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 92,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:0:0:search-progress/search:0",
+        "reason": "win",
+        "ply": 95,
+        "winner": 0
+      },
+      {
+        "id": "10:fixed:0:1:search/defensive:0",
+        "reason": "win",
+        "ply": 43,
+        "winner": 0
+      },
+      {
+        "id": "10:fixed:0:0:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 104,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:0:0:search/search-progress:1",
+        "reason": "budget-time",
+        "ply": 116,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:0:1:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 59,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:0:1:search/defensive:1",
+        "reason": "budget-time",
+        "ply": 74,
+        "winner": null
+      },
+      {
+        "id": "8:varied:1:1:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 183,
+        "winner": null
+      },
+      {
+        "id": "8:varied:1:1:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 235,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:1:0:star/star:0",
+        "reason": "budget-time",
+        "ply": 10895,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:1:0:star/star:1",
+        "reason": "budget-time",
+        "ply": 8299,
+        "winner": null
+      },
+      {
+        "id": "8:varied:1:1:search-progress/search:0",
+        "reason": "win",
+        "ply": 293,
+        "winner": 0
+      },
+      {
+        "id": "8:fixed:1:0:search-progress/search:1",
+        "reason": "win",
+        "ply": 228,
+        "winner": 0
+      },
+      {
+        "id": "8:fixed:1:1:star/star:0",
+        "reason": "budget-time",
+        "ply": 8586,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:1:0:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 224,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:1:1:star/star:1",
+        "reason": "budget-time",
+        "ply": 8444,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:1:1:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 133,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:1:1:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 151,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:1:1:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 222,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:1:1:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 223,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:1:1:search/search-progress:0",
+        "reason": "win",
+        "ply": 237,
+        "winner": 0
+      },
+      {
+        "id": "8:fixed:1:1:search/search-progress:1",
+        "reason": "win",
+        "ply": 342,
+        "winner": 0
+      },
+      {
+        "id": "8:fixed:1:1:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 357,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:1:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 145,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:1:0:star/star:1",
+        "reason": "budget-time",
+        "ply": 7816,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:1:0:defensive/search:1",
+        "reason": "win",
+        "ply": 118,
+        "winner": 0
+      },
+      {
+        "id": "9:fixed:1:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 112,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:1:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 209,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:1:0:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 218,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:0:star/star:1",
+        "reason": "budget-time",
+        "ply": 7260,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:1:0:search-progress/search:1",
+        "reason": "budget-time",
+        "ply": 166,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:0:defensive/defensive:1",
+        "reason": "budget-time",
+        "ply": 74,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 226,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:0:search/search:1",
+        "reason": "budget-time",
+        "ply": 195,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 69,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 56,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 154,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:0:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 154,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:0:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 221,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:0:search/search-progress:1",
+        "reason": "budget-time",
+        "ply": 194,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:0:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 178,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:1:defensive/defensive:1",
+        "reason": "win",
+        "ply": 73,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:1:0:search-progress/search:1",
+        "reason": "budget-time",
+        "ply": 148,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:1:search/search:1",
+        "reason": "win",
+        "ply": 191,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:1:1:star/star:1",
+        "reason": "budget-time",
+        "ply": 7393,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:1:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 52,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:1:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 58,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:1:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 150,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:1:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 142,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:1:defensive/search:0",
+        "reason": "win",
+        "ply": 134,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:1:1:search-progress/search:0",
+        "reason": "win",
+        "ply": 161,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:1:1:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 172,
+        "winner": null
+      },
+      {
+        "id": "10:varied:1:1:search/defensive:0",
+        "reason": "budget-time",
+        "ply": 72,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:0:defensive/defensive:1",
+        "reason": "win",
+        "ply": 51,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:1:1:search/search-progress:1",
+        "reason": "win",
+        "ply": 191,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:1:1:search-progress/search:1",
+        "reason": "budget-time",
+        "ply": 146,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 77,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 63,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:0:search/defensive:1",
+        "reason": "budget-time",
+        "ply": 153,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:0:search/search-progress:0",
+        "reason": "win",
+        "ply": 77,
+        "winner": 0
+      },
+      {
+        "id": "10:fixed:1:1:defensive/defensive:1",
+        "reason": "win",
+        "ply": 50,
+        "winner": 0
+      },
+      {
+        "id": "10:fixed:1:0:search/defensive:0",
+        "reason": "budget-time",
+        "ply": 80,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:1:defensive/defensive:0",
+        "reason": "budget-time",
+        "ply": 63,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:1:search/search:1",
+        "reason": "budget-time",
+        "ply": 254,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:1:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 52,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:1:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 118,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:1:search-progress/search-progress:1",
+        "reason": "win",
+        "ply": 84,
+        "winner": 0
+      },
+      {
+        "id": "10:fixed:1:1:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 55,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:1:search/search-progress:1",
+        "reason": "budget-time",
+        "ply": 135,
+        "winner": null
+      },
+      {
+        "id": "8:varied:2:0:search/search:1",
+        "reason": "win",
+        "ply": 528,
+        "winner": 0
+      },
+      {
+        "id": "10:fixed:1:1:search-progress/search:1",
+        "reason": "budget-time",
+        "ply": 111,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:1:1:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 116,
+        "winner": null
+      },
+      {
+        "id": "8:varied:2:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 171,
+        "winner": null
+      },
+      {
+        "id": "8:varied:2:1:search/search:1",
+        "reason": "win",
+        "ply": 486,
+        "winner": 0
+      },
+      {
+        "id": "8:varied:2:0:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 380,
+        "winner": null
+      },
+      {
+        "id": "8:varied:2:1:mixed/mixed:1",
+        "reason": "win",
+        "ply": 91,
+        "winner": 1
+      },
+      {
+        "id": "8:varied:2:0:search/search-progress:1",
+        "reason": "budget-time",
+        "ply": 521,
+        "winner": null
+      },
+      {
+        "id": "8:varied:2:0:search-progress/search:1",
+        "reason": "budget-time",
+        "ply": 400,
+        "winner": null
+      },
+      {
+        "id": "9:varied:2:0:defensive/defensive:0",
+        "reason": "win",
+        "ply": 74,
+        "winner": 1
+      },
+      {
+        "id": "8:varied:2:1:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 372,
+        "winner": null
+      },
+      {
+        "id": "8:varied:2:1:search/search-progress:1",
+        "reason": "budget-time",
+        "ply": 462,
+        "winner": null
+      },
+      {
+        "id": "8:varied:2:1:search-progress/search:1",
+        "reason": "budget-time",
+        "ply": 448,
+        "winner": null
+      },
+      {
+        "id": "9:varied:2:0:mixed/mixed:1",
+        "reason": "win",
+        "ply": 111,
+        "winner": 1
+      },
+      {
+        "id": "9:varied:2:0:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 184,
+        "winner": null
+      },
+      {
+        "id": "9:varied:2:0:defensive/search:1",
+        "reason": "budget-time",
+        "ply": 168,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:0:defensive/defensive:1",
+        "reason": "win",
+        "ply": 70,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:2:0:star/star:0",
+        "reason": "budget-time",
+        "ply": 8977,
+        "winner": null
+      },
+      {
+        "id": "9:varied:2:0:search-progress/search:1",
+        "reason": "win",
+        "ply": 189,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:2:0:defensive/defensive:0",
+        "reason": "win",
+        "ply": 83,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:2:0:search/search:1",
+        "reason": "budget-time",
+        "ply": 263,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 93,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 134,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 124,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:0:defensive/search:1",
+        "reason": "win",
+        "ply": 141,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:2:0:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 257,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:0:positional/search:0",
+        "reason": "budget-time",
+        "ply": 217,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:0:search/defensive:1",
+        "reason": "budget-time",
+        "ply": 138,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:1:defensive/defensive:1",
+        "reason": "win",
+        "ply": 58,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:2:0:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 131,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:0:search/search-progress:1",
+        "reason": "budget-time",
+        "ply": 276,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:0:search-progress/search:1",
+        "reason": "budget-time",
+        "ply": 252,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:1:positional/search:0",
+        "reason": "win",
+        "ply": 186,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:2:1:search-progress/search-progress:1",
+        "reason": "win",
+        "ply": 120,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:2:1:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 101,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:1:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 77,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:1:search/defensive:0",
+        "reason": "win",
+        "ply": 163,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:2:1:positional/search:1",
+        "reason": "budget-time",
+        "ply": 175,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:1:defensive/search:0",
+        "reason": "budget-time",
+        "ply": 125,
+        "winner": null
+      },
+      {
+        "id": "10:varied:2:1:search/search-progress:1",
+        "reason": "win",
+        "ply": 120,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:2:1:search/defensive:1",
+        "reason": "budget-time",
+        "ply": 183,
+        "winner": null
+      },
+      {
+        "id": "8:varied:3:0:search-progress/search-progress:1",
+        "reason": "win",
+        "ply": 219,
+        "winner": 1
+      },
+      {
+        "id": "8:varied:3:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 231,
+        "winner": null
+      },
+      {
+        "id": "8:varied:3:0:search/search-progress:1",
+        "reason": "budget-time",
+        "ply": 368,
+        "winner": null
+      },
+      {
+        "id": "8:varied:3:1:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 151,
+        "winner": null
+      },
+      {
+        "id": "8:varied:3:1:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 285,
+        "winner": null
+      },
+      {
+        "id": "8:varied:3:1:search/search-progress:1",
+        "reason": "win",
+        "ply": 281,
+        "winner": 1
+      },
+      {
+        "id": "8:varied:3:1:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 233,
+        "winner": null
+      },
+      {
+        "id": "9:varied:3:0:star/star:0",
+        "reason": "budget-time",
+        "ply": 8442,
+        "winner": null
+      },
+      {
+        "id": "8:varied:3:1:search/search-progress:0",
+        "reason": "win",
+        "ply": 430,
+        "winner": 1
+      },
+      {
+        "id": "8:varied:3:1:search-progress/search:1",
+        "reason": "budget-time",
+        "ply": 342,
+        "winner": null
+      },
+      {
+        "id": "9:varied:3:0:star/star:1",
+        "reason": "budget-time",
+        "ply": 7334,
+        "winner": null
+      },
+      {
+        "id": "9:varied:3:0:mixed/mixed:1",
+        "reason": "win",
+        "ply": 108,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:3:0:defensive/defensive:0",
+        "reason": "budget-time",
+        "ply": 98,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 237,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:0:search/search:1",
+        "reason": "win",
+        "ply": 174,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:3:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 67,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:0:search/positional:1",
+        "reason": "win",
+        "ply": 108,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:3:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 63,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 182,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:0:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 122,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:0:search/defensive:0",
+        "reason": "budget-time",
+        "ply": 104,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:0:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 253,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:0:search-progress/search:1",
+        "reason": "win",
+        "ply": 174,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:3:0:search/search-progress:1",
+        "reason": "budget-time",
+        "ply": 161,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:0:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 179,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:1:defensive/defensive:0",
+        "reason": "win",
+        "ply": 85,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:3:1:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 82,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:1:search/search:0",
+        "reason": "budget-time",
+        "ply": 238,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:1:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 60,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:1:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 261,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:1:defensive/search:0",
+        "reason": "win",
+        "ply": 185,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:3:1:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 118,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:1:defensive/search:1",
+        "reason": "budget-time",
+        "ply": 123,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:1:search/defensive:0",
+        "reason": "budget-time",
+        "ply": 134,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:1:search/defensive:1",
+        "reason": "budget-time",
+        "ply": 120,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:1:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 256,
+        "winner": null
+      },
+      {
+        "id": "10:varied:3:1:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 206,
+        "winner": null
+      },
+      {
+        "id": "8:varied:4:0:search-progress/search-progress:0",
+        "reason": "win",
+        "ply": 217,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:3:1:search-progress/search:1",
+        "reason": "budget-time",
+        "ply": 134,
+        "winner": null
+      },
+      {
+        "id": "8:varied:4:0:search/search-progress:0",
+        "reason": "win",
+        "ply": 217,
+        "winner": 0
+      },
+      {
+        "id": "8:varied:4:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 161,
+        "winner": null
+      },
+      {
+        "id": "9:varied:4:0:defensive/defensive:1",
+        "reason": "win",
+        "ply": 72,
+        "winner": 0
+      },
+      {
+        "id": "8:varied:4:0:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 325,
+        "winner": null
+      },
+      {
+        "id": "8:varied:4:1:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 285,
+        "winner": null
+      },
+      {
+        "id": "8:varied:4:1:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 273,
+        "winner": null
+      },
+      {
+        "id": "9:varied:4:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 104,
+        "winner": null
+      },
+      {
+        "id": "10:varied:4:0:mixed/mixed:1",
+        "reason": "win",
+        "ply": 59,
+        "winner": 1
+      },
+      {
+        "id": "9:varied:4:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 117,
+        "winner": null
+      },
+      {
+        "id": "10:varied:4:0:defensive/defensive:1",
+        "reason": "budget-time",
+        "ply": 94,
+        "winner": null
+      },
+      {
+        "id": "10:varied:4:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 75,
+        "winner": null
+      },
+      {
+        "id": "10:varied:4:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 121,
+        "winner": null
+      },
+      {
+        "id": "10:varied:4:1:search/search:0",
+        "reason": "win",
+        "ply": 156,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:4:0:search/defensive:1",
+        "reason": "budget-time",
+        "ply": 132,
+        "winner": null
+      },
+      {
+        "id": "10:varied:4:0:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 171,
+        "winner": null
+      },
+      {
+        "id": "10:varied:4:1:star/star:0",
+        "reason": "budget-time",
+        "ply": 6049,
+        "winner": null
+      },
+      {
+        "id": "10:varied:4:1:defensive/search:0",
+        "reason": "win",
+        "ply": 102,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:4:1:search/search-progress:0",
+        "reason": "win",
+        "ply": 156,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:4:1:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 65,
+        "winner": null
+      },
+      {
+        "id": "10:varied:4:1:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 133,
+        "winner": null
+      },
+      {
+        "id": "8:varied:5:1:search-progress/search-progress:0",
+        "reason": "win",
+        "ply": 195,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:4:1:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 137,
+        "winner": null
+      },
+      {
+        "id": "8:varied:5:0:search/defensive:0",
+        "reason": "budget-time",
+        "ply": 268,
+        "winner": null
+      },
+      {
+        "id": "8:varied:5:1:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 243,
+        "winner": null
+      },
+      {
+        "id": "8:varied:5:1:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 270,
+        "winner": null
+      },
+      {
+        "id": "8:varied:5:1:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 388,
+        "winner": null
+      },
+      {
+        "id": "8:varied:5:1:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 370,
+        "winner": null
+      },
+      {
+        "id": "9:varied:5:0:star/star:0",
+        "reason": "budget-time",
+        "ply": 7494,
+        "winner": null
+      },
+      {
+        "id": "9:varied:5:0:star/star:1",
+        "reason": "budget-time",
+        "ply": 9472,
+        "winner": null
+      },
+      {
+        "id": "9:varied:5:0:mixed/mixed:0",
+        "reason": "win",
+        "ply": 98,
+        "winner": 1
+      },
+      {
+        "id": "9:varied:5:0:defensive/search:0",
+        "reason": "win",
+        "ply": 107,
+        "winner": 0
+      },
+      {
+        "id": "9:varied:5:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 132,
+        "winner": null
+      },
+      {
+        "id": "9:varied:5:0:search-progress/search-progress:0",
+        "reason": "budget-time",
+        "ply": 127,
+        "winner": null
+      },
+      {
+        "id": "9:varied:5:0:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 229,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:0:star/star:0",
+        "reason": "budget-time",
+        "ply": 10902,
+        "winner": null
+      },
+      {
+        "id": "9:varied:5:0:search/search-progress:0",
+        "reason": "budget-time",
+        "ply": 187,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:0:star/star:1",
+        "reason": "budget-time",
+        "ply": 7980,
+        "winner": null
+      },
+      {
+        "id": "9:varied:5:0:search-progress/search:1",
+        "reason": "budget-time",
+        "ply": 239,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:0:defensive/defensive:1",
+        "reason": "budget-time",
+        "ply": 101,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:0:search-progress/search-progress:0",
+        "reason": "win",
+        "ply": 115,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:5:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 281,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:0:defensive/search:0",
+        "reason": "win",
+        "ply": 100,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:5:0:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 91,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:0:search/search-progress:0",
+        "reason": "win",
+        "ply": 115,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:5:0:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 112,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:0:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 173,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:1:positional/positional:1",
+        "reason": "win",
+        "ply": 131,
+        "winner": 1
+      },
+      {
+        "id": "10:varied:5:1:star/star:0",
+        "reason": "budget-time",
+        "ply": 7936,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:0:search/search-progress:1",
+        "reason": "budget-time",
+        "ply": 154,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:0:search-progress/search:0",
+        "reason": "budget-time",
+        "ply": 223,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:1:search/search:1",
+        "reason": "win",
+        "ply": 150,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:5:1:defensive/defensive:0",
+        "reason": "budget-time",
+        "ply": 110,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:1:mixed/mixed:0",
+        "reason": "budget-time",
+        "ply": 106,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:1:mixed/mixed:1",
+        "reason": "budget-time",
+        "ply": 87,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:1:search-progress/search-progress:1",
+        "reason": "budget-time",
+        "ply": 191,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:1:search-progress/search:1",
+        "reason": "win",
+        "ply": 150,
+        "winner": 0
+      },
+      {
+        "id": "10:varied:5:1:search/positional:1",
+        "reason": "budget-time",
+        "ply": 193,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:1:search/defensive:1",
+        "reason": "budget-time",
+        "ply": 119,
+        "winner": null
+      },
+      {
+        "id": "10:varied:5:1:search/search-progress:1",
+        "reason": "budget-time",
+        "ply": 206,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:2:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 585,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:2:0:search/search:1",
+        "reason": "budget-time",
+        "ply": 185,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:2:1:search/search:0",
+        "reason": "budget-time",
+        "ply": 164,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:3:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 415,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:6:0:search/search:1",
+        "reason": "win",
+        "ply": 303,
+        "winner": 1
+      },
+      {
+        "id": "10:fixed:3:0:search/search:0",
+        "reason": "win",
+        "ply": 167,
+        "winner": 0
+      },
+      {
+        "id": "8:fixed:4:0:search/search:0",
+        "reason": "win",
+        "ply": 338,
+        "winner": 1
+      },
+      {
+        "id": "10:fixed:3:1:search/search:0",
+        "reason": "budget-time",
+        "ply": 241,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:6:0:search/search:1",
+        "reason": "budget-time",
+        "ply": 169,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:7:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 381,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:7:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 143,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:10:1:search/search:1",
+        "reason": "win",
+        "ply": 396,
+        "winner": 0
+      },
+      {
+        "id": "9:fixed:9:0:search/search:1",
+        "reason": "budget-time",
+        "ply": 335,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:11:1:search/search:0",
+        "reason": "win",
+        "ply": 132,
+        "winner": 1
+      },
+      {
+        "id": "10:fixed:10:1:search/search:0",
+        "reason": "win",
+        "ply": 148,
+        "winner": 1
+      },
+      {
+        "id": "10:fixed:9:1:search/search:1",
+        "reason": "budget-time",
+        "ply": 223,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:10:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 284,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:11:1:search/search:1",
+        "reason": "budget-time",
+        "ply": 199,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:12:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 232,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:12:0:search/search:1",
+        "reason": "budget-time",
+        "ply": 326,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:12:1:search/search:0",
+        "reason": "win",
+        "ply": 142,
+        "winner": 1
+      },
+      {
+        "id": "8:fixed:14:1:search/search:1",
+        "reason": "win",
+        "ply": 310,
+        "winner": 0
+      },
+      {
+        "id": "8:fixed:13:0:search/search:0",
+        "reason": "win",
+        "ply": 480,
+        "winner": 1
+      },
+      {
+        "id": "9:fixed:13:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 267,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:14:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 471,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:14:0:search/search:1",
+        "reason": "win",
+        "ply": 133,
+        "winner": 1
+      },
+      {
+        "id": "9:fixed:14:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 236,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:15:0:search/search:1",
+        "reason": "budget-time",
+        "ply": 461,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:15:0:search/search:0",
+        "reason": "win",
+        "ply": 161,
+        "winner": 0
+      },
+      {
+        "id": "10:fixed:16:0:search/search:0",
+        "reason": "win",
+        "ply": 120,
+        "winner": 1
+      },
+      {
+        "id": "9:fixed:16:0:search/search:1",
+        "reason": "budget-time",
+        "ply": 284,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:16:1:search/search:1",
+        "reason": "win",
+        "ply": 127,
+        "winner": 1
+      },
+      {
+        "id": "9:fixed:18:0:search/search:1",
+        "reason": "win",
+        "ply": 157,
+        "winner": 1
+      },
+      {
+        "id": "8:fixed:17:1:search/search:1",
+        "reason": "win",
+        "ply": 390,
+        "winner": 0
+      },
+      {
+        "id": "9:fixed:17:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 245,
+        "winner": null
+      },
+      {
+        "id": "8:fixed:18:1:search/search:0",
+        "reason": "budget-time",
+        "ply": 472,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:18:0:search/search:1",
+        "reason": "win",
+        "ply": 154,
+        "winner": 0
+      },
+      {
+        "id": "8:fixed:19:0:search/search:1",
+        "reason": "win",
+        "ply": 323,
+        "winner": 1
+      },
+      {
+        "id": "10:fixed:18:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 154,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:18:1:search/search:0",
+        "reason": "budget-time",
+        "ply": 145,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:19:0:search/search:1",
+        "reason": "budget-time",
+        "ply": 325,
+        "winner": null
+      },
+      {
+        "id": "10:fixed:19:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 176,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:20:0:search/search:0",
+        "reason": "win",
+        "ply": 307,
+        "winner": 0
+      },
+      {
+        "id": "10:fixed:20:0:search/search:0",
+        "reason": "budget-time",
+        "ply": 185,
+        "winner": null
+      },
+      {
+        "id": "9:fixed:21:0:search/search:1",
+        "reason": "budget-time",
+        "ply": 354,
+        "winner": null
+      }
+    ]
+  },
+  "method": "Original-policy continuations replace only their own censored records. Policy-switch interventions are separate and NEVER pooled into fairness.",
+  "candidates": [
+    {
+      "size": 8,
+      "games": 528,
+      "clusters": 28,
+      "firstWins": 268,
+      "secondWins": 214,
+      "officialDraws": 0,
+      "unresolved": 46,
+      "anomalies": 0,
+      "budgetInterrupted": 46,
+      "repeatedGames": 32,
+      "repeatedUnresolvedQuietGames": 11,
+      "decidedRate": 0.9128787878787878,
+      "firstDecidedRate": 0.5560165975103735,
+      "firstAllRate": 0.5075757575757576,
+      "secondAllRate": 0.4053030303030303,
+      "firstFinalPossibleRange": [
+        0.5075757575757576,
+        0.5946969696969697
+      ],
+      "pairedBootstrapDecided95": [
+        0.49411764705882355,
+        0.6199186991869918
+      ],
+      "conservativeClusterFirstAll95": [
+        0.06071334441550885,
+        0.9544381707360063
+      ],
+      "conservativeClusterDecided95": [
+        0.06071334441550885,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0.06071334441550885,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.45588235294117646,
+        0.5606060606060606
+      ],
+      "reasons": {
+        "win": 482,
+        "budget-time": 46
+      },
+      "plies": {
+        "min": 9,
+        "q25": 16,
+        "median": 23,
+        "q75": 55,
+        "p90": 157,
+        "p95": 251,
+        "max": 1241,
+        "mean": 60.63900414937759,
+        "beyond120Wins": 61
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "size": 9,
+      "games": 264,
+      "clusters": 28,
+      "firstWins": 124,
+      "secondWins": 94,
+      "officialDraws": 0,
+      "unresolved": 46,
+      "anomalies": 0,
+      "budgetInterrupted": 46,
+      "repeatedGames": 16,
+      "repeatedUnresolvedQuietGames": 7,
+      "decidedRate": 0.8257575757575758,
+      "firstDecidedRate": 0.5688073394495413,
+      "firstAllRate": 0.4696969696969697,
+      "secondAllRate": 0.3560606060606061,
+      "firstFinalPossibleRange": [
+        0.4696969696969697,
+        0.6439393939393939
+      ],
+      "pairedBootstrapDecided95": [
+        0.4350282485875706,
+        0.6984924623115578
+      ],
+      "conservativeClusterFirstAll95": [
+        0.022834556536721007,
+        0.9165593828572185
+      ],
+      "conservativeClusterDecided95": [
+        0.022834556536721007,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0.022834556536721007,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.3689655172413793,
+        0.5707547169811321
+      ],
+      "reasons": {
+        "win": 218,
+        "budget-time": 46
+      },
+      "plies": {
+        "min": 11,
+        "q25": 23,
+        "median": 35,
+        "q75": 66,
+        "p90": 131,
+        "p95": 160,
+        "max": 669,
+        "mean": 59.79816513761468,
+        "beyond120Wins": 26
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "size": 10,
+      "games": 528,
+      "clusters": 28,
+      "firstWins": 238,
+      "secondWins": 170,
+      "officialDraws": 0,
+      "unresolved": 120,
+      "anomalies": 0,
+      "budgetInterrupted": 120,
+      "repeatedGames": 29,
+      "repeatedUnresolvedQuietGames": 8,
+      "decidedRate": 0.7727272727272727,
+      "firstDecidedRate": 0.5833333333333334,
+      "firstAllRate": 0.45075757575757575,
+      "secondAllRate": 0.32196969696969696,
+      "firstFinalPossibleRange": [
+        0.45075757575757575,
+        0.678030303030303
+      ],
+      "pairedBootstrapDecided95": [
+        0.5240847784200385,
+        0.6497175141242938
+      ],
+      "conservativeClusterFirstAll95": [
+        0.0038951625973270287,
+        0.8976199889178245
+      ],
+      "conservativeClusterDecided95": [
+        0.0038951625973270287,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0.0038951625973270287,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.40664556962025317,
+        0.5186567164179104
+      ],
+      "reasons": {
+        "win": 408,
+        "budget-time": 120
+      },
+      "plies": {
+        "min": 13,
+        "q25": 23,
+        "median": 32,
+        "q75": 59,
+        "p90": 122,
+        "p95": 161,
+        "max": 2500,
+        "mean": 73.23529411764706,
+        "beyond120Wins": 42
+      },
+      "judgment": "inconclusive-or-outside-target"
+    }
+  ],
+  "groups": [
+    {
+      "scenario": "varied",
+      "size": 8,
+      "matchup": "star/star",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 15,
+      "secondWins": 9,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 19,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.625,
+      "firstAllRate": 0.625,
+      "secondAllRate": 0.375,
+      "firstFinalPossibleRange": [
+        0.625,
+        0.625
+      ],
+      "pairedBootstrapDecided95": [
+        0.5416666666666666,
+        0.7083333333333334
+      ],
+      "conservativeClusterFirstAll95": [
+        0.02070794625212602,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0.02070794625212602,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0.02070794625212602,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5416666666666666,
+        0.7083333333333334
+      ],
+      "reasons": {
+        "win": 24
+      },
+      "plies": {
+        "min": 11,
+        "q25": 20,
+        "median": 50,
+        "q75": 201,
+        "p90": 276,
+        "p95": 309,
+        "max": 1241,
+        "mean": 154.20833333333334,
+        "beyond120Wins": 8
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 8,
+      "matchup": "positional/positional",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 16,
+      "secondWins": 8,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.6666666666666666,
+      "firstAllRate": 0.6666666666666666,
+      "secondAllRate": 0.3333333333333333,
+      "firstFinalPossibleRange": [
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "pairedBootstrapDecided95": [
+        0.4583333333333333,
+        0.875
+      ],
+      "conservativeClusterFirstAll95": [
+        0.06237461291879265,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0.06237461291879265,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0.06237461291879265,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.4583333333333333,
+        0.875
+      ],
+      "reasons": {
+        "win": 24
+      },
+      "plies": {
+        "min": 9,
+        "q25": 11,
+        "median": 16,
+        "q75": 27,
+        "p90": 37,
+        "p95": 45,
+        "max": 132,
+        "mean": 26.833333333333332,
+        "beyond120Wins": 1
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 8,
+      "matchup": "search/search",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 16,
+      "secondWins": 8,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.6666666666666666,
+      "firstAllRate": 0.6666666666666666,
+      "secondAllRate": 0.3333333333333333,
+      "firstFinalPossibleRange": [
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "pairedBootstrapDecided95": [
+        0.5416666666666666,
+        0.8333333333333334
+      ],
+      "conservativeClusterFirstAll95": [
+        0.06237461291879265,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0.06237461291879265,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0.06237461291879265,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5416666666666666,
+        0.8333333333333334
+      ],
+      "reasons": {
+        "win": 24
+      },
+      "plies": {
+        "min": 11,
+        "q25": 15,
+        "median": 50,
+        "q75": 135,
+        "p90": 355,
+        "p95": 401,
+        "max": 528,
+        "mean": 126.75,
+        "beyond120Wins": 7
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 8,
+      "matchup": "defensive/defensive",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 14,
+      "secondWins": 10,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5833333333333334,
+      "firstAllRate": 0.5833333333333334,
+      "secondAllRate": 0.4166666666666667,
+      "firstFinalPossibleRange": [
+        0.5833333333333334,
+        0.5833333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0.4166666666666667,
+        0.7083333333333334
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.4166666666666667,
+        0.7083333333333334
+      ],
+      "reasons": {
+        "win": 24
+      },
+      "plies": {
+        "min": 9,
+        "q25": 12,
+        "median": 19,
+        "q75": 22,
+        "p90": 30,
+        "p95": 31,
+        "max": 35,
+        "mean": 19.5,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 8,
+      "matchup": "search-progress/search-progress",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 11,
+      "secondWins": 4,
+      "officialDraws": 0,
+      "unresolved": 9,
+      "anomalies": 0,
+      "budgetInterrupted": 9,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.625,
+      "firstDecidedRate": 0.7333333333333333,
+      "firstAllRate": 0.4583333333333333,
+      "secondAllRate": 0.16666666666666666,
+      "firstFinalPossibleRange": [
+        0.4583333333333333,
+        0.8333333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0.5294117647058824,
+        0.9375
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.3333333333333333,
+        0.5833333333333334
+      ],
+      "reasons": {
+        "win": 15,
+        "budget-time": 9
+      },
+      "plies": {
+        "min": 11,
+        "q25": 14,
+        "median": 17,
+        "q75": 35,
+        "p90": 195,
+        "p95": 217,
+        "max": 219,
+        "mean": 58.733333333333334,
+        "beyond120Wins": 3
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 8,
+      "matchup": "mixed/mixed",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 10,
+      "secondWins": 7,
+      "officialDraws": 0,
+      "unresolved": 7,
+      "anomalies": 0,
+      "budgetInterrupted": 7,
+      "repeatedGames": 3,
+      "repeatedUnresolvedQuietGames": 3,
+      "decidedRate": 0.7083333333333334,
+      "firstDecidedRate": 0.5882352941176471,
+      "firstAllRate": 0.4166666666666667,
+      "secondAllRate": 0.2916666666666667,
+      "firstFinalPossibleRange": [
+        0.4166666666666667,
+        0.7083333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0.4117647058823529,
+        0.7777777777777778
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.2916666666666667,
+        0.5833333333333334
+      ],
+      "reasons": {
+        "win": 17,
+        "budget-time": 7
+      },
+      "plies": {
+        "min": 14,
+        "q25": 23,
+        "median": 33,
+        "q75": 56,
+        "p90": 64,
+        "p95": 71,
+        "max": 91,
+        "mean": 39.294117647058826,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 8,
+      "matchup": "star/search",
+      "games": 48,
+      "clusters": 6,
+      "firstWins": 25,
+      "secondWins": 23,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5208333333333334,
+      "firstAllRate": 0.5208333333333334,
+      "secondAllRate": 0.4791666666666667,
+      "firstFinalPossibleRange": [
+        0.5208333333333334,
+        0.5208333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.5625
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.5625
+      ],
+      "reasons": {
+        "win": 48
+      },
+      "plies": {
+        "min": 11,
+        "q25": 13,
+        "median": 18,
+        "q75": 22,
+        "p90": 27,
+        "p95": 35,
+        "max": 106,
+        "mean": 21.6875,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 8,
+      "matchup": "positional/search",
+      "games": 48,
+      "clusters": 6,
+      "firstWins": 28,
+      "secondWins": 20,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 1,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5833333333333334,
+      "firstAllRate": 0.5833333333333334,
+      "secondAllRate": 0.4166666666666667,
+      "firstFinalPossibleRange": [
+        0.5833333333333334,
+        0.5833333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0.4791666666666667,
+        0.7291666666666666
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.4791666666666667,
+        0.7291666666666666
+      ],
+      "reasons": {
+        "win": 48
+      },
+      "plies": {
+        "min": 9,
+        "q25": 15,
+        "median": 23,
+        "q75": 37,
+        "p90": 59,
+        "p95": 82,
+        "max": 149,
+        "mean": 31.916666666666668,
+        "beyond120Wins": 1
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 8,
+      "matchup": "defensive/search",
+      "games": 48,
+      "clusters": 6,
+      "firstWins": 22,
+      "secondWins": 24,
+      "officialDraws": 0,
+      "unresolved": 2,
+      "anomalies": 0,
+      "budgetInterrupted": 2,
+      "repeatedGames": 1,
+      "repeatedUnresolvedQuietGames": 1,
+      "decidedRate": 0.9583333333333334,
+      "firstDecidedRate": 0.4782608695652174,
+      "firstAllRate": 0.4583333333333333,
+      "secondAllRate": 0.5,
+      "firstFinalPossibleRange": [
+        0.4583333333333333,
+        0.5
+      ],
+      "pairedBootstrapDecided95": [
+        0.3695652173913043,
+        0.6086956521739131
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.3541666666666667,
+        0.5625
+      ],
+      "reasons": {
+        "win": 46,
+        "budget-time": 2
+      },
+      "plies": {
+        "min": 9,
+        "q25": 16,
+        "median": 22,
+        "q75": 35,
+        "p90": 57,
+        "p95": 66,
+        "max": 163,
+        "mean": 30.82608695652174,
+        "beyond120Wins": 1
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 8,
+      "matchup": "search/search-progress",
+      "games": 48,
+      "clusters": 6,
+      "firstWins": 23,
+      "secondWins": 15,
+      "officialDraws": 0,
+      "unresolved": 10,
+      "anomalies": 0,
+      "budgetInterrupted": 10,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.7916666666666666,
+      "firstDecidedRate": 0.6052631578947368,
+      "firstAllRate": 0.4791666666666667,
+      "secondAllRate": 0.3125,
+      "firstFinalPossibleRange": [
+        0.4791666666666667,
+        0.6875
+      ],
+      "pairedBootstrapDecided95": [
+        0.47368421052631576,
+        0.75
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.375,
+        0.5833333333333334
+      ],
+      "reasons": {
+        "win": 38,
+        "budget-time": 10
+      },
+      "plies": {
+        "min": 11,
+        "q25": 15,
+        "median": 24,
+        "q75": 82,
+        "p90": 178,
+        "p95": 281,
+        "max": 430,
+        "mean": 72.86842105263158,
+        "beyond120Wins": 7
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 9,
+      "matchup": "star/star",
+      "games": 12,
+      "clusters": 6,
+      "firstWins": 4,
+      "secondWins": 2,
+      "officialDraws": 0,
+      "unresolved": 6,
+      "anomalies": 0,
+      "budgetInterrupted": 6,
+      "repeatedGames": 12,
+      "repeatedUnresolvedQuietGames": 6,
+      "decidedRate": 0.5,
+      "firstDecidedRate": 0.6666666666666666,
+      "firstAllRate": 0.3333333333333333,
+      "secondAllRate": 0.16666666666666666,
+      "firstFinalPossibleRange": [
+        0.3333333333333333,
+        0.8333333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        0.9376253870812072
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.08333333333333333,
+        0.6666666666666666
+      ],
+      "reasons": {
+        "budget-time": 6,
+        "win": 6
+      },
+      "plies": {
+        "min": 99,
+        "q25": 131,
+        "median": 156,
+        "q75": 166,
+        "p90": 491,
+        "p95": 491,
+        "max": 669,
+        "mean": 285.3333333333333,
+        "beyond120Wins": 5
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 9,
+      "matchup": "positional/positional",
+      "games": 12,
+      "clusters": 6,
+      "firstWins": 6,
+      "secondWins": 6,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5,
+      "firstAllRate": 0.5,
+      "secondAllRate": 0.5,
+      "firstFinalPossibleRange": [
+        0.5,
+        0.5
+      ],
+      "pairedBootstrapDecided95": [
+        0.16666666666666666,
+        0.8333333333333334
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.16666666666666666,
+        0.8333333333333334
+      ],
+      "reasons": {
+        "win": 12
+      },
+      "plies": {
+        "min": 20,
+        "q25": 23,
+        "median": 37,
+        "q75": 40,
+        "p90": 44,
+        "p95": 53,
+        "max": 74,
+        "mean": 37.666666666666664,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 9,
+      "matchup": "search/search",
+      "games": 12,
+      "clusters": 6,
+      "firstWins": 7,
+      "secondWins": 5,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5833333333333334,
+      "firstAllRate": 0.5833333333333334,
+      "secondAllRate": 0.4166666666666667,
+      "firstFinalPossibleRange": [
+        0.5833333333333334,
+        0.5833333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0.25,
+        0.9166666666666666
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.25,
+        0.9166666666666666
+      ],
+      "reasons": {
+        "win": 12
+      },
+      "plies": {
+        "min": 20,
+        "q25": 23,
+        "median": 31,
+        "q75": 138,
+        "p90": 157,
+        "p95": 160,
+        "max": 179,
+        "mean": 74.91666666666667,
+        "beyond120Wins": 4
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 9,
+      "matchup": "defensive/defensive",
+      "games": 12,
+      "clusters": 6,
+      "firstWins": 3,
+      "secondWins": 9,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.25,
+      "firstAllRate": 0.25,
+      "secondAllRate": 0.75,
+      "firstFinalPossibleRange": [
+        0.25,
+        0.25
+      ],
+      "pairedBootstrapDecided95": [
+        0,
+        0.5833333333333334
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        0.854292053747874
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0,
+        0.5833333333333334
+      ],
+      "reasons": {
+        "win": 12
+      },
+      "plies": {
+        "min": 20,
+        "q25": 26,
+        "median": 38,
+        "q75": 40,
+        "p90": 53,
+        "p95": 72,
+        "max": 74,
+        "mean": 41.75,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 9,
+      "matchup": "search-progress/search-progress",
+      "games": 12,
+      "clusters": 6,
+      "firstWins": 3,
+      "secondWins": 4,
+      "officialDraws": 0,
+      "unresolved": 5,
+      "anomalies": 0,
+      "budgetInterrupted": 5,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.5833333333333334,
+      "firstDecidedRate": 0.42857142857142855,
+      "firstAllRate": 0.25,
+      "secondAllRate": 0.3333333333333333,
+      "firstFinalPossibleRange": [
+        0.25,
+        0.6666666666666666
+      ],
+      "pairedBootstrapDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        0.854292053747874
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0,
+        0.5833333333333334
+      ],
+      "reasons": {
+        "budget-time": 5,
+        "win": 7
+      },
+      "plies": {
+        "min": 22,
+        "q25": 23,
+        "median": 30,
+        "q75": 31,
+        "p90": 45,
+        "p95": 45,
+        "max": 46,
+        "mean": 31.857142857142858,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 9,
+      "matchup": "mixed/mixed",
+      "games": 12,
+      "clusters": 6,
+      "firstWins": 2,
+      "secondWins": 5,
+      "officialDraws": 0,
+      "unresolved": 5,
+      "anomalies": 0,
+      "budgetInterrupted": 5,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.5833333333333334,
+      "firstDecidedRate": 0.2857142857142857,
+      "firstAllRate": 0.16666666666666666,
+      "secondAllRate": 0.4166666666666667,
+      "firstFinalPossibleRange": [
+        0.16666666666666666,
+        0.5833333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0,
+        0.8
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        0.7709587204145406
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0,
+        0.5
+      ],
+      "reasons": {
+        "budget-time": 5,
+        "win": 7
+      },
+      "plies": {
+        "min": 18,
+        "q25": 22,
+        "median": 31,
+        "q75": 98,
+        "p90": 108,
+        "p95": 108,
+        "max": 111,
+        "mean": 58.57142857142857,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 9,
+      "matchup": "star/search",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 12,
+      "secondWins": 12,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5,
+      "firstAllRate": 0.5,
+      "secondAllRate": 0.5,
+      "firstFinalPossibleRange": [
+        0.5,
+        0.5
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.5
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.5
+      ],
+      "reasons": {
+        "win": 24
+      },
+      "plies": {
+        "min": 15,
+        "q25": 18,
+        "median": 22,
+        "q75": 28,
+        "p90": 34,
+        "p95": 39,
+        "max": 51,
+        "mean": 25.416666666666668,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 9,
+      "matchup": "positional/search",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 13,
+      "secondWins": 11,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5416666666666666,
+      "firstAllRate": 0.5416666666666666,
+      "secondAllRate": 0.4583333333333333,
+      "firstFinalPossibleRange": [
+        0.5416666666666666,
+        0.5416666666666666
+      ],
+      "pairedBootstrapDecided95": [
+        0.4166666666666667,
+        0.6666666666666666
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.4166666666666667,
+        0.6666666666666666
+      ],
+      "reasons": {
+        "win": 24
+      },
+      "plies": {
+        "min": 16,
+        "q25": 23,
+        "median": 33,
+        "q75": 40,
+        "p90": 66,
+        "p95": 82,
+        "max": 124,
+        "mean": 40.958333333333336,
+        "beyond120Wins": 1
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 9,
+      "matchup": "defensive/search",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 13,
+      "secondWins": 10,
+      "officialDraws": 0,
+      "unresolved": 1,
+      "anomalies": 0,
+      "budgetInterrupted": 1,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.9583333333333334,
+      "firstDecidedRate": 0.5652173913043478,
+      "firstAllRate": 0.5416666666666666,
+      "secondAllRate": 0.4166666666666667,
+      "firstFinalPossibleRange": [
+        0.5416666666666666,
+        0.5833333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0.4166666666666667,
+        0.7083333333333334
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.4166666666666667,
+        0.6666666666666666
+      ],
+      "reasons": {
+        "win": 23,
+        "budget-time": 1
+      },
+      "plies": {
+        "min": 18,
+        "q25": 27,
+        "median": 35,
+        "q75": 53,
+        "p90": 68,
+        "p95": 90,
+        "max": 124,
+        "mean": 45.95652173913044,
+        "beyond120Wins": 1
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 9,
+      "matchup": "search/search-progress",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 11,
+      "secondWins": 8,
+      "officialDraws": 0,
+      "unresolved": 5,
+      "anomalies": 0,
+      "budgetInterrupted": 5,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.7916666666666666,
+      "firstDecidedRate": 0.5789473684210527,
+      "firstAllRate": 0.4583333333333333,
+      "secondAllRate": 0.3333333333333333,
+      "firstFinalPossibleRange": [
+        0.4583333333333333,
+        0.6666666666666666
+      ],
+      "pairedBootstrapDecided95": [
+        0.16666666666666666,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.16666666666666666,
+        0.7916666666666666
+      ],
+      "reasons": {
+        "budget-time": 5,
+        "win": 19
+      },
+      "plies": {
+        "min": 20,
+        "q25": 23,
+        "median": 31,
+        "q75": 46,
+        "p90": 160,
+        "p95": 179,
+        "max": 189,
+        "mean": 61.73684210526316,
+        "beyond120Wins": 4
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 10,
+      "matchup": "star/star",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 7,
+      "secondWins": 10,
+      "officialDraws": 0,
+      "unresolved": 7,
+      "anomalies": 0,
+      "budgetInterrupted": 7,
+      "repeatedGames": 19,
+      "repeatedUnresolvedQuietGames": 7,
+      "decidedRate": 0.7083333333333334,
+      "firstDecidedRate": 0.4117647058823529,
+      "firstAllRate": 0.2916666666666667,
+      "secondAllRate": 0.4166666666666667,
+      "firstFinalPossibleRange": [
+        0.2916666666666667,
+        0.5833333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0.16666666666666666,
+        0.6666666666666666
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        0.8959587204145407
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.125,
+        0.4583333333333333
+      ],
+      "reasons": {
+        "win": 17,
+        "budget-time": 7
+      },
+      "plies": {
+        "min": 13,
+        "q25": 36,
+        "median": 98,
+        "q75": 949,
+        "p90": 1889,
+        "p95": 2064,
+        "max": 2500,
+        "mean": 615.9411764705883,
+        "beyond120Wins": 8
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 10,
+      "matchup": "positional/positional",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 13,
+      "secondWins": 11,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 1,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5416666666666666,
+      "firstAllRate": 0.5416666666666666,
+      "secondAllRate": 0.4583333333333333,
+      "firstFinalPossibleRange": [
+        0.5416666666666666,
+        0.5416666666666666
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.625
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.625
+      ],
+      "reasons": {
+        "win": 24
+      },
+      "plies": {
+        "min": 13,
+        "q25": 21,
+        "median": 30,
+        "q75": 55,
+        "p90": 88,
+        "p95": 96,
+        "max": 134,
+        "mean": 45.041666666666664,
+        "beyond120Wins": 2
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 10,
+      "matchup": "search/search",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 8,
+      "secondWins": 9,
+      "officialDraws": 0,
+      "unresolved": 7,
+      "anomalies": 0,
+      "budgetInterrupted": 7,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.7083333333333334,
+      "firstDecidedRate": 0.47058823529411764,
+      "firstAllRate": 0.3333333333333333,
+      "secondAllRate": 0.375,
+      "firstFinalPossibleRange": [
+        0.3333333333333333,
+        0.625
+      ],
+      "pairedBootstrapDecided95": [
+        0.25,
+        0.6923076923076923
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        0.9376253870812072
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.16666666666666666,
+        0.4583333333333333
+      ],
+      "reasons": {
+        "win": 17,
+        "budget-time": 7
+      },
+      "plies": {
+        "min": 19,
+        "q25": 47,
+        "median": 103,
+        "q75": 150,
+        "p90": 161,
+        "p95": 174,
+        "max": 191,
+        "mean": 96,
+        "beyond120Wins": 6
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 10,
+      "matchup": "defensive/defensive",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 11,
+      "secondWins": 8,
+      "officialDraws": 0,
+      "unresolved": 5,
+      "anomalies": 0,
+      "budgetInterrupted": 5,
+      "repeatedGames": 1,
+      "repeatedUnresolvedQuietGames": 1,
+      "decidedRate": 0.7916666666666666,
+      "firstDecidedRate": 0.5789473684210527,
+      "firstAllRate": 0.4583333333333333,
+      "secondAllRate": 0.3333333333333333,
+      "firstFinalPossibleRange": [
+        0.4583333333333333,
+        0.6666666666666666
+      ],
+      "pairedBootstrapDecided95": [
+        0.35,
+        0.8333333333333334
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.2916666666666667,
+        0.6666666666666666
+      ],
+      "reasons": {
+        "win": 19,
+        "budget-time": 5
+      },
+      "plies": {
+        "min": 21,
+        "q25": 25,
+        "median": 54,
+        "q75": 62,
+        "p90": 73,
+        "p95": 83,
+        "max": 85,
+        "mean": 48.1578947368421,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 10,
+      "matchup": "search-progress/search-progress",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 5,
+      "secondWins": 4,
+      "officialDraws": 0,
+      "unresolved": 15,
+      "anomalies": 0,
+      "budgetInterrupted": 15,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.375,
+      "firstDecidedRate": 0.5555555555555556,
+      "firstAllRate": 0.20833333333333334,
+      "secondAllRate": 0.16666666666666666,
+      "firstFinalPossibleRange": [
+        0.20833333333333334,
+        0.8333333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0.125,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        0.8126253870812074
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.041666666666666664,
+        0.375
+      ],
+      "reasons": {
+        "win": 9,
+        "budget-time": 15
+      },
+      "plies": {
+        "min": 19,
+        "q25": 28,
+        "median": 45,
+        "q75": 83,
+        "p90": 115,
+        "p95": 115,
+        "max": 120,
+        "mean": 59.22222222222222,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 10,
+      "matchup": "mixed/mixed",
+      "games": 24,
+      "clusters": 6,
+      "firstWins": 2,
+      "secondWins": 3,
+      "officialDraws": 0,
+      "unresolved": 19,
+      "anomalies": 0,
+      "budgetInterrupted": 19,
+      "repeatedGames": 2,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.20833333333333334,
+      "firstDecidedRate": 0.4,
+      "firstAllRate": 0.08333333333333333,
+      "secondAllRate": 0.125,
+      "firstFinalPossibleRange": [
+        0.08333333333333333,
+        0.875
+      ],
+      "pairedBootstrapDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        0.6876253870812074
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0,
+        0.25
+      ],
+      "reasons": {
+        "budget-time": 19,
+        "win": 5
+      },
+      "plies": {
+        "min": 19,
+        "q25": 26,
+        "median": 28,
+        "q75": 59,
+        "p90": 59,
+        "p95": 59,
+        "max": 74,
+        "mean": 41.2,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 10,
+      "matchup": "star/search",
+      "games": 48,
+      "clusters": 6,
+      "firstWins": 24,
+      "secondWins": 24,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5,
+      "firstAllRate": 0.5,
+      "secondAllRate": 0.5,
+      "firstFinalPossibleRange": [
+        0.5,
+        0.5
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.5
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.5
+      ],
+      "reasons": {
+        "win": 48
+      },
+      "plies": {
+        "min": 13,
+        "q25": 18,
+        "median": 22,
+        "q75": 28,
+        "p90": 39,
+        "p95": 48,
+        "max": 264,
+        "mean": 29.791666666666668,
+        "beyond120Wins": 1
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 10,
+      "matchup": "positional/search",
+      "games": 48,
+      "clusters": 6,
+      "firstWins": 25,
+      "secondWins": 19,
+      "officialDraws": 0,
+      "unresolved": 4,
+      "anomalies": 0,
+      "budgetInterrupted": 4,
+      "repeatedGames": 1,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.9166666666666666,
+      "firstDecidedRate": 0.5681818181818182,
+      "firstAllRate": 0.5208333333333334,
+      "secondAllRate": 0.3958333333333333,
+      "firstFinalPossibleRange": [
+        0.5208333333333334,
+        0.6041666666666666
+      ],
+      "pairedBootstrapDecided95": [
+        0.46511627906976744,
+        0.6444444444444445
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.3958333333333333,
+        0.6041666666666666
+      ],
+      "reasons": {
+        "win": 44,
+        "budget-time": 4
+      },
+      "plies": {
+        "min": 14,
+        "q25": 29,
+        "median": 42,
+        "q75": 80,
+        "p90": 122,
+        "p95": 143,
+        "max": 186,
+        "mean": 59.97727272727273,
+        "beyond120Wins": 6
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 10,
+      "matchup": "defensive/search",
+      "games": 48,
+      "clusters": 6,
+      "firstWins": 20,
+      "secondWins": 17,
+      "officialDraws": 0,
+      "unresolved": 11,
+      "anomalies": 0,
+      "budgetInterrupted": 11,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.7708333333333334,
+      "firstDecidedRate": 0.5405405405405406,
+      "firstAllRate": 0.4166666666666667,
+      "secondAllRate": 0.3541666666666667,
+      "firstFinalPossibleRange": [
+        0.4166666666666667,
+        0.6458333333333334
+      ],
+      "pairedBootstrapDecided95": [
+        0.41025641025641024,
+        0.6774193548387096
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.3333333333333333,
+        0.5208333333333334
+      ],
+      "reasons": {
+        "win": 37,
+        "budget-time": 11
+      },
+      "plies": {
+        "min": 17,
+        "q25": 35,
+        "median": 43,
+        "q75": 60,
+        "p90": 102,
+        "p95": 141,
+        "max": 185,
+        "mean": 58.86486486486486,
+        "beyond120Wins": 4
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "varied",
+      "size": 10,
+      "matchup": "search/search-progress",
+      "games": 48,
+      "clusters": 6,
+      "firstWins": 13,
+      "secondWins": 13,
+      "officialDraws": 0,
+      "unresolved": 22,
+      "anomalies": 0,
+      "budgetInterrupted": 22,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.5416666666666666,
+      "firstDecidedRate": 0.5,
+      "firstAllRate": 0.2708333333333333,
+      "secondAllRate": 0.2708333333333333,
+      "firstFinalPossibleRange": [
+        0.2708333333333333,
+        0.7291666666666666
+      ],
+      "pairedBootstrapDecided95": [
+        0.23333333333333334,
+        0.7222222222222222
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        0.8751253870812072
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.125,
+        0.3958333333333333
+      ],
+      "reasons": {
+        "win": 26,
+        "budget-time": 22
+      },
+      "plies": {
+        "min": 19,
+        "q25": 38,
+        "median": 59,
+        "q75": 120,
+        "p90": 156,
+        "p95": 161,
+        "max": 191,
+        "mean": 83.26923076923077,
+        "beyond120Wins": 6
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 8,
+      "matchup": "star/star",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 1,
+      "secondWins": 1,
+      "officialDraws": 0,
+      "unresolved": 6,
+      "anomalies": 0,
+      "budgetInterrupted": 6,
+      "repeatedGames": 7,
+      "repeatedUnresolvedQuietGames": 6,
+      "decidedRate": 0.25,
+      "firstDecidedRate": 0.5,
+      "firstAllRate": 0.125,
+      "secondAllRate": 0.125,
+      "firstFinalPossibleRange": [
+        0.125,
+        0.875
+      ],
+      "pairedBootstrapDecided95": null,
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0,
+        0.25
+      ],
+      "reasons": {
+        "win": 2,
+        "budget-time": 6
+      },
+      "plies": {
+        "min": 13,
+        "q25": 13,
+        "median": 13,
+        "q75": 13,
+        "p90": 13,
+        "p95": 13,
+        "max": 50,
+        "mean": 31.5,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 8,
+      "matchup": "positional/positional",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 2,
+      "secondWins": 6,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.25,
+      "firstAllRate": 0.25,
+      "secondAllRate": 0.75,
+      "firstFinalPossibleRange": [
+        0.25,
+        0.25
+      ],
+      "pairedBootstrapDecided95": [
+        0.25,
+        0.25
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.25,
+        0.25
+      ],
+      "reasons": {
+        "win": 8
+      },
+      "plies": {
+        "min": 15,
+        "q25": 17,
+        "median": 18,
+        "q75": 22,
+        "p90": 22,
+        "p95": 22,
+        "max": 24,
+        "mean": 19.5,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 8,
+      "matchup": "search/search",
+      "games": 88,
+      "clusters": 22,
+      "firstWins": 43,
+      "secondWins": 41,
+      "officialDraws": 0,
+      "unresolved": 4,
+      "anomalies": 0,
+      "budgetInterrupted": 4,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.9545454545454546,
+      "firstDecidedRate": 0.5119047619047619,
+      "firstAllRate": 0.48863636363636365,
+      "secondAllRate": 0.4659090909090909,
+      "firstFinalPossibleRange": [
+        0.48863636363636365,
+        0.5340909090909091
+      ],
+      "pairedBootstrapDecided95": [
+        0.4166666666666667,
+        0.6162790697674418
+      ],
+      "conservativeClusterFirstAll95": [
+        0.17305513094911024,
+        0.8042175963236171
+      ],
+      "conservativeClusterDecided95": [
+        0.17305513094911024,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0.17305513094911024,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.3977272727272727,
+        0.5909090909090909
+      ],
+      "reasons": {
+        "win": 84,
+        "budget-time": 4
+      },
+      "plies": {
+        "min": 14,
+        "q25": 26,
+        "median": 63,
+        "q75": 157,
+        "p90": 281,
+        "p95": 323,
+        "max": 480,
+        "mean": 110.91666666666667,
+        "beyond120Wins": 28
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 8,
+      "matchup": "defensive/defensive",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 6,
+      "secondWins": 2,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.75,
+      "firstAllRate": 0.75,
+      "secondAllRate": 0.25,
+      "firstFinalPossibleRange": [
+        0.75,
+        0.75
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        1
+      ],
+      "reasons": {
+        "win": 8
+      },
+      "plies": {
+        "min": 13,
+        "q25": 15,
+        "median": 17,
+        "q75": 29,
+        "p90": 73,
+        "p95": 73,
+        "max": 152,
+        "mean": 42,
+        "beyond120Wins": 1
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 8,
+      "matchup": "search-progress/search-progress",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 1,
+      "secondWins": 4,
+      "officialDraws": 0,
+      "unresolved": 3,
+      "anomalies": 0,
+      "budgetInterrupted": 3,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.625,
+      "firstDecidedRate": 0.2,
+      "firstAllRate": 0.125,
+      "secondAllRate": 0.5,
+      "firstFinalPossibleRange": [
+        0.125,
+        0.5
+      ],
+      "pairedBootstrapDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0,
+        0.25
+      ],
+      "reasons": {
+        "win": 5,
+        "budget-time": 3
+      },
+      "plies": {
+        "min": 16,
+        "q25": 16,
+        "median": 21,
+        "q75": 24,
+        "p90": 24,
+        "p95": 24,
+        "max": 34,
+        "mean": 22.2,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 8,
+      "matchup": "mixed/mixed",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 1,
+      "secondWins": 3,
+      "officialDraws": 0,
+      "unresolved": 4,
+      "anomalies": 0,
+      "budgetInterrupted": 4,
+      "repeatedGames": 1,
+      "repeatedUnresolvedQuietGames": 1,
+      "decidedRate": 0.5,
+      "firstDecidedRate": 0.25,
+      "firstAllRate": 0.125,
+      "secondAllRate": 0.375,
+      "firstFinalPossibleRange": [
+        0.125,
+        0.625
+      ],
+      "pairedBootstrapDecided95": [
+        0,
+        0.5
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0,
+        0.25
+      ],
+      "reasons": {
+        "budget-time": 4,
+        "win": 4
+      },
+      "plies": {
+        "min": 18,
+        "q25": 18,
+        "median": 21,
+        "q75": 34,
+        "p90": 34,
+        "p95": 34,
+        "max": 52,
+        "mean": 31.25,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 8,
+      "matchup": "star/search",
+      "games": 16,
+      "clusters": 2,
+      "firstWins": 8,
+      "secondWins": 8,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5,
+      "firstAllRate": 0.5,
+      "secondAllRate": 0.5,
+      "firstFinalPossibleRange": [
+        0.5,
+        0.5
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.5
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.5
+      ],
+      "reasons": {
+        "win": 16
+      },
+      "plies": {
+        "min": 11,
+        "q25": 15,
+        "median": 18,
+        "q75": 20,
+        "p90": 21,
+        "p95": 94,
+        "max": 117,
+        "mean": 28,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 8,
+      "matchup": "positional/search",
+      "games": 16,
+      "clusters": 2,
+      "firstWins": 10,
+      "secondWins": 6,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.625,
+      "firstAllRate": 0.625,
+      "secondAllRate": 0.375,
+      "firstFinalPossibleRange": [
+        0.625,
+        0.625
+      ],
+      "pairedBootstrapDecided95": [
+        0.625,
+        0.625
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.625,
+        0.625
+      ],
+      "reasons": {
+        "win": 16
+      },
+      "plies": {
+        "min": 9,
+        "q25": 11,
+        "median": 23,
+        "q75": 82,
+        "p90": 94,
+        "p95": 119,
+        "max": 120,
+        "mean": 44.25,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 8,
+      "matchup": "defensive/search",
+      "games": 16,
+      "clusters": 2,
+      "firstWins": 11,
+      "secondWins": 5,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.6875,
+      "firstAllRate": 0.6875,
+      "secondAllRate": 0.3125,
+      "firstFinalPossibleRange": [
+        0.6875,
+        0.6875
+      ],
+      "pairedBootstrapDecided95": [
+        0.625,
+        0.75
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.625,
+        0.75
+      ],
+      "reasons": {
+        "win": 16
+      },
+      "plies": {
+        "min": 9,
+        "q25": 11,
+        "median": 23,
+        "q75": 29,
+        "p90": 82,
+        "p95": 94,
+        "max": 119,
+        "mean": 34.9375,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 8,
+      "matchup": "search/search-progress",
+      "games": 16,
+      "clusters": 2,
+      "firstWins": 5,
+      "secondWins": 10,
+      "officialDraws": 0,
+      "unresolved": 1,
+      "anomalies": 0,
+      "budgetInterrupted": 1,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.9375,
+      "firstDecidedRate": 0.3333333333333333,
+      "firstAllRate": 0.3125,
+      "secondAllRate": 0.625,
+      "firstFinalPossibleRange": [
+        0.3125,
+        0.375
+      ],
+      "pairedBootstrapDecided95": [
+        0.125,
+        0.5714285714285714
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.125,
+        0.5
+      ],
+      "reasons": {
+        "win": 15,
+        "budget-time": 1
+      },
+      "plies": {
+        "min": 15,
+        "q25": 16,
+        "median": 34,
+        "q75": 44,
+        "p90": 228,
+        "p95": 237,
+        "max": 342,
+        "mean": 82.73333333333333,
+        "beyond120Wins": 4
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 9,
+      "matchup": "star/star",
+      "games": 4,
+      "clusters": 2,
+      "firstWins": 2,
+      "secondWins": 1,
+      "officialDraws": 0,
+      "unresolved": 1,
+      "anomalies": 0,
+      "budgetInterrupted": 1,
+      "repeatedGames": 1,
+      "repeatedUnresolvedQuietGames": 1,
+      "decidedRate": 0.75,
+      "firstDecidedRate": 0.6666666666666666,
+      "firstAllRate": 0.5,
+      "secondAllRate": 0.25,
+      "firstFinalPossibleRange": [
+        0.5,
+        0.75
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.5
+      ],
+      "reasons": {
+        "win": 3,
+        "budget-time": 1
+      },
+      "plies": {
+        "min": 11,
+        "q25": 11,
+        "median": 11,
+        "q75": 11,
+        "p90": 11,
+        "p95": 11,
+        "max": 12,
+        "mean": 11.333333333333334,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 9,
+      "matchup": "positional/positional",
+      "games": 4,
+      "clusters": 2,
+      "firstWins": 4,
+      "secondWins": 0,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 1,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 1,
+      "firstAllRate": 1,
+      "secondAllRate": 0,
+      "firstFinalPossibleRange": [
+        1,
+        1
+      ],
+      "pairedBootstrapDecided95": [
+        1,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        1,
+        1
+      ],
+      "reasons": {
+        "win": 4
+      },
+      "plies": {
+        "min": 27,
+        "q25": 27,
+        "median": 29,
+        "q75": 29,
+        "p90": 29,
+        "p95": 29,
+        "max": 31,
+        "mean": 29,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 9,
+      "matchup": "search/search",
+      "games": 44,
+      "clusters": 22,
+      "firstWins": 25,
+      "secondWins": 7,
+      "officialDraws": 0,
+      "unresolved": 12,
+      "anomalies": 0,
+      "budgetInterrupted": 12,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.7272727272727273,
+      "firstDecidedRate": 0.78125,
+      "firstAllRate": 0.5681818181818182,
+      "secondAllRate": 0.1590909090909091,
+      "firstFinalPossibleRange": [
+        0.5681818181818182,
+        0.8409090909090909
+      ],
+      "pairedBootstrapDecided95": [
+        0.6060606060606061,
+        0.9354838709677419
+      ],
+      "conservativeClusterFirstAll95": [
+        0.2526005854945648,
+        0.8837630508690717
+      ],
+      "conservativeClusterDecided95": [
+        0.2526005854945648,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0.2526005854945648,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.4090909090909091,
+        0.7272727272727273
+      ],
+      "reasons": {
+        "win": 32,
+        "budget-time": 12
+      },
+      "plies": {
+        "min": 12,
+        "q25": 31,
+        "median": 81,
+        "q75": 148,
+        "p90": 201,
+        "p95": 270,
+        "max": 307,
+        "mean": 102.96875,
+        "beyond120Wins": 11
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 9,
+      "matchup": "defensive/defensive",
+      "games": 4,
+      "clusters": 2,
+      "firstWins": 2,
+      "secondWins": 1,
+      "officialDraws": 0,
+      "unresolved": 1,
+      "anomalies": 0,
+      "budgetInterrupted": 1,
+      "repeatedGames": 1,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.75,
+      "firstDecidedRate": 0.6666666666666666,
+      "firstAllRate": 0.5,
+      "secondAllRate": 0.25,
+      "firstFinalPossibleRange": [
+        0.5,
+        0.75
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.5
+      ],
+      "reasons": {
+        "win": 3,
+        "budget-time": 1
+      },
+      "plies": {
+        "min": 27,
+        "q25": 27,
+        "median": 29,
+        "q75": 29,
+        "p90": 29,
+        "p95": 29,
+        "max": 50,
+        "mean": 35.333333333333336,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 9,
+      "matchup": "search-progress/search-progress",
+      "games": 4,
+      "clusters": 2,
+      "firstWins": 1,
+      "secondWins": 0,
+      "officialDraws": 0,
+      "unresolved": 3,
+      "anomalies": 0,
+      "budgetInterrupted": 3,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.25,
+      "firstDecidedRate": 1,
+      "firstAllRate": 0.25,
+      "secondAllRate": 0,
+      "firstFinalPossibleRange": [
+        0.25,
+        1
+      ],
+      "pairedBootstrapDecided95": null,
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0,
+        0.5
+      ],
+      "reasons": {
+        "budget-time": 3,
+        "win": 1
+      },
+      "plies": {
+        "min": 39,
+        "q25": 39,
+        "median": 39,
+        "q75": 39,
+        "p90": 39,
+        "p95": 39,
+        "max": 39,
+        "mean": 39,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 9,
+      "matchup": "mixed/mixed",
+      "games": 4,
+      "clusters": 2,
+      "firstWins": 0,
+      "secondWins": 0,
+      "officialDraws": 0,
+      "unresolved": 4,
+      "anomalies": 0,
+      "budgetInterrupted": 4,
+      "repeatedGames": 1,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0,
+      "firstDecidedRate": null,
+      "firstAllRate": 0,
+      "secondAllRate": 0,
+      "firstFinalPossibleRange": [
+        0,
+        1
+      ],
+      "pairedBootstrapDecided95": null,
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0,
+        0
+      ],
+      "reasons": {
+        "budget-time": 4
+      },
+      "plies": {
+        "min": null,
+        "q25": null,
+        "median": null,
+        "q75": null,
+        "p90": null,
+        "p95": null,
+        "max": null,
+        "mean": null,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 9,
+      "matchup": "star/search",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 4,
+      "secondWins": 4,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5,
+      "firstAllRate": 0.5,
+      "secondAllRate": 0.5,
+      "firstFinalPossibleRange": [
+        0.5,
+        0.5
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.5
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.5
+      ],
+      "reasons": {
+        "win": 8
+      },
+      "plies": {
+        "min": 11,
+        "q25": 12,
+        "median": 14,
+        "q75": 38,
+        "p90": 81,
+        "p95": 81,
+        "max": 102,
+        "mean": 37,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 9,
+      "matchup": "positional/search",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 4,
+      "secondWins": 4,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5,
+      "firstAllRate": 0.5,
+      "secondAllRate": 0.5,
+      "firstFinalPossibleRange": [
+        0.5,
+        0.5
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.5
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.5
+      ],
+      "reasons": {
+        "win": 8
+      },
+      "plies": {
+        "min": 23,
+        "q25": 28,
+        "median": 40,
+        "q75": 59,
+        "p90": 84,
+        "p95": 84,
+        "max": 118,
+        "mean": 53.75,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 9,
+      "matchup": "defensive/search",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 4,
+      "secondWins": 4,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5,
+      "firstAllRate": 0.5,
+      "secondAllRate": 0.5,
+      "firstFinalPossibleRange": [
+        0.5,
+        0.5
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.5
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.5
+      ],
+      "reasons": {
+        "win": 8
+      },
+      "plies": {
+        "min": 21,
+        "q25": 23,
+        "median": 47,
+        "q75": 68,
+        "p90": 84,
+        "p95": 84,
+        "max": 118,
+        "mean": 55.75,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 9,
+      "matchup": "search/search-progress",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 4,
+      "secondWins": 1,
+      "officialDraws": 0,
+      "unresolved": 3,
+      "anomalies": 0,
+      "budgetInterrupted": 3,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.625,
+      "firstDecidedRate": 0.8,
+      "firstAllRate": 0.5,
+      "secondAllRate": 0.125,
+      "firstFinalPossibleRange": [
+        0.5,
+        0.875
+      ],
+      "pairedBootstrapDecided95": [
+        0.6666666666666666,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.5
+      ],
+      "reasons": {
+        "win": 5,
+        "budget-time": 3
+      },
+      "plies": {
+        "min": 31,
+        "q25": 39,
+        "median": 41,
+        "q75": 62,
+        "p90": 62,
+        "p95": 62,
+        "max": 81,
+        "mean": 50.8,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 10,
+      "matchup": "star/star",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 2,
+      "secondWins": 6,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 5,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.25,
+      "firstAllRate": 0.25,
+      "secondAllRate": 0.75,
+      "firstFinalPossibleRange": [
+        0.25,
+        0.25
+      ],
+      "pairedBootstrapDecided95": [
+        0,
+        0.5
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0,
+        0.5
+      ],
+      "reasons": {
+        "win": 8
+      },
+      "plies": {
+        "min": 17,
+        "q25": 20,
+        "median": 24,
+        "q75": 48,
+        "p90": 51,
+        "p95": 51,
+        "max": 104,
+        "mean": 40.25,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 10,
+      "matchup": "positional/positional",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 5,
+      "secondWins": 3,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.625,
+      "firstAllRate": 0.625,
+      "secondAllRate": 0.375,
+      "firstFinalPossibleRange": [
+        0.625,
+        0.625
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.75
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.75
+      ],
+      "reasons": {
+        "win": 8
+      },
+      "plies": {
+        "min": 17,
+        "q25": 18,
+        "median": 27,
+        "q75": 34,
+        "p90": 35,
+        "p95": 35,
+        "max": 65,
+        "mean": 31.125,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 10,
+      "matchup": "search/search",
+      "games": 88,
+      "clusters": 22,
+      "firstWins": 55,
+      "secondWins": 21,
+      "officialDraws": 0,
+      "unresolved": 12,
+      "anomalies": 0,
+      "budgetInterrupted": 12,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.8636363636363636,
+      "firstDecidedRate": 0.7236842105263158,
+      "firstAllRate": 0.625,
+      "secondAllRate": 0.23863636363636365,
+      "firstFinalPossibleRange": [
+        0.625,
+        0.7613636363636364
+      ],
+      "pairedBootstrapDecided95": [
+        0.6447368421052632,
+        0.8026315789473685
+      ],
+      "conservativeClusterFirstAll95": [
+        0.3094187673127466,
+        0.9405812326872534
+      ],
+      "conservativeClusterDecided95": [
+        0.3094187673127466,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0.3094187673127466,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5454545454545454,
+        0.6931818181818182
+      ],
+      "reasons": {
+        "win": 76,
+        "budget-time": 12
+      },
+      "plies": {
+        "min": 21,
+        "q25": 23,
+        "median": 27,
+        "q75": 67,
+        "p90": 127,
+        "p95": 142,
+        "max": 167,
+        "mean": 51.223684210526315,
+        "beyond120Wins": 9
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 10,
+      "matchup": "defensive/defensive",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 6,
+      "secondWins": 1,
+      "officialDraws": 0,
+      "unresolved": 1,
+      "anomalies": 0,
+      "budgetInterrupted": 1,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.875,
+      "firstDecidedRate": 0.8571428571428571,
+      "firstAllRate": 0.75,
+      "secondAllRate": 0.125,
+      "firstFinalPossibleRange": [
+        0.75,
+        0.875
+      ],
+      "pairedBootstrapDecided95": [
+        0.6666666666666666,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        1
+      ],
+      "reasons": {
+        "win": 7,
+        "budget-time": 1
+      },
+      "plies": {
+        "min": 19,
+        "q25": 21,
+        "median": 27,
+        "q75": 27,
+        "p90": 50,
+        "p95": 50,
+        "max": 51,
+        "mean": 31.428571428571427,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 10,
+      "matchup": "search-progress/search-progress",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 2,
+      "secondWins": 2,
+      "officialDraws": 0,
+      "unresolved": 4,
+      "anomalies": 0,
+      "budgetInterrupted": 4,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.5,
+      "firstDecidedRate": 0.5,
+      "firstAllRate": 0.25,
+      "secondAllRate": 0.25,
+      "firstFinalPossibleRange": [
+        0.25,
+        0.75
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.5
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.25,
+        0.25
+      ],
+      "reasons": {
+        "budget-time": 4,
+        "win": 4
+      },
+      "plies": {
+        "min": 21,
+        "q25": 21,
+        "median": 25,
+        "q75": 28,
+        "p90": 28,
+        "p95": 28,
+        "max": 84,
+        "mean": 39.5,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 10,
+      "matchup": "mixed/mixed",
+      "games": 8,
+      "clusters": 2,
+      "firstWins": 3,
+      "secondWins": 0,
+      "officialDraws": 0,
+      "unresolved": 5,
+      "anomalies": 0,
+      "budgetInterrupted": 5,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.375,
+      "firstDecidedRate": 1,
+      "firstAllRate": 0.375,
+      "secondAllRate": 0,
+      "firstFinalPossibleRange": [
+        0.375,
+        1
+      ],
+      "pairedBootstrapDecided95": [
+        1,
+        1
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.25,
+        0.5
+      ],
+      "reasons": {
+        "win": 3,
+        "budget-time": 5
+      },
+      "plies": {
+        "min": 19,
+        "q25": 19,
+        "median": 19,
+        "q75": 19,
+        "p90": 19,
+        "p95": 19,
+        "max": 19,
+        "mean": 19,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 10,
+      "matchup": "star/search",
+      "games": 16,
+      "clusters": 2,
+      "firstWins": 8,
+      "secondWins": 8,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.5,
+      "firstAllRate": 0.5,
+      "secondAllRate": 0.5,
+      "firstFinalPossibleRange": [
+        0.5,
+        0.5
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.5
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.5
+      ],
+      "reasons": {
+        "win": 16
+      },
+      "plies": {
+        "min": 17,
+        "q25": 19,
+        "median": 21,
+        "q75": 29,
+        "p90": 32,
+        "p95": 52,
+        "max": 53,
+        "mean": 26.375,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 10,
+      "matchup": "positional/search",
+      "games": 16,
+      "clusters": 2,
+      "firstWins": 12,
+      "secondWins": 4,
+      "officialDraws": 0,
+      "unresolved": 0,
+      "anomalies": 0,
+      "budgetInterrupted": 0,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 1,
+      "firstDecidedRate": 0.75,
+      "firstAllRate": 0.75,
+      "secondAllRate": 0.25,
+      "firstFinalPossibleRange": [
+        0.75,
+        0.75
+      ],
+      "pairedBootstrapDecided95": [
+        0.75,
+        0.75
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.75,
+        0.75
+      ],
+      "reasons": {
+        "win": 16
+      },
+      "plies": {
+        "min": 17,
+        "q25": 21,
+        "median": 23,
+        "q75": 28,
+        "p90": 29,
+        "p95": 43,
+        "max": 46,
+        "mean": 25.75,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 10,
+      "matchup": "defensive/search",
+      "games": 16,
+      "clusters": 2,
+      "firstWins": 10,
+      "secondWins": 3,
+      "officialDraws": 0,
+      "unresolved": 3,
+      "anomalies": 0,
+      "budgetInterrupted": 3,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.8125,
+      "firstDecidedRate": 0.7692307692307693,
+      "firstAllRate": 0.625,
+      "secondAllRate": 0.1875,
+      "firstFinalPossibleRange": [
+        0.625,
+        0.8125
+      ],
+      "pairedBootstrapDecided95": [
+        0.6666666666666666,
+        0.8571428571428571
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.5,
+        0.75
+      ],
+      "reasons": {
+        "win": 13,
+        "budget-time": 3
+      },
+      "plies": {
+        "min": 27,
+        "q25": 29,
+        "median": 31,
+        "q75": 41,
+        "p90": 43,
+        "p95": 46,
+        "max": 50,
+        "mean": 34.92307692307692,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    },
+    {
+      "scenario": "fixed",
+      "size": 10,
+      "matchup": "search/search-progress",
+      "games": 16,
+      "clusters": 2,
+      "firstWins": 7,
+      "secondWins": 4,
+      "officialDraws": 0,
+      "unresolved": 5,
+      "anomalies": 0,
+      "budgetInterrupted": 5,
+      "repeatedGames": 0,
+      "repeatedUnresolvedQuietGames": 0,
+      "decidedRate": 0.6875,
+      "firstDecidedRate": 0.6363636363636364,
+      "firstAllRate": 0.4375,
+      "secondAllRate": 0.25,
+      "firstFinalPossibleRange": [
+        0.4375,
+        0.75
+      ],
+      "pairedBootstrapDecided95": [
+        0.5,
+        0.8
+      ],
+      "conservativeClusterFirstAll95": [
+        0,
+        1
+      ],
+      "conservativeClusterDecided95": [
+        0,
+        1
+      ],
+      "conservativeClusterFinalFirstRange95": [
+        0,
+        1
+      ],
+      "pairedBootstrapFirstAll95": [
+        0.375,
+        0.5
+      ],
+      "reasons": {
+        "win": 11,
+        "budget-time": 5
+      },
+      "plies": {
+        "min": 21,
+        "q25": 25,
+        "median": 28,
+        "q75": 32,
+        "p90": 77,
+        "p95": 77,
+        "max": 95,
+        "mean": 40.27272727272727,
+        "beyond120Wins": 0
+      },
+      "judgment": "inconclusive-or-outside-target"
+    }
+  ],
+  "diagnostics": [
+    {
+      "id": "8:varied:2:0:search/search:1",
+      "size": 8,
+      "scenario": "varied",
+      "matchup": "search/search",
+      "prefixPlies": 272,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 64,
+        "cacheHits": 0,
+        "cutoffs": 62,
+        "horizonCutoffs": 126,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 64,
+        "elapsedMs": 33.64019700000006,
+        "peakHeapBytes": 109121328,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "budget-time",
+      "originalPly": 426,
+      "interventionReason": "budget-time",
+      "interventionPly": 417
+    },
+    {
+      "id": "8:varied:2:1:search/search:1",
+      "size": 8,
+      "scenario": "varied",
+      "matchup": "search/search",
+      "prefixPlies": 245,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 88,
+        "cacheHits": 0,
+        "cutoffs": 86,
+        "horizonCutoffs": 174,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 88,
+        "elapsedMs": 24.79729300000008,
+        "peakHeapBytes": 98842288,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "budget-time",
+      "originalPly": 407,
+      "interventionReason": "budget-time",
+      "interventionPly": 407
+    },
+    {
+      "id": "8:varied:3:1:search/search:1",
+      "size": 8,
+      "scenario": "varied",
+      "matchup": "search/search",
+      "prefixPlies": 292,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": null,
+        "proven": false,
+        "status": "budget-unresolved",
+        "nodes": 371,
+        "cacheHits": 69,
+        "cutoffs": 289,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": "time",
+        "statesCached": 334,
+        "elapsedMs": 100.49635299999954,
+        "peakHeapBytes": 124873464,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "win",
+      "originalPly": 313,
+      "interventionReason": "budget-time",
+      "interventionPly": 360
+    },
+    {
+      "id": "8:varied:4:0:search/search:0",
+      "size": 8,
+      "scenario": "varied",
+      "matchup": "search/search",
+      "prefixPlies": 327,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": null,
+        "proven": false,
+        "status": "budget-unresolved",
+        "nodes": 608,
+        "cacheHits": 185,
+        "cutoffs": 565,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": "time",
+        "statesCached": 571,
+        "elapsedMs": 100.17113400000017,
+        "peakHeapBytes": 117744944,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "win",
+      "originalPly": 401,
+      "interventionReason": "budget-time",
+      "interventionPly": 401
+    },
+    {
+      "id": "8:varied:5:1:search/search:0",
+      "size": 8,
+      "scenario": "varied",
+      "matchup": "search/search",
+      "prefixPlies": 343,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": null,
+        "proven": false,
+        "status": "budget-unresolved",
+        "nodes": 528,
+        "cacheHits": 147,
+        "cutoffs": 479,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": "time",
+        "statesCached": 472,
+        "elapsedMs": 100.19905499999913,
+        "peakHeapBytes": 103281464,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "win",
+      "originalPly": 355,
+      "interventionReason": "budget-time",
+      "interventionPly": 405
+    },
+    {
+      "id": "8:fixed:2:0:search/search:0",
+      "size": 8,
+      "scenario": "fixed",
+      "matchup": "search/search",
+      "prefixPlies": 290,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": null,
+        "proven": false,
+        "status": "budget-unresolved",
+        "nodes": 497,
+        "cacheHits": 53,
+        "cutoffs": 453,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": "time",
+        "statesCached": 461,
+        "elapsedMs": 100.07446899999923,
+        "peakHeapBytes": 84576728,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "budget-time",
+      "originalPly": 469,
+      "interventionReason": "budget-time",
+      "interventionPly": 371
+    },
+    {
+      "id": "9:fixed:1:0:search/search:1",
+      "size": 9,
+      "scenario": "fixed",
+      "matchup": "search/search",
+      "prefixPlies": 191,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": null,
+        "proven": false,
+        "status": "budget-unresolved",
+        "nodes": 331,
+        "cacheHits": 30,
+        "cutoffs": 235,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": "time",
+        "statesCached": 298,
+        "elapsedMs": 100.37236999999732,
+        "peakHeapBytes": 129340736,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "win",
+      "originalPly": 237,
+      "interventionReason": "budget-time",
+      "interventionPly": 230
+    },
+    {
+      "id": "9:fixed:2:0:search/search:0",
+      "size": 9,
+      "scenario": "fixed",
+      "matchup": "search/search",
+      "prefixPlies": 193,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": null,
+        "proven": false,
+        "status": "budget-unresolved",
+        "nodes": 389,
+        "cacheHits": 78,
+        "cutoffs": 305,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": "time",
+        "statesCached": 347,
+        "elapsedMs": 100.11497500000041,
+        "peakHeapBytes": 128784592,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "win",
+      "originalPly": 270,
+      "interventionReason": "budget-time",
+      "interventionPly": 241
+    },
+    {
+      "id": "9:fixed:3:0:search/search:0",
+      "size": 9,
+      "scenario": "fixed",
+      "matchup": "search/search",
+      "prefixPlies": 196,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": null,
+        "proven": false,
+        "status": "budget-unresolved",
+        "nodes": 292,
+        "cacheHits": 28,
+        "cutoffs": 200,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": "time",
+        "statesCached": 262,
+        "elapsedMs": 100.21031500000026,
+        "peakHeapBytes": 121346184,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "budget-time",
+      "originalPly": 290,
+      "interventionReason": "budget-time",
+      "interventionPly": 229
+    },
+    {
+      "id": "9:fixed:3:0:search/search:1",
+      "size": 9,
+      "scenario": "fixed",
+      "matchup": "search/search",
+      "prefixPlies": 199,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": -1,
+        "proven": true,
+        "status": "forced-loss-within-horizon",
+        "nodes": 66,
+        "cacheHits": 0,
+        "cutoffs": 65,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 66,
+        "elapsedMs": 15.9263260000007,
+        "peakHeapBytes": 88766208,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "win",
+      "originalPly": 201,
+      "interventionReason": "win",
+      "interventionPly": 201
+    },
+    {
+      "id": "9:fixed:6:0:search/search:1",
+      "size": 9,
+      "scenario": "fixed",
+      "matchup": "search/search",
+      "prefixPlies": 214,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": null,
+        "proven": false,
+        "status": "budget-unresolved",
+        "nodes": 285,
+        "cacheHits": 70,
+        "cutoffs": 203,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": "time",
+        "statesCached": 247,
+        "elapsedMs": 100.2053130000022,
+        "peakHeapBytes": 126979832,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "budget-time",
+      "originalPly": 294,
+      "interventionReason": "budget-time",
+      "interventionPly": 244
+    },
+    {
+      "id": "9:fixed:7:0:search/search:0",
+      "size": 9,
+      "scenario": "fixed",
+      "matchup": "search/search",
+      "prefixPlies": 206,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 228,
+        "cacheHits": 32,
+        "cutoffs": 150,
+        "horizonCutoffs": 5848,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 196,
+        "elapsedMs": 76.6915799999988,
+        "peakHeapBytes": 127517472,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "budget-time",
+      "originalPly": 289,
+      "interventionReason": "budget-time",
+      "interventionPly": 250
+    },
+    {
+      "id": "10:varied:0:0:search/search:0",
+      "size": 10,
+      "scenario": "varied",
+      "matchup": "search/search",
+      "prefixPlies": 133,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": null,
+        "proven": false,
+        "status": "budget-unresolved",
+        "nodes": 233,
+        "cacheHits": 25,
+        "cutoffs": 154,
+        "horizonCutoffs": 7738,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": "time",
+        "statesCached": 206,
+        "elapsedMs": 100.1934340000007,
+        "peakHeapBytes": 123316720,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "budget-time",
+      "originalPly": 176,
+      "interventionReason": "budget-time",
+      "interventionPly": 165
+    },
+    {
+      "id": "10:varied:1:0:search/search:0",
+      "size": 10,
+      "scenario": "varied",
+      "matchup": "search/search",
+      "prefixPlies": 124,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": null,
+        "proven": false,
+        "status": "budget-unresolved",
+        "nodes": 313,
+        "cacheHits": 41,
+        "cutoffs": 183,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": "time",
+        "statesCached": 269,
+        "elapsedMs": 100.44943699999567,
+        "peakHeapBytes": 106963936,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "budget-time",
+      "originalPly": 185,
+      "interventionReason": "budget-time",
+      "interventionPly": 153
+    },
+    {
+      "id": "10:varied:1:0:search/search:1",
+      "size": 10,
+      "scenario": "varied",
+      "matchup": "search/search",
+      "prefixPlies": 107,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 139,
+        "cacheHits": 0,
+        "cutoffs": 137,
+        "horizonCutoffs": 231,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 139,
+        "elapsedMs": 65.36755999999878,
+        "peakHeapBytes": 108112560,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "budget-time",
+      "originalPly": 156,
+      "interventionReason": "budget-time",
+      "interventionPly": 155
+    },
+    {
+      "id": "10:varied:1:1:search/search:0",
+      "size": 10,
+      "scenario": "varied",
+      "matchup": "search/search",
+      "prefixPlies": 136,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 259,
+        "cacheHits": 42,
+        "cutoffs": 170,
+        "horizonCutoffs": 6051,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 217,
+        "elapsedMs": 63.44948199999635,
+        "peakHeapBytes": 126871464,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "win",
+      "originalPly": 161,
+      "interventionReason": "budget-time",
+      "interventionPly": 173
+    },
+    {
+      "id": "10:varied:1:1:search/search:1",
+      "size": 10,
+      "scenario": "varied",
+      "matchup": "search/search",
+      "prefixPlies": 106,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 272,
+        "cacheHits": 40,
+        "cutoffs": 178,
+        "horizonCutoffs": 6450,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 232,
+        "elapsedMs": 87.51319099999819,
+        "peakHeapBytes": 106238312,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "budget-time",
+      "originalPly": 166,
+      "interventionReason": "budget-time",
+      "interventionPly": 142
+    },
+    {
+      "id": "10:fixed:1:1:search/search:1",
+      "size": 10,
+      "scenario": "fixed",
+      "matchup": "search/search",
+      "prefixPlies": 109,
+      "prefixReason": "budget-time",
+      "prefixRepetitions": 0,
+      "diagnosticTurns": 16,
+      "opponentCaptureDenials": 0,
+      "opponentWinningThreats": 0,
+      "stoppedImmediateDefeats": 0,
+      "proof": {
+        "result": null,
+        "proven": false,
+        "status": "budget-unresolved",
+        "nodes": 205,
+        "cacheHits": 12,
+        "cutoffs": 164,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 20000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": "time",
+        "statesCached": 190,
+        "elapsedMs": 100.70492999999988,
+        "peakHeapBytes": 135679432,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      },
+      "originalReason": "budget-time",
+      "originalPly": 159,
+      "interventionReason": "budget-time",
+      "interventionPly": 131
+    }
+  ]
+}
