@@ -5,6 +5,7 @@ import {DIRS,step,slideOptions,mobility,successors,distances,key} from './engine
 // A sliding player can only collect stars on its current row or column.
 export function captureRoutes(s,p) {
   if(s.winner!==null)return new Map();
+  const size=s.size??7;
   const at=s.players[p], routes=new Map(), base={...s,turn:p};
   const valid=(star,dir,wall)=>{
     let n=base;
@@ -19,29 +20,29 @@ export function captureRoutes(s,p) {
     return false;
   };
   for(const star of s.stars){
-    const dx=star%7-at%7,dy=Math.floor(star/7)-Math.floor(at/7);
+    const dx=star%size-at%size,dy=Math.floor(star/size)-Math.floor(at/size);
     if(dx&&dy)continue;
     const dir=dx>0?1:dx<0?3:dy>0?2:0;
     let blocked=false;const walls=[];
-    for(let cell=step(at,dir);cell!==star;cell=step(cell,dir)){
+    for(let cell=step(at,dir,size);cell!==star;cell=step(cell,dir,size)){
       if(cell===null){blocked=true;break;}
       if(cell===s.players[1-p]){blocked=true;break;}
       const w=s.walls.indexOf(cell);if(w!==-1)walls.push(w);
     }
     if(blocked||walls.length>1)continue;
     if(valid(star,dir,null))continue;
-    const support=step(star,dir);
+    const support=step(star,dir,size);
     let candidates=[];
     if(walls.length===1){
       const w=walls[0];
-      candidates=DIRS.flatMap((_,d)=>{const to=step(s.walls[w],d);return to===null?[]:[{wall:w,to}];});
+      candidates=DIRS.flatMap((_,d)=>{const to=step(s.walls[w],d,size);return to===null?[]:[{wall:w,to}];});
     }else if(support!==null&&!s.walls.includes(support)&&support!==s.players[1-p]){
       // With a clear path, an unblocked star needs a wall immediately beyond it.
-      candidates=s.walls.flatMap((from,w)=>DIRS.some((_,d)=>step(from,d)===support)?[{wall:w,to:support}]:[]);
+      candidates=s.walls.flatMap((from,w)=>DIRS.some((_,d)=>step(from,d,size)===support)?[{wall:w,to:support}]:[]);
     }else{
       // The stopping point exists, but collecting would trap the opponent.
       // A wall away from our path can reopen their escape, so check all shifts.
-      candidates=s.walls.flatMap((from,w)=>DIRS.flatMap((_,d)=>{const to=step(from,d);return to===null?[]:[{wall:w,to}];}));
+      candidates=s.walls.flatMap((from,w)=>DIRS.flatMap((_,d)=>{const to=step(from,d,size);return to===null?[]:[{wall:w,to}];}));
     }
     for(const wall of candidates)if(valid(star,dir,wall))break;
   }

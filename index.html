@@ -51,6 +51,9 @@
           </div>
           <span id="turnCount"></span>
         </div>
+        <p id="boardSpec" aria-live="polite"></p>
+        <button id="boardZoom" aria-pressed="false">盤面を拡大</button>
+        <div class="board-scroll">
         <div class="board-wrap">
           <div
             id="board"
@@ -60,6 +63,7 @@
           ></div>
           <div id="tokens" class="tokens" aria-hidden="true"></div>
           <div id="celebration" class="celebration" aria-hidden="true"></div>
+        </div>
         </div>
         <p id="lastMove" class="last-move" aria-live="polite" hidden></p>
         <div id="directions" class="directions" aria-label="滑る方向"></div>
@@ -98,7 +102,7 @@
         </li>
         <li>
           <b>星の上で止まったらゲット。</b
-          ><br />5個のうち、先に3個取った人の勝ち。
+          ><br /><span id="helpVictory">5個のうち、先に3個取った人の勝ち。</span>
         </li>
       </ol>
       <p>

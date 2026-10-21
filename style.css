@@ -239,7 +239,7 @@ h1 span {
 }
 .board {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(var(--size, 7), 1fr);
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 5px;
@@ -315,8 +315,8 @@ h1 span {
 }
 .token {
   position: absolute;
-  width: 14.285714%;
-  height: 14.285714%;
+  width: calc(100% / var(--size, 7));
+  height: calc(100% / var(--size, 7));
   left: 0;
   top: 0;
   display: grid;
@@ -586,7 +586,7 @@ select {
 }
 /* Keep every ice tile square, including rows containing different content. */
 .board {
-  grid-template-rows: repeat(7, minmax(0, 1fr));
+  grid-template-rows: repeat(var(--size, 7), minmax(0, 1fr));
 }
 h1 {
   white-space: nowrap;
@@ -730,3 +730,8 @@ dialog.result.defeat {
 }
 /* Keep the main-branch local-mode difficulty control behavior. */
 #cpuLevelRow[hidden] { display: none; }
+
+.board-scroll { overflow: auto; padding-bottom: 5px; }
+.board-wrap.zoomed { min-width: calc(var(--size, 7) * 44px + 14px); }
+#boardSpec { font-size: 13px; overflow-wrap: anywhere; }
+#boardZoom { margin-bottom: 8px; }

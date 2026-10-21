@@ -1,5 +1,6 @@
 import {
   initial,
+  ALL_LAYOUTS as LAYOUTS,
   clone,
   DIRS,
   movableWalls,
@@ -26,6 +27,11 @@ let state = initial(),
   cpuTimer = null,
   activeSettings = { layout: 0, starter: 0, level: "strong" },
   matchSeed = 0;
+for (let i = 4; i < LAYOUTS.length; i++) {
+  const option = document.createElement('option'); option.value = i;
+  const l = LAYOUTS[i]; option.textContent = `${l.name} · 星${l.stars.length}／壁${l.walls.length}／${l.target}個先取`;
+  $("layout").append(option);
+}
 const tokenEls = [0, 1].map((p) => {
   const el = document.createElement("div");
   el.className = `token p${p + 1}`;
@@ -34,7 +40,7 @@ const tokenEls = [0, 1].map((p) => {
   return el;
 });
 function shiftArrow(from, to) {
-  return ({ [-7]: "↑", [1]: "→", [7]: "↓", [-1]: "←" })[to - from] || "";
+  return ({ [-state.size]: "↑", [1]: "→", [state.size]: "↓", [-1]: "←" })[to - from] || "";
 }
 function cpuTurn() {
   return mode === "cpu" && state.turn === 1 && state.winner === null;
@@ -48,7 +54,14 @@ function render() {
     moves = phase === "wall" ? movableWalls(state) : [],
     stops = phase === "slide" ? slideOptions(state) : [];
   $("board").replaceChildren();
-  for (let i = 0; i < 49; i++) {
+  $("board").parentElement.style.setProperty('--size', state.size);
+  $("board").setAttribute('aria-label', `${state.size}×${state.size}のゲーム盤`);
+  $("boardSpec").hidden = activeSettings.layout < 4;
+  $("boardZoom").hidden = state.size <= 7;
+  if (state.size <= 7) $("board").parentElement.classList.remove("zoomed");
+  $("boardSpec").textContent = `${LAYOUTS[activeSettings.layout].name} · 星${state.stars.length + state.scores[0] + state.scores[1]}個・壁${state.walls.length}個 · ${state.target}個先取`;
+  $("helpVictory").textContent = `${state.target}個の星を先に取った人の勝ち。`;
+  for (let i = 0; i < state.size ** 2; i++) {
     const wall = state.walls.indexOf(i),
       target = moves.find((m) => m.wall === selected && m.to === i),
       stop = stops.find((m) => m.to === i);
@@ -70,7 +83,7 @@ function render() {
           : "氷";
     b.setAttribute(
       "aria-label",
-      `${Math.floor(i / 7) + 1}行${(i % 7) + 1}列 ${item}${target ? " 移動先" : ""}${stop ? " 滑走停止位置" : ""}`,
+      `${Math.floor(i / state.size) + 1}行${(i % state.size) + 1}列 ${item}${target ? " 移動先" : ""}${stop ? " 滑走停止位置" : ""}`,
     );
     b.disabled =
       locked ||
@@ -97,12 +110,12 @@ function render() {
   }
   tokenEls.forEach((el, p) => {
     const at = state.players[p];
-    el.style.transform = `translate(${(at % 7) * 100}%,${Math.floor(at / 7) * 100}%)`;
+    el.style.transform = `translate(${(at % state.size) * 100}%,${Math.floor(at / state.size) * 100}%)`;
   });
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === 2 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${activeSettings.level === "strong" ? "つよい" : "ふつう"}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / 3${state.scores[p] === 2 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === state.target - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(state.target - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${activeSettings.level === "strong" ? "つよい" : "ふつう"}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${state.target}${state.scores[p] === state.target - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
     )
     .join("");
   const last = moveLog.at(-1);
@@ -340,6 +353,12 @@ $("undo").onclick = () => {
   remember();
   render();
   if (cpuTurn()) runCPU();
+};
+$("boardZoom").onclick = () => {
+  const wrap = $("board").parentElement;
+  const zoomed = wrap.classList.toggle('zoomed');
+  $("boardZoom").setAttribute('aria-pressed', String(zoomed));
+  $("boardZoom").textContent = zoomed ? '盤面を全体表示' : '盤面を拡大';
 };
 $("help").onclick = () => $("helpDialog").showModal();
 function openSetup(nextMode) {

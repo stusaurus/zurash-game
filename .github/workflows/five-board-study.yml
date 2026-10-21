@@ -1,0 +1,26 @@
+name: Five-board bounded research
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: five-board-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: timeout 10m node --max-old-space-size=768 scripts/five-board-study.js
+      - run: timeout 16m node --max-old-space-size=768 scripts/five-board-extend.js
+      - run: node scripts/five-board-report.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: five-board-research
+          path: reports/five-board/
+          retention-days: 30

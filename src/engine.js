@@ -1,3 +1,4 @@
+import {RESEARCH_LAYOUTS} from "./research-layouts.js";
 export const SIZE = 7;
 export const DIRS = [
   { name: "上", dx: 0, dy: -1, icon: "↑" },
@@ -32,9 +33,10 @@ export const LAYOUTS = [
     players: [42, 6],
   },
 ];
+export const ALL_LAYOUTS = [...LAYOUTS, ...RESEARCH_LAYOUTS];
 export const clone = (s) => structuredClone(s);
 export function initial(layout = 0, starter = 0) {
-  const l = LAYOUTS[layout];
+  const l = ALL_LAYOUTS[layout];
   return {
     size: l.size ?? SIZE,
     target: l.target ?? 3,
