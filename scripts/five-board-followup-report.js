@@ -17,7 +17,12 @@ for(const g of training){const old=original.find(o=>o.id===g.id);if(!old||JSON.s
 const summarize=gs=>completionSummary(gs.map(g=>({...g,cluster:`${g.policies.join('/')}:${g.seed}`})));
 const behavior=gs=>{
  const sum=key=>gs.reduce((n,g)=>n+g.metrics[key],0),plies=gs.reduce((n,g)=>n+g.history.length,0),wallMoves=sum('wallMoves');
- return {plies,wallMoves,wallMoveFraction:plies?wallMoves/plies:null,wallBacktracks:sum('wallBacktracks'),leadChanges:sum('leadChanges'),nearVictoryReversals:gs.filter(g=>g.metrics.nearVictoryReversal).length,captureOpportunities:sum('captureOpportunities'),declinedCaptures:sum('declinedCapture'),immediateWinsMissed:sum('immediateWinsMissed'),quietRepeatedUnresolved:gs.filter(g=>g.reason!=='win'&&g.repetitionCount>0&&g.metrics.quiet>=40).length};
+ const openingByStarter=[0,1].map(starter=>{
+  const actions=gs.filter(g=>g.starter===starter&&g.history.length).map(g=>JSON.stringify(g.history[0].a)),frequencies=new Map();
+  for(const a of actions)frequencies.set(a,(frequencies.get(a)||0)+1);
+  return {starter,sample:actions.length,uniqueActions:frequencies.size,mostCommonShare:actions.length?Math.max(...frequencies.values())/actions.length:null,entropyBits:[...frequencies.values()].reduce((sum,n)=>{const p=n/actions.length;return sum-p*Math.log2(p);},0)};
+ });
+ return {plies,wallMoves,wallMoveFraction:plies?wallMoves/plies:null,wallBacktracks:sum('wallBacktracks'),leadChanges:sum('leadChanges'),nearVictoryReversals:gs.filter(g=>g.metrics.nearVictoryReversal).length,captureOpportunities:sum('captureOpportunities'),declinedCaptures:sum('declinedCapture'),immediateWinsMissed:sum('immediateWinsMissed'),quietRepeatedUnresolved:gs.filter(g=>g.reason!=='win'&&g.repetitionCount>0&&g.metrics.quiet>=40).length,openingByStarter};
 };
 const summaries=plan.map(p=>({id:p.id,currentSeed:p.current.seed,alternativeSeed:p.alternative.seed,boards:[p.current,p.alternative].map(c=>({seed:c.seed,family:c.family,spec:{size:c.state.size,stars:c.state.stars.length,walls:c.state.walls.length,target:c.state.target},all:summarize(independent.filter(g=>g.id.startsWith(`${p.id}-${c.seed}-`))),behavior:behavior(independent.filter(g=>g.id.startsWith(`${p.id}-${c.seed}-`))),byPolicy:Object.fromEntries(['search','mixed','route'].map(policy=>[policy,summarize(independent.filter(g=>g.id.startsWith(`${p.id}-${c.seed}-`)&&g.policies[0]===policy))]))}))}));
 const newlyDecided=training.filter(g=>g.reason==='win'&&original.find(o=>o.id===g.id).reason!=='win');
@@ -41,6 +46,9 @@ for(const r of summaries)for(const b of r.boards)lines.push(`|${r.id}/${b.seed}|
 lines.push('','## 展開の指標','','|盤面/seed|決着手数中央値/p90|リード交代|先取直前の逆転|壁移動率|静かな反復を伴う未解決|','|---|---|---:|---:|---:|---:|');
 for(const r of summaries)for(const b of r.boards)lines.push(`|${r.id}/${b.seed}|${b.all.plies.median??'—'}/${b.all.plies.p90??'—'}|${b.behavior.leadChanges}|${b.behavior.nearVictoryReversals}|${percent(b.behavior.wallMoveFraction)}|${b.behavior.quietRepeatedUnresolved}|`);
 lines.push('','壁移動率・リード交代はAI対局での代理指標で、面白さや人間の納得感の認定には使わない。決着手数は決着局に限定するため、未解決が多い配置では特に解釈に注意する。');
+lines.push('','## 初手の多様性','','|盤面/seed|開始コマ0：初手種類/標本数|開始コマ1：初手種類/標本数|最頻初手の比率 コマ0/1|','|---|---|---|---|');
+for(const r of summaries)for(const b of r.boards){const [a,c]=b.behavior.openingByStarter;lines.push(`|${r.id}/${b.seed}|${a.uniqueActions}/${a.sample}|${c.uniqueActions}/${c.sample}|${percent(a.mostCommonShare)}/${percent(c.mostCommonShare)}|`);}
+lines.push('','初手の種類は実際に選ばれた壁移動＋滑走方向を開始コマ別に集計したもの。各9局の小標本でAIを混ぜているため、同程度に有効な選択肢の数や最善手の唯一性の証明ではない。');
 lines.push('','## 検証と限界','',`継続136局のprefixと最終局面を照合し、独立180局を合法再生した。訓練未解決は${output.originalTrainingUnresolved}件から${output.continuedTrainingUnresolved}件へ変化。前回536局と重複しない新規対局は180局で、累計716局。継続136件を新規対局として数えていない。`,'','代替選択は4局の訓練に依存する小規模探索。最適化範囲は前回生成した124合法候補の一部であり、星・壁・勝利条件・初期位置を広範囲に最適化し終えたものではない。初期位置は対角のまま。人間の所要時間・小学生の操作性・勝敗の納得感は未認定。','','現行を置き換えるには、独立標本の追加、AI・探索予算を変えた追試、未解決対局の継続が必要。盤面サイズごとの可能性と固定配置の問題は区別する。','','## 再現','','```sh','node scripts/five-board-followup.js','node scripts/five-board-followup-report.js','```','','`training.jsonl.gz` と `independent.jsonl.gz` に全棋譜・状態・RNGを保持。壁時計予算の再実行では中断手数は変わり得る。保存checkpointからの継続と、固定手数での再現性は前回のテストを参照。','');
 fs.writeFileSync('reports/five-board-followup-2026-10-22.md',lines.join('\n'));
 console.log(JSON.stringify(output.summaries.map(r=>({id:r.id,boards:r.boards.map(b=>({seed:b.seed,first:b.all.firstWins,second:b.all.secondWins,unresolved:b.all.unresolved}))})),null,2));

@@ -90,7 +90,23 @@
             "captureOpportunities": 101,
             "declinedCaptures": 2,
             "immediateWinsMissed": 0,
-            "quietRepeatedUnresolved": 3
+            "quietRepeatedUnresolved": 3,
+            "openingByStarter": [
+              {
+                "starter": 0,
+                "sample": 9,
+                "uniqueActions": 1,
+                "mostCommonShare": 1,
+                "entropyBits": 0
+              },
+              {
+                "starter": 1,
+                "sample": 9,
+                "uniqueActions": 3,
+                "mostCommonShare": 0.4444444444444444,
+                "entropyBits": 1.5304930567574826
+              }
+            ]
           },
           "byPolicy": {
             "search": {
@@ -334,7 +350,23 @@
             "captureOpportunities": 81,
             "declinedCaptures": 0,
             "immediateWinsMissed": 0,
-            "quietRepeatedUnresolved": 2
+            "quietRepeatedUnresolved": 2,
+            "openingByStarter": [
+              {
+                "starter": 0,
+                "sample": 9,
+                "uniqueActions": 1,
+                "mostCommonShare": 1,
+                "entropyBits": 0
+              },
+              {
+                "starter": 1,
+                "sample": 9,
+                "uniqueActions": 2,
+                "mostCommonShare": 0.6666666666666666,
+                "entropyBits": 0.9182958340544896
+              }
+            ]
           },
           "byPolicy": {
             "search": {
@@ -588,7 +620,23 @@
             "captureOpportunities": 63,
             "declinedCaptures": 0,
             "immediateWinsMissed": 0,
-            "quietRepeatedUnresolved": 0
+            "quietRepeatedUnresolved": 0,
+            "openingByStarter": [
+              {
+                "starter": 0,
+                "sample": 9,
+                "uniqueActions": 1,
+                "mostCommonShare": 1,
+                "entropyBits": 0
+              },
+              {
+                "starter": 1,
+                "sample": 9,
+                "uniqueActions": 1,
+                "mostCommonShare": 1,
+                "entropyBits": 0
+              }
+            ]
           },
           "byPolicy": {
             "search": {
@@ -832,7 +880,23 @@
             "captureOpportunities": 56,
             "declinedCaptures": 0,
             "immediateWinsMissed": 0,
-            "quietRepeatedUnresolved": 0
+            "quietRepeatedUnresolved": 0,
+            "openingByStarter": [
+              {
+                "starter": 0,
+                "sample": 9,
+                "uniqueActions": 3,
+                "mostCommonShare": 0.6666666666666666,
+                "entropyBits": 1.224394445405986
+              },
+              {
+                "starter": 1,
+                "sample": 9,
+                "uniqueActions": 1,
+                "mostCommonShare": 1,
+                "entropyBits": 0
+              }
+            ]
           },
           "byPolicy": {
             "search": {
@@ -1085,7 +1149,23 @@
             "captureOpportunities": 61,
             "declinedCaptures": 1,
             "immediateWinsMissed": 0,
-            "quietRepeatedUnresolved": 0
+            "quietRepeatedUnresolved": 0,
+            "openingByStarter": [
+              {
+                "starter": 0,
+                "sample": 9,
+                "uniqueActions": 6,
+                "mostCommonShare": 0.2222222222222222,
+                "entropyBits": 2.5032583347756456
+              },
+              {
+                "starter": 1,
+                "sample": 9,
+                "uniqueActions": 2,
+                "mostCommonShare": 0.6666666666666666,
+                "entropyBits": 0.9182958340544896
+              }
+            ]
           },
           "byPolicy": {
             "search": {
@@ -1329,7 +1409,23 @@
             "captureOpportunities": 73,
             "declinedCaptures": 0,
             "immediateWinsMissed": 0,
-            "quietRepeatedUnresolved": 0
+            "quietRepeatedUnresolved": 0,
+            "openingByStarter": [
+              {
+                "starter": 0,
+                "sample": 9,
+                "uniqueActions": 2,
+                "mostCommonShare": 0.6666666666666666,
+                "entropyBits": 0.9182958340544896
+              },
+              {
+                "starter": 1,
+                "sample": 9,
+                "uniqueActions": 1,
+                "mostCommonShare": 1,
+                "entropyBits": 0
+              }
+            ]
           },
           "byPolicy": {
             "search": {
@@ -1581,7 +1677,23 @@
             "captureOpportunities": 161,
             "declinedCaptures": 39,
             "immediateWinsMissed": 0,
-            "quietRepeatedUnresolved": 0
+            "quietRepeatedUnresolved": 0,
+            "openingByStarter": [
+              {
+                "starter": 0,
+                "sample": 9,
+                "uniqueActions": 1,
+                "mostCommonShare": 1,
+                "entropyBits": 0
+              },
+              {
+                "starter": 1,
+                "sample": 9,
+                "uniqueActions": 1,
+                "mostCommonShare": 1,
+                "entropyBits": 0
+              }
+            ]
           },
           "byPolicy": {
             "search": {
@@ -1826,7 +1938,23 @@
             "captureOpportunities": 111,
             "declinedCaptures": 3,
             "immediateWinsMissed": 0,
-            "quietRepeatedUnresolved": 1
+            "quietRepeatedUnresolved": 1,
+            "openingByStarter": [
+              {
+                "starter": 0,
+                "sample": 9,
+                "uniqueActions": 2,
+                "mostCommonShare": 0.6666666666666666,
+                "entropyBits": 0.9182958340544896
+              },
+              {
+                "starter": 1,
+                "sample": 9,
+                "uniqueActions": 2,
+                "mostCommonShare": 0.6666666666666666,
+                "entropyBits": 0.9182958340544896
+              }
+            ]
           },
           "byPolicy": {
             "search": {
@@ -2079,7 +2207,23 @@
             "captureOpportunities": 72,
             "declinedCaptures": 3,
             "immediateWinsMissed": 0,
-            "quietRepeatedUnresolved": 0
+            "quietRepeatedUnresolved": 0,
+            "openingByStarter": [
+              {
+                "starter": 0,
+                "sample": 9,
+                "uniqueActions": 2,
+                "mostCommonShare": 0.6666666666666666,
+                "entropyBits": 0.9182958340544896
+              },
+              {
+                "starter": 1,
+                "sample": 9,
+                "uniqueActions": 2,
+                "mostCommonShare": 0.6666666666666666,
+                "entropyBits": 0.9182958340544896
+              }
+            ]
           },
           "byPolicy": {
             "search": {
@@ -2324,7 +2468,23 @@
             "captureOpportunities": 68,
             "declinedCaptures": 1,
             "immediateWinsMissed": 0,
-            "quietRepeatedUnresolved": 0
+            "quietRepeatedUnresolved": 0,
+            "openingByStarter": [
+              {
+                "starter": 0,
+                "sample": 9,
+                "uniqueActions": 2,
+                "mostCommonShare": 0.6666666666666666,
+                "entropyBits": 0.9182958340544896
+              },
+              {
+                "starter": 1,
+                "sample": 9,
+                "uniqueActions": 2,
+                "mostCommonShare": 0.6666666666666666,
+                "entropyBits": 0.9182958340544896
+              }
+            ]
           },
           "byPolicy": {
             "search": {
