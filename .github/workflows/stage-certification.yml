@@ -1,0 +1,46 @@
+name: Full two-player fairness certification
+on:
+  push:
+    branches: [feat/two-player-convergence-lab]
+    paths:
+      - .github/workflows/stage-certification.yml
+  workflow_dispatch:
+    inputs:
+      pairs:
+        description: "Paired-seed units per independent validation block (minimum 64 recommended)"
+        required: true
+        default: "64"
+        type: string
+permissions:
+  contents: read
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Game checks
+        run: npm run check && npm test
+      - name: Optimize and certify on unseen paired-seed blocks
+        env:
+          ROUNDS: "3"
+          VARIANTS: "10"
+          TRAIN_PAIRS: "8"
+          SEARCH_TRAIN_PAIRS: "3"
+          ROUTE_TRAIN_PAIRS: "3"
+          HOLDOUT_PAIRS: ${{ inputs.pairs || '64' }}
+          MAX_PLIES: "120"
+          MAX_SECONDS: "4800"
+          REPORT: reports/stage-convergence-certification.json
+        run: npm run quality:converge
+      - name: Archive result even if not certified
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-two-player-stage-certification
+          path: reports/stage-convergence-certification.json
+          retention-days: 90

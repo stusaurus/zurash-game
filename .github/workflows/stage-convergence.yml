@@ -1,0 +1,64 @@
+name: Two-player stage convergence study
+on:
+  push:
+    branches:
+      - feat/two-player-convergence-lab
+    paths:
+      - .github/workflows/stage-convergence.yml
+      - scripts/stage-convergence.js
+      - src/engine.js
+      - src/ai.js
+      - src/route-ai.js
+      - scripts/experimental-policies.js
+  workflow_dispatch:
+    inputs:
+      rounds:
+        description: "Optimization rounds per existing stage"
+        required: true
+        default: "3"
+        type: string
+      variants:
+        description: "Candidates per round, max 100"
+        required: true
+        default: "10"
+        type: string
+      train_pairs:
+        description: "Paired training seeds per candidate"
+        required: true
+        default: "8"
+        type: string
+      holdout_pairs:
+        description: "Paired seeds for EACH of the two independent validation blocks"
+        required: true
+        default: "16"
+        type: string
+permissions:
+  contents: read
+jobs:
+  convergence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Verify original game remains valid
+        run: npm run check && npm test
+      - name: Optimize candidate stage placements and test on unseen seeds
+        env:
+          ROUNDS: ${{ inputs.rounds || '3' }}
+          VARIANTS: ${{ inputs.variants || '10' }}
+          TRAIN_PAIRS: ${{ inputs.train_pairs || '8' }}
+          HOLDOUT_PAIRS: ${{ inputs.holdout_pairs || '16' }}
+          MAX_PLIES: "120"
+          MAX_SECONDS: "2100"
+          REPORT: reports/stage-convergence.json
+        run: npm run quality:converge
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: two-player-stage-convergence
+          path: reports/stage-convergence.json
+          retention-days: 90
