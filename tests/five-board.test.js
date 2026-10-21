@@ -19,3 +19,16 @@ test('split completion preserves AI and RNG state',()=>{
  assert.deepEqual(split.history,one.history);assert.deepEqual(split.rngStates,one.rngStates);assert.deepEqual(split.state,one.state);
 });
 test('invalid proposals fail closed',()=>assert.throws(()=>generate({id:'A',size:8,stars:6,target:3,walls:10,family:'rotation',seed:1})));
+test('all five fixtures conserve stars, enforce target and support both starters',async()=>{
+ const {RESEARCH_LAYOUTS}=await import('../src/research-layouts.js');
+ for(let i=0;i<RESEARCH_LAYOUTS.length;i++)for(const starter of [0,1]){
+  let s=initial(i+4,starter);const original=structuredClone(s);const total=s.stars.length;
+  for(let k=0;k<100&&s.winner===null;k++){
+   const options=actions(s);assert.ok(options.length);s=apply(s,options[(k*17+starter)%options.length]);
+   assert.equal(s.stars.length+s.scores[0]+s.scores[1],total);
+   assert.equal(new Set([...s.walls,...s.stars,...s.players]).size,s.walls.length+s.stars.length+2);
+   if(s.winner!==null)assert.equal(s.scores[s.winner],s.target);
+  }
+  assert.deepEqual(initial(i+4,starter),original);
+ }
+});

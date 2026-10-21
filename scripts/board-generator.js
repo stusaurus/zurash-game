@@ -22,6 +22,8 @@ export function generate({id,size,stars,target,walls,family,seed}) {
   for(let k=0;k<stars;k++){const options=free.filter(i=>!used.has(i));options.sort((a,b)=>{const d=i=>starCells.length?Math.min(...starCells.map(j=>Math.abs(i%size-j%size)+Math.abs(Math.floor(i/size)-Math.floor(j/size)))):0;return d(b)-d(a);});const i=options[k===0?Math.floor(rng()*options.length):0];starCells.push(i);used.add(i);}
  }
  const s={size,target,walls:wallCells,stars:starCells,players,scores:[0,0],turn:0,ply:0,winner:null};
+ const cells=[...s.players,...s.stars,...s.walls];
+ if(starCells.length!==stars||wallCells.length!==walls||cells.some(i=>!Number.isInteger(i)||i<0||i>=size*size)||new Set(cells).size!==cells.length)throw Error('Invalid generated geometry');
  const a=actions(s),b=actions({...s,turn:1});
  if(!a.length||!b.length||!movableWalls(s).length)throw Error('Blocked opening');
  const d=players.map((_,p)=>distances(s,p)),reachable=d.map(ds=>starCells.filter(i=>Number.isFinite(ds[i])).length);
