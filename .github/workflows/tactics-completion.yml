@@ -1,0 +1,49 @@
+name: Tactics finish-first paired study
+on:
+  workflow_dispatch:
+    inputs:
+      seeds:
+        description: Varied layout seeds per candidate (1-100)
+        type: number
+        default: 6
+      workers:
+        description: Parallel Node processes (1-4)
+        type: number
+        default: 2
+permissions:
+  contents: read
+concurrency:
+  group: tactics-completion-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  completion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate simulator, statistics and Sprint
+        run: node --test tests/tactics-completion.test.js tests/engine.test.js
+      - name: Bounded finish-first study
+        env:
+          COMPLETION_SEEDS: ${{ inputs.seeds }}
+          COMPLETION_WORKERS: ${{ inputs.workers }}
+          COMPLETION_TOTAL_MS: '600000'
+        run: timeout --signal=TERM 11m node --max-old-space-size=512 scripts/tactics-completion-study.js
+      - name: Verify every saved game and assignment
+        run: node --max-old-space-size=512 scripts/tactics-completion-verify.js
+      - name: Inspect unfinished games without changing rules
+        run: |
+          timeout --signal=TERM 110s node --max-old-space-size=512 scripts/tactics-completion-followup.js
+          node scripts/tactics-completion-analysis.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tactics-finish-first-results
+          path: |
+            reports/tactics-completion*
+            /tmp/zurash-completion-checkpoints/*.json
+          retention-days: 30
+          if-no-files-found: warn
