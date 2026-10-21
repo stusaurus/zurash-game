@@ -18,7 +18,15 @@ test('split completion preserves AI and RNG state',()=>{
  const one=advanceGame(g,{...opts,maxPlies:30});const split=advanceGame(advanceGame(g,{...opts,maxPlies:12}),{...opts,maxPlies:30});
  assert.deepEqual(split.history,one.history);assert.deepEqual(split.rngStates,one.rngStates);assert.deepEqual(split.state,one.state);
 });
-test('invalid proposals fail closed',()=>assert.throws(()=>generate({id:'A',size:8,stars:6,target:3,walls:10,family:'rotation',seed:1})));
+test('invalid proposals fail closed',()=>assert.throws(()=>generate({id:'A',size:8,stars:4,target:3,walls:10,family:'rotation',seed:1})));
+test('extra stars and the victory target can be tuned independently',()=>{
+ let accepted;
+ for(let seed=1;seed<=100&&!accepted;seed++){
+  try{accepted=generate({id:'A',size:8,stars:9,target:3,walls:10,family:'dispersed',seed});}catch(e){assert.match(e.message,/Blocked opening|No slide-reachable star/);}
+ }
+ assert.ok(accepted);assert.equal(accepted.state.stars.length,9);assert.equal(accepted.state.target,3);
+ assert.throws(()=>generate({id:'A',size:8,stars:7,target:5,walls:10,family:'rotation',seed:1}));
+});
 test('all five fixtures conserve stars, enforce target and support both starters',async()=>{
  const {RESEARCH_LAYOUTS}=await import('../src/research-layouts.js');
  for(let i=0;i<RESEARCH_LAYOUTS.length;i++)for(const starter of [0,1]){

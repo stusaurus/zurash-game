@@ -4,7 +4,9 @@ import {seeded} from '../src/ai.js';
 export const MODES=[['A',8],['B',9],['C',10],['D',6],['E',11]];
 export const FAMILIES=['rotation','mirror','central','dispersed','corridor','perturbed'];
 export function generate({id,size,stars,target,walls,family,seed}) {
- if(!MODES.some(([a,b])=>a===id&&b===size)||!FAMILIES.includes(family)||!Number.isInteger(seed)||!Number.isInteger(stars)||!Number.isInteger(target)||stars!==2*target-1||target<2||!Number.isInteger(walls)||walls<2||walls+stars+2>size*size)throw Error('Invalid proposal');
+ // Extra stars are legal: the victory target is an independent parameter.
+ // Require enough stars that exhausting them cannot leave both below target.
+ if(!MODES.some(([a,b])=>a===id&&b===size)||!FAMILIES.includes(family)||!Number.isInteger(seed)||!Number.isInteger(stars)||!Number.isInteger(target)||stars<2*target-1||target<2||!Number.isInteger(walls)||walls<2||walls+stars+2>size*size)throw Error('Invalid proposal');
  const rng=seeded(seed), players=[size*(size-1),size-1],used=new Set(players);
  const free=Array.from({length:size*size},(_,i)=>i).filter(i=>!used.has(i));
  const center=i=>Math.abs(i%size-(size-1)/2)+Math.abs(Math.floor(i/size)-(size-1)/2);
