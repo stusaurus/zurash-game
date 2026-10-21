@@ -1,0 +1,54 @@
+name: Curry tactical opportunity scan
+on:
+  push:
+    branches: [experiment/curry-powerup-two-player]
+    paths:
+      - .github/workflows/curry-leverage.yml
+      - scripts/curry-tactical-leverage.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  leverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npm test
+      - name: Check whether +2 cells create otherwise unavailable star routes
+        env:
+          PAIRS: "8"
+          MAX_PLIES: "120"
+          REPORT: reports/curry-tactical-leverage.json
+        run: node scripts/curry-tactical-leverage.js
+      - name: Validate three shortlisted placements against a new seed set
+        env:
+          PAIRS: "48"
+          MAX_PLIES: "160"
+          SEED_OFFSET: "12500987"
+          POLICIES: strong
+          PLACEMENTS: "5,43;13,35;21,27"
+          REPORT: reports/curry-leverage-holdout.json
+        run: node scripts/curry-tactical-leverage.js
+      - name: Independently revalidate the three placements with disjoint seeds
+        env:
+          PAIRS: "48"
+          MAX_PLIES: "160"
+          SEED_OFFSET: "39000839"
+          POLICIES: strong
+          PLACEMENTS: "5,43;13,35;21,27"
+          REPORT: reports/curry-leverage-validation.json
+        run: node scripts/curry-tactical-leverage.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: curry-tactical-opportunity-scan
+          path: |
+            reports/curry-tactical-leverage.json
+            reports/curry-leverage-holdout.json
+            reports/curry-leverage-validation.json
+          retention-days: 90

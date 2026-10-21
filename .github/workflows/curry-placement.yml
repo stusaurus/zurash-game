@@ -1,0 +1,38 @@
+name: Curry pickup placement fairness screening
+on:
+  push:
+    branches: [experiment/curry-powerup-two-player]
+    paths:
+      - .github/workflows/curry-placement.yml
+      - scripts/curry-placement-search.js
+      - experiments/curry-power.js
+      - package.json
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  placement-lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Verify the experimental mechanics
+        run: npm test
+      - name: Search symmetric curry locations with independent seed bands
+        env:
+          TRAIN_PAIRS: "32"
+          HOLDOUT_PAIRS: "100"
+          VALIDATION_PAIRS: "100"
+          MAX_PLIES: "100"
+          REPORT: reports/curry-placement-search.json
+        run: npm run quality:curry-placement
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: curry-placement-study
+          path: reports/curry-placement-search.json
+          retention-days: 90

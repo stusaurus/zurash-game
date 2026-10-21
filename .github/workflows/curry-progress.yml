@@ -1,0 +1,46 @@
+name: Curry progression and tactical value research
+on:
+  push:
+    branches: [experiment/curry-powerup-two-player]
+    paths:
+      - .github/workflows/curry-progress.yml
+      - experiments/curry-ai.js
+      - scripts/curry-progress-study.js
+      - tests/curry-progress.test.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  progress-research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Check original game and optional research policy
+        run: npm run check && npm test
+      - name: Independent holdout strong CPU and curry tactical value
+        env:
+          PAIRS: "48"
+          MAX_PLIES: "160"
+          SEED_OFFSET: "56000039"
+          REPORT: reports/curry-progress-holdout.json
+        run: node scripts/curry-progress-study.js
+      - name: Independent validation strong CPU and curry tactical value
+        env:
+          PAIRS: "48"
+          MAX_PLIES: "160"
+          SEED_OFFSET: "77000027"
+          REPORT: reports/curry-progress-validation.json
+        run: node scripts/curry-progress-study.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: curry-progress-research
+          path: |
+            reports/curry-progress-holdout.json
+            reports/curry-progress-validation.json
+          retention-days: 90
