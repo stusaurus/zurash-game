@@ -4,7 +4,7 @@ import {apply, successors} from '../src/engine.js';
 import {verifyGame} from './tactics-completion.js';
 const dir='reports/five-board',chosen=JSON.parse(fs.readFileSync(dir+'/selected.json'));
 const read=p=>fs.readFileSync(dir+'/'+p,'utf8').trim().split('\n').map(JSON.parse);
-const games=[...read('extended.jsonl'),...read('route-holdout.jsonl')];const base=read('games.jsonl');for(const g of [...games,...base])verifyGame(g);
+const games=[...read('extended.jsonl'),...read('route-holdout.jsonl')];const base=read('games.jsonl');if(read('extended.jsonl').length!==base.filter(g=>!g.id.includes('-screen-')).length||read('route-holdout.jsonl').length!==60)throw Error('Incomplete archive');if(new Set(games.map(g=>g.id)).size!==games.length)throw Error('Duplicate game');for(const g of [...games,...base])verifyGame(g);
 for(const g of read('extended.jsonl')){const old=base.find(b=>b.id===g.id);if(!old||JSON.stringify(old.history)!==JSON.stringify(g.history.slice(0,old.history.length)))throw Error('Changed continuation prefix');}
 function summary(gs){const n=gs.length,first=gs.filter(g=>g.state.winner===g.starter).length,second=gs.filter(g=>g.state.winner===1-g.starter).length,u=n-first-second;
  const groups=new Map();for(const g of gs){const k=g.policies.join('/')+':'+g.seed;groups.set(k,[...(groups.get(k)||[]),g]);}
@@ -20,5 +20,5 @@ for(const g of games){const m=strategic[g.initial.size]??={captures:0,wallEssent
  }
 }
 const results=chosen.map(c=>({id:c.id,seed:c.seed,family:c.family,strategy:strategic[c.state.size],spec:{size:c.state.size,stars:c.state.stars.length,walls:c.state.walls.length,target:c.state.target},all:summary(games.filter(g=>g.initial.size===c.state.size)),stages:Object.fromEntries(['precision','holdout','route-holdout'].map(stage=>[stage,summary(games.filter(g=>g.initial.size===c.state.size&&g.id.startsWith(`${c.id}-${c.seed}-${stage}-`)))])),strata:Object.fromEntries([...new Set(games.filter(g=>g.initial.size===c.state.size).map(g=>g.policies.join('/')))].map(pair=>[pair,summary(games.filter(g=>g.initial.size===c.state.size&&g.policies.join('/')===pair))]))}));
-fs.writeFileSync(dir+'/summary.json',JSON.stringify({results,verifiedGames:games.length+base.filter(g=>g.id.includes("-screen-")).length,verifiedPlies:games.reduce((s,g)=>s+g.history.length,0)},null,2));
+fs.writeFileSync(dir+'/summary.json',JSON.stringify({results,verifiedGames:games.length+base.filter(g=>g.id.includes("-screen-")).length,verifiedPlies:[...games,...base.filter(g=>g.id.includes("-screen-"))].reduce((s,g)=>s+g.history.length,0)},null,2));
 console.log(JSON.stringify(results.map(r=>({id:r.id,...r.spec,...r.all})),null,2));

@@ -19,6 +19,7 @@ jobs:
       - run: timeout 16m node --max-old-space-size=768 scripts/five-board-extend.js
       - run: timeout 3m node --max-old-space-size=768 scripts/five-board-route-holdout.js
       - run: node scripts/five-board-witness.js
+      - run: timeout 3m node --max-old-space-size=768 scripts/five-board-refine.js
       - run: node scripts/five-board-report.js
       - uses: actions/upload-artifact@v4
         if: always()
