@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import {gunzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
 import {verifyGame} from './tactics-completion.js';
 import {completionSummary} from './tactics-completion-statistics.js';
 
@@ -22,6 +23,15 @@ const summaries=plan.map(p=>({id:p.id,currentSeed:p.current.seed,alternativeSeed
 const newlyDecided=training.filter(g=>g.reason==='win'&&original.find(o=>o.id===g.id).reason!=='win');
 const output={trainingGames:136,independentGames:180,distinctGamesAcrossBothStudies:716,originalTrainingUnresolved:original.filter(g=>g.state.winner===null).length,continuedTrainingUnresolved:training.filter(g=>g.state.winner===null).length,newlyDecidedTraining:newlyDecided.length,newlyDecidedBeyond120:newlyDecided.filter(g=>g.state.ply>120).length,remainingTrainingBudgetUnder120:training.filter(g=>g.reason!=='win'&&g.state.ply<120).length,verifiedContinuations:136,verifiedIndependentGames:180,summaries,decision:'No automatic fixture replacement or fairness certification. Small independent validation sample.'};
 fs.writeFileSync(`${dir}/summary.json`,JSON.stringify(output,null,2));
+const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+const archiveChecks={};
+for(const name of ['training','independent']){
+ const compressed=fs.readFileSync(`${dir}/${name}.jsonl.gz`),raw=gunzipSync(compressed);
+ const plain=`${dir}/${name}.jsonl`;
+ if(fs.existsSync(plain)&&!raw.equals(fs.readFileSync(plain)))throw Error('Compressed archive mismatch');
+ archiveChecks[name]={games:name==='training'?136:180,sha256:hash(compressed),rawSha256:hash(raw),bytes:compressed.length};
+}
+fs.writeFileSync(`${dir}/verification.json`,JSON.stringify({prefixesVerified:136,independentGamesVerified:180,archives:archiveChecks,summarySha256:hash(fs.readFileSync(`${dir}/summary.json`))},null,2));
 const percent=v=>v===null?'—':`${(v*100).toFixed(1)}%`;
 const interval=v=>v?v.map(x=>(x*100).toFixed(1)).join('–')+'%':'—';
 const lines=['# 全5盤面の継続・独立比較（2026-10-22）','','全5盤面を維持。スプリントと画面の配置を維持し、代替配置を独立検証した。正式採用・マージ・本番公開は行っていない。','','## 方法','','前回の再選抜136局を、元のAI・RNG・棋譜から追加4秒／4,096手まで継続。初回seed60001による訓練結果から未解決数と先後差のPareto前線を作成し、各サイズで既存1面＋代替1面を事前選択した。異なるサイズの候補を削除する選抜ではない。','','選択に使用していないseed71001〜71003で、探索・混合・production CPUの3つの自己対戦、両開始手番を比較。各配置18局、10配置で180局。各局6秒／4,096手、メモリ512MiB上限。前回より計算予算を増やしたが、まだ計算不足を十分排除したとはいえない。','','先後勝率だけでなく未解決とAI別結果を分離。対応付きbootstrapと保守的なcluster区間は既存の検証済み統計関数を利用。9clusterしかないため区間は広く、点推定で公平性を認定しない。120手・反復を正式な終了条件にはしない。','','## 独立比較','','|盤面|設定|seed|星/壁/先取|先攻勝|後攻勝|未解決|決着率|未解決込み先攻範囲|決着局先攻率の対応付き95%区間|','|---|---|---:|---|---:|---:|---:|---:|---|---|'];
