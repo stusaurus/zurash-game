@@ -13,23 +13,20 @@ const reasonCounts={},byBoard={},byStage={},byPolicy={};
 const inc=(obj,k)=>obj[k]=(obj[k]??0)+1;
 function analyse(g,ledger){
   const h=Array.isArray(g.history)?g.history:[];
-  // State score shape may differ between versions: report only when explicit score
-  // snapshots are available, otherwise mark this metric unknown.
-  let lastScoreIndex=null,scoreSnapshots=0;
-  for(let i=0;i<h.length;i++){
-    const item=h[i],score=item?.state?.scores??item?.scores??item?.after?.scores;
-    if(!Array.isArray(score))continue;
-    scoreSnapshots++;
-    if(i===0||JSON.stringify(score)!==JSON.stringify(h[lastScoreIndex]?.state?.scores??h[lastScoreIndex]?.scores??h[lastScoreIndex]?.after?.scores))lastScoreIndex=i;
-  }
+  // History records gain per move; score snapshots are not stored there.
+  // Quiet streak is measured from the last scoring move, not inferred from
+  // missing score snapshots.
+  const lastGain=h.findLastIndex(item=>item?.gain===true);
+  const scoreStallPlies=h.every(item=>typeof item?.gain==='boolean')
+    ?h.length-(lastGain+1):null;
   const unresolved=g.state?.winner==null;
   const reason=g.reason==null?'unspecified':String(g.reason);
   const boardId=g.experiment?.boardId??g.boardId??'unknown';
   const stage=g.experiment?.stage??g.stage??'unknown';
-  const policies=g.experiment?.policies??g.policies??[];
+  const policies=g.policies??[];
   const policyKey=Array.isArray(policies)?policies.join(' vs '):String(policies);
-  const repeated=Number(g.repetitionCount??g.metrics?.repetitions??0)>0;
-  const row={id:g.id,ledger,boardId,stage,policies:policyKey,unresolved,reason,plies:g.state?.ply??h.length,repetitionObserved:repeated,scoreStallPlies:scoreSnapshots&&lastScoreIndex!==null?h.length-1-lastScoreIndex:null,scoreMetricAvailable:scoreSnapshots>0};
+  const repeated=Number(g.repetitionCount??0)>0;
+  const row={id:g.id,ledger,boardId,stage,policies:policyKey,unresolved,reason,plies:g.state?.ply??h.length,repetitionObserved:repeated,scoreStallPlies,scoreMetricAvailable:scoreStallPlies!==null};
   return row;
 }
 for(const [name,rows] of ledgers)for(const g of rows){
@@ -40,6 +37,6 @@ for(const [name,rows] of ledgers)for(const g of rows){
   else counts.settled++;
 }
 const unresolved=records.filter(r=>r.unresolved).sort((a,b)=>a.boardId.localeCompare(b.boardId)||a.id.localeCompare(b.id));
-const result={version:1,scope:'existing discovery ledgers; read-only; no new games',counts,reasonCounts,unresolvedByBoard:byBoard,unresolvedByStage:byStage,unresolvedByPolicy:byPolicy,unresolved,limitations:['Reasons reflect engine-recorded stopping reasons, not proven causes of non-termination','Repetition observed is not a proof of an infinite loop','Score stall is null unless score snapshots exist in history','No determination of star accessibility or legal-move scarcity','Duplicate IDs are excluded from counts','This script does not resume games or certify boards']};
+const result={version:1,scope:'existing discovery ledgers; read-only; no new games',counts,reasonCounts,unresolvedByBoard:byBoard,unresolvedByStage:byStage,unresolvedByPolicy:byPolicy,unresolved,limitations:['Reasons reflect engine-recorded stopping reasons, not proven causes of non-termination','Repetition observed is not a proof of an infinite loop','Score stall is null unless all move records include the gain flag','No determination of star accessibility or legal-move scarcity','Duplicate IDs are excluded from counts','This script does not resume games or certify boards']};
 mkdirSync(out.split('/').slice(0,-1).join('/')||'.',{recursive:true});writeFileSync(out,JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify({output:out,...counts,reasonCounts,byStage},null,2));
