@@ -92,7 +92,7 @@ export function advanceGame(checkpoint,{maxPlies=1024,timeBudgetMs=1500,memoryBu
   const lead=Math.sign(n.scores[0]-n.scores[1]);if(priorLead&&lead&&lead!==priorLead)m.leadChanges++;if(lead)priorLead=lead;
   g.history.push({a,from:s.players[s.turn],wallFrom:a.wall?s.walls[a.wall.wall]:null,legal:options.length,canScore,gain,canWin});
   g.state=n;
-  if(n.ply%128===0){g.visits=[...visits];g.rngStates=rngs.map(r=>r.state());onCheckpoint(g);}
+  if(n.ply%128===0){g.visits=[...visits];g.rngStates=rngs.map(r=>r.state());g.lastLead=priorLead;onCheckpoint(g);}
  }
  for(let p=0;p<2;p++)if(g.state.winner!==p&&g.history.length){
   // Reconstructed below by replay, rather than guessing from the terminal score.
