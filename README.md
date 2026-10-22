@@ -119,3 +119,12 @@ PR #2の勝敗表示を最新CPU修正と統合し、続行不能な壁選択・
 `npm run research:masks` で時間・メモリ上限付きの研究を再開します。`MASK_RESUME=0 npm run research:masks` は再集計のみ。`node scripts/verify-mask-study.js` が全棋譜と圧縮データのSHA-256を検証します。通常CIに大量研究を追加していません。
 
 [生成・AI対局・限界・残課題の詳細](reports/mask-lab-2026-10-22.md)。未解決は引き分けではなく、120手や反復は終了条件ではありません。先攻率が50%でも初期位置に偏る場合があるため、P1/P2位置別成績も確認してください。
+
+
+## 全1,135候補の名盤研究
+
+「盤面ラボ」→「名盤研究・全件の基礎評価を読み込む」で、基礎評価・手番別成績・物理的初期位置別成績・独立条件・対応区間・観測特徴を表示できます。研究候補はすべて未認定です。盤面を編集すると研究成績を引き継ぎません。
+
+`npm run research:discovery`、`npm run research:positions`、`npm run research:discovery:report`、`npm run research:discovery:verify` で、時間・メモリ上限付きの評価と照合を実行できます。通常CIに大量対局を追加していません。
+
+[全件評価・5,008局・初期位置改善・信頼区間・限界の詳細](reports/discovery-2026-10-22.md)。元の盤面・過去の研究・公開設定は保持しています。

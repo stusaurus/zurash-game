@@ -49,3 +49,10 @@ test('malicious JSON and huge dimensions stay recoverable; cancelled setup prese
 test('full generated research corpus loads on demand and is searchable',async({page})=>{
  await page.goto('/');await openLab(page);await page.locator('#labCorpus').click();await expect(page.locator('#labMessage')).toContainText('追加表示しました',{timeout:15000});expect(await page.locator('#labLibrary option').count()).toBeGreaterThan(1100);await page.locator('#labSearch').fill('くびれ');expect(await page.locator('#labLibrary option').count()).toBeGreaterThan(1);await page.locator('#labLoad').click();await expect(page.locator('#labPlay')).toBeEnabled();
 });
+
+test('discovery evidence separates turn and physical slots, remains playable and clears after editing',async({page},info)=>{
+ await page.setViewportSize({width:320,height:860});await page.goto('/');await page.locator('#localMode').click();await page.locator('#boardLab > details > summary').click();await page.locator('#labDiscovery').click();await expect(page.locator('#labMessage')).toContainText('全件基礎評価1135面',{timeout:20000});
+ const value=await page.locator('#labLibrary option[data-research="true"]').first().getAttribute('value');await page.locator('#labLibrary').selectOption(value);await page.locator('#labLoad').click();await expect(page.locator('#labEvidence')).toContainText('物理的な初期位置');await expect(page.locator('#labEvidence')).toContainText('独立条件');await expect(page.locator('#labEvidence')).toContainText('未認定');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.locator('#labEvidence').screenshot({path:info.outputPath('discovery-evidence-320.png')});await page.locator('#labPlay').click();await expect(page.locator('#boardSpec')).toContainText('研究用・未認定');await page.locator('#settings').click();await page.locator('#labTarget').fill('1');await page.locator('#labTarget').blur();await expect(page.locator('#labEvidence')).toContainText('編集後の盤面はAI未検証');await expect(page.locator('#labEvidence')).not.toContainText('独立条件');
+});

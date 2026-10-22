@@ -9,6 +9,8 @@ export function mountLab(play) {
  <label>検索<input id="labSearch" placeholder="形状・名前・検証状態"></label>
  <button id="labLoad">選んだ盤面を編集・確認</button>
  <button id="labCorpus">生成済みの研究候補を追加表示</button>
+ <button id="labDiscovery">名盤研究・全件の基礎評価を読み込む</button>
+ <div id="labEvidence" aria-live="polite"></div>
  <div class="lab-fields">
  <label>幅<input id="labWidth" type="number" min="2" max="16" value="9"></label>
  <label>高さ<input id="labHeight" type="number" min="2" max="16" value="7"></label>
@@ -37,13 +39,32 @@ export function mountLab(play) {
  const $=id=>document.getElementById(id),storageKey='zurash-mask-library-v1';
  const say=text=>$('labMessage').textContent=text;
  const attempt=fn=>{try{fn();}catch(e){say(e.message);}};
- let saved=[],corpus=[];
+ let saved=[],corpus=[],discovery=[],basicById=new Map();
  try{const text=localStorage.getItem(storageKey);if(text&&text.length<=1048576){const records=JSON.parse(text);if(Array.isArray(records))saved=records.slice(0,100).flatMap(r=>{try{return [recordBoard(r.board,{name:String(r.name).slice(0,80),seed:r.seed})];}catch{return [];}});}}catch{say('保存データを読み込めませんでした。');}
  let current=structuredClone(MASK_LIBRARY[0]),draft=structuredClone(current.board);
- function records(){return [...MASK_LIBRARY,...EVALUATED_MASK_LIBRARY,...corpus,...saved];}
+ function records(){const replacement=new Map(discovery.map(r=>[r.id,r])),base=[...MASK_LIBRARY,...EVALUATED_MASK_LIBRARY,...corpus,...saved],ids=new Set(base.map(r=>r.id));return [...base.map(r=>replacement.get(r.id)??r),...discovery.filter(r=>!ids.has(r.id))];}
+ function evidence(r){
+  const panel=$('labEvidence');panel.replaceChildren();
+  const add=text=>{const p=document.createElement('p');p.textContent=text;panel.append(p);};
+  if(!r){add('編集後の盤面はAI未検証です。表示していた対局成績は引き継ぎません。');return;}
+  const b=r.board,m=r.metrics,shape=SHAPES[r.shape]??r.shape??'自由マスク';
+  add(`${shape} · ${b.width}×${b.height} · 星${b.stars.length}／壁${b.walls.length}／${b.target}個先取 · ${r.status}【未認定】`);
+  const basic=basicById.get(r.id);if(basic)add(`全件基礎評価：初手${basic.openings.map(o=>o.actions).join('／')}通り、移動可能性${basic.positions.mobility.join('／')}、地形の関節点${basic.topology.articulationCells.length}。固定壁距離と地形グラフの参考値です。`);
+  if(!m){add('AI対局は未検証です。');return;}
+  add(`AI対局${m.games??r.games}局：先攻${m.first}勝／後攻${m.second}勝／未解決${m.unresolved}局`);
+  add(`物理的な初期位置：P1側${m.positionWins?.[0]??'—'}勝／P2側${m.positionWins?.[1]??'—'}勝。手番の集計とは別です。`);
+  const hold=m.stages?.holdout,percent=v=>(v*100).toFixed(1)+'%',interval=v=>v?v.map(percent).join('〜'):'標本不足・未算出';
+  if(hold){add(`独立条件：${hold.games}局・${hold.clusterCount??'—'}シード群。未解決${hold.unresolved}局。先攻率の対応区間${interval(hold.bootstrapFirst95)}／初期位置側の区間${interval(hold.bootstrapPosition95)}。`);}
+  if(m.comparison){const c=m.comparison.holdout;add(`親盤面との対応比較${c.matchedGames}局：位置偏りの減少${(c.positionBiasReduction===null?'未算出':c.positionBiasReduction.toFixed(3))}、区間${c.bootstrapReduction95?c.bootstrapReduction95.map(v=>v.toFixed(3)).join('〜'):'未算出'}。${c.improvementSupported?'条件付き改善の暫定的証拠':'改善は未確認'}。`);}
+  if(Array.isArray(m.finiteHorizonProof))add('4手以内の厳密探索：'+m.finiteHorizonProof.map(p=>`開始P${p.starter+1} ${p.status}`).join('／')+'。finite-horizon-onlyは全ゲームの引き分け・公平性の証明ではありません。');
+  add(`観測された特徴：${(r.traits??[]).join('／')||'評価中'}`);
+  if(m.controls?.wallFull?.games)add(`壁制限比較：通常操作${m.controls.wallFull.games}局／壁操作なし${m.controls.wallNone.games}局。ルールを変更した比較実験で、通常対局の勝率に含めません。`);
+  add((r.warnings??['研究用・未認定。AI条件と標本に依存し、人間の面白さ・最善手の公平性は未証明です。']).join('／'));
+ }
+ function invalidateEvidence(){current={...current,name:'カスタム盤面',seed:null,algorithm:'editor',metrics:null};evidence(null);}
  function library(){
   const filter=$('labSearch').value.toLowerCase();$('labLibrary').replaceChildren();
-  records().forEach((r,index)=>{if(!`${r.name} ${r.shape??''} ${r.status}`.toLowerCase().includes(filter))return;const o=document.createElement('option');o.value=index;o.textContent=`${r.name} · ${r.board.width}×${r.board.height} · ${r.status}`;$('labLibrary').append(o);});
+  records().forEach((r,index)=>{if(!`${r.name} ${r.id} ${r.shape??''} ${r.status} ${(r.traits??[]).join(' ')}`.toLowerCase().includes(filter))return;const o=document.createElement('option');o.value=index;o.dataset.research=String(!!r.metrics?.stages?.deep);o.textContent=`${r.name} · ${r.board.width}×${r.board.height} · ${r.status}`;$('labLibrary').append(o);});
  }
  for(const [value,name] of Object.entries(SHAPES)){const o=document.createElement('option');o.value=value;o.textContent=name;$('labShape').append(o);}
  function draw(){
@@ -64,12 +85,12 @@ export function mountLab(play) {
      if(tool==='p0'||tool==='p1')draft.players[Number(tool[1])]=i;
      else if(tool!=='erase'&&!toggle)draft[tool].push(i);
     }
-    current={...current,name:'カスタム盤面',seed:null,algorithm:'editor'};draw();check();
+    invalidateEvidence();draw();check();
    };e.append(b);
   }
  }
  function check(){const v=validateBoard(draft);$('labPlay').disabled=!v.ok;$('labSave').disabled=!v.ok;say(v.ok?`合法性確認済み・未認定 · 有効${draft.playableCells.length}マス／星${draft.stars.length}／壁${draft.walls.length}／${draft.target}個先取。星取得と決着は未証明。`:v.errors.join('／'));return v;}
- function load(r){current=structuredClone(r);draft=structuredClone(r.board);for(const [id,value] of [['labWidth',draft.width],['labHeight',draft.height],['labStars',draft.stars.length],['labWalls',draft.walls.length],['labTarget',draft.target]])$(id).value=value;if(r.shape&&SHAPES[r.shape])$('labShape').value=r.shape;draw();check();if(r.metrics)say(`${r.status}・未認定 · ${r.games}局／先攻${r.metrics.first}勝・後攻${r.metrics.second}勝・未解決${r.metrics.unresolved}局。${r.traits.join('／')}`);}
+ function load(r){current=structuredClone(r);draft=structuredClone(r.board);for(const [id,value] of [['labWidth',draft.width],['labHeight',draft.height],['labStars',draft.stars.length],['labWalls',draft.walls.length],['labTarget',draft.target]])$(id).value=value;if(r.shape&&SHAPES[r.shape])$('labShape').value=r.shape;draw();check();evidence(r);if(r.metrics)say(`${r.status}・未認定 · ${r.games}局／先攻${r.metrics.first}勝・後攻${r.metrics.second}勝・未解決${r.metrics.unresolved}局。${r.traits.join('／')}`);}
  const num=id=>Number($(id).value);
  function options(){return {width:num('labWidth'),height:num('labHeight'),shape:$('labShape').value,corridor:num('labCorridor'),stars:num('labStars'),walls:num('labWalls'),target:num('labTarget'),seed:num('labSeed'),symmetry:$('labSymmetry').value,starBias:$('labStarBias').value,wallBias:$('labWallBias').value,holes:num('labHoles'),playableCells:draft.playableCells};}
  $('labGenerate').onclick=()=>attempt(()=>load(generateBoard(options())));
@@ -88,8 +109,18 @@ export function mountLab(play) {
    corpus=next;library();say(`研究候補${corpus.length}面を追加表示しました。合法性のみ確認・未認定。`);
   }catch(e){say(e.message);$('labCorpus').disabled=false;}
  };
+ $('labDiscovery').onclick=async()=>{
+  $('labDiscovery').disabled=true;say('名盤研究の結果を読み込んでいます…');
+  try{
+   if(!globalThis.DecompressionStream)throw Error('圧縮ライブラリに未対応です');
+   const fetchData=async name=>{const response=await fetch(new URL('../reports/discovery-2026-10-22/'+name+'.json.gz',import.meta.url));if(!response.ok)throw Error('研究結果を取得できませんでした');const bytes=await response.arrayBuffer();if(bytes.byteLength>2097152)throw Error('研究結果が大きすぎます');const text=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();if(text.length>16777216)throw Error('研究結果が大きすぎます');return JSON.parse(text);};
+   const [lib,basic]=await Promise.all([fetchData('catalogue'),fetchData('basics')]);
+   if(!Array.isArray(lib)||lib.length>1000||!Array.isArray(basic)||basic.length>20000)throw Error('研究結果の形式が不正');
+   discovery=lib.filter(r=>validateBoard(r.board).ok).map(r=>({...r,status:['有望候補','AI検証中'].includes(r.status)?r.status:'AI検証中'}));basicById=new Map(basic.map(r=>[r.id,r]));library();say(`名盤研究${discovery.length}面・全件基礎評価${basic.length}面を読み込みました。すべて未認定。`);
+  }catch(e){say(e.message);$('labDiscovery').disabled=false;}
+ };
  $('labSearch').oninput=library;
- $('labTarget').onchange=()=>{draft.target=num('labTarget');check();};
+ $('labTarget').onchange=()=>{draft.target=num('labTarget');invalidateEvidence();check();};
  $('labPlay').onclick=()=>attempt(()=>{const r=recordBoard(draft,{name:current.name,seed:current.seed,algorithm:current.algorithm});play(r);});
  $('labSave').onclick=()=>attempt(()=>{
   const r=recordBoard(draft,{name:current.name,seed:current.seed,algorithm:current.algorithm});
