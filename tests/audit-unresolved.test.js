@@ -26,6 +26,7 @@ test('unresolved audit counts IDs once and uses gain records for score stalls',(
   assert.match(run.stdout,/topBoards/);
   assert.equal(report.boardPriority[0].withRepetition,2);
   assert.equal(report.boardPriority[0].withNoScoreProgress,1);
+  assert.deepEqual(report.cohorts,{repeatedAndStalled:1,repeatedOnly:1,stalledOnly:0,neither:0});
   assert.equal(report.reasonCounts['budget-plies'],1);
   assert.equal(report.unresolved.find(g=>g.id==='a').scoreStallPlies,31);
   assert.equal(report.unresolved.find(g=>g.id==='c').scoreStallPlies,2);
