@@ -1,7 +1,7 @@
-import {actions,successors,distances,key,initial} from './engine.js';
+import {actions,successors,distances,key,initial,mobility} from './engine.js';
 import {toBoardState,widthOf,heightOf,dimensions,MAX_SIDE} from './geometry.js';
 import {seeded} from './ai.js';
-export const GENERATOR_VERSION='mask-lab-1';
+export const GENERATOR_VERSION='mask-lab-2';
 export const STATUSES=['未検証','合法性確認済み','AI検証中','有望候補','独立検証済み','公式認定候補'];
 export const SHAPES={rectangle:'長方形',square:'正方形',L:'L字',T:'T字',cross:'十字',H:'H字',U:'U字',ring:'中央に穴',waist:'くびれ',stairs:'段差',rooms:'部屋と通路',mask:'自由マスク'};
 export function makeMask(width,height,shape='rectangle',corridor=2,custom) {
@@ -44,6 +44,7 @@ export function validateBoard(input) {
  if(!Number.isInteger(s.target)||s.target<1||s.target>32||s.stars.length<2*s.target-1)errors.push('星数と先取数が矛盾');
  if(!s.playableCells.length||!connected(s))errors.push('有効マスが不連続');
  if(errors.length)return {ok:false,errors,diagnostics:{}};
+ if([0,1].some(p=>!mobility(s,p).length))errors.push('初期状態で滑走不能');
  const openingActions=[0,1].map(turn=>actions({...s,turn}).length);
  if(openingActions.some(n=>!n))errors.push('合法な初手なし');
  const fixedWallReachable=[0,1].map(p=>{const d=distances(s,p);return s.stars.filter(i=>Number.isFinite(d[i]));});

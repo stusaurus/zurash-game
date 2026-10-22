@@ -75,3 +75,8 @@ test('masked checkpoints preserve RNG and history across resume',()=>{
  const direct=advanceGame(g,{maxPlies:30,timeBudgetMs:10000}),part=advanceGame(g,{maxPlies:8,timeBudgetMs:10000}),resumed=advanceGame(part,{maxPlies:30,timeBudgetMs:10000});
  assert.deepEqual(resumed.history,direct.history);assert.deepEqual(resumed.rngStates,direct.rngStates);assert.deepEqual(resumed.state,direct.state);assert.ok(verifyGame(resumed));
 });
+
+test('rejects an initially trapped pawn even when one wall shift can rescue it',()=>{
+ const s=toBoardState({width:4,height:4,players:[0,15],walls:[1,4],stars:[3,6,12],target:2});
+ assert.ok(actions(s).length>0);const v=validateBoard(s);assert.equal(v.ok,false);assert.ok(v.errors.includes('初期状態で滑走不能'));
+});

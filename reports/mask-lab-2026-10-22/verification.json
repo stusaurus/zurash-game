@@ -1,5 +1,5 @@
 {
-  "legalBoards": 1283,
+  "legalBoards": 1135,
   "recordsVerified": 352,
   "uniqueGames": 336,
   "duplicatesExcluded": 16,
@@ -9,10 +9,12 @@
   "second": 151,
   "unresolved": 22,
   "hashes": {
-    "corpus.json.gz": "ce0dd202a461b286d1ddd45cef462633865521b9d8c3837c9fa5a6d24122b3fd",
+    "corpus.json.gz": "1081b1ee03ad4c13c110814376e6613030373a739b6b05e70948aade52d3cea8",
+    "corpus-v1.json.gz": "ce0dd202a461b286d1ddd45cef462633865521b9d8c3837c9fa5a6d24122b3fd",
+    "initial-trap-audit.json": "770cb4947cdab5107d201481d6b31a4ad9d13b110771f947b19d385fa4fc8cb4",
     "games.json.gz": "f074e7ba77d5af46204c0e16a67dc10821e9f3cc44f0d023c74514290bdc5c66",
     "exploratory-games.json.gz": "3e4612e3bdee16241e68093b908e134802ffa23a8867e22c57ec54d87ef5efcd",
-    "library.json": "944405da0f6c5442626146d4d465d47b26767e6f2429ca6bdba2d5fb46772a60",
-    "summary.json": "df675a1807dec4f28af1f3012a8fa9a7a15dcf138395d8c86b56ba17044c59fe"
+    "library.json": "331d184ea69ae7cd47021d96dec79097c7f06ab7807c735fa3cbb494c9c9bb56",
+    "summary.json": "cbeca8e5034364a5b35cbc7bba9beb4028094535a50d5f3b73b98e1f10defc31"
   }
 }

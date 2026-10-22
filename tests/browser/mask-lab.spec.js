@@ -47,5 +47,5 @@ test('malicious JSON and huge dimensions stay recoverable; cancelled setup prese
 });
 
 test('full generated research corpus loads on demand and is searchable',async({page})=>{
- await page.goto('/');await openLab(page);await page.locator('#labCorpus').click();await expect(page.locator('#labMessage')).toContainText('追加表示しました',{timeout:15000});expect(await page.locator('#labLibrary option').count()).toBeGreaterThan(1200);await page.locator('#labSearch').fill('くびれ');expect(await page.locator('#labLibrary option').count()).toBeGreaterThan(1);await page.locator('#labLoad').click();await expect(page.locator('#labPlay')).toBeEnabled();
+ await page.goto('/');await openLab(page);await page.locator('#labCorpus').click();await expect(page.locator('#labMessage')).toContainText('追加表示しました',{timeout:15000});expect(await page.locator('#labLibrary option').count()).toBeGreaterThan(1100);await page.locator('#labSearch').fill('くびれ');expect(await page.locator('#labLibrary option').count()).toBeGreaterThan(1);await page.locator('#labLoad').click();await expect(page.locator('#labPlay')).toBeEnabled();
 });

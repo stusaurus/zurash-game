@@ -3,7 +3,7 @@ export const MASK_LIBRARY = [
   {
     "id": "z-e9a4598e",
     "name": "長方形・1",
-    "generatorVersion": "mask-lab-1",
+    "generatorVersion": "mask-lab-2",
     "seed": 1,
     "algorithm": "seeded-constraint",
     "status": "合法性確認済み",
@@ -143,7 +143,7 @@ export const MASK_LIBRARY = [
   {
     "id": "z-734a432e",
     "name": "正方形・1",
-    "generatorVersion": "mask-lab-1",
+    "generatorVersion": "mask-lab-2",
     "seed": 1,
     "algorithm": "seeded-constraint",
     "status": "合法性確認済み",
@@ -261,10 +261,10 @@ export const MASK_LIBRARY = [
     }
   },
   {
-    "id": "z-3c3e66d1",
-    "name": "L字・1",
-    "generatorVersion": "mask-lab-1",
-    "seed": 1,
+    "id": "z-aebc2906",
+    "name": "L字・2",
+    "generatorVersion": "mask-lab-2",
+    "seed": 2,
     "algorithm": "seeded-constraint",
     "status": "合法性確認済み",
     "metrics": null,
@@ -279,7 +279,7 @@ export const MASK_LIBRARY = [
       "stars": 5,
       "walls": 6,
       "target": 3,
-      "seed": 1,
+      "seed": 2,
       "symmetry": "none",
       "starBias": "random",
       "wallBias": "random",
@@ -331,18 +331,18 @@ export const MASK_LIBRARY = [
       ],
       "target": 3,
       "walls": [
+        40,
+        36,
+        37,
         53,
-        39,
-        18,
-        45,
-        48,
-        61
+        55,
+        57
       ],
       "stars": [
+        49,
         2,
-        52,
-        50,
-        10,
+        51,
+        18,
         59
       ],
       "players": [
@@ -359,14 +359,17 @@ export const MASK_LIBRARY = [
     },
     "diagnostics": {
       "openingActions": [
-        4,
-        2
+        32,
+        18
       ],
       "fixedWallReachable": [
         [
           2
         ],
-        []
+        [
+          49,
+          59
+        ]
       ],
       "terrainConnected": true,
       "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
@@ -375,7 +378,7 @@ export const MASK_LIBRARY = [
   {
     "id": "z-53d73895",
     "name": "T字・1",
-    "generatorVersion": "mask-lab-1",
+    "generatorVersion": "mask-lab-2",
     "seed": 1,
     "algorithm": "seeded-constraint",
     "status": "合法性確認済み",
@@ -495,7 +498,7 @@ export const MASK_LIBRARY = [
   {
     "id": "z-ee5d9bfd",
     "name": "十字・1",
-    "generatorVersion": "mask-lab-1",
+    "generatorVersion": "mask-lab-2",
     "seed": 1,
     "algorithm": "seeded-constraint",
     "status": "合法性確認済み",
@@ -613,7 +616,7 @@ export const MASK_LIBRARY = [
   {
     "id": "z-1a31856d",
     "name": "H字・1",
-    "generatorVersion": "mask-lab-1",
+    "generatorVersion": "mask-lab-2",
     "seed": 1,
     "algorithm": "seeded-constraint",
     "status": "合法性確認済み",
@@ -739,7 +742,7 @@ export const MASK_LIBRARY = [
   {
     "id": "z-64c0eabb",
     "name": "U字・1",
-    "generatorVersion": "mask-lab-1",
+    "generatorVersion": "mask-lab-2",
     "seed": 1,
     "algorithm": "seeded-constraint",
     "status": "合法性確認済み",
@@ -865,7 +868,7 @@ export const MASK_LIBRARY = [
   {
     "id": "z-1e680e2e",
     "name": "中央に穴・1",
-    "generatorVersion": "mask-lab-1",
+    "generatorVersion": "mask-lab-2",
     "seed": 1,
     "algorithm": "seeded-constraint",
     "status": "合法性確認済み",
@@ -1006,7 +1009,7 @@ export const MASK_LIBRARY = [
   {
     "id": "z-e2dc6643",
     "name": "くびれ・1",
-    "generatorVersion": "mask-lab-1",
+    "generatorVersion": "mask-lab-2",
     "seed": 1,
     "algorithm": "seeded-constraint",
     "status": "合法性確認済み",
@@ -1128,7 +1131,7 @@ export const MASK_LIBRARY = [
   {
     "id": "z-8eab89f5",
     "name": "段差・1",
-    "generatorVersion": "mask-lab-1",
+    "generatorVersion": "mask-lab-2",
     "seed": 1,
     "algorithm": "seeded-constraint",
     "status": "合法性確認済み",
@@ -1253,7 +1256,7 @@ export const MASK_LIBRARY = [
   {
     "id": "z-1a31856d",
     "name": "部屋と通路・1",
-    "generatorVersion": "mask-lab-1",
+    "generatorVersion": "mask-lab-2",
     "seed": 1,
     "algorithm": "seeded-constraint",
     "status": "合法性確認済み",
