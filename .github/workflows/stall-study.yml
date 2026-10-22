@@ -1,0 +1,47 @@
+name: Bounded stall research and durable checkpoints
+on:
+  workflow_dispatch:
+    inputs:
+      resume_run_id:
+        description: Optional earlier run of this workflow to resume (same fixed protocol)
+        type: string
+        default: ''
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: stall-research-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/stall-research.test.js
+      - name: Restore explicit checkpoint, never sum independent runs
+        if: inputs.resume_run_id != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RESUME_RUN: ${{ inputs.resume_run_id }}
+        run: |
+          [[ "$RESUME_RUN" =~ ^[0-9]+$ ]] || exit 1
+          gh run download "$RESUME_RUN" -R "$GITHUB_REPOSITORY" -n stall-research -D /tmp/stall-resume
+          STALL_REPORT=/tmp/stall-resume node scripts/verify-stall.js
+          cp -a /tmp/stall-resume/. reports/stall-2026-10-23/
+      - run: timeout 10m node --max-old-space-size=768 scripts/stall-study.js
+        env:
+          STALL_MS: '480000'
+      - run: node --max-old-space-size=768 scripts/verify-stall.js
+      - run: node scripts/stall-report.js
+      - run: cp reports/stall-2026-10-23.md reports/stall-2026-10-23/report.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stall-research
+          path: reports/stall-2026-10-23/
+          retention-days: 90
+          if-no-files-found: error

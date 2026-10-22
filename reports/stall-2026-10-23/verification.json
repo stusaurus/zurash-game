@@ -1,0 +1,78 @@
+{
+  "sourceUniqueGames": 5008,
+  "importedContinuations": 239,
+  "newlySettledSourceGames": 72,
+  "sourceNewGames": 0,
+  "newResearchGames": 1696,
+  "replayedNewPlies": 778837,
+  "independentlyCheckedProofStates": 140,
+  "variantProofStates": 5762,
+  "proofResults": [
+    {
+      "id": "z-55f2fedf",
+      "turn": 0,
+      "status": "neither-forces-victory",
+      "winningRegionSizes": [
+        0,
+        0
+      ],
+      "nonWinningRegion": 35,
+      "limits": [
+        "Reachability-game proof relative to fully checked legal transitions",
+        "Unclassified cycles are not official draws"
+      ]
+    },
+    {
+      "id": "z-55f2fedf",
+      "turn": 1,
+      "status": "neither-forces-victory",
+      "winningRegionSizes": [
+        0,
+        0
+      ],
+      "nonWinningRegion": 35,
+      "limits": [
+        "Reachability-game proof relative to fully checked legal transitions",
+        "Unclassified cycles are not official draws"
+      ]
+    },
+    {
+      "id": "d-40d94fcdb64db85ae957dd95",
+      "turn": 0,
+      "status": "neither-forces-victory",
+      "winningRegionSizes": [
+        0,
+        0
+      ],
+      "nonWinningRegion": 35,
+      "limits": [
+        "Reachability-game proof relative to fully checked legal transitions",
+        "Unclassified cycles are not official draws"
+      ]
+    },
+    {
+      "id": "d-40d94fcdb64db85ae957dd95",
+      "turn": 1,
+      "status": "neither-forces-victory",
+      "winningRegionSizes": [
+        0,
+        0
+      ],
+      "nonWinningRegion": 35,
+      "limits": [
+        "Reachability-game proof relative to fully checked legal transitions",
+        "Unclassified cycles are not official draws"
+      ]
+    }
+  ],
+  "validatedDefinitions": 35,
+  "hashes": {
+    "games": "da01a9cab536604aaf16be52825e3c21d59b77917df3ad6042e6de0170d1c7c7",
+    "imported-delta": "c2813d787804a3702b083e0ac32f406cd510ea60246df836e9bd889e551138a6",
+    "diagnosis": "2280a16b6d177e2d6880934cb233a9f0ead0319f181d28479d50088f89a163ca",
+    "variants": "0869a4836aa63b620b9738613215ed5e91e7b01cf87af797b4aa94fbb943d9bd",
+    "variant-proofs": "666feec15ddd1acd413114ea56f9c1e9d3760f2e3950876af76a08339b7168c1",
+    "frozen": "8bb58279a490649e19ed889886a83ac259a57baa4432eec9e0232c357d6536ba",
+    "catalogue": "aa51433994b6f21dda593bb76630927161a48bcd226a0993f5b887fa7050180f"
+  }
+}

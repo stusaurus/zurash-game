@@ -1,0 +1,1804 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>ズラッシュ停滞原因と比較</title><style>body{font:16px sans-serif;max-width:1050px;margin:24px auto;padding:12px;color:#23484d}section{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}svg{max-width:100%;background:#edf5f2}pre{white-space:pre-wrap;overflow-wrap:anywhere}article{border:1px solid #aac;padding:12px;margin:16px 0}</style><h1>停滞原因と比較（未認定）</h1><p>欠損は描画せず、壁と区別。数字は0からのマスID。U字2IDは同じ物理配置の番号交換。</p><section><svg role="img" aria-label="z-55f2fedf" viewBox="0 0 216 224"><text x="10" y="20" font-size="13">z-55f2fedf</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18">P1</text><text x="23" y="44" font-size="8">0</text><rect x="152" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="59" text-anchor="middle" font-size="18">★</text><text x="155" y="44" font-size="8">3</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18">★</text><text x="23" y="88" font-size="8">4</text><rect x="152" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="103" text-anchor="middle" font-size="18"></text><text x="155" y="88" font-size="8">7</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18">壁</text><text x="23" y="132" font-size="8">8</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18">★</text><text x="155" y="132" font-size="8">11</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18">★</text><text x="23" y="176" font-size="8">12</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18">★</text><text x="67" y="176" font-size="8">13</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18">壁</text><text x="111" y="176" font-size="8">14</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18">P2</text><text x="155" y="176" font-size="8">15</text></svg><svg role="img" aria-label="d-40d94fcdb64db85ae957dd95" viewBox="0 0 216 224"><text x="10" y="20" font-size="13">d-40d94fcdb64db85ae957dd95</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18">P2</text><text x="23" y="44" font-size="8">0</text><rect x="152" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="59" text-anchor="middle" font-size="18">★</text><text x="155" y="44" font-size="8">3</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18">★</text><text x="23" y="88" font-size="8">4</text><rect x="152" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="103" text-anchor="middle" font-size="18"></text><text x="155" y="88" font-size="8">7</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18">壁</text><text x="23" y="132" font-size="8">8</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18">★</text><text x="155" y="132" font-size="8">11</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18">★</text><text x="23" y="176" font-size="8">12</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18">★</text><text x="67" y="176" font-size="8">13</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18">壁</text><text x="111" y="176" font-size="8">14</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18">P1</text><text x="155" y="176" font-size="8">15</text></svg><svg role="img" aria-label="z-affd4d6e" viewBox="0 0 348 312"><text x="10" y="20" font-size="13">z-affd4d6e</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18">P1</text><text x="23" y="44" font-size="8">0</text><rect x="64" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="59" text-anchor="middle" font-size="18"></text><text x="67" y="44" font-size="8">1</text><rect x="108" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="59" text-anchor="middle" font-size="18"></text><text x="111" y="44" font-size="8">2</text><rect x="196" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="59" text-anchor="middle" font-size="18"></text><text x="199" y="44" font-size="8">4</text><rect x="240" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="59" text-anchor="middle" font-size="18"></text><text x="243" y="44" font-size="8">5</text><rect x="284" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="59" text-anchor="middle" font-size="18">★</text><text x="287" y="44" font-size="8">6</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18">壁</text><text x="23" y="88" font-size="8">7</text><rect x="64" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="103" text-anchor="middle" font-size="18">★</text><text x="67" y="88" font-size="8">8</text><rect x="108" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="103" text-anchor="middle" font-size="18"></text><text x="111" y="88" font-size="8">9</text><rect x="196" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="103" text-anchor="middle" font-size="18"></text><text x="199" y="88" font-size="8">11</text><rect x="240" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="103" text-anchor="middle" font-size="18"></text><text x="243" y="88" font-size="8">12</text><rect x="284" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="103" text-anchor="middle" font-size="18"></text><text x="287" y="88" font-size="8">13</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18"></text><text x="23" y="132" font-size="8">14</text><rect x="64" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="147" text-anchor="middle" font-size="18"></text><text x="67" y="132" font-size="8">15</text><rect x="108" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="147" text-anchor="middle" font-size="18"></text><text x="111" y="132" font-size="8">16</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18"></text><text x="155" y="132" font-size="8">17</text><rect x="196" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="147" text-anchor="middle" font-size="18">★</text><text x="199" y="132" font-size="8">18</text><rect x="240" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="147" text-anchor="middle" font-size="18"></text><text x="243" y="132" font-size="8">19</text><rect x="284" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="147" text-anchor="middle" font-size="18"></text><text x="287" y="132" font-size="8">20</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18"></text><text x="23" y="176" font-size="8">21</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18"></text><text x="67" y="176" font-size="8">22</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18"></text><text x="111" y="176" font-size="8">23</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18"></text><text x="155" y="176" font-size="8">24</text><rect x="196" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="191" text-anchor="middle" font-size="18"></text><text x="199" y="176" font-size="8">25</text><rect x="240" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="191" text-anchor="middle" font-size="18"></text><text x="243" y="176" font-size="8">26</text><rect x="284" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="191" text-anchor="middle" font-size="18"></text><text x="287" y="176" font-size="8">27</text><rect x="20" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="235" text-anchor="middle" font-size="18"></text><text x="23" y="220" font-size="8">28</text><rect x="64" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="235" text-anchor="middle" font-size="18"></text><text x="67" y="220" font-size="8">29</text><rect x="108" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="235" text-anchor="middle" font-size="18"></text><text x="111" y="220" font-size="8">30</text><rect x="196" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="235" text-anchor="middle" font-size="18"></text><text x="199" y="220" font-size="8">32</text><rect x="240" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="235" text-anchor="middle" font-size="18"></text><text x="243" y="220" font-size="8">33</text><rect x="284" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="235" text-anchor="middle" font-size="18"></text><text x="287" y="220" font-size="8">34</text><rect x="20" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="279" text-anchor="middle" font-size="18">★</text><text x="23" y="264" font-size="8">35</text><rect x="64" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="279" text-anchor="middle" font-size="18"></text><text x="67" y="264" font-size="8">36</text><rect x="108" y="254" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="279" text-anchor="middle" font-size="18">壁</text><text x="111" y="264" font-size="8">37</text><rect x="196" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="279" text-anchor="middle" font-size="18"></text><text x="199" y="264" font-size="8">39</text><rect x="240" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="279" text-anchor="middle" font-size="18">★</text><text x="243" y="264" font-size="8">40</text><rect x="284" y="254" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="305" y="279" text-anchor="middle" font-size="18">P2</text><text x="287" y="264" font-size="8">41</text></svg><svg role="img" aria-label="{&quot;kind&quot;:&quot;walls&quot;,&quot;from&quot;:8,&quot;to&quot;:7}" viewBox="0 0 216 224"><text x="10" y="20" font-size="13">{&quot;kind&quot;:&quot;walls&quot;,&quot;from&quot;:8,&quot;to&quot;:7}</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18">P1</text><text x="23" y="44" font-size="8">0</text><rect x="152" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="59" text-anchor="middle" font-size="18">★</text><text x="155" y="44" font-size="8">3</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18">★</text><text x="23" y="88" font-size="8">4</text><rect x="152" y="78" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="173" y="103" text-anchor="middle" font-size="18">壁</text><text x="155" y="88" font-size="8">7</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18"></text><text x="23" y="132" font-size="8">8</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18">★</text><text x="155" y="132" font-size="8">11</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18">★</text><text x="23" y="176" font-size="8">12</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18">★</text><text x="67" y="176" font-size="8">13</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18">壁</text><text x="111" y="176" font-size="8">14</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18">P2</text><text x="155" y="176" font-size="8">15</text></svg><svg role="img" aria-label="{&quot;kind&quot;:&quot;wall-count&quot;,&quot;removed&quot;:8}" viewBox="0 0 216 224"><text x="10" y="20" font-size="13">{&quot;kind&quot;:&quot;wall-count&quot;,&quot;removed&quot;:8}</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18">P1</text><text x="23" y="44" font-size="8">0</text><rect x="152" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="59" text-anchor="middle" font-size="18">★</text><text x="155" y="44" font-size="8">3</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18">★</text><text x="23" y="88" font-size="8">4</text><rect x="152" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="103" text-anchor="middle" font-size="18"></text><text x="155" y="88" font-size="8">7</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18"></text><text x="23" y="132" font-size="8">8</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18">★</text><text x="155" y="132" font-size="8">11</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18">★</text><text x="23" y="176" font-size="8">12</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18">★</text><text x="67" y="176" font-size="8">13</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18">壁</text><text x="111" y="176" font-size="8">14</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18">P2</text><text x="155" y="176" font-size="8">15</text></svg><svg role="img" aria-label="{&quot;kind&quot;:&quot;target&quot;,&quot;from&quot;:3,&quot;to&quot;:2}" viewBox="0 0 216 224"><text x="10" y="20" font-size="13">{&quot;kind&quot;:&quot;target&quot;,&quot;from&quot;:3,&quot;to&quot;:2}</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18">P1</text><text x="23" y="44" font-size="8">0</text><rect x="152" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="59" text-anchor="middle" font-size="18">★</text><text x="155" y="44" font-size="8">3</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18">★</text><text x="23" y="88" font-size="8">4</text><rect x="152" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="103" text-anchor="middle" font-size="18"></text><text x="155" y="88" font-size="8">7</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18">壁</text><text x="23" y="132" font-size="8">8</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18">★</text><text x="155" y="132" font-size="8">11</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18">★</text><text x="23" y="176" font-size="8">12</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18">★</text><text x="67" y="176" font-size="8">13</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18">壁</text><text x="111" y="176" font-size="8">14</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18">P2</text><text x="155" y="176" font-size="8">15</text></svg></section><h2>代表棋譜</h2><article><h3>z-affd4d6e</h3><svg role="img" aria-label="初期状態" viewBox="0 0 348 312"><text x="10" y="20" font-size="13">初期状態</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18">P1</text><text x="23" y="44" font-size="8">0</text><rect x="64" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="59" text-anchor="middle" font-size="18"></text><text x="67" y="44" font-size="8">1</text><rect x="108" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="59" text-anchor="middle" font-size="18"></text><text x="111" y="44" font-size="8">2</text><rect x="196" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="59" text-anchor="middle" font-size="18"></text><text x="199" y="44" font-size="8">4</text><rect x="240" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="59" text-anchor="middle" font-size="18"></text><text x="243" y="44" font-size="8">5</text><rect x="284" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="59" text-anchor="middle" font-size="18">★</text><text x="287" y="44" font-size="8">6</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18">壁</text><text x="23" y="88" font-size="8">7</text><rect x="64" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="103" text-anchor="middle" font-size="18">★</text><text x="67" y="88" font-size="8">8</text><rect x="108" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="103" text-anchor="middle" font-size="18"></text><text x="111" y="88" font-size="8">9</text><rect x="196" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="103" text-anchor="middle" font-size="18"></text><text x="199" y="88" font-size="8">11</text><rect x="240" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="103" text-anchor="middle" font-size="18"></text><text x="243" y="88" font-size="8">12</text><rect x="284" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="103" text-anchor="middle" font-size="18"></text><text x="287" y="88" font-size="8">13</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18"></text><text x="23" y="132" font-size="8">14</text><rect x="64" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="147" text-anchor="middle" font-size="18"></text><text x="67" y="132" font-size="8">15</text><rect x="108" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="147" text-anchor="middle" font-size="18"></text><text x="111" y="132" font-size="8">16</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18"></text><text x="155" y="132" font-size="8">17</text><rect x="196" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="147" text-anchor="middle" font-size="18">★</text><text x="199" y="132" font-size="8">18</text><rect x="240" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="147" text-anchor="middle" font-size="18"></text><text x="243" y="132" font-size="8">19</text><rect x="284" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="147" text-anchor="middle" font-size="18"></text><text x="287" y="132" font-size="8">20</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18"></text><text x="23" y="176" font-size="8">21</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18"></text><text x="67" y="176" font-size="8">22</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18"></text><text x="111" y="176" font-size="8">23</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18"></text><text x="155" y="176" font-size="8">24</text><rect x="196" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="191" text-anchor="middle" font-size="18"></text><text x="199" y="176" font-size="8">25</text><rect x="240" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="191" text-anchor="middle" font-size="18"></text><text x="243" y="176" font-size="8">26</text><rect x="284" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="191" text-anchor="middle" font-size="18"></text><text x="287" y="176" font-size="8">27</text><rect x="20" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="235" text-anchor="middle" font-size="18"></text><text x="23" y="220" font-size="8">28</text><rect x="64" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="235" text-anchor="middle" font-size="18"></text><text x="67" y="220" font-size="8">29</text><rect x="108" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="235" text-anchor="middle" font-size="18"></text><text x="111" y="220" font-size="8">30</text><rect x="196" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="235" text-anchor="middle" font-size="18"></text><text x="199" y="220" font-size="8">32</text><rect x="240" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="235" text-anchor="middle" font-size="18"></text><text x="243" y="220" font-size="8">33</text><rect x="284" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="235" text-anchor="middle" font-size="18"></text><text x="287" y="220" font-size="8">34</text><rect x="20" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="279" text-anchor="middle" font-size="18">★</text><text x="23" y="264" font-size="8">35</text><rect x="64" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="279" text-anchor="middle" font-size="18"></text><text x="67" y="264" font-size="8">36</text><rect x="108" y="254" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="279" text-anchor="middle" font-size="18">壁</text><text x="111" y="264" font-size="8">37</text><rect x="196" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="279" text-anchor="middle" font-size="18"></text><text x="199" y="264" font-size="8">39</text><rect x="240" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="279" text-anchor="middle" font-size="18">★</text><text x="243" y="264" font-size="8">40</text><rect x="284" y="254" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="305" y="279" text-anchor="middle" font-size="18">P2</text><text x="287" y="264" font-size="8">41</text></svg><svg role="img" aria-label="終局" viewBox="0 0 348 312"><text x="10" y="20" font-size="13">終局</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18"></text><text x="23" y="44" font-size="8">0</text><rect x="64" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="59" text-anchor="middle" font-size="18"></text><text x="67" y="44" font-size="8">1</text><rect x="108" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="59" text-anchor="middle" font-size="18"></text><text x="111" y="44" font-size="8">2</text><rect x="196" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="59" text-anchor="middle" font-size="18"></text><text x="199" y="44" font-size="8">4</text><rect x="240" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="59" text-anchor="middle" font-size="18"></text><text x="243" y="44" font-size="8">5</text><rect x="284" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="59" text-anchor="middle" font-size="18"></text><text x="287" y="44" font-size="8">6</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18"></text><text x="23" y="88" font-size="8">7</text><rect x="64" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="103" text-anchor="middle" font-size="18">★</text><text x="67" y="88" font-size="8">8</text><rect x="108" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="103" text-anchor="middle" font-size="18"></text><text x="111" y="88" font-size="8">9</text><rect x="196" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="103" text-anchor="middle" font-size="18"></text><text x="199" y="88" font-size="8">11</text><rect x="240" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="103" text-anchor="middle" font-size="18"></text><text x="243" y="88" font-size="8">12</text><rect x="284" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="103" text-anchor="middle" font-size="18"></text><text x="287" y="88" font-size="8">13</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18">P1</text><text x="23" y="132" font-size="8">14</text><rect x="64" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="147" text-anchor="middle" font-size="18"></text><text x="67" y="132" font-size="8">15</text><rect x="108" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="147" text-anchor="middle" font-size="18"></text><text x="111" y="132" font-size="8">16</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18"></text><text x="155" y="132" font-size="8">17</text><rect x="196" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="147" text-anchor="middle" font-size="18"></text><text x="199" y="132" font-size="8">18</text><rect x="240" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="147" text-anchor="middle" font-size="18"></text><text x="243" y="132" font-size="8">19</text><rect x="284" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="147" text-anchor="middle" font-size="18"></text><text x="287" y="132" font-size="8">20</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18">壁</text><text x="23" y="176" font-size="8">21</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18"></text><text x="67" y="176" font-size="8">22</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18"></text><text x="111" y="176" font-size="8">23</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18"></text><text x="155" y="176" font-size="8">24</text><rect x="196" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="191" text-anchor="middle" font-size="18"></text><text x="199" y="176" font-size="8">25</text><rect x="240" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="191" text-anchor="middle" font-size="18"></text><text x="243" y="176" font-size="8">26</text><rect x="284" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="191" text-anchor="middle" font-size="18"></text><text x="287" y="176" font-size="8">27</text><rect x="20" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="235" text-anchor="middle" font-size="18"></text><text x="23" y="220" font-size="8">28</text><rect x="64" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="235" text-anchor="middle" font-size="18"></text><text x="67" y="220" font-size="8">29</text><rect x="108" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="235" text-anchor="middle" font-size="18"></text><text x="111" y="220" font-size="8">30</text><rect x="196" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="235" text-anchor="middle" font-size="18"></text><text x="199" y="220" font-size="8">32</text><rect x="240" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="235" text-anchor="middle" font-size="18"></text><text x="243" y="220" font-size="8">33</text><rect x="284" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="305" y="235" text-anchor="middle" font-size="18"></text><text x="287" y="220" font-size="8">34</text><rect x="20" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="279" text-anchor="middle" font-size="18"></text><text x="23" y="264" font-size="8">35</text><rect x="64" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="279" text-anchor="middle" font-size="18"></text><text x="67" y="264" font-size="8">36</text><rect x="108" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="279" text-anchor="middle" font-size="18"></text><text x="111" y="264" font-size="8">37</text><rect x="196" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="279" text-anchor="middle" font-size="18"></text><text x="199" y="264" font-size="8">39</text><rect x="240" y="254" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="261" y="279" text-anchor="middle" font-size="18">P2</text><text x="243" y="264" font-size="8">40</text><rect x="284" y="254" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="305" y="279" text-anchor="middle" font-size="18">壁</text><text x="287" y="264" font-size="8">41</text></svg><p>s-b087b6d0918029a2b17af9623cbfae76954f01ff12b95dadb778c73cae099b69／search vs route／58手</p><pre>[
+  {
+    &quot;ply&quot;: 1,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 30
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 2,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 37
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 3,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 30
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 4,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 29
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 5,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 36
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 6,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 14
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 7,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 7
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 8,
+    &quot;action&quot;: {
+      &quot;wall&quot;: null,
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 9,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 29
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 10,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 28
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 11,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 0
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 12,
+    &quot;action&quot;: {
+      &quot;wall&quot;: null,
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 13,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 7
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 14,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 0
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 15,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 7
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 16,
+    &quot;action&quot;: {
+      &quot;wall&quot;: null,
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 17,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 35
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 18,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 36
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 19,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 0
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 20,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 7
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 21,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 35
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 22,
+    &quot;action&quot;: {
+      &quot;wall&quot;: null,
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 23,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 36
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 24,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 37
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 25,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 30
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 26,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 29
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 27,
+    &quot;action&quot;: {
+      &quot;wall&quot;: null,
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 28,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 14
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 29,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 21
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 30,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 30
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 31,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 28
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 32,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 35
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 33,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 28
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 34,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 23
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 35,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 16
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 36,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 29
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 37,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 28
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 38,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 17
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 39,
+    &quot;action&quot;: {
+      &quot;wall&quot;: null,
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 40,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 24
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 41,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 21
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 42,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 25
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 43,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 24
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 44,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 25
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 45,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 32
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 46,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 25
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 47,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 26
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 48,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 33
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 49,
+    &quot;action&quot;: {
+      &quot;wall&quot;: null,
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 50,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 32
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 51,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 33
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 52,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 22
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 53,
+    &quot;action&quot;: {
+      &quot;wall&quot;: null,
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 54,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 32
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 55,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 33
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 56,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 34
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 57,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 21
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 58,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 41
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: true
+  }
+]</pre><p>次の1手の勝敗を変える分岐例 1件（全ゲームの必勝証明ではありません）。</p></article><article><h3>z-cfd6bd9d</h3><svg role="img" aria-label="初期状態" viewBox="0 0 260 268"><text x="10" y="20" font-size="13">初期状態</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18">P1</text><text x="23" y="44" font-size="8">0</text><rect x="64" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="59" text-anchor="middle" font-size="18"></text><text x="67" y="44" font-size="8">1</text><rect x="108" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="59" text-anchor="middle" font-size="18"></text><text x="111" y="44" font-size="8">2</text><rect x="152" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="59" text-anchor="middle" font-size="18"></text><text x="155" y="44" font-size="8">3</text><rect x="196" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="59" text-anchor="middle" font-size="18"></text><text x="199" y="44" font-size="8">4</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18"></text><text x="23" y="88" font-size="8">5</text><rect x="64" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="103" text-anchor="middle" font-size="18"></text><text x="67" y="88" font-size="8">6</text><rect x="108" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="103" text-anchor="middle" font-size="18"></text><text x="111" y="88" font-size="8">7</text><rect x="152" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="103" text-anchor="middle" font-size="18"></text><text x="155" y="88" font-size="8">8</text><rect x="196" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="103" text-anchor="middle" font-size="18"></text><text x="199" y="88" font-size="8">9</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18"></text><text x="23" y="132" font-size="8">10</text><rect x="64" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="147" text-anchor="middle" font-size="18"></text><text x="67" y="132" font-size="8">11</text><rect x="108" y="122" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="147" text-anchor="middle" font-size="18">壁</text><text x="111" y="132" font-size="8">12</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18">壁</text><text x="155" y="132" font-size="8">13</text><rect x="196" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="147" text-anchor="middle" font-size="18"></text><text x="199" y="132" font-size="8">14</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18"></text><text x="23" y="176" font-size="8">15</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18"></text><text x="67" y="176" font-size="8">16</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18">壁</text><text x="111" y="176" font-size="8">17</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18"></text><text x="155" y="176" font-size="8">18</text><rect x="196" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="191" text-anchor="middle" font-size="18"></text><text x="199" y="176" font-size="8">19</text><rect x="20" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="235" text-anchor="middle" font-size="18"></text><text x="23" y="220" font-size="8">20</text><rect x="64" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="235" text-anchor="middle" font-size="18"></text><text x="67" y="220" font-size="8">21</text><rect x="108" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="235" text-anchor="middle" font-size="18">★</text><text x="111" y="220" font-size="8">22</text><rect x="152" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="235" text-anchor="middle" font-size="18"></text><text x="155" y="220" font-size="8">23</text><rect x="196" y="210" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="217" y="235" text-anchor="middle" font-size="18">P2</text><text x="199" y="220" font-size="8">24</text></svg><svg role="img" aria-label="終局" viewBox="0 0 260 268"><text x="10" y="20" font-size="13">終局</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18"></text><text x="23" y="44" font-size="8">0</text><rect x="64" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="59" text-anchor="middle" font-size="18"></text><text x="67" y="44" font-size="8">1</text><rect x="108" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="59" text-anchor="middle" font-size="18"></text><text x="111" y="44" font-size="8">2</text><rect x="152" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="59" text-anchor="middle" font-size="18"></text><text x="155" y="44" font-size="8">3</text><rect x="196" y="34" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="217" y="59" text-anchor="middle" font-size="18">P1</text><text x="199" y="44" font-size="8">4</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18"></text><text x="23" y="88" font-size="8">5</text><rect x="64" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="103" text-anchor="middle" font-size="18"></text><text x="67" y="88" font-size="8">6</text><rect x="108" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="103" text-anchor="middle" font-size="18"></text><text x="111" y="88" font-size="8">7</text><rect x="152" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="103" text-anchor="middle" font-size="18"></text><text x="155" y="88" font-size="8">8</text><rect x="196" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="103" text-anchor="middle" font-size="18"></text><text x="199" y="88" font-size="8">9</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18"></text><text x="23" y="132" font-size="8">10</text><rect x="64" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="147" text-anchor="middle" font-size="18"></text><text x="67" y="132" font-size="8">11</text><rect x="108" y="122" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="147" text-anchor="middle" font-size="18">壁</text><text x="111" y="132" font-size="8">12</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18"></text><text x="155" y="132" font-size="8">13</text><rect x="196" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="147" text-anchor="middle" font-size="18"></text><text x="199" y="132" font-size="8">14</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18"></text><text x="23" y="176" font-size="8">15</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18"></text><text x="67" y="176" font-size="8">16</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18"></text><text x="111" y="176" font-size="8">17</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18"></text><text x="155" y="176" font-size="8">18</text><rect x="196" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="217" y="191" text-anchor="middle" font-size="18">壁</text><text x="199" y="176" font-size="8">19</text><rect x="20" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="235" text-anchor="middle" font-size="18"></text><text x="23" y="220" font-size="8">20</text><rect x="64" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="235" text-anchor="middle" font-size="18"></text><text x="67" y="220" font-size="8">21</text><rect x="108" y="210" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="129" y="235" text-anchor="middle" font-size="18">P2</text><text x="111" y="220" font-size="8">22</text><rect x="152" y="210" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="173" y="235" text-anchor="middle" font-size="18">壁</text><text x="155" y="220" font-size="8">23</text><rect x="196" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="235" text-anchor="middle" font-size="18"></text><text x="199" y="220" font-size="8">24</text></svg><p>s-7ea14d08171b5b0b8e11e8c58e215e3863437b1160bc3fca4c651b83bf299d27／search vs route／14手</p><pre>[
+  {
+    &quot;ply&quot;: 1,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 18
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 2,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 13
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 3,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 19
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 4,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 24
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 5,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 19
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 6,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 16
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 7,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 17
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 8,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 18
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 9,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 19
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 10,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 18
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 11,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 13
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 12,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 18
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 13,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 12
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 14,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 23
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: true
+  }
+]</pre><p>次の1手の勝敗を変える分岐例 1件（全ゲームの必勝証明ではありません）。</p></article><article><h3>z-29d756f4</h3><svg role="img" aria-label="初期状態" viewBox="0 0 304 312"><text x="10" y="20" font-size="13">初期状態</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18">P1</text><text x="23" y="44" font-size="8">0</text><rect x="64" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="59" text-anchor="middle" font-size="18"></text><text x="67" y="44" font-size="8">1</text><rect x="108" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="59" text-anchor="middle" font-size="18">★</text><text x="111" y="44" font-size="8">2</text><rect x="152" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="59" text-anchor="middle" font-size="18"></text><text x="155" y="44" font-size="8">3</text><rect x="196" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="59" text-anchor="middle" font-size="18"></text><text x="199" y="44" font-size="8">4</text><rect x="240" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="59" text-anchor="middle" font-size="18">★</text><text x="243" y="44" font-size="8">5</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18">★</text><text x="23" y="88" font-size="8">6</text><rect x="64" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="103" text-anchor="middle" font-size="18"></text><text x="67" y="88" font-size="8">7</text><rect x="108" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="103" text-anchor="middle" font-size="18"></text><text x="111" y="88" font-size="8">8</text><rect x="152" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="103" text-anchor="middle" font-size="18"></text><text x="155" y="88" font-size="8">9</text><rect x="196" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="103" text-anchor="middle" font-size="18"></text><text x="199" y="88" font-size="8">10</text><rect x="240" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="103" text-anchor="middle" font-size="18"></text><text x="243" y="88" font-size="8">11</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18"></text><text x="23" y="132" font-size="8">12</text><rect x="64" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="147" text-anchor="middle" font-size="18"></text><text x="67" y="132" font-size="8">13</text><rect x="108" y="122" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="147" text-anchor="middle" font-size="18">壁</text><text x="111" y="132" font-size="8">14</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18">★</text><text x="155" y="132" font-size="8">15</text><rect x="196" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="147" text-anchor="middle" font-size="18"></text><text x="199" y="132" font-size="8">16</text><rect x="240" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="147" text-anchor="middle" font-size="18"></text><text x="243" y="132" font-size="8">17</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18"></text><text x="23" y="176" font-size="8">18</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18">★</text><text x="67" y="176" font-size="8">19</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18">壁</text><text x="111" y="176" font-size="8">20</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18">壁</text><text x="155" y="176" font-size="8">21</text><rect x="196" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="217" y="191" text-anchor="middle" font-size="18">壁</text><text x="199" y="176" font-size="8">22</text><rect x="240" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="191" text-anchor="middle" font-size="18"></text><text x="243" y="176" font-size="8">23</text><rect x="20" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="235" text-anchor="middle" font-size="18"></text><text x="23" y="220" font-size="8">24</text><rect x="64" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="235" text-anchor="middle" font-size="18"></text><text x="67" y="220" font-size="8">25</text><rect x="108" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="235" text-anchor="middle" font-size="18"></text><text x="111" y="220" font-size="8">26</text><rect x="152" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="235" text-anchor="middle" font-size="18"></text><text x="155" y="220" font-size="8">27</text><rect x="196" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="235" text-anchor="middle" font-size="18"></text><text x="199" y="220" font-size="8">28</text><rect x="240" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="235" text-anchor="middle" font-size="18">★</text><text x="243" y="220" font-size="8">29</text><rect x="20" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="279" text-anchor="middle" font-size="18">★</text><text x="23" y="264" font-size="8">30</text><rect x="64" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="279" text-anchor="middle" font-size="18"></text><text x="67" y="264" font-size="8">31</text><rect x="108" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="279" text-anchor="middle" font-size="18">★</text><text x="111" y="264" font-size="8">32</text><rect x="152" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="279" text-anchor="middle" font-size="18"></text><text x="155" y="264" font-size="8">33</text><rect x="196" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="279" text-anchor="middle" font-size="18">★</text><text x="199" y="264" font-size="8">34</text><rect x="240" y="254" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="261" y="279" text-anchor="middle" font-size="18">P2</text><text x="243" y="264" font-size="8">35</text></svg><svg role="img" aria-label="終局" viewBox="0 0 304 312"><text x="10" y="20" font-size="13">終局</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18">P1</text><text x="23" y="44" font-size="8">0</text><rect x="64" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="59" text-anchor="middle" font-size="18"></text><text x="67" y="44" font-size="8">1</text><rect x="108" y="34" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="129" y="59" text-anchor="middle" font-size="18">P2</text><text x="111" y="44" font-size="8">2</text><rect x="152" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="59" text-anchor="middle" font-size="18"></text><text x="155" y="44" font-size="8">3</text><rect x="196" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="59" text-anchor="middle" font-size="18"></text><text x="199" y="44" font-size="8">4</text><rect x="240" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="59" text-anchor="middle" font-size="18"></text><text x="243" y="44" font-size="8">5</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18">★</text><text x="23" y="88" font-size="8">6</text><rect x="64" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="103" text-anchor="middle" font-size="18"></text><text x="67" y="88" font-size="8">7</text><rect x="108" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="103" text-anchor="middle" font-size="18"></text><text x="111" y="88" font-size="8">8</text><rect x="152" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="103" text-anchor="middle" font-size="18"></text><text x="155" y="88" font-size="8">9</text><rect x="196" y="78" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="217" y="103" text-anchor="middle" font-size="18">壁</text><text x="199" y="88" font-size="8">10</text><rect x="240" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="103" text-anchor="middle" font-size="18"></text><text x="243" y="88" font-size="8">11</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18"></text><text x="23" y="132" font-size="8">12</text><rect x="64" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="147" text-anchor="middle" font-size="18"></text><text x="67" y="132" font-size="8">13</text><rect x="108" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="147" text-anchor="middle" font-size="18"></text><text x="111" y="132" font-size="8">14</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18">★</text><text x="155" y="132" font-size="8">15</text><rect x="196" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="147" text-anchor="middle" font-size="18"></text><text x="199" y="132" font-size="8">16</text><rect x="240" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="147" text-anchor="middle" font-size="18"></text><text x="243" y="132" font-size="8">17</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18"></text><text x="23" y="176" font-size="8">18</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18"></text><text x="67" y="176" font-size="8">19</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18"></text><text x="111" y="176" font-size="8">20</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18"></text><text x="155" y="176" font-size="8">21</text><rect x="196" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="191" text-anchor="middle" font-size="18"></text><text x="199" y="176" font-size="8">22</text><rect x="240" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="191" text-anchor="middle" font-size="18"></text><text x="243" y="176" font-size="8">23</text><rect x="20" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="235" text-anchor="middle" font-size="18"></text><text x="23" y="220" font-size="8">24</text><rect x="64" y="210" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="85" y="235" text-anchor="middle" font-size="18">壁</text><text x="67" y="220" font-size="8">25</text><rect x="108" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="235" text-anchor="middle" font-size="18"></text><text x="111" y="220" font-size="8">26</text><rect x="152" y="210" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="173" y="235" text-anchor="middle" font-size="18">壁</text><text x="155" y="220" font-size="8">27</text><rect x="196" y="210" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="217" y="235" text-anchor="middle" font-size="18">壁</text><text x="199" y="220" font-size="8">28</text><rect x="240" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="235" text-anchor="middle" font-size="18">★</text><text x="243" y="220" font-size="8">29</text><rect x="20" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="279" text-anchor="middle" font-size="18"></text><text x="23" y="264" font-size="8">30</text><rect x="64" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="279" text-anchor="middle" font-size="18"></text><text x="67" y="264" font-size="8">31</text><rect x="108" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="279" text-anchor="middle" font-size="18"></text><text x="111" y="264" font-size="8">32</text><rect x="152" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="279" text-anchor="middle" font-size="18"></text><text x="155" y="264" font-size="8">33</text><rect x="196" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="279" text-anchor="middle" font-size="18">★</text><text x="199" y="264" font-size="8">34</text><rect x="240" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="279" text-anchor="middle" font-size="18"></text><text x="243" y="264" font-size="8">35</text></svg><p>s-6096527a1bec50b85e9359a290f6e2a2847fa6fc98279fdf01d2f4d8d4c9e00c／search vs route／28手</p><pre>[
+  {
+    &quot;ply&quot;: 1,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 3,
+        &quot;to&quot;: 28
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 2,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 8
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 3,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 14
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 4,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 8
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 5,
+    &quot;action&quot;: {
+      &quot;wall&quot;: null,
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 6,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 14
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 7,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 8
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 8,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 9
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 9,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 10
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 10,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 3,
+        &quot;to&quot;: 27
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 11,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 3,
+        &quot;to&quot;: 28
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 12,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 4
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 13,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 5
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 14,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 27
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 15,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 26
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 16,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 4
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 17,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 5
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 18,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 25
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 19,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 26
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 20,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 31
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 21,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 11
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 22,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 20
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 23,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 26
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 24,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 27
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 25,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 25
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 26,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 10
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 27,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 26
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 28,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 27
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: true
+  }
+]</pre><p>次の1手の勝敗を変える分岐例 0件（全ゲームの必勝証明ではありません）。</p></article><article><h3>d-dadb621708b0a8eeaf36e8d2</h3><svg role="img" aria-label="初期状態" viewBox="0 0 304 312"><text x="10" y="20" font-size="13">初期状態</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18"></text><text x="23" y="44" font-size="8">0</text><rect x="64" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="59" text-anchor="middle" font-size="18"></text><text x="67" y="44" font-size="8">1</text><rect x="108" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="59" text-anchor="middle" font-size="18">★</text><text x="111" y="44" font-size="8">2</text><rect x="152" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="59" text-anchor="middle" font-size="18"></text><text x="155" y="44" font-size="8">3</text><rect x="196" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="59" text-anchor="middle" font-size="18"></text><text x="199" y="44" font-size="8">4</text><rect x="240" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="59" text-anchor="middle" font-size="18">★</text><text x="243" y="44" font-size="8">5</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18">★</text><text x="23" y="88" font-size="8">6</text><rect x="64" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="103" text-anchor="middle" font-size="18"></text><text x="67" y="88" font-size="8">7</text><rect x="108" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="103" text-anchor="middle" font-size="18"></text><text x="111" y="88" font-size="8">8</text><rect x="152" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="103" text-anchor="middle" font-size="18"></text><text x="155" y="88" font-size="8">9</text><rect x="196" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="103" text-anchor="middle" font-size="18"></text><text x="199" y="88" font-size="8">10</text><rect x="240" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="103" text-anchor="middle" font-size="18"></text><text x="243" y="88" font-size="8">11</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18"></text><text x="23" y="132" font-size="8">12</text><rect x="64" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="147" text-anchor="middle" font-size="18"></text><text x="67" y="132" font-size="8">13</text><rect x="108" y="122" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="147" text-anchor="middle" font-size="18">壁</text><text x="111" y="132" font-size="8">14</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18">★</text><text x="155" y="132" font-size="8">15</text><rect x="196" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="147" text-anchor="middle" font-size="18"></text><text x="199" y="132" font-size="8">16</text><rect x="240" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="147" text-anchor="middle" font-size="18"></text><text x="243" y="132" font-size="8">17</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18"></text><text x="23" y="176" font-size="8">18</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18">★</text><text x="67" y="176" font-size="8">19</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18">壁</text><text x="111" y="176" font-size="8">20</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18">壁</text><text x="155" y="176" font-size="8">21</text><rect x="196" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="217" y="191" text-anchor="middle" font-size="18">壁</text><text x="199" y="176" font-size="8">22</text><rect x="240" y="166" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="261" y="191" text-anchor="middle" font-size="18">P2</text><text x="243" y="176" font-size="8">23</text><rect x="20" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="235" text-anchor="middle" font-size="18"></text><text x="23" y="220" font-size="8">24</text><rect x="64" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="235" text-anchor="middle" font-size="18"></text><text x="67" y="220" font-size="8">25</text><rect x="108" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="235" text-anchor="middle" font-size="18"></text><text x="111" y="220" font-size="8">26</text><rect x="152" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="235" text-anchor="middle" font-size="18"></text><text x="155" y="220" font-size="8">27</text><rect x="196" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="235" text-anchor="middle" font-size="18"></text><text x="199" y="220" font-size="8">28</text><rect x="240" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="235" text-anchor="middle" font-size="18">★</text><text x="243" y="220" font-size="8">29</text><rect x="20" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="279" text-anchor="middle" font-size="18">★</text><text x="23" y="264" font-size="8">30</text><rect x="64" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="279" text-anchor="middle" font-size="18"></text><text x="67" y="264" font-size="8">31</text><rect x="108" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="279" text-anchor="middle" font-size="18">★</text><text x="111" y="264" font-size="8">32</text><rect x="152" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="279" text-anchor="middle" font-size="18"></text><text x="155" y="264" font-size="8">33</text><rect x="196" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="279" text-anchor="middle" font-size="18">★</text><text x="199" y="264" font-size="8">34</text><rect x="240" y="254" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="261" y="279" text-anchor="middle" font-size="18">P1</text><text x="243" y="264" font-size="8">35</text></svg><svg role="img" aria-label="終局" viewBox="0 0 304 312"><text x="10" y="20" font-size="13">終局</text><rect x="20" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="59" text-anchor="middle" font-size="18"></text><text x="23" y="44" font-size="8">0</text><rect x="64" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="59" text-anchor="middle" font-size="18"></text><text x="67" y="44" font-size="8">1</text><rect x="108" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="59" text-anchor="middle" font-size="18"></text><text x="111" y="44" font-size="8">2</text><rect x="152" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="59" text-anchor="middle" font-size="18"></text><text x="155" y="44" font-size="8">3</text><rect x="196" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="59" text-anchor="middle" font-size="18"></text><text x="199" y="44" font-size="8">4</text><rect x="240" y="34" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="59" text-anchor="middle" font-size="18"></text><text x="243" y="44" font-size="8">5</text><rect x="20" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="103" text-anchor="middle" font-size="18">★</text><text x="23" y="88" font-size="8">6</text><rect x="64" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="103" text-anchor="middle" font-size="18"></text><text x="67" y="88" font-size="8">7</text><rect x="108" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="103" text-anchor="middle" font-size="18"></text><text x="111" y="88" font-size="8">8</text><rect x="152" y="78" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="173" y="103" text-anchor="middle" font-size="18">壁</text><text x="155" y="88" font-size="8">9</text><rect x="196" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="103" text-anchor="middle" font-size="18"></text><text x="199" y="88" font-size="8">10</text><rect x="240" y="78" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="103" text-anchor="middle" font-size="18"></text><text x="243" y="88" font-size="8">11</text><rect x="20" y="122" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="41" y="147" text-anchor="middle" font-size="18">壁</text><text x="23" y="132" font-size="8">12</text><rect x="64" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="147" text-anchor="middle" font-size="18"></text><text x="67" y="132" font-size="8">13</text><rect x="108" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="147" text-anchor="middle" font-size="18"></text><text x="111" y="132" font-size="8">14</text><rect x="152" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="147" text-anchor="middle" font-size="18"></text><text x="155" y="132" font-size="8">15</text><rect x="196" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="147" text-anchor="middle" font-size="18"></text><text x="199" y="132" font-size="8">16</text><rect x="240" y="122" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="147" text-anchor="middle" font-size="18"></text><text x="243" y="132" font-size="8">17</text><rect x="20" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="191" text-anchor="middle" font-size="18"></text><text x="23" y="176" font-size="8">18</text><rect x="64" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="191" text-anchor="middle" font-size="18">★</text><text x="67" y="176" font-size="8">19</text><rect x="108" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="191" text-anchor="middle" font-size="18"></text><text x="111" y="176" font-size="8">20</text><rect x="152" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="173" y="191" text-anchor="middle" font-size="18">壁</text><text x="155" y="176" font-size="8">21</text><rect x="196" y="166" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="191" text-anchor="middle" font-size="18"></text><text x="199" y="176" font-size="8">22</text><rect x="240" y="166" width="42" height="42" rx="5" fill="#b9c1c6" stroke="#53777c"/><text x="261" y="191" text-anchor="middle" font-size="18">壁</text><text x="243" y="176" font-size="8">23</text><rect x="20" y="210" width="42" height="42" rx="5" fill="#a8e0cd" stroke="#53777c"/><text x="41" y="235" text-anchor="middle" font-size="18">P1</text><text x="23" y="220" font-size="8">24</text><rect x="64" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="235" text-anchor="middle" font-size="18"></text><text x="67" y="220" font-size="8">25</text><rect x="108" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="129" y="235" text-anchor="middle" font-size="18"></text><text x="111" y="220" font-size="8">26</text><rect x="152" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="235" text-anchor="middle" font-size="18"></text><text x="155" y="220" font-size="8">27</text><rect x="196" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="235" text-anchor="middle" font-size="18"></text><text x="199" y="220" font-size="8">28</text><rect x="240" y="210" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="235" text-anchor="middle" font-size="18"></text><text x="243" y="220" font-size="8">29</text><rect x="20" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="41" y="279" text-anchor="middle" font-size="18"></text><text x="23" y="264" font-size="8">30</text><rect x="64" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="85" y="279" text-anchor="middle" font-size="18"></text><text x="67" y="264" font-size="8">31</text><rect x="108" y="254" width="42" height="42" rx="5" fill="#b9cdf5" stroke="#53777c"/><text x="129" y="279" text-anchor="middle" font-size="18">P2</text><text x="111" y="264" font-size="8">32</text><rect x="152" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="173" y="279" text-anchor="middle" font-size="18"></text><text x="155" y="264" font-size="8">33</text><rect x="196" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="217" y="279" text-anchor="middle" font-size="18"></text><text x="199" y="264" font-size="8">34</text><rect x="240" y="254" width="42" height="42" rx="5" fill="#f5f5eb" stroke="#53777c"/><text x="261" y="279" text-anchor="middle" font-size="18"></text><text x="243" y="264" font-size="8">35</text></svg><p>s-b486dca98d6475d0928e91598e4edc6c7e412a9186edaf6075770b671fe93749／search vs route／14手</p><pre>[
+  {
+    &quot;ply&quot;: 1,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 27
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 2,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 8
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 3,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 14
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 4,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 3,
+        &quot;to&quot;: 23
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 5,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 8
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 6,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 14
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 7,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 26
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 8,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 13
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 9,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 20
+      },
+      &quot;dir&quot;: 1
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 10,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 7
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: true
+  },
+  {
+    &quot;ply&quot;: 11,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 8
+      },
+      &quot;dir&quot;: 0
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 12,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 0,
+        &quot;to&quot;: 9
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 13,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 1,
+        &quot;to&quot;: 12
+      },
+      &quot;dir&quot;: 3
+    },
+    &quot;gain&quot;: false
+  },
+  {
+    &quot;ply&quot;: 14,
+    &quot;action&quot;: {
+      &quot;wall&quot;: {
+        &quot;wall&quot;: 2,
+        &quot;to&quot;: 21
+      },
+      &quot;dir&quot;: 2
+    },
+    &quot;gain&quot;: true
+  }
+]</pre><p>次の1手の勝敗を変える分岐例 0件（全ゲームの必勝証明ではありません）。</p></article><h2>停滞の代表的な序盤</h2><pre>[
+  {
+    &quot;id&quot;: &quot;z-55f2fedf&quot;,
+    &quot;example&quot;: {
+      &quot;id&quot;: &quot;g-0e6689347ce01bc37149d4a5dcb66a38c1ced7541b86f6fd989d02744f916279&quot;,
+      &quot;initial&quot;: {
+        &quot;width&quot;: 4,
+        &quot;height&quot;: 4,
+        &quot;playableCells&quot;: [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        &quot;target&quot;: 3,
+        &quot;walls&quot;: [
+          14,
+          8
+        ],
+        &quot;stars&quot;: [
+          12,
+          11,
+          3,
+          4,
+          13
+        ],
+        &quot;players&quot;: [
+          0,
+          15
+        ],
+        &quot;scores&quot;: [
+          0,
+          0
+        ],
+        &quot;turn&quot;: 0,
+        &quot;ply&quot;: 0,
+        &quot;winner&quot;: null
+      },
+      &quot;policies&quot;: [
+        &quot;star&quot;,
+        &quot;positional&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 15
+          },
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 14
+          },
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 15
+          },
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 14
+          },
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        }
+      ],
+      &quot;checkpoint&quot;: {
+        &quot;width&quot;: 4,
+        &quot;height&quot;: 4,
+        &quot;playableCells&quot;: [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        &quot;target&quot;: 3,
+        &quot;walls&quot;: [
+          15,
+          8
+        ],
+        &quot;stars&quot;: [
+          12,
+          13
+        ],
+        &quot;players&quot;: [
+          0,
+          11
+        ],
+        &quot;scores&quot;: [
+          1,
+          2
+        ],
+        &quot;turn&quot;: 0,
+        &quot;ply&quot;: 512,
+        &quot;winner&quot;: null
+      },
+      &quot;quiet&quot;: 508,
+      &quot;repeated&quot;: 488,
+      &quot;declinedCaptures&quot;: 0
+    }
+  },
+  {
+    &quot;id&quot;: &quot;d-40d94fcdb64db85ae957dd95&quot;,
+    &quot;example&quot;: {
+      &quot;id&quot;: &quot;g-7783ae371359e94cf2971b5e78ea7fa11a5fd0444383ee6b01a45db22a2118ff&quot;,
+      &quot;initial&quot;: {
+        &quot;width&quot;: 4,
+        &quot;height&quot;: 4,
+        &quot;playableCells&quot;: [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        &quot;target&quot;: 3,
+        &quot;walls&quot;: [
+          14,
+          8
+        ],
+        &quot;stars&quot;: [
+          12,
+          11,
+          3,
+          4,
+          13
+        ],
+        &quot;players&quot;: [
+          15,
+          0
+        ],
+        &quot;scores&quot;: [
+          0,
+          0
+        ],
+        &quot;turn&quot;: 0,
+        &quot;ply&quot;: 0,
+        &quot;winner&quot;: null
+      },
+      &quot;policies&quot;: [
+        &quot;star&quot;,
+        &quot;positional&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 15
+          },
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 11
+          },
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 15
+          },
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 11
+          },
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 15
+          },
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 14
+          },
+          &quot;dir&quot;: 0
+        }
+      ],
+      &quot;checkpoint&quot;: {
+        &quot;width&quot;: 4,
+        &quot;height&quot;: 4,
+        &quot;playableCells&quot;: [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        &quot;target&quot;: 3,
+        &quot;walls&quot;: [
+          14,
+          8
+        ],
+        &quot;stars&quot;: [
+          12,
+          13
+        ],
+        &quot;players&quot;: [
+          3,
+          0
+        ],
+        &quot;scores&quot;: [
+          2,
+          1
+        ],
+        &quot;turn&quot;: 0,
+        &quot;ply&quot;: 512,
+        &quot;winner&quot;: null
+      },
+      &quot;quiet&quot;: 509,
+      &quot;repeated&quot;: 481,
+      &quot;declinedCaptures&quot;: 0
+    }
+  },
+  {
+    &quot;id&quot;: &quot;z-affd4d6e&quot;,
+    &quot;example&quot;: {
+      &quot;id&quot;: &quot;g-6a7945b0989a03c215c5a588fbac06ca21ac6ed6b178d151d8224c2449ee8ec9&quot;,
+      &quot;initial&quot;: {
+        &quot;width&quot;: 7,
+        &quot;height&quot;: 6,
+        &quot;playableCells&quot;: [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          39,
+          40,
+          41
+        ],
+        &quot;target&quot;: 3,
+        &quot;walls&quot;: [
+          7,
+          37
+        ],
+        &quot;stars&quot;: [
+          8,
+          40,
+          6,
+          35,
+          18
+        ],
+        &quot;players&quot;: [
+          0,
+          41
+        ],
+        &quot;scores&quot;: [
+          0,
+          0
+        ],
+        &quot;turn&quot;: 0,
+        &quot;ply&quot;: 0,
+        &quot;winner&quot;: null
+      },
+      &quot;policies&quot;: [
+        &quot;positional&quot;,
+        &quot;star&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 1,
+            &quot;to&quot;: 30
+          },
+          &quot;dir&quot;: 1
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 1,
+            &quot;to&quot;: 29
+          },
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 1,
+            &quot;to&quot;: 30
+          },
+          &quot;dir&quot;: 3
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 14
+          },
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 1,
+            &quot;to&quot;: 29
+          },
+          &quot;dir&quot;: 1
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 1,
+            &quot;to&quot;: 30
+          },
+          &quot;dir&quot;: 3
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 3
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 0,
+            &quot;to&quot;: 15
+          },
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 0
+        },
+        {
+          &quot;wall&quot;: {
+            &quot;wall&quot;: 1,
+            &quot;to&quot;: 23
+          },
+          &quot;dir&quot;: 1
+        },
+        {
+          &quot;wall&quot;: null,
+          &quot;dir&quot;: 2
+        }
+      ],
+      &quot;checkpoint&quot;: {
+        &quot;width&quot;: 7,
+        &quot;height&quot;: 6,
+        &quot;playableCells&quot;: [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          39,
+          40,
+          41
+        ],
+        &quot;target&quot;: 3,
+        &quot;walls&quot;: [
+          29,
+          17
+        ],
+        &quot;stars&quot;: [
+          8
+        ],
+        &quot;players&quot;: [
+          37,
+          4
+        ],
+        &quot;scores&quot;: [
+          2,
+          2
+        ],
+        &quot;turn&quot;: 1,
+        &quot;ply&quot;: 105,
+        &quot;winner&quot;: null
+      },
+      &quot;quiet&quot;: 82,
+      &quot;repeated&quot;: 2,
+      &quot;declinedCaptures&quot;: 0
+    }
+  }
+]</pre></html>

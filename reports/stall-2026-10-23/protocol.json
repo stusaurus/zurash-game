@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "trainingSeeds": [
+    12000101,
+    12000139
+  ],
+  "holdoutSeeds": [
+    13000001,
+    13000019,
+    13000033,
+    13000051,
+    13000073,
+    13000087,
+    13000103,
+    13000129
+  ],
+  "diagnosticSeeds": [
+    14000029,
+    14000041
+  ],
+  "timeBudgetMs": 500,
+  "maxPlies": 2048,
+  "selection": "Within each mutation class, train-only: unresolved rate, maximum turn/slot bias, edit count, ID; keep at most 3, prioritize stars/walls before target/shape. Position-only impossibility retained.",
+  "familyWise": "Holm on selected child settlement sign-flip tests",
+  "fairness": "No official certification; all unresolved outcomes retained as ranges",
+  "baseDefinitionHashes": {
+    "z-55f2fedf": "4edf7c4937dcdd34b4b6a3e8e05eaa5fc23a5e37b51183b710242cf6b6d9510c",
+    "d-40d94fcdb64db85ae957dd95": "f6a7b9ddc95a047a4c78b16abd5c3625cefb810b7a9e3aedd851ec2e9a79be9f",
+    "z-affd4d6e": "26255682ff3a0cb8d14d9bc2b674dcaffb4fda66b8ef73ec66ab424f27303f03",
+    "z-cfd6bd9d": "e8961bcecf379492bbecb63609b43ebef6d782da2647c1f46f0391a2636e8c98",
+    "z-29d756f4": "552b8de679ce51a3c88d7dabc0efcea549c2a674c3de9914fc0a1432f46d3421",
+    "d-983a30a4c06fb6c245fc2916": "df79fdfc5fc34c812bba462cc31bf23f111fb31b00942480c4a521dbcac7077e",
+    "z-9c4ad32a": "52fdd6ec1fe6a8ea8bfce191d55fc103d92c5e677f9da48d4c5cdcc573bf71ce",
+    "d-de7d9fbb4dcdbfff1f8b3c2c": "a2a24b040468e5aff44e63a766326eaa89839520d345af2c193637ea6dd8555e",
+    "d-f76021e24b38baa379d56526": "34ef596f2dd5b42c4453d2559202e789604d4b2ea745d87b57e9e59e560d9b91",
+    "d-dadb621708b0a8eeaf36e8d2": "077c4709f6542d42bc9ee15c78abf6c9e8bf1299b72542215b622e0bd484838c",
+    "d-88c6a4da15116cc19b1a5041": "7a9450c8d500d64a28ab4fc4c4b1ff5c35f7d57014b2d018881c25be390955e5"
+  }
+}

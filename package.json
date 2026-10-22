@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node --test tests/*.test.js",
     "balance": "node scripts/balance.js",
-    "check": "node --check src/app.js && node --check src/engine.js && node --check src/ai.js && node --check src/cpu-worker.js && node --check scripts/strategy-study.js && node --check scripts/experimental-policies.js && node --check src/route-ai.js && node --check src/geometry.js && node --check src/board-lab.js && node --check src/lab-ui.js && node --check scripts/mask-study.js && node --check scripts/board-discovery.js && node --check scripts/discovery-study.js && node --check scripts/position-followup.js && node --check scripts/discovery-analysis.js && node --check scripts/verify-discovery.js && node --check scripts/audit-unresolved.js",
+    "check": "node --check src/app.js && node --check src/engine.js && node --check src/ai.js && node --check src/cpu-worker.js && node --check scripts/strategy-study.js && node --check scripts/experimental-policies.js && node --check src/route-ai.js && node --check src/geometry.js && node --check src/board-lab.js && node --check src/lab-ui.js && node --check scripts/mask-study.js && node --check scripts/board-discovery.js && node --check scripts/discovery-study.js && node --check scripts/position-followup.js && node --check scripts/discovery-analysis.js && node --check scripts/verify-discovery.js && node --check scripts/audit-unresolved.js && node --check scripts/stall-research.js && node --check scripts/stall-study.js && node --check scripts/verify-stall.js && node --check scripts/stall-report.js",
     "test:browser": "playwright test",
     "quality:audit": "node scripts/quality-audit.js",
     "quality:layouts": "node scripts/layout-lab.js",
@@ -17,7 +17,10 @@
     "research:positions": "node --max-old-space-size=640 scripts/position-followup.js",
     "research:discovery:report": "node --max-old-space-size=640 scripts/discovery-analysis.js",
     "research:discovery:verify": "node --max-old-space-size=640 scripts/verify-discovery.js",
-    "research:unresolved:audit": "node scripts/audit-unresolved.js"
+    "research:unresolved:audit": "node scripts/audit-unresolved.js",
+    "research:stall": "node --max-old-space-size=768 scripts/stall-study.js",
+    "research:stall:verify": "node --max-old-space-size=768 scripts/verify-stall.js",
+    "research:stall:report": "node scripts/stall-report.js"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"

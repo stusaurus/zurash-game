@@ -10,6 +10,7 @@ export function mountLab(play) {
  <button id="labLoad">選んだ盤面を編集・確認</button>
  <button id="labCorpus">生成済みの研究候補を追加表示</button>
  <button id="labDiscovery">名盤研究・全件の基礎評価を読み込む</button>
+ <button id="labStall">停滞原因と改善比較を読み込む</button>
  <div id="labEvidence" aria-live="polite"></div>
  <div class="lab-fields">
  <label>幅<input id="labWidth" type="number" min="2" max="16" value="9"></label>
@@ -118,6 +119,18 @@ export function mountLab(play) {
    if(!Array.isArray(lib)||lib.length>1000||!Array.isArray(basic)||basic.length>20000)throw Error('研究結果の形式が不正');
    discovery=lib.filter(r=>validateBoard(r.board).ok).map(r=>({...r,status:['有望候補','AI検証中'].includes(r.status)?r.status:'AI検証中'}));basicById=new Map(basic.map(r=>[r.id,r]));library();say(`名盤研究${discovery.length}面・全件基礎評価${basic.length}面を読み込みました。すべて未認定。`);
   }catch(e){say(e.message);$('labDiscovery').disabled=false;}
+ };
+ $('labStall').onclick=async()=>{
+  $('labStall').disabled=true;say('停滞研究の結果を読み込んでいます…');
+  try{
+   if(!globalThis.DecompressionStream)throw Error('圧縮ライブラリに未対応です');
+   const response=await fetch(new URL('../reports/stall-2026-10-23/catalogue.json.gz',import.meta.url));if(!response.ok)throw Error('停滞研究を取得できませんでした');
+   const bytes=await response.arrayBuffer();if(bytes.byteLength>2097152)throw Error('研究結果が大きすぎます');
+   const text=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();if(text.length>16777216)throw Error('研究結果が大きすぎます');
+   const data=JSON.parse(text);if(!Array.isArray(data)||data.length>100)throw Error('研究結果の形式が不正');
+   if(data.some(r=>!validateBoard(r.board).ok||!r.metrics))throw Error('研究盤面の形式が不正');
+   const map=new Map(discovery.map(r=>[r.id,r]));for(const r of data)map.set(r.id,r);discovery=[...map.values()];library();say(`停滞研究${data.length}面を追加しました。勝利不能の原因・改善候補・全モードの独立比較。すべて未認定。`);
+  }catch(e){say(e.message);$('labStall').disabled=false;}
  };
  $('labSearch').oninput=library;
  $('labTarget').onchange=()=>{draft.target=num('labTarget');invalidateEvidence();check();};

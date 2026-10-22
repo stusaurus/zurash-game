@@ -1,0 +1,18 @@
+{
+  "runId": 39782117108,
+  "commit": "de00468bd1e500776fa1798b2bbde981844e17bf",
+  "artifactId": 12426614536,
+  "artifactSHA256": "55ad41eb511f5416960b06e83bd2b6113ea2682ef6d056edb6f22c79df688b08",
+  "baseline": "c558a42dea58fd7002b97422240166b505a030587097d3b338de50c1730759d5",
+  "source": "d8462b82ef5fd4c6655470854b06f4cc8e8d08f17b27100ef35cafff298c2412",
+  "delta": "444dbf2277ed439ad19f4b3fa77e6e60f790a210b1a21f0b92a55391a1407718",
+  "continued": 239,
+  "newlySettled": 72,
+  "addedPlies": 158652,
+  "newGames": 0,
+  "sourceHashes": {
+    "games": "d7e418bd562e8c38b634e6b563b912bb3e58ee9b59f86e286d4d2e9386b382b2",
+    "position-games": "61824ef473b0ad9c754039a006e149b4a2974df42688c776a3495b5fdb406473",
+    "continuation-audit": "bf940a84d2b15ad074fdd8a1228a78ff33718b2e5b34b4baa667782ce5985d57"
+  }
+}

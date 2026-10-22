@@ -128,3 +128,9 @@ PR #2の勝敗表示を最新CPU修正と統合し、続行不能な壁選択・
 `npm run research:discovery`、`npm run research:positions`、`npm run research:discovery:report`、`npm run research:discovery:verify` で、時間・メモリ上限付きの評価と照合を実行できます。通常CIに大量対局を追加していません。
 
 [全件評価・5,008局・初期位置改善・信頼区間・限界の詳細](reports/discovery-2026-10-22.md)。元の盤面・過去の研究・公開設定は保持しています。
+
+## 停滞原因と同条件再評価（2026-10-23）
+
+[停滞研究報告](reports/stall-2026-10-23.md)と[盤面図・代表棋譜](reports/stall-2026-10-23/boards.html)。U字2IDの全状態検証、18小変更、既存8候補・全6モードの独立比較を保存。研究用・未認定。盤面ラボの「停滞原因と改善比較を読み込む」から試せます。
+
+`npm run research:stall`、`npm run research:stall:report`、`npm run research:stall:verify`。重い処理は手動の `stall-study.yml` に分離し、元の5,008局は変更しません。
