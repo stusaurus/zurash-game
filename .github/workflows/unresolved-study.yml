@@ -1,0 +1,53 @@
+name: Unresolved game audit and continuation
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - tactics-size-experiment
+    paths:
+      - .github/workflows/unresolved-study.yml
+permissions:
+  contents: read
+concurrency:
+  group: unresolved-study-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  audit-and-resume:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test unresolved audit
+        run: node --test tests/audit-unresolved.test.js
+      - name: Audit original unresolved games
+        run: npm run research:unresolved:audit
+      - name: Continue original game IDs (no new games)
+        run: node --max-old-space-size=640 scripts/discovery-continue.js
+        env:
+          CONTINUE_MS: '90000'
+      - name: Audit after continuation
+        run: npm run research:unresolved:audit
+        env:
+          AUDIT_OUTPUT: reports/discovery-2026-10-22/unresolved-diagnostics-after.json
+      - name: Rebuild discovery reports
+        run: npm run research:discovery:report
+        env:
+          DISCOVERY_RESUME: '0'
+      - name: Verify discovery replays and accounting
+        run: npm run research:discovery:verify
+      - name: Upload audit, resumed games and verification
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: unresolved-study-${{ github.run_id }}
+          path: |
+            reports/discovery-2026-10-22/unresolved-diagnostics.json
+            reports/discovery-2026-10-22/unresolved-diagnostics-after.json
+            reports/discovery-2026-10-22/continuation-audit.json.gz
+            reports/discovery-2026-10-22/summary.json
+            reports/discovery-2026-10-22/position-summary.json
+            reports/discovery-2026-10-22/verification.json
+          retention-days: 30
