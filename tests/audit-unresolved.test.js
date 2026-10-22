@@ -21,6 +21,9 @@ test('unresolved audit counts IDs once and uses gain records for score stalls',(
   assert.equal(report.reasonCounts['budget-time'],1);
   assert.equal(report.boardPriority[0].boardId,'candidate');
   assert.equal(report.boardPriority[0].unresolved,2);
+  assert.equal(report.boardPriority[0].totalGames,3);
+  assert.equal(report.boardPriority[0].unresolvedRate,2/3);
+  assert.match(run.stdout,/topBoards/);
   assert.equal(report.boardPriority[0].withRepetition,2);
   assert.equal(report.boardPriority[0].withNoScoreProgress,1);
   assert.equal(report.reasonCounts['budget-plies'],1);
