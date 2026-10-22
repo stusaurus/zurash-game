@@ -1,3 +1,4 @@
+import {widthOf,heightOf,isPlayable,geometryKey,toBoardState} from "./geometry.js";
 import {RESEARCH_LAYOUTS} from "./research-layouts.js";
 export const SIZE = 7;
 export const DIRS = [
@@ -36,7 +37,8 @@ export const LAYOUTS = [
 export const ALL_LAYOUTS = [...LAYOUTS, ...RESEARCH_LAYOUTS];
 export const clone = (s) => structuredClone(s);
 export function initial(layout = 0, starter = 0) {
-  const l = ALL_LAYOUTS[layout];
+  const l = typeof layout === "object" ? layout : ALL_LAYOUTS[layout];
+  if (l.width !== undefined || l.playableCells !== undefined) return {...toBoardState(l),turn:starter};
   return {
     size: l.size ?? SIZE,
     target: l.target ?? 3,
@@ -49,16 +51,19 @@ export function initial(layout = 0, starter = 0) {
     winner: null,
   };
 }
-export function step(pos, dir, size = SIZE) {
-  const x = (pos % size) + DIRS[dir].dx,
-    y = Math.floor(pos / size) + DIRS[dir].dy;
-  return x < 0 || x >= size || y < 0 || y >= size ? null : y * size + x;
+export function step(pos, dir, board = SIZE) {
+  const s = typeof board === "number" ? {size:board} : board;
+  if (!isPlayable(s,pos) || !DIRS[dir]) return null;
+  const width=widthOf(s), height=heightOf(s);
+  const x = pos % width + DIRS[dir].dx, y = Math.floor(pos / width) + DIRS[dir].dy;
+  const to=y*width+x;
+  return x<0 || x>=width || y<0 || y>=height || !isPlayable(s,to) ? null : to;
 }
 export function slide(s, p, dir) {
   let at = s.players[p],
     next;
   while (
-    (next = step(at, dir, s.size ?? SIZE)) !== null &&
+    (next = step(at, dir, s)) !== null &&
     !s.walls.includes(next) &&
     next !== s.players[1 - p]
   )
@@ -73,7 +78,7 @@ export function movableWalls(s) {
   const out = [];
   for (let w = 0; w < s.walls.length; w++)
     for (let d = 0; d < 4; d++) {
-      const to = step(s.walls[w], d, s.size ?? SIZE);
+      const to = step(s.walls[w], d, s);
       if (
         to === null ||
         s.walls.includes(to) ||
@@ -160,7 +165,7 @@ export function successors(s) {
 }
 export function key(s) {
   return JSON.stringify([
-    s.size ?? SIZE, s.target ?? 3,
+    geometryKey(s), s.target ?? 3,
     [...s.walls].sort((a, b) => a - b),
     [...s.stars].sort((a, b) => a - b),
     s.players,
@@ -169,7 +174,7 @@ export function key(s) {
   ]);
 }
 export function distances(s, p) {
-  const dist = Array((s.size ?? SIZE) ** 2).fill(Infinity),
+  const dist = Array(widthOf(s) * heightOf(s)).fill(Infinity),
     q = [s.players[p]];
   dist[q[0]] = 0;
   for (let i = 0; i < q.length; i++) {

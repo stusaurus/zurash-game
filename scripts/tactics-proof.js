@@ -1,3 +1,4 @@
+import {geometryKey} from "../src/geometry.js";
 // Exact finite-horizon minimax. A cap result is NOT an official game draw.
 import {successors} from '../src/engine.js';
 export const WIN=1,DRAW=0,LOSS=-1,UNKNOWN=null;
@@ -5,7 +6,7 @@ export function canonical(s,remaining,root){
   const p=root===0?s.players:[s.players[1],s.players[0]];
   const sc=root===0?s.scores:[s.scores[1],s.scores[0]];
   // Walls are indistinguishable for outcome values; cached actions are never reused.
-  return JSON.stringify([s.size??7,s.target??3,[...s.walls].sort((a,b)=>a-b),[...s.stars].sort((a,b)=>a-b),p,sc,s.turn===root?0:1,remaining]);
+  return JSON.stringify([geometryKey(s),s.target??3,[...s.walls].sort((a,b)=>a-b),[...s.stars].sort((a,b)=>a-b),p,sc,s.turn===root?0:1,remaining]);
 }
 export function prove(state,{horizon=120,nodeBudget=100000,timeBudgetMs=30000,maxTableEntries=250000,memoryBudgetMb=512,alphaBeta=true,horizonPruning=true}={}){
   for(const [v,min,max] of [[horizon,0,120],[nodeBudget,1,10000000],[timeBudgetMs,1,3600000],[maxTableEntries,1,1000000],[memoryBudgetMb,32,4096]])
