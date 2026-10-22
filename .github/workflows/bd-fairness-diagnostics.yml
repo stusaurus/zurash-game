@@ -5,6 +5,7 @@ on:
     branches: [tactics-size-experiment]
     paths:
       - 'scripts/bd-fairness-diagnostics.js'
+      - 'scripts/bd-fairness-candidates.js'
       - 'src/research-layouts.js'
       - '.github/workflows/bd-fairness-diagnostics.yml'
   pull_request:
@@ -27,6 +28,8 @@ jobs:
         run: |
           node --check scripts/bd-fairness-diagnostics.js
           node scripts/bd-fairness-diagnostics.js
+          node --check scripts/bd-fairness-candidates.js
+          node scripts/bd-fairness-candidates.js
       - name: Validate output
         run: |
           node --input-type=module -e "import {readFileSync} from 'node:fs'; import assert from 'node:assert/strict'; const r=JSON.parse(readFileSync('reports/fairness-diagnostics/BD-static.json')); assert.deepEqual(r.modes.map(x=>x.id),['B','D']); for(const x of r.modes){assert.equal(x.players.length,2);assert.ok(Number.isFinite(x.base.proxyBias));assert.ok(Number.isFinite(x.swappedProxy.proxyBias));}"
@@ -34,5 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: bd-fairness-${{ github.run_id }}
-          path: reports/fairness-diagnostics/BD-static.json
+          path: |
+            reports/fairness-diagnostics/BD-static.json
+            reports/fairness-diagnostics/BD-candidates.json
           retention-days: 30
