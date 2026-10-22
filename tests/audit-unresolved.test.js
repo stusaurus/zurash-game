@@ -19,6 +19,10 @@ test('unresolved audit counts IDs once and uses gain records for score stalls',(
   const report=JSON.parse(readFileSync(output,'utf8'));
   assert.deepEqual({...report.counts},{total:3,settled:1,unresolved:2,duplicateIds:1,withRepetition:2,withNoScoreProgress:1,missingReason:0});
   assert.equal(report.reasonCounts['budget-time'],1);
+  assert.equal(report.boardPriority[0].boardId,'candidate');
+  assert.equal(report.boardPriority[0].unresolved,2);
+  assert.equal(report.boardPriority[0].withRepetition,2);
+  assert.equal(report.boardPriority[0].withNoScoreProgress,1);
   assert.equal(report.reasonCounts['budget-plies'],1);
   assert.equal(report.unresolved.find(g=>g.id==='a').scoreStallPlies,31);
   assert.equal(report.unresolved.find(g=>g.id==='c').scoreStallPlies,2);
