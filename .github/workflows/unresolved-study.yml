@@ -5,6 +5,7 @@ on:
     paths:
       - .github/workflows/unresolved-study.yml
       - scripts/audit-unresolved.js
+      - tests/audit-unresolved.test.js
       - scripts/discovery-continue.js
       - scripts/verify-discovery.js
       - tests/audit-unresolved.test.js
