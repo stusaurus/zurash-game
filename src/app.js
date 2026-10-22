@@ -1,3 +1,5 @@
+import {widthOf,heightOf,isPlayable} from "./geometry.js";
+import {mountLab} from "./lab-ui.js";
 import {
   initial,
   ALL_LAYOUTS as LAYOUTS,
@@ -26,7 +28,9 @@ let state = initial(),
   worker = null,
   cpuTimer = null,
   activeSettings = { layout: 0, starter: 0, level: "strong" },
-  matchSeed = 0;
+  matchSeed = 0,
+  customBoard = null,
+  customName = "研究盤面";
 for (let i = 4; i < LAYOUTS.length; i++) {
   const option = document.createElement('option'); option.value = i;
   const l = LAYOUTS[i]; option.textContent = `${l.name} · 星${l.stars.length}／壁${l.walls.length}／${l.target}個先取`;
@@ -40,7 +44,7 @@ const tokenEls = [0, 1].map((p) => {
   return el;
 });
 function shiftArrow(from, to) {
-  return ({ [-state.size]: "↑", [1]: "→", [state.size]: "↓", [-1]: "←" })[to - from] || "";
+  return ({ [-widthOf(state)]: "↑", [1]: "→", [widthOf(state)]: "↓", [-1]: "←" })[to - from] || "";
 }
 function cpuTurn() {
   return mode === "cpu" && state.turn === 1 && state.winner === null;
@@ -54,14 +58,20 @@ function render() {
     moves = phase === "wall" ? movableWalls(state) : [],
     stops = phase === "slide" ? slideOptions(state) : [];
   $("board").replaceChildren();
-  $("board").parentElement.style.setProperty('--size', state.size);
-  $("board").setAttribute('aria-label', `${state.size}×${state.size}のゲーム盤`);
-  $("boardSpec").hidden = activeSettings.layout < 4;
-  $("boardZoom").hidden = state.size <= 7;
-  if (state.size <= 7) $("board").parentElement.classList.remove("zoomed");
-  $("boardSpec").textContent = `${LAYOUTS[activeSettings.layout].name} · 星${state.stars.length + state.scores[0] + state.scores[1]}個・壁${state.walls.length}個 · ${state.target}個先取`;
+  const width=widthOf(state),height=heightOf(state),wrap=$("board").parentElement;
+  wrap.style.setProperty('--size',width);
+  wrap.style.setProperty('--width',width);
+  wrap.style.setProperty('--height',height);
+  $("board").setAttribute('aria-label', `${width}×${height}のゲーム盤`);
+  $("boardSpec").hidden = !customBoard && activeSettings.layout < 4;
+  $("boardZoom").hidden = Math.max(width,height) <= 7;
+  if (Math.max(width,height) <= 7) $("board").parentElement.classList.remove("zoomed");
+  $("boardSpec").textContent = `${customBoard ? customName+"【研究用・未認定】" : LAYOUTS[activeSettings.layout].name} · 星${state.stars.length + state.scores[0] + state.scores[1]}個・壁${state.walls.length}個 · ${state.target}個先取`;
   $("helpVictory").textContent = `${state.target}個の星を先に取った人の勝ち。`;
-  for (let i = 0; i < state.size ** 2; i++) {
+  for (let i = 0; i < width * height; i++) {
+    if (!isPlayable(state,i)) {
+      const gap=document.createElement('span');gap.className='terrain-gap';gap.setAttribute('aria-hidden','true');$("board").append(gap);continue;
+    }
     const wall = state.walls.indexOf(i),
       target = moves.find((m) => m.wall === selected && m.to === i),
       stop = stops.find((m) => m.to === i);
@@ -83,7 +93,7 @@ function render() {
           : "氷";
     b.setAttribute(
       "aria-label",
-      `${Math.floor(i / state.size) + 1}行${(i % state.size) + 1}列 ${item}${target ? " 移動先" : ""}${stop ? " 滑走停止位置" : ""}`,
+      `${Math.floor(i / width) + 1}行${(i % width) + 1}列 ${item}${target ? " 移動先" : ""}${stop ? " 滑走停止位置" : ""}`,
     );
     b.disabled =
       locked ||
@@ -110,7 +120,7 @@ function render() {
   }
   tokenEls.forEach((el, p) => {
     const at = state.players[p];
-    el.style.transform = `translate(${(at % state.size) * 100}%,${Math.floor(at / state.size) * 100}%)`;
+    el.style.transform = `translate(${(at % width) * 100}%,${Math.floor(at / width) * 100}%)`;
   });
   $("scores").innerHTML = [0, 1]
     .map(
@@ -146,8 +156,9 @@ function render() {
           ? "光る壁をタップ。動かさず進んでもOK。"
           : "矢印のマスをタップして、壁を1マス移動。"
         : "光る停止マス、または下の矢印をタップ。";
+  if (!locked && phase === "wall" && !actions(state).length) $("message").textContent = "合法手がありません。戻るか、新しい対戦を選んでください。";
   $("turnCount").textContent = `${state.winner === null ? state.ply + 1 : state.ply}手目`;
-  $("skip").disabled = locked || phase !== "wall";
+  $("skip").disabled = locked || phase !== "wall" || !slideOptions(state).length;
   $("skip").textContent =
     phase === "wall" ? "壁を動かさずに滑る →" : "停止マスか矢印を選ぼう";
   $("undo").disabled = busy || (!history.length && phase === "wall");
@@ -314,7 +325,7 @@ function reset() {
   if ($("result").open) $("result").close();
   resultSeen = false;
   busy = false;
-  state = initial(activeSettings.layout, activeSettings.starter);
+  state = initial(customBoard ?? activeSettings.layout, activeSettings.starter);
   phase = "wall";
   selected = null;
   history = [];
@@ -390,6 +401,7 @@ $("setupDialog").addEventListener("close", () => {
   pendingMode = null;
 });
 $("start").onclick = () => {
+  customBoard = null;
   activeSettings = { layout: Number($("layout").value), starter: Number($("starter").value), level: $("cpuLevel").value };
   if (pendingMode) mode = pendingMode;
   pendingMode = null;
@@ -400,3 +412,11 @@ document
   .querySelectorAll("[data-close]")
   .forEach((b) => (b.onclick = () => $(b.dataset.close).close()));
 reset();
+
+mountLab((record)=>{
+  customBoard=clone(record.board);customName=record.name;
+  if(pendingMode) mode=pendingMode;
+  activeSettings.starter=Number($("starter").value);
+  activeSettings.level=$("cpuLevel").value;
+  pendingMode=null;$("setupDialog").close();reset();
+});

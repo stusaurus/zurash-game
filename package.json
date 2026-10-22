@@ -6,12 +6,13 @@
   "scripts": {
     "test": "node --test tests/*.test.js",
     "balance": "node scripts/balance.js",
-    "check": "node --check src/app.js && node --check src/engine.js && node --check src/ai.js && node --check src/cpu-worker.js && node --check scripts/strategy-study.js && node --check scripts/experimental-policies.js && node --check src/route-ai.js",
+    "check": "node --check src/app.js && node --check src/engine.js && node --check src/ai.js && node --check src/cpu-worker.js && node --check scripts/strategy-study.js && node --check scripts/experimental-policies.js && node --check src/route-ai.js && node --check src/geometry.js && node --check src/board-lab.js && node --check src/lab-ui.js && node --check scripts/mask-study.js",
     "test:browser": "playwright test",
     "quality:audit": "node scripts/quality-audit.js",
     "quality:layouts": "node scripts/layout-lab.js",
     "quality:study": "node scripts/strategy-study.js",
-    "quality:replay": "node scripts/verify-study.js"
+    "quality:replay": "node scripts/verify-study.js",
+    "research:masks": "node --max-old-space-size=640 scripts/mask-study.js"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"

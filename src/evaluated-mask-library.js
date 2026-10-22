@@ -1,0 +1,4232 @@
+// Policy-dependent research results. No board is certified.
+export const EVALUATED_MASK_LIBRARY = [
+  {
+    "id": "z-9c4ad32a",
+    "name": "【AI検証】長方形・100276",
+    "generatorVersion": "mask-lab-1",
+    "seed": 100276,
+    "algorithm": "seeded-constraint",
+    "status": "AI検証中",
+    "metrics": {
+      "games": 16,
+      "first": 4,
+      "second": 9,
+      "unresolved": 3,
+      "firstDecidedWilson95DescriptiveOnly": [
+        0.12680703567070326,
+        0.5763065701492199
+      ],
+      "firstFinalPossibleRange": [
+        0.25,
+        0.4375
+      ],
+      "repeatedGames": 2,
+      "leadChangeGames": 10,
+      "nearVictoryReversals": 1,
+      "wallMoves": 722,
+      "plies": 805,
+      "maxPlies": 109,
+      "firstActions": 9,
+      "byPolicy": {
+        "star": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 1,
+          "wallMoves": 82,
+          "plies": 150,
+          "maxPlies": 65,
+          "firstActions": 4
+        },
+        "positional": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 1,
+          "wallMoves": 82,
+          "plies": 150,
+          "maxPlies": 65,
+          "firstActions": 4
+        },
+        "defensive": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 63,
+          "plies": 63,
+          "maxPlies": 35,
+          "firstActions": 2
+        },
+        "mixed": {
+          "games": 6,
+          "first": 1,
+          "second": 3,
+          "unresolved": 2,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.04558726029536886,
+            0.6993581599030918
+          ],
+          "firstFinalPossibleRange": [
+            0.16666666666666666,
+            0.5
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 0,
+          "wallMoves": 314,
+          "plies": 320,
+          "maxPlies": 109,
+          "firstActions": 3
+        },
+        "search": {
+          "games": 2,
+          "first": 0,
+          "second": 1,
+          "unresolved": 1,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0,
+            0.7934506882081973
+          ],
+          "firstFinalPossibleRange": [
+            0,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 0,
+          "wallMoves": 175,
+          "plies": 182,
+          "maxPlies": 108,
+          "firstActions": 2
+        },
+        "route": {
+          "games": 6,
+          "first": 1,
+          "second": 4,
+          "unresolved": 1,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.03622410822563066,
+            0.6244653729700049
+          ],
+          "firstFinalPossibleRange": [
+            0.16666666666666666,
+            0.3333333333333333
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 0,
+          "wallMoves": 298,
+          "plies": 304,
+          "maxPlies": 109,
+          "firstActions": 5
+        }
+      },
+      "stages": {
+        "screen": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 1,
+          "wallMoves": 82,
+          "plies": 150,
+          "maxPlies": 65,
+          "firstActions": 4
+        },
+        "search": {
+          "games": 8,
+          "first": 1,
+          "second": 5,
+          "unresolved": 2,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.030053369411815023,
+            0.5635028250257673
+          ],
+          "firstFinalPossibleRange": [
+            0.125,
+            0.375
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 6,
+          "nearVictoryReversals": 0,
+          "wallMoves": 430,
+          "plies": 441,
+          "maxPlies": 108,
+          "firstActions": 5
+        },
+        "holdout": {
+          "games": 4,
+          "first": 1,
+          "second": 2,
+          "unresolved": 1,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.06149194402093078,
+            0.7923404011921757
+          ],
+          "firstFinalPossibleRange": [
+            0.25,
+            0.5
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 210,
+          "plies": 214,
+          "maxPlies": 109,
+          "firstActions": 3
+        }
+      },
+      "pairedClusterBootstrap95": [
+        0.2,
+        0.5
+      ],
+      "decidedPairs": 5,
+      "witness": [
+        {
+          "status": "unknown-budget",
+          "nodes": 24
+        },
+        {
+          "status": "unknown-budget",
+          "nodes": 24
+        }
+      ],
+      "finiteHorizonProof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 0,
+        "cacheHits": 0,
+        "cutoffs": 0,
+        "horizonCutoffs": 1,
+        "horizon": 4,
+        "nodeBudget": 1000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 2000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 0,
+        "elapsedMs": 0.3652799999981653,
+        "peakHeapBytes": 70537008,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    },
+    "games": 16,
+    "unresolvedRate": 0.1875,
+    "shape": "rectangle",
+    "parameters": {
+      "width": 11,
+      "height": 6,
+      "shape": "rectangle",
+      "corridor": 3,
+      "stars": 9,
+      "walls": 6,
+      "target": 4,
+      "seed": 100276,
+      "symmetry": "none",
+      "starBias": "dispersed",
+      "wallBias": "central",
+      "holes": 0
+    },
+    "board": {
+      "width": 11,
+      "height": 6,
+      "playableCells": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "target": 4,
+      "walls": [
+        38,
+        27,
+        26,
+        28,
+        49,
+        37
+      ],
+      "stars": [
+        2,
+        54,
+        59,
+        8,
+        33,
+        40,
+        16,
+        56,
+        25
+      ],
+      "players": [
+        0,
+        65
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        22,
+        22
+      ],
+      "fixedWallReachable": [
+        [
+          54
+        ],
+        [
+          56
+        ]
+      ],
+      "terrainConnected": true,
+      "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
+    },
+    "traits": [
+      "rectangle",
+      "星9／壁6／先取4",
+      "観測された初手9種類",
+      "反復を観測"
+    ]
+  },
+  {
+    "id": "z-29d756f4",
+    "name": "【AI検証】正方形・100024",
+    "generatorVersion": "mask-lab-1",
+    "seed": 100024,
+    "algorithm": "seeded-constraint",
+    "status": "AI検証中",
+    "metrics": {
+      "games": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "firstDecidedWilson95DescriptiveOnly": [
+        0.27999563470387406,
+        0.7200043652961259
+      ],
+      "firstFinalPossibleRange": [
+        0.5,
+        0.5
+      ],
+      "repeatedGames": 5,
+      "leadChangeGames": 12,
+      "nearVictoryReversals": 5,
+      "wallMoves": 472,
+      "plies": 544,
+      "maxPlies": 92,
+      "firstActions": 7,
+      "byPolicy": {
+        "star": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 4,
+          "nearVictoryReversals": 1,
+          "wallMoves": 65,
+          "plies": 122,
+          "maxPlies": 48,
+          "firstActions": 4
+        },
+        "positional": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 4,
+          "nearVictoryReversals": 1,
+          "wallMoves": 65,
+          "plies": 122,
+          "maxPlies": 48,
+          "firstActions": 4
+        },
+        "defensive": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 36,
+          "plies": 37,
+          "maxPlies": 24,
+          "firstActions": 2
+        },
+        "mixed": {
+          "games": 6,
+          "first": 4,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.29999331299474324,
+            0.9032285897864654
+          ],
+          "firstFinalPossibleRange": [
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          "repeatedGames": 3,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 1,
+          "wallMoves": 255,
+          "plies": 266,
+          "maxPlies": 92,
+          "firstActions": 5
+        },
+        "search": {
+          "games": 2,
+          "first": 0,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0,
+            0.6576197760453506
+          ],
+          "firstFinalPossibleRange": [
+            0,
+            0
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 1,
+          "wallMoves": 44,
+          "plies": 46,
+          "maxPlies": 28,
+          "firstActions": 2
+        },
+        "route": {
+          "games": 6,
+          "first": 4,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.29999331299474324,
+            0.9032285897864654
+          ],
+          "firstFinalPossibleRange": [
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 1,
+          "wallMoves": 212,
+          "plies": 220,
+          "maxPlies": 67,
+          "firstActions": 4
+        }
+      },
+      "stages": {
+        "screen": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 4,
+          "nearVictoryReversals": 1,
+          "wallMoves": 65,
+          "plies": 122,
+          "maxPlies": 48,
+          "firstActions": 4
+        },
+        "search": {
+          "games": 8,
+          "first": 3,
+          "second": 5,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.13684428473912286,
+            0.694257607346229
+          ],
+          "firstFinalPossibleRange": [
+            0.375,
+            0.375
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 7,
+          "nearVictoryReversals": 4,
+          "wallMoves": 267,
+          "plies": 275,
+          "maxPlies": 92,
+          "firstActions": 3
+        },
+        "holdout": {
+          "games": 4,
+          "first": 3,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.3006418400969081,
+            0.954412739704631
+          ],
+          "firstFinalPossibleRange": [
+            0.75,
+            0.75
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 140,
+          "plies": 147,
+          "maxPlies": 67,
+          "firstActions": 4
+        }
+      },
+      "pairedClusterBootstrap95": [
+        0.3125,
+        0.6875
+      ],
+      "decidedPairs": 8,
+      "witness": [
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 1
+            }
+          ]
+        },
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 0
+            }
+          ]
+        }
+      ],
+      "finiteHorizonProof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 0,
+        "cacheHits": 0,
+        "cutoffs": 0,
+        "horizonCutoffs": 1,
+        "horizon": 4,
+        "nodeBudget": 1000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 2000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 0,
+        "elapsedMs": 0.0722589999968477,
+        "peakHeapBytes": 72022032,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    },
+    "games": 16,
+    "unresolvedRate": 0,
+    "shape": "square",
+    "parameters": {
+      "width": 6,
+      "height": 6,
+      "shape": "square",
+      "corridor": 3,
+      "stars": 9,
+      "walls": 4,
+      "target": 4,
+      "seed": 100024,
+      "symmetry": "none",
+      "starBias": "dispersed",
+      "wallBias": "central",
+      "holes": 0
+    },
+    "board": {
+      "width": 6,
+      "height": 6,
+      "playableCells": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "target": 4,
+      "walls": [
+        14,
+        20,
+        21,
+        22
+      ],
+      "stars": [
+        32,
+        5,
+        6,
+        29,
+        15,
+        19,
+        2,
+        30,
+        34
+      ],
+      "players": [
+        0,
+        35
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        16,
+        16
+      ],
+      "fixedWallReachable": [
+        [
+          5,
+          29,
+          30,
+          34
+        ],
+        [
+          5,
+          6,
+          30
+        ]
+      ],
+      "terrainConnected": true,
+      "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
+    },
+    "traits": [
+      "square",
+      "星9／壁4／先取4",
+      "観測された初手7種類",
+      "反復を観測"
+    ]
+  },
+  {
+    "id": "z-c1a4dd1b",
+    "name": "【AI検証】L字・100245",
+    "generatorVersion": "mask-lab-1",
+    "seed": 100245,
+    "algorithm": "seeded-constraint",
+    "status": "AI検証中",
+    "metrics": {
+      "games": 16,
+      "first": 9,
+      "second": 6,
+      "unresolved": 1,
+      "firstDecidedWilson95DescriptiveOnly": [
+        0.35746829954344506,
+        0.8017550397372577
+      ],
+      "firstFinalPossibleRange": [
+        0.5625,
+        0.625
+      ],
+      "repeatedGames": 2,
+      "leadChangeGames": 2,
+      "nearVictoryReversals": 2,
+      "wallMoves": 1140,
+      "plies": 1331,
+      "maxPlies": 622,
+      "firstActions": 6,
+      "byPolicy": {
+        "star": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 27,
+          "plies": 54,
+          "maxPlies": 30,
+          "firstActions": 4
+        },
+        "positional": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 27,
+          "plies": 54,
+          "maxPlies": 30,
+          "firstActions": 4
+        },
+        "defensive": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 15,
+          "plies": 15,
+          "maxPlies": 10,
+          "firstActions": 2
+        },
+        "mixed": {
+          "games": 6,
+          "first": 4,
+          "second": 1,
+          "unresolved": 1,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.375534627029995,
+            0.9637758917743693
+          ],
+          "firstFinalPossibleRange": [
+            0.6666666666666666,
+            0.8333333333333334
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 815,
+          "plies": 948,
+          "maxPlies": 622,
+          "firstActions": 2
+        },
+        "search": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 24,
+          "plies": 25,
+          "maxPlies": 14,
+          "firstActions": 2
+        },
+        "route": {
+          "games": 6,
+          "first": 4,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.29999331299474324,
+            0.9032285897864654
+          ],
+          "firstFinalPossibleRange": [
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 537,
+          "plies": 604,
+          "maxPlies": 243,
+          "firstActions": 2
+        }
+      },
+      "stages": {
+        "screen": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 27,
+          "plies": 54,
+          "maxPlies": 30,
+          "firstActions": 4
+        },
+        "search": {
+          "games": 8,
+          "first": 4,
+          "second": 3,
+          "unresolved": 1,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.25045836275303557,
+            0.8417801460075546
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.625
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 835,
+          "plies": 962,
+          "maxPlies": 622,
+          "firstActions": 3
+        },
+        "holdout": {
+          "games": 4,
+          "first": 3,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.3006418400969081,
+            0.954412739704631
+          ],
+          "firstFinalPossibleRange": [
+            0.75,
+            0.75
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 278,
+          "plies": 315,
+          "maxPlies": 213,
+          "firstActions": 2
+        }
+      },
+      "pairedClusterBootstrap95": [
+        0.5,
+        0.7142857142857143
+      ],
+      "decidedPairs": 7,
+      "witness": [
+        {
+          "status": "unknown-budget",
+          "nodes": 24
+        },
+        {
+          "status": "witness",
+          "nodes": 22,
+          "path": [
+            {
+              "wall": null,
+              "dir": 0
+            },
+            {
+              "wall": {
+                "wall": 0,
+                "to": 33
+              },
+              "dir": 1
+            },
+            {
+              "wall": {
+                "wall": 1,
+                "to": 46
+              },
+              "dir": 3
+            }
+          ]
+        }
+      ],
+      "finiteHorizonProof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 20,
+        "cacheHits": 0,
+        "cutoffs": 18,
+        "horizonCutoffs": 36,
+        "horizon": 4,
+        "nodeBudget": 1000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 2000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 20,
+        "elapsedMs": 1.5554530000008526,
+        "peakHeapBytes": 34851128,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    },
+    "games": 16,
+    "unresolvedRate": 0.0625,
+    "shape": "L",
+    "parameters": {
+      "width": 8,
+      "height": 6,
+      "shape": "L",
+      "corridor": 2,
+      "stars": 3,
+      "walls": 3,
+      "target": 2,
+      "seed": 100245,
+      "symmetry": "none",
+      "starBias": "central",
+      "wallBias": "random",
+      "holes": 0
+    },
+    "board": {
+      "width": 8,
+      "height": 6,
+      "playableCells": [
+        0,
+        1,
+        8,
+        9,
+        16,
+        17,
+        24,
+        25,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "target": 2,
+      "walls": [
+        41,
+        38,
+        16
+      ],
+      "stars": [
+        36,
+        35,
+        34
+      ],
+      "players": [
+        0,
+        47
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        19,
+        18
+      ],
+      "fixedWallReachable": [
+        [
+          34
+        ],
+        [
+          34
+        ]
+      ],
+      "terrainConnected": true,
+      "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
+    },
+    "traits": [
+      "L",
+      "星3／壁3／先取2",
+      "観測された初手6種類",
+      "反復を観測"
+    ]
+  },
+  {
+    "id": "z-e50dbb41",
+    "name": "【AI検証】T字・100246",
+    "generatorVersion": "mask-lab-1",
+    "seed": 100246,
+    "algorithm": "seeded-constraint",
+    "status": "AI検証中",
+    "metrics": {
+      "games": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "firstDecidedWilson95DescriptiveOnly": [
+        0.27999563470387406,
+        0.7200043652961259
+      ],
+      "firstFinalPossibleRange": [
+        0.5,
+        0.5
+      ],
+      "repeatedGames": 0,
+      "leadChangeGames": 8,
+      "nearVictoryReversals": 8,
+      "wallMoves": 43,
+      "plies": 60,
+      "maxPlies": 7,
+      "firstActions": 6,
+      "byPolicy": {
+        "star": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 10,
+          "plies": 18,
+          "maxPlies": 7,
+          "firstActions": 4
+        },
+        "positional": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 10,
+          "plies": 18,
+          "maxPlies": 7,
+          "firstActions": 4
+        },
+        "defensive": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 6,
+          "plies": 7,
+          "maxPlies": 4,
+          "firstActions": 2
+        },
+        "mixed": {
+          "games": 6,
+          "first": 3,
+          "second": 3,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.18761630498040816,
+            0.8123836950195918
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 3,
+          "wallMoves": 15,
+          "plies": 21,
+          "maxPlies": 4,
+          "firstActions": 4
+        },
+        "search": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 6,
+          "plies": 7,
+          "maxPlies": 4,
+          "firstActions": 2
+        },
+        "route": {
+          "games": 6,
+          "first": 3,
+          "second": 3,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.18761630498040816,
+            0.8123836950195918
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 3,
+          "wallMoves": 15,
+          "plies": 21,
+          "maxPlies": 4,
+          "firstActions": 4
+        }
+      },
+      "stages": {
+        "screen": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 10,
+          "plies": 18,
+          "maxPlies": 7,
+          "firstActions": 4
+        },
+        "search": {
+          "games": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.21521606069626764,
+            0.7847839393037324
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 4,
+          "nearVictoryReversals": 4,
+          "wallMoves": 24,
+          "plies": 28,
+          "maxPlies": 4,
+          "firstActions": 2
+        },
+        "holdout": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 9,
+          "plies": 14,
+          "maxPlies": 4,
+          "firstActions": 3
+        }
+      },
+      "pairedClusterBootstrap95": [
+        0.5,
+        0.5
+      ],
+      "decidedPairs": 8,
+      "witness": [
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 1
+            }
+          ]
+        },
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 3
+            }
+          ]
+        }
+      ],
+      "finiteHorizonProof": {
+        "result": 1,
+        "proven": true,
+        "status": "forced-win-within-horizon",
+        "nodes": 24,
+        "cacheHits": 3,
+        "cutoffs": 17,
+        "horizonCutoffs": 0,
+        "horizon": 4,
+        "nodeBudget": 1000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 2000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 21,
+        "elapsedMs": 0.9823099999994156,
+        "peakHeapBytes": 36796448,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    },
+    "games": 16,
+    "unresolvedRate": 0,
+    "shape": "T",
+    "parameters": {
+      "width": 8,
+      "height": 6,
+      "shape": "T",
+      "corridor": 3,
+      "stars": 5,
+      "walls": 3,
+      "target": 2,
+      "seed": 100246,
+      "symmetry": "none",
+      "starBias": "dispersed",
+      "wallBias": "random",
+      "holes": 0
+    },
+    "board": {
+      "width": 8,
+      "height": 6,
+      "playableCells": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        27,
+        28,
+        35,
+        36,
+        43,
+        44
+      ],
+      "target": 2,
+      "walls": [
+        6,
+        35,
+        36
+      ],
+      "stars": [
+        5,
+        16,
+        43,
+        23,
+        28
+      ],
+      "players": [
+        0,
+        44
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        8,
+        4
+      ],
+      "fixedWallReachable": [
+        [
+          5,
+          16,
+          23
+        ],
+        [
+          43
+        ]
+      ],
+      "terrainConnected": true,
+      "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
+    },
+    "traits": [
+      "T",
+      "星5／壁3／先取2",
+      "観測された初手6種類",
+      "この標本で反復未観測"
+    ]
+  },
+  {
+    "id": "z-3be3039d",
+    "name": "【AI検証】十字・100258",
+    "generatorVersion": "mask-lab-1",
+    "seed": 100258,
+    "algorithm": "seeded-constraint",
+    "status": "AI検証中",
+    "metrics": {
+      "games": 16,
+      "first": 12,
+      "second": 4,
+      "unresolved": 0,
+      "firstDecidedWilson95DescriptiveOnly": [
+        0.5050168327029684,
+        0.8981793257983292
+      ],
+      "firstFinalPossibleRange": [
+        0.75,
+        0.75
+      ],
+      "repeatedGames": 1,
+      "leadChangeGames": 4,
+      "nearVictoryReversals": 4,
+      "wallMoves": 107,
+      "plies": 116,
+      "maxPlies": 28,
+      "firstActions": 4,
+      "byPolicy": {
+        "star": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 12,
+          "plies": 20,
+          "maxPlies": 6,
+          "firstActions": 3
+        },
+        "positional": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 12,
+          "plies": 20,
+          "maxPlies": 6,
+          "firstActions": 3
+        },
+        "defensive": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 13,
+          "plies": 13,
+          "maxPlies": 8,
+          "firstActions": 2
+        },
+        "mixed": {
+          "games": 6,
+          "first": 5,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.4364971749742326,
+            0.969946630588185
+          ],
+          "firstFinalPossibleRange": [
+            0.8333333333333334,
+            0.8333333333333334
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 54,
+          "plies": 55,
+          "maxPlies": 28,
+          "firstActions": 3
+        },
+        "search": {
+          "games": 2,
+          "first": 2,
+          "second": 0,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.3423802239546494,
+            1
+          ],
+          "firstFinalPossibleRange": [
+            1,
+            1
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 18,
+          "plies": 18,
+          "maxPlies": 13,
+          "firstActions": 2
+        },
+        "route": {
+          "games": 6,
+          "first": 6,
+          "second": 0,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.6096657083436265,
+            1
+          ],
+          "firstFinalPossibleRange": [
+            1,
+            1
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 31,
+          "plies": 32,
+          "maxPlies": 7,
+          "firstActions": 3
+        }
+      },
+      "stages": {
+        "screen": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 12,
+          "plies": 20,
+          "maxPlies": 6,
+          "firstActions": 3
+        },
+        "search": {
+          "games": 8,
+          "first": 6,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.40927542792725174,
+            0.9285207879020445
+          ],
+          "firstFinalPossibleRange": [
+            0.75,
+            0.75
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 74,
+          "plies": 74,
+          "maxPlies": 28,
+          "firstActions": 3
+        },
+        "holdout": {
+          "games": 4,
+          "first": 4,
+          "second": 0,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.5101091596030786,
+            0.9999999999999999
+          ],
+          "firstFinalPossibleRange": [
+            1,
+            1
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 21,
+          "plies": 22,
+          "maxPlies": 7,
+          "firstActions": 3
+        }
+      },
+      "pairedClusterBootstrap95": [
+        0.5625,
+        0.9375
+      ],
+      "decidedPairs": 8,
+      "witness": [
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": {
+                "wall": 3,
+                "to": 39
+              },
+              "dir": 2
+            }
+          ]
+        },
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 0
+            }
+          ]
+        }
+      ],
+      "finiteHorizonProof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 266,
+        "cacheHits": 243,
+        "cutoffs": 236,
+        "horizonCutoffs": 10,
+        "horizon": 4,
+        "nodeBudget": 1000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 2000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 260,
+        "elapsedMs": 33.38886899999852,
+        "peakHeapBytes": 37982824,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    },
+    "games": 16,
+    "unresolvedRate": 0,
+    "shape": "cross",
+    "parameters": {
+      "width": 9,
+      "height": 6,
+      "shape": "cross",
+      "corridor": 3,
+      "stars": 5,
+      "walls": 4,
+      "target": 2,
+      "seed": 100258,
+      "symmetry": "none",
+      "starBias": "dispersed",
+      "wallBias": "central",
+      "holes": 0
+    },
+    "board": {
+      "width": 9,
+      "height": 6,
+      "playableCells": [
+        3,
+        4,
+        5,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        39,
+        40,
+        41,
+        48,
+        49,
+        50
+      ],
+      "target": 2,
+      "walls": [
+        31,
+        22,
+        23,
+        40
+      ],
+      "stars": [
+        18,
+        50,
+        26,
+        4,
+        30
+      ],
+      "players": [
+        3,
+        35
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        20,
+        20
+      ],
+      "fixedWallReachable": [
+        [
+          50,
+          26
+        ],
+        [
+          50,
+          26,
+          4
+        ]
+      ],
+      "terrainConnected": true,
+      "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
+    },
+    "traits": [
+      "cross",
+      "星5／壁4／先取2",
+      "観測された初手4種類",
+      "反復を観測"
+    ]
+  },
+  {
+    "id": "z-affd4d6e",
+    "name": "【AI検証】H字・100237",
+    "generatorVersion": "mask-lab-1",
+    "seed": 100237,
+    "algorithm": "seeded-constraint",
+    "status": "AI検証中",
+    "metrics": {
+      "games": 16,
+      "first": 5,
+      "second": 4,
+      "unresolved": 7,
+      "firstDecidedWilson95DescriptiveOnly": [
+        0.26665129180087416,
+        0.8112214802294544
+      ],
+      "firstFinalPossibleRange": [
+        0.3125,
+        0.75
+      ],
+      "repeatedGames": 10,
+      "leadChangeGames": 10,
+      "nearVictoryReversals": 4,
+      "wallMoves": 7230,
+      "plies": 9154,
+      "maxPlies": 1044,
+      "firstActions": 5,
+      "byPolicy": {
+        "star": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 3,
+          "leadChangeGames": 4,
+          "nearVictoryReversals": 2,
+          "wallMoves": 582,
+          "plies": 1398,
+          "maxPlies": 613,
+          "firstActions": 4
+        },
+        "positional": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 3,
+          "leadChangeGames": 4,
+          "nearVictoryReversals": 2,
+          "wallMoves": 582,
+          "plies": 1398,
+          "maxPlies": 613,
+          "firstActions": 4
+        },
+        "defensive": {
+          "games": 2,
+          "first": 0,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0,
+            0.6576197760453506
+          ],
+          "firstFinalPossibleRange": [
+            0,
+            0
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 477,
+          "plies": 538,
+          "maxPlies": 516,
+          "firstActions": 2
+        },
+        "mixed": {
+          "games": 6,
+          "first": 1,
+          "second": 0,
+          "unresolved": 5,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.2065493117918027,
+            1
+          ],
+          "firstFinalPossibleRange": [
+            0.16666666666666666,
+            1
+          ],
+          "repeatedGames": 5,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 3276,
+          "plies": 3874,
+          "maxPlies": 1043,
+          "firstActions": 3
+        },
+        "search": {
+          "games": 2,
+          "first": 1,
+          "second": 0,
+          "unresolved": 1,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.2065493117918027,
+            1
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            1
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 0,
+          "wallMoves": 1170,
+          "plies": 1369,
+          "maxPlies": 730,
+          "firstActions": 2
+        },
+        "route": {
+          "games": 6,
+          "first": 2,
+          "second": 0,
+          "unresolved": 4,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.3423802239546494,
+            1
+          ],
+          "firstFinalPossibleRange": [
+            0.3333333333333333,
+            1
+          ],
+          "repeatedGames": 4,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 1,
+          "wallMoves": 3952,
+          "plies": 4634,
+          "maxPlies": 1044,
+          "firstActions": 3
+        }
+      },
+      "stages": {
+        "screen": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 3,
+          "leadChangeGames": 4,
+          "nearVictoryReversals": 2,
+          "wallMoves": 582,
+          "plies": 1398,
+          "maxPlies": 613,
+          "firstActions": 4
+        },
+        "search": {
+          "games": 8,
+          "first": 2,
+          "second": 2,
+          "unresolved": 4,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.25,
+            0.75
+          ],
+          "repeatedGames": 4,
+          "leadChangeGames": 5,
+          "nearVictoryReversals": 2,
+          "wallMoves": 4421,
+          "plies": 5097,
+          "maxPlies": 1044,
+          "firstActions": 3
+        },
+        "holdout": {
+          "games": 4,
+          "first": 1,
+          "second": 0,
+          "unresolved": 3,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.2065493117918027,
+            1
+          ],
+          "firstFinalPossibleRange": [
+            0.25,
+            1
+          ],
+          "repeatedGames": 3,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 2227,
+          "plies": 2659,
+          "maxPlies": 1043,
+          "firstActions": 3
+        }
+      },
+      "pairedClusterBootstrap95": [
+        0,
+        0.5
+      ],
+      "decidedPairs": 3,
+      "witness": [
+        {
+          "status": "unknown-budget",
+          "nodes": 24
+        },
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 0
+            }
+          ]
+        }
+      ],
+      "finiteHorizonProof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 0,
+        "cacheHits": 0,
+        "cutoffs": 0,
+        "horizonCutoffs": 1,
+        "horizon": 4,
+        "nodeBudget": 1000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 2000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 0,
+        "elapsedMs": 0.04526799999803188,
+        "peakHeapBytes": 35549936,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    },
+    "games": 16,
+    "unresolvedRate": 0.4375,
+    "shape": "H",
+    "parameters": {
+      "width": 7,
+      "height": 6,
+      "shape": "H",
+      "corridor": 3,
+      "stars": 5,
+      "walls": 2,
+      "target": 3,
+      "seed": 100237,
+      "symmetry": "none",
+      "starBias": "dispersed",
+      "wallBias": "random",
+      "holes": 0
+    },
+    "board": {
+      "width": 7,
+      "height": 6,
+      "playableCells": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        39,
+        40,
+        41
+      ],
+      "target": 3,
+      "walls": [
+        7,
+        37
+      ],
+      "stars": [
+        8,
+        40,
+        6,
+        35,
+        18
+      ],
+      "players": [
+        0,
+        41
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        5,
+        8
+      ],
+      "fixedWallReachable": [
+        [
+          40,
+          6,
+          35
+        ],
+        [
+          6
+        ]
+      ],
+      "terrainConnected": true,
+      "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
+    },
+    "traits": [
+      "H",
+      "星5／壁2／先取3",
+      "観測された初手5種類",
+      "反復を観測"
+    ]
+  },
+  {
+    "id": "z-1dd54c6e",
+    "name": "【AI検証】U字・100249",
+    "generatorVersion": "mask-lab-1",
+    "seed": 100249,
+    "algorithm": "seeded-constraint",
+    "status": "AI検証中",
+    "metrics": {
+      "games": 16,
+      "first": 5,
+      "second": 6,
+      "unresolved": 5,
+      "firstDecidedWilson95DescriptiveOnly": [
+        0.21271271487637833,
+        0.7199084642140241
+      ],
+      "firstFinalPossibleRange": [
+        0.3125,
+        0.625
+      ],
+      "repeatedGames": 8,
+      "leadChangeGames": 3,
+      "nearVictoryReversals": 2,
+      "wallMoves": 2695,
+      "plies": 3109,
+      "maxPlies": 407,
+      "firstActions": 7,
+      "byPolicy": {
+        "star": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 132,
+          "plies": 280,
+          "maxPlies": 125,
+          "firstActions": 4
+        },
+        "positional": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 132,
+          "plies": 280,
+          "maxPlies": 125,
+          "firstActions": 4
+        },
+        "defensive": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 41,
+          "plies": 41,
+          "maxPlies": 31,
+          "firstActions": 2
+        },
+        "mixed": {
+          "games": 6,
+          "first": 0,
+          "second": 2,
+          "unresolved": 4,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0,
+            0.6576197760453506
+          ],
+          "firstFinalPossibleRange": [
+            0,
+            0.6666666666666666
+          ],
+          "repeatedGames": 6,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 1431,
+          "plies": 1581,
+          "maxPlies": 407,
+          "firstActions": 5
+        },
+        "search": {
+          "games": 2,
+          "first": 1,
+          "second": 0,
+          "unresolved": 1,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.2065493117918027,
+            1
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            1
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 575,
+          "plies": 642,
+          "maxPlies": 355,
+          "firstActions": 2
+        },
+        "route": {
+          "games": 6,
+          "first": 1,
+          "second": 3,
+          "unresolved": 2,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.04558726029536886,
+            0.6993581599030918
+          ],
+          "firstFinalPossibleRange": [
+            0.16666666666666666,
+            0.5
+          ],
+          "repeatedGames": 4,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 1439,
+          "plies": 1583,
+          "maxPlies": 407,
+          "firstActions": 5
+        }
+      },
+      "stages": {
+        "screen": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 132,
+          "plies": 280,
+          "maxPlies": 125,
+          "firstActions": 4
+        },
+        "search": {
+          "games": 8,
+          "first": 3,
+          "second": 2,
+          "unresolved": 3,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.23072427940911855,
+            0.8823792268590028
+          ],
+          "firstFinalPossibleRange": [
+            0.375,
+            0.75
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 1640,
+          "plies": 1811,
+          "maxPlies": 373,
+          "firstActions": 4
+        },
+        "holdout": {
+          "games": 4,
+          "first": 0,
+          "second": 2,
+          "unresolved": 2,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0,
+            0.6576197760453506
+          ],
+          "firstFinalPossibleRange": [
+            0,
+            0.5
+          ],
+          "repeatedGames": 4,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 923,
+          "plies": 1018,
+          "maxPlies": 407,
+          "firstActions": 4
+        }
+      },
+      "pairedClusterBootstrap95": [
+        0.5,
+        0.5
+      ],
+      "decidedPairs": 4,
+      "witness": [
+        {
+          "status": "witness",
+          "nodes": 18,
+          "path": [
+            {
+              "wall": null,
+              "dir": 1
+            },
+            {
+              "wall": {
+                "wall": 0,
+                "to": 26
+              },
+              "dir": 0
+            },
+            {
+              "wall": {
+                "wall": 0,
+                "to": 18
+              },
+              "dir": 2
+            }
+          ]
+        },
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 0
+            }
+          ]
+        }
+      ],
+      "finiteHorizonProof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 0,
+        "cacheHits": 0,
+        "cutoffs": 0,
+        "horizonCutoffs": 1,
+        "horizon": 4,
+        "nodeBudget": 1000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 2000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 0,
+        "elapsedMs": 0.044746999999915715,
+        "peakHeapBytes": 38275008,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    },
+    "games": 16,
+    "unresolvedRate": 0.3125,
+    "shape": "U",
+    "parameters": {
+      "width": 8,
+      "height": 6,
+      "shape": "U",
+      "corridor": 3,
+      "stars": 5,
+      "walls": 3,
+      "target": 3,
+      "seed": 100249,
+      "symmetry": "none",
+      "starBias": "dispersed",
+      "wallBias": "central",
+      "holes": 0
+    },
+    "board": {
+      "width": 8,
+      "height": 6,
+      "playableCells": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "target": 3,
+      "walls": [
+        27,
+        28,
+        36
+      ],
+      "stars": [
+        41,
+        7,
+        10,
+        37,
+        13
+      ],
+      "players": [
+        0,
+        47
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        12,
+        12
+      ],
+      "fixedWallReachable": [
+        [
+          7,
+          37
+        ],
+        [
+          41,
+          7,
+          10
+        ]
+      ],
+      "terrainConnected": true,
+      "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
+    },
+    "traits": [
+      "U",
+      "星5／壁3／先取3",
+      "観測された初手7種類",
+      "反復を観測"
+    ]
+  },
+  {
+    "id": "z-f919b13b",
+    "name": "【AI検証】中央に穴・100239",
+    "generatorVersion": "mask-lab-1",
+    "seed": 100239,
+    "algorithm": "seeded-constraint",
+    "status": "AI検証中",
+    "metrics": {
+      "games": 16,
+      "first": 8,
+      "second": 4,
+      "unresolved": 4,
+      "firstDecidedWilson95DescriptiveOnly": [
+        0.3906220869404939,
+        0.86187990987514
+      ],
+      "firstFinalPossibleRange": [
+        0.5,
+        0.75
+      ],
+      "repeatedGames": 7,
+      "leadChangeGames": 8,
+      "nearVictoryReversals": 2,
+      "wallMoves": 3309,
+      "plies": 4015,
+      "maxPlies": 841,
+      "firstActions": 6,
+      "byPolicy": {
+        "star": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 1,
+          "wallMoves": 107,
+          "plies": 260,
+          "maxPlies": 176,
+          "firstActions": 4
+        },
+        "positional": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 1,
+          "wallMoves": 107,
+          "plies": 260,
+          "maxPlies": 176,
+          "firstActions": 4
+        },
+        "defensive": {
+          "games": 2,
+          "first": 2,
+          "second": 0,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.3423802239546494,
+            1
+          ],
+          "firstFinalPossibleRange": [
+            1,
+            1
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 1,
+          "wallMoves": 190,
+          "plies": 216,
+          "maxPlies": 147,
+          "firstActions": 2
+        },
+        "mixed": {
+          "games": 6,
+          "first": 2,
+          "second": 1,
+          "unresolved": 3,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.2076595988078242,
+            0.9385080559790691
+          ],
+          "firstFinalPossibleRange": [
+            0.3333333333333333,
+            0.8333333333333334
+          ],
+          "repeatedGames": 5,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 0,
+          "wallMoves": 1762,
+          "plies": 2078,
+          "maxPlies": 790,
+          "firstActions": 2
+        },
+        "search": {
+          "games": 2,
+          "first": 2,
+          "second": 0,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.3423802239546494,
+            1
+          ],
+          "firstFinalPossibleRange": [
+            1,
+            1
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 134,
+          "plies": 160,
+          "maxPlies": 131,
+          "firstActions": 2
+        },
+        "route": {
+          "games": 6,
+          "first": 1,
+          "second": 2,
+          "unresolved": 3,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.06149194402093078,
+            0.7923404011921757
+          ],
+          "firstFinalPossibleRange": [
+            0.16666666666666666,
+            0.6666666666666666
+          ],
+          "repeatedGames": 4,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 2483,
+          "plies": 2911,
+          "maxPlies": 841,
+          "firstActions": 2
+        }
+      },
+      "stages": {
+        "screen": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 1,
+          "wallMoves": 107,
+          "plies": 260,
+          "maxPlies": 176,
+          "firstActions": 4
+        },
+        "search": {
+          "games": 8,
+          "first": 5,
+          "second": 1,
+          "unresolved": 2,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.4364971749742326,
+            0.969946630588185
+          ],
+          "firstFinalPossibleRange": [
+            0.625,
+            0.875
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 4,
+          "nearVictoryReversals": 1,
+          "wallMoves": 1835,
+          "plies": 2145,
+          "maxPlies": 841,
+          "firstActions": 4
+        },
+        "holdout": {
+          "games": 4,
+          "first": 1,
+          "second": 1,
+          "unresolved": 2,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.25,
+            0.75
+          ],
+          "repeatedGames": 4,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 1367,
+          "plies": 1610,
+          "maxPlies": 790,
+          "firstActions": 2
+        }
+      },
+      "pairedClusterBootstrap95": [
+        0.5,
+        0.9
+      ],
+      "decidedPairs": 5,
+      "witness": [
+        {
+          "status": "witness",
+          "nodes": 12,
+          "path": [
+            {
+              "wall": null,
+              "dir": 1
+            },
+            {
+              "wall": null,
+              "dir": 0
+            },
+            {
+              "wall": null,
+              "dir": 2
+            }
+          ]
+        },
+        {
+          "status": "witness",
+          "nodes": 22,
+          "path": [
+            {
+              "wall": null,
+              "dir": 3
+            },
+            {
+              "wall": null,
+              "dir": 1
+            },
+            {
+              "wall": {
+                "wall": 0,
+                "to": 39
+              },
+              "dir": 1
+            }
+          ]
+        }
+      ],
+      "finiteHorizonProof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 0,
+        "cacheHits": 0,
+        "cutoffs": 0,
+        "horizonCutoffs": 1,
+        "horizon": 4,
+        "nodeBudget": 1000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 2000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 0,
+        "elapsedMs": 0.027412000003096182,
+        "peakHeapBytes": 41233256,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    },
+    "games": 16,
+    "unresolvedRate": 0.25,
+    "shape": "ring",
+    "parameters": {
+      "width": 7,
+      "height": 6,
+      "shape": "ring",
+      "corridor": 2,
+      "stars": 7,
+      "walls": 2,
+      "target": 4,
+      "seed": 100239,
+      "symmetry": "none",
+      "starBias": "central",
+      "wallBias": "central",
+      "holes": 0
+    },
+    "board": {
+      "width": 7,
+      "height": 6,
+      "playableCells": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        19,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "target": 4,
+      "walls": [
+        32,
+        3
+      ],
+      "stars": [
+        10,
+        31,
+        26,
+        38,
+        11,
+        9,
+        15
+      ],
+      "players": [
+        0,
+        41
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        10,
+        10
+      ],
+      "fixedWallReachable": [
+        [
+          11,
+          9
+        ],
+        [
+          11
+        ]
+      ],
+      "terrainConnected": true,
+      "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
+    },
+    "traits": [
+      "ring",
+      "星7／壁2／先取4",
+      "観測された初手6種類",
+      "反復を観測"
+    ]
+  },
+  {
+    "id": "z-5188357f",
+    "name": "【AI検証】くびれ・100240",
+    "generatorVersion": "mask-lab-1",
+    "seed": 100240,
+    "algorithm": "seeded-constraint",
+    "status": "AI検証中",
+    "metrics": {
+      "games": 16,
+      "first": 6,
+      "second": 9,
+      "unresolved": 1,
+      "firstDecidedWilson95DescriptiveOnly": [
+        0.19824496026274246,
+        0.6425317004565552
+      ],
+      "firstFinalPossibleRange": [
+        0.375,
+        0.4375
+      ],
+      "repeatedGames": 6,
+      "leadChangeGames": 11,
+      "nearVictoryReversals": 3,
+      "wallMoves": 1787,
+      "plies": 2107,
+      "maxPlies": 875,
+      "firstActions": 6,
+      "byPolicy": {
+        "star": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 0,
+          "wallMoves": 22,
+          "plies": 46,
+          "maxPlies": 15,
+          "firstActions": 4
+        },
+        "positional": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 0,
+          "wallMoves": 22,
+          "plies": 46,
+          "maxPlies": 15,
+          "firstActions": 4
+        },
+        "defensive": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 0,
+          "wallMoves": 22,
+          "plies": 23,
+          "maxPlies": 13,
+          "firstActions": 2
+        },
+        "mixed": {
+          "games": 6,
+          "first": 2,
+          "second": 3,
+          "unresolved": 1,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.11762077314099711,
+            0.7692757205908813
+          ],
+          "firstFinalPossibleRange": [
+            0.3333333333333333,
+            0.5
+          ],
+          "repeatedGames": 6,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 1,
+          "wallMoves": 1515,
+          "plies": 1769,
+          "maxPlies": 875,
+          "firstActions": 4
+        },
+        "search": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 132,
+          "plies": 159,
+          "maxPlies": 117,
+          "firstActions": 2
+        },
+        "route": {
+          "games": 6,
+          "first": 2,
+          "second": 4,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09677141021353453,
+            0.7000066870052566
+          ],
+          "firstFinalPossibleRange": [
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "repeatedGames": 4,
+          "leadChangeGames": 4,
+          "nearVictoryReversals": 0,
+          "wallMoves": 677,
+          "plies": 786,
+          "maxPlies": 244,
+          "firstActions": 5
+        }
+      },
+      "stages": {
+        "screen": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 0,
+          "wallMoves": 22,
+          "plies": 46,
+          "maxPlies": 15,
+          "firstActions": 4
+        },
+        "search": {
+          "games": 8,
+          "first": 2,
+          "second": 5,
+          "unresolved": 1,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.08221892324928332,
+            0.6410655504689458
+          ],
+          "firstFinalPossibleRange": [
+            0.25,
+            0.375
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 7,
+          "nearVictoryReversals": 3,
+          "wallMoves": 1184,
+          "plies": 1385,
+          "maxPlies": 875,
+          "firstActions": 4
+        },
+        "holdout": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 4,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 0,
+          "wallMoves": 581,
+          "plies": 676,
+          "maxPlies": 244,
+          "firstActions": 4
+        }
+      },
+      "pairedClusterBootstrap95": [
+        0.2857142857142857,
+        0.5
+      ],
+      "decidedPairs": 7,
+      "witness": [
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 2
+            }
+          ]
+        },
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 0
+            }
+          ]
+        }
+      ],
+      "finiteHorizonProof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 0,
+        "cacheHits": 0,
+        "cutoffs": 0,
+        "horizonCutoffs": 1,
+        "horizon": 4,
+        "nodeBudget": 1000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 2000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 0,
+        "elapsedMs": 0.013510000000678701,
+        "peakHeapBytes": 41812736,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    },
+    "games": 16,
+    "unresolvedRate": 0.0625,
+    "shape": "waist",
+    "parameters": {
+      "width": 7,
+      "height": 6,
+      "shape": "waist",
+      "corridor": 3,
+      "stars": 9,
+      "walls": 2,
+      "target": 4,
+      "seed": 100240,
+      "symmetry": "none",
+      "starBias": "dispersed",
+      "wallBias": "central",
+      "holes": 0
+    },
+    "board": {
+      "width": 7,
+      "height": 6,
+      "playableCells": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        16,
+        17,
+        18,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "target": 4,
+      "walls": [
+        24,
+        23
+      ],
+      "stars": [
+        34,
+        7,
+        37,
+        5,
+        17,
+        2,
+        28,
+        13,
+        39
+      ],
+      "players": [
+        0,
+        41
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        10,
+        10
+      ],
+      "fixedWallReachable": [
+        [
+          7,
+          13
+        ],
+        [
+          34,
+          28
+        ]
+      ],
+      "terrainConnected": true,
+      "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
+    },
+    "traits": [
+      "waist",
+      "星9／壁2／先取4",
+      "観測された初手6種類",
+      "反復を観測"
+    ]
+  },
+  {
+    "id": "z-14b4ad0d",
+    "name": "【AI検証】段差・100252",
+    "generatorVersion": "mask-lab-1",
+    "seed": 100252,
+    "algorithm": "seeded-constraint",
+    "status": "AI検証中",
+    "metrics": {
+      "games": 16,
+      "first": 11,
+      "second": 5,
+      "unresolved": 0,
+      "firstDecidedWilson95DescriptiveOnly": [
+        0.4440435565274821,
+        0.858353562348491
+      ],
+      "firstFinalPossibleRange": [
+        0.6875,
+        0.6875
+      ],
+      "repeatedGames": 2,
+      "leadChangeGames": 5,
+      "nearVictoryReversals": 3,
+      "wallMoves": 383,
+      "plies": 425,
+      "maxPlies": 106,
+      "firstActions": 3,
+      "byPolicy": {
+        "star": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 1,
+          "wallMoves": 36,
+          "plies": 60,
+          "maxPlies": 21,
+          "firstActions": 3
+        },
+        "positional": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 1,
+          "wallMoves": 36,
+          "plies": 60,
+          "maxPlies": 21,
+          "firstActions": 3
+        },
+        "defensive": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 21,
+          "plies": 21,
+          "maxPlies": 12,
+          "firstActions": 2
+        },
+        "mixed": {
+          "games": 6,
+          "first": 5,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.4364971749742326,
+            0.969946630588185
+          ],
+          "firstFinalPossibleRange": [
+            0.8333333333333334,
+            0.8333333333333334
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 198,
+          "plies": 211,
+          "maxPlies": 106,
+          "firstActions": 3
+        },
+        "search": {
+          "games": 2,
+          "first": 2,
+          "second": 0,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.3423802239546494,
+            1
+          ],
+          "firstFinalPossibleRange": [
+            1,
+            1
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 26,
+          "plies": 26,
+          "maxPlies": 17,
+          "firstActions": 2
+        },
+        "route": {
+          "games": 6,
+          "first": 4,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.29999331299474324,
+            0.9032285897864654
+          ],
+          "firstFinalPossibleRange": [
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 2,
+          "wallMoves": 274,
+          "plies": 292,
+          "maxPlies": 106,
+          "firstActions": 3
+        }
+      },
+      "stages": {
+        "screen": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 1,
+          "wallMoves": 36,
+          "plies": 60,
+          "maxPlies": 21,
+          "firstActions": 3
+        },
+        "search": {
+          "games": 8,
+          "first": 6,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.40927542792725174,
+            0.9285207879020445
+          ],
+          "firstFinalPossibleRange": [
+            0.75,
+            0.75
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 1,
+          "wallMoves": 175,
+          "plies": 180,
+          "maxPlies": 82,
+          "firstActions": 3
+        },
+        "holdout": {
+          "games": 4,
+          "first": 3,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.3006418400969081,
+            0.954412739704631
+          ],
+          "firstFinalPossibleRange": [
+            0.75,
+            0.75
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 172,
+          "plies": 185,
+          "maxPlies": 106,
+          "firstActions": 3
+        }
+      },
+      "pairedClusterBootstrap95": [
+        0.5,
+        0.875
+      ],
+      "decidedPairs": 8,
+      "witness": [
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": {
+                "wall": 0,
+                "to": 32
+              },
+              "dir": 2
+            }
+          ]
+        },
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 3
+            }
+          ]
+        }
+      ],
+      "finiteHorizonProof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 0,
+        "cacheHits": 0,
+        "cutoffs": 0,
+        "horizonCutoffs": 1,
+        "horizon": 4,
+        "nodeBudget": 1000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 2000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 0,
+        "elapsedMs": 0.024107000001095003,
+        "peakHeapBytes": 42425752,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    },
+    "games": 16,
+    "unresolvedRate": 0,
+    "shape": "stairs",
+    "parameters": {
+      "width": 8,
+      "height": 6,
+      "shape": "stairs",
+      "corridor": 3,
+      "stars": 9,
+      "walls": 3,
+      "target": 4,
+      "seed": 100252,
+      "symmetry": "none",
+      "starBias": "dispersed",
+      "wallBias": "outer",
+      "holes": 0
+    },
+    "board": {
+      "width": 8,
+      "height": 6,
+      "playableCells": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "target": 4,
+      "walls": [
+        40,
+        1,
+        39
+      ],
+      "stars": [
+        24,
+        46,
+        3,
+        35,
+        21,
+        41,
+        31,
+        9,
+        19
+      ],
+      "players": [
+        0,
+        47
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        5,
+        5
+      ],
+      "fixedWallReachable": [
+        [
+          24,
+          46,
+          41,
+          31,
+          9
+        ],
+        [
+          24,
+          46,
+          41,
+          31,
+          9
+        ]
+      ],
+      "terrainConnected": true,
+      "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
+    },
+    "traits": [
+      "stairs",
+      "星9／壁3／先取4",
+      "観測された初手3種類",
+      "反復を観測"
+    ]
+  },
+  {
+    "id": "z-57bcf7fb",
+    "name": "【AI検証】部屋と通路・100264",
+    "generatorVersion": "mask-lab-1",
+    "seed": 100264,
+    "algorithm": "seeded-constraint",
+    "status": "AI検証中",
+    "metrics": {
+      "games": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "firstDecidedWilson95DescriptiveOnly": [
+        0.27999563470387406,
+        0.7200043652961259
+      ],
+      "firstFinalPossibleRange": [
+        0.5,
+        0.5
+      ],
+      "repeatedGames": 2,
+      "leadChangeGames": 9,
+      "nearVictoryReversals": 4,
+      "wallMoves": 264,
+      "plies": 290,
+      "maxPlies": 27,
+      "firstActions": 5,
+      "byPolicy": {
+        "star": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 3,
+          "wallMoves": 37,
+          "plies": 60,
+          "maxPlies": 21,
+          "firstActions": 4
+        },
+        "positional": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 3,
+          "wallMoves": 37,
+          "plies": 60,
+          "maxPlies": 21,
+          "firstActions": 4
+        },
+        "defensive": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 27,
+          "plies": 27,
+          "maxPlies": 16,
+          "firstActions": 2
+        },
+        "mixed": {
+          "games": 6,
+          "first": 3,
+          "second": 3,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.18761630498040816,
+            0.8123836950195918
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 2,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 0,
+          "wallMoves": 113,
+          "plies": 115,
+          "maxPlies": 27,
+          "firstActions": 3
+        },
+        "search": {
+          "games": 2,
+          "first": 1,
+          "second": 1,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.09453120463920084,
+            0.9054687953607992
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 0,
+          "wallMoves": 42,
+          "plies": 43,
+          "maxPlies": 22,
+          "firstActions": 2
+        },
+        "route": {
+          "games": 6,
+          "first": 3,
+          "second": 3,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.18761630498040816,
+            0.8123836950195918
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 0,
+          "wallMoves": 110,
+          "plies": 111,
+          "maxPlies": 23,
+          "firstActions": 3
+        }
+      },
+      "stages": {
+        "screen": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 0,
+          "leadChangeGames": 3,
+          "nearVictoryReversals": 3,
+          "wallMoves": 37,
+          "plies": 60,
+          "maxPlies": 21,
+          "firstActions": 4
+        },
+        "search": {
+          "games": 8,
+          "first": 4,
+          "second": 4,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.21521606069626764,
+            0.7847839393037324
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 4,
+          "nearVictoryReversals": 1,
+          "wallMoves": 162,
+          "plies": 164,
+          "maxPlies": 27,
+          "firstActions": 3
+        },
+        "holdout": {
+          "games": 4,
+          "first": 2,
+          "second": 2,
+          "unresolved": 0,
+          "firstDecidedWilson95DescriptiveOnly": [
+            0.15003898774401986,
+            0.8499610122559802
+          ],
+          "firstFinalPossibleRange": [
+            0.5,
+            0.5
+          ],
+          "repeatedGames": 1,
+          "leadChangeGames": 2,
+          "nearVictoryReversals": 0,
+          "wallMoves": 65,
+          "plies": 66,
+          "maxPlies": 22,
+          "firstActions": 3
+        }
+      },
+      "pairedClusterBootstrap95": [
+        0.5,
+        0.5
+      ],
+      "decidedPairs": 8,
+      "witness": [
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 1
+            }
+          ]
+        },
+        {
+          "status": "witness",
+          "nodes": 1,
+          "path": [
+            {
+              "wall": null,
+              "dir": 3
+            }
+          ]
+        }
+      ],
+      "finiteHorizonProof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 0,
+        "cacheHits": 0,
+        "cutoffs": 0,
+        "horizonCutoffs": 1,
+        "horizon": 4,
+        "nodeBudget": 1000,
+        "timeBudgetMs": 100,
+        "maxTableEntries": 2000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 0,
+        "elapsedMs": 0.025497999999060994,
+        "peakHeapBytes": 43078648,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    },
+    "games": 16,
+    "unresolvedRate": 0,
+    "shape": "rooms",
+    "parameters": {
+      "width": 9,
+      "height": 6,
+      "shape": "rooms",
+      "corridor": 3,
+      "stars": 9,
+      "walls": 5,
+      "target": 4,
+      "seed": 100264,
+      "symmetry": "none",
+      "starBias": "dispersed",
+      "wallBias": "random",
+      "holes": 0
+    },
+    "board": {
+      "width": 9,
+      "height": 6,
+      "playableCells": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        51,
+        52,
+        53
+      ],
+      "target": 4,
+      "walls": [
+        26,
+        7,
+        43,
+        37,
+        23
+      ],
+      "stars": [
+        36,
+        8,
+        51,
+        2,
+        22,
+        34,
+        9,
+        47,
+        15
+      ],
+      "players": [
+        0,
+        53
+      ],
+      "scores": [
+        0,
+        0
+      ],
+      "turn": 0,
+      "ply": 0,
+      "winner": null
+    },
+    "diagnostics": {
+      "openingActions": [
+        28,
+        26
+      ],
+      "fixedWallReachable": [
+        [
+          2,
+          47
+        ],
+        [
+          51,
+          2,
+          9,
+          47
+        ]
+      ],
+      "terrainConnected": true,
+      "reachability": "固定壁の参考値。壁操作を含む取得可能性・決着は未証明"
+    },
+    "traits": [
+      "rooms",
+      "星9／壁5／先取4",
+      "観測された初手5種類",
+      "反復を観測"
+    ]
+  }
+];

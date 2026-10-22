@@ -1,0 +1,25 @@
+name: Mask board bounded research
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test tests/mask-board.test.js
+      - run: timeout 6m node --max-old-space-size=640 scripts/mask-study.js
+        env:
+          MASK_MS: '300000'
+          MASK_ATTEMPTS: '4000'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mask-board-research
+          path: reports/mask-lab-2026-10-22/
+          retention-days: 30
