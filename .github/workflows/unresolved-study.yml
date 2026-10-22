@@ -59,6 +59,10 @@ jobs:
             reports/discovery-2026-10-22/unresolved-diagnostics.json
             reports/discovery-2026-10-22/unresolved-diagnostics-after.json
             reports/discovery-2026-10-22/continuation-audit.json.gz
+            reports/discovery-2026-10-22/games.json.gz
+            reports/discovery-2026-10-22/position-games.json.gz
+            reports/discovery-2026-10-22/discovery-final.json
+            reports/discovery-2026-10-22/catalogue.json.gz
             reports/discovery-2026-10-22/summary.json
             reports/discovery-2026-10-22/position-summary.json
             reports/discovery-2026-10-22/verification.json
