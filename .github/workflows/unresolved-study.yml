@@ -36,6 +36,7 @@ jobs:
         run: node --max-old-space-size=640 scripts/discovery-continue.js
         env:
           CONTINUE_MS: '90000'
+          CONTINUE_FOCUS: 'stall'
       - name: Audit after continuation
         run: npm run research:unresolved:audit
         env:
