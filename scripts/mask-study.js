@@ -23,7 +23,7 @@ else{
   try{const r=generateBoard(params),k=definitionKey(r.board);if(seen.has(k))duplicates.push(params);else{seen.add(k);accepted.push(r);}}catch(e){rejected.push({params,reason:e.message});}
  }
  const mutations=[];
- for(const parent of MASK_LIBRARY)for(const kind of ['stars','walls','shape','multiple'])try{const r=mutateBoard(parent,{kind,seed:700001+mutations.length}),k=definitionKey(r.board);mutations.push({parent:parent.id,kind,seed:r.seed,accepted:true});if(!seen.has(k)){seen.add(k);accepted.push(r);}}catch(e){mutations.push({parent:parent.id,kind,accepted:false,reason:e.message});}
+ for(const parent of MASK_LIBRARY)for(const kind of ['stars','walls','shape','multiple'])try{const r=mutateBoard(parent,{kind,seed:700001+mutations.length}),k=definitionKey(r.board);mutations.push({parent:parent.id,kind,seed:r.seed,accepted:true});if(!seen.has(k)){seen.add(k);accepted.push(r);}}catch(e){mutations.push({parent:parent.id,kind,seed:700001+mutations.length,accepted:false,reason:e.message});}
  corpus={version:1,generated:accepted.length+rejected.length+duplicates.length,accepted,rejected,duplicates,mutations,generationMs:performance.now()-started};save('corpus.json',corpus);
 }
 // Diversity stratification retains one independently generated example per shape;
@@ -64,7 +64,7 @@ for(const r of selected){
  library.push({...r,status:gs.length?'AI検証中':'合法性確認済み',metrics:{...metrics,byPolicy,stages:stageStats,pairedClusterBootstrap95,decidedPairs:paired.length,witness,finiteHorizonProof:proof,positionBiasWarning:metrics.positionWins.some(n=>n>=Math.max(8,(metrics.games-metrics.unresolved)*.85))},games:gs.length,unresolvedRate:gs.length?metrics.unresolved/gs.length:null,traits:[r.shape,`星${r.board.stars.length}／壁${r.board.walls.length}／先取${r.board.target}`,`観測された初手${metrics.firstActions}種類`,...(metrics.positionWins.some(n=>n>=Math.max(8,(metrics.games-metrics.unresolved)*.85))?['初期位置側の偏りを観測']:[]),...proof.filter(p=>p.result===1||p.result===-1).map(p=>`開始P${p.starter+1}：${p.status}`),metrics.repeatedGames?'反復を観測':'この標本で反復未観測']});
 }
 save('library.json',library);
-writeFileSync(new URL('../src/evaluated-mask-library.js',import.meta.url),'// Policy-dependent research results. No board is certified.\nexport const EVALUATED_MASK_LIBRARY = '+JSON.stringify(library.map(r=>({...r,name:'【AI検証】'+r.name})),null,2)+';\n');
+if(process.env.MASK_EXPORT_LIBRARY==='1')writeFileSync(new URL('../src/evaluated-mask-library.js',import.meta.url),'// Policy-dependent research results. No board is certified.\nexport const EVALUATED_MASK_LIBRARY = '+JSON.stringify(library.map(r=>({...r,name:'【AI検証】'+r.name})),null,2)+';\n');
 const archived=existsSync(pathOf('exploratory-games.json'))?load('exploratory-games.json'):[];
 const ledger=new Map(archived.map(g=>[g.id,g]));for(const g of games)ledger.set(g.id,g);
 const uniqueGames=[...ledger.values()];
