@@ -1,6 +1,12 @@
 name: Unresolved game audit and continuation
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - .github/workflows/unresolved-study.yml
+      - scripts/audit-unresolved.js
+      - scripts/discovery-continue.js
+      - tests/audit-unresolved.test.js
   push:
     branches:
       - tactics-size-experiment
