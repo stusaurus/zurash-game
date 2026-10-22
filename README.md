@@ -134,3 +134,9 @@ PR #2の勝敗表示を最新CPU修正と統合し、続行不能な壁選択・
 [停滞研究報告](reports/stall-2026-10-23.md)と[盤面図・代表棋譜](reports/stall-2026-10-23/boards.html)。U字2IDの全状態検証、18小変更、既存8候補・全6モードの独立比較を保存。研究用・未認定。盤面ラボの「停滞原因と改善比較を読み込む」から試せます。
 
 `npm run research:stall`、`npm run research:stall:report`、`npm run research:stall:verify`。重い処理は手動の `stall-study.yml` に分離し、元の5,008局は変更しません。
+
+## スプリント・A〜Eの既存棋譜継続（2026-10-23）
+
+[継続前後の比較](reports/mode-continuation-2026-10-23.md)。前回の未解決218局を同じID・AI・RNGから延長し、新規対局数を増やさず計算予算の影響を検証しました。
+
+`npm run research:modes:continue` → `npm run research:modes:verify` → `npm run research:modes:report`。重い処理は手動の `mode-continuation.yml` に分離。盤面ラボの停滞研究ボタンで継続後の成績を表示します。

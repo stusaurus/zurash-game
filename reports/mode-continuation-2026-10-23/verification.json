@@ -1,0 +1,15 @@
+{
+  "sourceGames": 1696,
+  "continued": 218,
+  "verifiedAddedPlies": 4189,
+  "newGames": 0,
+  "sourceHash": "9b3f788dd3335d4f41bbe3e14ef81b66b537935c4dbaa7884ae8fe86dc6e132b",
+  "deltaHash": "730fa327acc13e1e640c0d3c357833f39e27d0b9f7d69ee619fe8240b777abf8",
+  "sourceRNGAndPolicyPreserved": true,
+  "summaryAndCatalogueMatched": true,
+  "hashes": {
+    "delta": "ec46687b303ec9f19b35fd959a5f05422955778d911ff7facc3492d884d7cf33",
+    "audit": "21c41e25f2f7d1444428477cbf6f69500b829cf4cf7dc2c9f5b1e378351fb0b2",
+    "catalogue": "30cc67afce72113ebd5f0ca4b0e79c2b0ef444e1fac5876f397741bc5e3bd174"
+  }
+}

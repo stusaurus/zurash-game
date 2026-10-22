@@ -56,6 +56,7 @@ export function mountLab(play) {
   add(`物理的な初期位置：P1側${m.positionWins?.[0]??'—'}勝／P2側${m.positionWins?.[1]??'—'}勝。手番の集計とは別です。`);
   const hold=m.stages?.holdout,percent=v=>(v*100).toFixed(1)+'%',interval=v=>v?v.map(percent).join('〜'):'標本不足・未算出';
   if(hold){add(`独立条件：${hold.games}局・${hold.clusterCount??'—'}シード群。未解決${hold.unresolved}局。先攻率の対応区間${interval(hold.bootstrapFirst95)}／初期位置側の区間${interval(hold.bootstrapPosition95)}。`);}
+  if(m.continuation)add(`保存棋譜を継続：${m.continuation.continued}局／新たに決着${m.continuation.newlySettled}局。新規対局0。追加予算${m.continuation.perGameMs}ms／${m.continuation.extraPlies}手。`);
   if(m.comparison){const c=m.comparison.holdout;add(`親盤面との対応比較${c.matchedGames}局：位置偏りの減少${(c.positionBiasReduction===null?'未算出':c.positionBiasReduction.toFixed(3))}、区間${c.bootstrapReduction95?c.bootstrapReduction95.map(v=>v.toFixed(3)).join('〜'):'未算出'}。${c.improvementSupported?'条件付き改善の暫定的証拠':'改善は未確認'}。`);}
   if(Array.isArray(m.finiteHorizonProof))add('4手以内の厳密探索：'+m.finiteHorizonProof.map(p=>`開始P${p.starter+1} ${p.status}`).join('／')+'。finite-horizon-onlyは全ゲームの引き分け・公平性の証明ではありません。');
   add(`観測された特徴：${(r.traits??[]).join('／')||'評価中'}`);
@@ -124,12 +125,12 @@ export function mountLab(play) {
   $('labStall').disabled=true;say('停滞研究の結果を読み込んでいます…');
   try{
    if(!globalThis.DecompressionStream)throw Error('圧縮ライブラリに未対応です');
-   const response=await fetch(new URL('../reports/stall-2026-10-23/catalogue.json.gz',import.meta.url));if(!response.ok)throw Error('停滞研究を取得できませんでした');
+   const response=await fetch(new URL('../reports/mode-continuation-2026-10-23/catalogue.json.gz',import.meta.url));if(!response.ok)throw Error('停滞研究を取得できませんでした');
    const bytes=await response.arrayBuffer();if(bytes.byteLength>2097152)throw Error('研究結果が大きすぎます');
    const text=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();if(text.length>16777216)throw Error('研究結果が大きすぎます');
    const data=JSON.parse(text);if(!Array.isArray(data)||data.length>100)throw Error('研究結果の形式が不正');
    if(data.some(r=>!validateBoard(r.board).ok||!r.metrics))throw Error('研究盤面の形式が不正');
-   const map=new Map(discovery.map(r=>[r.id,r]));for(const r of data)map.set(r.id,r);discovery=[...map.values()];library();say(`停滞研究${data.length}面を追加しました。勝利不能の原因・改善候補・全モードの独立比較。すべて未認定。`);
+   const map=new Map(discovery.map(r=>[r.id,r]));for(const r of data)map.set(r.id,r);discovery=[...map.values()];library();say(`停滞研究${data.length}面を追加しました。勝利不能の原因・改善候補・全モードの継続結果。すべて未認定。`);
   }catch(e){say(e.message);$('labStall').disabled=false;}
  };
  $('labSearch').oninput=library;
