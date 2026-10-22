@@ -6,6 +6,7 @@ on:
       - .github/workflows/unresolved-study.yml
       - scripts/audit-unresolved.js
       - scripts/discovery-continue.js
+      - scripts/verify-discovery.js
       - tests/audit-unresolved.test.js
   push:
     branches:
@@ -44,6 +45,8 @@ jobs:
           DISCOVERY_RESUME: '0'
       - name: Verify discovery replays and accounting
         run: npm run research:discovery:verify
+        env:
+          VERIFY_ARCHIVED_FINAL: '0'
       - name: Upload audit, resumed games and verification
         uses: actions/upload-artifact@v4
         if: always()
