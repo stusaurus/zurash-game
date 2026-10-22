@@ -6,7 +6,7 @@ import {validateBoard,recordBoard} from '../src/board-lab.js';
 import {researchPlans,newResearchGame,advanceResearch,aggregateResearch} from './stall-research.js';
 const dir=process.env.FAIRNESS_DIAG_REPORT??'reports/fairness-diagnostics';
 const input=JSON.parse(readFileSync(dir+'/BD-candidates.json'));
-const results={version:1,design:'frozen paired seeds; both starters, slots and AI assignments',timeBudgetMs:100,maxPlies:240,modes:[]};
+const results={version:1,design:'frozen paired seeds; both starters, slots and AI assignments; larger per-game budget to reduce censoring',timeBudgetMs:750,maxPlies:2048,modes:[]};
 for(const mode of input.modes){
  const raw=RESEARCH_LAYOUTS.find(x=>x.id===mode.id),original=toBoardState(raw),chosen=mode.topCandidates.slice(0,2);
  const records=[{label:'original',board:original},...chosen.map((c,i)=>({label:'candidate-'+(i+1),board:{...original,[c.kind]:original[c.kind].map(x=>x===c.from?c.to:x)},change:c}))];
