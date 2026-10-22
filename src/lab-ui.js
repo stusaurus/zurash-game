@@ -8,6 +8,7 @@ export function mountLab(play) {
  <label>盤面ライブラリ<select id="labLibrary"></select></label>
  <label>検索<input id="labSearch" placeholder="形状・名前・検証状態"></label>
  <button id="labLoad">選んだ盤面を編集・確認</button>
+ <button id="labCorpus">生成済みの研究候補を追加表示</button>
  <div class="lab-fields">
  <label>幅<input id="labWidth" type="number" min="2" max="16" value="9"></label>
  <label>高さ<input id="labHeight" type="number" min="2" max="16" value="7"></label>
@@ -36,10 +37,10 @@ export function mountLab(play) {
  const $=id=>document.getElementById(id),storageKey='zurash-mask-library-v1';
  const say=text=>$('labMessage').textContent=text;
  const attempt=fn=>{try{fn();}catch(e){say(e.message);}};
- let saved=[];
+ let saved=[],corpus=[];
  try{const text=localStorage.getItem(storageKey);if(text&&text.length<=1048576){const records=JSON.parse(text);if(Array.isArray(records))saved=records.slice(0,100).flatMap(r=>{try{return [recordBoard(r.board,{name:String(r.name).slice(0,80),seed:r.seed})];}catch{return [];}});}}catch{say('保存データを読み込めませんでした。');}
  let current=structuredClone(MASK_LIBRARY[0]),draft=structuredClone(current.board);
- function records(){return [...MASK_LIBRARY,...EVALUATED_MASK_LIBRARY,...saved];}
+ function records(){return [...MASK_LIBRARY,...EVALUATED_MASK_LIBRARY,...corpus,...saved];}
  function library(){
   const filter=$('labSearch').value.toLowerCase();$('labLibrary').replaceChildren();
   records().forEach((r,index)=>{if(!`${r.name} ${r.shape??''} ${r.status}`.toLowerCase().includes(filter))return;const o=document.createElement('option');o.value=index;o.textContent=`${r.name} · ${r.board.width}×${r.board.height} · ${r.status}`;$('labLibrary').append(o);});
@@ -74,6 +75,19 @@ export function mountLab(play) {
  $('labGenerate').onclick=()=>attempt(()=>load(generateBoard(options())));
  $('labRandom').onclick=()=>attempt(()=>{let last;const start=crypto.getRandomValues(new Uint32Array(1))[0];for(let k=0;k<80;k++)try{const r=generateBoard({...options(),seed:(start+k)>>>0});$('labSeed').value=r.seed;load(r);return;}catch(e){last=e;}throw last;});
  $('labLoad').onclick=()=>attempt(()=>{const r=records()[Number($('labLibrary').value)];if(!r)throw Error('盤面を選んでください');load(r);});
+ $('labCorpus').onclick=async()=>{
+  $('labCorpus').disabled=true;say('研究候補を読み込んでいます…');
+  try{
+   if(!globalThis.DecompressionStream)throw Error('このブラウザは圧縮ライブラリに未対応です。個別JSONを利用してください。');
+   const response=await fetch(new URL('../reports/mask-lab-2026-10-22/corpus.json.gz',import.meta.url));if(!response.ok)throw Error('研究候補を取得できませんでした');
+   const bytes=await response.arrayBuffer();if(bytes.byteLength>2097152)throw Error('候補データが大きすぎます');
+   const text=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();if(text.length>16777216)throw Error('候補データが大きすぎます');
+   const data=JSON.parse(text);if(!Array.isArray(data.accepted)||data.accepted.length>20000)throw Error('候補形式が不正');
+   const seen=new Set(records().map(r=>definitionKey(r.board))),next=[];
+   for(const r of data.accepted){const v=validateBoard(r.board);if(!v.ok)continue;const k=definitionKey(v.state);if(seen.has(k))continue;seen.add(k);next.push(recordBoard(v.state,{name:r.name,shape:r.shape,seed:r.seed,algorithm:r.algorithm}));}
+   corpus=next;library();say(`研究候補${corpus.length}面を追加表示しました。合法性のみ確認・未認定。`);
+  }catch(e){say(e.message);$('labCorpus').disabled=false;}
+ };
  $('labSearch').oninput=library;
  $('labTarget').onchange=()=>{draft.target=num('labTarget');check();};
  $('labPlay').onclick=()=>attempt(()=>{const r=recordBoard(draft,{name:current.name,seed:current.seed,algorithm:current.algorithm});play(r);});

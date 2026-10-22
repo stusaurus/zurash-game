@@ -316,7 +316,12 @@ function acceptCPU(action, id) {
     if (id === epoch) playSlide(action.dir);
   }, 200);
 }
+function clearCelebration() {
+  $("celebration").classList.remove("pop");
+  $("celebration").replaceChildren();
+}
 function reset() {
+  clearCelebration();
   epoch++;
   matchSeed = globalThis.crypto?.getRandomValues
     ? crypto.getRandomValues(new Uint32Array(1))[0]
@@ -342,6 +347,7 @@ $("skip").onclick = () => {
   render();
 };
 $("undo").onclick = () => {
+  clearCelebration();
   epoch++;
   stopCPU();
   busy = false;

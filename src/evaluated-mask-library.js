@@ -12,6 +12,10 @@ export const EVALUATED_MASK_LIBRARY = [
       "first": 4,
       "second": 9,
       "unresolved": 3,
+      "positionWins": [
+        7,
+        6
+      ],
       "firstDecidedWilson95DescriptiveOnly": [
         0.12680703567070326,
         0.5763065701492199
@@ -33,6 +37,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -54,6 +62,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -75,6 +87,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -96,6 +112,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 3,
           "unresolved": 2,
+          "positionWins": [
+            1,
+            3
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.04558726029536886,
             0.6993581599030918
@@ -117,6 +137,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 0,
           "second": 1,
           "unresolved": 1,
+          "positionWins": [
+            1,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0,
             0.7934506882081973
@@ -138,6 +162,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 4,
           "unresolved": 1,
+          "positionWins": [
+            1,
+            4
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.03622410822563066,
             0.6244653729700049
@@ -161,6 +189,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -182,6 +214,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 5,
           "unresolved": 2,
+          "positionWins": [
+            5,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.030053369411815023,
             0.5635028250257673
@@ -203,6 +239,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 2,
           "unresolved": 1,
+          "positionWins": [
+            0,
+            3
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.06149194402093078,
             0.7923404011921757
@@ -235,27 +275,53 @@ export const EVALUATED_MASK_LIBRARY = [
           "nodes": 24
         }
       ],
-      "finiteHorizonProof": {
-        "result": 0,
-        "proven": true,
-        "status": "finite-horizon-only",
-        "nodes": 0,
-        "cacheHits": 0,
-        "cutoffs": 0,
-        "horizonCutoffs": 1,
-        "horizon": 4,
-        "nodeBudget": 1000,
-        "timeBudgetMs": 100,
-        "maxTableEntries": 2000,
-        "memoryBudgetMb": 512,
-        "stopReason": null,
-        "statesCached": 0,
-        "elapsedMs": 0.3652799999981653,
-        "peakHeapBytes": 70537008,
-        "alphaBeta": true,
-        "horizonPruning": true,
-        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
-      }
+      "finiteHorizonProof": [
+        {
+          "starter": 0,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.36653799999999137,
+          "peakHeapBytes": 23098272,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        {
+          "starter": 1,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.024717000000009648,
+          "peakHeapBytes": 23112208,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        }
+      ],
+      "positionBiasWarning": false
     },
     "games": 16,
     "unresolvedRate": 0.1875,
@@ -412,6 +478,10 @@ export const EVALUATED_MASK_LIBRARY = [
       "first": 8,
       "second": 8,
       "unresolved": 0,
+      "positionWins": [
+        10,
+        6
+      ],
       "firstDecidedWilson95DescriptiveOnly": [
         0.27999563470387406,
         0.7200043652961259
@@ -433,6 +503,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -454,6 +528,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -475,6 +553,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -496,6 +578,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 4,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            3,
+            3
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.29999331299474324,
             0.9032285897864654
@@ -517,6 +603,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 0,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            1,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0,
             0.6576197760453506
@@ -538,6 +628,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 4,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            5,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.29999331299474324,
             0.9032285897864654
@@ -561,6 +655,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -582,6 +680,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 3,
           "second": 5,
           "unresolved": 0,
+          "positionWins": [
+            5,
+            3
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.13684428473912286,
             0.694257607346229
@@ -603,6 +705,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 3,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            3,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.3006418400969081,
             0.954412739704631
@@ -647,27 +753,53 @@ export const EVALUATED_MASK_LIBRARY = [
           ]
         }
       ],
-      "finiteHorizonProof": {
-        "result": 0,
-        "proven": true,
-        "status": "finite-horizon-only",
-        "nodes": 0,
-        "cacheHits": 0,
-        "cutoffs": 0,
-        "horizonCutoffs": 1,
-        "horizon": 4,
-        "nodeBudget": 1000,
-        "timeBudgetMs": 100,
-        "maxTableEntries": 2000,
-        "memoryBudgetMb": 512,
-        "stopReason": null,
-        "statesCached": 0,
-        "elapsedMs": 0.0722589999968477,
-        "peakHeapBytes": 72022032,
-        "alphaBeta": true,
-        "horizonPruning": true,
-        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
-      }
+      "finiteHorizonProof": [
+        {
+          "starter": 0,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.044427000000013095,
+          "peakHeapBytes": 24519032,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        {
+          "starter": 1,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.02893299999999499,
+          "peakHeapBytes": 24657592,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        }
+      ],
+      "positionBiasWarning": false
     },
     "games": 16,
     "unresolvedRate": 0,
@@ -797,6 +929,10 @@ export const EVALUATED_MASK_LIBRARY = [
       "first": 9,
       "second": 6,
       "unresolved": 1,
+      "positionWins": [
+        3,
+        12
+      ],
       "firstDecidedWilson95DescriptiveOnly": [
         0.35746829954344506,
         0.8017550397372577
@@ -818,6 +954,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -839,6 +979,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -860,6 +1004,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -881,6 +1029,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 4,
           "second": 1,
           "unresolved": 1,
+          "positionWins": [
+            1,
+            4
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.375534627029995,
             0.9637758917743693
@@ -902,6 +1054,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -923,6 +1079,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 4,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            1,
+            5
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.29999331299474324,
             0.9032285897864654
@@ -946,6 +1106,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -967,6 +1131,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 4,
           "second": 3,
           "unresolved": 1,
+          "positionWins": [
+            0,
+            7
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.25045836275303557,
             0.8417801460075546
@@ -988,6 +1156,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 3,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            1,
+            3
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.3006418400969081,
             0.954412739704631
@@ -1040,27 +1212,53 @@ export const EVALUATED_MASK_LIBRARY = [
           ]
         }
       ],
-      "finiteHorizonProof": {
-        "result": 0,
-        "proven": true,
-        "status": "finite-horizon-only",
-        "nodes": 20,
-        "cacheHits": 0,
-        "cutoffs": 18,
-        "horizonCutoffs": 36,
-        "horizon": 4,
-        "nodeBudget": 1000,
-        "timeBudgetMs": 100,
-        "maxTableEntries": 2000,
-        "memoryBudgetMb": 512,
-        "stopReason": null,
-        "statesCached": 20,
-        "elapsedMs": 1.5554530000008526,
-        "peakHeapBytes": 34851128,
-        "alphaBeta": true,
-        "horizonPruning": true,
-        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
-      }
+      "finiteHorizonProof": [
+        {
+          "starter": 0,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 20,
+          "cacheHits": 0,
+          "cutoffs": 18,
+          "horizonCutoffs": 36,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 20,
+          "elapsedMs": 2.297690999999986,
+          "peakHeapBytes": 24541408,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        {
+          "starter": 1,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 19,
+          "cacheHits": 0,
+          "cutoffs": 17,
+          "horizonCutoffs": 34,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 19,
+          "elapsedMs": 1.2990760000000137,
+          "peakHeapBytes": 26030912,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        }
+      ],
+      "positionBiasWarning": false
     },
     "games": 16,
     "unresolvedRate": 0.0625,
@@ -1166,6 +1364,10 @@ export const EVALUATED_MASK_LIBRARY = [
       "first": 8,
       "second": 8,
       "unresolved": 0,
+      "positionWins": [
+        16,
+        0
+      ],
       "firstDecidedWilson95DescriptiveOnly": [
         0.27999563470387406,
         0.7200043652961259
@@ -1187,6 +1389,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            4,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -1208,6 +1414,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            4,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -1229,6 +1439,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -1250,6 +1464,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 3,
           "second": 3,
           "unresolved": 0,
+          "positionWins": [
+            6,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.18761630498040816,
             0.8123836950195918
@@ -1271,6 +1489,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -1292,6 +1514,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 3,
           "second": 3,
           "unresolved": 0,
+          "positionWins": [
+            6,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.18761630498040816,
             0.8123836950195918
@@ -1315,6 +1541,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            4,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -1336,6 +1566,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 4,
           "second": 4,
           "unresolved": 0,
+          "positionWins": [
+            8,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.21521606069626764,
             0.7847839393037324
@@ -1357,6 +1591,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            4,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -1401,27 +1639,53 @@ export const EVALUATED_MASK_LIBRARY = [
           ]
         }
       ],
-      "finiteHorizonProof": {
-        "result": 1,
-        "proven": true,
-        "status": "forced-win-within-horizon",
-        "nodes": 24,
-        "cacheHits": 3,
-        "cutoffs": 17,
-        "horizonCutoffs": 0,
-        "horizon": 4,
-        "nodeBudget": 1000,
-        "timeBudgetMs": 100,
-        "maxTableEntries": 2000,
-        "memoryBudgetMb": 512,
-        "stopReason": null,
-        "statesCached": 21,
-        "elapsedMs": 0.9823099999994156,
-        "peakHeapBytes": 36796448,
-        "alphaBeta": true,
-        "horizonPruning": true,
-        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
-      }
+      "finiteHorizonProof": [
+        {
+          "starter": 0,
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 24,
+          "cacheHits": 3,
+          "cutoffs": 17,
+          "horizonCutoffs": 0,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 21,
+          "elapsedMs": 1.146807999999993,
+          "peakHeapBytes": 27971312,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        {
+          "starter": 1,
+          "result": -1,
+          "proven": true,
+          "status": "forced-loss-within-horizon",
+          "nodes": 41,
+          "cacheHits": 15,
+          "cutoffs": 32,
+          "horizonCutoffs": 0,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 40,
+          "elapsedMs": 2.5890970000000095,
+          "peakHeapBytes": 27979440,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        }
+      ],
+      "positionBiasWarning": true
     },
     "games": 16,
     "unresolvedRate": 0,
@@ -1522,6 +1786,9 @@ export const EVALUATED_MASK_LIBRARY = [
       "T",
       "星5／壁3／先取2",
       "観測された初手6種類",
+      "初期位置側の偏りを観測",
+      "開始P1：forced-win-within-horizon",
+      "開始P2：forced-loss-within-horizon",
       "この標本で反復未観測"
     ]
   },
@@ -1537,6 +1804,10 @@ export const EVALUATED_MASK_LIBRARY = [
       "first": 12,
       "second": 4,
       "unresolved": 0,
+      "positionWins": [
+        10,
+        6
+      ],
       "firstDecidedWilson95DescriptiveOnly": [
         0.5050168327029684,
         0.8981793257983292
@@ -1558,6 +1829,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -1579,6 +1854,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -1600,6 +1879,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -1621,6 +1904,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 5,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            4,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.4364971749742326,
             0.969946630588185
@@ -1642,6 +1929,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 0,
           "unresolved": 0,
+          "positionWins": [
+            1,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.3423802239546494,
             1
@@ -1663,6 +1954,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 6,
           "second": 0,
           "unresolved": 0,
+          "positionWins": [
+            3,
+            3
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.6096657083436265,
             1
@@ -1686,6 +1981,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -1707,6 +2006,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 6,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            6,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.40927542792725174,
             0.9285207879020445
@@ -1728,6 +2031,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 4,
           "second": 0,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.5101091596030786,
             0.9999999999999999
@@ -1775,27 +2082,53 @@ export const EVALUATED_MASK_LIBRARY = [
           ]
         }
       ],
-      "finiteHorizonProof": {
-        "result": 0,
-        "proven": true,
-        "status": "finite-horizon-only",
-        "nodes": 266,
-        "cacheHits": 243,
-        "cutoffs": 236,
-        "horizonCutoffs": 10,
-        "horizon": 4,
-        "nodeBudget": 1000,
-        "timeBudgetMs": 100,
-        "maxTableEntries": 2000,
-        "memoryBudgetMb": 512,
-        "stopReason": null,
-        "statesCached": 260,
-        "elapsedMs": 33.38886899999852,
-        "peakHeapBytes": 37982824,
-        "alphaBeta": true,
-        "horizonPruning": true,
-        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
-      }
+      "finiteHorizonProof": [
+        {
+          "starter": 0,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 266,
+          "cacheHits": 243,
+          "cutoffs": 236,
+          "horizonCutoffs": 10,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 260,
+          "elapsedMs": 32.14045300000001,
+          "peakHeapBytes": 26933696,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        {
+          "starter": 1,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 243,
+          "cacheHits": 39,
+          "cutoffs": 225,
+          "horizonCutoffs": 148,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 240,
+          "elapsedMs": 33.51575299999999,
+          "peakHeapBytes": 26941920,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        }
+      ],
+      "positionBiasWarning": false
     },
     "games": 16,
     "unresolvedRate": 0,
@@ -1913,6 +2246,10 @@ export const EVALUATED_MASK_LIBRARY = [
       "first": 5,
       "second": 4,
       "unresolved": 7,
+      "positionWins": [
+        5,
+        4
+      ],
       "firstDecidedWilson95DescriptiveOnly": [
         0.26665129180087416,
         0.8112214802294544
@@ -1934,6 +2271,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -1955,6 +2296,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -1976,6 +2321,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 0,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            1,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0,
             0.6576197760453506
@@ -1997,6 +2346,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 0,
           "unresolved": 5,
+          "positionWins": [
+            0,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.2065493117918027,
             1
@@ -2018,6 +2371,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 0,
           "unresolved": 1,
+          "positionWins": [
+            1,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.2065493117918027,
             1
@@ -2039,6 +2396,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 0,
           "unresolved": 4,
+          "positionWins": [
+            1,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.3423802239546494,
             1
@@ -2062,6 +2423,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -2083,6 +2448,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 4,
+          "positionWins": [
+            3,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -2104,6 +2473,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 0,
           "unresolved": 3,
+          "positionWins": [
+            0,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.2065493117918027,
             1
@@ -2142,27 +2515,53 @@ export const EVALUATED_MASK_LIBRARY = [
           ]
         }
       ],
-      "finiteHorizonProof": {
-        "result": 0,
-        "proven": true,
-        "status": "finite-horizon-only",
-        "nodes": 0,
-        "cacheHits": 0,
-        "cutoffs": 0,
-        "horizonCutoffs": 1,
-        "horizon": 4,
-        "nodeBudget": 1000,
-        "timeBudgetMs": 100,
-        "maxTableEntries": 2000,
-        "memoryBudgetMb": 512,
-        "stopReason": null,
-        "statesCached": 0,
-        "elapsedMs": 0.04526799999803188,
-        "peakHeapBytes": 35549936,
-        "alphaBeta": true,
-        "horizonPruning": true,
-        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
-      }
+      "finiteHorizonProof": [
+        {
+          "starter": 0,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.04172299999999041,
+          "peakHeapBytes": 23973896,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        {
+          "starter": 1,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.009003000000006978,
+          "peakHeapBytes": 23978176,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        }
+      ],
+      "positionBiasWarning": false
     },
     "games": 16,
     "unresolvedRate": 0.4375,
@@ -2285,6 +2684,10 @@ export const EVALUATED_MASK_LIBRARY = [
       "first": 5,
       "second": 6,
       "unresolved": 5,
+      "positionWins": [
+        2,
+        9
+      ],
       "firstDecidedWilson95DescriptiveOnly": [
         0.21271271487637833,
         0.7199084642140241
@@ -2306,6 +2709,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -2327,6 +2734,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -2348,6 +2759,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -2369,6 +2784,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 0,
           "second": 2,
           "unresolved": 4,
+          "positionWins": [
+            0,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0,
             0.6576197760453506
@@ -2390,6 +2809,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 0,
           "unresolved": 1,
+          "positionWins": [
+            0,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.2065493117918027,
             1
@@ -2411,6 +2834,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 3,
           "unresolved": 2,
+          "positionWins": [
+            0,
+            4
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.04558726029536886,
             0.6993581599030918
@@ -2434,6 +2861,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -2455,6 +2886,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 3,
           "second": 2,
           "unresolved": 3,
+          "positionWins": [
+            0,
+            5
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.23072427940911855,
             0.8823792268590028
@@ -2476,6 +2911,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 0,
           "second": 2,
           "unresolved": 2,
+          "positionWins": [
+            0,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0,
             0.6576197760453506
@@ -2534,27 +2973,53 @@ export const EVALUATED_MASK_LIBRARY = [
           ]
         }
       ],
-      "finiteHorizonProof": {
-        "result": 0,
-        "proven": true,
-        "status": "finite-horizon-only",
-        "nodes": 0,
-        "cacheHits": 0,
-        "cutoffs": 0,
-        "horizonCutoffs": 1,
-        "horizon": 4,
-        "nodeBudget": 1000,
-        "timeBudgetMs": 100,
-        "maxTableEntries": 2000,
-        "memoryBudgetMb": 512,
-        "stopReason": null,
-        "statesCached": 0,
-        "elapsedMs": 0.044746999999915715,
-        "peakHeapBytes": 38275008,
-        "alphaBeta": true,
-        "horizonPruning": true,
-        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
-      }
+      "finiteHorizonProof": [
+        {
+          "starter": 0,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.33835600000003296,
+          "peakHeapBytes": 26733616,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        {
+          "starter": 1,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.01150799999999208,
+          "peakHeapBytes": 26737896,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        }
+      ],
+      "positionBiasWarning": false
     },
     "games": 16,
     "unresolvedRate": 0.3125,
@@ -2683,6 +3148,10 @@ export const EVALUATED_MASK_LIBRARY = [
       "first": 8,
       "second": 4,
       "unresolved": 4,
+      "positionWins": [
+        7,
+        5
+      ],
       "firstDecidedWilson95DescriptiveOnly": [
         0.3906220869404939,
         0.86187990987514
@@ -2704,6 +3173,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -2725,6 +3198,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -2746,6 +3223,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 0,
           "unresolved": 0,
+          "positionWins": [
+            1,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.3423802239546494,
             1
@@ -2767,6 +3248,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 1,
           "unresolved": 3,
+          "positionWins": [
+            2,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.2076595988078242,
             0.9385080559790691
@@ -2788,6 +3273,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 0,
           "unresolved": 0,
+          "positionWins": [
+            1,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.3423802239546494,
             1
@@ -2809,6 +3298,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 2,
           "unresolved": 3,
+          "positionWins": [
+            3,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.06149194402093078,
             0.7923404011921757
@@ -2832,6 +3325,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -2853,6 +3350,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 5,
           "second": 1,
           "unresolved": 2,
+          "positionWins": [
+            3,
+            3
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.4364971749742326,
             0.969946630588185
@@ -2874,6 +3375,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 2,
+          "positionWins": [
+            2,
+            0
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -2937,27 +3442,53 @@ export const EVALUATED_MASK_LIBRARY = [
           ]
         }
       ],
-      "finiteHorizonProof": {
-        "result": 0,
-        "proven": true,
-        "status": "finite-horizon-only",
-        "nodes": 0,
-        "cacheHits": 0,
-        "cutoffs": 0,
-        "horizonCutoffs": 1,
-        "horizon": 4,
-        "nodeBudget": 1000,
-        "timeBudgetMs": 100,
-        "maxTableEntries": 2000,
-        "memoryBudgetMb": 512,
-        "stopReason": null,
-        "statesCached": 0,
-        "elapsedMs": 0.027412000003096182,
-        "peakHeapBytes": 41233256,
-        "alphaBeta": true,
-        "horizonPruning": true,
-        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
-      }
+      "finiteHorizonProof": [
+        {
+          "starter": 0,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.037675999999976284,
+          "peakHeapBytes": 21570624,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        {
+          "starter": 1,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.011607000000026346,
+          "peakHeapBytes": 21574904,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        }
+      ],
+      "positionBiasWarning": false
     },
     "games": 16,
     "unresolvedRate": 0.25,
@@ -3079,6 +3610,10 @@ export const EVALUATED_MASK_LIBRARY = [
       "first": 6,
       "second": 9,
       "unresolved": 1,
+      "positionWins": [
+        5,
+        10
+      ],
       "firstDecidedWilson95DescriptiveOnly": [
         0.19824496026274246,
         0.6425317004565552
@@ -3100,6 +3635,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -3121,6 +3660,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -3142,6 +3685,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -3163,6 +3710,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 3,
           "unresolved": 1,
+          "positionWins": [
+            2,
+            3
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.11762077314099711,
             0.7692757205908813
@@ -3184,6 +3735,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -3205,6 +3760,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 4,
           "unresolved": 0,
+          "positionWins": [
+            3,
+            3
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09677141021353453,
             0.7000066870052566
@@ -3228,6 +3787,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -3249,6 +3812,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 5,
           "unresolved": 1,
+          "positionWins": [
+            1,
+            6
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.08221892324928332,
             0.6410655504689458
@@ -3270,6 +3837,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -3314,27 +3885,53 @@ export const EVALUATED_MASK_LIBRARY = [
           ]
         }
       ],
-      "finiteHorizonProof": {
-        "result": 0,
-        "proven": true,
-        "status": "finite-horizon-only",
-        "nodes": 0,
-        "cacheHits": 0,
-        "cutoffs": 0,
-        "horizonCutoffs": 1,
-        "horizon": 4,
-        "nodeBudget": 1000,
-        "timeBudgetMs": 100,
-        "maxTableEntries": 2000,
-        "memoryBudgetMb": 512,
-        "stopReason": null,
-        "statesCached": 0,
-        "elapsedMs": 0.013510000000678701,
-        "peakHeapBytes": 41812736,
-        "alphaBeta": true,
-        "horizonPruning": true,
-        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
-      }
+      "finiteHorizonProof": [
+        {
+          "starter": 0,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.024167000000034022,
+          "peakHeapBytes": 22101472,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        {
+          "starter": 1,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.008562999999981002,
+          "peakHeapBytes": 22105752,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        }
+      ],
+      "positionBiasWarning": false
     },
     "games": 16,
     "unresolvedRate": 0.0625,
@@ -3457,6 +4054,10 @@ export const EVALUATED_MASK_LIBRARY = [
       "first": 11,
       "second": 5,
       "unresolved": 0,
+      "positionWins": [
+        7,
+        9
+      ],
       "firstDecidedWilson95DescriptiveOnly": [
         0.4440435565274821,
         0.858353562348491
@@ -3478,6 +4079,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -3499,6 +4104,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -3520,6 +4129,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -3541,6 +4154,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 5,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            4
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.4364971749742326,
             0.969946630588185
@@ -3562,6 +4179,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 0,
           "unresolved": 0,
+          "positionWins": [
+            1,
+            1
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.3423802239546494,
             1
@@ -3583,6 +4204,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 4,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            3,
+            3
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.29999331299474324,
             0.9032285897864654
@@ -3606,6 +4231,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -3627,6 +4256,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 6,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            4,
+            4
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.40927542792725174,
             0.9285207879020445
@@ -3648,6 +4281,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 3,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            1,
+            3
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.3006418400969081,
             0.954412739704631
@@ -3695,27 +4332,53 @@ export const EVALUATED_MASK_LIBRARY = [
           ]
         }
       ],
-      "finiteHorizonProof": {
-        "result": 0,
-        "proven": true,
-        "status": "finite-horizon-only",
-        "nodes": 0,
-        "cacheHits": 0,
-        "cutoffs": 0,
-        "horizonCutoffs": 1,
-        "horizon": 4,
-        "nodeBudget": 1000,
-        "timeBudgetMs": 100,
-        "maxTableEntries": 2000,
-        "memoryBudgetMb": 512,
-        "stopReason": null,
-        "statesCached": 0,
-        "elapsedMs": 0.024107000001095003,
-        "peakHeapBytes": 42425752,
-        "alphaBeta": true,
-        "horizonPruning": true,
-        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
-      }
+      "finiteHorizonProof": [
+        {
+          "starter": 0,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.03071599999998398,
+          "peakHeapBytes": 22723680,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        {
+          "starter": 1,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.015112999999985277,
+          "peakHeapBytes": 22727960,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        }
+      ],
+      "positionBiasWarning": false
     },
     "games": 16,
     "unresolvedRate": 0,
@@ -3850,6 +4513,10 @@ export const EVALUATED_MASK_LIBRARY = [
       "first": 8,
       "second": 8,
       "unresolved": 0,
+      "positionWins": [
+        2,
+        14
+      ],
       "firstDecidedWilson95DescriptiveOnly": [
         0.27999563470387406,
         0.7200043652961259
@@ -3871,6 +4538,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -3892,6 +4563,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -3913,6 +4588,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -3934,6 +4613,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 3,
           "second": 3,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            6
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.18761630498040816,
             0.8123836950195918
@@ -3955,6 +4638,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 1,
           "second": 1,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.09453120463920084,
             0.9054687953607992
@@ -3976,6 +4663,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 3,
           "second": 3,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            6
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.18761630498040816,
             0.8123836950195918
@@ -3999,6 +4690,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            2,
+            2
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -4020,6 +4715,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 4,
           "second": 4,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            8
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.21521606069626764,
             0.7847839393037324
@@ -4041,6 +4740,10 @@ export const EVALUATED_MASK_LIBRARY = [
           "first": 2,
           "second": 2,
           "unresolved": 0,
+          "positionWins": [
+            0,
+            4
+          ],
           "firstDecidedWilson95DescriptiveOnly": [
             0.15003898774401986,
             0.8499610122559802
@@ -4085,27 +4788,53 @@ export const EVALUATED_MASK_LIBRARY = [
           ]
         }
       ],
-      "finiteHorizonProof": {
-        "result": 0,
-        "proven": true,
-        "status": "finite-horizon-only",
-        "nodes": 0,
-        "cacheHits": 0,
-        "cutoffs": 0,
-        "horizonCutoffs": 1,
-        "horizon": 4,
-        "nodeBudget": 1000,
-        "timeBudgetMs": 100,
-        "maxTableEntries": 2000,
-        "memoryBudgetMb": 512,
-        "stopReason": null,
-        "statesCached": 0,
-        "elapsedMs": 0.025497999999060994,
-        "peakHeapBytes": 43078648,
-        "alphaBeta": true,
-        "horizonPruning": true,
-        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
-      }
+      "finiteHorizonProof": [
+        {
+          "starter": 0,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.02186299999999619,
+          "peakHeapBytes": 23398192,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        {
+          "starter": 1,
+          "result": 0,
+          "proven": true,
+          "status": "finite-horizon-only",
+          "nodes": 0,
+          "cacheHits": 0,
+          "cutoffs": 0,
+          "horizonCutoffs": 1,
+          "horizon": 4,
+          "nodeBudget": 1000,
+          "timeBudgetMs": 100,
+          "maxTableEntries": 2000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 0,
+          "elapsedMs": 0.007190000000036889,
+          "peakHeapBytes": 23402472,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        }
+      ],
+      "positionBiasWarning": true
     },
     "games": 16,
     "unresolvedRate": 0,
@@ -4226,6 +4955,7 @@ export const EVALUATED_MASK_LIBRARY = [
       "rooms",
       "星9／壁5／先取4",
       "観測された初手5種類",
+      "初期位置側の偏りを観測",
       "反復を観測"
     ]
   }

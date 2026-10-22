@@ -17,6 +17,7 @@ jobs:
         env:
           MASK_MS: '300000'
           MASK_ATTEMPTS: '4000'
+      - run: node scripts/verify-mask-study.js
       - uses: actions/upload-artifact@v4
         if: always()
         with:

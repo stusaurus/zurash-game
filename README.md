@@ -108,3 +108,14 @@ PR #2の勝敗表示を最新CPU修正と統合し、続行不能な壁選択・
 序盤の集中や一部配置の後手寄りは残っているため、公平性・人間の面白さは未検証です。
 対局ごとにCPUの乱数seedを作り、「戻る」では保持、「再戦」では更新します。
 詳細・不採用候補・全データは `reports/route-cpu-study.md` と `reports/route-summary.csv`。
+
+
+## 盤面ラボ（PR #15・研究用／未認定）
+
+「新しい対戦」→「盤面ラボ」で、長方形・L/T/十字/H/U・穴・くびれ・段差・部屋・自由マスクを選んでCPU／2人対戦できます。幅・高さ2〜16、星・壁・先取数・seedなどを指定でき、視覚的な編集、端末内保存、JSON入出力に対応。「生成済みの研究候補を追加表示」で全合法候補を検索できます。研究用の静的配信には `python3 -m http.server 8080` を使います。
+
+生成・変異のAPIは `src/board-lab.js`、形状共通の境界は `src/geometry.js`。旧 `size` の状態と新 `width/height/playableCells` の状態は混在させません。
+
+`npm run research:masks` で時間・メモリ上限付きの研究を再開します。`MASK_RESUME=0 npm run research:masks` は再集計のみ。`node scripts/verify-mask-study.js` が全棋譜と圧縮データのSHA-256を検証します。通常CIに大量研究を追加していません。
+
+[生成・AI対局・限界・残課題の詳細](reports/mask-lab-2026-10-22.md)。未解決は引き分けではなく、120手や反復は終了条件ではありません。先攻率が50%でも初期位置に偏る場合があるため、P1/P2位置別成績も確認してください。

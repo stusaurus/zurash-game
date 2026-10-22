@@ -45,3 +45,7 @@ test('malicious JSON and huge dimensions stay recoverable; cancelled setup prese
  await page.goto('/');await openLab(page);await importBoard(page,{width:100000,height:100000,walls:[],stars:[],players:[]});await expect(page.locator('#labMessage')).toContainText('2〜16');
  await page.locator('#labJSON').fill('null');await page.locator('#labImport').click();await page.locator('[data-close="setupDialog"]').click();await expect(page.locator('.cell')).toHaveCount(49);await expect(page.locator('#skip')).toBeEnabled();
 });
+
+test('full generated research corpus loads on demand and is searchable',async({page})=>{
+ await page.goto('/');await openLab(page);await page.locator('#labCorpus').click();await expect(page.locator('#labMessage')).toContainText('追加表示しました',{timeout:15000});expect(await page.locator('#labLibrary option').count()).toBeGreaterThan(1200);await page.locator('#labSearch').fill('くびれ');expect(await page.locator('#labLibrary option').count()).toBeGreaterThan(1);await page.locator('#labLoad').click();await expect(page.locator('#labPlay')).toBeEnabled();
+});

@@ -1,0 +1,18 @@
+{
+  "legalBoards": 1283,
+  "recordsVerified": 352,
+  "uniqueGames": 336,
+  "duplicatesExcluded": 16,
+  "recordPlies": 26558,
+  "uniquePlies": 26014,
+  "first": 163,
+  "second": 151,
+  "unresolved": 22,
+  "hashes": {
+    "corpus.json.gz": "ce0dd202a461b286d1ddd45cef462633865521b9d8c3837c9fa5a6d24122b3fd",
+    "games.json.gz": "f074e7ba77d5af46204c0e16a67dc10821e9f3cc44f0d023c74514290bdc5c66",
+    "exploratory-games.json.gz": "3e4612e3bdee16241e68093b908e134802ffa23a8867e22c57ec54d87ef5efcd",
+    "library.json": "944405da0f6c5442626146d4d465d47b26767e6f2429ca6bdba2d5fb46772a60",
+    "summary.json": "df675a1807dec4f28af1f3012a8fa9a7a15dcf138395d8c86b56ba17044c59fe"
+  }
+}

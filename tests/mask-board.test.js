@@ -6,6 +6,7 @@ import {generateBoard,makeMask,validateBoard,parseBoardJSON,mutateBoard,definiti
 import {MASK_LIBRARY} from '../src/mask-library.js';
 import {captureRoutes} from '../src/route-ai.js';
 import {choose,seeded} from '../src/ai.js';
+import {newGame,advanceGame,verifyGame} from '../scripts/tactics-completion.js';
 const fixture=(extra={})=>({width:5,height:3,playableCells:Array.from({length:15},(_,i)=>i).filter(i=>i!==7),walls:[],stars:[4],players:[5,14],target:1,...extra});
 test('rectangle and hole stop sliding without wrapping or crossing terrain',()=>{
  const s=toBoardState(fixture());assert.equal(slide(s,0,1),6);assert.equal(step(6,1,s),null);assert.equal(step(4,1,s),null);assert.equal(step(0,0,s),null);assert.equal(distances(s,0).length,15);
@@ -67,4 +68,10 @@ test('exhaustive independent reference on every 2-pawn/1-wall/1-star placement o
  for(const p0 of mask)for(const p1 of mask)for(const w of mask)for(const star of mask){if(new Set([p0,p1,w,star]).size!==4)continue;
  for(const turn of [0,1]){const s={...toBoardState({width:3,height:2,playableCells:mask,players:[p0,p1],walls:[w],stars:[star],target:1}),turn};assert.deepEqual(actions(s),oracle(s));for(const c of successors(s))assert.deepEqual(c.n,apply(s,c.a));states++;}}
  assert.equal(states,240);
+});
+
+test('masked checkpoints preserve RNG and history across resume',()=>{
+ const base=MASK_LIBRARY[7].board,g=newGame(base,{policies:['star','positional'],seed:7821});
+ const direct=advanceGame(g,{maxPlies:30,timeBudgetMs:10000}),part=advanceGame(g,{maxPlies:8,timeBudgetMs:10000}),resumed=advanceGame(part,{maxPlies:30,timeBudgetMs:10000});
+ assert.deepEqual(resumed.history,direct.history);assert.deepEqual(resumed.rngStates,direct.rngStates);assert.deepEqual(resumed.state,direct.state);assert.ok(verifyGame(resumed));
 });
