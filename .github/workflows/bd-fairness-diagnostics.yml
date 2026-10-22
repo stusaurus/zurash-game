@@ -1,0 +1,38 @@
+name: B and D fairness diagnostics
+on:
+  workflow_dispatch:
+  push:
+    branches: [tactics-size-experiment]
+    paths:
+      - 'scripts/bd-fairness-diagnostics.js'
+      - 'src/research-layouts.js'
+      - '.github/workflows/bd-fairness-diagnostics.yml'
+  pull_request:
+    paths:
+      - 'scripts/bd-fairness-diagnostics.js'
+      - 'src/research-layouts.js'
+      - '.github/workflows/bd-fairness-diagnostics.yml'
+permissions:
+  contents: read
+jobs:
+  static-diagnostics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check and run B/D diagnostics
+        run: |
+          node --check scripts/bd-fairness-diagnostics.js
+          node scripts/bd-fairness-diagnostics.js
+      - name: Validate output
+        run: |
+          node --input-type=module -e "import {readFileSync} from 'node:fs'; import assert from 'node:assert/strict'; const r=JSON.parse(readFileSync('reports/fairness-diagnostics/BD-static.json')); assert.deepEqual(r.modes.map(x=>x.id),['B','D']); for(const x of r.modes){assert.equal(x.players.length,2);assert.ok(Number.isFinite(x.base.proxyBias));assert.ok(Number.isFinite(x.swappedProxy.proxyBias));}"
+      - name: Archive diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: bd-fairness-${{ github.run_id }}
+          path: reports/fairness-diagnostics/BD-static.json
+          retention-days: 30
