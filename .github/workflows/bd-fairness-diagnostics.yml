@@ -1,21 +1,6 @@
 name: B and D fairness diagnostics
 on:
   workflow_dispatch:
-  push:
-    branches: [tactics-size-experiment]
-    paths:
-      - 'scripts/bd-fairness-diagnostics.js'
-      - 'scripts/bd-fairness-candidates.js'
-      - 'scripts/bd-fairness-pilot.js'
-      - 'scripts/bd-fairness-holdout.js'
-      - 'scripts/bd-fairness-decision.js'
-      - 'src/research-layouts.js'
-      - '.github/workflows/bd-fairness-diagnostics.yml'
-  pull_request:
-    paths:
-      - 'scripts/bd-fairness-diagnostics.js'
-      - 'src/research-layouts.js'
-      - '.github/workflows/bd-fairness-diagnostics.yml'
 permissions:
   contents: read
 jobs:

@@ -23,7 +23,10 @@
     "research:stall:report": "node scripts/stall-report.js",
     "research:modes:continue": "node --max-old-space-size=768 scripts/mode-continuation.js",
     "research:modes:verify": "node --max-old-space-size=768 scripts/mode-continuation.js --verify",
-    "research:modes:report": "node scripts/mode-continuation-report.js"
+    "research:modes:report": "node scripts/mode-continuation-report.js",
+    "research:b:settlement": "node --max-old-space-size=768 scripts/b-settlement-study.js",
+    "research:b:verify": "node --max-old-space-size=768 scripts/b-settlement-study.js --verify",
+    "research:b:report": "node scripts/b-settlement-report.js"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"

@@ -63,3 +63,11 @@ test('stall research displays proven structural issue and retains playable resea
  await page.locator('#labSearch').fill('mode-E');await page.locator('#labLoad').click();await expect(page.locator('#labEvidence')).toContainText('保存棋譜を継続');await expect(page.locator('#labEvidence')).toContainText('新規対局0');await expect(page.locator('#labEvidence')).toContainText('追加予算2000ms');
  await page.locator('#labSearch').fill('停滞改善');await page.locator('#labLoad').click();await expect(page.locator('#labEvidence')).not.toContainText('全到達状態の列挙で勝利不能');await expect(page.locator('#labEvidence')).toContainText('独立条件');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.locator('#labPlay').click();await expect(page.locator('#boardSpec')).toContainText('未認定');await expect(page.locator('#skip')).toBeEnabled();
 });
+
+test('B settlement comparison is explicitly uncertified and playable at 320px',async({page})=>{
+ await page.setViewportSize({width:320,height:860});await page.goto('/');await page.locator('#localMode').click();await page.locator('#boardLab > details > summary').click();
+ await page.locator('#labBSettlement').click();await expect(page.locator('#labMessage')).toContainText('正式採用なし',{timeout:20000});
+ await page.locator('#labSearch').fill('B研究');await expect(page.locator('#labLibrary option')).toHaveCount(2);await page.locator('#labLoad').click();
+ await expect(page.locator('#labEvidence')).toContainText('未認定');await expect(page.locator('#labEvidence')).toContainText('AI対局64局');await expect(page.locator('#labEvidence')).toContainText('物理的な初期位置');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.locator('#labPlay').click();await expect(page.locator('#boardSpec')).toContainText('未認定');await expect(page.locator('#skip')).toBeEnabled();
+});

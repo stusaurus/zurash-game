@@ -140,3 +140,9 @@ PR #2の勝敗表示を最新CPU修正と統合し、続行不能な壁選択・
 [継続前後の比較](reports/mode-continuation-2026-10-23.md)。前回の未解決218局を同じID・AI・RNGから延長し、新規対局数を増やさず計算予算の影響を検証しました。
 
 `npm run research:modes:continue` → `npm run research:modes:verify` → `npm run research:modes:report`。重い処理は手動の `mode-continuation.yml` に分離。盤面ラボの停滞研究ボタンで継続後の成績を表示します。
+
+## Bの得点停滞と全モード独立比較（2026-10-23）
+
+[784局の比較・判断と限界](reports/b-settlement-2026-10-23.md)、[代表局面・棋譜](reports/b-settlement-2026-10-23/boards.html)。Bの既存未解決17局は同一局面反復0だが長い無得点を観測。先取2案は決着率が上がる一方で偏りが残るため正式採用しません。全モードの新seed比較も保存しました。
+
+`npm run research:b:settlement` → `npm run research:b:verify` → `npm run research:b:report`。手動の `b-settlement.yml`、棋譜・RNGチェックポイント、凍結した選抜と独立検証を分離。ラボの「Bの決着改善・独立比較を読み込む」で研究用候補を試せます。正式盤面・CPU・ルールは変更していません。
