@@ -17,7 +17,10 @@ for(const mode of input.modes){
   const plans=researchPlans(record,{stage:'fairness-paired-pilot',seeds:[160001,160019,160033,160051],pairs:[['search','route']]});
   const games=plans.map(p=>advanceResearch(newResearchGame(p),{timeBudgetMs:results.timeBudgetMs,maxPlies:results.maxPlies,memoryBudgetMb:640}));
   const settled=games.filter(g=>g.state.winner!==null);
-  modeOut.records.push({label:item.label,change:item.change??null,total:games.length,settled:settled.length,unresolved:games.length-settled.length,firstWins:settled.filter(g=>g.state.winner===g.starter).length,secondWins:settled.filter(g=>g.state.winner!==g.starter).length,summary:aggregateResearch(games)});
+  const lengths=games.map(g=>g.history.length).sort((a,b)=>a-b);
+  const reasons=Object.fromEntries([...new Set(games.map(g=>g.reason??'none'))].sort().map(reason=>[reason,games.filter(g=>(g.reason??'none')===reason).length]));
+  const diagnostics={medianPlies:lengths[Math.floor(lengths.length/2)],maxPlies:lengths.at(-1),reasons,unresolvedBySeed:Object.fromEntries([...new Set(games.map(g=>g.seed))].sort((a,b)=>a-b).map(seed=>[seed,games.filter(g=>g.seed===seed&&g.state.winner===null).length]))};
+  modeOut.records.push({diagnostics,label:item.label,change:item.change??null,total:games.length,settled:settled.length,unresolved:games.length-settled.length,firstWins:settled.filter(g=>g.state.winner===g.starter).length,secondWins:settled.filter(g=>g.state.winner!==g.starter).length,summary:aggregateResearch(games)});
  }
  results.modes.push(modeOut);
 }
