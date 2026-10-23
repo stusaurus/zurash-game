@@ -1,0 +1,16 @@
+{
+  "sourceHash": "26bd6a4078afa3f09cf235fcb0304ebc89b07076b66834fc1bb7c5187c448184",
+  "newInitialGames": 128,
+  "totalInitialIDs": 976,
+  "newPlies": 5122,
+  "continued": 120,
+  "addedContinuationPlies": 5932,
+  "forks": 100,
+  "forkAddedPlies": 1060,
+  "singleActionBranches": 2,
+  "singleAddedPlies": 66,
+  "checkpointRNGRecomputed": true,
+  "independentLegalReplay": true,
+  "rootSetsIdenticalAcrossEvaluators": true,
+  "singleActionHistoryAndRNGRecomputed": true
+}

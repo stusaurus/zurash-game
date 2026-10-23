@@ -1,0 +1,33 @@
+{
+  "selected": [
+    {
+      "caseID": "689daa56c8446b69386d62de6f73c1773eaca61d72c72e4fa4b858a30bc6780e",
+      "control": "keeper-distance",
+      "ply": 37,
+      "stateHash": "64803e004eddf4f6d250aec139579859da19cfcb0af45480f9e3539a2b819c9c",
+      "action": {
+        "wall": {
+          "wall": 7,
+          "to": 0
+        },
+        "dir": 1
+      }
+    },
+    {
+      "caseID": "c36286ae644be8c21d3960330566c361bf4de2a7dbce1fc327d305750ee3eb46",
+      "control": "shield-distance",
+      "ply": 148,
+      "stateHash": "06c09a309523d5d9f8ca16f5da2859bc485849d0e9a6539c97011f6731259499",
+      "action": {
+        "wall": {
+          "wall": 4,
+          "to": 64
+        },
+        "dir": 1
+      }
+    }
+  ],
+  "ms": 4000,
+  "extraPlies": 128,
+  "note": "Post-hoc mechanism test, one state/action once. Change only the first action; then resume control AI. Ordinary control RNG is consumed before intervention. Not initial games or independent seed evidence."
+}

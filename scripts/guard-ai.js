@@ -5,6 +5,49 @@ import {captureRoutes} from '../src/route-ai.js';
 import {diagnosticMove,forcedThreeAction} from './trajectory-followup.js';
 import {randomStream} from './tactics-completion.js';
 export const MODELS=['archived','depth3','wide2','retain','routes2'];
+// A common search kernel for a controlled 2 x 2 ablation. Root ordering never
+// uses the leaf evaluator, so changing evaluation cannot change the root set.
+export const FACTOR_MODELS={
+ 'shield-distance':{keeper:false,routes:false},
+ 'keeper-distance':{keeper:true,routes:false},
+ 'shield-routes':{keeper:false,routes:true},
+ 'keeper-routes':{keeper:true,routes:true},
+};
+export function factorValue(s,p,routes=false){
+ let v=evaluate(s,p);if(!routes||s.winner!==null)return v;
+ const a=captureRoutes(s,p).size,b=captureRoutes(s,1-p).size;
+ v+=180*(a-b);
+ if(s.turn===p&&s.scores[p]===(s.target??3)-1&&a)v+=20000;
+ if(s.turn!==p&&s.scores[1-p]===(s.target??3)-1&&b)v-=20000;
+ return v;
+}
+export function factorMove(s,model,rng,seen=new Map(),{trace=false}={}){
+ const config=FACTOR_MODELS[model];if(!config)throw Error('Unknown factor model');
+ const start=performance.now(),heapBefore=process.memoryUsage().heapUsed,p=s.turn;
+ const inv=inventory(s,'retain',rng.state(),seen);
+ for(const _ of inv.rows)rng();
+ const roots=config.keeper?inv.retained:inv.pool.slice(0,8),wins=inv.rows.filter(c=>c.n.winner===p);
+ for(const c of wins)if(!roots.some(r=>id(r.a)===id(c.a)))roots.push(c);
+ let best=-Infinity,action=wins[0]?.a??roots[0]?.a??null,leaves=0,peak=heapBefore;
+ const scores=[];
+ for(const c of roots){
+  const replies=successors(c.n);let worst=Infinity;
+  for(const r of replies){leaves++;worst=Math.min(worst,factorValue(r.n,p,config.routes));}
+  if(!replies.length)worst=factorValue(c.n,p,config.routes);
+  const root=factorValue(c.n,p,config.routes)-(seen.get(key(c.n))??0)*130;
+  const value=.88*worst+.12*root-(seen.get(key(c.n))??0)*130;
+  if(!wins.length&&value>best){best=value;action=c.a;}
+  if(trace)scores.push({action:c.a,root,worst,value,safe:c.safe,prepare:c.prepare,deny:c.deny,capture:c.capture});
+  peak=Math.max(peak,process.memoryUsage().heapUsed);
+ }
+ const mem=process.memoryUsage();
+ return {action,model,depth:2,replyBeam:'all',complete:true,legalRoots:inv.rows.length,
+  safeRoots:inv.rows.filter(c=>c.safe).length,retainedCount:roots.length,rootEvaluated:roots.length,
+  leafEvaluations:leaves,elapsedMs:performance.now()-start,heapBefore,heapAfter:mem.heapUsed,
+  sampledHeapPeak:peak,rssAfter:mem.rss,processPeakRssKB:process.resourceUsage().maxRSS,
+  ...(trace?{retainedActions:roots.map(c=>c.a),scores,certificate:inv.forced}:{}),
+  memoryNote:'Sampled heap and cumulative process RSS, not isolated per-model peak.'};
+}
 const id=a=>JSON.stringify(a);
 export function inventory(s,model,rngState,seen=new Map()){
  const p=s.turn,rng=randomStream(rngState),own=captureRoutes(s,p).size,opp=captureRoutes(s,1-p).size;
