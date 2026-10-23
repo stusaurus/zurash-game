@@ -1,0 +1,71 @@
+{
+  "method": "Archived evaluate minus visit penalty 130, seeded ties; safe roots verified with independent referenceChildren and every immediate opponent win",
+  "rows": [
+    {
+      "sourceID": "s-0b4d2e90e939288efd62d6714bfb5d7b119c8babeafc0324d1bb8fd2bfb58360",
+      "ply": 17,
+      "stateHash": "fec0f90c3eea046f0d6cf0860ab5a038dc46b66faef72aed89b8ac21f77e1b3d",
+      "rootActions": 74,
+      "safeRanks": [
+        23,
+        49
+      ],
+      "minSafeRank": 23,
+      "safeInsideBeam8": 0,
+      "routeChoiceRank": 23,
+      "originalScores": [
+        -1400,
+        -1436,
+        -1563
+      ]
+    },
+    {
+      "sourceID": "s-2af7392934217da88f080bdaaded469bb40c99651d4e6928e1f41aa76725e3b9",
+      "ply": 35,
+      "stateHash": "81a67eb91dbfda1606fd2036010b5952d24c23e83a9cb40d26e360060932a527",
+      "rootActions": 56,
+      "safeRanks": [
+        17,
+        18,
+        24,
+        26,
+        31,
+        32
+      ],
+      "minSafeRank": 17,
+      "safeInsideBeam8": 0,
+      "routeChoiceRank": 17,
+      "originalScores": [
+        -700,
+        -863
+      ]
+    },
+    {
+      "sourceID": "s-808add3885a3be3d3af5f28adb31639fdd6d159bb15b665dbd80867e9b2f2eef",
+      "ply": 17,
+      "stateHash": "22951271965dfd6ee6292af82f4cac5025379b4714736252c86dc9cc4da9ffa7",
+      "rootActions": 72,
+      "safeRanks": [
+        24,
+        29,
+        43,
+        44
+      ],
+      "minSafeRank": 24,
+      "safeInsideBeam8": 0,
+      "routeChoiceRank": 43,
+      "originalScores": [
+        -1373,
+        -1382,
+        -1391,
+        -1400,
+        -1409,
+        -1418,
+        -1427,
+        -1518,
+        -1527,
+        -1563
+      ]
+    }
+  ]
+}
