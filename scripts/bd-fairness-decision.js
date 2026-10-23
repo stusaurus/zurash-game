@@ -3,10 +3,11 @@ import {readFileSync,writeFileSync} from 'node:fs';
 const dir=process.env.FAIRNESS_DIAG_REPORT??'reports/fairness-diagnostics';
 const pilot=JSON.parse(readFileSync(dir+'/BD-paired-pilot.json'));
 const holdout=JSON.parse(readFileSync(dir+'/D-holdout.json'));
+const bHoldout=JSON.parse(readFileSync(dir+'/B-holdout.json'));
 const rows=[];
 for(const mode of pilot.modes){
  for(const r of mode.records){
-  const h=mode.id==='D'?holdout.comparison.find(x=>x.label===r.label):null;
+  const h=mode.id==='D'?holdout.comparison.find(x=>x.label===r.label):mode.id==='B'&&r.label==='original'?bHoldout:null;
   const n=h??r,rate=n.settled/n.total,firstRate=n.settled?n.firstWins/n.settled:null;
   // Conservative predeclared gate: at least 95% settled, >=64 independent games,
   // and <=10 percentage points from 50/50 in the independent holdout.
