@@ -1,0 +1,157 @@
+{
+  "commit": "c3dd6e176a22e8335e0789732df8c2a9625c7bf1",
+  "run": 39945788195,
+  "job": 120387991889,
+  "conclusion": "success",
+  "rows": [
+    {
+      "policies": [
+        "star",
+        "route"
+      ],
+      "total": 32,
+      "settled": 32,
+      "unresolved": 0,
+      "firstWins": 16,
+      "secondWins": 16,
+      "medianPlies": 9
+    },
+    {
+      "policies": [
+        "search",
+        "search"
+      ],
+      "total": 32,
+      "settled": 22,
+      "unresolved": 10,
+      "firstWins": 22,
+      "secondWins": 0,
+      "medianPlies": 15
+    },
+    {
+      "policies": [
+        "route",
+        "route"
+      ],
+      "total": 32,
+      "settled": 14,
+      "unresolved": 18,
+      "firstWins": 12,
+      "secondWins": 2,
+      "medianPlies": 141
+    }
+  ],
+  "diversity": {
+    "uniqueOutcomes": [
+      {
+        "policies": [
+          "star",
+          "route"
+        ],
+        "settledTrajectories": 32,
+        "uniqueSettledTrajectories": 29,
+        "firstWins": 13,
+        "secondWins": 16
+      },
+      {
+        "policies": [
+          "search",
+          "search"
+        ],
+        "settledTrajectories": 22,
+        "uniqueSettledTrajectories": 11,
+        "firstWins": 11,
+        "secondWins": 0
+      },
+      {
+        "policies": [
+          "route",
+          "route"
+        ],
+        "settledTrajectories": 14,
+        "uniqueSettledTrajectories": 7,
+        "firstWins": 6,
+        "secondWins": 1
+      }
+    ],
+    "total": 96,
+    "full": {
+      "unique": 67,
+      "duplicates": 29,
+      "maxMultiplicity": 3,
+      "multiplicities": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "first5": {
+      "unique": 45,
+      "duplicates": 51,
+      "maxMultiplicity": 8,
+      "multiplicities": [
+        8,
+        8,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "first10": {
+      "unique": 61,
+      "duplicates": 35,
+      "maxMultiplicity": 3,
+      "multiplicities": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "byPolicy": [
+      {
+        "policies": [
+          "star",
+          "route"
+        ],
+        "total": 32,
+        "uniqueFull": 29
+      },
+      {
+        "policies": [
+          "search",
+          "search"
+        ],
+        "total": 32,
+        "uniqueFull": 18
+      },
+      {
+        "policies": [
+          "route",
+          "route"
+        ],
+        "total": 32,
+        "uniqueFull": 20
+      }
+    ],
+    "note": "Same initial state and identical action sequence count as repeated trajectories. Unique-outcome win rates are descriptive, not unbiased estimates. Time-censored outcomes must not count as losses. Opening fingerprints only indicate shared prefixes."
+  }
+}
