@@ -1,0 +1,38 @@
+{
+  "archived": {
+    "depth": 2,
+    "rootBeam": 8,
+    "nodeBudget": null,
+    "evaluation": "archived distance; legacy early cutoffs"
+  },
+  "depth3": {
+    "depth": 3,
+    "beam": 8,
+    "nodeBudget": 2048,
+    "evaluation": "distance",
+    "replyBeam": "all",
+    "thirdPlyBeam": "all",
+    "rootCutoff": "same worst < best - 150 condition as archived",
+    "correction": "Old beam-pruned comparator is preserved in cases-legacy-depth3 and excluded from final statistics."
+  },
+  "wide2": {
+    "depth": 2,
+    "beam": "all",
+    "nodeBudget": 2048,
+    "evaluation": "distance"
+  },
+  "retain": {
+    "depth": 2,
+    "rootBeam": "top 8 safe roots + top 4 denial/preparation/capture representatives + three-ply certificate",
+    "replyBeam": "all",
+    "nodeBudget": 2048,
+    "evaluation": "distance at leaves; exact immediate-loss screening and category preservation at root"
+  },
+  "routes2": {
+    "depth": 2,
+    "beam": 12,
+    "nodeBudget": 2048,
+    "evaluation": "distance + exact next-turn scoring routes + immediate-loss screening"
+  },
+  "memoryNote": "Heap before/after and process RSS high-water; cumulative process memory is not an isolated per-model allocation peak."
+}

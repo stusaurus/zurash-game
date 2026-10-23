@@ -33,7 +33,9 @@
     "research:trajectories": "node --max-old-space-size=768 scripts/trajectory-audit.js",
     "research:trajectories:verify": "node --max-old-space-size=768 scripts/trajectory-audit.js --verify",
     "research:trajectory:followup": "node --max-old-space-size=768 scripts/trajectory-followup.js",
-    "research:trajectory:followup:verify": "node --max-old-space-size=768 scripts/trajectory-followup.js --verify"
+    "research:trajectory:followup:verify": "node --max-old-space-size=768 scripts/trajectory-followup.js --verify",
+    "research:guards": "node --max-old-space-size=768 scripts/guard-study.js",
+    "research:guards:verify": "node --max-old-space-size=768 scripts/guard-study.js --verify"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"
