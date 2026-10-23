@@ -19,7 +19,9 @@ for(const mode of input.modes){
   const settled=games.filter(g=>g.state.winner!==null);
   const lengths=games.map(g=>g.history.length).sort((a,b)=>a-b);
   const reasons=Object.fromEntries([...new Set(games.map(g=>g.reason??'none'))].sort().map(reason=>[reason,games.filter(g=>(g.reason??'none')===reason).length]));
-  const diagnostics={medianPlies:lengths[Math.floor(lengths.length/2)],maxPlies:lengths.at(-1),reasons,unresolvedBySeed:Object.fromEntries([...new Set(games.map(g=>g.seed))].sort((a,b)=>a-b).map(seed=>[seed,games.filter(g=>g.seed===seed&&g.state.winner===null).length]))};
+  const unresolved=games.filter(g=>g.state.winner===null);
+  const tail=unresolved.map(g=>({seed:g.seed,starter:g.starter,positionSwap:g.experiment?.positionSwap,aiSwap:g.experiment?.aiSwap,plies:g.history.length,reason:g.reason??'none',finalScores:g.state.scores,finalPlayers:g.state.players,finalStars:g.state.stars,finalWalls:g.state.walls}));
+  const diagnostics={unresolvedSnapshots:tail,medianPlies:lengths[Math.floor(lengths.length/2)],maxPlies:lengths.at(-1),reasons,unresolvedBySeed:Object.fromEntries([...new Set(games.map(g=>g.seed))].sort((a,b)=>a-b).map(seed=>[seed,games.filter(g=>g.seed===seed&&g.state.winner===null).length]))};
   modeOut.records.push({diagnostics,label:item.label,change:item.change??null,total:games.length,settled:settled.length,unresolved:games.length-settled.length,firstWins:settled.filter(g=>g.state.winner===g.starter).length,secondWins:settled.filter(g=>g.state.winner!==g.starter).length,summary:aggregateResearch(games)});
  }
  results.modes.push(modeOut);
