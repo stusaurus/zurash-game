@@ -1,0 +1,33 @@
+name: B longer training and position followup
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: b-followup-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test tests/b-followup.test.js
+      - run: timeout 12m node --max-old-space-size=768 scripts/b-followup.js
+      - run: timeout 4m node --max-old-space-size=768 scripts/b-star-check.js
+      - run: timeout 3m node --max-old-space-size=768 scripts/b-star-check.js --policies
+      - run: node --max-old-space-size=768 scripts/b-followup.js --verify
+      - run: node --max-old-space-size=768 scripts/b-star-check.js --verify
+      - run: node --max-old-space-size=768 scripts/b-star-check.js --verify-policies
+      - run: node scripts/b-followup-report.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: b-followup
+          path: |
+            reports/b-followup-2026-10-23/
+            reports/b-followup-2026-10-23.md
+          retention-days: 90

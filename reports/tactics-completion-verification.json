@@ -1,0 +1,8 @@
+{
+  "verifiedContinuations": 325,
+  "verifiedGames": 1320,
+  "verifiedLegalPlies": 173655,
+  "duplicates": 0,
+  "missing": 0,
+  "method": "Replay every persisted action through validated engine.apply; compare result, reason and plan assignments."
+}

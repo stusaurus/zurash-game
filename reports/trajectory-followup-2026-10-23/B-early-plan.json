@@ -1,0 +1,22 @@
+{
+  "ids": [
+    "s-0b4d2e90e939288efd62d6714bfb5d7b119c8babeafc0324d1bb8fd2bfb58360",
+    "s-2af7392934217da88f080bdaaded469bb40c99651d4e6928e1f41aa76725e3b9",
+    "s-41238231bad7c155748f000227bac52f1f49fc12588c32ed6cca489d34cfe16c",
+    "s-56c963cecb6a0d9694aa9493f7662dfad6b34739d9671cacbefab6370ae40110",
+    "s-808add3885a3be3d3af5f28adb31639fdd6d159bb15b665dbd80867e9b2f2eef",
+    "s-8a9e487ffac01ab955d5839ac36080c0ce3e7797e95d14b6759f4fe3352c7475",
+    "s-b99f23288eefb5cd3dab13f8d77e4fbd6a9dfbce74e0801a700d7840551fe475",
+    "s-c429f68d4c29452959ec9a730501a00677c5ebc32c4adc50f9b10f55ebe0a676",
+    "s-e1a8b02fd3168b963f7a82407eeb2909f0a46d4d2c04dfde0d9dfb9c36ca6b95"
+  ],
+  "variants": [
+    "archived",
+    "route"
+  ],
+  "atPly": 1,
+  "timeBudgetMs": 4000,
+  "extraPlies": 128,
+  "extraBudgetMs": 4000,
+  "note": "Supplementary earliest-response control, chosen before its outcomes. Existing route AI changes only the losing actor; forks are excluded from fairness ledgers."
+}

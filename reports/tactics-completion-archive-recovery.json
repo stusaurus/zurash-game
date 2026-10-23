@@ -1,0 +1,16 @@
+[
+  {
+    "id": "8:fixed:1:1:defensive/defensive:1",
+    "state": {
+      "size": 8,
+      "target": 4,
+      "scores": [
+        3,
+        4
+      ],
+      "winner": 1,
+      "ply": 73
+    },
+    "rerunElapsedMs": 1757.2831999999999
+  }
+]

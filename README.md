@@ -108,3 +108,49 @@ PR #2の勝敗表示を最新CPU修正と統合し、続行不能な壁選択・
 序盤の集中や一部配置の後手寄りは残っているため、公平性・人間の面白さは未検証です。
 対局ごとにCPUの乱数seedを作り、「戻る」では保持、「再戦」では更新します。
 詳細・不採用候補・全データは `reports/route-cpu-study.md` と `reports/route-summary.csv`。
+
+
+## 盤面ラボ（PR #15・研究用／未認定）
+
+「新しい対戦」→「盤面ラボ」で、長方形・L/T/十字/H/U・穴・くびれ・段差・部屋・自由マスクを選んでCPU／2人対戦できます。幅・高さ2〜16、星・壁・先取数・seedなどを指定でき、視覚的な編集、端末内保存、JSON入出力に対応。「生成済みの研究候補を追加表示」で全合法候補を検索できます。研究用の静的配信には `python3 -m http.server 8080` を使います。
+
+生成・変異のAPIは `src/board-lab.js`、形状共通の境界は `src/geometry.js`。旧 `size` の状態と新 `width/height/playableCells` の状態は混在させません。
+
+`npm run research:masks` で時間・メモリ上限付きの研究を再開します。`MASK_RESUME=0 npm run research:masks` は再集計のみ。`node scripts/verify-mask-study.js` が全棋譜と圧縮データのSHA-256を検証します。通常CIに大量研究を追加していません。
+
+[生成・AI対局・限界・残課題の詳細](reports/mask-lab-2026-10-22.md)。未解決は引き分けではなく、120手や反復は終了条件ではありません。先攻率が50%でも初期位置に偏る場合があるため、P1/P2位置別成績も確認してください。
+
+
+## 全1,135候補の名盤研究
+
+「盤面ラボ」→「名盤研究・全件の基礎評価を読み込む」で、基礎評価・手番別成績・物理的初期位置別成績・独立条件・対応区間・観測特徴を表示できます。研究候補はすべて未認定です。盤面を編集すると研究成績を引き継ぎません。
+
+`npm run research:discovery`、`npm run research:positions`、`npm run research:discovery:report`、`npm run research:discovery:verify` で、時間・メモリ上限付きの評価と照合を実行できます。通常CIに大量対局を追加していません。
+
+[全件評価・5,008局・初期位置改善・信頼区間・限界の詳細](reports/discovery-2026-10-22.md)。元の盤面・過去の研究・公開設定は保持しています。
+
+## 停滞原因と同条件再評価（2026-10-23）
+
+[停滞研究報告](reports/stall-2026-10-23.md)と[盤面図・代表棋譜](reports/stall-2026-10-23/boards.html)。U字2IDの全状態検証、18小変更、既存8候補・全6モードの独立比較を保存。研究用・未認定。盤面ラボの「停滞原因と改善比較を読み込む」から試せます。
+
+`npm run research:stall`、`npm run research:stall:report`、`npm run research:stall:verify`。重い処理は手動の `stall-study.yml` に分離し、元の5,008局は変更しません。
+
+## スプリント・A〜Eの既存棋譜継続（2026-10-23）
+
+[継続前後の比較](reports/mode-continuation-2026-10-23.md)。前回の未解決218局を同じID・AI・RNGから延長し、新規対局数を増やさず計算予算の影響を検証しました。
+
+`npm run research:modes:continue` → `npm run research:modes:verify` → `npm run research:modes:report`。重い処理は手動の `mode-continuation.yml` に分離。盤面ラボの停滞研究ボタンで継続後の成績を表示します。
+
+## Bの得点停滞と全モード独立比較（2026-10-23）
+
+[784局の比較・判断と限界](reports/b-settlement-2026-10-23.md)、[代表局面・棋譜](reports/b-settlement-2026-10-23/boards.html)。Bの既存未解決17局は同一局面反復0だが長い無得点を観測。先取2案は決着率が上がる一方で偏りが残るため正式採用しません。全モードの新seed比較も保存しました。
+
+`npm run research:b:settlement` → `npm run research:b:verify` → `npm run research:b:report`。手動の `b-settlement.yml`、棋譜・RNGチェックポイント、凍結した選抜と独立検証を分離。ラボの「Bの決着改善・独立比較を読み込む」で研究用候補を試せます。正式盤面・CPU・ルールは変更していません。
+
+## Bの長めの訓練・星分散・3手必勝の見落とし（2026-10-23）
+
+[続報・608局と途中局面の証明](reports/b-followup-2026-10-23.md)。前段の訓練189局を継続し92局が新たに決着（新規対局0）。別に608局の初期位置・壁・星配置比較を保存しました。星分散案は一部方策で改善傾向がありますが、混合/防御の未決着は残り、正式採用しません。
+
+Bの101手目の代表局面では、独立ルールで相手全64応手を検査し、停止壁の二重化による3手必勝を確認。9方策はこの必勝を保証する手を選ばず、研究用の1手介入だけなら3手で決着しました。1局面の結果を一般的なCPU強化の証明にはせず、正式CPUは維持しています。
+
+`npm run research:b:followup` → `npm run research:b:followup:verify` → `npm run research:b:followup:report`。手動 `b-followup.yml`。ラボのB比較ボタンで前段候補も残したまま読み込めます。各実験の700/900/1,500msを混ぜないよう表示しています。

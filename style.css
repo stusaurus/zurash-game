@@ -239,7 +239,7 @@ h1 span {
 }
 .board {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(var(--size, 7), 1fr);
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 5px;
@@ -315,8 +315,8 @@ h1 span {
 }
 .token {
   position: absolute;
-  width: 14.285714%;
-  height: 14.285714%;
+  width: calc(100% / var(--size, 7));
+  height: calc(100% / var(--size, 7));
   left: 0;
   top: 0;
   display: grid;
@@ -586,7 +586,7 @@ select {
 }
 /* Keep every ice tile square, including rows containing different content. */
 .board {
-  grid-template-rows: repeat(7, minmax(0, 1fr));
+  grid-template-rows: repeat(var(--size, 7), minmax(0, 1fr));
 }
 h1 {
   white-space: nowrap;
@@ -730,3 +730,27 @@ dialog.result.defeat {
 }
 /* Keep the main-branch local-mode difficulty control behavior. */
 #cpuLevelRow[hidden] { display: none; }
+
+.board-scroll { overflow: auto; padding-bottom: 5px; }
+.board-wrap.zoomed { min-width: calc(var(--size, 7) * 44px + 14px); }
+#boardSpec { font-size: 13px; overflow-wrap: anywhere; }
+#boardZoom { margin-bottom: 8px; }
+/* Missing terrain has no cell/button and never looks like a movable wall. */
+.board {grid-template-columns:repeat(var(--width,7),minmax(0,1fr));grid-template-rows:repeat(var(--height,7),minmax(0,1fr));aspect-ratio:var(--width,7) / var(--height,7)}
+.terrain-gap {background:#5e7b84;box-shadow:inset 0 0 10px #45616a}
+.token {width:calc(100% / var(--width,7));height:calc(100% / var(--height,7))}
+.board-wrap.zoomed {min-width:calc(max(var(--width,7),var(--height,7)) * 44px + 14px)}
+#setupDialog {max-height:90dvh;overflow:auto}
+#boardLab {margin:18px 0;border-top:1px solid #b3d3d6;padding-top:12px}
+.lab-fields {display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.lab-fields label {min-width:0;margin:0}
+#boardLab input,#boardLab select,#boardLab textarea {box-sizing:border-box;width:100%;min-width:0}
+#boardLab textarea {height:100px;font:11px monospace}
+#labMessage {font-size:12px;overflow-wrap:anywhere}
+.editor-scroll {overflow:auto;max-height:360px}
+#labEditor {display:grid;gap:2px;margin:8px 0;min-width:240px}
+#labEditor button {padding:0;min-height:28px;border-radius:3px;background:#edf8f8;color:#254650;font-size:16px}
+#labEditor button.gap {background:#5e7b84;color:white}
+#boardLab button {margin:3px 0;max-width:100%}
+#labEvidence {background:#eff7f5;border-radius:8px;padding:8px;margin:8px 0;overflow-wrap:anywhere}
+#labEvidence p {font-size:12px;line-height:1.6;margin:6px 0}

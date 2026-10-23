@@ -1,0 +1,16 @@
+{
+  "sourceHash": "40b2fe65b14bf250a89f905adb43228281aea222d57feca5b8bffbd941c4aa0b",
+  "newInitialGames": 400,
+  "totalInitialIDs": 848,
+  "continued": 86,
+  "addedContinuationPlies": 2042,
+  "verifiedNewPlies": 11425,
+  "counterfactualForks": 85,
+  "excludedLegacyDepth3Forks": 17,
+  "addedForkPlies": 1474,
+  "sourceIDsUnchanged": true,
+  "checkpointRNGReplayed": true,
+  "allMovesIndependentlyReplayed": true,
+  "BselfContinuations": 76,
+  "BselfAddedPlies": 4471
+}

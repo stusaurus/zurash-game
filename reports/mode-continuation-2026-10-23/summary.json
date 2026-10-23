@@ -1,0 +1,6688 @@
+{
+  "sourceUniqueGames": 1696,
+  "uniqueGamesAfter": 1696,
+  "newGames": 0,
+  "continued": 218,
+  "newlySettled": 132,
+  "addedPlies": 4189,
+  "rows": [
+    {
+      "id": "mode-Sprint",
+      "before": {
+        "games": 64,
+        "first": 23,
+        "second": 27,
+        "unresolved": 14,
+        "positionWins": [
+          23,
+          27
+        ],
+        "firstRate": 0.46,
+        "position0Rate": 0.46,
+        "firstBias": 0.08,
+        "positionBias": 0.08,
+        "unresolvedRate": 0.21875,
+        "firstFinalPossible": [
+          0.359375,
+          0.578125
+        ],
+        "positionFinalPossible": [
+          0.359375,
+          0.578125
+        ],
+        "wilsonFirst95Descriptive": [
+          0.32969652098821567,
+          0.5960112870260735
+        ],
+        "wilsonPosition95Descriptive": [
+          0.32969652098821567,
+          0.5960112870260735
+        ],
+        "clusterCount": 8,
+        "bootstrapFirst95": [
+          0.375,
+          0.5185185185185185
+        ],
+        "bootstrapPosition95": [
+          0.4,
+          0.4918032786885246
+        ],
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              2,
+              1
+            ],
+            "unresolved": 5
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              5,
+              0
+            ],
+            "unresolved": 3
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              5
+            ],
+            "unresolved": 3
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              5
+            ],
+            "unresolved": 3
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 32,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 32,
+            "losses": 0,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 17,
+            "losses": 1,
+            "unresolved": 14,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 1,
+            "losses": 17,
+            "unresolved": 14,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 2,
+        "leadChangeGames": 1,
+        "nearVictoryReversals": 1,
+        "wallMoves": 916,
+        "plies": 928,
+        "wallRate": 0.9870689655172413,
+        "medianDecidedPlies": 12,
+        "maxPlies": 30,
+        "openingDiversity": 32,
+        "declinedCaptures": 1,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "after": {
+        "games": 64,
+        "first": 29,
+        "second": 35,
+        "unresolved": 0,
+        "positionWins": [
+          29,
+          35
+        ],
+        "firstRate": 0.453125,
+        "position0Rate": 0.453125,
+        "firstBias": 0.09375,
+        "positionBias": 0.09375,
+        "unresolvedRate": 0,
+        "firstFinalPossible": [
+          0.453125,
+          0.453125
+        ],
+        "positionFinalPossible": [
+          0.453125,
+          0.453125
+        ],
+        "wilsonFirst95Descriptive": [
+          0.3372944769635036,
+          0.5742640287210753
+        ],
+        "wilsonPosition95Descriptive": [
+          0.3372944769635036,
+          0.5742640287210753
+        ],
+        "clusterCount": 8,
+        "bootstrapFirst95": [
+          0.390625,
+          0.5
+        ],
+        "bootstrapPosition95": [
+          0.390625,
+          0.5
+        ],
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              5,
+              3
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              7,
+              1
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              1,
+              7
+            ],
+            "unresolved": 0
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 32,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 32,
+            "losses": 0,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 27,
+            "losses": 5,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 5,
+            "losses": 27,
+            "unresolved": 0,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 3,
+        "leadChangeGames": 7,
+        "nearVictoryReversals": 7,
+        "wallMoves": 1075,
+        "plies": 1091,
+        "wallRate": 0.9853345554537122,
+        "medianDecidedPlies": 14,
+        "maxPlies": 58,
+        "openingDiversity": 32,
+        "declinedCaptures": 5,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "continued": 14,
+      "newlySettled": 14,
+      "comparison": {
+        "matchedGames": 64,
+        "seedClusters": 8,
+        "settlementGain": 0.21875,
+        "oneSidedSeedSignFlipP": 0.0625,
+        "parent": {
+          "games": 64,
+          "first": 23,
+          "second": 27,
+          "unresolved": 14,
+          "positionWins": [
+            23,
+            27
+          ],
+          "firstRate": 0.46,
+          "position0Rate": 0.46,
+          "firstBias": 0.08,
+          "positionBias": 0.08,
+          "unresolvedRate": 0.21875,
+          "firstFinalPossible": [
+            0.359375,
+            0.578125
+          ],
+          "positionFinalPossible": [
+            0.359375,
+            0.578125
+          ],
+          "wilsonFirst95Descriptive": [
+            0.32969652098821567,
+            0.5960112870260735
+          ],
+          "wilsonPosition95Descriptive": [
+            0.32969652098821567,
+            0.5960112870260735
+          ],
+          "clusterCount": 8,
+          "bootstrapFirst95": [
+            0.375,
+            0.5185185185185185
+          ],
+          "bootstrapPosition95": [
+            0.4,
+            0.4918032786885246
+          ],
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                2,
+                1
+              ],
+              "unresolved": 5
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                5,
+                0
+              ],
+              "unresolved": 3
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                5
+              ],
+              "unresolved": 3
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                5
+              ],
+              "unresolved": 3
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 32,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 32,
+              "losses": 0,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 17,
+              "losses": 1,
+              "unresolved": 14,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 1,
+              "losses": 17,
+              "unresolved": 14,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 2,
+          "leadChangeGames": 1,
+          "nearVictoryReversals": 1,
+          "wallMoves": 916,
+          "plies": 928,
+          "wallRate": 0.9870689655172413,
+          "medianDecidedPlies": 12,
+          "maxPlies": 30,
+          "openingDiversity": 32,
+          "declinedCaptures": 1,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "child": {
+          "games": 64,
+          "first": 29,
+          "second": 35,
+          "unresolved": 0,
+          "positionWins": [
+            29,
+            35
+          ],
+          "firstRate": 0.453125,
+          "position0Rate": 0.453125,
+          "firstBias": 0.09375,
+          "positionBias": 0.09375,
+          "unresolvedRate": 0,
+          "firstFinalPossible": [
+            0.453125,
+            0.453125
+          ],
+          "positionFinalPossible": [
+            0.453125,
+            0.453125
+          ],
+          "wilsonFirst95Descriptive": [
+            0.3372944769635036,
+            0.5742640287210753
+          ],
+          "wilsonPosition95Descriptive": [
+            0.3372944769635036,
+            0.5742640287210753
+          ],
+          "clusterCount": 8,
+          "bootstrapFirst95": [
+            0.390625,
+            0.5
+          ],
+          "bootstrapPosition95": [
+            0.390625,
+            0.5
+          ],
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                5,
+                3
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                7,
+                1
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                1,
+                7
+              ],
+              "unresolved": 0
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 32,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 32,
+              "losses": 0,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 27,
+              "losses": 5,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 5,
+              "losses": 27,
+              "unresolved": 0,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 3,
+          "leadChangeGames": 7,
+          "nearVictoryReversals": 7,
+          "wallMoves": 1075,
+          "plies": 1091,
+          "wallRate": 0.9853345554537122,
+          "medianDecidedPlies": 14,
+          "maxPlies": 58,
+          "openingDiversity": 32,
+          "declinedCaptures": 5,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "limits": [
+          "Exploratory cluster sign-flip reference test, exchangeability is an assumption",
+          "Unresolved games retained in denominator",
+          "Not a fairness or human-enjoyment certification"
+        ],
+        "holmSettlementP": 0.125
+      },
+      "beforeBehavior": {
+        "stopReasons": {
+          "win": 50,
+          "budget-time": 14
+        },
+        "quietRepeatedUnresolved": 1,
+        "maxScorelessPlies": 30,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 16,
+            "second": 16,
+            "unresolved": 0,
+            "positionWins": [
+              16,
+              16
+            ],
+            "firstRate": 0.5,
+            "position0Rate": 0.5,
+            "firstBias": 0,
+            "positionBias": 0,
+            "unresolvedRate": 0,
+            "firstFinalPossible": [
+              0.5,
+              0.5
+            ],
+            "positionFinalPossible": [
+              0.5,
+              0.5
+            ],
+            "wilsonFirst95Descriptive": [
+              0.33630882754048685,
+              0.6636911724595131
+            ],
+            "wilsonPosition95Descriptive": [
+              0.33630882754048685,
+              0.6636911724595131
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.5,
+              0.5
+            ],
+            "bootstrapPosition95": [
+              0.5,
+              0.5
+            ],
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 32,
+                "unresolved": 0,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 32,
+                "losses": 0,
+                "unresolved": 0,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 1,
+            "nearVictoryReversals": 1,
+            "wallMoves": 398,
+            "plies": 398,
+            "wallRate": 1,
+            "medianDecidedPlies": 12,
+            "maxPlies": 24,
+            "openingDiversity": 15,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 7,
+            "second": 11,
+            "unresolved": 14,
+            "positionWins": [
+              7,
+              11
+            ],
+            "firstRate": 0.3888888888888889,
+            "position0Rate": 0.3888888888888889,
+            "firstBias": 0.2222222222222222,
+            "positionBias": 0.2222222222222222,
+            "unresolvedRate": 0.4375,
+            "firstFinalPossible": [
+              0.21875,
+              0.65625
+            ],
+            "positionFinalPossible": [
+              0.21875,
+              0.65625
+            ],
+            "wilsonFirst95Descriptive": [
+              0.2030524646285427,
+              0.6138095855788537
+            ],
+            "wilsonPosition95Descriptive": [
+              0.2030524646285427,
+              0.6138095855788537
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.15384615384615385,
+              0.5555555555555556
+            ],
+            "bootstrapPosition95": [
+              0.2857142857142857,
+              0.47619047619047616
+            ],
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  2,
+                  1
+                ],
+                "unresolved": 5
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  5,
+                  0
+                ],
+                "unresolved": 3
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  5
+                ],
+                "unresolved": 3
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  5
+                ],
+                "unresolved": 3
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 17,
+                "losses": 1,
+                "unresolved": 14,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 1,
+                "losses": 17,
+                "unresolved": 14,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 2,
+            "leadChangeGames": 0,
+            "nearVictoryReversals": 0,
+            "wallMoves": 518,
+            "plies": 530,
+            "wallRate": 0.9773584905660377,
+            "medianDecidedPlies": 13,
+            "maxPlies": 30,
+            "openingDiversity": 19,
+            "declinedCaptures": 1,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "afterBehavior": {
+        "stopReasons": {
+          "win": 64
+        },
+        "quietRepeatedUnresolved": 0,
+        "maxScorelessPlies": 36,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 16,
+            "second": 16,
+            "unresolved": 0,
+            "positionWins": [
+              16,
+              16
+            ],
+            "firstRate": 0.5,
+            "position0Rate": 0.5,
+            "firstBias": 0,
+            "positionBias": 0,
+            "unresolvedRate": 0,
+            "firstFinalPossible": [
+              0.5,
+              0.5
+            ],
+            "positionFinalPossible": [
+              0.5,
+              0.5
+            ],
+            "wilsonFirst95Descriptive": [
+              0.33630882754048685,
+              0.6636911724595131
+            ],
+            "wilsonPosition95Descriptive": [
+              0.33630882754048685,
+              0.6636911724595131
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.5,
+              0.5
+            ],
+            "bootstrapPosition95": [
+              0.5,
+              0.5
+            ],
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 32,
+                "unresolved": 0,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 32,
+                "losses": 0,
+                "unresolved": 0,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 1,
+            "nearVictoryReversals": 1,
+            "wallMoves": 398,
+            "plies": 398,
+            "wallRate": 1,
+            "medianDecidedPlies": 12,
+            "maxPlies": 24,
+            "openingDiversity": 15,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 13,
+            "second": 19,
+            "unresolved": 0,
+            "positionWins": [
+              13,
+              19
+            ],
+            "firstRate": 0.40625,
+            "position0Rate": 0.40625,
+            "firstBias": 0.1875,
+            "positionBias": 0.1875,
+            "unresolvedRate": 0,
+            "firstFinalPossible": [
+              0.40625,
+              0.40625
+            ],
+            "positionFinalPossible": [
+              0.40625,
+              0.40625
+            ],
+            "wilsonFirst95Descriptive": [
+              0.255196347429215,
+              0.5773997525266625
+            ],
+            "wilsonPosition95Descriptive": [
+              0.255196347429215,
+              0.5773997525266625
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.3125,
+              0.5
+            ],
+            "bootstrapPosition95": [
+              0.3125,
+              0.5
+            ],
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  5,
+                  3
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  7,
+                  1
+                ],
+                "unresolved": 0
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  1,
+                  7
+                ],
+                "unresolved": 0
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 27,
+                "losses": 5,
+                "unresolved": 0,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 5,
+                "losses": 27,
+                "unresolved": 0,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 3,
+            "leadChangeGames": 6,
+            "nearVictoryReversals": 6,
+            "wallMoves": 677,
+            "plies": 693,
+            "wallRate": 0.976911976911977,
+            "medianDecidedPlies": 20,
+            "maxPlies": 58,
+            "openingDiversity": 19,
+            "declinedCaptures": 5,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "conservative": {
+        "games": 64,
+        "clusters": 8,
+        "firstWins": 29,
+        "secondWins": 35,
+        "officialDraws": 0,
+        "unresolved": 0,
+        "anomalies": 0,
+        "budgetInterrupted": 0,
+        "repeatedGames": 3,
+        "repeatedUnresolvedQuietGames": 0,
+        "decidedRate": 1,
+        "firstDecidedRate": 0.453125,
+        "firstAllRate": 0.453125,
+        "secondAllRate": 0.546875,
+        "firstFinalPossibleRange": [
+          0.453125,
+          0.453125
+        ],
+        "pairedBootstrapDecided95": [
+          0.390625,
+          0.5
+        ],
+        "conservativeClusterFirstAll95": [
+          0,
+          0.9764572698507302
+        ],
+        "conservativeClusterDecided95": [
+          0,
+          1
+        ],
+        "conservativeClusterFinalFirstRange95": [
+          0,
+          1
+        ],
+        "pairedBootstrapFirstAll95": [
+          0.390625,
+          0.5
+        ],
+        "reasons": {
+          "win": 64
+        },
+        "plies": {
+          "min": 7,
+          "q25": 10,
+          "median": 14,
+          "q75": 21,
+          "p90": 28,
+          "p95": 37,
+          "max": 58,
+          "mean": 17.046875,
+          "beyond120Wins": 0
+        },
+        "judgment": "inconclusive-or-outside-target"
+      }
+    },
+    {
+      "id": "mode-A",
+      "before": {
+        "games": 64,
+        "first": 9,
+        "second": 12,
+        "unresolved": 43,
+        "positionWins": [
+          11,
+          10
+        ],
+        "firstRate": 0.42857142857142855,
+        "position0Rate": 0.5238095238095238,
+        "firstBias": 0.14285714285714285,
+        "positionBias": 0.047619047619047616,
+        "unresolvedRate": 0.671875,
+        "firstFinalPossible": [
+          0.140625,
+          0.8125
+        ],
+        "positionFinalPossible": [
+          0.171875,
+          0.84375
+        ],
+        "wilsonFirst95Descriptive": [
+          0.2446996880971642,
+          0.6345344577581422
+        ],
+        "wilsonPosition95Descriptive": [
+          0.32369534446905174,
+          0.7165599402458462
+        ],
+        "clusterCount": 8,
+        "bootstrapFirst95": [
+          0.29411764705882354,
+          0.5263157894736842
+        ],
+        "bootstrapPosition95": [
+          0.4482758620689655,
+          0.6
+        ],
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              5
+            ],
+            "unresolved": 3
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              5
+            ],
+            "unresolved": 3
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              4,
+              0
+            ],
+            "unresolved": 4
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              7,
+              0
+            ],
+            "unresolved": 1
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 21,
+            "unresolved": 11,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 21,
+            "losses": 0,
+            "unresolved": 11,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 0,
+            "unresolved": 32,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 0,
+            "unresolved": 32,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 3,
+        "leadChangeGames": 9,
+        "nearVictoryReversals": 0,
+        "wallMoves": 1679,
+        "plies": 1713,
+        "wallRate": 0.9801517805020432,
+        "medianDecidedPlies": 26,
+        "maxPlies": 54,
+        "openingDiversity": 6,
+        "declinedCaptures": 1,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "after": {
+        "games": 64,
+        "first": 26,
+        "second": 24,
+        "unresolved": 14,
+        "positionWins": [
+          31,
+          19
+        ],
+        "firstRate": 0.52,
+        "position0Rate": 0.62,
+        "firstBias": 0.04,
+        "positionBias": 0.24,
+        "unresolvedRate": 0.21875,
+        "firstFinalPossible": [
+          0.40625,
+          0.625
+        ],
+        "positionFinalPossible": [
+          0.484375,
+          0.703125
+        ],
+        "wilsonFirst95Descriptive": [
+          0.38511744790185476,
+          0.6520286480910008
+        ],
+        "wilsonPosition95Descriptive": [
+          0.4815044682285895,
+          0.741372107728543
+        ],
+        "clusterCount": 8,
+        "bootstrapFirst95": [
+          0.45454545454545453,
+          0.574468085106383
+        ],
+        "bootstrapPosition95": [
+          0.5409836065573771,
+          0.717948717948718
+        ],
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              1,
+              7
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              5,
+              0
+            ],
+            "unresolved": 3
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              7,
+              0
+            ],
+            "unresolved": 1
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              1,
+              1
+            ],
+            "unresolved": 6
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              1,
+              3
+            ],
+            "unresolved": 4
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 1,
+            "losses": 31,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 31,
+            "losses": 1,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 16,
+            "losses": 2,
+            "unresolved": 14,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 2,
+            "losses": 16,
+            "unresolved": 14,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 5,
+        "leadChangeGames": 15,
+        "nearVictoryReversals": 0,
+        "wallMoves": 3235,
+        "plies": 3319,
+        "wallRate": 0.9746911720397711,
+        "medianDecidedPlies": 39,
+        "maxPlies": 145,
+        "openingDiversity": 6,
+        "declinedCaptures": 1,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "continued": 43,
+      "newlySettled": 29,
+      "comparison": {
+        "matchedGames": 64,
+        "seedClusters": 8,
+        "settlementGain": 0.453125,
+        "oneSidedSeedSignFlipP": 0.00390625,
+        "parent": {
+          "games": 64,
+          "first": 9,
+          "second": 12,
+          "unresolved": 43,
+          "positionWins": [
+            11,
+            10
+          ],
+          "firstRate": 0.42857142857142855,
+          "position0Rate": 0.5238095238095238,
+          "firstBias": 0.14285714285714285,
+          "positionBias": 0.047619047619047616,
+          "unresolvedRate": 0.671875,
+          "firstFinalPossible": [
+            0.140625,
+            0.8125
+          ],
+          "positionFinalPossible": [
+            0.171875,
+            0.84375
+          ],
+          "wilsonFirst95Descriptive": [
+            0.2446996880971642,
+            0.6345344577581422
+          ],
+          "wilsonPosition95Descriptive": [
+            0.32369534446905174,
+            0.7165599402458462
+          ],
+          "clusterCount": 8,
+          "bootstrapFirst95": [
+            0.29411764705882354,
+            0.5263157894736842
+          ],
+          "bootstrapPosition95": [
+            0.4482758620689655,
+            0.6
+          ],
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                5
+              ],
+              "unresolved": 3
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                5
+              ],
+              "unresolved": 3
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                4,
+                0
+              ],
+              "unresolved": 4
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                7,
+                0
+              ],
+              "unresolved": 1
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 21,
+              "unresolved": 11,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 21,
+              "losses": 0,
+              "unresolved": 11,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 0,
+              "unresolved": 32,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 0,
+              "unresolved": 32,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 3,
+          "leadChangeGames": 9,
+          "nearVictoryReversals": 0,
+          "wallMoves": 1679,
+          "plies": 1713,
+          "wallRate": 0.9801517805020432,
+          "medianDecidedPlies": 26,
+          "maxPlies": 54,
+          "openingDiversity": 6,
+          "declinedCaptures": 1,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "child": {
+          "games": 64,
+          "first": 26,
+          "second": 24,
+          "unresolved": 14,
+          "positionWins": [
+            31,
+            19
+          ],
+          "firstRate": 0.52,
+          "position0Rate": 0.62,
+          "firstBias": 0.04,
+          "positionBias": 0.24,
+          "unresolvedRate": 0.21875,
+          "firstFinalPossible": [
+            0.40625,
+            0.625
+          ],
+          "positionFinalPossible": [
+            0.484375,
+            0.703125
+          ],
+          "wilsonFirst95Descriptive": [
+            0.38511744790185476,
+            0.6520286480910008
+          ],
+          "wilsonPosition95Descriptive": [
+            0.4815044682285895,
+            0.741372107728543
+          ],
+          "clusterCount": 8,
+          "bootstrapFirst95": [
+            0.45454545454545453,
+            0.574468085106383
+          ],
+          "bootstrapPosition95": [
+            0.5409836065573771,
+            0.717948717948718
+          ],
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                1,
+                7
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                5,
+                0
+              ],
+              "unresolved": 3
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                7,
+                0
+              ],
+              "unresolved": 1
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                1,
+                1
+              ],
+              "unresolved": 6
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                1,
+                3
+              ],
+              "unresolved": 4
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 1,
+              "losses": 31,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 31,
+              "losses": 1,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 16,
+              "losses": 2,
+              "unresolved": 14,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 2,
+              "losses": 16,
+              "unresolved": 14,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 5,
+          "leadChangeGames": 15,
+          "nearVictoryReversals": 0,
+          "wallMoves": 3235,
+          "plies": 3319,
+          "wallRate": 0.9746911720397711,
+          "medianDecidedPlies": 39,
+          "maxPlies": 145,
+          "openingDiversity": 6,
+          "declinedCaptures": 1,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "limits": [
+          "Exploratory cluster sign-flip reference test, exchangeability is an assumption",
+          "Unresolved games retained in denominator",
+          "Not a fairness or human-enjoyment certification"
+        ],
+        "holmSettlementP": 0.0234375
+      },
+      "beforeBehavior": {
+        "stopReasons": {
+          "budget-time": 43,
+          "win": 21
+        },
+        "quietRepeatedUnresolved": 0,
+        "maxScorelessPlies": 41,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 9,
+            "second": 12,
+            "unresolved": 11,
+            "positionWins": [
+              11,
+              10
+            ],
+            "firstRate": 0.42857142857142855,
+            "position0Rate": 0.5238095238095238,
+            "firstBias": 0.14285714285714285,
+            "positionBias": 0.047619047619047616,
+            "unresolvedRate": 0.34375,
+            "firstFinalPossible": [
+              0.28125,
+              0.625
+            ],
+            "positionFinalPossible": [
+              0.34375,
+              0.6875
+            ],
+            "wilsonFirst95Descriptive": [
+              0.2446996880971642,
+              0.6345344577581422
+            ],
+            "wilsonPosition95Descriptive": [
+              0.32369534446905174,
+              0.7165599402458462
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.29411764705882354,
+              0.5384615384615384
+            ],
+            "bootstrapPosition95": [
+              0.45454545454545453,
+              0.6
+            ],
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  5
+                ],
+                "unresolved": 3
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  5
+                ],
+                "unresolved": 3
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  4,
+                  0
+                ],
+                "unresolved": 4
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  7,
+                  0
+                ],
+                "unresolved": 1
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 21,
+                "unresolved": 11,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 21,
+                "losses": 0,
+                "unresolved": 11,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 7,
+            "nearVictoryReversals": 0,
+            "wallMoves": 915,
+            "plies": 935,
+            "wallRate": 0.9786096256684492,
+            "medianDecidedPlies": 26,
+            "maxPlies": 54,
+            "openingDiversity": 6,
+            "declinedCaptures": 1,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 0,
+            "second": 0,
+            "unresolved": 32,
+            "positionWins": [
+              0,
+              0
+            ],
+            "firstRate": null,
+            "position0Rate": null,
+            "firstBias": 1,
+            "positionBias": 1,
+            "unresolvedRate": 1,
+            "firstFinalPossible": [
+              0,
+              1
+            ],
+            "positionFinalPossible": [
+              0,
+              1
+            ],
+            "wilsonFirst95Descriptive": null,
+            "wilsonPosition95Descriptive": null,
+            "clusterCount": 4,
+            "bootstrapFirst95": null,
+            "bootstrapPosition95": null,
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 0,
+                "unresolved": 32,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 0,
+                "unresolved": 32,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 3,
+            "leadChangeGames": 2,
+            "nearVictoryReversals": 0,
+            "wallMoves": 764,
+            "plies": 778,
+            "wallRate": 0.9820051413881749,
+            "medianDecidedPlies": null,
+            "maxPlies": 32,
+            "openingDiversity": 2,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "afterBehavior": {
+        "stopReasons": {
+          "win": 50,
+          "budget-time": 14
+        },
+        "quietRepeatedUnresolved": 2,
+        "maxScorelessPlies": 129,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 17,
+            "second": 15,
+            "unresolved": 0,
+            "positionWins": [
+              17,
+              15
+            ],
+            "firstRate": 0.53125,
+            "position0Rate": 0.53125,
+            "firstBias": 0.0625,
+            "positionBias": 0.0625,
+            "unresolvedRate": 0,
+            "firstFinalPossible": [
+              0.53125,
+              0.53125
+            ],
+            "positionFinalPossible": [
+              0.53125,
+              0.53125
+            ],
+            "wilsonFirst95Descriptive": [
+              0.36449516999131165,
+              0.6913061300233958
+            ],
+            "wilsonPosition95Descriptive": [
+              0.36449516999131165,
+              0.6913061300233958
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.5,
+              0.59375
+            ],
+            "bootstrapPosition95": [
+              0.5,
+              0.59375
+            ],
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  1,
+                  7
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 1,
+                "losses": 31,
+                "unresolved": 0,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 31,
+                "losses": 1,
+                "unresolved": 0,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 8,
+            "nearVictoryReversals": 0,
+            "wallMoves": 1199,
+            "plies": 1229,
+            "wallRate": 0.9755899104963385,
+            "medianDecidedPlies": 32,
+            "maxPlies": 101,
+            "openingDiversity": 6,
+            "declinedCaptures": 1,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 9,
+            "second": 9,
+            "unresolved": 14,
+            "positionWins": [
+              14,
+              4
+            ],
+            "firstRate": 0.5,
+            "position0Rate": 0.7777777777777778,
+            "firstBias": 0,
+            "positionBias": 0.5555555555555556,
+            "unresolvedRate": 0.4375,
+            "firstFinalPossible": [
+              0.28125,
+              0.71875
+            ],
+            "positionFinalPossible": [
+              0.4375,
+              0.875
+            ],
+            "wilsonFirst95Descriptive": [
+              0.2903102136885988,
+              0.7096897863114012
+            ],
+            "wilsonPosition95Descriptive": [
+              0.5478541549399641,
+              0.9099907195415445
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.35294117647058826,
+              0.6
+            ],
+            "bootstrapPosition95": [
+              0.75,
+              0.8
+            ],
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  5,
+                  0
+                ],
+                "unresolved": 3
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  7,
+                  0
+                ],
+                "unresolved": 1
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  1,
+                  1
+                ],
+                "unresolved": 6
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  1,
+                  3
+                ],
+                "unresolved": 4
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 16,
+                "losses": 2,
+                "unresolved": 14,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 2,
+                "losses": 16,
+                "unresolved": 14,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 5,
+            "leadChangeGames": 7,
+            "nearVictoryReversals": 0,
+            "wallMoves": 2036,
+            "plies": 2090,
+            "wallRate": 0.9741626794258373,
+            "medianDecidedPlies": 45,
+            "maxPlies": 145,
+            "openingDiversity": 2,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "conservative": {
+        "games": 64,
+        "clusters": 8,
+        "firstWins": 26,
+        "secondWins": 24,
+        "officialDraws": 0,
+        "unresolved": 14,
+        "anomalies": 0,
+        "budgetInterrupted": 14,
+        "repeatedGames": 5,
+        "repeatedUnresolvedQuietGames": 1,
+        "decidedRate": 0.78125,
+        "firstDecidedRate": 0.52,
+        "firstAllRate": 0.40625,
+        "secondAllRate": 0.375,
+        "firstFinalPossibleRange": [
+          0.40625,
+          0.625
+        ],
+        "pairedBootstrapDecided95": [
+          0.4523809523809524,
+          0.5777777777777777
+        ],
+        "conservativeClusterFirstAll95": [
+          0,
+          0.9295822698507302
+        ],
+        "conservativeClusterDecided95": [
+          0,
+          1
+        ],
+        "conservativeClusterFinalFirstRange95": [
+          0,
+          1
+        ],
+        "pairedBootstrapFirstAll95": [
+          0.296875,
+          0.5
+        ],
+        "reasons": {
+          "win": 50,
+          "budget-time": 14
+        },
+        "plies": {
+          "min": 17,
+          "q25": 26,
+          "median": 35,
+          "q75": 47,
+          "p90": 64,
+          "p95": 67,
+          "max": 101,
+          "mean": 41.04,
+          "beyond120Wins": 0
+        },
+        "judgment": "inconclusive-or-outside-target"
+      }
+    },
+    {
+      "id": "mode-B",
+      "before": {
+        "games": 64,
+        "first": 17,
+        "second": 3,
+        "unresolved": 44,
+        "positionWins": [
+          14,
+          6
+        ],
+        "firstRate": 0.85,
+        "position0Rate": 0.7,
+        "firstBias": 0.7,
+        "positionBias": 0.4,
+        "unresolvedRate": 0.6875,
+        "firstFinalPossible": [
+          0.265625,
+          0.953125
+        ],
+        "positionFinalPossible": [
+          0.21875,
+          0.90625
+        ],
+        "wilsonFirst95Descriptive": [
+          0.6395811333571357,
+          0.9476312545132735
+        ],
+        "wilsonPosition95Descriptive": [
+          0.4810271799475211,
+          0.8545227559784271
+        ],
+        "clusterCount": 8,
+        "bootstrapFirst95": [
+          0.7142857142857143,
+          0.9565217391304348
+        ],
+        "bootstrapPosition95": [
+          0.5333333333333333,
+          0.8666666666666667
+        ],
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              3,
+              0
+            ],
+            "unresolved": 5
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              6
+            ],
+            "unresolved": 2
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              3,
+              0
+            ],
+            "unresolved": 5
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              3,
+              0
+            ],
+            "unresolved": 5
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              5,
+              0
+            ],
+            "unresolved": 3
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 3,
+            "losses": 12,
+            "unresolved": 17,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 12,
+            "losses": 3,
+            "unresolved": 17,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 5,
+            "losses": 0,
+            "unresolved": 27,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 5,
+            "unresolved": 27,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 8,
+        "nearVictoryReversals": 0,
+        "wallMoves": 749,
+        "plies": 755,
+        "wallRate": 0.9920529801324504,
+        "medianDecidedPlies": 11,
+        "maxPlies": 22,
+        "openingDiversity": 2,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "after": {
+        "games": 64,
+        "first": 37,
+        "second": 10,
+        "unresolved": 17,
+        "positionWins": [
+          29,
+          18
+        ],
+        "firstRate": 0.7872340425531915,
+        "position0Rate": 0.6170212765957447,
+        "firstBias": 0.574468085106383,
+        "positionBias": 0.23404255319148937,
+        "unresolvedRate": 0.265625,
+        "firstFinalPossible": [
+          0.578125,
+          0.84375
+        ],
+        "positionFinalPossible": [
+          0.453125,
+          0.71875
+        ],
+        "wilsonFirst95Descriptive": [
+          0.6509597317260887,
+          0.8801029205679627
+        ],
+        "wilsonPosition95Descriptive": [
+          0.4742656684544478,
+          0.7420931898875731
+        ],
+        "clusterCount": 8,
+        "bootstrapFirst95": [
+          0.6595744680851063,
+          0.925
+        ],
+        "bootstrapPosition95": [
+          0.5555555555555556,
+          0.68
+        ],
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              4,
+              2
+            ],
+            "unresolved": 2
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              7,
+              0
+            ],
+            "unresolved": 1
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              7,
+              0
+            ],
+            "unresolved": 1
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              1,
+              1
+            ],
+            "unresolved": 6
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              2,
+              0
+            ],
+            "unresolved": 6
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              7
+            ],
+            "unresolved": 1
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 4,
+            "losses": 24,
+            "unresolved": 4,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 24,
+            "losses": 4,
+            "unresolved": 4,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 16,
+            "losses": 3,
+            "unresolved": 13,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 3,
+            "losses": 16,
+            "unresolved": 13,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 14,
+        "nearVictoryReversals": 2,
+        "wallMoves": 1722,
+        "plies": 1751,
+        "wallRate": 0.9834380354083381,
+        "medianDecidedPlies": 15,
+        "maxPlies": 101,
+        "openingDiversity": 2,
+        "declinedCaptures": 1,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "continued": 44,
+      "newlySettled": 27,
+      "comparison": {
+        "matchedGames": 64,
+        "seedClusters": 8,
+        "settlementGain": 0.421875,
+        "oneSidedSeedSignFlipP": 0.0078125,
+        "parent": {
+          "games": 64,
+          "first": 17,
+          "second": 3,
+          "unresolved": 44,
+          "positionWins": [
+            14,
+            6
+          ],
+          "firstRate": 0.85,
+          "position0Rate": 0.7,
+          "firstBias": 0.7,
+          "positionBias": 0.4,
+          "unresolvedRate": 0.6875,
+          "firstFinalPossible": [
+            0.265625,
+            0.953125
+          ],
+          "positionFinalPossible": [
+            0.21875,
+            0.90625
+          ],
+          "wilsonFirst95Descriptive": [
+            0.6395811333571357,
+            0.9476312545132735
+          ],
+          "wilsonPosition95Descriptive": [
+            0.4810271799475211,
+            0.8545227559784271
+          ],
+          "clusterCount": 8,
+          "bootstrapFirst95": [
+            0.7142857142857143,
+            0.9565217391304348
+          ],
+          "bootstrapPosition95": [
+            0.5333333333333333,
+            0.8666666666666667
+          ],
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                3,
+                0
+              ],
+              "unresolved": 5
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                6
+              ],
+              "unresolved": 2
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                3,
+                0
+              ],
+              "unresolved": 5
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                3,
+                0
+              ],
+              "unresolved": 5
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                5,
+                0
+              ],
+              "unresolved": 3
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 3,
+              "losses": 12,
+              "unresolved": 17,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 12,
+              "losses": 3,
+              "unresolved": 17,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 5,
+              "losses": 0,
+              "unresolved": 27,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 5,
+              "unresolved": 27,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 0,
+          "leadChangeGames": 8,
+          "nearVictoryReversals": 0,
+          "wallMoves": 749,
+          "plies": 755,
+          "wallRate": 0.9920529801324504,
+          "medianDecidedPlies": 11,
+          "maxPlies": 22,
+          "openingDiversity": 2,
+          "declinedCaptures": 0,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "child": {
+          "games": 64,
+          "first": 37,
+          "second": 10,
+          "unresolved": 17,
+          "positionWins": [
+            29,
+            18
+          ],
+          "firstRate": 0.7872340425531915,
+          "position0Rate": 0.6170212765957447,
+          "firstBias": 0.574468085106383,
+          "positionBias": 0.23404255319148937,
+          "unresolvedRate": 0.265625,
+          "firstFinalPossible": [
+            0.578125,
+            0.84375
+          ],
+          "positionFinalPossible": [
+            0.453125,
+            0.71875
+          ],
+          "wilsonFirst95Descriptive": [
+            0.6509597317260887,
+            0.8801029205679627
+          ],
+          "wilsonPosition95Descriptive": [
+            0.4742656684544478,
+            0.7420931898875731
+          ],
+          "clusterCount": 8,
+          "bootstrapFirst95": [
+            0.6595744680851063,
+            0.925
+          ],
+          "bootstrapPosition95": [
+            0.5555555555555556,
+            0.68
+          ],
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                4,
+                2
+              ],
+              "unresolved": 2
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                7,
+                0
+              ],
+              "unresolved": 1
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                7,
+                0
+              ],
+              "unresolved": 1
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                1,
+                1
+              ],
+              "unresolved": 6
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                2,
+                0
+              ],
+              "unresolved": 6
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                7
+              ],
+              "unresolved": 1
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 4,
+              "losses": 24,
+              "unresolved": 4,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 24,
+              "losses": 4,
+              "unresolved": 4,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 16,
+              "losses": 3,
+              "unresolved": 13,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 3,
+              "losses": 16,
+              "unresolved": 13,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 0,
+          "leadChangeGames": 14,
+          "nearVictoryReversals": 2,
+          "wallMoves": 1722,
+          "plies": 1751,
+          "wallRate": 0.9834380354083381,
+          "medianDecidedPlies": 15,
+          "maxPlies": 101,
+          "openingDiversity": 2,
+          "declinedCaptures": 1,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "limits": [
+          "Exploratory cluster sign-flip reference test, exchangeability is an assumption",
+          "Unresolved games retained in denominator",
+          "Not a fairness or human-enjoyment certification"
+        ],
+        "holmSettlementP": 0.03125
+      },
+      "beforeBehavior": {
+        "stopReasons": {
+          "win": 20,
+          "budget-time": 44
+        },
+        "quietRepeatedUnresolved": 0,
+        "maxScorelessPlies": 13,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 12,
+            "second": 3,
+            "unresolved": 17,
+            "positionWins": [
+              9,
+              6
+            ],
+            "firstRate": 0.8,
+            "position0Rate": 0.6,
+            "firstBias": 0.6,
+            "positionBias": 0.2,
+            "unresolvedRate": 0.53125,
+            "firstFinalPossible": [
+              0.375,
+              0.90625
+            ],
+            "positionFinalPossible": [
+              0.28125,
+              0.8125
+            ],
+            "wilsonFirst95Descriptive": [
+              0.5481455107594471,
+              0.9295245070826608
+            ],
+            "wilsonPosition95Descriptive": [
+              0.35746829954344506,
+              0.8017550397372577
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.6,
+              0.9166666666666666
+            ],
+            "bootstrapPosition95": [
+              0.4,
+              0.7
+            ],
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  3,
+                  0
+                ],
+                "unresolved": 5
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  6
+                ],
+                "unresolved": 2
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  3,
+                  0
+                ],
+                "unresolved": 5
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  3,
+                  0
+                ],
+                "unresolved": 5
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 3,
+                "losses": 12,
+                "unresolved": 17,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 12,
+                "losses": 3,
+                "unresolved": 17,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 7,
+            "nearVictoryReversals": 0,
+            "wallMoves": 436,
+            "plies": 440,
+            "wallRate": 0.990909090909091,
+            "medianDecidedPlies": 13,
+            "maxPlies": 22,
+            "openingDiversity": 2,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 5,
+            "second": 0,
+            "unresolved": 27,
+            "positionWins": [
+              5,
+              0
+            ],
+            "firstRate": 1,
+            "position0Rate": 1,
+            "firstBias": 1,
+            "positionBias": 1,
+            "unresolvedRate": 0.84375,
+            "firstFinalPossible": [
+              0.15625,
+              1
+            ],
+            "positionFinalPossible": [
+              0.15625,
+              1
+            ],
+            "wilsonFirst95Descriptive": [
+              0.5655175313406071,
+              1
+            ],
+            "wilsonPosition95Descriptive": [
+              0.5655175313406071,
+              1
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              1,
+              1
+            ],
+            "bootstrapPosition95": [
+              1,
+              1
+            ],
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  5,
+                  0
+                ],
+                "unresolved": 3
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 5,
+                "losses": 0,
+                "unresolved": 27,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 5,
+                "unresolved": 27,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 1,
+            "nearVictoryReversals": 0,
+            "wallMoves": 313,
+            "plies": 315,
+            "wallRate": 0.9936507936507937,
+            "medianDecidedPlies": 9,
+            "maxPlies": 13,
+            "openingDiversity": 2,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "afterBehavior": {
+        "stopReasons": {
+          "win": 47,
+          "budget-time": 17
+        },
+        "quietRepeatedUnresolved": 0,
+        "maxScorelessPlies": 87,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 19,
+            "second": 9,
+            "unresolved": 4,
+            "positionWins": [
+              18,
+              10
+            ],
+            "firstRate": 0.6785714285714286,
+            "position0Rate": 0.6428571428571429,
+            "firstBias": 0.35714285714285715,
+            "positionBias": 0.2857142857142857,
+            "unresolvedRate": 0.125,
+            "firstFinalPossible": [
+              0.59375,
+              0.71875
+            ],
+            "positionFinalPossible": [
+              0.5625,
+              0.6875
+            ],
+            "wilsonFirst95Descriptive": [
+              0.4933884303549963,
+              0.8206675316309071
+            ],
+            "wilsonPosition95Descriptive": [
+              0.45830306373230584,
+              0.792941705856417
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.5483870967741935,
+              0.8148148148148148
+            ],
+            "bootstrapPosition95": [
+              0.5483870967741935,
+              0.7142857142857143
+            ],
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  4,
+                  2
+                ],
+                "unresolved": 2
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  7,
+                  0
+                ],
+                "unresolved": 1
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  7,
+                  0
+                ],
+                "unresolved": 1
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 4,
+                "losses": 24,
+                "unresolved": 4,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 24,
+                "losses": 4,
+                "unresolved": 4,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 10,
+            "nearVictoryReversals": 2,
+            "wallMoves": 1042,
+            "plies": 1058,
+            "wallRate": 0.9848771266540642,
+            "medianDecidedPlies": 17,
+            "maxPlies": 101,
+            "openingDiversity": 2,
+            "declinedCaptures": 1,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 18,
+            "second": 1,
+            "unresolved": 13,
+            "positionWins": [
+              11,
+              8
+            ],
+            "firstRate": 0.9473684210526315,
+            "position0Rate": 0.5789473684210527,
+            "firstBias": 0.8947368421052632,
+            "positionBias": 0.15789473684210525,
+            "unresolvedRate": 0.40625,
+            "firstFinalPossible": [
+              0.5625,
+              0.96875
+            ],
+            "positionFinalPossible": [
+              0.34375,
+              0.75
+            ],
+            "wilsonFirst95Descriptive": [
+              0.7536126862526763,
+              0.9906480060413981
+            ],
+            "wilsonPosition95Descriptive": [
+              0.362759033831258,
+              0.7685810883382846
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.8695652173913043,
+              1
+            ],
+            "bootstrapPosition95": [
+              0.5217391304347826,
+              0.6428571428571429
+            ],
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  1,
+                  1
+                ],
+                "unresolved": 6
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  2,
+                  0
+                ],
+                "unresolved": 6
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  7
+                ],
+                "unresolved": 1
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 16,
+                "losses": 3,
+                "unresolved": 13,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 3,
+                "losses": 16,
+                "unresolved": 13,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 4,
+            "nearVictoryReversals": 0,
+            "wallMoves": 680,
+            "plies": 693,
+            "wallRate": 0.9812409812409812,
+            "medianDecidedPlies": 15,
+            "maxPlies": 41,
+            "openingDiversity": 2,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "conservative": {
+        "games": 64,
+        "clusters": 8,
+        "firstWins": 37,
+        "secondWins": 10,
+        "officialDraws": 0,
+        "unresolved": 17,
+        "anomalies": 0,
+        "budgetInterrupted": 17,
+        "repeatedGames": 0,
+        "repeatedUnresolvedQuietGames": 0,
+        "decidedRate": 0.734375,
+        "firstDecidedRate": 0.7872340425531915,
+        "firstAllRate": 0.578125,
+        "secondAllRate": 0.15625,
+        "firstFinalPossibleRange": [
+          0.578125,
+          0.84375
+        ],
+        "pairedBootstrapDecided95": [
+          0.6666666666666666,
+          0.9130434782608695
+        ],
+        "conservativeClusterFirstAll95": [
+          0.054792730149269775,
+          1
+        ],
+        "conservativeClusterDecided95": [
+          0.054792730149269775,
+          1
+        ],
+        "conservativeClusterFinalFirstRange95": [
+          0.054792730149269775,
+          1
+        ],
+        "pairedBootstrapFirstAll95": [
+          0.5,
+          0.65625
+        ],
+        "reasons": {
+          "win": 47,
+          "budget-time": 17
+        },
+        "plies": {
+          "min": 5,
+          "q25": 9,
+          "median": 15,
+          "q75": 18,
+          "p90": 36,
+          "p95": 56,
+          "max": 90,
+          "mean": 20.78723404255319,
+          "beyond120Wins": 0
+        },
+        "judgment": "inconclusive-or-outside-target"
+      }
+    },
+    {
+      "id": "mode-C",
+      "before": {
+        "games": 64,
+        "first": 8,
+        "second": 5,
+        "unresolved": 51,
+        "positionWins": [
+          13,
+          0
+        ],
+        "firstRate": 0.6153846153846154,
+        "position0Rate": 1,
+        "firstBias": 0.23076923076923078,
+        "positionBias": 1,
+        "unresolvedRate": 0.796875,
+        "firstFinalPossible": [
+          0.125,
+          0.921875
+        ],
+        "positionFinalPossible": [
+          0.203125,
+          1
+        ],
+        "wilsonFirst95Descriptive": [
+          0.3552289133643685,
+          0.8229029231436777
+        ],
+        "wilsonPosition95Descriptive": [
+          0.7719046248681998,
+          1
+        ],
+        "clusterCount": 8,
+        "bootstrapFirst95": [
+          0.5,
+          0.8571428571428571
+        ],
+        "bootstrapPosition95": [
+          1,
+          1
+        ],
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              5,
+              0
+            ],
+            "unresolved": 3
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 13,
+            "unresolved": 19,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 13,
+            "losses": 0,
+            "unresolved": 19,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 0,
+            "unresolved": 32,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 0,
+            "unresolved": 32,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 0,
+        "nearVictoryReversals": 0,
+        "wallMoves": 532,
+        "plies": 535,
+        "wallRate": 0.994392523364486,
+        "medianDecidedPlies": 8,
+        "maxPlies": 14,
+        "openingDiversity": 20,
+        "declinedCaptures": 1,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "after": {
+        "games": 64,
+        "first": 21,
+        "second": 24,
+        "unresolved": 19,
+        "positionWins": [
+          30,
+          15
+        ],
+        "firstRate": 0.4666666666666667,
+        "position0Rate": 0.6666666666666666,
+        "firstBias": 0.06666666666666667,
+        "positionBias": 0.3333333333333333,
+        "unresolvedRate": 0.296875,
+        "firstFinalPossible": [
+          0.328125,
+          0.625
+        ],
+        "positionFinalPossible": [
+          0.46875,
+          0.765625
+        ],
+        "wilsonFirst95Descriptive": [
+          0.32935131967087283,
+          0.6092254536541993
+        ],
+        "wilsonPosition95Descriptive": [
+          0.5207048819335636,
+          0.7864112514410742
+        ],
+        "clusterCount": 8,
+        "bootstrapFirst95": [
+          0.40476190476190477,
+          0.5
+        ],
+        "bootstrapPosition95": [
+          0.5555555555555556,
+          0.8285714285714286
+        ],
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              1,
+              7
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              1,
+              7
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              4,
+              0
+            ],
+            "unresolved": 4
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              7,
+              0
+            ],
+            "unresolved": 1
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              1,
+              1
+            ],
+            "unresolved": 6
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 2,
+            "losses": 30,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 30,
+            "losses": 2,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 12,
+            "losses": 1,
+            "unresolved": 19,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 1,
+            "losses": 12,
+            "unresolved": 19,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 1,
+        "leadChangeGames": 17,
+        "nearVictoryReversals": 8,
+        "wallMoves": 1237,
+        "plies": 1243,
+        "wallRate": 0.995172968624296,
+        "medianDecidedPlies": 20,
+        "maxPlies": 38,
+        "openingDiversity": 20,
+        "declinedCaptures": 11,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "continued": 51,
+      "newlySettled": 32,
+      "comparison": {
+        "matchedGames": 64,
+        "seedClusters": 8,
+        "settlementGain": 0.5,
+        "oneSidedSeedSignFlipP": 0.00390625,
+        "parent": {
+          "games": 64,
+          "first": 8,
+          "second": 5,
+          "unresolved": 51,
+          "positionWins": [
+            13,
+            0
+          ],
+          "firstRate": 0.6153846153846154,
+          "position0Rate": 1,
+          "firstBias": 0.23076923076923078,
+          "positionBias": 1,
+          "unresolvedRate": 0.796875,
+          "firstFinalPossible": [
+            0.125,
+            0.921875
+          ],
+          "positionFinalPossible": [
+            0.203125,
+            1
+          ],
+          "wilsonFirst95Descriptive": [
+            0.3552289133643685,
+            0.8229029231436777
+          ],
+          "wilsonPosition95Descriptive": [
+            0.7719046248681998,
+            1
+          ],
+          "clusterCount": 8,
+          "bootstrapFirst95": [
+            0.5,
+            0.8571428571428571
+          ],
+          "bootstrapPosition95": [
+            1,
+            1
+          ],
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                5,
+                0
+              ],
+              "unresolved": 3
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 13,
+              "unresolved": 19,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 13,
+              "losses": 0,
+              "unresolved": 19,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 0,
+              "unresolved": 32,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 0,
+              "unresolved": 32,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 0,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 532,
+          "plies": 535,
+          "wallRate": 0.994392523364486,
+          "medianDecidedPlies": 8,
+          "maxPlies": 14,
+          "openingDiversity": 20,
+          "declinedCaptures": 1,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "child": {
+          "games": 64,
+          "first": 21,
+          "second": 24,
+          "unresolved": 19,
+          "positionWins": [
+            30,
+            15
+          ],
+          "firstRate": 0.4666666666666667,
+          "position0Rate": 0.6666666666666666,
+          "firstBias": 0.06666666666666667,
+          "positionBias": 0.3333333333333333,
+          "unresolvedRate": 0.296875,
+          "firstFinalPossible": [
+            0.328125,
+            0.625
+          ],
+          "positionFinalPossible": [
+            0.46875,
+            0.765625
+          ],
+          "wilsonFirst95Descriptive": [
+            0.32935131967087283,
+            0.6092254536541993
+          ],
+          "wilsonPosition95Descriptive": [
+            0.5207048819335636,
+            0.7864112514410742
+          ],
+          "clusterCount": 8,
+          "bootstrapFirst95": [
+            0.40476190476190477,
+            0.5
+          ],
+          "bootstrapPosition95": [
+            0.5555555555555556,
+            0.8285714285714286
+          ],
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                1,
+                7
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                1,
+                7
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                4,
+                0
+              ],
+              "unresolved": 4
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                7,
+                0
+              ],
+              "unresolved": 1
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                1,
+                1
+              ],
+              "unresolved": 6
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 2,
+              "losses": 30,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 30,
+              "losses": 2,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 12,
+              "losses": 1,
+              "unresolved": 19,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 1,
+              "losses": 12,
+              "unresolved": 19,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 1,
+          "leadChangeGames": 17,
+          "nearVictoryReversals": 8,
+          "wallMoves": 1237,
+          "plies": 1243,
+          "wallRate": 0.995172968624296,
+          "medianDecidedPlies": 20,
+          "maxPlies": 38,
+          "openingDiversity": 20,
+          "declinedCaptures": 11,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "limits": [
+          "Exploratory cluster sign-flip reference test, exchangeability is an assumption",
+          "Unresolved games retained in denominator",
+          "Not a fairness or human-enjoyment certification"
+        ],
+        "holmSettlementP": 0.0234375
+      },
+      "beforeBehavior": {
+        "stopReasons": {
+          "budget-time": 51,
+          "win": 13
+        },
+        "quietRepeatedUnresolved": 0,
+        "maxScorelessPlies": 11,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 8,
+            "second": 5,
+            "unresolved": 19,
+            "positionWins": [
+              13,
+              0
+            ],
+            "firstRate": 0.6153846153846154,
+            "position0Rate": 1,
+            "firstBias": 0.23076923076923078,
+            "positionBias": 1,
+            "unresolvedRate": 0.59375,
+            "firstFinalPossible": [
+              0.25,
+              0.84375
+            ],
+            "positionFinalPossible": [
+              0.40625,
+              1
+            ],
+            "wilsonFirst95Descriptive": [
+              0.3552289133643685,
+              0.8229029231436777
+            ],
+            "wilsonPosition95Descriptive": [
+              0.7719046248681998,
+              1
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.5,
+              0.8
+            ],
+            "bootstrapPosition95": [
+              1,
+              1
+            ],
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  5,
+                  0
+                ],
+                "unresolved": 3
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 13,
+                "unresolved": 19,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 13,
+                "losses": 0,
+                "unresolved": 19,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 0,
+            "nearVictoryReversals": 0,
+            "wallMoves": 323,
+            "plies": 325,
+            "wallRate": 0.9938461538461538,
+            "medianDecidedPlies": 8,
+            "maxPlies": 14,
+            "openingDiversity": 13,
+            "declinedCaptures": 1,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 0,
+            "second": 0,
+            "unresolved": 32,
+            "positionWins": [
+              0,
+              0
+            ],
+            "firstRate": null,
+            "position0Rate": null,
+            "firstBias": 1,
+            "positionBias": 1,
+            "unresolvedRate": 1,
+            "firstFinalPossible": [
+              0,
+              1
+            ],
+            "positionFinalPossible": [
+              0,
+              1
+            ],
+            "wilsonFirst95Descriptive": null,
+            "wilsonPosition95Descriptive": null,
+            "clusterCount": 4,
+            "bootstrapFirst95": null,
+            "bootstrapPosition95": null,
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 0,
+                "unresolved": 32,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 0,
+                "unresolved": 32,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 0,
+            "nearVictoryReversals": 0,
+            "wallMoves": 209,
+            "plies": 210,
+            "wallRate": 0.9952380952380953,
+            "medianDecidedPlies": null,
+            "maxPlies": 8,
+            "openingDiversity": 11,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "afterBehavior": {
+        "stopReasons": {
+          "win": 45,
+          "budget-time": 19
+        },
+        "quietRepeatedUnresolved": 0,
+        "maxScorelessPlies": 26,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 16,
+            "second": 16,
+            "unresolved": 0,
+            "positionWins": [
+              18,
+              14
+            ],
+            "firstRate": 0.5,
+            "position0Rate": 0.5625,
+            "firstBias": 0,
+            "positionBias": 0.125,
+            "unresolvedRate": 0,
+            "firstFinalPossible": [
+              0.5,
+              0.5
+            ],
+            "positionFinalPossible": [
+              0.5625,
+              0.5625
+            ],
+            "wilsonFirst95Descriptive": [
+              0.33630882754048685,
+              0.6636911724595131
+            ],
+            "wilsonPosition95Descriptive": [
+              0.39325591012750627,
+              0.7183466899019088
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.5,
+              0.5
+            ],
+            "bootstrapPosition95": [
+              0.5,
+              0.6875
+            ],
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  1,
+                  7
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  1,
+                  7
+                ],
+                "unresolved": 0
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 2,
+                "losses": 30,
+                "unresolved": 0,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 30,
+                "losses": 2,
+                "unresolved": 0,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 15,
+            "nearVictoryReversals": 8,
+            "wallMoves": 585,
+            "plies": 590,
+            "wallRate": 0.9915254237288136,
+            "medianDecidedPlies": 21,
+            "maxPlies": 38,
+            "openingDiversity": 13,
+            "declinedCaptures": 3,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 5,
+            "second": 8,
+            "unresolved": 19,
+            "positionWins": [
+              12,
+              1
+            ],
+            "firstRate": 0.38461538461538464,
+            "position0Rate": 0.9230769230769231,
+            "firstBias": 0.23076923076923078,
+            "positionBias": 0.8461538461538461,
+            "unresolvedRate": 0.59375,
+            "firstFinalPossible": [
+              0.15625,
+              0.75
+            ],
+            "positionFinalPossible": [
+              0.375,
+              0.96875
+            ],
+            "wilsonFirst95Descriptive": [
+              0.17709707685632237,
+              0.6447710866356315
+            ],
+            "wilsonPosition95Descriptive": [
+              0.666860488286395,
+              0.986289578909774
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.2857142857142857,
+              0.5
+            ],
+            "bootstrapPosition95": [
+              0.8,
+              1
+            ],
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  4,
+                  0
+                ],
+                "unresolved": 4
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  7,
+                  0
+                ],
+                "unresolved": 1
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  1,
+                  1
+                ],
+                "unresolved": 6
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 12,
+                "losses": 1,
+                "unresolved": 19,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 1,
+                "losses": 12,
+                "unresolved": 19,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 1,
+            "leadChangeGames": 2,
+            "nearVictoryReversals": 0,
+            "wallMoves": 652,
+            "plies": 653,
+            "wallRate": 0.998468606431853,
+            "medianDecidedPlies": 20,
+            "maxPlies": 28,
+            "openingDiversity": 11,
+            "declinedCaptures": 8,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "conservative": {
+        "games": 64,
+        "clusters": 8,
+        "firstWins": 21,
+        "secondWins": 24,
+        "officialDraws": 0,
+        "unresolved": 19,
+        "anomalies": 0,
+        "budgetInterrupted": 19,
+        "repeatedGames": 1,
+        "repeatedUnresolvedQuietGames": 0,
+        "decidedRate": 0.703125,
+        "firstDecidedRate": 0.4666666666666667,
+        "firstAllRate": 0.328125,
+        "secondAllRate": 0.375,
+        "firstFinalPossibleRange": [
+          0.328125,
+          0.625
+        ],
+        "pairedBootstrapDecided95": [
+          0.3953488372093023,
+          0.5
+        ],
+        "conservativeClusterFirstAll95": [
+          0,
+          0.8514572698507302
+        ],
+        "conservativeClusterDecided95": [
+          0,
+          1
+        ],
+        "conservativeClusterFinalFirstRange95": [
+          0,
+          1
+        ],
+        "pairedBootstrapFirstAll95": [
+          0.203125,
+          0.453125
+        ],
+        "reasons": {
+          "win": 45,
+          "budget-time": 19
+        },
+        "plies": {
+          "min": 7,
+          "q25": 9,
+          "median": 20,
+          "q75": 25,
+          "p90": 30,
+          "p95": 31,
+          "max": 38,
+          "mean": 18.77777777777778,
+          "beyond120Wins": 0
+        },
+        "judgment": "inconclusive-or-outside-target"
+      }
+    },
+    {
+      "id": "mode-D",
+      "before": {
+        "games": 64,
+        "first": 39,
+        "second": 23,
+        "unresolved": 2,
+        "positionWins": [
+          22,
+          40
+        ],
+        "firstRate": 0.6290322580645161,
+        "position0Rate": 0.3548387096774194,
+        "firstBias": 0.25806451612903225,
+        "positionBias": 0.2903225806451613,
+        "unresolvedRate": 0.03125,
+        "firstFinalPossible": [
+          0.609375,
+          0.640625
+        ],
+        "positionFinalPossible": [
+          0.34375,
+          0.375
+        ],
+        "wilsonFirst95Descriptive": [
+          0.5045796402506956,
+          0.7384283409188289
+        ],
+        "wilsonPosition95Descriptive": [
+          0.247427327770993,
+          0.47918869341329196
+        ],
+        "clusterCount": 8,
+        "bootstrapFirst95": [
+          0.546875,
+          0.7096774193548387
+        ],
+        "bootstrapPosition95": [
+          0.265625,
+          0.45161290322580644
+        ],
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              1,
+              7
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              4,
+              4
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              7,
+              0
+            ],
+            "unresolved": 1
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              2,
+              5
+            ],
+            "unresolved": 1
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 5,
+            "losses": 27,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 27,
+            "losses": 5,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 25,
+            "losses": 5,
+            "unresolved": 2,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 5,
+            "losses": 25,
+            "unresolved": 2,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 1,
+        "leadChangeGames": 23,
+        "nearVictoryReversals": 17,
+        "wallMoves": 1350,
+        "plies": 1364,
+        "wallRate": 0.9897360703812317,
+        "medianDecidedPlies": 19,
+        "maxPlies": 53,
+        "openingDiversity": 3,
+        "declinedCaptures": 27,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "after": {
+        "games": 64,
+        "first": 40,
+        "second": 24,
+        "unresolved": 0,
+        "positionWins": [
+          22,
+          42
+        ],
+        "firstRate": 0.625,
+        "position0Rate": 0.34375,
+        "firstBias": 0.25,
+        "positionBias": 0.3125,
+        "unresolvedRate": 0,
+        "firstFinalPossible": [
+          0.625,
+          0.625
+        ],
+        "positionFinalPossible": [
+          0.34375,
+          0.34375
+        ],
+        "wilsonFirst95Descriptive": [
+          0.5025037858726236,
+          0.7333401989684987
+        ],
+        "wilsonPosition95Descriptive": [
+          0.23923142006738501,
+          0.4659635988812119
+        ],
+        "clusterCount": 8,
+        "bootstrapFirst95": [
+          0.546875,
+          0.703125
+        ],
+        "bootstrapPosition95": [
+          0.25,
+          0.4375
+        ],
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              1,
+              7
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              4,
+              4
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              7,
+              1
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              2,
+              6
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 5,
+            "losses": 27,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 27,
+            "losses": 5,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 25,
+            "losses": 7,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 7,
+            "losses": 25,
+            "unresolved": 0,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 1,
+        "leadChangeGames": 23,
+        "nearVictoryReversals": 17,
+        "wallMoves": 1368,
+        "plies": 1384,
+        "wallRate": 0.9884393063583815,
+        "medianDecidedPlies": 19,
+        "maxPlies": 61,
+        "openingDiversity": 3,
+        "declinedCaptures": 27,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "continued": 2,
+      "newlySettled": 2,
+      "comparison": {
+        "matchedGames": 64,
+        "seedClusters": 8,
+        "settlementGain": 0.03125,
+        "oneSidedSeedSignFlipP": 0.5,
+        "parent": {
+          "games": 64,
+          "first": 39,
+          "second": 23,
+          "unresolved": 2,
+          "positionWins": [
+            22,
+            40
+          ],
+          "firstRate": 0.6290322580645161,
+          "position0Rate": 0.3548387096774194,
+          "firstBias": 0.25806451612903225,
+          "positionBias": 0.2903225806451613,
+          "unresolvedRate": 0.03125,
+          "firstFinalPossible": [
+            0.609375,
+            0.640625
+          ],
+          "positionFinalPossible": [
+            0.34375,
+            0.375
+          ],
+          "wilsonFirst95Descriptive": [
+            0.5045796402506956,
+            0.7384283409188289
+          ],
+          "wilsonPosition95Descriptive": [
+            0.247427327770993,
+            0.47918869341329196
+          ],
+          "clusterCount": 8,
+          "bootstrapFirst95": [
+            0.546875,
+            0.7096774193548387
+          ],
+          "bootstrapPosition95": [
+            0.265625,
+            0.45161290322580644
+          ],
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                1,
+                7
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                4,
+                4
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                7,
+                0
+              ],
+              "unresolved": 1
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                2,
+                5
+              ],
+              "unresolved": 1
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 5,
+              "losses": 27,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 27,
+              "losses": 5,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 25,
+              "losses": 5,
+              "unresolved": 2,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 5,
+              "losses": 25,
+              "unresolved": 2,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 1,
+          "leadChangeGames": 23,
+          "nearVictoryReversals": 17,
+          "wallMoves": 1350,
+          "plies": 1364,
+          "wallRate": 0.9897360703812317,
+          "medianDecidedPlies": 19,
+          "maxPlies": 53,
+          "openingDiversity": 3,
+          "declinedCaptures": 27,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "child": {
+          "games": 64,
+          "first": 40,
+          "second": 24,
+          "unresolved": 0,
+          "positionWins": [
+            22,
+            42
+          ],
+          "firstRate": 0.625,
+          "position0Rate": 0.34375,
+          "firstBias": 0.25,
+          "positionBias": 0.3125,
+          "unresolvedRate": 0,
+          "firstFinalPossible": [
+            0.625,
+            0.625
+          ],
+          "positionFinalPossible": [
+            0.34375,
+            0.34375
+          ],
+          "wilsonFirst95Descriptive": [
+            0.5025037858726236,
+            0.7333401989684987
+          ],
+          "wilsonPosition95Descriptive": [
+            0.23923142006738501,
+            0.4659635988812119
+          ],
+          "clusterCount": 8,
+          "bootstrapFirst95": [
+            0.546875,
+            0.703125
+          ],
+          "bootstrapPosition95": [
+            0.25,
+            0.4375
+          ],
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                1,
+                7
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                8,
+                0
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                4,
+                4
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                7,
+                1
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                2,
+                6
+              ],
+              "unresolved": 0
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                8
+              ],
+              "unresolved": 0
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 5,
+              "losses": 27,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 27,
+              "losses": 5,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 25,
+              "losses": 7,
+              "unresolved": 0,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 7,
+              "losses": 25,
+              "unresolved": 0,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 1,
+          "leadChangeGames": 23,
+          "nearVictoryReversals": 17,
+          "wallMoves": 1368,
+          "plies": 1384,
+          "wallRate": 0.9884393063583815,
+          "medianDecidedPlies": 19,
+          "maxPlies": 61,
+          "openingDiversity": 3,
+          "declinedCaptures": 27,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "limits": [
+          "Exploratory cluster sign-flip reference test, exchangeability is an assumption",
+          "Unresolved games retained in denominator",
+          "Not a fairness or human-enjoyment certification"
+        ],
+        "holmSettlementP": 0.5
+      },
+      "beforeBehavior": {
+        "stopReasons": {
+          "win": 62,
+          "budget-time": 2
+        },
+        "quietRepeatedUnresolved": 1,
+        "maxScorelessPlies": 30,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 19,
+            "second": 13,
+            "unresolved": 0,
+            "positionWins": [
+              13,
+              19
+            ],
+            "firstRate": 0.59375,
+            "position0Rate": 0.40625,
+            "firstBias": 0.1875,
+            "positionBias": 0.1875,
+            "unresolvedRate": 0,
+            "firstFinalPossible": [
+              0.59375,
+              0.59375
+            ],
+            "positionFinalPossible": [
+              0.40625,
+              0.40625
+            ],
+            "wilsonFirst95Descriptive": [
+              0.42260024747333746,
+              0.7448036525707851
+            ],
+            "wilsonPosition95Descriptive": [
+              0.255196347429215,
+              0.5773997525266625
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.4375,
+              0.71875
+            ],
+            "bootstrapPosition95": [
+              0.28125,
+              0.5625
+            ],
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  1,
+                  7
+                ],
+                "unresolved": 0
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  4,
+                  4
+                ],
+                "unresolved": 0
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 5,
+                "losses": 27,
+                "unresolved": 0,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 27,
+                "losses": 5,
+                "unresolved": 0,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 14,
+            "nearVictoryReversals": 8,
+            "wallMoves": 687,
+            "plies": 695,
+            "wallRate": 0.9884892086330935,
+            "medianDecidedPlies": 21,
+            "maxPlies": 53,
+            "openingDiversity": 2,
+            "declinedCaptures": 27,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 20,
+            "second": 10,
+            "unresolved": 2,
+            "positionWins": [
+              9,
+              21
+            ],
+            "firstRate": 0.6666666666666666,
+            "position0Rate": 0.3,
+            "firstBias": 0.3333333333333333,
+            "positionBias": 0.4,
+            "unresolvedRate": 0.0625,
+            "firstFinalPossible": [
+              0.625,
+              0.6875
+            ],
+            "positionFinalPossible": [
+              0.28125,
+              0.34375
+            ],
+            "wilsonFirst95Descriptive": [
+              0.4878005150467802,
+              0.8076950200327357
+            ],
+            "wilsonPosition95Descriptive": [
+              0.16664748188562525,
+              0.4787578760189556
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.5625,
+              0.75
+            ],
+            "bootstrapPosition95": [
+              0.19230769230769232,
+              0.4375
+            ],
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  7,
+                  0
+                ],
+                "unresolved": 1
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  2,
+                  5
+                ],
+                "unresolved": 1
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 25,
+                "losses": 5,
+                "unresolved": 2,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 5,
+                "losses": 25,
+                "unresolved": 2,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 1,
+            "leadChangeGames": 9,
+            "nearVictoryReversals": 9,
+            "wallMoves": 663,
+            "plies": 669,
+            "wallRate": 0.9910313901345291,
+            "medianDecidedPlies": 19,
+            "maxPlies": 42,
+            "openingDiversity": 3,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "afterBehavior": {
+        "stopReasons": {
+          "win": 64
+        },
+        "quietRepeatedUnresolved": 0,
+        "maxScorelessPlies": 48,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 19,
+            "second": 13,
+            "unresolved": 0,
+            "positionWins": [
+              13,
+              19
+            ],
+            "firstRate": 0.59375,
+            "position0Rate": 0.40625,
+            "firstBias": 0.1875,
+            "positionBias": 0.1875,
+            "unresolvedRate": 0,
+            "firstFinalPossible": [
+              0.59375,
+              0.59375
+            ],
+            "positionFinalPossible": [
+              0.40625,
+              0.40625
+            ],
+            "wilsonFirst95Descriptive": [
+              0.42260024747333746,
+              0.7448036525707851
+            ],
+            "wilsonPosition95Descriptive": [
+              0.255196347429215,
+              0.5773997525266625
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.4375,
+              0.71875
+            ],
+            "bootstrapPosition95": [
+              0.28125,
+              0.5625
+            ],
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  1,
+                  7
+                ],
+                "unresolved": 0
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  8,
+                  0
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  4,
+                  4
+                ],
+                "unresolved": 0
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 5,
+                "losses": 27,
+                "unresolved": 0,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 27,
+                "losses": 5,
+                "unresolved": 0,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 14,
+            "nearVictoryReversals": 8,
+            "wallMoves": 687,
+            "plies": 695,
+            "wallRate": 0.9884892086330935,
+            "medianDecidedPlies": 21,
+            "maxPlies": 53,
+            "openingDiversity": 2,
+            "declinedCaptures": 27,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 21,
+            "second": 11,
+            "unresolved": 0,
+            "positionWins": [
+              9,
+              23
+            ],
+            "firstRate": 0.65625,
+            "position0Rate": 0.28125,
+            "firstBias": 0.3125,
+            "positionBias": 0.4375,
+            "unresolvedRate": 0,
+            "firstFinalPossible": [
+              0.65625,
+              0.65625
+            ],
+            "positionFinalPossible": [
+              0.28125,
+              0.28125
+            ],
+            "wilsonFirst95Descriptive": [
+              0.48311087843973016,
+              0.7958956216338071
+            ],
+            "wilsonPosition95Descriptive": [
+              0.15564580423200683,
+              0.45374509566504084
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.5625,
+              0.75
+            ],
+            "bootstrapPosition95": [
+              0.15625,
+              0.4375
+            ],
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  7,
+                  1
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  2,
+                  6
+                ],
+                "unresolved": 0
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  8
+                ],
+                "unresolved": 0
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 25,
+                "losses": 7,
+                "unresolved": 0,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 7,
+                "losses": 25,
+                "unresolved": 0,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 1,
+            "leadChangeGames": 9,
+            "nearVictoryReversals": 9,
+            "wallMoves": 681,
+            "plies": 689,
+            "wallRate": 0.988388969521045,
+            "medianDecidedPlies": 19,
+            "maxPlies": 61,
+            "openingDiversity": 3,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "conservative": {
+        "games": 64,
+        "clusters": 8,
+        "firstWins": 40,
+        "secondWins": 24,
+        "officialDraws": 0,
+        "unresolved": 0,
+        "anomalies": 0,
+        "budgetInterrupted": 0,
+        "repeatedGames": 1,
+        "repeatedUnresolvedQuietGames": 0,
+        "decidedRate": 1,
+        "firstDecidedRate": 0.625,
+        "firstAllRate": 0.625,
+        "secondAllRate": 0.375,
+        "firstFinalPossibleRange": [
+          0.625,
+          0.625
+        ],
+        "pairedBootstrapDecided95": [
+          0.53125,
+          0.703125
+        ],
+        "conservativeClusterFirstAll95": [
+          0.10166773014926977,
+          1
+        ],
+        "conservativeClusterDecided95": [
+          0.10166773014926977,
+          1
+        ],
+        "conservativeClusterFinalFirstRange95": [
+          0.10166773014926977,
+          1
+        ],
+        "pairedBootstrapFirstAll95": [
+          0.53125,
+          0.703125
+        ],
+        "reasons": {
+          "win": 64
+        },
+        "plies": {
+          "min": 11,
+          "q25": 16,
+          "median": 19,
+          "q75": 24,
+          "p90": 33,
+          "p95": 35,
+          "max": 61,
+          "mean": 21.625,
+          "beyond120Wins": 0
+        },
+        "judgment": "inconclusive-or-outside-target"
+      }
+    },
+    {
+      "id": "mode-E",
+      "before": {
+        "games": 64,
+        "first": 0,
+        "second": 0,
+        "unresolved": 64,
+        "positionWins": [
+          0,
+          0
+        ],
+        "firstRate": null,
+        "position0Rate": null,
+        "firstBias": 1,
+        "positionBias": 1,
+        "unresolvedRate": 1,
+        "firstFinalPossible": [
+          0,
+          1
+        ],
+        "positionFinalPossible": [
+          0,
+          1
+        ],
+        "wilsonFirst95Descriptive": null,
+        "wilsonPosition95Descriptive": null,
+        "clusterCount": 8,
+        "bootstrapFirst95": null,
+        "bootstrapPosition95": null,
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 0,
+            "unresolved": 32,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 0,
+            "unresolved": 32,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 0,
+            "unresolved": 32,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 0,
+            "unresolved": 32,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 0,
+        "nearVictoryReversals": 0,
+        "wallMoves": 353,
+        "plies": 353,
+        "wallRate": 1,
+        "medianDecidedPlies": null,
+        "maxPlies": 8,
+        "openingDiversity": 8,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "after": {
+        "games": 64,
+        "first": 17,
+        "second": 11,
+        "unresolved": 36,
+        "positionWins": [
+          12,
+          16
+        ],
+        "firstRate": 0.6071428571428571,
+        "position0Rate": 0.42857142857142855,
+        "firstBias": 0.21428571428571427,
+        "positionBias": 0.14285714285714285,
+        "unresolvedRate": 0.5625,
+        "firstFinalPossible": [
+          0.265625,
+          0.828125
+        ],
+        "positionFinalPossible": [
+          0.1875,
+          0.75
+        ],
+        "wilsonFirst95Descriptive": [
+          0.42409044159980325,
+          0.7643431355917387
+        ],
+        "wilsonPosition95Descriptive": [
+          0.2650854701640365,
+          0.6092921450416022
+        ],
+        "clusterCount": 8,
+        "bootstrapFirst95": [
+          0.5,
+          0.7777777777777778
+        ],
+        "bootstrapPosition95": [
+          0.3,
+          0.5454545454545454
+        ],
+        "interaction": {
+          "startSlot0/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              7
+            ],
+            "unresolved": 1
+          },
+          "startSlot1/search/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              7
+            ],
+            "unresolved": 1
+          },
+          "startSlot0/route/search": {
+            "games": 8,
+            "slotWins": [
+              7,
+              0
+            ],
+            "unresolved": 1
+          },
+          "startSlot1/route/search": {
+            "games": 8,
+            "slotWins": [
+              4,
+              0
+            ],
+            "unresolved": 4
+          },
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              1,
+              0
+            ],
+            "unresolved": 7
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              2
+            ],
+            "unresolved": 6
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 25,
+            "unresolved": 7,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 25,
+            "losses": 0,
+            "unresolved": 7,
+            "selfPlay": 0
+          },
+          "mixed": {
+            "appearances": 32,
+            "wins": 3,
+            "losses": 0,
+            "unresolved": 29,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 3,
+            "unresolved": 29,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 15,
+        "nearVictoryReversals": 1,
+        "wallMoves": 1046,
+        "plies": 1049,
+        "wallRate": 0.9971401334604385,
+        "medianDecidedPlies": 15,
+        "maxPlies": 34,
+        "openingDiversity": 8,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "continued": 64,
+      "newlySettled": 28,
+      "comparison": {
+        "matchedGames": 64,
+        "seedClusters": 8,
+        "settlementGain": 0.4375,
+        "oneSidedSeedSignFlipP": 0.015625,
+        "parent": {
+          "games": 64,
+          "first": 0,
+          "second": 0,
+          "unresolved": 64,
+          "positionWins": [
+            0,
+            0
+          ],
+          "firstRate": null,
+          "position0Rate": null,
+          "firstBias": 1,
+          "positionBias": 1,
+          "unresolvedRate": 1,
+          "firstFinalPossible": [
+            0,
+            1
+          ],
+          "positionFinalPossible": [
+            0,
+            1
+          ],
+          "wilsonFirst95Descriptive": null,
+          "wilsonPosition95Descriptive": null,
+          "clusterCount": 8,
+          "bootstrapFirst95": null,
+          "bootstrapPosition95": null,
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 0,
+              "unresolved": 32,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 0,
+              "unresolved": 32,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 0,
+              "unresolved": 32,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 0,
+              "unresolved": 32,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 0,
+          "leadChangeGames": 0,
+          "nearVictoryReversals": 0,
+          "wallMoves": 353,
+          "plies": 353,
+          "wallRate": 1,
+          "medianDecidedPlies": null,
+          "maxPlies": 8,
+          "openingDiversity": 8,
+          "declinedCaptures": 0,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "child": {
+          "games": 64,
+          "first": 17,
+          "second": 11,
+          "unresolved": 36,
+          "positionWins": [
+            12,
+            16
+          ],
+          "firstRate": 0.6071428571428571,
+          "position0Rate": 0.42857142857142855,
+          "firstBias": 0.21428571428571427,
+          "positionBias": 0.14285714285714285,
+          "unresolvedRate": 0.5625,
+          "firstFinalPossible": [
+            0.265625,
+            0.828125
+          ],
+          "positionFinalPossible": [
+            0.1875,
+            0.75
+          ],
+          "wilsonFirst95Descriptive": [
+            0.42409044159980325,
+            0.7643431355917387
+          ],
+          "wilsonPosition95Descriptive": [
+            0.2650854701640365,
+            0.6092921450416022
+          ],
+          "clusterCount": 8,
+          "bootstrapFirst95": [
+            0.5,
+            0.7777777777777778
+          ],
+          "bootstrapPosition95": [
+            0.3,
+            0.5454545454545454
+          ],
+          "interaction": {
+            "startSlot0/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                7
+              ],
+              "unresolved": 1
+            },
+            "startSlot1/search/route": {
+              "games": 8,
+              "slotWins": [
+                0,
+                7
+              ],
+              "unresolved": 1
+            },
+            "startSlot0/route/search": {
+              "games": 8,
+              "slotWins": [
+                7,
+                0
+              ],
+              "unresolved": 1
+            },
+            "startSlot1/route/search": {
+              "games": 8,
+              "slotWins": [
+                4,
+                0
+              ],
+              "unresolved": 4
+            },
+            "startSlot0/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                1,
+                0
+              ],
+              "unresolved": 7
+            },
+            "startSlot1/mixed/defensive": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot0/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                0
+              ],
+              "unresolved": 8
+            },
+            "startSlot1/defensive/mixed": {
+              "games": 8,
+              "slotWins": [
+                0,
+                2
+              ],
+              "unresolved": 6
+            }
+          },
+          "byPolicy": {
+            "search": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 25,
+              "unresolved": 7,
+              "selfPlay": 0
+            },
+            "route": {
+              "appearances": 32,
+              "wins": 25,
+              "losses": 0,
+              "unresolved": 7,
+              "selfPlay": 0
+            },
+            "mixed": {
+              "appearances": 32,
+              "wins": 3,
+              "losses": 0,
+              "unresolved": 29,
+              "selfPlay": 0
+            },
+            "defensive": {
+              "appearances": 32,
+              "wins": 0,
+              "losses": 3,
+              "unresolved": 29,
+              "selfPlay": 0
+            }
+          },
+          "repeatedGames": 0,
+          "leadChangeGames": 15,
+          "nearVictoryReversals": 1,
+          "wallMoves": 1046,
+          "plies": 1049,
+          "wallRate": 0.9971401334604385,
+          "medianDecidedPlies": 15,
+          "maxPlies": 34,
+          "openingDiversity": 8,
+          "declinedCaptures": 0,
+          "limitations": [
+            "Policy-conditional observational statistics",
+            "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+            "Initial-slot and turn counts are separate",
+            "Human enjoyment and optimal-play fairness unproven"
+          ]
+        },
+        "limits": [
+          "Exploratory cluster sign-flip reference test, exchangeability is an assumption",
+          "Unresolved games retained in denominator",
+          "Not a fairness or human-enjoyment certification"
+        ],
+        "holmSettlementP": 0.046875
+      },
+      "beforeBehavior": {
+        "stopReasons": {
+          "budget-time": 64
+        },
+        "quietRepeatedUnresolved": 0,
+        "maxScorelessPlies": 6,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 0,
+            "second": 0,
+            "unresolved": 32,
+            "positionWins": [
+              0,
+              0
+            ],
+            "firstRate": null,
+            "position0Rate": null,
+            "firstBias": 1,
+            "positionBias": 1,
+            "unresolvedRate": 1,
+            "firstFinalPossible": [
+              0,
+              1
+            ],
+            "positionFinalPossible": [
+              0,
+              1
+            ],
+            "wilsonFirst95Descriptive": null,
+            "wilsonPosition95Descriptive": null,
+            "clusterCount": 4,
+            "bootstrapFirst95": null,
+            "bootstrapPosition95": null,
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 0,
+                "unresolved": 32,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 0,
+                "unresolved": 32,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 0,
+            "nearVictoryReversals": 0,
+            "wallMoves": 216,
+            "plies": 216,
+            "wallRate": 1,
+            "medianDecidedPlies": null,
+            "maxPlies": 8,
+            "openingDiversity": 6,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 0,
+            "second": 0,
+            "unresolved": 32,
+            "positionWins": [
+              0,
+              0
+            ],
+            "firstRate": null,
+            "position0Rate": null,
+            "firstBias": 1,
+            "positionBias": 1,
+            "unresolvedRate": 1,
+            "firstFinalPossible": [
+              0,
+              1
+            ],
+            "positionFinalPossible": [
+              0,
+              1
+            ],
+            "wilsonFirst95Descriptive": null,
+            "wilsonPosition95Descriptive": null,
+            "clusterCount": 4,
+            "bootstrapFirst95": null,
+            "bootstrapPosition95": null,
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 0,
+                "unresolved": 32,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 0,
+                "unresolved": 32,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 0,
+            "nearVictoryReversals": 0,
+            "wallMoves": 137,
+            "plies": 137,
+            "wallRate": 1,
+            "medianDecidedPlies": null,
+            "maxPlies": 5,
+            "openingDiversity": 6,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "afterBehavior": {
+        "stopReasons": {
+          "win": 28,
+          "budget-time": 36
+        },
+        "quietRepeatedUnresolved": 0,
+        "maxScorelessPlies": 25,
+        "byPair": {
+          "search/route": {
+            "games": 32,
+            "first": 14,
+            "second": 11,
+            "unresolved": 7,
+            "positionWins": [
+              11,
+              14
+            ],
+            "firstRate": 0.56,
+            "position0Rate": 0.44,
+            "firstBias": 0.12,
+            "positionBias": 0.12,
+            "unresolvedRate": 0.21875,
+            "firstFinalPossible": [
+              0.4375,
+              0.65625
+            ],
+            "positionFinalPossible": [
+              0.34375,
+              0.5625
+            ],
+            "wilsonFirst95Descriptive": [
+              0.37067331734646203,
+              0.7333436123222912
+            ],
+            "wilsonPosition95Descriptive": [
+              0.26665638767770883,
+              0.629326682653538
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              0.4642857142857143,
+              0.6842105263157895
+            ],
+            "bootstrapPosition95": [
+              0.3157894736842105,
+              0.5357142857142857
+            ],
+            "interaction": {
+              "startSlot0/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  7
+                ],
+                "unresolved": 1
+              },
+              "startSlot1/search/route": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  7
+                ],
+                "unresolved": 1
+              },
+              "startSlot0/route/search": {
+                "games": 8,
+                "slotWins": [
+                  7,
+                  0
+                ],
+                "unresolved": 1
+              },
+              "startSlot1/route/search": {
+                "games": 8,
+                "slotWins": [
+                  4,
+                  0
+                ],
+                "unresolved": 4
+              }
+            },
+            "byPolicy": {
+              "search": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 25,
+                "unresolved": 7,
+                "selfPlay": 0
+              },
+              "route": {
+                "appearances": 32,
+                "wins": 25,
+                "losses": 0,
+                "unresolved": 7,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 9,
+            "nearVictoryReversals": 1,
+            "wallMoves": 589,
+            "plies": 591,
+            "wallRate": 0.9966159052453468,
+            "medianDecidedPlies": 15,
+            "maxPlies": 34,
+            "openingDiversity": 6,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          },
+          "mixed/defensive": {
+            "games": 32,
+            "first": 3,
+            "second": 0,
+            "unresolved": 29,
+            "positionWins": [
+              1,
+              2
+            ],
+            "firstRate": 1,
+            "position0Rate": 0.3333333333333333,
+            "firstBias": 1,
+            "positionBias": 0.3333333333333333,
+            "unresolvedRate": 0.90625,
+            "firstFinalPossible": [
+              0.09375,
+              1
+            ],
+            "positionFinalPossible": [
+              0.03125,
+              0.9375
+            ],
+            "wilsonFirst95Descriptive": [
+              0.43850296436068037,
+              1
+            ],
+            "wilsonPosition95Descriptive": [
+              0.06149194402093078,
+              0.7923404011921757
+            ],
+            "clusterCount": 4,
+            "bootstrapFirst95": [
+              1,
+              1
+            ],
+            "bootstrapPosition95": [
+              0,
+              1
+            ],
+            "interaction": {
+              "startSlot0/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  1,
+                  0
+                ],
+                "unresolved": 7
+              },
+              "startSlot1/mixed/defensive": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot0/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  0
+                ],
+                "unresolved": 8
+              },
+              "startSlot1/defensive/mixed": {
+                "games": 8,
+                "slotWins": [
+                  0,
+                  2
+                ],
+                "unresolved": 6
+              }
+            },
+            "byPolicy": {
+              "mixed": {
+                "appearances": 32,
+                "wins": 3,
+                "losses": 0,
+                "unresolved": 29,
+                "selfPlay": 0
+              },
+              "defensive": {
+                "appearances": 32,
+                "wins": 0,
+                "losses": 3,
+                "unresolved": 29,
+                "selfPlay": 0
+              }
+            },
+            "repeatedGames": 0,
+            "leadChangeGames": 6,
+            "nearVictoryReversals": 0,
+            "wallMoves": 457,
+            "plies": 458,
+            "wallRate": 0.9978165938864629,
+            "medianDecidedPlies": 15,
+            "maxPlies": 20,
+            "openingDiversity": 6,
+            "declinedCaptures": 0,
+            "limitations": [
+              "Policy-conditional observational statistics",
+              "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+              "Initial-slot and turn counts are separate",
+              "Human enjoyment and optimal-play fairness unproven"
+            ]
+          }
+        }
+      },
+      "conservative": {
+        "games": 64,
+        "clusters": 8,
+        "firstWins": 17,
+        "secondWins": 11,
+        "officialDraws": 0,
+        "unresolved": 36,
+        "anomalies": 0,
+        "budgetInterrupted": 36,
+        "repeatedGames": 0,
+        "repeatedUnresolvedQuietGames": 0,
+        "decidedRate": 0.4375,
+        "firstDecidedRate": 0.6071428571428571,
+        "firstAllRate": 0.265625,
+        "secondAllRate": 0.171875,
+        "firstFinalPossibleRange": [
+          0.265625,
+          0.828125
+        ],
+        "pairedBootstrapDecided95": [
+          0.5,
+          0.8
+        ],
+        "conservativeClusterFirstAll95": [
+          0,
+          0.7889572698507302
+        ],
+        "conservativeClusterDecided95": [
+          0,
+          1
+        ],
+        "conservativeClusterFinalFirstRange95": [
+          0,
+          1
+        ],
+        "pairedBootstrapFirstAll95": [
+          0.125,
+          0.390625
+        ],
+        "reasons": {
+          "win": 28,
+          "budget-time": 36
+        },
+        "plies": {
+          "min": 11,
+          "q25": 13,
+          "median": 15,
+          "q75": 17,
+          "p90": 20,
+          "p95": 21,
+          "max": 28,
+          "mean": 15.75,
+          "beyond120Wins": 0
+        },
+        "judgment": "inconclusive-or-outside-target"
+      }
+    }
+  ],
+  "complete": true,
+  "plannedContinuations": 218,
+  "sourceFileSHA256": "da01a9cab536604aaf16be52825e3c21d59b77917df3ad6042e6de0170d1c7c7",
+  "deltaFileSHA256": "ec46687b303ec9f19b35fd959a5f05422955778d911ff7facc3492d884d7cf33",
+  "elapsedMs": 289758.943784
+}

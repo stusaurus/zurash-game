@@ -1,0 +1,34 @@
+name: Aggregate 25000 Tactics games
+on:
+  workflow_dispatch:
+  push:
+    branches: [tactics-size-experiment]
+    paths:
+      - 'scripts/tactics-aggregate.js'
+      - '.github/workflows/tactics-aggregate.yml'
+permissions:
+  actions: read
+  contents: read
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Download both completed simulation runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p artifacts/initial artifacts/additional
+          gh run download 39431190693 -R "${{ github.repository }}" -D artifacts/initial
+          gh run download 39431523150 -R "${{ github.repository }}" -D artifacts/additional
+      - name: Aggregate and validate 25000 games
+        run: node scripts/tactics-aggregate.js artifacts
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tactics-25000-summary
+          path: reports/tactics-25000-summary.json
+          if-no-files-found: error

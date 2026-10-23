@@ -1,0 +1,32 @@
+name: Aggregate 120-ply Tactics outcomes
+on:
+  workflow_dispatch:
+  push:
+    branches: [tactics-size-experiment]
+    paths:
+      - '.github/workflows/tactics-120-aggregate.yml'
+permissions:
+  actions: read
+  contents: read
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Download completed 120-ply run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p artifacts
+          gh run download 39432318078 -R "${{ github.repository }}" -D artifacts
+      - name: Validate and compare 80 versus 120
+        run: node scripts/tactics-120-aggregate.js artifacts
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tactics-120-comparison
+          path: reports/tactics-120-comparison.json
+          if-no-files-found: error

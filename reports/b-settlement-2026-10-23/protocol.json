@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "sourceCommit": "4b3f6adeb044b0e2039d03eea6c3801f8f744a1a",
+  "trainSeeds": [
+    2301001,
+    2301019
+  ],
+  "holdoutSeeds": [
+    2302001,
+    2302019,
+    2302033,
+    2302051,
+    2302073,
+    2302087,
+    2302103,
+    2302129
+  ],
+  "modeSeeds": [
+    2303001,
+    2303019,
+    2303033,
+    2303051
+  ],
+  "diagnosticSeeds": [
+    2304001,
+    2304019
+  ],
+  "train": {
+    "timeBudgetMs": 160,
+    "maxPlies": 512
+  },
+  "holdout": {
+    "timeBudgetMs": 700,
+    "maxPlies": 2048
+  },
+  "modes": {
+    "timeBudgetMs": 300,
+    "maxPlies": 1024
+  },
+  "diagnostic": {
+    "timeBudgetMs": 700,
+    "maxPlies": 2048
+  },
+  "selection": "Train only: settlement first, worst turn/slot bias second, opening diversity third, ID; top two frozen before holdout. No official adoption.",
+  "rosterHash": "8bd897f5f90f8d48ca310ba70597aac090f6d8dfb911b4692ff22305f34b943d",
+  "rules": "unchanged; all caps unresolved; soft per-game wall-clock limits",
+  "limits": [
+    "Host performance can affect time censoring",
+    "Different AI pairs and budgets are reported separately",
+    "Human time and enjoyment not measured"
+  ]
+}

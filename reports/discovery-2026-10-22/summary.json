@@ -1,0 +1,992 @@
+{
+  "version": "discovery-1",
+  "basicEvaluated": 1135,
+  "positionSearches": 1135,
+  "positionProposals": 10656,
+  "legalPositionProposals": 10007,
+  "selectedParents": 14,
+  "trainingBoards": 130,
+  "deepBoards": 41,
+  "holdoutBoards": 41,
+  "finalists": 41,
+  "uniqueGames": 3152,
+  "standard": {
+    "games": 3008,
+    "first": 1297,
+    "second": 1110,
+    "unresolved": 601,
+    "positionWins": [
+      1130,
+      1277
+    ],
+    "firstRate": 0.5388450353136685,
+    "position0Rate": 0.4694640631491483,
+    "firstBias": 0.07769007062733693,
+    "positionBias": 0.06107187370170337,
+    "unresolvedRate": 0.1998005319148936,
+    "firstFinalPossible": [
+      0.43118351063829785,
+      0.6309840425531915
+    ],
+    "positionFinalPossible": [
+      0.37566489361702127,
+      0.5754654255319149
+    ],
+    "wilsonFirst95Descriptive": [
+      0.518884597204175,
+      0.5586816812879717
+    ],
+    "wilsonPosition95Descriptive": [
+      0.4495911456345788,
+      0.48943429319779774
+    ],
+    "clusterCount": 6,
+    "bootstrapFirst95": [
+      0.5217512548800892,
+      0.5631578947368421
+    ],
+    "bootstrapPosition95": [
+      0.43804213135068154,
+      0.48883374689826303
+    ],
+    "interaction": {
+      "startSlot0/star/positional": {
+        "games": 260,
+        "slotWins": [
+          27,
+          213
+        ],
+        "unresolved": 20
+      },
+      "startSlot0/positional/star": {
+        "games": 260,
+        "slotWins": [
+          218,
+          11
+        ],
+        "unresolved": 31
+      },
+      "startSlot1/positional/star": {
+        "games": 260,
+        "slotWins": [
+          208,
+          25
+        ],
+        "unresolved": 27
+      },
+      "startSlot1/star/positional": {
+        "games": 260,
+        "slotWins": [
+          16,
+          222
+        ],
+        "unresolved": 22
+      },
+      "startSlot0/defensive/mixed": {
+        "games": 82,
+        "slotWins": [
+          25,
+          32
+        ],
+        "unresolved": 25
+      },
+      "startSlot0/search/route": {
+        "games": 82,
+        "slotWins": [
+          21,
+          32
+        ],
+        "unresolved": 29
+      },
+      "startSlot0/mixed/defensive": {
+        "games": 82,
+        "slotWins": [
+          40,
+          21
+        ],
+        "unresolved": 21
+      },
+      "startSlot0/route/search": {
+        "games": 82,
+        "slotWins": [
+          40,
+          21
+        ],
+        "unresolved": 21
+      },
+      "startSlot1/mixed/defensive": {
+        "games": 82,
+        "slotWins": [
+          30,
+          29
+        ],
+        "unresolved": 23
+      },
+      "startSlot1/route/search": {
+        "games": 82,
+        "slotWins": [
+          30,
+          26
+        ],
+        "unresolved": 26
+      },
+      "startSlot1/defensive/mixed": {
+        "games": 82,
+        "slotWins": [
+          17,
+          42
+        ],
+        "unresolved": 23
+      },
+      "startSlot1/search/route": {
+        "games": 82,
+        "slotWins": [
+          14,
+          40
+        ],
+        "unresolved": 28
+      },
+      "startSlot0/mixed/route": {
+        "games": 164,
+        "slotWins": [
+          53,
+          59
+        ],
+        "unresolved": 52
+      },
+      "startSlot0/defensive/search": {
+        "games": 164,
+        "slotWins": [
+          49,
+          88
+        ],
+        "unresolved": 27
+      },
+      "startSlot0/route/mixed": {
+        "games": 164,
+        "slotWins": [
+          59,
+          57
+        ],
+        "unresolved": 48
+      },
+      "startSlot0/search/defensive": {
+        "games": 164,
+        "slotWins": [
+          77,
+          55
+        ],
+        "unresolved": 32
+      },
+      "startSlot1/route/mixed": {
+        "games": 164,
+        "slotWins": [
+          52,
+          69
+        ],
+        "unresolved": 43
+      },
+      "startSlot1/search/defensive": {
+        "games": 164,
+        "slotWins": [
+          75,
+          61
+        ],
+        "unresolved": 28
+      },
+      "startSlot1/mixed/route": {
+        "games": 164,
+        "slotWins": [
+          34,
+          80
+        ],
+        "unresolved": 50
+      },
+      "startSlot1/defensive/search": {
+        "games": 164,
+        "slotWins": [
+          45,
+          94
+        ],
+        "unresolved": 25
+      }
+    },
+    "byPolicy": {
+      "star": {
+        "appearances": 1040,
+        "wins": 79,
+        "losses": 861,
+        "unresolved": 100,
+        "selfPlay": 0
+      },
+      "positional": {
+        "appearances": 1040,
+        "wins": 861,
+        "losses": 79,
+        "unresolved": 100,
+        "selfPlay": 0
+      },
+      "defensive": {
+        "appearances": 984,
+        "wins": 302,
+        "losses": 478,
+        "unresolved": 204,
+        "selfPlay": 0
+      },
+      "mixed": {
+        "appearances": 984,
+        "wins": 357,
+        "losses": 342,
+        "unresolved": 285,
+        "selfPlay": 0
+      },
+      "search": {
+        "appearances": 984,
+        "wins": 416,
+        "losses": 352,
+        "unresolved": 216,
+        "selfPlay": 0
+      },
+      "route": {
+        "appearances": 984,
+        "wins": 392,
+        "losses": 295,
+        "unresolved": 297,
+        "selfPlay": 0
+      }
+    },
+    "repeatedGames": 654,
+    "leadChangeGames": 1190,
+    "nearVictoryReversals": 604,
+    "wallMoves": 79501,
+    "plies": 116863,
+    "wallRate": 0.6802923080872475,
+    "medianDecidedPlies": 12,
+    "maxPlies": 512,
+    "openingDiversity": 319,
+    "declinedCaptures": 59,
+    "limitations": [
+      "Policy-conditional observational statistics",
+      "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+      "Initial-slot and turn counts are separate",
+      "Human enjoyment and optimal-play fairness unproven"
+    ]
+  },
+  "controls": {
+    "games": 144,
+    "first": 38,
+    "second": 58,
+    "unresolved": 48,
+    "positionWins": [
+      42,
+      54
+    ],
+    "firstRate": 0.3958333333333333,
+    "position0Rate": 0.4375,
+    "firstBias": 0.20833333333333334,
+    "positionBias": 0.125,
+    "unresolvedRate": 0.3333333333333333,
+    "firstFinalPossible": [
+      0.2638888888888889,
+      0.5972222222222222
+    ],
+    "positionFinalPossible": [
+      0.2916666666666667,
+      0.625
+    ],
+    "wilsonFirst95Descriptive": [
+      0.3038335339518769,
+      0.49584888030672775
+    ],
+    "wilsonPosition95Descriptive": [
+      0.34256827405553947,
+      0.5372411744996233
+    ],
+    "clusterCount": 2,
+    "bootstrapFirst95": null,
+    "bootstrapPosition95": null,
+    "interaction": {
+      "startSlot0/positional/search": {
+        "games": 36,
+        "slotWins": [
+          4,
+          20
+        ],
+        "unresolved": 12
+      },
+      "startSlot0/search/positional": {
+        "games": 36,
+        "slotWins": [
+          12,
+          12
+        ],
+        "unresolved": 12
+      },
+      "startSlot1/search/positional": {
+        "games": 36,
+        "slotWins": [
+          19,
+          5
+        ],
+        "unresolved": 12
+      },
+      "startSlot1/positional/search": {
+        "games": 36,
+        "slotWins": [
+          7,
+          17
+        ],
+        "unresolved": 12
+      }
+    },
+    "byPolicy": {
+      "positional": {
+        "appearances": 144,
+        "wins": 28,
+        "losses": 68,
+        "unresolved": 48,
+        "selfPlay": 0
+      },
+      "search": {
+        "appearances": 144,
+        "wins": 68,
+        "losses": 28,
+        "unresolved": 48,
+        "selfPlay": 0
+      }
+    },
+    "repeatedGames": 63,
+    "leadChangeGames": 60,
+    "nearVictoryReversals": 45,
+    "wallMoves": 1349,
+    "plies": 7210,
+    "wallRate": 0.18710124826629682,
+    "medianDecidedPlies": 8,
+    "maxPlies": 128,
+    "openingDiversity": 29,
+    "declinedCaptures": 606,
+    "limitations": [
+      "Policy-conditional observational statistics",
+      "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+      "Initial-slot and turn counts are separate",
+      "Human enjoyment and optimal-play fairness unproven"
+    ]
+  },
+  "continuationsThisInvocation": 0,
+  "mutationAttempts": 128,
+  "mutationAccepted": 102,
+  "mutationRejected": 19,
+  "mutationDuplicates": 7,
+  "pareto": [
+    "z-d5eb7bef",
+    "d-ecb7da7428eb8b3dc4b336df",
+    "d-253090f4ceead3e708338cf3",
+    "z-cfd6bd9d",
+    "d-3b9b43db4b292ddfd6a9d168",
+    "z-29d756f4",
+    "d-426361d6ba0e7e07d6dd975d",
+    "d-983a30a4c06fb6c245fc2916",
+    "d-810068afefd991ae8e5c9d50",
+    "d-9ab155ca1c220daf53d894d0",
+    "d-ab8aed10346f0f4fd37d1473",
+    "z-c1a4dd1b",
+    "d-ca8b957f69ae0beb597cce18",
+    "z-e50dbb41",
+    "z-1dd54c6e",
+    "d-d98e6106bcf72d0fc683054b",
+    "d-54d2adb936d4585722259935",
+    "d-a302156097e56dfe4523a485",
+    "z-9c4ad32a"
+  ],
+  "positionImprovementsSupported": [],
+  "otherImprovementsSupported": [],
+  "comparisons": [
+    {
+      "parent": "z-d5eb7bef",
+      "child": "d-ecb7da7428eb8b3dc4b336df",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0,
+        "bootstrapReduction95": [
+          0,
+          0
+        ],
+        "firstBiasChange": 0,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-d5eb7bef",
+      "child": "d-253090f4ceead3e708338cf3",
+      "kind": "stars",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": -0.0625,
+        "bootstrapReduction95": [
+          -0.375,
+          0
+        ],
+        "firstBiasChange": -0.5625,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-55f2fedf",
+      "child": "d-40d94fcdb64db85ae957dd95",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": null,
+        "bootstrapReduction95": null,
+        "firstBiasChange": 0,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "independent seed groups or resolved outcomes insufficient",
+          "fewer than 16 resolved games on at least one side"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-55f2fedf",
+      "child": "d-f6c92f372d77392c4cede349",
+      "kind": "target",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": null,
+        "bootstrapReduction95": null,
+        "firstBiasChange": -1,
+        "unresolvedChange": -1,
+        "improvementSupported": false,
+        "reasons": [
+          "independent seed groups or resolved outcomes insufficient",
+          "fewer than 16 resolved games on at least one side"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-cfd6bd9d",
+      "child": "d-3b9b43db4b292ddfd6a9d168",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0,
+        "bootstrapReduction95": [
+          0,
+          0
+        ],
+        "firstBiasChange": 0,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-29d756f4",
+      "child": "d-426361d6ba0e7e07d6dd975d",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": -0.4032258064516129,
+        "bootstrapReduction95": [
+          -0.5,
+          -0.30833333333333335
+        ],
+        "firstBiasChange": -0.0967741935483871,
+        "unresolvedChange": -0.03125,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-29d756f4",
+      "child": "d-983a30a4c06fb6c245fc2916",
+      "kind": "target",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0.0967741935483871,
+        "bootstrapReduction95": [
+          0,
+          0.2
+        ],
+        "firstBiasChange": 0.028225806451612906,
+        "unresolvedChange": -0.03125,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-affd4d6e",
+      "child": "d-3e312539b9a34a2ebc2561c4",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": -0.380952380952381,
+        "bootstrapReduction95": [
+          -1,
+          0.5
+        ],
+        "firstBiasChange": 0.09523809523809523,
+        "unresolvedChange": -0.125,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement",
+          "fewer than 16 resolved games on at least one side"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-affd4d6e",
+      "child": "d-810068afefd991ae8e5c9d50",
+      "kind": "target",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0.07017543859649122,
+        "bootstrapReduction95": [
+          -0.4444444444444444,
+          1
+        ],
+        "firstBiasChange": -0.2807017543859649,
+        "unresolvedChange": -0.5,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement",
+          "fewer than 16 resolved games on at least one side"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-f919b13b",
+      "child": "d-b61bbf52a7b657a34196c6fc",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0.09523809523809523,
+        "bootstrapReduction95": [
+          -0.2692307692307693,
+          0.7058823529411764
+        ],
+        "firstBiasChange": -0.380952380952381,
+        "unresolvedChange": -0.4375,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement",
+          "fewer than 16 resolved games on at least one side"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-f919b13b",
+      "child": "d-f49bb658d000b8b840558b90",
+      "kind": "target",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0.0714285714285714,
+        "bootstrapReduction95": [
+          -0.125,
+          0.33333333333333337
+        ],
+        "firstBiasChange": -0.5714285714285714,
+        "unresolvedChange": -0.65625,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement",
+          "fewer than 16 resolved games on at least one side"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-5188357f",
+      "child": "d-9ab155ca1c220daf53d894d0",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0.22360248447204972,
+        "bootstrapReduction95": [
+          -0.34920634920634924,
+          0.6285714285714286
+        ],
+        "firstBiasChange": 0.2194616977225673,
+        "unresolvedChange": 0.0625,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement",
+          "turn bias worsened",
+          "unresolved rate worsened"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-5188357f",
+      "child": "d-ab8aed10346f0f4fd37d1473",
+      "kind": "target",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": -0.16032608695652173,
+        "bootstrapReduction95": [
+          -0.44642857142857145,
+          0
+        ],
+        "firstBiasChange": -0.24184782608695654,
+        "unresolvedChange": -0.28125,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-c1a4dd1b",
+      "child": "d-ca8b957f69ae0beb597cce18",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0.4700854700854701,
+        "bootstrapReduction95": [
+          0.27586206896551724,
+          0.6373626373626373
+        ],
+        "firstBiasChange": 0.43019943019943024,
+        "unresolvedChange": 0.03125,
+        "improvementSupported": false,
+        "reasons": [
+          "turn bias worsened",
+          "unresolved rate worsened"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-c1a4dd1b",
+      "child": "d-f2f0aa1b7c45b11101001b81",
+      "kind": "shape",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0.13492063492063489,
+        "bootstrapReduction95": [
+          0,
+          0.2571428571428571
+        ],
+        "firstBiasChange": -0.042328042328042326,
+        "unresolvedChange": -0.03125,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-e50dbb41",
+      "child": "d-10117b0a0b1e84b5d968132d",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0.75,
+        "bootstrapReduction95": [
+          0.5,
+          1
+        ],
+        "firstBiasChange": 0.75,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "turn bias worsened"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-e50dbb41",
+      "child": "d-aee9d42bff1c4fdcb26ae4db",
+      "kind": "target",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0.125,
+        "bootstrapReduction95": [
+          0,
+          0.25
+        ],
+        "firstBiasChange": 0.125,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement",
+          "turn bias worsened"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-1dd54c6e",
+      "child": "d-d98e6106bcf72d0fc683054b",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": -0.01976284584980237,
+        "bootstrapReduction95": [
+          -0.05294117647058816,
+          0.041666666666666685
+        ],
+        "firstBiasChange": -0.14229249011857706,
+        "unresolvedChange": -0.03125,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-1dd54c6e",
+      "child": "d-b22a6ef625bb700d9ca5343a",
+      "kind": "wall-count",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": -0.4545454545454546,
+        "bootstrapReduction95": [
+          -0.6666666666666667,
+          0
+        ],
+        "firstBiasChange": 0.3939393939393939,
+        "unresolvedChange": 0.5,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement",
+          "fewer than 16 resolved games on at least one side",
+          "turn bias worsened",
+          "unresolved rate worsened"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-14b4ad0d",
+      "child": "d-69afe276d7c752e66ff2f58f",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0,
+        "bootstrapReduction95": [
+          0,
+          0
+        ],
+        "firstBiasChange": 0,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-14b4ad0d",
+      "child": "d-54d2adb936d4585722259935",
+      "kind": "stars",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0.0625,
+        "bootstrapReduction95": [
+          -0.125,
+          0.25
+        ],
+        "firstBiasChange": -0.3125,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-3be3039d",
+      "child": "d-1333f0a271c5e88f35af7877",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": -0.6875,
+        "bootstrapReduction95": [
+          -0.75,
+          -0.5625
+        ],
+        "firstBiasChange": -0.6875,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-3be3039d",
+      "child": "d-a302156097e56dfe4523a485",
+      "kind": "stars",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": -0.25,
+        "bootstrapReduction95": [
+          -0.4375,
+          -0.0625
+        ],
+        "firstBiasChange": -0.25,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-57bcf7fb",
+      "child": "d-a62d3d58bb4fb6307f5fef93",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0.6875,
+        "bootstrapReduction95": [
+          0.375,
+          0.9375
+        ],
+        "firstBiasChange": 0.6875,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "turn bias worsened"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-57bcf7fb",
+      "child": "d-8981212e8dce315ee932e2d3",
+      "kind": "target",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": 0,
+        "bootstrapReduction95": [
+          -0.125,
+          0.1875
+        ],
+        "firstBiasChange": 0,
+        "unresolvedChange": 0,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-9c4ad32a",
+      "child": "d-398bc065b3f287dc62841834",
+      "kind": "positions",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": -0.16742081447963802,
+        "bootstrapReduction95": [
+          -0.42735042735042733,
+          0.5
+        ],
+        "firstBiasChange": -0.25791855203619907,
+        "unresolvedChange": -0.28125,
+        "improvementSupported": false,
+        "reasons": [
+          "interval does not establish positive improvement"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    },
+    {
+      "parent": "z-9c4ad32a",
+      "child": "d-a33e8e70cbc2788e2cd67519",
+      "kind": "stars",
+      "holdout": {
+        "matchedGames": 32,
+        "matchedClusters": 4,
+        "positionBiasReduction": null,
+        "bootstrapReduction95": null,
+        "firstBiasChange": 0.5882352941176471,
+        "unresolvedChange": 0.53125,
+        "improvementSupported": false,
+        "reasons": [
+          "independent seed groups or resolved outcomes insufficient",
+          "fewer than 16 resolved games on at least one side",
+          "turn bias worsened",
+          "unresolved rate worsened"
+        ],
+        "interpretation": "insufficient evidence or tradeoff"
+      }
+    }
+  ],
+  "elapsedThisInvocationMs": 8911.835828,
+  "sourceCorpusSHA256": "1081b1ee03ad4c13c110814376e6613030373a739b6b05e70948aade52d3cea8",
+  "plannedHoldoutGames": 1312,
+  "allReplayed": true,
+  "limitations": [
+    "Exploratory multi-candidate testing; improvement intervals are unadjusted for multiple comparisons",
+    "No board is officially certified",
+    "Static placement score does not prove fairness",
+    "No-wall controls change the action rules and are not official games",
+    "Few independent clusters; AI and seed dependence remain",
+    "A budget cap is unresolved, never a draw",
+    "All candidate membership was frozen before holdout"
+  ]
+}

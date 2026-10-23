@@ -1,0 +1,1747 @@
+{
+  "planned": 289,
+  "extended": 289,
+  "newDecisions": 77,
+  "budgetMs": 180000,
+  "elapsedMs": 131954,
+  "limits": {
+    "maxPlies": 16384,
+    "timeBudgetMs": 2000
+  },
+  "rows": [
+    {
+      "id": "8:varied:0:0:defensive/search:1",
+      "reason": "budget-time",
+      "ply": 156,
+      "winner": null
+    },
+    {
+      "id": "8:varied:0:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 133,
+      "winner": null
+    },
+    {
+      "id": "8:varied:0:1:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 138,
+      "winner": null
+    },
+    {
+      "id": "8:varied:0:1:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 165,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:0:0:defensive/defensive:1",
+      "reason": "win",
+      "ply": 152,
+      "winner": 0
+    },
+    {
+      "id": "8:fixed:0:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 121,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:0:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 110,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:0:1:star/star:0",
+      "reason": "budget-time",
+      "ply": 5656,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:0:1:star/star:1",
+      "reason": "budget-time",
+      "ply": 7347,
+      "winner": null
+    },
+    {
+      "id": "9:varied:0:0:star/star:0",
+      "reason": "budget-time",
+      "ply": 6528,
+      "winner": null
+    },
+    {
+      "id": "9:varied:0:0:star/star:1",
+      "reason": "budget-time",
+      "ply": 6206,
+      "winner": null
+    },
+    {
+      "id": "9:varied:0:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 93,
+      "winner": null
+    },
+    {
+      "id": "9:varied:0:0:search/defensive:1",
+      "reason": "win",
+      "ply": 124,
+      "winner": 0
+    },
+    {
+      "id": "9:varied:0:0:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 99,
+      "winner": null
+    },
+    {
+      "id": "9:varied:0:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 151,
+      "winner": null
+    },
+    {
+      "id": "9:varied:0:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 53,
+      "winner": null
+    },
+    {
+      "id": "9:varied:0:0:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 144,
+      "winner": null
+    },
+    {
+      "id": "9:varied:0:0:search-progress/search:1",
+      "reason": "budget-time",
+      "ply": 98,
+      "winner": null
+    },
+    {
+      "id": "9:varied:0:0:search/search-progress:1",
+      "reason": "budget-time",
+      "ply": 114,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:0:0:defensive/defensive:1",
+      "reason": "budget-time",
+      "ply": 67,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:0:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 82,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:0:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 126,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:0:0:defensive/search:0",
+      "reason": "win",
+      "ply": 84,
+      "winner": 1
+    },
+    {
+      "id": "9:fixed:0:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 88,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:0:0:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 120,
+      "winner": null
+    },
+    {
+      "id": "10:varied:0:0:mixed/mixed:1",
+      "reason": "win",
+      "ply": 74,
+      "winner": 0
+    },
+    {
+      "id": "9:fixed:0:0:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 169,
+      "winner": null
+    },
+    {
+      "id": "10:varied:0:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 237,
+      "winner": null
+    },
+    {
+      "id": "10:varied:0:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 63,
+      "winner": null
+    },
+    {
+      "id": "10:varied:0:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 128,
+      "winner": null
+    },
+    {
+      "id": "10:varied:0:0:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 223,
+      "winner": null
+    },
+    {
+      "id": "10:varied:0:0:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 146,
+      "winner": null
+    },
+    {
+      "id": "10:varied:0:1:positional/search:0",
+      "reason": "budget-time",
+      "ply": 167,
+      "winner": null
+    },
+    {
+      "id": "10:varied:0:1:search/defensive:1",
+      "reason": "budget-time",
+      "ply": 129,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:0:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 62,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:0:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 110,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:0:0:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 92,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:0:0:search-progress/search:0",
+      "reason": "win",
+      "ply": 95,
+      "winner": 0
+    },
+    {
+      "id": "10:fixed:0:1:search/defensive:0",
+      "reason": "win",
+      "ply": 43,
+      "winner": 0
+    },
+    {
+      "id": "10:fixed:0:0:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 104,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:0:0:search/search-progress:1",
+      "reason": "budget-time",
+      "ply": 116,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:0:1:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 59,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:0:1:search/defensive:1",
+      "reason": "budget-time",
+      "ply": 74,
+      "winner": null
+    },
+    {
+      "id": "8:varied:1:1:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 183,
+      "winner": null
+    },
+    {
+      "id": "8:varied:1:1:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 235,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:1:0:star/star:0",
+      "reason": "budget-time",
+      "ply": 10895,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:1:0:star/star:1",
+      "reason": "budget-time",
+      "ply": 8299,
+      "winner": null
+    },
+    {
+      "id": "8:varied:1:1:search-progress/search:0",
+      "reason": "win",
+      "ply": 293,
+      "winner": 0
+    },
+    {
+      "id": "8:fixed:1:0:search-progress/search:1",
+      "reason": "win",
+      "ply": 228,
+      "winner": 0
+    },
+    {
+      "id": "8:fixed:1:1:star/star:0",
+      "reason": "budget-time",
+      "ply": 8586,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:1:0:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 224,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:1:1:star/star:1",
+      "reason": "budget-time",
+      "ply": 8444,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:1:1:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 133,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:1:1:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 151,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:1:1:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 222,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:1:1:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 223,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:1:1:search/search-progress:0",
+      "reason": "win",
+      "ply": 237,
+      "winner": 0
+    },
+    {
+      "id": "8:fixed:1:1:search/search-progress:1",
+      "reason": "win",
+      "ply": 342,
+      "winner": 0
+    },
+    {
+      "id": "8:fixed:1:1:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 357,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:1:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 145,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:1:0:star/star:1",
+      "reason": "budget-time",
+      "ply": 7816,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:1:0:defensive/search:1",
+      "reason": "win",
+      "ply": 118,
+      "winner": 0
+    },
+    {
+      "id": "9:fixed:1:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 112,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:1:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 209,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:1:0:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 218,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:0:star/star:1",
+      "reason": "budget-time",
+      "ply": 7260,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:1:0:search-progress/search:1",
+      "reason": "budget-time",
+      "ply": 166,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:0:defensive/defensive:1",
+      "reason": "budget-time",
+      "ply": 74,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 226,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:0:search/search:1",
+      "reason": "budget-time",
+      "ply": 195,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 69,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 56,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 154,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:0:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 154,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:0:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 221,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:0:search/search-progress:1",
+      "reason": "budget-time",
+      "ply": 194,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:0:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 178,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:1:defensive/defensive:1",
+      "reason": "win",
+      "ply": 73,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:1:0:search-progress/search:1",
+      "reason": "budget-time",
+      "ply": 148,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:1:search/search:1",
+      "reason": "win",
+      "ply": 191,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:1:1:star/star:1",
+      "reason": "budget-time",
+      "ply": 7393,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:1:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 52,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:1:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 58,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:1:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 150,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:1:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 142,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:1:defensive/search:0",
+      "reason": "win",
+      "ply": 134,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:1:1:search-progress/search:0",
+      "reason": "win",
+      "ply": 161,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:1:1:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 172,
+      "winner": null
+    },
+    {
+      "id": "10:varied:1:1:search/defensive:0",
+      "reason": "budget-time",
+      "ply": 72,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:0:defensive/defensive:1",
+      "reason": "win",
+      "ply": 51,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:1:1:search/search-progress:1",
+      "reason": "win",
+      "ply": 191,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:1:1:search-progress/search:1",
+      "reason": "budget-time",
+      "ply": 146,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 77,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 63,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:0:search/defensive:1",
+      "reason": "budget-time",
+      "ply": 153,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:0:search/search-progress:0",
+      "reason": "win",
+      "ply": 77,
+      "winner": 0
+    },
+    {
+      "id": "10:fixed:1:1:defensive/defensive:1",
+      "reason": "win",
+      "ply": 50,
+      "winner": 0
+    },
+    {
+      "id": "10:fixed:1:0:search/defensive:0",
+      "reason": "budget-time",
+      "ply": 80,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:1:defensive/defensive:0",
+      "reason": "budget-time",
+      "ply": 63,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:1:search/search:1",
+      "reason": "budget-time",
+      "ply": 254,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:1:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 52,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:1:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 118,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:1:search-progress/search-progress:1",
+      "reason": "win",
+      "ply": 84,
+      "winner": 0
+    },
+    {
+      "id": "10:fixed:1:1:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 55,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:1:search/search-progress:1",
+      "reason": "budget-time",
+      "ply": 135,
+      "winner": null
+    },
+    {
+      "id": "8:varied:2:0:search/search:1",
+      "reason": "win",
+      "ply": 528,
+      "winner": 0
+    },
+    {
+      "id": "10:fixed:1:1:search-progress/search:1",
+      "reason": "budget-time",
+      "ply": 111,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:1:1:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 116,
+      "winner": null
+    },
+    {
+      "id": "8:varied:2:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 171,
+      "winner": null
+    },
+    {
+      "id": "8:varied:2:1:search/search:1",
+      "reason": "win",
+      "ply": 486,
+      "winner": 0
+    },
+    {
+      "id": "8:varied:2:0:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 380,
+      "winner": null
+    },
+    {
+      "id": "8:varied:2:1:mixed/mixed:1",
+      "reason": "win",
+      "ply": 91,
+      "winner": 1
+    },
+    {
+      "id": "8:varied:2:0:search/search-progress:1",
+      "reason": "budget-time",
+      "ply": 521,
+      "winner": null
+    },
+    {
+      "id": "8:varied:2:0:search-progress/search:1",
+      "reason": "budget-time",
+      "ply": 400,
+      "winner": null
+    },
+    {
+      "id": "9:varied:2:0:defensive/defensive:0",
+      "reason": "win",
+      "ply": 74,
+      "winner": 1
+    },
+    {
+      "id": "8:varied:2:1:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 372,
+      "winner": null
+    },
+    {
+      "id": "8:varied:2:1:search/search-progress:1",
+      "reason": "budget-time",
+      "ply": 462,
+      "winner": null
+    },
+    {
+      "id": "8:varied:2:1:search-progress/search:1",
+      "reason": "budget-time",
+      "ply": 448,
+      "winner": null
+    },
+    {
+      "id": "9:varied:2:0:mixed/mixed:1",
+      "reason": "win",
+      "ply": 111,
+      "winner": 1
+    },
+    {
+      "id": "9:varied:2:0:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 184,
+      "winner": null
+    },
+    {
+      "id": "9:varied:2:0:defensive/search:1",
+      "reason": "budget-time",
+      "ply": 168,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:0:defensive/defensive:1",
+      "reason": "win",
+      "ply": 70,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:2:0:star/star:0",
+      "reason": "budget-time",
+      "ply": 8977,
+      "winner": null
+    },
+    {
+      "id": "9:varied:2:0:search-progress/search:1",
+      "reason": "win",
+      "ply": 189,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:2:0:defensive/defensive:0",
+      "reason": "win",
+      "ply": 83,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:2:0:search/search:1",
+      "reason": "budget-time",
+      "ply": 263,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 93,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 134,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 124,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:0:defensive/search:1",
+      "reason": "win",
+      "ply": 141,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:2:0:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 257,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:0:positional/search:0",
+      "reason": "budget-time",
+      "ply": 217,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:0:search/defensive:1",
+      "reason": "budget-time",
+      "ply": 138,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:1:defensive/defensive:1",
+      "reason": "win",
+      "ply": 58,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:2:0:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 131,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:0:search/search-progress:1",
+      "reason": "budget-time",
+      "ply": 276,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:0:search-progress/search:1",
+      "reason": "budget-time",
+      "ply": 252,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:1:positional/search:0",
+      "reason": "win",
+      "ply": 186,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:2:1:search-progress/search-progress:1",
+      "reason": "win",
+      "ply": 120,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:2:1:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 101,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:1:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 77,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:1:search/defensive:0",
+      "reason": "win",
+      "ply": 163,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:2:1:positional/search:1",
+      "reason": "budget-time",
+      "ply": 175,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:1:defensive/search:0",
+      "reason": "budget-time",
+      "ply": 125,
+      "winner": null
+    },
+    {
+      "id": "10:varied:2:1:search/search-progress:1",
+      "reason": "win",
+      "ply": 120,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:2:1:search/defensive:1",
+      "reason": "budget-time",
+      "ply": 183,
+      "winner": null
+    },
+    {
+      "id": "8:varied:3:0:search-progress/search-progress:1",
+      "reason": "win",
+      "ply": 219,
+      "winner": 1
+    },
+    {
+      "id": "8:varied:3:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 231,
+      "winner": null
+    },
+    {
+      "id": "8:varied:3:0:search/search-progress:1",
+      "reason": "budget-time",
+      "ply": 368,
+      "winner": null
+    },
+    {
+      "id": "8:varied:3:1:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 151,
+      "winner": null
+    },
+    {
+      "id": "8:varied:3:1:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 285,
+      "winner": null
+    },
+    {
+      "id": "8:varied:3:1:search/search-progress:1",
+      "reason": "win",
+      "ply": 281,
+      "winner": 1
+    },
+    {
+      "id": "8:varied:3:1:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 233,
+      "winner": null
+    },
+    {
+      "id": "9:varied:3:0:star/star:0",
+      "reason": "budget-time",
+      "ply": 8442,
+      "winner": null
+    },
+    {
+      "id": "8:varied:3:1:search/search-progress:0",
+      "reason": "win",
+      "ply": 430,
+      "winner": 1
+    },
+    {
+      "id": "8:varied:3:1:search-progress/search:1",
+      "reason": "budget-time",
+      "ply": 342,
+      "winner": null
+    },
+    {
+      "id": "9:varied:3:0:star/star:1",
+      "reason": "budget-time",
+      "ply": 7334,
+      "winner": null
+    },
+    {
+      "id": "9:varied:3:0:mixed/mixed:1",
+      "reason": "win",
+      "ply": 108,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:3:0:defensive/defensive:0",
+      "reason": "budget-time",
+      "ply": 98,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 237,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:0:search/search:1",
+      "reason": "win",
+      "ply": 174,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:3:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 67,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:0:search/positional:1",
+      "reason": "win",
+      "ply": 108,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:3:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 63,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 182,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:0:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 122,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:0:search/defensive:0",
+      "reason": "budget-time",
+      "ply": 104,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:0:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 253,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:0:search-progress/search:1",
+      "reason": "win",
+      "ply": 174,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:3:0:search/search-progress:1",
+      "reason": "budget-time",
+      "ply": 161,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:0:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 179,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:1:defensive/defensive:0",
+      "reason": "win",
+      "ply": 85,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:3:1:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 82,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:1:search/search:0",
+      "reason": "budget-time",
+      "ply": 238,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:1:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 60,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:1:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 261,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:1:defensive/search:0",
+      "reason": "win",
+      "ply": 185,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:3:1:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 118,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:1:defensive/search:1",
+      "reason": "budget-time",
+      "ply": 123,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:1:search/defensive:0",
+      "reason": "budget-time",
+      "ply": 134,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:1:search/defensive:1",
+      "reason": "budget-time",
+      "ply": 120,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:1:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 256,
+      "winner": null
+    },
+    {
+      "id": "10:varied:3:1:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 206,
+      "winner": null
+    },
+    {
+      "id": "8:varied:4:0:search-progress/search-progress:0",
+      "reason": "win",
+      "ply": 217,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:3:1:search-progress/search:1",
+      "reason": "budget-time",
+      "ply": 134,
+      "winner": null
+    },
+    {
+      "id": "8:varied:4:0:search/search-progress:0",
+      "reason": "win",
+      "ply": 217,
+      "winner": 0
+    },
+    {
+      "id": "8:varied:4:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 161,
+      "winner": null
+    },
+    {
+      "id": "9:varied:4:0:defensive/defensive:1",
+      "reason": "win",
+      "ply": 72,
+      "winner": 0
+    },
+    {
+      "id": "8:varied:4:0:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 325,
+      "winner": null
+    },
+    {
+      "id": "8:varied:4:1:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 285,
+      "winner": null
+    },
+    {
+      "id": "8:varied:4:1:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 273,
+      "winner": null
+    },
+    {
+      "id": "9:varied:4:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 104,
+      "winner": null
+    },
+    {
+      "id": "10:varied:4:0:mixed/mixed:1",
+      "reason": "win",
+      "ply": 59,
+      "winner": 1
+    },
+    {
+      "id": "9:varied:4:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 117,
+      "winner": null
+    },
+    {
+      "id": "10:varied:4:0:defensive/defensive:1",
+      "reason": "budget-time",
+      "ply": 94,
+      "winner": null
+    },
+    {
+      "id": "10:varied:4:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 75,
+      "winner": null
+    },
+    {
+      "id": "10:varied:4:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 121,
+      "winner": null
+    },
+    {
+      "id": "10:varied:4:1:search/search:0",
+      "reason": "win",
+      "ply": 156,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:4:0:search/defensive:1",
+      "reason": "budget-time",
+      "ply": 132,
+      "winner": null
+    },
+    {
+      "id": "10:varied:4:0:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 171,
+      "winner": null
+    },
+    {
+      "id": "10:varied:4:1:star/star:0",
+      "reason": "budget-time",
+      "ply": 6049,
+      "winner": null
+    },
+    {
+      "id": "10:varied:4:1:defensive/search:0",
+      "reason": "win",
+      "ply": 102,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:4:1:search/search-progress:0",
+      "reason": "win",
+      "ply": 156,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:4:1:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 65,
+      "winner": null
+    },
+    {
+      "id": "10:varied:4:1:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 133,
+      "winner": null
+    },
+    {
+      "id": "8:varied:5:1:search-progress/search-progress:0",
+      "reason": "win",
+      "ply": 195,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:4:1:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 137,
+      "winner": null
+    },
+    {
+      "id": "8:varied:5:0:search/defensive:0",
+      "reason": "budget-time",
+      "ply": 268,
+      "winner": null
+    },
+    {
+      "id": "8:varied:5:1:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 243,
+      "winner": null
+    },
+    {
+      "id": "8:varied:5:1:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 270,
+      "winner": null
+    },
+    {
+      "id": "8:varied:5:1:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 388,
+      "winner": null
+    },
+    {
+      "id": "8:varied:5:1:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 370,
+      "winner": null
+    },
+    {
+      "id": "9:varied:5:0:star/star:0",
+      "reason": "budget-time",
+      "ply": 7494,
+      "winner": null
+    },
+    {
+      "id": "9:varied:5:0:star/star:1",
+      "reason": "budget-time",
+      "ply": 9472,
+      "winner": null
+    },
+    {
+      "id": "9:varied:5:0:mixed/mixed:0",
+      "reason": "win",
+      "ply": 98,
+      "winner": 1
+    },
+    {
+      "id": "9:varied:5:0:defensive/search:0",
+      "reason": "win",
+      "ply": 107,
+      "winner": 0
+    },
+    {
+      "id": "9:varied:5:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 132,
+      "winner": null
+    },
+    {
+      "id": "9:varied:5:0:search-progress/search-progress:0",
+      "reason": "budget-time",
+      "ply": 127,
+      "winner": null
+    },
+    {
+      "id": "9:varied:5:0:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 229,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:0:star/star:0",
+      "reason": "budget-time",
+      "ply": 10902,
+      "winner": null
+    },
+    {
+      "id": "9:varied:5:0:search/search-progress:0",
+      "reason": "budget-time",
+      "ply": 187,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:0:star/star:1",
+      "reason": "budget-time",
+      "ply": 7980,
+      "winner": null
+    },
+    {
+      "id": "9:varied:5:0:search-progress/search:1",
+      "reason": "budget-time",
+      "ply": 239,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:0:defensive/defensive:1",
+      "reason": "budget-time",
+      "ply": 101,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:0:search-progress/search-progress:0",
+      "reason": "win",
+      "ply": 115,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:5:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 281,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:0:defensive/search:0",
+      "reason": "win",
+      "ply": 100,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:5:0:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 91,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:0:search/search-progress:0",
+      "reason": "win",
+      "ply": 115,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:5:0:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 112,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:0:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 173,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:1:positional/positional:1",
+      "reason": "win",
+      "ply": 131,
+      "winner": 1
+    },
+    {
+      "id": "10:varied:5:1:star/star:0",
+      "reason": "budget-time",
+      "ply": 7936,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:0:search/search-progress:1",
+      "reason": "budget-time",
+      "ply": 154,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:0:search-progress/search:0",
+      "reason": "budget-time",
+      "ply": 223,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:1:search/search:1",
+      "reason": "win",
+      "ply": 150,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:5:1:defensive/defensive:0",
+      "reason": "budget-time",
+      "ply": 110,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:1:mixed/mixed:0",
+      "reason": "budget-time",
+      "ply": 106,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:1:mixed/mixed:1",
+      "reason": "budget-time",
+      "ply": 87,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:1:search-progress/search-progress:1",
+      "reason": "budget-time",
+      "ply": 191,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:1:search-progress/search:1",
+      "reason": "win",
+      "ply": 150,
+      "winner": 0
+    },
+    {
+      "id": "10:varied:5:1:search/positional:1",
+      "reason": "budget-time",
+      "ply": 193,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:1:search/defensive:1",
+      "reason": "budget-time",
+      "ply": 119,
+      "winner": null
+    },
+    {
+      "id": "10:varied:5:1:search/search-progress:1",
+      "reason": "budget-time",
+      "ply": 206,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:2:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 585,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:2:0:search/search:1",
+      "reason": "budget-time",
+      "ply": 185,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:2:1:search/search:0",
+      "reason": "budget-time",
+      "ply": 164,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:3:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 415,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:6:0:search/search:1",
+      "reason": "win",
+      "ply": 303,
+      "winner": 1
+    },
+    {
+      "id": "10:fixed:3:0:search/search:0",
+      "reason": "win",
+      "ply": 167,
+      "winner": 0
+    },
+    {
+      "id": "8:fixed:4:0:search/search:0",
+      "reason": "win",
+      "ply": 338,
+      "winner": 1
+    },
+    {
+      "id": "10:fixed:3:1:search/search:0",
+      "reason": "budget-time",
+      "ply": 241,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:6:0:search/search:1",
+      "reason": "budget-time",
+      "ply": 169,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:7:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 381,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:7:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 143,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:10:1:search/search:1",
+      "reason": "win",
+      "ply": 396,
+      "winner": 0
+    },
+    {
+      "id": "9:fixed:9:0:search/search:1",
+      "reason": "budget-time",
+      "ply": 335,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:11:1:search/search:0",
+      "reason": "win",
+      "ply": 132,
+      "winner": 1
+    },
+    {
+      "id": "10:fixed:10:1:search/search:0",
+      "reason": "win",
+      "ply": 148,
+      "winner": 1
+    },
+    {
+      "id": "10:fixed:9:1:search/search:1",
+      "reason": "budget-time",
+      "ply": 223,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:10:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 284,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:11:1:search/search:1",
+      "reason": "budget-time",
+      "ply": 199,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:12:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 232,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:12:0:search/search:1",
+      "reason": "budget-time",
+      "ply": 326,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:12:1:search/search:0",
+      "reason": "win",
+      "ply": 142,
+      "winner": 1
+    },
+    {
+      "id": "8:fixed:14:1:search/search:1",
+      "reason": "win",
+      "ply": 310,
+      "winner": 0
+    },
+    {
+      "id": "8:fixed:13:0:search/search:0",
+      "reason": "win",
+      "ply": 480,
+      "winner": 1
+    },
+    {
+      "id": "9:fixed:13:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 267,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:14:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 471,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:14:0:search/search:1",
+      "reason": "win",
+      "ply": 133,
+      "winner": 1
+    },
+    {
+      "id": "9:fixed:14:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 236,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:15:0:search/search:1",
+      "reason": "budget-time",
+      "ply": 461,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:15:0:search/search:0",
+      "reason": "win",
+      "ply": 161,
+      "winner": 0
+    },
+    {
+      "id": "10:fixed:16:0:search/search:0",
+      "reason": "win",
+      "ply": 120,
+      "winner": 1
+    },
+    {
+      "id": "9:fixed:16:0:search/search:1",
+      "reason": "budget-time",
+      "ply": 284,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:16:1:search/search:1",
+      "reason": "win",
+      "ply": 127,
+      "winner": 1
+    },
+    {
+      "id": "9:fixed:18:0:search/search:1",
+      "reason": "win",
+      "ply": 157,
+      "winner": 1
+    },
+    {
+      "id": "8:fixed:17:1:search/search:1",
+      "reason": "win",
+      "ply": 390,
+      "winner": 0
+    },
+    {
+      "id": "9:fixed:17:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 245,
+      "winner": null
+    },
+    {
+      "id": "8:fixed:18:1:search/search:0",
+      "reason": "budget-time",
+      "ply": 472,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:18:0:search/search:1",
+      "reason": "win",
+      "ply": 154,
+      "winner": 0
+    },
+    {
+      "id": "8:fixed:19:0:search/search:1",
+      "reason": "win",
+      "ply": 323,
+      "winner": 1
+    },
+    {
+      "id": "10:fixed:18:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 154,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:18:1:search/search:0",
+      "reason": "budget-time",
+      "ply": 145,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:19:0:search/search:1",
+      "reason": "budget-time",
+      "ply": 325,
+      "winner": null
+    },
+    {
+      "id": "10:fixed:19:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 176,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:20:0:search/search:0",
+      "reason": "win",
+      "ply": 307,
+      "winner": 0
+    },
+    {
+      "id": "10:fixed:20:0:search/search:0",
+      "reason": "budget-time",
+      "ply": 185,
+      "winner": null
+    },
+    {
+      "id": "9:fixed:21:0:search/search:1",
+      "reason": "budget-time",
+      "ply": 354,
+      "winner": null
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "sourceRun": 39432318078,
+  "sourceSha": "2fa8d738dea830243743678803bd2292373628c2",
+  "games": 25000,
+  "shards": 50,
+  "summary": [
+    {
+      "size": 8,
+      "policy": "random",
+      "games": 5000,
+      "clusters": 1250,
+      "decided": 1095,
+      "firstWins": 510,
+      "secondWins": 585,
+      "firstSeatDecidedRate": 0.4657534246575342,
+      "secondSeatDecidedRate": 0.5342465753424658,
+      "undecidedRate": 0.781,
+      "reach120Rate": 0.783,
+      "wilson95IndependentGames": [
+        0.4363791901821207,
+        0.4953671055205442
+      ],
+      "pairedLayoutBootstrap95": [
+        0.43790248390064396,
+        0.4936247723132969
+      ],
+      "meanAllPlies": 111.2532,
+      "medianAllPlies": 120,
+      "meanDecidedPlies": 80.06027397260274,
+      "medianDecidedPlies": 83,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 9.2711,
+          "medianDecided": 6.916666666666667
+        },
+        "10": {
+          "meanAll": 18.5422,
+          "medianDecided": 13.833333333333334
+        },
+        "15": {
+          "meanAll": 27.8133,
+          "medianDecided": 20.75
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    },
+    {
+      "size": 8,
+      "policy": "greedy",
+      "games": 5000,
+      "clusters": 1250,
+      "decided": 3013,
+      "firstWins": 1592,
+      "secondWins": 1421,
+      "firstSeatDecidedRate": 0.528377032857617,
+      "secondSeatDecidedRate": 0.47162296714238305,
+      "undecidedRate": 0.3974,
+      "reach120Rate": 0.3988,
+      "wilson95IndependentGames": [
+        0.510527689639455,
+        0.5461541089681672
+      ],
+      "pairedLayoutBootstrap95": [
+        0.5130183220829315,
+        0.5449983271997324
+      ],
+      "meanAllPlies": 70.6736,
+      "medianAllPlies": 68,
+      "meanDecidedPlies": 38.14404248257551,
+      "medianDecidedPlies": 28,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 5.8894666666666655,
+          "medianDecided": 2.3333333333333335
+        },
+        "10": {
+          "meanAll": 11.778933333333331,
+          "medianDecided": 4.666666666666667
+        },
+        "15": {
+          "meanAll": 17.6684,
+          "medianDecided": 7
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    },
+    {
+      "size": 9,
+      "policy": "random",
+      "games": 2500,
+      "clusters": 1250,
+      "decided": 208,
+      "firstWins": 103,
+      "secondWins": 105,
+      "firstSeatDecidedRate": 0.4951923076923077,
+      "secondSeatDecidedRate": 0.5048076923076923,
+      "undecidedRate": 0.9168,
+      "reach120Rate": 0.9188,
+      "wilson95IndependentGames": [
+        0.42795192448540803,
+        0.5626070529162118
+      ],
+      "pairedLayoutBootstrap95": [
+        0.42924528301886794,
+        0.5622317596566524
+      ],
+      "meanAllPlies": 117.4308,
+      "medianAllPlies": 120,
+      "meanDecidedPlies": 89.1201923076923,
+      "medianDecidedPlies": 92,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 9.7859,
+          "medianDecided": 7.666666666666667
+        },
+        "10": {
+          "meanAll": 19.5718,
+          "medianDecided": 15.333333333333334
+        },
+        "15": {
+          "meanAll": 29.3577,
+          "medianDecided": 23
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    },
+    {
+      "size": 9,
+      "policy": "greedy",
+      "games": 2500,
+      "clusters": 1250,
+      "decided": 977,
+      "firstWins": 555,
+      "secondWins": 422,
+      "firstSeatDecidedRate": 0.5680655066530195,
+      "secondSeatDecidedRate": 0.43193449334698053,
+      "undecidedRate": 0.6092,
+      "reach120Rate": 0.61,
+      "wilson95IndependentGames": [
+        0.5367981290578427,
+        0.5987997280718012
+      ],
+      "pairedLayoutBootstrap95": [
+        0.5364583333333334,
+        0.5992402659069326
+      ],
+      "meanAllPlies": 90.9028,
+      "medianAllPlies": 120,
+      "meanDecidedPlies": 45.54452405322416,
+      "medianDecidedPlies": 37,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 7.575233333333333,
+          "medianDecided": 3.0833333333333335
+        },
+        "10": {
+          "meanAll": 15.150466666666667,
+          "medianDecided": 6.166666666666667
+        },
+        "15": {
+          "meanAll": 22.7257,
+          "medianDecided": 9.25
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    },
+    {
+      "size": 10,
+      "policy": "random",
+      "games": 5000,
+      "clusters": 1250,
+      "decided": 141,
+      "firstWins": 76,
+      "secondWins": 65,
+      "firstSeatDecidedRate": 0.5390070921985816,
+      "secondSeatDecidedRate": 0.46099290780141844,
+      "undecidedRate": 0.9718,
+      "reach120Rate": 0.973,
+      "wilson95IndependentGames": [
+        0.45678652957296584,
+        0.6191585768182741
+      ],
+      "pairedLayoutBootstrap95": [
+        0.46099290780141844,
+        0.6194029850746269
+      ],
+      "meanAllPlies": 119.2468,
+      "medianAllPlies": 120,
+      "meanDecidedPlies": 93.29078014184397,
+      "medianDecidedPlies": 96,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 9.937233333333332,
+          "medianDecided": 8
+        },
+        "10": {
+          "meanAll": 19.874466666666663,
+          "medianDecided": 16
+        },
+        "15": {
+          "meanAll": 29.8117,
+          "medianDecided": 24
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    },
+    {
+      "size": 10,
+      "policy": "greedy",
+      "games": 5000,
+      "clusters": 1250,
+      "decided": 1970,
+      "firstWins": 1024,
+      "secondWins": 946,
+      "firstSeatDecidedRate": 0.5197969543147208,
+      "secondSeatDecidedRate": 0.48020304568527916,
+      "undecidedRate": 0.606,
+      "reach120Rate": 0.6074,
+      "wilson95IndependentGames": [
+        0.4977179004683494,
+        0.5417989511265109
+      ],
+      "pairedLayoutBootstrap95": [
+        0.5002583979328166,
+        0.5401831129196337
+      ],
+      "meanAllPlies": 93.3088,
+      "medianAllPlies": 120,
+      "meanDecidedPlies": 52.25583756345178,
+      "medianDecidedPlies": 46,
+      "estimatedMinutesAtSecondsPerPly": {
+        "5": {
+          "meanAll": 7.775733333333334,
+          "medianDecided": 3.8333333333333335
+        },
+        "10": {
+          "meanAll": 15.551466666666668,
+          "medianDecided": 7.666666666666667
+        },
+        "15": {
+          "meanAll": 23.3272,
+          "medianDecided": 11.5
+        }
+      },
+      "caveat": "Exploratory policy-specific inference. Bootstrap clusters base layouts; Wilson assumes independent games and is descriptive only. Capped times are censored; no human timing."
+    }
+  ]
+}

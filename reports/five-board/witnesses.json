@@ -1,0 +1,5752 @@
+[
+  {
+    "size": 8,
+    "witnesses": [
+      {
+        "game": "A-1013-screen-positional-positional-11-0",
+        "ply": 17,
+        "state": {
+          "size": 8,
+          "target": 4,
+          "walls": [
+            28,
+            24,
+            43,
+            45,
+            16,
+            14,
+            58,
+            60
+          ],
+          "stars": [
+            50,
+            34
+          ],
+          "players": [
+            37,
+            32
+          ],
+          "scores": [
+            2,
+            3
+          ],
+          "turn": 1,
+          "ply": 17,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 2,
+            "to": 35
+          },
+          "dir": 1
+        },
+        "winningActions": 1,
+        "otherActions": 48,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 2.6636749999999836,
+          "peakHeapBytes": 14620624,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "A-1019-screen-positional-positional-11-1",
+        "ply": 6,
+        "state": {
+          "size": 8,
+          "target": 3,
+          "walls": [
+            19,
+            44,
+            33,
+            27,
+            13,
+            28,
+            5,
+            49,
+            60,
+            21,
+            17,
+            43,
+            46
+          ],
+          "stars": [
+            42,
+            18
+          ],
+          "players": [
+            20,
+            34
+          ],
+          "scores": [
+            1,
+            2
+          ],
+          "turn": 1,
+          "ply": 6,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 7,
+            "to": 50
+          },
+          "dir": 2
+        },
+        "winningActions": 1,
+        "otherActions": 98,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 1.6429490000000158,
+          "peakHeapBytes": 16552672,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "A-1037-screen-positional-positional-11-0",
+        "ply": 28,
+        "state": {
+          "size": 8,
+          "target": 4,
+          "walls": [
+            18,
+            52,
+            31,
+            25,
+            26,
+            17,
+            32,
+            27
+          ],
+          "stars": [
+            43,
+            50
+          ],
+          "players": [
+            40,
+            56
+          ],
+          "scores": [
+            3,
+            2
+          ],
+          "turn": 0,
+          "ply": 28,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 44
+          },
+          "dir": 1
+        },
+        "winningActions": 1,
+        "otherActions": 41,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.2958539999999914,
+          "peakHeapBytes": 19659312,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "A-1037-screen-positional-positional-11-1",
+        "ply": 38,
+        "state": {
+          "size": 8,
+          "target": 4,
+          "walls": [
+            17,
+            19,
+            29,
+            58,
+            26,
+            0,
+            49,
+            44
+          ],
+          "stars": [
+            61
+          ],
+          "players": [
+            7,
+            45
+          ],
+          "scores": [
+            3,
+            3
+          ],
+          "turn": 1,
+          "ply": 38,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 50
+          },
+          "dir": 2
+        },
+        "winningActions": 29,
+        "otherActions": 60,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.4047780000000216,
+          "peakHeapBytes": 16095384,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "A-1040-screen-positional-positional-11-0",
+        "ply": 11,
+        "state": {
+          "size": 8,
+          "target": 3,
+          "walls": [
+            39,
+            61,
+            26,
+            45,
+            21,
+            44,
+            58,
+            6
+          ],
+          "stars": [
+            27
+          ],
+          "players": [
+            50,
+            31
+          ],
+          "scores": [
+            2,
+            2
+          ],
+          "turn": 1,
+          "ply": 11,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 5,
+            "to": 43
+          },
+          "dir": 3
+        },
+        "winningActions": 20,
+        "otherActions": 30,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.32826800000000844,
+          "peakHeapBytes": 17965992,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "A-1037-precision-star-defensive-101-0",
+        "ply": 25,
+        "state": {
+          "size": 8,
+          "target": 4,
+          "walls": [
+            18,
+            44,
+            6,
+            25,
+            26,
+            8,
+            33,
+            28
+          ],
+          "stars": [
+            45,
+            50,
+            61
+          ],
+          "players": [
+            16,
+            5
+          ],
+          "scores": [
+            1,
+            3
+          ],
+          "turn": 1,
+          "ply": 25,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 4,
+            "to": 27
+          },
+          "dir": 2
+        },
+        "winningActions": 21,
+        "otherActions": 25,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.4041129999999953,
+          "peakHeapBytes": 19862208,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      }
+    ],
+    "deeper": {
+      "game": "A-1013-screen-positional-positional-11-0",
+      "ply": 13,
+      "depth3": {
+        "legalMoves": 69,
+        "depth": 3,
+        "nodes": 2066,
+        "complete": false,
+        "moves": [
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 35
+              },
+              "dir": 3
+            },
+            "score": 1445
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 35
+              },
+              "dir": 1
+            },
+            "score": 1418
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 1
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 2
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 3
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 29
+              },
+              "dir": 1
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 29
+              },
+              "dir": 2
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 29
+              },
+              "dir": 3
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 35
+              },
+              "dir": 2
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 46
+              },
+              "dir": 0
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 46
+              },
+              "dir": 1
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 46
+              },
+              "dir": 2
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 46
+              },
+              "dir": 3
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 44
+              },
+              "dir": 0
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 44
+              },
+              "dir": 1
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 44
+              },
+              "dir": 2
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 44
+              },
+              "dir": 3
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 15
+              },
+              "dir": 1
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 15
+              },
+              "dir": 2
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 15
+              },
+              "dir": 3
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 22
+              },
+              "dir": 3
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 13
+              },
+              "dir": 1
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 13
+              },
+              "dir": 2
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 13
+              },
+              "dir": 3
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 32
+              },
+              "dir": 3
+            },
+            "score": 1391
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 32
+              },
+              "dir": 1
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 22
+              },
+              "dir": 1
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 22
+              },
+              "dir": 2
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 32
+              },
+              "dir": 2
+            },
+            "score": 1373
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 6
+              },
+              "dir": 1
+            },
+            "score": 1373
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 6
+              },
+              "dir": 3
+            },
+            "score": 1373
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 6
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 20
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 36
+              },
+              "dir": 1
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 36
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 36
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 27
+              },
+              "dir": 1
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 27
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 25
+              },
+              "dir": 1
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 25
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 44
+              },
+              "dir": 1
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 44
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 44
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 51
+              },
+              "dir": 1
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 51
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 51
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 42
+              },
+              "dir": 1
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 42
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 42
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 59
+              },
+              "dir": 1
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 59
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 59
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 57
+              },
+              "dir": 1
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 57
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 57
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 52
+              },
+              "dir": 1
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 52
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 61
+              },
+              "dir": 1
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 59
+              },
+              "dir": 1
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 59
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 17
+              },
+              "dir": 1
+            },
+            "score": 1337
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 17
+              },
+              "dir": 2
+            },
+            "score": 1337
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 20
+              },
+              "dir": 1
+            },
+            "score": 1336
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 20
+              },
+              "dir": 3
+            },
+            "score": 1328
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 27
+              },
+              "dir": 3
+            },
+            "score": 1328
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 25
+              },
+              "dir": 3
+            },
+            "score": 1328
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 17
+              },
+              "dir": 3
+            },
+            "score": 1328
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 61
+              },
+              "dir": 3
+            },
+            "score": 1328
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 59
+              },
+              "dir": 3
+            },
+            "score": 1328
+          }
+        ]
+      },
+      "proof": {
+        "result": 1,
+        "proven": true,
+        "status": "forced-win-within-horizon",
+        "nodes": 375,
+        "cacheHits": 71,
+        "cutoffs": 316,
+        "horizonCutoffs": 3679,
+        "horizon": 4,
+        "nodeBudget": 10000,
+        "timeBudgetMs": 500,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 357,
+        "elapsedMs": 113.42089099999998,
+        "peakHeapBytes": 19937112,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    }
+  },
+  {
+    "size": 9,
+    "witnesses": [
+      {
+        "game": "B-1057-screen-positional-positional-11-0",
+        "ply": 8,
+        "state": {
+          "size": 9,
+          "target": 3,
+          "walls": [
+            50,
+            48,
+            62,
+            54,
+            74,
+            69,
+            8,
+            1,
+            41,
+            39
+          ],
+          "stars": [
+            12,
+            14,
+            17
+          ],
+          "players": [
+            16,
+            57
+          ],
+          "scores": [
+            2,
+            0
+          ],
+          "turn": 0,
+          "ply": 8,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 45
+          },
+          "dir": 1
+        },
+        "winningActions": 29,
+        "otherActions": 86,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.4723240000000146,
+          "peakHeapBytes": 21765008,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "B-1057-screen-positional-positional-11-1",
+        "ply": 13,
+        "state": {
+          "size": 9,
+          "target": 3,
+          "walls": [
+            51,
+            48,
+            61,
+            54,
+            73,
+            78,
+            8,
+            20,
+            41,
+            39
+          ],
+          "stars": [
+            12,
+            14
+          ],
+          "players": [
+            17,
+            72
+          ],
+          "scores": [
+            2,
+            1
+          ],
+          "turn": 0,
+          "ply": 13,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 7,
+            "to": 11
+          },
+          "dir": 3
+        },
+        "winningActions": 1,
+        "otherActions": 62,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.3315680000000043,
+          "peakHeapBytes": 15920536,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "B-1066-screen-positional-positional-11-1",
+        "ply": 8,
+        "state": {
+          "size": 9,
+          "target": 3,
+          "walls": [
+            38,
+            48,
+            32,
+            56,
+            69,
+            12,
+            51,
+            57,
+            6,
+            39,
+            55,
+            28,
+            76,
+            42,
+            74,
+            44
+          ],
+          "stars": [
+            21,
+            40,
+            31
+          ],
+          "players": [
+            68,
+            13
+          ],
+          "scores": [
+            0,
+            2
+          ],
+          "turn": 1,
+          "ply": 8,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 49
+          },
+          "dir": 2
+        },
+        "winningActions": 1,
+        "otherActions": 133,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.6393010000000459,
+          "peakHeapBytes": 18675176,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "B-1081-screen-positional-positional-11-0",
+        "ply": 10,
+        "state": {
+          "size": 9,
+          "target": 3,
+          "walls": [
+            79,
+            43,
+            71,
+            59,
+            50,
+            80,
+            68,
+            40,
+            32,
+            30
+          ],
+          "stars": [
+            11,
+            35,
+            28
+          ],
+          "players": [
+            8,
+            78
+          ],
+          "scores": [
+            2,
+            0
+          ],
+          "turn": 0,
+          "ply": 10,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 44
+          },
+          "dir": 2
+        },
+        "winningActions": 1,
+        "otherActions": 55,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.27147100000001956,
+          "peakHeapBytes": 20452768,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "B-1081-screen-positional-positional-11-1",
+        "ply": 20,
+        "state": {
+          "size": 9,
+          "target": 3,
+          "walls": [
+            79,
+            59,
+            70,
+            50,
+            40,
+            71,
+            69,
+            39,
+            15,
+            12
+          ],
+          "stars": [
+            6,
+            28
+          ],
+          "players": [
+            78,
+            60
+          ],
+          "scores": [
+            1,
+            2
+          ],
+          "turn": 1,
+          "ply": 20,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 8,
+            "to": 16
+          },
+          "dir": 0
+        },
+        "winningActions": 2,
+        "otherActions": 47,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 1.2517409999999813,
+          "peakHeapBytes": 22962192,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "B-1089-screen-positional-positional-11-0",
+        "ply": 14,
+        "state": {
+          "size": 9,
+          "target": 3,
+          "walls": [
+            77,
+            23,
+            42,
+            19,
+            52,
+            25,
+            54,
+            65,
+            15,
+            11
+          ],
+          "stars": [
+            39,
+            29
+          ],
+          "players": [
+            32,
+            33
+          ],
+          "scores": [
+            2,
+            1
+          ],
+          "turn": 0,
+          "ply": 14,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 28
+          },
+          "dir": 3
+        },
+        "winningActions": 1,
+        "otherActions": 75,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.4280640000000062,
+          "peakHeapBytes": 17658712,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      }
+    ],
+    "deeper": {
+      "game": "B-1057-screen-positional-positional-11-0",
+      "ply": 4,
+      "depth3": {
+        "legalMoves": 60,
+        "depth": 3,
+        "nodes": 2058,
+        "complete": false,
+        "moves": [
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 69
+              },
+              "dir": 3
+            },
+            "score": 1427
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 8
+              },
+              "dir": 2
+            },
+            "score": 1418
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 8
+              },
+              "dir": 3
+            },
+            "score": 1409
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 6
+              },
+              "dir": 3
+            },
+            "score": 1409
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 61
+              },
+              "dir": 3
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 63
+              },
+              "dir": 3
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 16
+              },
+              "dir": 2
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 16
+              },
+              "dir": 3
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 6
+              },
+              "dir": 2
+            },
+            "score": 1400
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 53
+              },
+              "dir": 0
+            },
+            "score": 1391
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 51
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 59
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 49
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 49
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 57
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 47
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 53
+              },
+              "dir": 2
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 53
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 61
+              },
+              "dir": 2
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 45
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 63
+              },
+              "dir": 2
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 65
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 69
+              },
+              "dir": 2
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 77
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 32
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 42
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 40
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 30
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 40
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 38
+              },
+              "dir": 3
+            },
+            "score": 1382
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 59
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 49
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 49
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 57
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 47
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 45
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 65
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 77
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 32
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 42
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 40
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 30
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 40
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 38
+              },
+              "dir": 2
+            },
+            "score": 1364
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 61
+              },
+              "dir": 0
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 55
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 55
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 75
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 75
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 73
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 73
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 2
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 2
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 10
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 10
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 0
+              },
+              "dir": 2
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 0
+              },
+              "dir": 3
+            },
+            "score": 1346
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 2
+            },
+            "score": 1237
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 3
+            },
+            "score": 1237
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 51
+              },
+              "dir": 2
+            },
+            "score": 1237
+          }
+        ]
+      },
+      "proof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 174,
+        "cacheHits": 30,
+        "cutoffs": 114,
+        "horizonCutoffs": 3647,
+        "horizon": 4,
+        "nodeBudget": 10000,
+        "timeBudgetMs": 500,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 148,
+        "elapsedMs": 56.601808000000005,
+        "peakHeapBytes": 22364408,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    }
+  },
+  {
+    "size": 10,
+    "witnesses": [
+      {
+        "game": "C-1096-screen-positional-positional-11-0",
+        "ply": 12,
+        "state": {
+          "size": 10,
+          "target": 3,
+          "walls": [
+            16,
+            92,
+            23,
+            86,
+            53,
+            46,
+            10,
+            89,
+            77,
+            32,
+            45,
+            54
+          ],
+          "stars": [
+            21,
+            14
+          ],
+          "players": [
+            20,
+            79
+          ],
+          "scores": [
+            2,
+            1
+          ],
+          "turn": 0,
+          "ply": 12,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 2,
+            "to": 22
+          },
+          "dir": 1
+        },
+        "winningActions": 2,
+        "otherActions": 80,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.38295399999992696,
+          "peakHeapBytes": 21627528,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "C-1113-screen-positional-positional-11-0",
+        "ply": 8,
+        "state": {
+          "size": 10,
+          "target": 3,
+          "walls": [
+            55,
+            32,
+            84,
+            47,
+            13,
+            73,
+            62,
+            49,
+            33,
+            16,
+            36,
+            93
+          ],
+          "stars": [
+            44,
+            65,
+            53
+          ],
+          "players": [
+            54,
+            90
+          ],
+          "scores": [
+            2,
+            0
+          ],
+          "turn": 0,
+          "ply": 8,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 52
+          },
+          "dir": 3
+        },
+        "winningActions": 2,
+        "otherActions": 129,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.4618039999999155,
+          "peakHeapBytes": 15891856,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "C-1113-screen-positional-positional-11-1",
+        "ply": 7,
+        "state": {
+          "size": 10,
+          "target": 3,
+          "walls": [
+            64,
+            32,
+            83,
+            46,
+            13,
+            71,
+            62,
+            49,
+            34,
+            16,
+            36,
+            93
+          ],
+          "stars": [
+            44,
+            65,
+            53
+          ],
+          "players": [
+            52,
+            90
+          ],
+          "scores": [
+            2,
+            0
+          ],
+          "turn": 0,
+          "ply": 7,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 54
+          },
+          "dir": 1
+        },
+        "winningActions": 1,
+        "otherActions": 121,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.5885959999999386,
+          "peakHeapBytes": 18184936,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "C-1129-screen-positional-positional-11-0",
+        "ply": 10,
+        "state": {
+          "size": 10,
+          "target": 3,
+          "walls": [
+            77,
+            21,
+            54,
+            99,
+            30,
+            43,
+            65,
+            79,
+            3,
+            22,
+            46,
+            85
+          ],
+          "stars": [
+            92,
+            38
+          ],
+          "players": [
+            32,
+            40
+          ],
+          "scores": [
+            2,
+            1
+          ],
+          "turn": 0,
+          "ply": 10,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 55
+          },
+          "dir": 2
+        },
+        "winningActions": 39,
+        "otherActions": 79,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.4232450000000654,
+          "peakHeapBytes": 21069160,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "C-1129-screen-positional-positional-11-1",
+        "ply": 11,
+        "state": {
+          "size": 10,
+          "target": 3,
+          "walls": [
+            76,
+            31,
+            54,
+            99,
+            40,
+            53,
+            65,
+            79,
+            13,
+            12,
+            36,
+            96
+          ],
+          "stars": [
+            92,
+            38
+          ],
+          "players": [
+            52,
+            41
+          ],
+          "scores": [
+            2,
+            1
+          ],
+          "turn": 0,
+          "ply": 11,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 89
+          },
+          "dir": 2
+        },
+        "winningActions": 37,
+        "otherActions": 76,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.4010839999999689,
+          "peakHeapBytes": 15834432,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "C-1136-screen-positional-positional-11-1",
+        "ply": 12,
+        "state": {
+          "size": 10,
+          "target": 3,
+          "walls": [
+            2,
+            74,
+            42,
+            68,
+            15,
+            83,
+            70,
+            29,
+            41,
+            49,
+            56,
+            43
+          ],
+          "stars": [
+            1,
+            98
+          ],
+          "players": [
+            0,
+            48
+          ],
+          "scores": [
+            1,
+            2
+          ],
+          "turn": 1,
+          "ply": 12,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 67
+          },
+          "dir": 2
+        },
+        "winningActions": 2,
+        "otherActions": 116,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.3726080000000138,
+          "peakHeapBytes": 19201016,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      }
+    ],
+    "deeper": {
+      "game": "C-1096-screen-positional-positional-11-0",
+      "ply": 8,
+      "depth3": {
+        "legalMoves": 117,
+        "depth": 3,
+        "nodes": 2116,
+        "complete": false,
+        "moves": [
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 10
+              },
+              "dir": 3
+            },
+            "score": 754
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 6
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 17
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 26
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 15
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 13
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 24
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 33
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 76
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 87
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 43
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 63
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 52
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 36
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 47
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 56
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 79
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 99
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 88
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 67
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 78
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 87
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 76
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 12
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 32
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 35
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 55
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 44
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 44
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 55
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 64
+              },
+              "dir": 3
+            },
+            "score": 745
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 10
+              },
+              "dir": 2
+            },
+            "score": 727
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 96
+              },
+              "dir": 3
+            },
+            "score": 718
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 10
+              },
+              "dir": 0
+            },
+            "score": 718
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 0
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 82
+              },
+              "dir": 0
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 82
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 82
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 93
+              },
+              "dir": 0
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 93
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 93
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 91
+              },
+              "dir": 0
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 91
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 91
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 1
+              },
+              "dir": 0
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 1
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 1
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 12
+              },
+              "dir": 0
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 12
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 12
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 76
+              },
+              "dir": 1
+            },
+            "score": 691
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 87
+              },
+              "dir": 1
+            },
+            "score": 691
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 96
+              },
+              "dir": 1
+            },
+            "score": 691
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 35
+              },
+              "dir": 0
+            },
+            "score": 691
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 55
+              },
+              "dir": 0
+            },
+            "score": 691
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 55
+              },
+              "dir": 0
+            },
+            "score": 691
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 35
+              },
+              "dir": 2
+            },
+            "score": 682
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 55
+              },
+              "dir": 2
+            },
+            "score": 682
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 55
+              },
+              "dir": 2
+            },
+            "score": 682
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 6
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 17
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 26
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 15
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 13
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 24
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 33
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 76
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 87
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 96
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 43
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 63
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 52
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 36
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 47
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 56
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 79
+              },
+              "dir": 0
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 79
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 99
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 88
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 67
+              },
+              "dir": 0
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 67
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 78
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 87
+              },
+              "dir": 0
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 87
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 76
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 12
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 32
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 44
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 44
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 64
+              },
+              "dir": 2
+            },
+            "score": 673
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 6
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 17
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 26
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 15
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 13
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 24
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 33
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 76
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 87
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 96
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 43
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 63
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 52
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 36
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 47
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 56
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 99
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 88
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 78
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 76
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 12
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 32
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 44
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 44
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 64
+              },
+              "dir": 0
+            },
+            "score": 664
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 2
+            },
+            "score": 646
+          }
+        ]
+      },
+      "proof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 306,
+        "cacheHits": 33,
+        "cutoffs": 187,
+        "horizonCutoffs": 12284,
+        "horizon": 4,
+        "nodeBudget": 10000,
+        "timeBudgetMs": 500,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 273,
+        "elapsedMs": 158.41021999999998,
+        "peakHeapBytes": 21088176,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    }
+  },
+  {
+    "size": 6,
+    "witnesses": [
+      {
+        "game": "D-1151-screen-positional-positional-11-0",
+        "ply": 13,
+        "state": {
+          "size": 6,
+          "target": 4,
+          "walls": [
+            2,
+            30,
+            1,
+            26,
+            10,
+            32,
+            17
+          ],
+          "stars": [
+            15
+          ],
+          "players": [
+            8,
+            21
+          ],
+          "scores": [
+            3,
+            3
+          ],
+          "turn": 1,
+          "ply": 13,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 4,
+            "to": 9
+          },
+          "dir": 0
+        },
+        "winningActions": 1,
+        "otherActions": 69,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.3583059999999705,
+          "peakHeapBytes": 22480264,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "D-1151-screen-positional-positional-11-1",
+        "ply": 10,
+        "state": {
+          "size": 6,
+          "target": 4,
+          "walls": [
+            4,
+            30,
+            1,
+            32,
+            10,
+            25,
+            17
+          ],
+          "stars": [
+            20,
+            15
+          ],
+          "players": [
+            6,
+            33
+          ],
+          "scores": [
+            2,
+            3
+          ],
+          "turn": 1,
+          "ply": 10,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 4,
+            "to": 9
+          },
+          "dir": 0
+        },
+        "winningActions": 1,
+        "otherActions": 41,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.15897900000004483,
+          "peakHeapBytes": 23662432,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "D-1153-screen-positional-positional-11-1",
+        "ply": 13,
+        "state": {
+          "size": 6,
+          "target": 3,
+          "walls": [
+            15,
+            20,
+            2,
+            3
+          ],
+          "stars": [
+            22,
+            29
+          ],
+          "players": [
+            25,
+            4
+          ],
+          "scores": [
+            2,
+            1
+          ],
+          "turn": 0,
+          "ply": 13,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 21
+          },
+          "dir": 1
+        },
+        "winningActions": 11,
+        "otherActions": 35,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.1362259999999651,
+          "peakHeapBytes": 16306584,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "D-1160-screen-positional-positional-11-0",
+        "ply": 32,
+        "state": {
+          "size": 6,
+          "target": 3,
+          "walls": [
+            32,
+            0,
+            14,
+            3
+          ],
+          "stars": [
+            19
+          ],
+          "players": [
+            31,
+            4
+          ],
+          "scores": [
+            2,
+            2
+          ],
+          "turn": 0,
+          "ply": 32,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 2,
+            "to": 13
+          },
+          "dir": 0
+        },
+        "winningActions": 1,
+        "otherActions": 23,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.0998459999999568,
+          "peakHeapBytes": 18169120,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "D-1160-screen-positional-positional-11-1",
+        "ply": 21,
+        "state": {
+          "size": 6,
+          "target": 3,
+          "walls": [
+            32,
+            17,
+            24,
+            5
+          ],
+          "stars": [
+            19
+          ],
+          "players": [
+            23,
+            0
+          ],
+          "scores": [
+            2,
+            2
+          ],
+          "turn": 0,
+          "ply": 21,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 2,
+            "to": 18
+          },
+          "dir": 3
+        },
+        "winningActions": 1,
+        "otherActions": 23,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.09631200000001172,
+          "peakHeapBytes": 19505464,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "D-1168-screen-positional-positional-11-0",
+        "ply": 10,
+        "state": {
+          "size": 6,
+          "target": 3,
+          "walls": [
+            9,
+            23,
+            26,
+            28
+          ],
+          "stars": [
+            16,
+            13
+          ],
+          "players": [
+            4,
+            17
+          ],
+          "scores": [
+            2,
+            1
+          ],
+          "turn": 0,
+          "ply": 10,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 22
+          },
+          "dir": 2
+        },
+        "winningActions": 2,
+        "otherActions": 41,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.1958670000000211,
+          "peakHeapBytes": 20404544,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      }
+    ],
+    "deeper": {
+      "game": "D-1151-screen-positional-positional-11-0",
+      "ply": 9,
+      "depth3": {
+        "legalMoves": 34,
+        "depth": 3,
+        "nodes": 2026,
+        "complete": false,
+        "moves": [
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 32
+              },
+              "dir": 0
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 32
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 25
+              },
+              "dir": 0
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 25
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 31
+              },
+              "dir": 3
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 2
+              },
+              "dir": 0
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 2
+              },
+              "dir": 3
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 7
+              },
+              "dir": 0
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 7
+              },
+              "dir": 3
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 0
+              },
+              "dir": 0
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 0
+              },
+              "dir": 3
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 21
+              },
+              "dir": 0
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 21
+              },
+              "dir": 3
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 28
+              },
+              "dir": 0
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 28
+              },
+              "dir": 3
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 33
+              },
+              "dir": 3
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 10
+              },
+              "dir": 0
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 10
+              },
+              "dir": 3
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 11
+              },
+              "dir": 0
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 11
+              },
+              "dir": 3
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 23
+              },
+              "dir": 0
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 23
+              },
+              "dir": 3
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 16
+              },
+              "dir": 0
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 16
+              },
+              "dir": 3
+            },
+            "score": 537
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 33
+              },
+              "dir": 0
+            },
+            "score": 528
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 0
+            },
+            "score": 148
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 4
+              },
+              "dir": 0
+            },
+            "score": 148
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 2
+              },
+              "dir": 0
+            },
+            "score": 148
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 24
+              },
+              "dir": 0
+            },
+            "score": 148
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 31
+              },
+              "dir": 0
+            },
+            "score": 148
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 3
+            },
+            "score": 45
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 4
+              },
+              "dir": 3
+            },
+            "score": 45
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 2
+              },
+              "dir": 3
+            },
+            "score": 45
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 24
+              },
+              "dir": 3
+            },
+            "score": 45
+          }
+        ]
+      },
+      "proof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 778,
+        "cacheHits": 537,
+        "cutoffs": 728,
+        "horizonCutoffs": 53,
+        "horizon": 4,
+        "nodeBudget": 10000,
+        "timeBudgetMs": 500,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 743,
+        "elapsedMs": 110.20784000000015,
+        "peakHeapBytes": 24163792,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    }
+  },
+  {
+    "size": 11,
+    "witnesses": [
+      {
+        "game": "E-1213-screen-positional-positional-11-1",
+        "ply": 19,
+        "state": {
+          "size": 11,
+          "target": 4,
+          "walls": [
+            60,
+            48,
+            73,
+            37,
+            57,
+            70,
+            38,
+            50,
+            115,
+            28,
+            72,
+            27,
+            55,
+            40,
+            85
+          ],
+          "stars": [
+            61,
+            63
+          ],
+          "players": [
+            116,
+            113
+          ],
+          "scores": [
+            3,
+            2
+          ],
+          "turn": 0,
+          "ply": 19,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 10,
+            "to": 71
+          },
+          "dir": 0
+        },
+        "winningActions": 1,
+        "otherActions": 91,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.4589619999999286,
+          "peakHeapBytes": 22089344,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "E-1233-screen-positional-positional-11-0",
+        "ply": 13,
+        "state": {
+          "size": 11,
+          "target": 3,
+          "walls": [
+            42,
+            50,
+            5,
+            115,
+            18,
+            100,
+            24,
+            107,
+            7,
+            101,
+            87,
+            33,
+            105,
+            17,
+            23
+          ],
+          "stars": [
+            91,
+            86
+          ],
+          "players": [
+            16,
+            25
+          ],
+          "scores": [
+            1,
+            2
+          ],
+          "turn": 1,
+          "ply": 13,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 9,
+            "to": 102
+          },
+          "dir": 2
+        },
+        "winningActions": 1,
+        "otherActions": 133,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.773298000000068,
+          "peakHeapBytes": 17646968,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "E-1233-screen-positional-positional-11-1",
+        "ply": 10,
+        "state": {
+          "size": 11,
+          "target": 3,
+          "walls": [
+            31,
+            41,
+            5,
+            115,
+            21,
+            111,
+            13,
+            96,
+            18,
+            113,
+            87,
+            33,
+            82,
+            16,
+            23
+          ],
+          "stars": [
+            91,
+            32,
+            86
+          ],
+          "players": [
+            99,
+            29
+          ],
+          "scores": [
+            0,
+            2
+          ],
+          "turn": 1,
+          "ply": 10,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 20
+          },
+          "dir": 1
+        },
+        "winningActions": 2,
+        "otherActions": 142,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.9693730000001324,
+          "peakHeapBytes": 20822432,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "E-1233-precision-star-defensive-101-1",
+        "ply": 18,
+        "state": {
+          "size": 11,
+          "target": 3,
+          "walls": [
+            30,
+            95,
+            5,
+            115,
+            21,
+            111,
+            13,
+            96,
+            7,
+            113,
+            87,
+            33,
+            104,
+            16,
+            12
+          ],
+          "stars": [
+            91,
+            29,
+            86
+          ],
+          "players": [
+            76,
+            23
+          ],
+          "scores": [
+            0,
+            2
+          ],
+          "turn": 1,
+          "ply": 18,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 106
+          },
+          "dir": 1
+        },
+        "winningActions": 36,
+        "otherActions": 86,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.585644000000002,
+          "peakHeapBytes": 23695168,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "E-1233-precision-defensive-star-101-1",
+        "ply": 19,
+        "state": {
+          "size": 11,
+          "target": 3,
+          "walls": [
+            41,
+            51,
+            5,
+            115,
+            9,
+            89,
+            2,
+            96,
+            18,
+            113,
+            87,
+            22,
+            105,
+            16,
+            23
+          ],
+          "stars": [
+            91,
+            32,
+            86
+          ],
+          "players": [
+            29,
+            40
+          ],
+          "scores": [
+            2,
+            0
+          ],
+          "turn": 0,
+          "ply": 19,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 4,
+            "to": 10
+          },
+          "dir": 1
+        },
+        "winningActions": 45,
+        "otherActions": 49,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.3775399999999536,
+          "peakHeapBytes": 18226328,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      },
+      {
+        "game": "E-1233-precision-star-defensive-102-0",
+        "ply": 15,
+        "state": {
+          "size": 11,
+          "target": 3,
+          "walls": [
+            43,
+            51,
+            5,
+            115,
+            20,
+            111,
+            13,
+            107,
+            7,
+            102,
+            97,
+            33,
+            104,
+            16,
+            24
+          ],
+          "stars": [
+            91,
+            29,
+            86
+          ],
+          "players": [
+            120,
+            25
+          ],
+          "scores": [
+            0,
+            2
+          ],
+          "turn": 1,
+          "ply": 15,
+          "winner": null
+        },
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 42
+          },
+          "dir": 2
+        },
+        "winningActions": 43,
+        "otherActions": 96,
+        "proof": {
+          "result": 1,
+          "proven": true,
+          "status": "forced-win-within-horizon",
+          "nodes": 1,
+          "cacheHits": 0,
+          "cutoffs": 1,
+          "horizonCutoffs": 0,
+          "horizon": 2,
+          "nodeBudget": 10000,
+          "timeBudgetMs": 300,
+          "maxTableEntries": 250000,
+          "memoryBudgetMb": 512,
+          "stopReason": null,
+          "statesCached": 1,
+          "elapsedMs": 0.6223689999999351,
+          "peakHeapBytes": 20945160,
+          "alphaBeta": true,
+          "horizonPruning": true,
+          "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+        },
+        "classification": "terminal tactical choice; not evidence for initial fairness"
+      }
+    ],
+    "deeper": {
+      "game": "E-1213-screen-positional-positional-11-1",
+      "ply": 15,
+      "depth3": {
+        "legalMoves": 80,
+        "depth": 3,
+        "nodes": 2080,
+        "complete": false,
+        "moves": [
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 50
+              },
+              "dir": 2
+            },
+            "score": 754
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 7,
+                "to": 50
+              },
+              "dir": 3
+            },
+            "score": 709
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": null,
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 49
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 49
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 59
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 0,
+                "to": 59
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 49
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 49
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 59
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 59
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 47
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 1,
+                "to": 47
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 62
+              },
+              "dir": 0
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 62
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 62
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 74
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 74
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 72
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 72
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 26
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 26
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 36
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 3,
+                "to": 36
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 46
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 46
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 58
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 58
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 68
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 68
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 56
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 4,
+                "to": 56
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 59
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 59
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 81
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 81
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 69
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 5,
+                "to": 69
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 49
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 6,
+                "to": 49
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 104
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 104
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 116
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 116
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 114
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 8,
+                "to": 114
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 17
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 17
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 29
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 9,
+                "to": 29
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 72
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 72
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 82
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 10,
+                "to": 82
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 16
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 16
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 26
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 11,
+                "to": 26
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 12,
+                "to": 56
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 12,
+                "to": 56
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 12,
+                "to": 66
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 12,
+                "to": 66
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 13,
+                "to": 29
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 13,
+                "to": 29
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 13,
+                "to": 41
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 13,
+                "to": 41
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 13,
+                "to": 51
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 13,
+                "to": 51
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 14,
+                "to": 74
+              },
+              "dir": 1
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 14,
+                "to": 74
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 14,
+                "to": 74
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 14,
+                "to": 86
+              },
+              "dir": 1
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 14,
+                "to": 86
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 14,
+                "to": 86
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 14,
+                "to": 96
+              },
+              "dir": 1
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 14,
+                "to": 96
+              },
+              "dir": 2
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 14,
+                "to": 96
+              },
+              "dir": 3
+            },
+            "score": 700
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 74
+              },
+              "dir": 0
+            },
+            "score": 691
+          },
+          {
+            "action": {
+              "wall": {
+                "wall": 2,
+                "to": 72
+              },
+              "dir": 0
+            },
+            "score": 691
+          }
+        ]
+      },
+      "proof": {
+        "result": 0,
+        "proven": true,
+        "status": "finite-horizon-only",
+        "nodes": 260,
+        "cacheHits": 36,
+        "cutoffs": 178,
+        "horizonCutoffs": 9515,
+        "horizon": 4,
+        "nodeBudget": 10000,
+        "timeBudgetMs": 500,
+        "maxTableEntries": 250000,
+        "memoryBudgetMb": 512,
+        "stopReason": null,
+        "statesCached": 224,
+        "elapsedMs": 163.79444200000012,
+        "peakHeapBytes": 27584688,
+        "alphaBeta": true,
+        "horizonPruning": true,
+        "capConvention": "nonterminal at horizon is analytical draw, not official game result"
+      }
+    }
+  }
+]

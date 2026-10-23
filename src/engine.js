@@ -1,3 +1,5 @@
+import {widthOf,heightOf,isPlayable,geometryKey,toBoardState} from "./geometry.js";
+import {RESEARCH_LAYOUTS} from "./research-layouts.js";
 export const SIZE = 7;
 export const DIRS = [
   { name: "上", dx: 0, dy: -1, icon: "↑" },
@@ -32,10 +34,14 @@ export const LAYOUTS = [
     players: [42, 6],
   },
 ];
+export const ALL_LAYOUTS = [...LAYOUTS, ...RESEARCH_LAYOUTS];
 export const clone = (s) => structuredClone(s);
 export function initial(layout = 0, starter = 0) {
-  const l = LAYOUTS[layout];
+  const l = typeof layout === "object" ? layout : ALL_LAYOUTS[layout];
+  if (l.width !== undefined || l.playableCells !== undefined) return {...toBoardState(l),turn:starter};
   return {
+    size: l.size ?? SIZE,
+    target: l.target ?? 3,
     walls: [...l.walls],
     stars: [...l.stars],
     players: [...l.players],
@@ -45,16 +51,19 @@ export function initial(layout = 0, starter = 0) {
     winner: null,
   };
 }
-export function step(pos, dir) {
-  const x = (pos % 7) + DIRS[dir].dx,
-    y = Math.floor(pos / 7) + DIRS[dir].dy;
-  return x < 0 || x > 6 || y < 0 || y > 6 ? null : y * 7 + x;
+export function step(pos, dir, board = SIZE) {
+  const s = typeof board === "number" ? {size:board} : board;
+  if (!isPlayable(s,pos) || !DIRS[dir]) return null;
+  const width=widthOf(s), height=heightOf(s);
+  const x = pos % width + DIRS[dir].dx, y = Math.floor(pos / width) + DIRS[dir].dy;
+  const to=y*width+x;
+  return x<0 || x>=width || y<0 || y>=height || !isPlayable(s,to) ? null : to;
 }
 export function slide(s, p, dir) {
   let at = s.players[p],
     next;
   while (
-    (next = step(at, dir)) !== null &&
+    (next = step(at, dir, s)) !== null &&
     !s.walls.includes(next) &&
     next !== s.players[1 - p]
   )
@@ -69,7 +78,7 @@ export function movableWalls(s) {
   const out = [];
   for (let w = 0; w < s.walls.length; w++)
     for (let d = 0; d < 4; d++) {
-      const to = step(s.walls[w], d);
+      const to = step(s.walls[w], d, s);
       if (
         to === null ||
         s.walls.includes(to) ||
@@ -115,7 +124,7 @@ export function finishSlide(s, dir) {
     n.scores[p]++;
   }
   n.ply++;
-  if (n.scores[p] >= 3) n.winner = p;
+  if (n.scores[p] >= (s.target ?? 3)) n.winner = p;
   else n.turn = 1 - p;
   return n;
 }
@@ -144,7 +153,7 @@ export function successors(s) {
     for (const { dir, to } of slideOptions(n)) {
       const p = s.turn, scored = s.stars.includes(to);
       const scores = s.scores.map((v, i) => v + (i === p && scored ? 1 : 0));
-      const winner = scores[p] >= 3 ? p : null;
+      const winner = scores[p] >= (s.target ?? 3) ? p : null;
       out.push({ a: { wall, dir }, n: {
         ...s, walls: [...n.walls], stars: s.stars.filter((v) => !scored || v !== to),
         players: s.players.map((v, i) => i === p ? to : v), scores,
@@ -156,6 +165,7 @@ export function successors(s) {
 }
 export function key(s) {
   return JSON.stringify([
+    geometryKey(s), s.target ?? 3,
     [...s.walls].sort((a, b) => a - b),
     [...s.stars].sort((a, b) => a - b),
     s.players,
@@ -164,7 +174,7 @@ export function key(s) {
   ]);
 }
 export function distances(s, p) {
-  const dist = Array(49).fill(Infinity),
+  const dist = Array(widthOf(s) * heightOf(s)).fill(Infinity),
     q = [s.players[p]];
   dist[q[0]] = 0;
   for (let i = 0; i < q.length; i++) {

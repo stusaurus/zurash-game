@@ -1,0 +1,34 @@
+{
+  "source": "c3dd6e176a22e8335e0789732df8c2a9625c7bf1",
+  "modes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "seeds": [
+    6102301,
+    6102323,
+    6102349,
+    6102371
+  ],
+  "pairs": [
+    [
+      "search",
+      "search"
+    ],
+    [
+      "star",
+      "route"
+    ],
+    [
+      "mixed",
+      "defensive"
+    ]
+  ],
+  "initialBudgetMs": 400,
+  "continuationBudgetMs": 1200,
+  "maxPlies": 4096,
+  "note": "Exploratory fixed plan. Same-policy aiSwap duplicates omitted before running. Each pair has both physical starts and both starters; heterogeneous pairs also exchange actors. No official adoption."
+}

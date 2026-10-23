@@ -1,0 +1,30 @@
+{
+  "basicBoards": 1135,
+  "legalSavedDefinitions": 2476,
+  "uniqueGames": 5008,
+  "standardGames": 4864,
+  "interventionGames": 144,
+  "holdoutGames": 2208,
+  "replayedPlies": 294931,
+  "independentlyCheckedLeadMetrics": 5008,
+  "verifiedContinuations": 227,
+  "newGamesFromContinuation": 0,
+  "hashes": {
+    "basics.json.gz": "10bbe053eb6a693d8002f78896599f11a568621d0fa5721214e0e7cffc5682df",
+    "positions.json.gz": "590f85a15e81f9a72a60949517164a5d7ac390b0f1e4025ce47f2dc0864f7b54",
+    "records.json.gz": "cd8256767fc853ed78918e61544e04219b8962a4281a8effbae26b5cd4ecd99c",
+    "mutations.json.gz": "a68f9b7eef53466e07a4a364bbb211f9b7cdf69398571a8c0343652b42192f79",
+    "frozen.json.gz": "b84916c32106d3895a41ba67ddf9a8ea3355444189aedb212c8cdb240c636638",
+    "games.json.gz": "ea68253aa2442e9e918411f3f2a48032249e134329c66c1bfa77419cad8689b0",
+    "comparisons.json.gz": "3aed1f27abc1b16fe6ba8ff5ea7debfe80aa81dcde8473af8431d1f6eebc61db",
+    "library.json.gz": "04eeafed0898f916f44c0d561211d7ced85167565edf1576a125660a37e87af9",
+    "position-games.json.gz": "186448227f0f4a8ed79622617bd73419063bdcfb99d7c392163937101143b2fd",
+    "position-frozen.json.gz": "234934ac10c0d5224d19018d7165c0eb6228bbd90d974413ae6bbe7bdeac1f89",
+    "position-roster.json.gz": "88b36a442ff8a34892ed965942b3177631eebc5c8e40bab54f0b2d9d0a2608df",
+    "position-audit.json.gz": "21d926904ee383336d039d3fa399914630ae0f5727d78ec64287fd4821e00ba6",
+    "position-comparisons.json.gz": "907e3eb8eaf7a0c758d37e51c10fad90c11b6fe66759533f8ba7562e26c04918",
+    "catalogue.json.gz": "37b08e52a8c52ce999fd569965b8f3d4fe637dd162d1e3384beb626c619f8aa1",
+    "placement-audit.json.gz": "6c40ec4d249fbf8764aee3428da7e13c8077ef40c1eba8ce6e6dea3914ce46c8",
+    "continuation-audit.json.gz": "4145e3aa9aff6a1254ef2728b688fb52f9ac90a2f2c893daab05addea859a959"
+  }
+}

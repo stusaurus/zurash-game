@@ -1,0 +1,23 @@
+{
+  "config": {
+    "seeds": [
+      8202301,
+      8202323,
+      8202349,
+      8202371
+    ],
+    "pairs": [
+      [
+        "archived",
+        "archived"
+      ],
+      [
+        "mixed",
+        "defensive"
+      ]
+    ],
+    "perGameMs": 2000,
+    "maxPlies": 4096
+  },
+  "reason": "Supplementary same-seed/same-budget archived and mixed/defensive controls to distinguish AI strategy from seed changes. Adds 48 initial records to the primary 800; not a preregistered confirmatory claim."
+}

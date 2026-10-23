@@ -1,0 +1,32 @@
+name: Board discovery and independent validation
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: board-discovery-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test tests/board-discovery.test.js
+      - run: timeout 12m node --max-old-space-size=640 scripts/discovery-study.js
+        env:
+          DISCOVERY_MS: '600000'
+      - run: timeout 6m node --max-old-space-size=640 scripts/position-followup.js
+        env:
+          POSITION_MS: '300000'
+      - run: node --max-old-space-size=640 scripts/discovery-analysis.js
+      - run: node --max-old-space-size=640 scripts/verify-discovery.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: board-discovery
+          path: reports/discovery-2026-10-22/
+          retention-days: 30

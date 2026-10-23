@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "ids": [
+    "mode-B",
+    "d-14a01b36b83a263585242f78"
+  ],
+  "seeds": [
+    2340001,
+    2340019,
+    2340033,
+    2340051
+  ],
+  "pairs": [
+    [
+      "star",
+      "positional"
+    ],
+    [
+      "mixed",
+      "defensive"
+    ]
+  ],
+  "stage": "B-stars-policy-independent",
+  "timeBudgetMs": 900,
+  "maxPlies": 4096,
+  "selection": "Fixed star candidate, no reselection from policy outcomes"
+}

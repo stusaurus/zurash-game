@@ -1,0 +1,15 @@
+{
+  "sourceHash": "d16c89af571d5506b47850fea58b1fc2a7ae35d9d58e2599eb4e304f76a98878",
+  "continued": 122,
+  "newInitialGames": 48,
+  "addedContinuationPlies": 3356,
+  "verifiedNewPlies": 2091,
+  "addedForkPlies": 188,
+  "extendedBforks": 16,
+  "addedExtendedForkPlies": 156,
+  "earlyBforkCount": 18,
+  "earlyForkPlies": 488,
+  "sourceIDsPreserved": true,
+  "BcheckpointRNGReplayed": true,
+  "continuationSourcePrefixVerified": true
+}

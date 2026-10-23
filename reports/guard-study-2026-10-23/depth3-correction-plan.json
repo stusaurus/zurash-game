@@ -1,0 +1,31 @@
+{
+  "reason": "Prior depth3 also pruned opponent replies; corrected comparator keeps root beam eight and enumerates all opponent/third-ply actions, retaining the original root ordering and early cutoffs.",
+  "oldArchiveSHA": "d738210e77db2bd1dfb03bd147880d5abc4dae86b49c8db2c1632b6746119a4b",
+  "cases": [
+    "0aefe3b98cca480ae4431bd823f0ce2a8c3046b7e848106eba82181a9e28d46c",
+    "2199c4e42c88e2f97829453e74692c5ae2cc65fdae4a1ae9e7849a991132df7c",
+    "3120d215997b0b5b52bf0c3a3233c4d3f468e1ac015aa4862813e0c32151e2f1",
+    "53e7ec16a1634b561a630e777b6fa18eac0b1576fd9eba87bfc9324786d2d854",
+    "2c93787cf5bfb872edcdc64851e153679d30b0bfe7b884b17275ca9b7525b819",
+    "04c4340e0bbc9f0420cf8c55166ec1666beb7c007b13673f0e3d80b036eb7bc6",
+    "a38e334857394d0c82b7f8eaa085a2355e59a04e0edb32da5c5f2e8f65b3ac7b",
+    "635fd4a844abf323a4c32d0dbf281c3c10404e4ec53218e0f5c9b44aeb3f8aa5",
+    "8bc41000d85d35d987c2f465bc84fb2df0c157786d096788ffb8adc66f49fe35",
+    "4fc2f1d2d3253bf852716b7e96472e7fba10e97347213b1bee1dfcd4a0318442",
+    "6d1b5e9415b7d619d7d47da5b234d45bb402d9fe9a78cba63c1f4bf55a44ab8a",
+    "9c0e0d227c88251b8bd691b02fe1fbfccb2d5be40a7a91b296b2a6238fd30ab0",
+    "8a271979afc940d47630611088f7dda28b87f3d4079775a7cf560cf8f1cfa07b",
+    "1413fccd17ed4bbdc5a319190ef4823ee1dab015351beb2ae9de19d20f38d8f5",
+    "77191170c93fb5248b7955b1ba2405c06183917c58c9058edf8a8cdaa37b5b03",
+    "6a6b808c9531aecd2e6da57aaebef730c74f9675628a898fdcaf877bd1fb8847",
+    "b7d558bf6b4f1ee8d08ff57decce768e29edfa2214f0d9772211f387eca45b79"
+  ],
+  "budgets": {
+    "initialMs": 1500,
+    "extensionMs": 3000,
+    "extraPlies": 96,
+    "nodeBudget": 2048
+  },
+  "correctedForkIdentity": "sha256([caseID,depth3,depth-only-root8-all-replies-v2])",
+  "legacyForkIdentity": "sha256([caseID,depth3]); legacy depth forks excluded from final statistics"
+}

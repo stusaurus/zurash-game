@@ -1,0 +1,46 @@
+name: Continue frozen mode games without creating new IDs
+on:
+  workflow_dispatch:
+    inputs:
+      resume_run_id:
+        description: Optional one earlier mode-continuation artifact to resume
+        type: string
+        default: ''
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: mode-continuation-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/mode-continuation.test.js
+      - name: Restore and verify one explicit checkpoint
+        if: inputs.resume_run_id != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RESUME_RUN: ${{ inputs.resume_run_id }}
+        run: |
+          [[ "$RESUME_RUN" =~ ^[0-9]+$ ]] || exit 1
+          gh run download "$RESUME_RUN" -R "$GITHUB_REPOSITORY" -n mode-continuation -D /tmp/mode-resume
+          MODE_CONTINUE_REPORT=/tmp/mode-resume node scripts/mode-continuation.js --verify
+          cp -a /tmp/mode-resume/. reports/mode-continuation-2026-10-23/
+      - run: timeout 10m node --max-old-space-size=768 scripts/mode-continuation.js
+        env:
+          MODE_CONTINUE_MS: '480000'
+      - run: node --max-old-space-size=768 scripts/mode-continuation.js --verify
+      - run: node scripts/mode-continuation-report.js
+      - run: cp reports/mode-continuation-2026-10-23.md reports/mode-continuation-2026-10-23/report.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mode-continuation
+          path: reports/mode-continuation-2026-10-23/
+          retention-days: 90

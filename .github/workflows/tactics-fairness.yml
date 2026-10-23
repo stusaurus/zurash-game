@@ -1,0 +1,32 @@
+name: Tactics fairness 120-ply study
+on:
+  workflow_dispatch:
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify engine and candidate generation
+        run: node --test tests/variable-board.test.js tests/tactics-candidates.test.js
+      - name: Paired-seat screening
+        env:
+          PAIRS: '25'
+          SHARD: ${{ matrix.shard }}
+          CAP: '120'
+        run: node scripts/tactics-fairness-study.js
+      - name: Upload raw game outcomes and summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tactics-120-ply-${{ matrix.shard }}
+          path: |
+            reports/tactics-fairness-screen.json
+          if-no-files-found: warn

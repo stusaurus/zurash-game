@@ -1,0 +1,33 @@
+{
+  "primaryVerifiedGames": 400,
+  "refinementVerifiedGames": 136,
+  "totalDistinctGames": 536,
+  "continuationPrefixesVerified": 280,
+  "primaryPlies": 26703,
+  "archives": {
+    "extended.jsonl.gz": {
+      "games": 280,
+      "sha256": "af15836a5fb050bdb80aa1a4fbf92bb1b9c6e8c23643762b55f9a6aa06f6ce38",
+      "rawSha256": "a7886c04e61437b5074b6372d9798b4c1a5ad61be7cccf4ce5ed4f6ea7b8818c",
+      "bytes": 443081
+    },
+    "route-holdout.jsonl.gz": {
+      "games": 60,
+      "sha256": "f032f92f22f0b45ba6817cedaf9a4e55033cad1a94c0100636f950c1bd9d40ba",
+      "rawSha256": "a850d4a4c44d50d9103376dc1b8ba126e3ae583f7e7dd86aaa471cadb33d2dae",
+      "bytes": 56526
+    },
+    "refinement.jsonl.gz": {
+      "games": 136,
+      "sha256": "48705763007702d8f678b652194f51f1b687df187af104ee2aa8bef14fe22ddf",
+      "rawSha256": "aca8e833e079e94ab497c584ef09218ce222eca79a8630130abe4a4a5334d931",
+      "bytes": 127053
+    },
+    "games.jsonl.gz": {
+      "games": 340,
+      "sha256": "61234630350d452716b059e834d5415f6f5512656ecf5e4581ea938c867d8176",
+      "rawSha256": "b2ffea32ec865577d7c9b19dcc4284bbac6681718d98af94fd1085b088376caf",
+      "bytes": 161511
+    }
+  }
+}

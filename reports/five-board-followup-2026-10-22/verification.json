@@ -1,0 +1,19 @@
+{
+  "prefixesVerified": 136,
+  "independentGamesVerified": 180,
+  "archives": {
+    "training": {
+      "games": 136,
+      "sha256": "bfbd15b888164ebc920632ae6152a5431c36dad23567ed207ee15fd66e84c078",
+      "rawSha256": "ecc682656a36979439f52fe84143b0a766ba382cb843a097201c03f42421a6f4",
+      "bytes": 335203
+    },
+    "independent": {
+      "games": 180,
+      "sha256": "4ad695c5906df26dddd981f6b404f4b2bad4eca6780a0a305f1b1a79d645783c",
+      "rawSha256": "831fe4f0a81c6cb96947901e810b513e93c9ffb3e092b8eb9b42a3f3675c4dbb",
+      "bytes": 427712
+    }
+  },
+  "summarySha256": "1ef33341059dd62ef8e4cb705d1ec302180e6917a8720dfbc897322f408ba780"
+}
