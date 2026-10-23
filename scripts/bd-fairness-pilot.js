@@ -30,3 +30,6 @@ for(const mode of input.modes){
  results.modes.push(modeOut);
 }
 mkdirSync(dir,{recursive:true});writeFileSync(dir+'/BD-paired-pilot.json',JSON.stringify(results,null,2)+'\n');console.log(JSON.stringify(results.modes.map(x=>({id:x.id,records:x.records.map(y=>({label:y.label,total:y.total,settled:y.settled,firstWins:y.firstWins,secondWins:y.secondWins,unresolved:y.unresolved}))})),null,2));
+
+// Compact, directly inspectable CI evidence for B's unresolved games.
+console.log('STALL_DIAGNOSTICS '+JSON.stringify(results.modes.filter(m=>m.id==='B').flatMap(m=>m.records.map(r=>({label:r.label,unresolved:r.unresolved,reasons:r.diagnostics.reasons,medianPlies:r.diagnostics.medianPlies,maxPlies:r.diagnostics.maxPlies,unresolvedBySeed:r.diagnostics.unresolvedBySeed,unresolvedRepetition:r.diagnostics.stateRepetition.filter(x=>x.unresolved).map(x=>({seed:x.seed,historyEntries:x.historyEntries,duplicateStates:x.duplicateStates,maxStateVisits:x.maxStateVisits,engineRepetitionCount:x.engineRepetitionCount}))})))));
