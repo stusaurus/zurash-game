@@ -3,14 +3,14 @@ import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync,mkdirSync,existsSync,renameSync} from 'node:fs';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {pathToFileURL} from 'node:url';
-import {key,apply} from '../src/engine.js';
+import {key,apply,successors} from '../src/engine.js';
 import {RESEARCH_LAYOUTS} from '../src/research-layouts.js';
 import {toBoardState} from '../src/geometry.js';
 import {recordBoard} from '../src/board-lab.js';
 import {MODELS,FACTOR_MODELS,modelMove,factorMove} from './guard-ai.js';
 import {baseline as priorBaseline} from './guard-study.js';
 import {newGame,advanceGame,randomStream} from './tactics-completion.js';
-import {researchMove,researchPlans,newResearchGame,mergeContinuation,sha,aggregateResearch} from './stall-research.js';
+import {researchMove,researchPlans,newResearchGame,mergeContinuation,sha,aggregateResearch,referenceChildren} from './stall-research.js';
 import {checkpointFingerprint,immediateLossCensus} from './trajectory-followup.js';
 import {verifyExtension} from './mode-continuation.js';
 import {audit,traceKey} from './trajectory-audit.js';
@@ -108,6 +108,27 @@ export function runLimits(){
   const proof=prove(g.state,{horizon:5,nodeBudget:20000,timeBudgetMs:3000,memoryBudgetMb:768});rows.push({mode,sourceID:g.id,state:g.state,quiet:g.metrics.quiet,proof});
  }save('limits',rows);
 }
+// Exact opening property, independent of any policy, heuristic or time cap.
+// A guaranteed first point is NOT a proof of a forced final victory.
+export function openingCertificate(){
+ const base=toBoardState(RESEARCH_LAYOUTS.find(r=>r.id==='D')),slots=[...base.players];
+ function children(s){
+  const independent=referenceChildren(s),production=successors(s);
+  const normalize=cs=>cs.map(c=>[JSON.stringify(c.a),sha(c.n)]).sort((a,b)=>a[0].localeCompare(b[0]));
+  assert.deepEqual(normalize(independent),normalize(production));return independent;
+ }
+ const configurations=[];
+ for(const swap of [false,true])for(const starter of [0,1]){
+  const state={...base,players:swap?[...base.players].reverse():[...base.players],turn:starter},slot1Actor=state.players.indexOf(slots[1]);
+  const root=children(state),firstCaptures=root.filter(c=>c.n.scores[starter]>state.scores[starter]);
+  const responses=starter===slot1Actor?[]:root.map(c=>{const reply=children(c.n);return {firstAction:c.a,replyLegal:reply.length,slot1CaptureActions:reply.filter(r=>r.n.scores[slot1Actor]>c.n.scores[slot1Actor]).map(r=>r.a)};});
+  configurations.push({swap,starter,firstMoverSlot:slots.indexOf(state.players[starter]),state,legalFirst:root.length,firstCaptureActions:firstCaptures.map(c=>c.a),firstCaptureStars:[...new Set(firstCaptures.map(c=>c.n.players[starter]))],responses,
+   slot1CanScoreOnFirstOwnTurn:starter===slot1Actor?firstCaptures.length>0:responses.length>0&&responses.every(r=>r.slot1CaptureActions.length>0)});
+ }
+ return {boardID:'D',boardHash:sha(base),physicalSlots:slots,configurations,physicalConditions:2,labelConditions:4,allLegalActionsComparedWithIndependentRules:true,
+  interpretation:'Slot 0 has no first-action capture; slot 1 can score on its first own turn regardless of who starts and the other first action. This is an opening opportunity asymmetry, not a forced final win or overall unfairness proof.'};
+}
+export function runOpening(){setup();const value=openingCertificate();if(has('D-opening'))assert.deepEqual(load('D-opening'),value);else save('D-opening',value);return value;}
 // Retrospective explanations of observed successes, excluded from all game counts.
 export function runCritical({verifyOnly=false}={}){
  setup();if(has('critical')&&!verifyOnly)return load('critical');const cases=load('checkpoints'),forks=load('factors'),rows=[],recomputed=new Map();
@@ -195,8 +216,9 @@ export function verify(){
   replayDiagnosis(r.game,{independent:true});const actual=singleGame(cp,row,{ms:3600000,plies:r.game.state.ply-cp.state.ply});for(const k of ['history','state','rngStates','metrics'])assert.deepEqual(actual[k],r.game[k]);singlePlies+=r.game.history.length-r.checkpoint.history.length;
  }
  const outcomes=fs.map(f=>({caseID:f.caseID,kind:f.kind,model:f.model,winner:f.game.state.winner,actor:f.actor,retained:f.probe.retainedCount,choice:f.probe.action,reason:f.game.reason}));
- const summary={sourceInitialIDs:848,newInitialGames:d.length,totalInitialIDs:848+d.length,newPlies,continued:cont.length,newlySettled:merged.newlySettled,addedContinuationPlies:added,checkpointCases:cs.length,forks:fs.length,forkAddedPlies:forkPlies,singleActionBranches:single.length,singleAddedPlies:singlePlies,singleOutcomes:single.map(r=>({id:r.id,caseID:r.caseID,ply:r.checkpoint.state.ply,control:r.control,actor:r.checkpoint.state.turn,winner:r.game.state.winner,reason:r.game.reason})),factorRows,outcomes,continuationRows,D:dRows,Bself:selfB,critical,limits:load('limits'),interpretation:plan.limits};
+ const opening=openingCertificate();assert.deepEqual(load('D-opening'),opening);
+ const summary={sourceInitialIDs:848,newInitialGames:d.length,totalInitialIDs:848+d.length,newPlies,continued:cont.length,newlySettled:merged.newlySettled,addedContinuationPlies:added,checkpointCases:cs.length,forks:fs.length,forkAddedPlies:forkPlies,singleActionBranches:single.length,singleAddedPlies:singlePlies,singleOutcomes:single.map(r=>({id:r.id,caseID:r.caseID,ply:r.checkpoint.state.ply,control:r.control,actor:r.checkpoint.state.turn,winner:r.game.state.winner,reason:r.game.reason})),factorRows,outcomes,continuationRows,D:dRows,Dopening:opening,Bself:selfB,critical,limits:load('limits'),interpretation:plan.limits};
  writeFileSync(`${dir}/summary.json`,JSON.stringify(summary,null,2)+'\n');writeFileSync(`${dir}/verification.json`,JSON.stringify({sourceHash:plan.sourceHash,newInitialGames:d.length,totalInitialIDs:848+d.length,newPlies,continued:cont.length,addedContinuationPlies:added,forks:fs.length,forkAddedPlies:forkPlies,singleActionBranches:single.length,singleAddedPlies:singlePlies,checkpointRNGRecomputed:true,independentLegalReplay:true,rootSetsIdenticalAcrossEvaluators:true,singleActionHistoryAndRNGRecomputed:true},null,2)+'\n');
  console.log(JSON.stringify({new:d.length,continued:cont.length,settled:merged.newlySettled,factors:factorRows,D:Object.fromEntries(Object.entries(dRows).map(([k,r])=>[k,[r.metrics.first,r.metrics.second,r.metrics.unresolved,r.metrics.positionWins]]))}));
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){const flag=process.argv[2];if(flag==='--plan')setup();else if(flag==='--factors')runFactors();else if(flag==='--continue')runContinuations();else if(flag==='--D')runD();else if(flag==='--limits')runLimits();else if(flag==='--critical')runCritical();else if(flag==='--single')runSingle();else if(flag==='--verify')verify();else {setup();runFactors();runContinuations();runD();runLimits();runCritical();runSingle();verify();}}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){const flag=process.argv[2];if(flag==='--plan')setup();else if(flag==='--factors')runFactors();else if(flag==='--continue')runContinuations();else if(flag==='--D')runD();else if(flag==='--limits')runLimits();else if(flag==='--critical')runCritical();else if(flag==='--single')runSingle();else if(flag==='--opening')runOpening();else if(flag==='--verify')verify();else {setup();runFactors();runContinuations();runD();runLimits();runOpening();runCritical();runSingle();verify();}}

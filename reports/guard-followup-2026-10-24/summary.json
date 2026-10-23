@@ -16341,6 +16341,1630 @@
       ]
     }
   },
+  "Dopening": {
+    "boardID": "D",
+    "boardHash": "01fe7111ef807bd2f3d2689ee37d524558e63259293393e3247d4f6033fee30a",
+    "physicalSlots": [
+      30,
+      5
+    ],
+    "configurations": [
+      {
+        "swap": false,
+        "starter": 0,
+        "firstMoverSlot": 0,
+        "state": {
+          "width": 6,
+          "height": 6,
+          "playableCells": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "target": 4,
+          "walls": [
+            4,
+            31,
+            2,
+            33,
+            9,
+            26,
+            23
+          ],
+          "stars": [
+            10,
+            25,
+            20,
+            15,
+            24,
+            11,
+            35
+          ],
+          "players": [
+            30,
+            5
+          ],
+          "scores": [
+            0,
+            0
+          ],
+          "turn": 0,
+          "ply": 0,
+          "winner": null
+        },
+        "legalFirst": 17,
+        "firstCaptureActions": [],
+        "firstCaptureStars": [],
+        "responses": [
+          {
+            "firstAction": {
+              "wall": null,
+              "dir": 0
+            },
+            "replyLegal": 18,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 0,
+                "to": 3
+              },
+              "dir": 0
+            },
+            "replyLegal": 29,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 1,
+                "to": 32
+              },
+              "dir": 0
+            },
+            "replyLegal": 15,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 1,
+                "to": 32
+              },
+              "dir": 1
+            },
+            "replyLegal": 14,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 2,
+                "to": 3
+              },
+              "dir": 0
+            },
+            "replyLegal": 13,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 2,
+                "to": 8
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 2,
+                "to": 1
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 3,
+                "to": 27
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 3,
+                "to": 34
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 3,
+                "to": 32
+              },
+              "dir": 0
+            },
+            "replyLegal": 14,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 4,
+                "to": 3
+              },
+              "dir": 0
+            },
+            "replyLegal": 14,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 4,
+                "to": 8
+              },
+              "dir": 0
+            },
+            "replyLegal": 18,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 5,
+                "to": 27
+              },
+              "dir": 0
+            },
+            "replyLegal": 18,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 5,
+                "to": 32
+              },
+              "dir": 0
+            },
+            "replyLegal": 15,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 6,
+                "to": 17
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": null,
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 0,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 1,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 1,
+                  "to": 30
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 8
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 1
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 27
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 34
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 4,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 4,
+                  "to": 8
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 5,
+                  "to": 27
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 5,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 16
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 6,
+                "to": 29
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 28
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 6,
+                "to": 22
+              },
+              "dir": 0
+            },
+            "replyLegal": 19,
+            "slot1CaptureActions": [
+              {
+                "wall": null,
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 0,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 1,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 1,
+                  "to": 30
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 8
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 1
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 27
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 34
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 4,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 4,
+                  "to": 8
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 5,
+                  "to": 27
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 5,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 16
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 28
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 21
+                },
+                "dir": 2
+              }
+            ]
+          }
+        ],
+        "slot1CanScoreOnFirstOwnTurn": true
+      },
+      {
+        "swap": false,
+        "starter": 1,
+        "firstMoverSlot": 1,
+        "state": {
+          "width": 6,
+          "height": 6,
+          "playableCells": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "target": 4,
+          "walls": [
+            4,
+            31,
+            2,
+            33,
+            9,
+            26,
+            23
+          ],
+          "stars": [
+            10,
+            25,
+            20,
+            15,
+            24,
+            11,
+            35
+          ],
+          "players": [
+            30,
+            5
+          ],
+          "scores": [
+            0,
+            0
+          ],
+          "turn": 1,
+          "ply": 0,
+          "winner": null
+        },
+        "legalFirst": 17,
+        "firstCaptureActions": [
+          {
+            "wall": {
+              "wall": 6,
+              "to": 17
+            },
+            "dir": 2
+          },
+          {
+            "wall": {
+              "wall": 6,
+              "to": 22
+            },
+            "dir": 2
+          }
+        ],
+        "firstCaptureStars": [
+          11,
+          35
+        ],
+        "responses": [],
+        "slot1CanScoreOnFirstOwnTurn": true
+      },
+      {
+        "swap": true,
+        "starter": 0,
+        "firstMoverSlot": 1,
+        "state": {
+          "width": 6,
+          "height": 6,
+          "playableCells": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "target": 4,
+          "walls": [
+            4,
+            31,
+            2,
+            33,
+            9,
+            26,
+            23
+          ],
+          "stars": [
+            10,
+            25,
+            20,
+            15,
+            24,
+            11,
+            35
+          ],
+          "players": [
+            5,
+            30
+          ],
+          "scores": [
+            0,
+            0
+          ],
+          "turn": 0,
+          "ply": 0,
+          "winner": null
+        },
+        "legalFirst": 17,
+        "firstCaptureActions": [
+          {
+            "wall": {
+              "wall": 6,
+              "to": 17
+            },
+            "dir": 2
+          },
+          {
+            "wall": {
+              "wall": 6,
+              "to": 22
+            },
+            "dir": 2
+          }
+        ],
+        "firstCaptureStars": [
+          11,
+          35
+        ],
+        "responses": [],
+        "slot1CanScoreOnFirstOwnTurn": true
+      },
+      {
+        "swap": true,
+        "starter": 1,
+        "firstMoverSlot": 0,
+        "state": {
+          "width": 6,
+          "height": 6,
+          "playableCells": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "target": 4,
+          "walls": [
+            4,
+            31,
+            2,
+            33,
+            9,
+            26,
+            23
+          ],
+          "stars": [
+            10,
+            25,
+            20,
+            15,
+            24,
+            11,
+            35
+          ],
+          "players": [
+            5,
+            30
+          ],
+          "scores": [
+            0,
+            0
+          ],
+          "turn": 1,
+          "ply": 0,
+          "winner": null
+        },
+        "legalFirst": 17,
+        "firstCaptureActions": [],
+        "firstCaptureStars": [],
+        "responses": [
+          {
+            "firstAction": {
+              "wall": null,
+              "dir": 0
+            },
+            "replyLegal": 18,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 0,
+                "to": 3
+              },
+              "dir": 0
+            },
+            "replyLegal": 29,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 1,
+                "to": 32
+              },
+              "dir": 0
+            },
+            "replyLegal": 15,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 1,
+                "to": 32
+              },
+              "dir": 1
+            },
+            "replyLegal": 14,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 2,
+                "to": 3
+              },
+              "dir": 0
+            },
+            "replyLegal": 13,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 2,
+                "to": 8
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 2,
+                "to": 1
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 3,
+                "to": 27
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 3,
+                "to": 34
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 3,
+                "to": 32
+              },
+              "dir": 0
+            },
+            "replyLegal": 14,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 4,
+                "to": 3
+              },
+              "dir": 0
+            },
+            "replyLegal": 14,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 4,
+                "to": 8
+              },
+              "dir": 0
+            },
+            "replyLegal": 18,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 5,
+                "to": 27
+              },
+              "dir": 0
+            },
+            "replyLegal": 18,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 5,
+                "to": 32
+              },
+              "dir": 0
+            },
+            "replyLegal": 15,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 17
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 22
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 6,
+                "to": 17
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": null,
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 0,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 1,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 1,
+                  "to": 30
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 8
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 1
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 27
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 34
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 4,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 4,
+                  "to": 8
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 5,
+                  "to": 27
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 5,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 16
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 6,
+                "to": 29
+              },
+              "dir": 0
+            },
+            "replyLegal": 17,
+            "slot1CaptureActions": [
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 28
+                },
+                "dir": 2
+              }
+            ]
+          },
+          {
+            "firstAction": {
+              "wall": {
+                "wall": 6,
+                "to": 22
+              },
+              "dir": 0
+            },
+            "replyLegal": 19,
+            "slot1CaptureActions": [
+              {
+                "wall": null,
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 0,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 1,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 1,
+                  "to": 30
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 8
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 2,
+                  "to": 1
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 27
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 34
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 3,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 4,
+                  "to": 3
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 4,
+                  "to": 8
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 5,
+                  "to": 27
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 5,
+                  "to": 32
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 16
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 28
+                },
+                "dir": 2
+              },
+              {
+                "wall": {
+                  "wall": 6,
+                  "to": 21
+                },
+                "dir": 2
+              }
+            ]
+          }
+        ],
+        "slot1CanScoreOnFirstOwnTurn": true
+      }
+    ],
+    "physicalConditions": 2,
+    "labelConditions": 4,
+    "allLegalActionsComparedWithIndependentRules": true,
+    "interpretation": "Slot 0 has no first-action capture; slot 1 can score on its first own turn regardless of who starts and the other first action. This is an opening opportunity asymmetry, not a forced final win or overall unfairness proof."
+  },
   "Bself": {
     "archived": {
       "before": {

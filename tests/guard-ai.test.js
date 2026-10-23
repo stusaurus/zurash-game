@@ -61,3 +61,10 @@ test('the existing keeper already solves the three-ply certificate used in ablat
  const row=critical.rows.find(r=>r.factor==='evaluation'&&r.ply===38),r=modelMove(row.state,'retain',randomStream(row.rngState));
  assert.equal(r.forced,3);assert.equal(auditFixedFirst(row.state,r.action).forcedWithinThreeAfterThisAction,true);
 });
+test('D has a policy-independent first-capture asymmetry in all seat/turn conditions',async()=>{
+ const {openingCertificate}=await import('../scripts/guard-followup.js'),c=openingCertificate();assert.deepEqual(c.physicalSlots,[30,5]);assert.equal(c.configurations.length,4);
+ for(const r of c.configurations){assert.equal(r.legalFirst,17);assert.equal(r.slot1CanScoreOnFirstOwnTurn,true);
+  if(r.firstMoverSlot===0){assert.equal(r.firstCaptureActions.length,0);assert.equal(r.responses.length,17);assert.ok(r.responses.every(r=>r.slot1CaptureActions.length>0));}
+  else {assert.equal(r.firstCaptureActions.length,2);assert.deepEqual([...r.firstCaptureStars].sort((a,b)=>a-b),[11,35]);}
+ }
+});
