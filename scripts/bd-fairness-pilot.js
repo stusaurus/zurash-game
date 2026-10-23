@@ -14,7 +14,7 @@ for(const mode of input.modes){
  for(const item of records){
   const v=validateBoard(item.board);if(!v.ok)throw Error(mode.id+' '+item.label+' invalid '+v.errors);
   const record=recordBoard(v.state,{id:'fairness-'+mode.id+'-'+item.label,name:item.label});
-  const plans=researchPlans(record,{stage:'fairness-paired-pilot',seeds:[160001,160019],pairs:[['search','route']]});
+  const plans=researchPlans(record,{stage:'fairness-paired-pilot',seeds:[160001,160019,160033,160051],pairs:[['search','route']]});
   const games=plans.map(p=>advanceResearch(newResearchGame(p),{timeBudgetMs:results.timeBudgetMs,maxPlies:results.maxPlies,memoryBudgetMb:640}));
   const settled=games.filter(g=>g.state.winner!==null);
   modeOut.records.push({label:item.label,change:item.change??null,total:games.length,settled:settled.length,unresolved:games.length-settled.length,firstWins:settled.filter(g=>g.state.winner===g.starter).length,secondWins:settled.filter(g=>g.state.winner!==g.starter).length,summary:aggregateResearch(games)});
