@@ -14,9 +14,10 @@ for(const id of ['B','D']){
   const from=b[field][index],candidate={...b,[field]:b[field].map((x,i)=>i===index?to:x)},v=validateBoard(candidate);
   if(!v.ok)continue;
   const proxy=positionProxy(v.state),shape=topology(v.state);
-  candidates.push({kind:field,from,to,proxyBias:proxy.proxyBias,biasChange:proxy.proxyBias-baseline.proxyBias,reachableStars:proxy.reachableStars,mobility:proxy.mobility,articulationCount:shape.articulationCells.length});
+  candidates.push({kind:field,from,to,proxyBias:proxy.proxyBias,biasChange:proxy.proxyBias-baseline.proxyBias,reachableStars:proxy.reachableStars,mobility:proxy.mobility,articulationCount:shape.articulationCells.length,preservesReachability:proxy.reachableStars.every((n,i)=>n>=baseline.reachableStars[i]),preservesMobility:proxy.mobility.every((n,i)=>n>=baseline.mobility[i])});
  }
- candidates.sort((a,b)=>a.proxyBias-b.proxyBias||Math.abs(a.biasChange)-Math.abs(b.biasChange)||a.kind.localeCompare(b.kind)||a.from-b.from||a.to-b.to);
- results.modes.push({id,baseline:{proxyBias:baseline.proxyBias,reachableStars:baseline.reachableStars,mobility:baseline.mobility},tested:candidates.length,topCandidates:candidates.slice(0,20),caution:'Static proxy screening is not a fairness or strategic-quality test. Compare candidates by controlled paired AI games before selection.'});
+ const eligible=id==='B'?candidates.filter(c=>c.preservesReachability&&c.preservesMobility):candidates;
+ eligible.sort((a,b)=>a.proxyBias-b.proxyBias||Math.abs(a.biasChange)-Math.abs(b.biasChange)||a.kind.localeCompare(b.kind)||a.from-b.from||a.to-b.to);
+ results.modes.push({id,baseline:{proxyBias:baseline.proxyBias,reachableStars:baseline.reachableStars,mobility:baseline.mobility},tested:candidates.length,eligible:eligible.length,topCandidates:eligible.slice(0,20),caution:'B candidates must preserve both players\' initial reachable-star counts and mobility; static proxy screening is not a fairness or strategic-quality test. Compare candidates by controlled paired AI games before selection.'});
 }
 const dir=process.env.FAIRNESS_DIAG_REPORT??'reports/fairness-diagnostics';mkdirSync(dir,{recursive:true});writeFileSync(dir+'/BD-candidates.json',JSON.stringify(results,null,2)+'\n');console.log(JSON.stringify(results.modes.map(x=>({id:x.id,tested:x.tested,baseline:x.baseline,top:x.topCandidates.slice(0,3)})),null,2));
