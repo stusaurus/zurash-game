@@ -5,6 +5,7 @@ on:
     paths:
       - 'scripts/bd-fairness-*.js'
       - 'scripts/b-fairness-holdout.js'
+      - 'scripts/b-policy-sensitivity.js'
       - 'scripts/stall-research.js'
       - 'scripts/tactics-completion.js'
       - 'src/research-layouts.js'
@@ -33,6 +34,8 @@ jobs:
           node scripts/bd-fairness-holdout.js
           node --check scripts/b-fairness-holdout.js
           node scripts/b-fairness-holdout.js
+          node --check scripts/b-policy-sensitivity.js
+          node scripts/b-policy-sensitivity.js
           node --check scripts/bd-fairness-decision.js
           node scripts/bd-fairness-decision.js
       - name: Validate output
@@ -48,5 +51,6 @@ jobs:
             reports/fairness-diagnostics/BD-paired-pilot.json
             reports/fairness-diagnostics/D-holdout.json
             reports/fairness-diagnostics/B-holdout.json
+            reports/fairness-diagnostics/B-policy-sensitivity.json
             reports/fairness-diagnostics/BD-decision.json
           retention-days: 30
