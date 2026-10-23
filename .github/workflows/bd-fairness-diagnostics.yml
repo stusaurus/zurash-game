@@ -1,6 +1,14 @@
 name: B and D fairness diagnostics
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/bd-fairness-*.js'
+      - 'scripts/stall-research.js'
+      - 'scripts/tactics-completion.js'
+      - 'src/research-layouts.js'
+      - 'src/engine.js'
+      - '.github/workflows/bd-fairness-diagnostics.yml'
 permissions:
   contents: read
 jobs:
