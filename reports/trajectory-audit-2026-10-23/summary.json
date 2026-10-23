@@ -1,0 +1,3525 @@
+{
+  "games": 400,
+  "plies": 8964,
+  "rows": [
+    {
+      "mode": "A",
+      "pair": "search/search",
+      "records": 16,
+      "observedTrace": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 2,
+        "tooShort": 0,
+        "unique": 2,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first10": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 1,
+        "second": 1
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 1,
+        "second": 1
+      },
+      "physicalCompleted": {
+        "eligible": 2,
+        "tooShort": 0,
+        "unique": 2,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 14,
+        "repeatedRecords": 2,
+        "maxMultiplicity": 2
+      },
+      "censored": 14,
+      "metrics": {
+        "games": 16,
+        "first": 1,
+        "second": 1,
+        "unresolved": 14,
+        "positionWins": [
+          2,
+          0
+        ],
+        "firstRate": 0.5,
+        "position0Rate": 1,
+        "firstBias": 0,
+        "positionBias": 1,
+        "unresolvedRate": 0.875,
+        "firstFinalPossible": [
+          0.0625,
+          0.9375
+        ],
+        "positionFinalPossible": [
+          0.125,
+          1
+        ],
+        "wilsonFirst95Descriptive": [
+          0.09453120463920084,
+          0.9054687953607992
+        ],
+        "wilsonPosition95Descriptive": [
+          0.3423802239546494,
+          1
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          0,
+          1
+        ],
+        "bootstrapPosition95": [
+          1,
+          1
+        ],
+        "interaction": {
+          "startSlot0/search/search": {
+            "games": 8,
+            "slotWins": [
+              1,
+              0
+            ],
+            "unresolved": 7
+          },
+          "startSlot1/search/search": {
+            "games": 8,
+            "slotWins": [
+              1,
+              0
+            ],
+            "unresolved": 7
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 16,
+            "wins": 2,
+            "losses": 0,
+            "unresolved": 14,
+            "selfPlay": 16
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 3,
+        "nearVictoryReversals": 0,
+        "wallMoves": 1070,
+        "plies": 1114,
+        "wallRate": 0.9605026929982047,
+        "medianDecidedPlies": 59,
+        "maxPlies": 86,
+        "openingDiversity": 4,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 16,
+        "settledAfterExtension": 2,
+        "reasons": {
+          "win": 2,
+          "budget-time": 14
+        }
+      },
+      "unresolved": [
+        {
+          "id": "s-54c1c760c4cd5279d304252b416d69c874a5a181e1c4abcc76431aac84ee134c",
+          "plies": 79,
+          "quiet": 36,
+          "repeatedStates": 0,
+          "legal": 37
+        },
+        {
+          "id": "s-0a95e8801d48ae3fbbaf73327be8daf6671ab3d1e13a7a925fd5f438dcbc49a7",
+          "plies": 82,
+          "quiet": 37,
+          "repeatedStates": 0,
+          "legal": 56
+        },
+        {
+          "id": "s-254f34916c79cd2252a5e0d5d824441a3e912f93f3544aa3cf0e07c1c14419e1",
+          "plies": 86,
+          "quiet": 12,
+          "repeatedStates": 0,
+          "legal": 71
+        },
+        {
+          "id": "s-5fcbbe463aaa0c808ab5556f128f1a4e2d10c318a54ce0a9b26e144e889c8666",
+          "plies": 66,
+          "quiet": 21,
+          "repeatedStates": 0,
+          "legal": 54
+        },
+        {
+          "id": "s-85c5edc492e55a859991a8a20d049b7d4d58db50c2aa8a5b4dd214334d157964",
+          "plies": 78,
+          "quiet": 49,
+          "repeatedStates": 0,
+          "legal": 49
+        },
+        {
+          "id": "s-8163c8bcdd41d42d8b9a9e4e08682a804e994b9e0b215820ffd300b09483f858",
+          "plies": 77,
+          "quiet": 68,
+          "repeatedStates": 0,
+          "legal": 53
+        },
+        {
+          "id": "s-d8ed0e21c998c781bdf642122729f5698b907341b9bc6619fa79726b9cf158cf",
+          "plies": 54,
+          "quiet": 34,
+          "repeatedStates": 0,
+          "legal": 53
+        },
+        {
+          "id": "s-593da48722ca96293d037c056d21ad8e199fbab5752120fddcd9bfc5bfd088f5",
+          "plies": 68,
+          "quiet": 52,
+          "repeatedStates": 0,
+          "legal": 36
+        },
+        {
+          "id": "s-bc8c9079c26f6fe470b6b03357e711f9ebdc44cea6537543fabacbe66e332db7",
+          "plies": 66,
+          "quiet": 35,
+          "repeatedStates": 0,
+          "legal": 29
+        },
+        {
+          "id": "s-76820434cf16931a18d1c5b143daef69d46231b8048ec5460563e5dda2ba99a6",
+          "plies": 78,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 75
+        },
+        {
+          "id": "s-a3bdb5979ba11ba5fe324e5e78aa91406c28035de573f9ce1e76e0d270d6693e",
+          "plies": 80,
+          "quiet": 73,
+          "repeatedStates": 0,
+          "legal": 49
+        },
+        {
+          "id": "s-b96818bd993821805a4620988627795afd3125d5603d9a54d774e62496419f7d",
+          "plies": 69,
+          "quiet": 47,
+          "repeatedStates": 0,
+          "legal": 30
+        },
+        {
+          "id": "s-458dcee94e741d539991761bdf625961262d12bf2283309d6ca0219400840c2b",
+          "plies": 76,
+          "quiet": 9,
+          "repeatedStates": 0,
+          "legal": 56
+        },
+        {
+          "id": "s-e419a90bf90374dc197469d8db36d55ed8234c347d931a7dc040e1cf0adbca68",
+          "plies": 74,
+          "quiet": 41,
+          "repeatedStates": 0,
+          "legal": 56
+        }
+      ],
+      "medianComputeMs": 1627.1478229999993,
+      "closeFinishes": 0,
+      "meanLegalActions": 44.422800718132855
+    },
+    {
+      "mode": "A",
+      "pair": "star/route",
+      "records": 32,
+      "observedTrace": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 23,
+        "repeatedRecords": 9,
+        "maxMultiplicity": 3
+      },
+      "first10": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 31,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 16,
+        "second": 16
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 16,
+        "second": 16
+      },
+      "physicalCompleted": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 17,
+        "repeatedRecords": 15,
+        "maxMultiplicity": 5
+      },
+      "censored": 0,
+      "metrics": {
+        "games": 32,
+        "first": 16,
+        "second": 16,
+        "unresolved": 0,
+        "positionWins": [
+          16,
+          16
+        ],
+        "firstRate": 0.5,
+        "position0Rate": 0.5,
+        "firstBias": 0,
+        "positionBias": 0,
+        "unresolvedRate": 0,
+        "firstFinalPossible": [
+          0.5,
+          0.5
+        ],
+        "positionFinalPossible": [
+          0.5,
+          0.5
+        ],
+        "wilsonFirst95Descriptive": [
+          0.33630882754048685,
+          0.6636911724595131
+        ],
+        "wilsonPosition95Descriptive": [
+          0.33630882754048685,
+          0.6636911724595131
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          0.5,
+          0.5
+        ],
+        "bootstrapPosition95": [
+          0.5,
+          0.5
+        ],
+        "interaction": {
+          "startSlot0/star/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/star/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/star": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/star": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          }
+        },
+        "byPolicy": {
+          "star": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 32,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 32,
+            "losses": 0,
+            "unresolved": 0,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 2,
+        "leadChangeGames": 8,
+        "nearVictoryReversals": 0,
+        "wallMoves": 491,
+        "plies": 986,
+        "wallRate": 0.49797160243407707,
+        "medianDecidedPlies": 25,
+        "maxPlies": 68,
+        "openingDiversity": 4,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 4,
+        "settledAfterExtension": 4,
+        "reasons": {
+          "win": 32
+        }
+      },
+      "unresolved": [],
+      "medianComputeMs": 211.86174199999732,
+      "closeFinishes": 0,
+      "meanLegalActions": 43.29817444219067
+    },
+    {
+      "mode": "A",
+      "pair": "mixed/defensive",
+      "records": 32,
+      "observedTrace": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 6,
+        "tooShort": 0,
+        "unique": 6,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 20,
+        "repeatedRecords": 12,
+        "maxMultiplicity": 4
+      },
+      "first10": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 30,
+        "repeatedRecords": 2,
+        "maxMultiplicity": 2
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 6,
+        "second": 0
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 6,
+        "second": 0
+      },
+      "physicalCompleted": {
+        "eligible": 6,
+        "tooShort": 0,
+        "unique": 6,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 16,
+        "maxMultiplicity": 8
+      },
+      "censored": 26,
+      "metrics": {
+        "games": 32,
+        "first": 6,
+        "second": 0,
+        "unresolved": 26,
+        "positionWins": [
+          5,
+          1
+        ],
+        "firstRate": 1,
+        "position0Rate": 0.8333333333333334,
+        "firstBias": 1,
+        "positionBias": 0.6666666666666666,
+        "unresolvedRate": 0.8125,
+        "firstFinalPossible": [
+          0.1875,
+          1
+        ],
+        "positionFinalPossible": [
+          0.15625,
+          0.96875
+        ],
+        "wilsonFirst95Descriptive": [
+          0.6096657083436265,
+          1
+        ],
+        "wilsonPosition95Descriptive": [
+          0.4364971749742326,
+          0.969946630588185
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          1,
+          1
+        ],
+        "bootstrapPosition95": [
+          0.6666666666666666,
+          1
+        ],
+        "interaction": {
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              3,
+              0
+            ],
+            "unresolved": 5
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              2,
+              0
+            ],
+            "unresolved": 6
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              1
+            ],
+            "unresolved": 7
+          }
+        },
+        "byPolicy": {
+          "mixed": {
+            "appearances": 32,
+            "wins": 4,
+            "losses": 2,
+            "unresolved": 26,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 2,
+            "losses": 4,
+            "unresolved": 26,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 4,
+        "leadChangeGames": 9,
+        "nearVictoryReversals": 0,
+        "wallMoves": 1425,
+        "plies": 1482,
+        "wallRate": 0.9615384615384616,
+        "medianDecidedPlies": 37,
+        "maxPlies": 71,
+        "openingDiversity": 2,
+        "declinedCaptures": 1,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 32,
+        "settledAfterExtension": 6,
+        "reasons": {
+          "budget-time": 26,
+          "win": 6
+        }
+      },
+      "unresolved": [
+        {
+          "id": "s-27558f539635f5bbe529c37fe265c129ea2bc8e9b427c62dcfa52ee121bcbadf",
+          "plies": 33,
+          "quiet": 21,
+          "repeatedStates": 0,
+          "legal": 44
+        },
+        {
+          "id": "s-f553e68253cc91c581b7ed8c3e64de0ce17f9fa019395dd4b8c1f5059029eece",
+          "plies": 51,
+          "quiet": 41,
+          "repeatedStates": 0,
+          "legal": 63
+        },
+        {
+          "id": "s-4d4b6d92fe130331b5182083247bc054d2806cbdfcf25d0b8bf7120e93e7b6f7",
+          "plies": 27,
+          "quiet": 2,
+          "repeatedStates": 0,
+          "legal": 54
+        },
+        {
+          "id": "s-44b3545a3655d98758172faeba6521e3617d9f2286d3656ece25219bb2b46040",
+          "plies": 53,
+          "quiet": 2,
+          "repeatedStates": 0,
+          "legal": 22
+        },
+        {
+          "id": "s-c82354ade64358f85490a57233a8f93ba72ac7991e551b3266594eabe1ac7f9d",
+          "plies": 55,
+          "quiet": 26,
+          "repeatedStates": 1,
+          "legal": 21
+        },
+        {
+          "id": "s-f4eb7c76ed529eb2342db01ad4a7bec681cd1ab492453cd6ec41db95da861bdf",
+          "plies": 36,
+          "quiet": 8,
+          "repeatedStates": 0,
+          "legal": 53
+        },
+        {
+          "id": "s-ef5939970d2c87d9b523b981389322a37d6b9c050e3cde4a29fe8fe91b3aeb69",
+          "plies": 46,
+          "quiet": 12,
+          "repeatedStates": 0,
+          "legal": 87
+        },
+        {
+          "id": "s-e3a59c84417631308cb89cfa05ed93790c7189b4fb6a5788f74bb3f12acc8f9c",
+          "plies": 42,
+          "quiet": 4,
+          "repeatedStates": 2,
+          "legal": 74
+        },
+        {
+          "id": "s-5f1dafec64766a1ed7a8bf125f8e70f6e589b54539227c4c98371374da4eb07a",
+          "plies": 43,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 75
+        },
+        {
+          "id": "s-0a4fe56b17668f6fe808e55b7f3b2f41692ffca749cf9e6fa2e7fe28c33ba246",
+          "plies": 55,
+          "quiet": 28,
+          "repeatedStates": 0,
+          "legal": 44
+        },
+        {
+          "id": "s-1dbc59f3f5568e4e473995b871b8bf90616c8e00615418db5329f830658d8c93",
+          "plies": 67,
+          "quiet": 63,
+          "repeatedStates": 46,
+          "legal": 21
+        },
+        {
+          "id": "s-92e2d9bde879dccfa3f6f6548ee2a784882c010d68ebc00d2257c5c9d1f06646",
+          "plies": 44,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 75
+        },
+        {
+          "id": "s-cdad8f17c4ef86558ca612f8c5e4c31c955b5a534f2cd07b4d1a1dbe56bc226f",
+          "plies": 51,
+          "quiet": 13,
+          "repeatedStates": 0,
+          "legal": 46
+        },
+        {
+          "id": "s-fb3a3b656cab3fe09cbc2cf3768fbd1c876448adc237df48e00a6a8a1064b5c0",
+          "plies": 48,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 65
+        },
+        {
+          "id": "s-f40588794c3fba954a48b479b19519d2128e33aeb5bd2bc904bd2a6b0d189532",
+          "plies": 48,
+          "quiet": 9,
+          "repeatedStates": 0,
+          "legal": 76
+        },
+        {
+          "id": "s-ed39b4edb2add39a054ba925154249168c7bae4183f35ab1177efd1c91b7cf6b",
+          "plies": 42,
+          "quiet": 34,
+          "repeatedStates": 0,
+          "legal": 48
+        },
+        {
+          "id": "s-65f1309cf2f368066bca6cda67f99d773ea33e45a68209776e9c64dec509997c",
+          "plies": 42,
+          "quiet": 7,
+          "repeatedStates": 1,
+          "legal": 102
+        },
+        {
+          "id": "s-f83a9a3a32b36945d73b427da8a4a7f8b19670f53bf809fa1a6fe3fc43b7be04",
+          "plies": 45,
+          "quiet": 2,
+          "repeatedStates": 0,
+          "legal": 27
+        },
+        {
+          "id": "s-1061418f87a3ac39d9dda0bc984930f5a56ebea83ad2146831407c76a6b09f35",
+          "plies": 41,
+          "quiet": 9,
+          "repeatedStates": 0,
+          "legal": 44
+        },
+        {
+          "id": "s-a8874160418ddabc4af4ca3464e9202e083bc5597598eb2da21ab7fc3df98833",
+          "plies": 46,
+          "quiet": 16,
+          "repeatedStates": 0,
+          "legal": 49
+        },
+        {
+          "id": "s-e83bafb6d0bd3e095131c04358566c74ddcd03d37c9881f78534e891d5bf2134",
+          "plies": 46,
+          "quiet": 11,
+          "repeatedStates": 0,
+          "legal": 81
+        },
+        {
+          "id": "s-5a2d12dade060352687d25b60c89831ad60d64e6364ca949dd26d6758c464aae",
+          "plies": 66,
+          "quiet": 62,
+          "repeatedStates": 0,
+          "legal": 33
+        },
+        {
+          "id": "s-86ca431441e77ce603129c139085a4724fea275e7e796fc16600ba7ed108f6c9",
+          "plies": 40,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 51
+        },
+        {
+          "id": "s-d6640504969571c38e89ba52d439e280a869833b340060bc5454b1d22910ae17",
+          "plies": 62,
+          "quiet": 15,
+          "repeatedStates": 0,
+          "legal": 70
+        },
+        {
+          "id": "s-a542cdb291b471302da871cc099c76a29399b091d7f47dad6e30cb0401940c7a",
+          "plies": 58,
+          "quiet": 35,
+          "repeatedStates": 1,
+          "legal": 48
+        },
+        {
+          "id": "s-d2358254959fe36d1e96b218feb888c7c195f00fe72dca9535fdbc39d20721cd",
+          "plies": 71,
+          "quiet": 25,
+          "repeatedStates": 0,
+          "legal": 36
+        }
+      ],
+      "medianComputeMs": 1640.2041690000042,
+      "closeFinishes": 0,
+      "meanLegalActions": 45.743589743589745
+    },
+    {
+      "mode": "B",
+      "pair": "search/search",
+      "records": 16,
+      "observedTrace": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 9,
+        "tooShort": 0,
+        "unique": 9,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 11,
+        "repeatedRecords": 5,
+        "maxMultiplicity": 3
+      },
+      "first10": {
+        "eligible": 11,
+        "tooShort": 5,
+        "unique": 10,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 9,
+        "second": 0
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 9,
+        "second": 0
+      },
+      "physicalCompleted": {
+        "eligible": 9,
+        "tooShort": 0,
+        "unique": 9,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 8,
+        "repeatedRecords": 8,
+        "maxMultiplicity": 5
+      },
+      "censored": 7,
+      "metrics": {
+        "games": 16,
+        "first": 9,
+        "second": 0,
+        "unresolved": 7,
+        "positionWins": [
+          7,
+          2
+        ],
+        "firstRate": 1,
+        "position0Rate": 0.7777777777777778,
+        "firstBias": 1,
+        "positionBias": 0.5555555555555556,
+        "unresolvedRate": 0.4375,
+        "firstFinalPossible": [
+          0.5625,
+          1
+        ],
+        "positionFinalPossible": [
+          0.4375,
+          0.875
+        ],
+        "wilsonFirst95Descriptive": [
+          0.700854948272956,
+          1
+        ],
+        "wilsonPosition95Descriptive": [
+          0.4525889666922117,
+          0.9367748934594303
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          1,
+          1
+        ],
+        "bootstrapPosition95": [
+          0.6,
+          1
+        ],
+        "interaction": {
+          "startSlot0/search/search": {
+            "games": 8,
+            "slotWins": [
+              7,
+              0
+            ],
+            "unresolved": 1
+          },
+          "startSlot1/search/search": {
+            "games": 8,
+            "slotWins": [
+              0,
+              2
+            ],
+            "unresolved": 6
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 16,
+            "wins": 9,
+            "losses": 0,
+            "unresolved": 7,
+            "selfPlay": 16
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 2,
+        "nearVictoryReversals": 0,
+        "wallMoves": 356,
+        "plies": 362,
+        "wallRate": 0.9834254143646409,
+        "medianDecidedPlies": 9,
+        "maxPlies": 39,
+        "openingDiversity": 2,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 11,
+        "settledAfterExtension": 4,
+        "reasons": {
+          "win": 9,
+          "budget-time": 7
+        }
+      },
+      "unresolved": [
+        {
+          "id": "s-44e08b02e58f8185c82433047cc6ae928c3513b56a956e4bbf62a426f5aaa1b3",
+          "plies": 35,
+          "quiet": 20,
+          "repeatedStates": 0,
+          "legal": 96
+        },
+        {
+          "id": "s-e6aafde35d943a750e3982b92d833b78c3e973c0fa642e8572524685de1b41c2",
+          "plies": 36,
+          "quiet": 33,
+          "repeatedStates": 0,
+          "legal": 67
+        },
+        {
+          "id": "s-bf714c786be5e0810f3bfe1d25934ceab2ac9c83334fc0bfd9569c733dde4617",
+          "plies": 28,
+          "quiet": 13,
+          "repeatedStates": 0,
+          "legal": 75
+        },
+        {
+          "id": "s-297c1795407ef033f898524262dede185a9690a7df7ee10651e8bb0bbbc15e31",
+          "plies": 34,
+          "quiet": 17,
+          "repeatedStates": 0,
+          "legal": 87
+        },
+        {
+          "id": "s-b677c5393e26a46931eef591f7150f64b8809d64f37c3e0b940a123186e15945",
+          "plies": 24,
+          "quiet": 9,
+          "repeatedStates": 0,
+          "legal": 108
+        },
+        {
+          "id": "s-62f56a557a1dbc0e292d84685bb3879610903152302f1b5cb5a5b4decfd35f17",
+          "plies": 31,
+          "quiet": 16,
+          "repeatedStates": 0,
+          "legal": 62
+        },
+        {
+          "id": "s-e5657fcc7317cdc20b43d87cb683fb6e7d215c93e5256f184076792e65a6b9d9",
+          "plies": 39,
+          "quiet": 24,
+          "repeatedStates": 0,
+          "legal": 57
+        }
+      ],
+      "medianComputeMs": 1485.3282529999851,
+      "closeFinishes": 0,
+      "meanLegalActions": 64.29834254143647
+    },
+    {
+      "mode": "B",
+      "pair": "star/route",
+      "records": 32,
+      "observedTrace": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 28,
+        "repeatedRecords": 4,
+        "maxMultiplicity": 3
+      },
+      "completed": {
+        "eligible": 29,
+        "tooShort": 0,
+        "unique": 25,
+        "repeatedRecords": 4,
+        "maxMultiplicity": 3
+      },
+      "first5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 23,
+        "repeatedRecords": 9,
+        "maxMultiplicity": 3
+      },
+      "first10": {
+        "eligible": 12,
+        "tooShort": 20,
+        "unique": 11,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 12,
+        "second": 13
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 11,
+        "second": 13
+      },
+      "physicalCompleted": {
+        "eligible": 29,
+        "tooShort": 0,
+        "unique": 24,
+        "repeatedRecords": 5,
+        "maxMultiplicity": 6
+      },
+      "physicalFirst5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 18,
+        "repeatedRecords": 14,
+        "maxMultiplicity": 6
+      },
+      "censored": 3,
+      "metrics": {
+        "games": 32,
+        "first": 16,
+        "second": 13,
+        "unresolved": 3,
+        "positionWins": [
+          16,
+          13
+        ],
+        "firstRate": 0.5517241379310345,
+        "position0Rate": 0.5517241379310345,
+        "firstBias": 0.10344827586206896,
+        "positionBias": 0.10344827586206896,
+        "unresolvedRate": 0.09375,
+        "firstFinalPossible": [
+          0.5,
+          0.59375
+        ],
+        "positionFinalPossible": [
+          0.5,
+          0.59375
+        ],
+        "wilsonFirst95Descriptive": [
+          0.3754796308384869,
+          0.7158683208722871
+        ],
+        "wilsonPosition95Descriptive": [
+          0.3754796308384869,
+          0.7158683208722871
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          0.5161290322580645,
+          0.5714285714285714
+        ],
+        "bootstrapPosition95": [
+          0.5161290322580645,
+          0.5714285714285714
+        ],
+        "interaction": {
+          "startSlot0/star/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              5
+            ],
+            "unresolved": 3
+          },
+          "startSlot1/star/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/star": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/star": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          }
+        },
+        "byPolicy": {
+          "star": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 29,
+            "unresolved": 3,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 29,
+            "losses": 0,
+            "unresolved": 3,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 5,
+        "nearVictoryReversals": 5,
+        "wallMoves": 418,
+        "plies": 788,
+        "wallRate": 0.5304568527918782,
+        "medianDecidedPlies": 9,
+        "maxPlies": 148,
+        "openingDiversity": 3,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 8,
+        "settledAfterExtension": 5,
+        "reasons": {
+          "win": 29,
+          "budget-time": 3
+        }
+      },
+      "unresolved": [
+        {
+          "id": "s-749ea28116587813974ab024c550a84358d62250a9ee765bfad5c27295748ea0",
+          "plies": 148,
+          "quiet": 136,
+          "repeatedStates": 0,
+          "legal": 64
+        },
+        {
+          "id": "s-e67c32304bddef836feec9138be8e8956e6fa820779f93dc8299449227ca03b2",
+          "plies": 116,
+          "quiet": 100,
+          "repeatedStates": 0,
+          "legal": 90
+        },
+        {
+          "id": "s-f567e3c2daca742324a2f9032f14ffb68fd8d799e1652fc929002abaf9148ef4",
+          "plies": 122,
+          "quiet": 106,
+          "repeatedStates": 0,
+          "legal": 68
+        }
+      ],
+      "medianComputeMs": 131.21812499999942,
+      "closeFinishes": 5,
+      "meanLegalActions": 66.06345177664974
+    },
+    {
+      "mode": "B",
+      "pair": "mixed/defensive",
+      "records": 32,
+      "observedTrace": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 18,
+        "tooShort": 0,
+        "unique": 18,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 18,
+        "repeatedRecords": 14,
+        "maxMultiplicity": 4
+      },
+      "first10": {
+        "eligible": 24,
+        "tooShort": 8,
+        "unique": 17,
+        "repeatedRecords": 7,
+        "maxMultiplicity": 4
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 18,
+        "second": 0
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 18,
+        "second": 0
+      },
+      "physicalCompleted": {
+        "eligible": 18,
+        "tooShort": 0,
+        "unique": 18,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 16,
+        "maxMultiplicity": 8
+      },
+      "censored": 14,
+      "metrics": {
+        "games": 32,
+        "first": 18,
+        "second": 0,
+        "unresolved": 14,
+        "positionWins": [
+          10,
+          8
+        ],
+        "firstRate": 1,
+        "position0Rate": 0.5555555555555556,
+        "firstBias": 1,
+        "positionBias": 0.1111111111111111,
+        "unresolvedRate": 0.4375,
+        "firstFinalPossible": [
+          0.5625,
+          1
+        ],
+        "positionFinalPossible": [
+          0.3125,
+          0.75
+        ],
+        "wilsonFirst95Descriptive": [
+          0.8241207740667156,
+          1
+        ],
+        "wilsonPosition95Descriptive": [
+          0.3371641549342691,
+          0.7544048199620327
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          1,
+          1
+        ],
+        "bootstrapPosition95": [
+          0.5,
+          0.6153846153846154
+        ],
+        "interaction": {
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              1
+            ],
+            "unresolved": 7
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              2,
+              0
+            ],
+            "unresolved": 6
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              7
+            ],
+            "unresolved": 1
+          }
+        },
+        "byPolicy": {
+          "mixed": {
+            "appearances": 32,
+            "wins": 15,
+            "losses": 3,
+            "unresolved": 14,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 3,
+            "losses": 15,
+            "unresolved": 14,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 3,
+        "nearVictoryReversals": 0,
+        "wallMoves": 455,
+        "plies": 458,
+        "wallRate": 0.9934497816593887,
+        "medianDecidedPlies": 15,
+        "maxPlies": 21,
+        "openingDiversity": 2,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 32,
+        "settledAfterExtension": 18,
+        "reasons": {
+          "win": 18,
+          "budget-time": 14
+        }
+      },
+      "unresolved": [
+        {
+          "id": "s-20f2a5124221bd324980c714d17118a0f7aecff8ecfd5043a3f3ecca97f38ae4",
+          "plies": 21,
+          "quiet": 11,
+          "repeatedStates": 0,
+          "legal": 60
+        },
+        {
+          "id": "s-7158d2836d693694d7a18bf45523521a3218ef0ffa891a33f11795a94142e9ce",
+          "plies": 15,
+          "quiet": 12,
+          "repeatedStates": 0,
+          "legal": 68
+        },
+        {
+          "id": "s-14a98f85dc0bd3efd68bcdfed2230db5a94cc25ca8a5a9be2e3593dc533f5375",
+          "plies": 17,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 68
+        },
+        {
+          "id": "s-a2af8f3ab401dde70dee88a0e597f487503ef9802b10169a083f6307414ad76e",
+          "plies": 16,
+          "quiet": 13,
+          "repeatedStates": 0,
+          "legal": 61
+        },
+        {
+          "id": "s-97c7ec7a2ca43a1b68bb40c93a58480d064163ff47346acec5ac4ad300c576e6",
+          "plies": 18,
+          "quiet": 4,
+          "repeatedStates": 0,
+          "legal": 67
+        },
+        {
+          "id": "s-4e4ce888557d195fac691aa71697051306349350d659c322a30ff7174eb3d7c2",
+          "plies": 18,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 35
+        },
+        {
+          "id": "s-86b401c1a64ddfbd4a576071d7c9ae9776583c501bccca5605949e246b3d7160",
+          "plies": 17,
+          "quiet": 3,
+          "repeatedStates": 0,
+          "legal": 64
+        },
+        {
+          "id": "s-bc6f7e08c1349e79d55f9a6b49fbcd40368f0cb698b9a60a328724e142e4af33",
+          "plies": 18,
+          "quiet": 4,
+          "repeatedStates": 0,
+          "legal": 98
+        },
+        {
+          "id": "s-42b30fe5e02adf98ea3b96a130219ccedbfdfb462ffc2e4a138b0cdb6d34d79f",
+          "plies": 19,
+          "quiet": 16,
+          "repeatedStates": 0,
+          "legal": 60
+        },
+        {
+          "id": "s-d5cc1f948e99424212c2b1a85bf22c715baa939dea004c04da34c59b3424c0c3",
+          "plies": 19,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 87
+        },
+        {
+          "id": "s-7f92ad64d762f57745ab6e0175e0d42491ccc35cc0f2c3cc88f59e3b8ae4f447",
+          "plies": 16,
+          "quiet": 4,
+          "repeatedStates": 0,
+          "legal": 65
+        },
+        {
+          "id": "s-1e8ca3e7ad0a53dc79af4732b9dc5314c172e664cdaba968d3115136b50c8818",
+          "plies": 12,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 69
+        },
+        {
+          "id": "s-df7055267fcd99aca918dafc0a6b16f96b9cbbfdee3924b52c61e8ff3d6bac85",
+          "plies": 14,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 88
+        },
+        {
+          "id": "s-5569f83aba172aba37edbf31ab0093032c7fa24e95c72becd6d83094ed03a6dd",
+          "plies": 14,
+          "quiet": 2,
+          "repeatedStates": 0,
+          "legal": 36
+        }
+      ],
+      "medianComputeMs": 1521.4563790000102,
+      "closeFinishes": 0,
+      "meanLegalActions": 64.43668122270742
+    },
+    {
+      "mode": "C",
+      "pair": "search/search",
+      "records": 16,
+      "observedTrace": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 12,
+        "tooShort": 0,
+        "unique": 12,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 15,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "first10": {
+        "eligible": 4,
+        "tooShort": 12,
+        "unique": 4,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 7,
+        "second": 5
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 7,
+        "second": 5
+      },
+      "physicalCompleted": {
+        "eligible": 12,
+        "tooShort": 0,
+        "unique": 12,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 15,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "censored": 4,
+      "metrics": {
+        "games": 16,
+        "first": 7,
+        "second": 5,
+        "unresolved": 4,
+        "positionWins": [
+          12,
+          0
+        ],
+        "firstRate": 0.5833333333333334,
+        "position0Rate": 1,
+        "firstBias": 0.16666666666666666,
+        "positionBias": 1,
+        "unresolvedRate": 0.25,
+        "firstFinalPossible": [
+          0.4375,
+          0.6875
+        ],
+        "positionFinalPossible": [
+          0.75,
+          1
+        ],
+        "wilsonFirst95Descriptive": [
+          0.31951131084242423,
+          0.8067396875653928
+        ],
+        "wilsonPosition95Descriptive": [
+          0.7575059904469021,
+          1
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          0.5,
+          0.75
+        ],
+        "bootstrapPosition95": [
+          1,
+          1
+        ],
+        "interaction": {
+          "startSlot0/search/search": {
+            "games": 8,
+            "slotWins": [
+              7,
+              0
+            ],
+            "unresolved": 1
+          },
+          "startSlot1/search/search": {
+            "games": 8,
+            "slotWins": [
+              5,
+              0
+            ],
+            "unresolved": 3
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 16,
+            "wins": 12,
+            "losses": 0,
+            "unresolved": 4,
+            "selfPlay": 16
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 1,
+        "nearVictoryReversals": 0,
+        "wallMoves": 177,
+        "plies": 179,
+        "wallRate": 0.9888268156424581,
+        "medianDecidedPlies": 8,
+        "maxPlies": 24,
+        "openingDiversity": 9,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 9,
+        "settledAfterExtension": 5,
+        "reasons": {
+          "win": 12,
+          "budget-time": 4
+        }
+      },
+      "unresolved": [
+        {
+          "id": "s-6bcfce121d92e9414170474f27e841536d9ad4dee235cee07787d269e9bf1d7f",
+          "plies": 22,
+          "quiet": 18,
+          "repeatedStates": 0,
+          "legal": 111
+        },
+        {
+          "id": "s-cdbb92702c35fdc7f4cb46e54ba2923d3e2bddd44be2582646980470e368d739",
+          "plies": 17,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 123
+        },
+        {
+          "id": "s-e3f4859b44657f7584c13825f5e89bf06c70570f8b54f4109a1f5641150c3951",
+          "plies": 21,
+          "quiet": 9,
+          "repeatedStates": 0,
+          "legal": 119
+        },
+        {
+          "id": "s-016147a0200b8deeed779de194201d88e88af400559a548a46916a15196550f9",
+          "plies": 24,
+          "quiet": 20,
+          "repeatedStates": 0,
+          "legal": 71
+        }
+      ],
+      "medianComputeMs": 505.2124550000299,
+      "closeFinishes": 0,
+      "meanLegalActions": 82.79329608938548
+    },
+    {
+      "mode": "C",
+      "pair": "star/route",
+      "records": 32,
+      "observedTrace": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 31,
+        "tooShort": 0,
+        "unique": 31,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 31,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "first10": {
+        "eligible": 17,
+        "tooShort": 15,
+        "unique": 17,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 16,
+        "second": 15
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 16,
+        "second": 15
+      },
+      "physicalCompleted": {
+        "eligible": 31,
+        "tooShort": 0,
+        "unique": 31,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 30,
+        "repeatedRecords": 2,
+        "maxMultiplicity": 2
+      },
+      "censored": 1,
+      "metrics": {
+        "games": 32,
+        "first": 16,
+        "second": 15,
+        "unresolved": 1,
+        "positionWins": [
+          16,
+          15
+        ],
+        "firstRate": 0.5161290322580645,
+        "position0Rate": 0.5161290322580645,
+        "firstBias": 0.03225806451612903,
+        "positionBias": 0.03225806451612903,
+        "unresolvedRate": 0.03125,
+        "firstFinalPossible": [
+          0.5,
+          0.53125
+        ],
+        "positionFinalPossible": [
+          0.5,
+          0.53125
+        ],
+        "wilsonFirst95Descriptive": [
+          0.34840395329054696,
+          0.6802974855156458
+        ],
+        "wilsonPosition95Descriptive": [
+          0.34840395329054696,
+          0.6802974855156458
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          0.5,
+          0.5517241379310345
+        ],
+        "bootstrapPosition95": [
+          0.5,
+          0.5517241379310345
+        ],
+        "interaction": {
+          "startSlot0/star/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              7
+            ],
+            "unresolved": 1
+          },
+          "startSlot1/star/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/star": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/star": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          }
+        },
+        "byPolicy": {
+          "star": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 31,
+            "unresolved": 1,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 31,
+            "losses": 0,
+            "unresolved": 1,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 5,
+        "nearVictoryReversals": 2,
+        "wallMoves": 211,
+        "plies": 396,
+        "wallRate": 0.5328282828282829,
+        "medianDecidedPlies": 10,
+        "maxPlies": 60,
+        "openingDiversity": 10,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 9,
+        "settledAfterExtension": 8,
+        "reasons": {
+          "win": 31,
+          "budget-time": 1
+        }
+      },
+      "unresolved": [
+        {
+          "id": "s-9c3c85fa549cf00fc7973092fbbdcf2fcb8d7f80c5b0fa7b5fe8f34e956009e3",
+          "plies": 60,
+          "quiet": 40,
+          "repeatedStates": 0,
+          "legal": 85
+        }
+      ],
+      "medianComputeMs": 303.41956699997536,
+      "closeFinishes": 2,
+      "meanLegalActions": 83.71717171717172
+    },
+    {
+      "mode": "C",
+      "pair": "mixed/defensive",
+      "records": 32,
+      "observedTrace": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 31,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "completed": {
+        "eligible": 3,
+        "tooShort": 0,
+        "unique": 3,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 21,
+        "repeatedRecords": 11,
+        "maxMultiplicity": 4
+      },
+      "first10": {
+        "eligible": 28,
+        "tooShort": 4,
+        "unique": 27,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 3,
+        "second": 0
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 3,
+        "second": 0
+      },
+      "physicalCompleted": {
+        "eligible": 3,
+        "tooShort": 0,
+        "unique": 3,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 20,
+        "repeatedRecords": 12,
+        "maxMultiplicity": 8
+      },
+      "censored": 29,
+      "metrics": {
+        "games": 32,
+        "first": 3,
+        "second": 0,
+        "unresolved": 29,
+        "positionWins": [
+          3,
+          0
+        ],
+        "firstRate": 1,
+        "position0Rate": 1,
+        "firstBias": 1,
+        "positionBias": 1,
+        "unresolvedRate": 0.90625,
+        "firstFinalPossible": [
+          0.09375,
+          1
+        ],
+        "positionFinalPossible": [
+          0.09375,
+          1
+        ],
+        "wilsonFirst95Descriptive": [
+          0.43850296436068037,
+          1
+        ],
+        "wilsonPosition95Descriptive": [
+          0.43850296436068037,
+          1
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          1,
+          1
+        ],
+        "bootstrapPosition95": [
+          1,
+          1
+        ],
+        "interaction": {
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              2,
+              0
+            ],
+            "unresolved": 6
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              1,
+              0
+            ],
+            "unresolved": 7
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          }
+        },
+        "byPolicy": {
+          "mixed": {
+            "appearances": 32,
+            "wins": 2,
+            "losses": 1,
+            "unresolved": 29,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 1,
+            "losses": 2,
+            "unresolved": 29,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 0,
+        "nearVictoryReversals": 0,
+        "wallMoves": 384,
+        "plies": 384,
+        "wallRate": 1,
+        "medianDecidedPlies": 7,
+        "maxPlies": 19,
+        "openingDiversity": 10,
+        "declinedCaptures": 7,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 32,
+        "settledAfterExtension": 3,
+        "reasons": {
+          "budget-time": 29,
+          "win": 3
+        }
+      },
+      "unresolved": [
+        {
+          "id": "s-af050b62d11656edeba8757ab6575609a21d47e5c00644a234a3d6e4477dd72a",
+          "plies": 11,
+          "quiet": 8,
+          "repeatedStates": 0,
+          "legal": 76
+        },
+        {
+          "id": "s-3fe70ed5cafd1e3a27e888b8319615df8592c1e65ac3afefdc62bee6b68983ea",
+          "plies": 14,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 78
+        },
+        {
+          "id": "s-14f638e611c821ef192f3b696807d6c3fb3b3d163f724ec7818d68f170eddc39",
+          "plies": 14,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 145
+        },
+        {
+          "id": "s-26513ff31520aa59263a413b47056c57d3e59f070acee0135adb0656ba5e2609",
+          "plies": 10,
+          "quiet": 6,
+          "repeatedStates": 0,
+          "legal": 66
+        },
+        {
+          "id": "s-7ee459f00194815a1bd4aeded93732d3fda18c350b0a8ff10fe3b68fec1d109a",
+          "plies": 10,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 82
+        },
+        {
+          "id": "s-77e90f1c6a8726899910f334de16a470dcfc99081cfaeb0bdc6e6e69672ec4be",
+          "plies": 14,
+          "quiet": 2,
+          "repeatedStates": 0,
+          "legal": 105
+        },
+        {
+          "id": "s-7a0b00164056360895b3b91ca2452d7ae54acc66e6e49d070a55f382f44edd44",
+          "plies": 16,
+          "quiet": 13,
+          "repeatedStates": 0,
+          "legal": 114
+        },
+        {
+          "id": "s-2646e91a88ad9e0f58afb8ff7d7451830efc3672557ecbf5ed311b4844d19176",
+          "plies": 13,
+          "quiet": 9,
+          "repeatedStates": 0,
+          "legal": 80
+        },
+        {
+          "id": "s-530fcd025d5ab3dc69dc1a4cd4b2c11caf2bacdb704c69efb87bc3d946072b28",
+          "plies": 10,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 82
+        },
+        {
+          "id": "s-ba5d4ce43b3e678b61f6ca6f2c2538ca347fb4937c2a07ca55e127547f1c7aa0",
+          "plies": 10,
+          "quiet": 6,
+          "repeatedStates": 0,
+          "legal": 72
+        },
+        {
+          "id": "s-77725f0e50b6aacbb7cfad7bbd78dca12332fb3fefb8cbd9dd29419269aed3a8",
+          "plies": 13,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 85
+        },
+        {
+          "id": "s-112348c92b76597b0890e573f97dbdd21df7d1aba323d167f7b5a46f1e1cedd3",
+          "plies": 9,
+          "quiet": 4,
+          "repeatedStates": 0,
+          "legal": 84
+        },
+        {
+          "id": "s-3dd5c32ba4e1dcb67f9b79f5b07cbb3c311fd0c162c8f4001c4e0c0ea6cf4403",
+          "plies": 14,
+          "quiet": 2,
+          "repeatedStates": 0,
+          "legal": 82
+        },
+        {
+          "id": "s-a4207718377421b8ecb72733ff8b484a3cc967b50e7bb7efd905367c713851f1",
+          "plies": 12,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 123
+        },
+        {
+          "id": "s-6397f13c59cdaf3eac8e3336d755c7c142c9725cdcab094e3bbc6cdc3fde3583",
+          "plies": 12,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 111
+        },
+        {
+          "id": "s-2f4943d6274a1cfd82697668733887997fd717e5de32f6048c060c4a4e741801",
+          "plies": 11,
+          "quiet": 7,
+          "repeatedStates": 0,
+          "legal": 105
+        },
+        {
+          "id": "s-3c59343c5fe711b96c5e9967b065092d9606f2d9284c16236b6f686e95d23b06",
+          "plies": 10,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 76
+        },
+        {
+          "id": "s-d75afa205ae9250afdd47b1058e6ef7fc8a23317b4f952c3a878dcc3a4c45e0c",
+          "plies": 13,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 103
+        },
+        {
+          "id": "s-426745a1be8253a885d25db6d58970324bd209c9db5d21bb3be90be21e449404",
+          "plies": 15,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 84
+        },
+        {
+          "id": "s-68be507259c92a518aca613db57e27c57c68b63abab825903bad720eaa9b0d1a",
+          "plies": 11,
+          "quiet": 6,
+          "repeatedStates": 0,
+          "legal": 68
+        },
+        {
+          "id": "s-ac628fd99ae2629b8f72e5b352b28b12aaa29e05a38fc561bdeb972b3301ea3d",
+          "plies": 19,
+          "quiet": 15,
+          "repeatedStates": 0,
+          "legal": 114
+        },
+        {
+          "id": "s-04b3648c0a7c44d713debea076597af6f5a3bf2f51c5ac7c06188fab4b4ea0a3",
+          "plies": 11,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 86
+        },
+        {
+          "id": "s-a760469b6ecf7587745c78b3a1fa8c24cd6a91ef3d98553c8610815c75ccf489",
+          "plies": 15,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 70
+        },
+        {
+          "id": "s-789583436c5a2f8f734a5df70b0d63615188a8977151ed6776ac197b5c60c4f4",
+          "plies": 14,
+          "quiet": 10,
+          "repeatedStates": 0,
+          "legal": 77
+        },
+        {
+          "id": "s-264f384376f9b40825d3f11fbb84a880b7477d41260d0b074af8348d10685800",
+          "plies": 10,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 82
+        },
+        {
+          "id": "s-cdc43173ec8a3ecd7948891ebe253fbacdcd95430fd09960a48f1161dd5f3311",
+          "plies": 12,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 121
+        },
+        {
+          "id": "s-c12eef4d0283802065048f12209c8926f7991a21dd7901fe6dd0fc4a3a5e44ac",
+          "plies": 14,
+          "quiet": 10,
+          "repeatedStates": 0,
+          "legal": 121
+        },
+        {
+          "id": "s-0b9a0ff63f80aaeb7d79e12463d8bf464a23e3997442ec1739b074f8118d90f4",
+          "plies": 10,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 82
+        },
+        {
+          "id": "s-ad8a0ce22a802dd2cae00dac7c59eb9d0b8dd9c0628ac30ccd0b2afb6a2579fe",
+          "plies": 14,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 78
+        }
+      ],
+      "medianComputeMs": 1757.0013269999763,
+      "closeFinishes": 0,
+      "meanLegalActions": 81.5625
+    },
+    {
+      "mode": "D",
+      "pair": "search/search",
+      "records": 16,
+      "observedTrace": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 15,
+        "tooShort": 0,
+        "unique": 15,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 6,
+        "repeatedRecords": 10,
+        "maxMultiplicity": 4
+      },
+      "first10": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 15,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 10,
+        "second": 5
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 10,
+        "second": 5
+      },
+      "physicalCompleted": {
+        "eligible": 15,
+        "tooShort": 0,
+        "unique": 15,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 3,
+        "repeatedRecords": 13,
+        "maxMultiplicity": 8
+      },
+      "censored": 1,
+      "metrics": {
+        "games": 16,
+        "first": 10,
+        "second": 5,
+        "unresolved": 1,
+        "positionWins": [
+          4,
+          11
+        ],
+        "firstRate": 0.6666666666666666,
+        "position0Rate": 0.26666666666666666,
+        "firstBias": 0.3333333333333333,
+        "positionBias": 0.4666666666666667,
+        "unresolvedRate": 0.0625,
+        "firstFinalPossible": [
+          0.625,
+          0.6875
+        ],
+        "positionFinalPossible": [
+          0.25,
+          0.3125
+        ],
+        "wilsonFirst95Descriptive": [
+          0.4171354755711991,
+          0.8482367565633053
+        ],
+        "wilsonPosition95Descriptive": [
+          0.1089745324961737,
+          0.5195043425155202
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          0.5625,
+          0.75
+        ],
+        "bootstrapPosition95": [
+          0,
+          0.6
+        ],
+        "interaction": {
+          "startSlot0/search/search": {
+            "games": 8,
+            "slotWins": [
+              3,
+              4
+            ],
+            "unresolved": 1
+          },
+          "startSlot1/search/search": {
+            "games": 8,
+            "slotWins": [
+              1,
+              7
+            ],
+            "unresolved": 0
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 16,
+            "wins": 15,
+            "losses": 0,
+            "unresolved": 1,
+            "selfPlay": 16
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 4,
+        "nearVictoryReversals": 4,
+        "wallMoves": 733,
+        "plies": 764,
+        "wallRate": 0.9594240837696335,
+        "medianDecidedPlies": 32,
+        "maxPlies": 174,
+        "openingDiversity": 2,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 7,
+        "settledAfterExtension": 6,
+        "reasons": {
+          "win": 15,
+          "budget-time": 1
+        }
+      },
+      "unresolved": [
+        {
+          "id": "s-14c69a03d5c78606835d45b51544ad96cdb18743af789eb75faca64af1c140bf",
+          "plies": 174,
+          "quiet": 165,
+          "repeatedStates": 0,
+          "legal": 44
+        }
+      ],
+      "medianComputeMs": 332.81865500001004,
+      "closeFinishes": 11,
+      "meanLegalActions": 36.12303664921466
+    },
+    {
+      "mode": "D",
+      "pair": "star/route",
+      "records": 32,
+      "observedTrace": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 13,
+        "repeatedRecords": 19,
+        "maxMultiplicity": 4
+      },
+      "first10": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 26,
+        "repeatedRecords": 6,
+        "maxMultiplicity": 2
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 16,
+        "second": 16
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 16,
+        "second": 16
+      },
+      "physicalCompleted": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 9,
+        "repeatedRecords": 23,
+        "maxMultiplicity": 8
+      },
+      "censored": 0,
+      "metrics": {
+        "games": 32,
+        "first": 16,
+        "second": 16,
+        "unresolved": 0,
+        "positionWins": [
+          16,
+          16
+        ],
+        "firstRate": 0.5,
+        "position0Rate": 0.5,
+        "firstBias": 0,
+        "positionBias": 0,
+        "unresolvedRate": 0,
+        "firstFinalPossible": [
+          0.5,
+          0.5
+        ],
+        "positionFinalPossible": [
+          0.5,
+          0.5
+        ],
+        "wilsonFirst95Descriptive": [
+          0.33630882754048685,
+          0.6636911724595131
+        ],
+        "wilsonPosition95Descriptive": [
+          0.33630882754048685,
+          0.6636911724595131
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          0.5,
+          0.5
+        ],
+        "bootstrapPosition95": [
+          0.5,
+          0.5
+        ],
+        "interaction": {
+          "startSlot0/star/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/star/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/star": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/star": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          }
+        },
+        "byPolicy": {
+          "star": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 32,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 32,
+            "losses": 0,
+            "unresolved": 0,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 16,
+        "nearVictoryReversals": 0,
+        "wallMoves": 270,
+        "plies": 456,
+        "wallRate": 0.5921052631578947,
+        "medianDecidedPlies": 14,
+        "maxPlies": 21,
+        "openingDiversity": 4,
+        "declinedCaptures": 10,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 0,
+        "settledAfterExtension": 0,
+        "reasons": {
+          "win": 32
+        }
+      },
+      "unresolved": [],
+      "medianComputeMs": 59.546056999999564,
+      "closeFinishes": 0,
+      "meanLegalActions": 31.29824561403509
+    },
+    {
+      "mode": "D",
+      "pair": "mixed/defensive",
+      "records": 32,
+      "observedTrace": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 31,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "completed": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 31,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "first5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 9,
+        "repeatedRecords": 23,
+        "maxMultiplicity": 8
+      },
+      "first10": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 26,
+        "repeatedRecords": 6,
+        "maxMultiplicity": 4
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 16,
+        "second": 15
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 16,
+        "second": 15
+      },
+      "physicalCompleted": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 31,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "physicalFirst5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 5,
+        "repeatedRecords": 27,
+        "maxMultiplicity": 16
+      },
+      "censored": 0,
+      "metrics": {
+        "games": 32,
+        "first": 17,
+        "second": 15,
+        "unresolved": 0,
+        "positionWins": [
+          9,
+          23
+        ],
+        "firstRate": 0.53125,
+        "position0Rate": 0.28125,
+        "firstBias": 0.0625,
+        "positionBias": 0.4375,
+        "unresolvedRate": 0,
+        "firstFinalPossible": [
+          0.53125,
+          0.53125
+        ],
+        "positionFinalPossible": [
+          0.28125,
+          0.28125
+        ],
+        "wilsonFirst95Descriptive": [
+          0.36449516999131165,
+          0.6913061300233958
+        ],
+        "wilsonPosition95Descriptive": [
+          0.15564580423200683,
+          0.45374509566504084
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          0.4375,
+          0.625
+        ],
+        "bootstrapPosition95": [
+          0.1875,
+          0.375
+        ],
+        "interaction": {
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              5,
+              3
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              4,
+              4
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          }
+        },
+        "byPolicy": {
+          "mixed": {
+            "appearances": 32,
+            "wins": 25,
+            "losses": 7,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 7,
+            "losses": 25,
+            "unresolved": 0,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 9,
+        "nearVictoryReversals": 9,
+        "wallMoves": 631,
+        "plies": 639,
+        "wallRate": 0.9874804381846636,
+        "medianDecidedPlies": 18,
+        "maxPlies": 46,
+        "openingDiversity": 3,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 12,
+        "settledAfterExtension": 12,
+        "reasons": {
+          "win": 32
+        }
+      },
+      "unresolved": [],
+      "medianComputeMs": 263.24044799999683,
+      "closeFinishes": 20,
+      "meanLegalActions": 37.40219092331768
+    },
+    {
+      "mode": "E",
+      "pair": "search/search",
+      "records": 16,
+      "observedTrace": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 1,
+        "tooShort": 0,
+        "unique": 1,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 12,
+        "repeatedRecords": 4,
+        "maxMultiplicity": 3
+      },
+      "first10": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 0,
+        "second": 1
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 0,
+        "second": 1
+      },
+      "physicalCompleted": {
+        "eligible": 1,
+        "tooShort": 0,
+        "unique": 1,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 16,
+        "tooShort": 0,
+        "unique": 10,
+        "repeatedRecords": 6,
+        "maxMultiplicity": 5
+      },
+      "censored": 15,
+      "metrics": {
+        "games": 16,
+        "first": 0,
+        "second": 1,
+        "unresolved": 15,
+        "positionWins": [
+          1,
+          0
+        ],
+        "firstRate": 0,
+        "position0Rate": 1,
+        "firstBias": 1,
+        "positionBias": 1,
+        "unresolvedRate": 0.9375,
+        "firstFinalPossible": [
+          0,
+          0.9375
+        ],
+        "positionFinalPossible": [
+          0.0625,
+          1
+        ],
+        "wilsonFirst95Descriptive": [
+          0,
+          0.7934506882081973
+        ],
+        "wilsonPosition95Descriptive": [
+          0.2065493117918027,
+          1
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          0,
+          0
+        ],
+        "bootstrapPosition95": [
+          1,
+          1
+        ],
+        "interaction": {
+          "startSlot0/search/search": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/search/search": {
+            "games": 8,
+            "slotWins": [
+              1,
+              0
+            ],
+            "unresolved": 7
+          }
+        },
+        "byPolicy": {
+          "search": {
+            "appearances": 16,
+            "wins": 1,
+            "losses": 0,
+            "unresolved": 15,
+            "selfPlay": 16
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 1,
+        "nearVictoryReversals": 0,
+        "wallMoves": 220,
+        "plies": 221,
+        "wallRate": 0.995475113122172,
+        "medianDecidedPlies": 18,
+        "maxPlies": 18,
+        "openingDiversity": 5,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 16,
+        "settledAfterExtension": 1,
+        "reasons": {
+          "budget-time": 15,
+          "win": 1
+        }
+      },
+      "unresolved": [
+        {
+          "id": "s-232117b48b9063bf281d0247e25ef72250342ee831e93f8519e33073038aeed4",
+          "plies": 14,
+          "quiet": 4,
+          "repeatedStates": 0,
+          "legal": 133
+        },
+        {
+          "id": "s-ad0f21346afc316b647b2d0ab476995c2c07c9fab5208de98891d9fbb497b912",
+          "plies": 14,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 118
+        },
+        {
+          "id": "s-5e31e0bbc6c2188668fa6105285d0e5286968b41ef650f49b742738d5128a261",
+          "plies": 12,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 132
+        },
+        {
+          "id": "s-0c206816ec63b3a2d0e2fdb1038a074c1f519bc8811ea60f14f5d9a3f2727551",
+          "plies": 13,
+          "quiet": 3,
+          "repeatedStates": 0,
+          "legal": 97
+        },
+        {
+          "id": "s-88d1fe005c240e7a09a72d1f87b98973d98766f05a119fe4ac3263b84605914d",
+          "plies": 15,
+          "quiet": 10,
+          "repeatedStates": 0,
+          "legal": 83
+        },
+        {
+          "id": "s-a91437593a861d56b9f79f1b7ca9ab6af6fa27e7585e3cad61984a7195eb7ac1",
+          "plies": 12,
+          "quiet": 7,
+          "repeatedStates": 0,
+          "legal": 89
+        },
+        {
+          "id": "s-26a903b4171a1f9d21169f486a353a428dbb2603e43207a2ba2adbf5d22bf153",
+          "plies": 11,
+          "quiet": 11,
+          "repeatedStates": 0,
+          "legal": 86
+        },
+        {
+          "id": "s-a87e17104796d8ae7cb7c34f0265336fff439cc8df34c6b2d4f5ffe74bd9cda0",
+          "plies": 13,
+          "quiet": 13,
+          "repeatedStates": 0,
+          "legal": 134
+        },
+        {
+          "id": "s-c6e7db33557ea37198e583ae03c10ea7a10b14c124acd481e3b3ba4845dcaec7",
+          "plies": 13,
+          "quiet": 8,
+          "repeatedStates": 0,
+          "legal": 147
+        },
+        {
+          "id": "s-fbe604df55d34c9beb0388dac7cf5c70815947c8eea6ebff231e057586504226",
+          "plies": 14,
+          "quiet": 2,
+          "repeatedStates": 0,
+          "legal": 49
+        },
+        {
+          "id": "s-dfd1dba95a78b2249d3d87137e4e3137d514852f6b33063235cf5134dabd23ef",
+          "plies": 13,
+          "quiet": 3,
+          "repeatedStates": 0,
+          "legal": 117
+        },
+        {
+          "id": "s-2eb6c676c38f19fcaee77839d741878499f70b4008bd48831097538493f32ce9",
+          "plies": 11,
+          "quiet": 4,
+          "repeatedStates": 0,
+          "legal": 98
+        },
+        {
+          "id": "s-2265fc47c3ffda51ad2ac189ba061aeba7707d57185461b32407a9234ccb62a2",
+          "plies": 18,
+          "quiet": 6,
+          "repeatedStates": 0,
+          "legal": 128
+        },
+        {
+          "id": "s-3a87946c15bb4c85b3077de17bed1f35a3cfa5ca7f3d758e86889f6e23c5562c",
+          "plies": 15,
+          "quiet": 10,
+          "repeatedStates": 0,
+          "legal": 137
+        },
+        {
+          "id": "s-585776d7155c03421192f30325ec6589f3e9b378503e2b20a31a760fb3d45d23",
+          "plies": 15,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 92
+        }
+      ],
+      "medianComputeMs": 1743.3198510000366,
+      "closeFinishes": 0,
+      "meanLegalActions": 90.3393665158371
+    },
+    {
+      "mode": "E",
+      "pair": "star/route",
+      "records": 32,
+      "observedTrace": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "first5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 22,
+        "repeatedRecords": 10,
+        "maxMultiplicity": 3
+      },
+      "first10": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 31,
+        "repeatedRecords": 1,
+        "maxMultiplicity": 2
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 16,
+        "second": 16
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 16,
+        "second": 16
+      },
+      "physicalCompleted": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "physicalFirst5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 16,
+        "maxMultiplicity": 5
+      },
+      "censored": 0,
+      "metrics": {
+        "games": 32,
+        "first": 16,
+        "second": 16,
+        "unresolved": 0,
+        "positionWins": [
+          16,
+          16
+        ],
+        "firstRate": 0.5,
+        "position0Rate": 0.5,
+        "firstBias": 0,
+        "positionBias": 0,
+        "unresolvedRate": 0,
+        "firstFinalPossible": [
+          0.5,
+          0.5
+        ],
+        "positionFinalPossible": [
+          0.5,
+          0.5
+        ],
+        "wilsonFirst95Descriptive": [
+          0.33630882754048685,
+          0.6636911724595131
+        ],
+        "wilsonPosition95Descriptive": [
+          0.33630882754048685,
+          0.6636911724595131
+        ],
+        "clusterCount": 4,
+        "bootstrapFirst95": [
+          0.5,
+          0.5
+        ],
+        "bootstrapPosition95": [
+          0.5,
+          0.5
+        ],
+        "interaction": {
+          "startSlot0/star/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/star/route": {
+            "games": 8,
+            "slotWins": [
+              0,
+              8
+            ],
+            "unresolved": 0
+          },
+          "startSlot0/route/star": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          },
+          "startSlot1/route/star": {
+            "games": 8,
+            "slotWins": [
+              8,
+              0
+            ],
+            "unresolved": 0
+          }
+        },
+        "byPolicy": {
+          "star": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 32,
+            "unresolved": 0,
+            "selfPlay": 0
+          },
+          "route": {
+            "appearances": 32,
+            "wins": 32,
+            "losses": 0,
+            "unresolved": 0,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 0,
+        "nearVictoryReversals": 0,
+        "wallMoves": 221,
+        "plies": 430,
+        "wallRate": 0.513953488372093,
+        "medianDecidedPlies": 14,
+        "maxPlies": 22,
+        "openingDiversity": 4,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 19,
+        "settledAfterExtension": 19,
+        "reasons": {
+          "win": 32
+        }
+      },
+      "unresolved": [],
+      "medianComputeMs": 538.72445899999,
+      "closeFinishes": 0,
+      "meanLegalActions": 92.70232558139534
+    },
+    {
+      "mode": "E",
+      "pair": "mixed/defensive",
+      "records": 32,
+      "observedTrace": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 32,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "completed": {
+        "eligible": 0,
+        "tooShort": 0,
+        "unique": 0,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 0
+      },
+      "first5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 22,
+        "repeatedRecords": 10,
+        "maxMultiplicity": 4
+      },
+      "first10": {
+        "eligible": 17,
+        "tooShort": 15,
+        "unique": 17,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 1
+      },
+      "uniqueCompletedOutcomes": {
+        "first": 0,
+        "second": 0
+      },
+      "physicalUniqueCompletedOutcomes": {
+        "first": 0,
+        "second": 0
+      },
+      "physicalCompleted": {
+        "eligible": 0,
+        "tooShort": 0,
+        "unique": 0,
+        "repeatedRecords": 0,
+        "maxMultiplicity": 0
+      },
+      "physicalFirst5": {
+        "eligible": 32,
+        "tooShort": 0,
+        "unique": 16,
+        "repeatedRecords": 16,
+        "maxMultiplicity": 8
+      },
+      "censored": 32,
+      "metrics": {
+        "games": 32,
+        "first": 0,
+        "second": 0,
+        "unresolved": 32,
+        "positionWins": [
+          0,
+          0
+        ],
+        "firstRate": null,
+        "position0Rate": null,
+        "firstBias": 1,
+        "positionBias": 1,
+        "unresolvedRate": 1,
+        "firstFinalPossible": [
+          0,
+          1
+        ],
+        "positionFinalPossible": [
+          0,
+          1
+        ],
+        "wilsonFirst95Descriptive": null,
+        "wilsonPosition95Descriptive": null,
+        "clusterCount": 4,
+        "bootstrapFirst95": null,
+        "bootstrapPosition95": null,
+        "interaction": {
+          "startSlot0/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/mixed/defensive": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot0/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          },
+          "startSlot1/defensive/mixed": {
+            "games": 8,
+            "slotWins": [
+              0,
+              0
+            ],
+            "unresolved": 8
+          }
+        },
+        "byPolicy": {
+          "mixed": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 0,
+            "unresolved": 32,
+            "selfPlay": 0
+          },
+          "defensive": {
+            "appearances": 32,
+            "wins": 0,
+            "losses": 0,
+            "unresolved": 32,
+            "selfPlay": 0
+          }
+        },
+        "repeatedGames": 0,
+        "leadChangeGames": 0,
+        "nearVictoryReversals": 0,
+        "wallMoves": 305,
+        "plies": 305,
+        "wallRate": 1,
+        "medianDecidedPlies": null,
+        "maxPlies": 13,
+        "openingDiversity": 6,
+        "declinedCaptures": 0,
+        "limitations": [
+          "Policy-conditional observational statistics",
+          "Bootstrap clusters complete seeds, preserving AI and seat conditions; few clusters and unresolved selection can give misleadingly narrow intervals",
+          "Initial-slot and turn counts are separate",
+          "Human enjoyment and optimal-play fairness unproven"
+        ]
+      },
+      "budget": {
+        "continued": 32,
+        "settledAfterExtension": 0,
+        "reasons": {
+          "budget-time": 32
+        }
+      },
+      "unresolved": [
+        {
+          "id": "s-d23d92807165820f8e478a58a3865c967a8fd90ec22e90963b9d60572a32a7f5",
+          "plies": 9,
+          "quiet": 2,
+          "repeatedStates": 0,
+          "legal": 92
+        },
+        {
+          "id": "s-ed96fd74879b17d557bcaa468d67577b90b18307e457160babf940c4a35cad27",
+          "plies": 10,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 92
+        },
+        {
+          "id": "s-08bbb538e475ccb5d209b0752a323559f43090e4c20b2e2c156c71fd99b48184",
+          "plies": 10,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 137
+        },
+        {
+          "id": "s-ceb454fa1e594d9864b78daab3326122ba090f9445374c8b3d34e179ba957b1a",
+          "plies": 12,
+          "quiet": 7,
+          "repeatedStates": 0,
+          "legal": 130
+        },
+        {
+          "id": "s-91175054e68e3a0b8c856175701d493b61d2c70bc89fb9b69be085701eb93668",
+          "plies": 11,
+          "quiet": 6,
+          "repeatedStates": 0,
+          "legal": 76
+        },
+        {
+          "id": "s-39bff1c58a6048bd20db79c9b61544bb9d4ee8f96945886b39d56a12fc8eef60",
+          "plies": 8,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 146
+        },
+        {
+          "id": "s-e83c16a2464c5e517fa9e692e7d04d3c64eaf1c2fc2410c7f0d391ebb6304cb3",
+          "plies": 10,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 137
+        },
+        {
+          "id": "s-eff706f6a4c8c9df11c24050e2edd7676b32c1a1b913899564f5ddfbfe8c28bd",
+          "plies": 6,
+          "quiet": 6,
+          "repeatedStates": 0,
+          "legal": 131
+        },
+        {
+          "id": "s-ee96d90b797d6401769fdd16aa2087366351c449d92bd5555dd31312a5e8e16e",
+          "plies": 7,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 93
+        },
+        {
+          "id": "s-93bef80d842d532e260197f60149d137635b24d5fc41ea7cea3191aa6ca4343a",
+          "plies": 7,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 136
+        },
+        {
+          "id": "s-ba8577f7868c85d8664234839a71643e2cd3f9fafe3418b13414242fb207b013",
+          "plies": 9,
+          "quiet": 2,
+          "repeatedStates": 0,
+          "legal": 141
+        },
+        {
+          "id": "s-a04d2203b584f9a596c11b7591614854a3409aeb33409cfae414a8f638ec8e3f",
+          "plies": 9,
+          "quiet": 4,
+          "repeatedStates": 0,
+          "legal": 137
+        },
+        {
+          "id": "s-53621077d4b77d9e70a1a3aa962bfc0a7fd49f67b06b1574c370762f9c05ca6c",
+          "plies": 12,
+          "quiet": 7,
+          "repeatedStates": 0,
+          "legal": 96
+        },
+        {
+          "id": "s-118252d8ee2e9d1fc050523c15e9e5a40dda4c14cf8c778d4fc5e0a6a4a127cf",
+          "plies": 8,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 144
+        },
+        {
+          "id": "s-6e7a30341b30c14ee0466a8e5434111dea5c9a3f1784099534c28f1658ba56af",
+          "plies": 9,
+          "quiet": 4,
+          "repeatedStates": 0,
+          "legal": 149
+        },
+        {
+          "id": "s-a82dbce0fe8c758a98a23ae3db290af8cd1e7272ff51289868a6630a47620b42",
+          "plies": 8,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 135
+        },
+        {
+          "id": "s-82b98a2da13bb5808b3c3f71e9b8573f767692453b228a0211d781b423ed0f44",
+          "plies": 10,
+          "quiet": 10,
+          "repeatedStates": 0,
+          "legal": 82
+        },
+        {
+          "id": "s-86be2df35558e5facdbb35fdd9ebe63e0374f86289ca109a0ea1d2fe260fd1ae",
+          "plies": 11,
+          "quiet": 6,
+          "repeatedStates": 0,
+          "legal": 126
+        },
+        {
+          "id": "s-55deff2fa12b796c9555308273ebcdd1525c27fd608d373c9bb80522995bee37",
+          "plies": 10,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 135
+        },
+        {
+          "id": "s-d84bf6edebd82483ddc1ac2aed4d9f95b89a83e928d91d2431dcb8842e5ddf77",
+          "plies": 11,
+          "quiet": 6,
+          "repeatedStates": 0,
+          "legal": 88
+        },
+        {
+          "id": "s-656a068e587db41d7828268876f3f34e3272e139bd6265119231455e45031fee",
+          "plies": 11,
+          "quiet": 6,
+          "repeatedStates": 0,
+          "legal": 84
+        },
+        {
+          "id": "s-851b095af5830d04743195dd5c66d5b0dfde839c4a45e5c5e450fd0bc57c202a",
+          "plies": 8,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 149
+        },
+        {
+          "id": "s-ea2a1d8920ff9c5f452b19f40234ba0139916c7bc703cd550c74959b05549c0a",
+          "plies": 10,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 180
+        },
+        {
+          "id": "s-236b6cab3091633e0a23bd2146a7b20aa1547f5a35dac21f47b48673ad844d57",
+          "plies": 8,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 138
+        },
+        {
+          "id": "s-0669e9acc2dc5c7d929c3625691ced1a85d280130b4b37a22d29522e88171754",
+          "plies": 10,
+          "quiet": 5,
+          "repeatedStates": 0,
+          "legal": 90
+        },
+        {
+          "id": "s-7363a33ddb6c76bda5e341beca36e79c4a8d35e7542ecf9376370bc881bc440a",
+          "plies": 10,
+          "quiet": 0,
+          "repeatedStates": 0,
+          "legal": 102
+        },
+        {
+          "id": "s-ff90d42ff7f5818661dc18257857cd03aed77c7f6b8d6d9aa5ade6a574f59342",
+          "plies": 8,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 146
+        },
+        {
+          "id": "s-15f045d61a913d2708de88b2fafd6d08246305f351d8f38e9561f2a3fc059d71",
+          "plies": 12,
+          "quiet": 7,
+          "repeatedStates": 0,
+          "legal": 144
+        },
+        {
+          "id": "s-5617f1a73ed8d6ce8b1bdeb3956af9a1a25a6095d680078aa1d19359af29f05f",
+          "plies": 13,
+          "quiet": 8,
+          "repeatedStates": 0,
+          "legal": 45
+        },
+        {
+          "id": "s-3fb50f987190e3a2c469fb1ff1c494a5bcadc9efb82610b040b3b15e3b9aefdc",
+          "plies": 8,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 138
+        },
+        {
+          "id": "s-d5025bdf7622738a58890fb6b0a03485029618098ce45aabbb17cd4e5767b40f",
+          "plies": 11,
+          "quiet": 1,
+          "repeatedStates": 0,
+          "legal": 129
+        },
+        {
+          "id": "s-d09f2c7dc36ef8a3d07f32a690377185e38feab59f310264e54186a827e0ef48",
+          "plies": 9,
+          "quiet": 2,
+          "repeatedStates": 0,
+          "legal": 92
+        }
+      ],
+      "medianComputeMs": 1960.7701040000538,
+      "closeFinishes": 0,
+      "meanLegalActions": 85.97377049180328
+    }
+  ],
+  "limits": [
+    "Unique trajectory outcomes are descriptive, not unbiased win-rate estimates",
+    "Only four seed blocks; fixed board and policy correlation remain",
+    "Censored traces are not completed trajectories, nor draws",
+    "Compute milliseconds are not human playing time",
+    "Legal action count and reversals do not prove human enjoyment",
+    "No rule, board or production CPU changes"
+  ]
+}
