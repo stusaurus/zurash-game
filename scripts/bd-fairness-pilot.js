@@ -4,6 +4,7 @@ import {RESEARCH_LAYOUTS} from '../src/research-layouts.js';
 import {toBoardState} from '../src/geometry.js';
 import {validateBoard,recordBoard} from '../src/board-lab.js';
 import {researchPlans,newResearchGame,advanceResearch,aggregateResearch} from './stall-research.js';
+import {key,apply} from '../src/engine.js';
 const dir=process.env.FAIRNESS_DIAG_REPORT??'reports/fairness-diagnostics';
 const input=JSON.parse(readFileSync(dir+'/BD-candidates.json'));
 const results={version:1,design:'frozen paired seeds; both starters, slots and AI assignments; larger per-game budget to reduce censoring',timeBudgetMs:750,maxPlies:2048,modes:[]};
@@ -21,9 +22,9 @@ for(const mode of input.modes){
   const reasons=Object.fromEntries([...new Set(games.map(g=>g.reason??'none'))].sort().map(reason=>[reason,games.filter(g=>(g.reason??'none')===reason).length]));
   const unresolved=games.filter(g=>g.state.winner===null);
   const tail=unresolved.map(g=>({seed:g.seed,starter:g.starter,positionSwap:g.experiment?.positionSwap,aiSwap:g.experiment?.aiSwap,plies:g.history.length,reason:g.reason??'none',finalScores:g.state.scores,finalPlayers:g.state.players,finalStars:g.state.stars,finalWalls:g.state.walls}));
-  const repeated=games.map(g=>{const counts=new Map();for(const h of g.history){const k=JSON.stringify(h.state??h.after??h);counts.set(k,(counts.get(k)??0)+1);}return {seed:g.seed,unresolved:g.state.winner===null,historyEntries:g.history.length,duplicateHistoryEntries:[...counts.values()].reduce((n,v)=>n+Math.max(0,v-1),0),maxHistoryEntryCount:Math.max(0,...counts.values())};});
+  const repeated=games.map(g=>{const counts=new Map();let state=g.initial;const visit=()=>{const k=key(state);counts.set(k,(counts.get(k)??0)+1);};visit();for(const h of g.history){state=apply(state,h.a);visit();}return {seed:g.seed,unresolved:g.state.winner===null,historyEntries:g.history.length,duplicateStates:[...counts.values()].reduce((n,v)=>n+Math.max(0,v-1),0),maxStateVisits:Math.max(0,...counts.values()),engineRepetitionCount:g.repetitionCount};});
   const clusters=Object.values(tail.reduce((m,g)=>{const k=JSON.stringify({scores:g.finalScores,players:g.finalPlayers,stars:g.finalStars,walls:g.finalWalls});(m[k]??={count:0,example:g}).count++;return m;},{})).sort((a,b)=>b.count-a.count).slice(0,10);
-  const diagnostics={historyEntryRepetition:repeated,unresolvedClusters:clusters,unresolvedSnapshots:tail,medianPlies:lengths[Math.floor(lengths.length/2)],maxPlies:lengths.at(-1),reasons,unresolvedBySeed:Object.fromEntries([...new Set(games.map(g=>g.seed))].sort((a,b)=>a-b).map(seed=>[seed,games.filter(g=>g.seed===seed&&g.state.winner===null).length]))};
+  const diagnostics={stateRepetition:repeated,unresolvedClusters:clusters,unresolvedSnapshots:tail,medianPlies:lengths[Math.floor(lengths.length/2)],maxPlies:lengths.at(-1),reasons,unresolvedBySeed:Object.fromEntries([...new Set(games.map(g=>g.seed))].sort((a,b)=>a-b).map(seed=>[seed,games.filter(g=>g.seed===seed&&g.state.winner===null).length]))};
   modeOut.records.push({diagnostics,label:item.label,change:item.change??null,total:games.length,settled:settled.length,unresolved:games.length-settled.length,firstWins:settled.filter(g=>g.state.winner===g.starter).length,secondWins:settled.filter(g=>g.state.winner!==g.starter).length,summary:aggregateResearch(games)});
  }
  results.modes.push(modeOut);
