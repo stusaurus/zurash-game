@@ -19,6 +19,7 @@ export function replayDiagnosis(g,{independent=false}={}){
  if(sampleAt.has(0))snapshot();
  for(let i=0;i<g.history.length;i++){
   const h=g.history[i],cs=independent?referenceChildren(s):successors(s),c=cs.find(c=>JSON.stringify(c.a)===JSON.stringify(h.a));assert.ok(c,'Illegal recorded action');assert.equal(h.legal,cs.length);assert.equal(h.gain,c.n.scores[s.turn]>s.scores[s.turn]);
+  assert.equal(h.from,s.players[s.turn]);assert.equal(h.wallFrom,h.a.wall?s.walls[h.a.wall.wall]:null);assert.equal(h.canScore,cs.some(c=>c.n.scores[s.turn]>s.scores[s.turn]));assert.equal(h.canWin,cs.some(c=>c.n.winner===s.turn));
   quiet=h.gain?0:quiet+1;longestQuiet=Math.max(longestQuiet,quiet);s=c.n;visits();if(sampleAt.has(i+1))snapshot();
  }
  assert.deepEqual(s,g.state);

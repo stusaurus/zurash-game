@@ -67,7 +67,9 @@ test('stall research displays proven structural issue and retains playable resea
 test('B settlement comparison is explicitly uncertified and playable at 320px',async({page})=>{
  await page.setViewportSize({width:320,height:860});await page.goto('/');await page.locator('#localMode').click();await page.locator('#boardLab > details > summary').click();
  await page.locator('#labBSettlement').click();await expect(page.locator('#labMessage')).toContainText('正式採用なし',{timeout:20000});
- await page.locator('#labSearch').fill('B研究');await expect(page.locator('#labLibrary option')).toHaveCount(2);await page.locator('#labLoad').click();
+ await page.locator('#labSearch').fill('B研究');await expect(page.locator('#labLibrary option')).toHaveCount(4);
+ await page.locator('#labSearch').fill('B位置研究');await expect(page.locator('#labLibrary option')).toHaveCount(1);await page.locator('#labLoad').click();
  await expect(page.locator('#labEvidence')).toContainText('未認定');await expect(page.locator('#labEvidence')).toContainText('AI対局64局');await expect(page.locator('#labEvidence')).toContainText('物理的な初期位置');
+ await expect(page.locator('#labEvidence')).toContainText('1,500ms');
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.locator('#labPlay').click();await expect(page.locator('#boardSpec')).toContainText('未認定');await expect(page.locator('#skip')).toBeEnabled();
 });

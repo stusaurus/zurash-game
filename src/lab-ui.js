@@ -124,7 +124,7 @@ export function mountLab(play) {
  };
  for(const [button,path,message] of [
   ['labStall','mode-continuation-2026-10-23','勝利不能の原因・改善候補・全モードの継続結果'],
-  ['labBSettlement','b-settlement-2026-10-23','Bの決着改善候補。現行・候補は同じ独立条件で比較。正式採用なし']
+  ['labBSettlement','b-followup-2026-10-23','Bの壁・位置・星比較。実験ごとの予算を確認。正式採用なし']
  ])$(button).onclick=async()=>{
   $(button).disabled=true;say('停滞研究の結果を読み込んでいます…');
   try{

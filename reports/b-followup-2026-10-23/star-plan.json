@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "selection": "Additional hypothesis selected only from extended training. Stars-only family; no main followup holdout used for selection.",
+  "trainingHash": "2fcb9dc28acb89abcb4e0971f6c397b96b963f091f1bae473f0910ef787cc790",
+  "ids": [
+    "mode-B",
+    "d-14a01b36b83a263585242f78"
+  ],
+  "seeds": [
+    2330001,
+    2330019,
+    2330033,
+    2330051,
+    2330073,
+    2330087,
+    2330103,
+    2330129
+  ],
+  "pairs": [
+    [
+      "search",
+      "route"
+    ]
+  ],
+  "timeBudgetMs": 900,
+  "maxPlies": 4096,
+  "stage": "B-stars-independent",
+  "limits": [
+    "Separate seed and budget from main followup",
+    "Single supplementary confirmatory comparison; three comparisons across this task need multiplicity correction",
+    "No official adoption"
+  ]
+}

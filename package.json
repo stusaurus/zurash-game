@@ -26,7 +26,10 @@
     "research:modes:report": "node scripts/mode-continuation-report.js",
     "research:b:settlement": "node --max-old-space-size=768 scripts/b-settlement-study.js",
     "research:b:verify": "node --max-old-space-size=768 scripts/b-settlement-study.js --verify",
-    "research:b:report": "node scripts/b-settlement-report.js"
+    "research:b:report": "node scripts/b-settlement-report.js",
+    "research:b:followup": "node --max-old-space-size=768 scripts/b-followup.js && node --max-old-space-size=768 scripts/b-star-check.js && node --max-old-space-size=768 scripts/b-star-check.js --policies",
+    "research:b:followup:verify": "node --max-old-space-size=768 scripts/b-followup.js --verify && node --max-old-space-size=768 scripts/b-star-check.js --verify && node --max-old-space-size=768 scripts/b-star-check.js --verify-policies",
+    "research:b:followup:report": "node scripts/b-followup-report.js"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"
