@@ -1,0 +1,23 @@
+{
+  "timeBudgetMs": 5000,
+  "extraPlies": 48,
+  "selected": [
+    "783d839e62f0ebc6648075a9cdea6e6f4ac48fe98df3d52c216818a4847d0b95",
+    "aa7edae204cee9dd0c464b6cfe9ac7901de1cf51f6a34702ff4dacb5f6789d4a",
+    "dcd13fce67c00250975d5f7ce9abfae5d6feeedbd90d6100200915f99e6354e0",
+    "21952fdf512d6054ba090922dd54c8efbd80eaea05b10fd24e6c23dc04c4b7ac",
+    "bb1e587b66d4d84580311d8785fbea310bafb1a5837a0fbabefb2dd3e4fba9b2",
+    "7b02963341b16cf44f4f1f5a1165cff69fd2212a2ec5b28db819131b43e3af6e",
+    "45047cae4b0b94770254bdd3f1bb0542ad1cd87195debb19378ff6137c75a0bc",
+    "4074b10aaf0afd6535d560a7d0e58b9fc5457bffa9cee1213384b5c406aaf112",
+    "15435c57a09878eae9fd0c5e07e3e913b71004d4e865560e9a969db6ebcfc08d",
+    "a62e23b30dc888fcf4c05f9c942d5f027195e2752411e568f2e78c2ff7239e8f",
+    "ac310761c283693a7cfbd52b37ba4c87d2d7718075ae973f73b709c144d9f58b",
+    "afc3853cd28331c5ac501eafdcd156cf1ade7906150e44e4eaf75aa190f76d11",
+    "255a2e688c38e2adbf6bb15cb26234d04ca9fefc87d172bf8f335ecccb8f73d8",
+    "d4ea3e008fa1cbcba53f3a9c436e269c05f10e5365b413d3fe541fb045e0f7b2",
+    "269b799d8d9d94709a40ed906c8f9552f50ef3bb36238c35995ab170b1491f06",
+    "f03e9689abbd830287c530c325212df1461d44546ec81f2233542e93fa93c310"
+  ],
+  "note": "Supplementary equal additional budget for every time-censored B fork; retains fork IDs, never counted as initial games."
+}
