@@ -25,13 +25,17 @@ export function audit(gs){
  return {records:gs.length,observedTrace:diversity(gs),completed:diversity(decided),first5:diversity(gs,5),first10:diversity(gs,10),uniqueCompletedOutcomes:{first:unique.filter(g=>g.state.winner===g.starter).length,second:unique.filter(g=>g.state.winner!==g.starter).length},physicalUniqueCompletedOutcomes:{first:physicalUnique.filter(g=>g.state.winner===g.starter).length,second:physicalUnique.filter(g=>g.state.winner!==g.starter).length},physicalCompleted:diversity(decided,Infinity,true),physicalFirst5:diversity(gs,5,true),censored:gs.length-decided.length};
 }
 const dir='reports/trajectory-audit-2026-10-23';
-const load=n=>JSON.parse(gunzipSync(readFileSync(`${dir}/${n}.json.gz`)));
+const load=n=>{
+ const p=`${dir}/${n}.json.gz`;if(existsSync(p))return JSON.parse(gunzipSync(readFileSync(p)));
+ if(n==='games')return ['A','B','C','D','E'].flatMap(mode=>JSON.parse(gunzipSync(Buffer.from(readFileSync(`${dir}/games-${mode}.json.gz.b64`,'utf8'),'base64'))));
+ throw Error('Missing archive '+n);
+};
 const save=(n,x)=>writeFileSync(`${dir}/${n}.json.gz`,gzipSync(JSON.stringify(x)));
 export function run(){
  mkdirSync(dir,{recursive:true});
  const plan={source:'c3dd6e176a22e8335e0789732df8c2a9625c7bf1',modes:['A','B','C','D','E'],seeds:[6102301,6102323,6102349,6102371],pairs:[['search','search'],['star','route'],['mixed','defensive']],initialBudgetMs:400,continuationBudgetMs:1200,maxPlies:4096,note:'Exploratory fixed plan. Same-policy aiSwap duplicates omitted before running. Each pair has both physical starts and both starters; heterogeneous pairs also exchange actors. No official adoption.'};
  const pp=`${dir}/plan.json`;if(existsSync(pp))assert.deepEqual(JSON.parse(readFileSync(pp)),plan);else writeFileSync(pp,JSON.stringify(plan,null,2)+'\n');
- let games=existsSync(`${dir}/games.json.gz`)?load('games'):[],known=new Set(games.map(g=>g.id));
+ let games=existsSync(`${dir}/games.json.gz`)||existsSync(`${dir}/games-E.json.gz.b64`)?load('games'):[],known=new Set(games.map(g=>g.id));
  for(const mode of plan.modes){
   const record=recordBoard(toBoardState(RESEARCH_LAYOUTS.find(x=>x.id===mode)),{id:mode,name:mode});
   for(const p of researchPlans(record,{stage:'trajectory-audit-fixed',seeds:plan.seeds,pairs:plan.pairs}).filter(p=>p.pair[0]!==p.pair[1]||!p.aiSwap)){
