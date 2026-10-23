@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "baseCommit": "02d33cf0e8161f90bc68cb7d998d1951451378be",
+  "seed": 711,
+  "domains": [
+    {"name":"rectangle-six","width":3,"height":2,"cells":[0,1,2,3,4,5],"wallCounts":[1,2],"starCounts":[1,2],"target":2,"scorePairs":[[0,0],[1,0],[0,1],[1,1]]},
+    {"name":"square-nine","width":3,"height":3,"cells":[0,1,2,3,4,5,6,7,8],"wallCounts":[1],"starCounts":[1],"target":1,"scorePairs":[[0,0]]},
+    {"name":"masked-ring","width":3,"height":3,"cells":[0,1,2,3,5,6,7,8],"wallCounts":[1],"starCounts":[1],"target":1,"scorePairs":[[0,0]]}
+  ],
+  "horizon":3,
+  "symmetryEvery":127,
+  "limits":[
+    "Exhaustive only within the listed static small-board domains, not all positions of A–E",
+    "Static legal arrangements are not claimed reachable from any official opening",
+    "No forced win within three plies is not proof of permanent safety, a draw, or fairness",
+    "No games or continuations are generated; these are tactical state queries",
+    "The independent oracle imports referenceChildren, never captureRoutes or the research selector"
+  ]
+}
