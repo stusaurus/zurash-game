@@ -8,6 +8,7 @@ on:
       - 'scripts/bd-fairness-candidates.js'
       - 'scripts/bd-fairness-pilot.js'
       - 'scripts/bd-fairness-holdout.js'
+      - 'scripts/bd-fairness-decision.js'
       - 'src/research-layouts.js'
       - '.github/workflows/bd-fairness-diagnostics.yml'
   pull_request:
@@ -36,6 +37,8 @@ jobs:
           node scripts/bd-fairness-pilot.js
           node --check scripts/bd-fairness-holdout.js
           node scripts/bd-fairness-holdout.js
+          node --check scripts/bd-fairness-decision.js
+          node scripts/bd-fairness-decision.js
       - name: Validate output
         run: |
           node --input-type=module -e "import {readFileSync} from 'node:fs'; import assert from 'node:assert/strict'; const r=JSON.parse(readFileSync('reports/fairness-diagnostics/BD-static.json')); assert.deepEqual(r.modes.map(x=>x.id),['B','D']); for(const x of r.modes){assert.equal(x.players.length,2);assert.ok(Number.isFinite(x.base.proxyBias));assert.ok(Number.isFinite(x.swappedProxy.proxyBias));}"
@@ -48,4 +51,5 @@ jobs:
             reports/fairness-diagnostics/BD-candidates.json
             reports/fairness-diagnostics/BD-paired-pilot.json
             reports/fairness-diagnostics/D-holdout.json
+            reports/fairness-diagnostics/BD-decision.json
           retention-days: 30
