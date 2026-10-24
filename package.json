@@ -40,7 +40,9 @@
     "research:guards:followup:verify": "node --max-old-space-size=768 scripts/guard-followup.js --verify",
     "research:b:factorial": "node --max-old-space-size=768 scripts/b-factorial-study.js",
     "research:b:factorial:verify": "node --max-old-space-size=768 scripts/b-factorial-study.js --verify && node scripts/b-factorial-analysis.js --verify-replays",
-    "research:b:factorial:report": "node scripts/b-factorial-report.js"
+    "research:b:factorial:report": "node scripts/b-factorial-report.js",
+    "research:b:performance:verify": "node scripts/b-performance-study.js --verify && node scripts/b-progress-study.js --verify && node scripts/b-progress-study.js --verify-replays",
+    "research:b:performance:report": "node scripts/b-performance-report.js"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"

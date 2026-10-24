@@ -1,0 +1,9 @@
+{
+  "version":1,
+  "reason":"Five of eight old unresolved checkpoints have exactly equal D scores for every evaluated root; seven have no immediate prepare category. All eight settle on longer unchanged-D continuations. Test a tie-only progress heuristic, not a new rule.",
+  "variant":"D-walk: preserve D root set, RNG consumption, immediate wins and unequal minimax values. Among exact highest-value ties only, minimize adjacent-cell BFS distance to a star after own move, respecting walls/other pawn/mask. Walking distance is not a legal slide route proof.",
+  "development":{"source":"old eight D-unresolved checkpoints","variants":["D","D-walk"],"ms":8000,"plies":512,"bothActors":true},
+  "holdout":{"source":"all 32 b-factorial holdout checkpoints; no state used to design D-walk","variants":["D","D-walk"],"ms":4000,"plies":256,"targetActorOnly":true,"opponent":"fixed A from saved checkpoint"},
+  "parameters":"No further tuning or variant selection after these outcomes. Both variants are rerun with identical start/RNG and budgets; rotate variant order. Original outcomes untouched.",
+  "adoption":"Reject default promotion if holdout wins, settlement, safety or cost are not robustly improved. Small diagnostic gains are not human enjoyment or overall strength evidence. Preserve failed candidate data for reproducibility. No production or default D changes."
+}
