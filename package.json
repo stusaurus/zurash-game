@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node --test tests/*.test.js",
     "balance": "node scripts/balance.js",
-    "check": "node --check src/app.js && node --check src/engine.js && node --check src/ai.js && node --check src/cpu-worker.js && node --check scripts/strategy-study.js && node --check scripts/experimental-policies.js && node --check src/route-ai.js && node --check src/geometry.js && node --check src/board-lab.js && node --check src/lab-ui.js && node --check scripts/mask-study.js && node --check scripts/board-discovery.js && node --check scripts/discovery-study.js && node --check scripts/position-followup.js && node --check scripts/discovery-analysis.js && node --check scripts/verify-discovery.js && node --check scripts/audit-unresolved.js && node --check scripts/stall-research.js && node --check scripts/stall-study.js && node --check scripts/verify-stall.js && node --check scripts/stall-report.js && node --check scripts/mode-continuation.js && node --check scripts/mode-continuation-report.js",
+    "check": "node --check src/app.js && node --check src/engine.js && node --check src/ai.js && node --check src/cpu-worker.js && node --check scripts/strategy-study.js && node --check scripts/experimental-policies.js && node --check src/route-ai.js && node --check src/geometry.js && node --check src/board-lab.js && node --check src/lab-ui.js && node --check scripts/mask-study.js && node --check scripts/board-discovery.js && node --check scripts/discovery-study.js && node --check scripts/position-followup.js && node --check scripts/discovery-analysis.js && node --check scripts/verify-discovery.js && node --check scripts/audit-unresolved.js && node --check scripts/stall-research.js && node --check scripts/stall-study.js && node --check scripts/verify-stall.js && node --check scripts/stall-report.js && node --check scripts/mode-continuation.js && node --check scripts/mode-continuation-report.js && node --check scripts/guard-ai.js && node --check scripts/guard-study.js && node --check scripts/guard-followup.js",
     "test:browser": "playwright test",
     "quality:audit": "node scripts/quality-audit.js",
     "quality:layouts": "node scripts/layout-lab.js",
@@ -35,7 +35,12 @@
     "research:trajectory:followup": "node --max-old-space-size=768 scripts/trajectory-followup.js",
     "research:trajectory:followup:verify": "node --max-old-space-size=768 scripts/trajectory-followup.js --verify",
     "research:guards": "node --max-old-space-size=768 scripts/guard-study.js",
-    "research:guards:verify": "node --max-old-space-size=768 scripts/guard-study.js --verify"
+    "research:guards:verify": "node --max-old-space-size=768 scripts/guard-study.js --verify",
+    "research:guards:followup": "node --max-old-space-size=768 scripts/guard-followup.js",
+    "research:guards:followup:verify": "node --max-old-space-size=768 scripts/guard-followup.js --verify",
+    "research:b:factorial": "node --max-old-space-size=768 scripts/b-factorial-study.js",
+    "research:b:factorial:verify": "node --max-old-space-size=768 scripts/b-factorial-study.js --verify && node scripts/b-factorial-analysis.js --verify-replays",
+    "research:b:factorial:report": "node scripts/b-factorial-report.js"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"

@@ -1,0 +1,10 @@
+{
+  "beforeCount": 99,
+  "beforeArchiveSHA256": "0e56e55ef1baddbcbb8347de9efdbe2daf4686062d43012fb431690614e2d10c",
+  "missingIDs": [
+    "67d00ae06814d2e1c4c5803640dfe369f2e0b78fc54de0c79cf00bdccd10cc3b"
+  ],
+  "note": "Only missing frozen IDs resumed; unarchived attempts are excluded, not independent samples.",
+  "afterCount": 100,
+  "afterArchiveSHA256": "80031c1f683b641aee272a51beef79d05cfd0672cedbd55efca17d0449f80a01"
+}

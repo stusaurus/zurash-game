@@ -11,7 +11,7 @@ import {captureRoutes} from '../src/route-ai.js';
 import {successors} from '../src/engine.js';
 
 const actionKey=a=>JSON.stringify(a);
-const physicalKey=s=>JSON.stringify([s.width,s.height,s.playableCells,s.players,s.walls,s.stars,s.scores,s.target,s.turn,s.winner]);
+const physicalKey=s=>JSON.stringify([s.size,s.width,s.height,s.playableCells,s.players,s.walls,s.stars,s.scores,s.target,s.turn,s.winner]);
 const digest=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 export const CONTRACT_SPEC={version:1,baseCommit:'02d33cf0e8161f90bc68cb7d998d1951451378be',seed:711,
  domains:[

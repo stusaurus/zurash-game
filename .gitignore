@@ -4,3 +4,6 @@ test-results/
 dist/
 # Uncompressed intermediate simulation traces; keep reproducible .jsonl.gz files.
 reports/*.jsonl
+# Resumable AI replay caches; the complete verified manifest is committed.
+reports/b-factorial-2026-10-24/ai-replay.json.gz
+reports/b-factorial-2026-10-24/ai-replay-part-*.json.gz

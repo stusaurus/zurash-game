@@ -20,6 +20,12 @@ test('bounded oracle distinguishes horizon exhaustion, terminal victory, and non
  assert.equal(oracle.wins({...s,winner:1},0,3),false);
  assert.equal(oracle.wins(s,0,0),false);
 });
+test('oracle cache separates legacy size-only boards with different one-ply results',()=>{
+ const small={size:3,players:[6,2],walls:[4],stars:[0,8],scores:[0,0],target:1,turn:0,ply:0,winner:null},large={...small,size:4},oracle=makeOracle();
+ assert.equal(oracle.wins(small,0,1),true);
+ assert.equal(oracle.wins(large,0,1),false);
+ assert.equal(makeOracle().wins(large,0,1),false);
+});
 test('masked multiple-wall tactical checks survive reflection and player relabelling',()=>{
  const s={width:3,height:3,playableCells:[0,1,2,3,5,6,7,8],players:[6,2],walls:[1,7],stars:[0,8],scores:[1,1],target:2,turn:0,ply:0,winner:null};
  const original=auditPosition(s);
