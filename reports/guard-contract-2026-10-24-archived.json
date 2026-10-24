@@ -1,0 +1,302 @@
+{
+  "planSHA256": "0987161310deb1f6f124a185e165bbeaa2184d576766f7c52fc99d9e09406114",
+  "sourceSHA256": "051a53b8d8e01bbf1062464e1f317453db2c3fb440eda21f0b5b710364577bff",
+  "cases": [
+    {
+      "caseID": "0aefe3b98cca480ae4431bd823f0ce2a8c3046b7e848106eba82181a9e28d46c",
+      "sourceID": "s-0b4d2e90e939288efd62d6714bfb5d7b119c8babeafc0324d1bb8fd2bfb58360",
+      "stateSHA256": "fec0f90c3eea046f0d6cf0860ab5a038dc46b66faef72aed89b8ac21f77e1b3d",
+      "legal": 74,
+      "safe": 2,
+      "captures": 1,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": true,
+      "retained": 2,
+      "oracle": {
+        "recursiveQueries": 6741,
+        "cachedPositions": 148
+      }
+    },
+    {
+      "caseID": "2199c4e42c88e2f97829453e74692c5ae2cc65fdae4a1ae9e7849a991132df7c",
+      "sourceID": "s-2af7392934217da88f080bdaaded469bb40c99651d4e6928e1f41aa76725e3b9",
+      "stateSHA256": "81a67eb91dbfda1606fd2036010b5952d24c23e83a9cb40d26e360060932a527",
+      "legal": 56,
+      "safe": 6,
+      "captures": 1,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": true,
+      "retained": 6,
+      "oracle": {
+        "recursiveQueries": 3374,
+        "cachedPositions": 111
+      }
+    },
+    {
+      "caseID": "3120d215997b0b5b52bf0c3a3233c4d3f468e1ac015aa4862813e0c32151e2f1",
+      "sourceID": "s-41238231bad7c155748f000227bac52f1f49fc12588c32ed6cca489d34cfe16c",
+      "stateSHA256": "f8e38fa881d64fa040cf40e651f7cc9796c82f4b229e6c529542143ce6a53116",
+      "legal": 89,
+      "safe": 58,
+      "captures": 1,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": true,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 8169,
+        "cachedPositions": 178
+      }
+    },
+    {
+      "caseID": "53e7ec16a1634b561a630e777b6fa18eac0b1576fd9eba87bfc9324786d2d854",
+      "sourceID": "s-56c963cecb6a0d9694aa9493f7662dfad6b34739d9671cacbefab6370ae40110",
+      "stateSHA256": "6986799790c3b31f9ddf45ddb1aa21529acfe6e42081c9a99556bd3ed559a1aa",
+      "legal": 61,
+      "safe": 61,
+      "captures": 0,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": false,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 3880,
+        "cachedPositions": 122
+      }
+    },
+    {
+      "caseID": "2c93787cf5bfb872edcdc64851e153679d30b0bfe7b884b17275ca9b7525b819",
+      "sourceID": "s-808add3885a3be3d3af5f28adb31639fdd6d159bb15b665dbd80867e9b2f2eef",
+      "stateSHA256": "22951271965dfd6ee6292af82f4cac5025379b4714736252c86dc9cc4da9ffa7",
+      "legal": 72,
+      "safe": 4,
+      "captures": 1,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": true,
+      "retained": 4,
+      "oracle": {
+        "recursiveQueries": 5863,
+        "cachedPositions": 140
+      }
+    },
+    {
+      "caseID": "04c4340e0bbc9f0420cf8c55166ec1666beb7c007b13673f0e3d80b036eb7bc6",
+      "sourceID": "s-8a9e487ffac01ab955d5839ac36080c0ce3e7797e95d14b6759f4fe3352c7475",
+      "stateSHA256": "c82726d0272b943fe32a6a23e5bb7fba3e60f4fa0490dfb228a6fc11add8855f",
+      "legal": 61,
+      "safe": 61,
+      "captures": 0,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": false,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 3880,
+        "cachedPositions": 122
+      }
+    },
+    {
+      "caseID": "a38e334857394d0c82b7f8eaa085a2355e59a04e0edb32da5c5f2e8f65b3ac7b",
+      "sourceID": "s-b99f23288eefb5cd3dab13f8d77e4fbd6a9dfbce74e0801a700d7840551fe475",
+      "stateSHA256": "6986799790c3b31f9ddf45ddb1aa21529acfe6e42081c9a99556bd3ed559a1aa",
+      "legal": 61,
+      "safe": 61,
+      "captures": 0,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": false,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 3880,
+        "cachedPositions": 122
+      }
+    },
+    {
+      "caseID": "635fd4a844abf323a4c32d0dbf281c3c10404e4ec53218e0f5c9b44aeb3f8aa5",
+      "sourceID": "s-c429f68d4c29452959ec9a730501a00677c5ebc32c4adc50f9b10f55ebe0a676",
+      "stateSHA256": "c82726d0272b943fe32a6a23e5bb7fba3e60f4fa0490dfb228a6fc11add8855f",
+      "legal": 61,
+      "safe": 61,
+      "captures": 0,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": false,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 3880,
+        "cachedPositions": 122
+      }
+    },
+    {
+      "caseID": "8bc41000d85d35d987c2f465bc84fb2df0c157786d096788ffb8adc66f49fe35",
+      "sourceID": "s-e1a8b02fd3168b963f7a82407eeb2909f0a46d4d2c04dfde0d9dfb9c36ca6b95",
+      "stateSHA256": "c82726d0272b943fe32a6a23e5bb7fba3e60f4fa0490dfb228a6fc11add8855f",
+      "legal": 61,
+      "safe": 61,
+      "captures": 0,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": false,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 3880,
+        "cachedPositions": 122
+      }
+    },
+    {
+      "caseID": "4fc2f1d2d3253bf852716b7e96472e7fba10e97347213b1bee1dfcd4a0318442",
+      "sourceID": "s-14edebc057fb143898b432b6daef5fac0bc796dfea51a3120ad0a2b720a97c2f",
+      "stateSHA256": "e6876cfc1cdd929a0420677b724f6aac116b52f33fb7fb421c6ccde5253a5e87",
+      "legal": 95,
+      "safe": 62,
+      "captures": 1,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": true,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 9794,
+        "cachedPositions": 190
+      }
+    },
+    {
+      "caseID": "6d1b5e9415b7d619d7d47da5b234d45bb402d9fe9a78cba63c1f4bf55a44ab8a",
+      "sourceID": "s-229e5367d640713612eceb547b25f067b3b7ddebef7771565798687bfdeb5c24",
+      "stateSHA256": "bf8a3fe37dccd693c318c83bae6aa5d91b23b3afc3c1e4505e64b07ed481ec5e",
+      "legal": 89,
+      "safe": 58,
+      "captures": 1,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": true,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 8690,
+        "cachedPositions": 178
+      }
+    },
+    {
+      "caseID": "9c0e0d227c88251b8bd691b02fe1fbfccb2d5be40a7a91b296b2a6238fd30ab0",
+      "sourceID": "s-34dd6e74ee293613aea74fdb7f92132687e11a5239d1ca82435cc69f42f2fa19",
+      "stateSHA256": "18262e0e16ddfd1df909a816a23e676acb760df6853b3959f1d3178c9c1634ed",
+      "legal": 59,
+      "safe": 59,
+      "captures": 0,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": false,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 3198,
+        "cachedPositions": 118
+      }
+    },
+    {
+      "caseID": "8a271979afc940d47630611088f7dda28b87f3d4079775a7cf560cf8f1cfa07b",
+      "sourceID": "s-55b941185a8dceb8055a32001cf85e7ba936d636c54b03e1b8b0b4874edd5751",
+      "stateSHA256": "1ce0fe17dd2c928c3eb41d6135e784cfdac5b9648ad839fb3e10e530df91316f",
+      "legal": 93,
+      "safe": 93,
+      "captures": 0,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": false,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 6469,
+        "cachedPositions": 186
+      }
+    },
+    {
+      "caseID": "1413fccd17ed4bbdc5a319190ef4823ee1dab015351beb2ae9de19d20f38d8f5",
+      "sourceID": "s-297c1795407ef033f898524262dede185a9690a7df7ee10651e8bb0bbbc15e31",
+      "stateSHA256": "632802d203638c02960e5d2ec61746533876fa5d6580bf99ad98881fc6a46493",
+      "legal": 87,
+      "safe": 87,
+      "captures": 0,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": false,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 6188,
+        "cachedPositions": 174
+      }
+    },
+    {
+      "caseID": "77191170c93fb5248b7955b1ba2405c06183917c58c9058edf8a8cdaa37b5b03",
+      "sourceID": "s-44e08b02e58f8185c82433047cc6ae928c3513b56a956e4bbf62a426f5aaa1b3",
+      "stateSHA256": "451de5b4bace42ed9f79c2f67473d38567c109b67b84409c01de5af363b643d0",
+      "legal": 96,
+      "safe": 96,
+      "captures": 0,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": false,
+      "retained": 10,
+      "oracle": {
+        "recursiveQueries": 5654,
+        "cachedPositions": 192
+      }
+    },
+    {
+      "caseID": "6a6b808c9531aecd2e6da57aaebef730c74f9675628a898fdcaf877bd1fb8847",
+      "sourceID": "s-62f56a557a1dbc0e292d84685bb3879610903152302f1b5cb5a5b4decfd35f17",
+      "stateSHA256": "d6116cd014ee7a0d28ec81ffb1ef9cb79ad487b5fca143eed2d057e0c7789848",
+      "legal": 62,
+      "safe": 62,
+      "captures": 0,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": false,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 4282,
+        "cachedPositions": 124
+      }
+    },
+    {
+      "caseID": "b7d558bf6b4f1ee8d08ff57decce768e29edfa2214f0d9772211f387eca45b79",
+      "sourceID": "s-b677c5393e26a46931eef591f7150f64b8809d64f37c3e0b940a123186e15945",
+      "stateSHA256": "6ffda05d2ef866e115d68a32fd049754522ca73d142834bdbb453864d7a7f718",
+      "legal": 108,
+      "safe": 108,
+      "captures": 0,
+      "forced": null,
+      "certificatePlies": null,
+      "canForce": false,
+      "hasSafetyChoice": false,
+      "retained": 8,
+      "oracle": {
+        "recursiveQueries": 7830,
+        "cachedPositions": 216
+      }
+    }
+  ],
+  "mismatches": 0,
+  "newInitialGames": 0,
+  "limits": [
+    "Retrospective tactical correctness checks, not unused holdout games",
+    "The archived source and all 17 checkpoints are kept unchanged",
+    "No games or continuations are generated and no fairness win rate is estimated"
+  ]
+}

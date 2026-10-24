@@ -1,0 +1,22 @@
+{
+  "version":1,
+  "baseCommit":"2cf2c34ac1baa5059772adfe4475a2c4723d10af",
+  "board":"B",
+  "extension":{"source":"reports/b-performance-2026-10-24","counts":{"A":10,"D":14},"stagesMs":[8000,24000,64000],"extraPlies":8192},
+  "selfSeeds":[2424001,2424023,2424049,2424071,2424093,2424117,2424141,2424167,2424191,2424213,2424239,2424263],
+  "selfPairs":[["D","D"],["D-walk","D-walk"],["D","D-walk"],["D-walk","D"]],
+  "panelSeeds":[2434001,2434023,2434049,2434071,2434093,2434117,2434141,2434167],
+  "panelTargets":["D","D-walk"],
+  "panelOpponents":["A","star","route","defensive"],
+  "cross":"Each pair crosses starter 0/1 and physical position swap false/true. Self:192 new games. Panel:256 new games, target actor0 and opponent actor1; both starts and both physical seats are crossed, without redundant actor-label duplication. Target D and D-walk use identical seed/RNG and opponents.",
+  "freshStagesMs":[3000,9000],
+  "freshExtraPlies":2048,
+  "moveBudget":{"maxLeaves":8192,"maxMs":1500},
+  "tieVariants":["D","D-walk","D-repeat","D-victory"],
+  "tieDevelopment":{"source":"eight original D-unresolved checkpoints from b-factorial","ms":8000,"plies":512,"bothActors":true},
+  "tieHoldout":{"source":"one new D/D trajectory per self seed, swap=false starter=0. First pre-move state with ply>=16 and quiet>=8, else first ply>=12, else last pre-move state. No variant outcomes used for selection; exclude physical duplicates and development states.","ms":4000,"plies":256,"bothActors":true},
+  "statistics":{"seed":2424999,"bootstrapSamples":4000,"unit":"seed block, preserving paired roles and positions","primary":["D-walk self settlement minus D self settlement","mixed D-walk versus D observed win-indicator difference"],"secondary":"Paired observed wins and settlement versus each fixed panel opponent, exploratory. Unresolved always separate. Report all observed prefix lengths plus censoring bounds and restricted mean plies at horizon256.","strengthTolerance":0.1},
+  "adoption":"No default/production promotion unless independent self settlement improves robustly, mixed strength lower95% net-win difference is above -0.10, panel safety/strength does not show material worsening and resource cost is acceptable. The 0.10 tolerance is an exploratory screening threshold, not established noninferiority. Human fun and real-device performance untested. Tie variants are diagnostics, not automatically adopted.",
+  "longGameTags":{"plies":256,"quiet":128,"loopFraction":0.1,"note":"Descriptive tags, not new stopping rules or proof of forced defense"},
+  "limits":["Protocol fixed in local Git before new outcomes, not external preregistration","Old continuations, new games, checkpoint forks and AI replays counted separately","Time/plies/memory caps remain unresolved, never official draws","Parallel workers share 8CPU/8GiB host; timing and cumulative RSS descriptive","No tuning after independent outcomes","All tie variants keep D root set, RNG, original leaf evaluator and unequal root values","No official rules, board, src, production CPU, images, modes A-E, merge or deployment changes"]
+}

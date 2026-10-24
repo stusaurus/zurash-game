@@ -1,0 +1,197 @@
+{
+  "state": {
+    "width": 9,
+    "height": 9,
+    "playableCells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "target": 3,
+    "walls": [
+      48,
+      39,
+      61,
+      63,
+      67,
+      70,
+      8,
+      9,
+      40,
+      30
+    ],
+    "stars": [
+      12,
+      14
+    ],
+    "players": [
+      72,
+      80
+    ],
+    "scores": [
+      1,
+      2
+    ],
+    "turn": 0,
+    "ply": 37,
+    "winner": null
+  },
+  "checkpointSHA256": "c273c6cf29ac11781fa6247a8cd07018ba568a0f7eade02e98ad07993550cefe",
+  "checkpointHashSchema": "source-and-policy-state-v1",
+  "sameRootSets": true,
+  "choices": [
+    {
+      "arm": "B",
+      "action": {
+        "wall": {
+          "wall": 9,
+          "to": 21
+        },
+        "dir": 1
+      },
+      "text": "壁30→21・駒72→79",
+      "scores": [
+        {
+          "action": {
+            "wall": {
+              "wall": 9,
+              "to": 21
+            },
+            "dir": 1
+          },
+          "root": -700,
+          "worst": -700,
+          "value": -700
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 0
+            },
+            "dir": 1
+          },
+          "root": -700,
+          "worst": -700,
+          "value": -700
+        }
+      ]
+    },
+    {
+      "arm": "D",
+      "action": {
+        "wall": {
+          "wall": 7,
+          "to": 0
+        },
+        "dir": 1
+      },
+      "text": "壁9→0・駒72→79",
+      "scores": [
+        {
+          "action": {
+            "wall": {
+              "wall": 9,
+              "to": 21
+            },
+            "dir": 1
+          },
+          "root": -700,
+          "worst": -880,
+          "value": -858.4
+        },
+        {
+          "action": {
+            "wall": {
+              "wall": 7,
+              "to": 0
+            },
+            "dir": 1
+          },
+          "root": -700,
+          "worst": -700,
+          "value": -700
+        }
+      ]
+    }
+  ],
+  "note": "Static same-state comparison of B versus D at first shared continuation. Does not prove changing only this isolated move wins."
+}

@@ -1,0 +1,13 @@
+{
+  "version":1,
+  "source":"reports/guard-study-2026-10-23/cases.json.gz",
+  "sourceSHA256":"051a53b8d8e01bbf1062464e1f317453db2c3fb440eda21f0b5b710364577bff",
+  "expectedCases":17,
+  "selection":"Every checkpoint in the existing 17-case archive; no selection by new audit outcome",
+  "horizon":3,
+  "limits":[
+    "Retrospective tactical correctness checks, not unused holdout games",
+    "The archived source and all 17 checkpoints are kept unchanged",
+    "No games or continuations are generated and no fairness win rate is estimated"
+  ]
+}

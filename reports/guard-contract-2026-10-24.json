@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "specSHA256": "3330b556ba954d2b9549ce2db5016b46814700b764a1f294f3b0653e6d478d9f",
+  "domains": [
+    {
+      "name": "rectangle-six",
+      "positions": 7392,
+      "transitions": 13696,
+      "captureCertificates": 10432,
+      "immediateWins": 2368,
+      "threePlyWins": 440,
+      "noForcedWinWithinThree": 4584,
+      "safetyChoices": 736,
+      "noLegalActions": 352,
+      "symmetryChecks": 174,
+      "resultSHA256": "0f0794cbbb989037f108b323055df5b1358b80cb46759affeabdd0eedb237a0e",
+      "oracle": {
+        "recursiveQueries": 23674,
+        "cachedPositions": 6890
+      }
+    },
+    {
+      "name": "square-nine",
+      "positions": 5856,
+      "transitions": 30736,
+      "captureCertificates": 4512,
+      "immediateWins": 2256,
+      "threePlyWins": 1216,
+      "noForcedWinWithinThree": 2384,
+      "safetyChoices": 1312,
+      "noLegalActions": 0,
+      "symmetryChecks": 138,
+      "resultSHA256": "2d89534fdfca235d20e1e6460a27ade7bdf7d6750b5f1d4e154ad2a02fa7c3de",
+      "oracle": {
+        "recursiveQueries": 53113,
+        "cachedPositions": 8558
+      }
+    },
+    {
+      "name": "masked-ring",
+      "positions": 3040,
+      "transitions": 9584,
+      "captureCertificates": 1984,
+      "immediateWins": 992,
+      "threePlyWins": 336,
+      "noForcedWinWithinThree": 1712,
+      "safetyChoices": 464,
+      "noLegalActions": 0,
+      "symmetryChecks": 69,
+      "resultSHA256": "f4c49b80bed75dd83e67134625d394d05aadb7d7a789b0b2d8d3a2ed6b3b37ad",
+      "oracle": {
+        "recursiveQueries": 15771,
+        "cachedPositions": 3302
+      }
+    }
+  ],
+  "positions": 16288,
+  "mismatches": 0,
+  "newInitialGames": 0,
+  "productionChanges": 0,
+  "elapsedMs": 3248.985807,
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "limits": [
+    "Exhaustive only within the listed static small-board domains, not all positions of A–E",
+    "Static legal arrangements are not claimed reachable from any official opening",
+    "No forced win within three plies is not proof of permanent safety, a draw, or fairness",
+    "No games or continuations are generated; these are tactical state queries",
+    "The independent oracle imports referenceChildren, never captureRoutes or the research selector"
+  ]
+}
