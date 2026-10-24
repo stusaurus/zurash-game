@@ -42,7 +42,9 @@
     "research:b:factorial:verify": "node --max-old-space-size=768 scripts/b-factorial-study.js --verify && node scripts/b-factorial-analysis.js --verify-replays",
     "research:b:factorial:report": "node scripts/b-factorial-report.js",
     "research:b:performance:verify": "node scripts/b-performance-study.js --verify && node scripts/b-progress-study.js --verify && node scripts/b-progress-study.js --verify-replays",
-    "research:b:performance:report": "node scripts/b-performance-report.js"
+    "research:b:performance:report": "node scripts/b-performance-report.js",
+    "research:b:walk:verify": "node --max-old-space-size=768 scripts/d-walk-study.js --verify && node scripts/d-walk-analysis.js --verify",
+    "research:b:walk:report": "node scripts/d-walk-report.js"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"
