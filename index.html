@@ -66,7 +66,7 @@
         </div>
         </div>
         <p id="lastMove" class="last-move" aria-live="polite" hidden></p>
-        <p id="learningStatus" role="status" hidden></p>
+        <p id="learningStatus" role="status" hidden></p><button id="learningUnresolved" hidden>未決着として記録して再戦</button><p id="learningUnresolvedConfirm" hidden>この対局を未決着として記録し、新しい対局を始めます。<button id="learningUnresolvedYes">記録して再戦</button><button id="learningUnresolvedNo">続ける</button></p>
         <div id="directions" class="directions" aria-label="滑る方向"></div>
         <div class="actions">
           <button id="undo">↶ 戻る</button
@@ -144,7 +144,7 @@
           <option value="learning">学習</option>
         </select>
       </label>
-      <section id="learningOptions" hidden><p id="learningStats"></p><p>「ふつう」から始めて、あなたの手の傾向を覚えます。学習対戦では「戻る」は使えません。この端末・同じブラウザにだけ保存します。あなたの手の傾向を覚えますが、毎回強くなる保証はありません。学習対戦の終局を1回だけ記録し、途中でやめた対局は戦績にも学習にも加えません。ブラウザのデータ消去でも学習と戦績は消えます。</p><button id="learningReset" type="button">学習と戦績をリセット</button><p id="learningResetConfirm" hidden>すべての学習と戦績を消します。<button id="learningResetYes" type="button">消して最初から</button><button id="learningResetNo" type="button">やめる</button></p></section>
+      <section id="learningOptions" hidden><p id="learningStats"></p><p>「ふつう」から始めて、あなたの手の傾向を覚えます。学習対戦では「戻る」は使えません。この端末・同じブラウザにだけ保存します。あなたの手の傾向を覚えますが、毎回強くなる保証はありません。学習対戦の終局を1回だけ記録し、途中で閉じただけの対局は記録しません。「未決着として記録して再戦」で確認した対局は、未決着と手の傾向を記録します。ブラウザのデータ消去でも学習と戦績は消えます。</p><button id="learningReset" type="button">学習と戦績をリセット</button><p id="learningResetConfirm" hidden>すべての学習と戦績を消します。<button id="learningResetYes" type="button">消して最初から</button><button id="learningResetNo" type="button">やめる</button></p></section>
       <div id="boardLab"></div>
       <p>開始すると、進行中の対戦はリセットされます。</p>
       <button id="start" class="primary">対戦をはじめる</button>

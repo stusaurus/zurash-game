@@ -46,12 +46,16 @@ const playtest = new URLSearchParams(location.search).get('playtest') === '1'
 let learningTurns=[], learningCounted=false;
 const learningStore=openLearning({getItem:k=>localStorage.getItem(k),setItem:(k,v)=>localStorage.setItem(k,v),removeItem:k=>localStorage.removeItem(k)});
 function renderLearning(){
- const m=learningStore.model, text=`あなたの学習対戦：${m.wins}勝 ${m.losses}敗 · ${m.samples}手を学習。${learningStore.warning}`;
+ const m=learningStore.model, text=`あなたの学習対戦：${m.wins}勝 ${m.losses}敗 ${m.draws}引き分け・未決着 / 計${m.total}局 · ${m.samples}手を学習。${learningStore.warning}`;
  $('learningStats').textContent=text;$('learningStatus').textContent=text;
  $('learningStatus').hidden=!(mode==='cpu'&&activeSettings.level==='learning');
+ $('learningUnresolved').hidden=!(mode==='cpu'&&activeSettings.level==='learning'&&state?.winner===null&&!learningCounted);
  $('learningOptions').hidden=$('cpuLevel').value!=='learning';
 }
 $('cpuLevel').addEventListener('change',renderLearning);
+$('learningUnresolved').onclick=()=>{$('learningUnresolvedConfirm').hidden=false;};
+$('learningUnresolvedNo').onclick=()=>{$('learningUnresolvedConfirm').hidden=true;};
+$('learningUnresolvedYes').onclick=()=>{if(mode!=='cpu'||activeSettings.level!=='learning'||learningCounted||state.winner!==null)return;learningCounted=true;learningStore.finish(learningTurns,null);reset();};
 $('learningReset').onclick=()=>{$('learningResetConfirm').hidden=false;};
 $('learningResetNo').onclick=()=>{$('learningResetConfirm').hidden=true;};
 $('learningResetYes').onclick=()=>{const cleared=learningStore.reset();$('learningResetConfirm').hidden=true;if(cleared&&mode==='cpu'&&activeSettings.level==='learning')reset();renderLearning();};
@@ -360,6 +364,7 @@ function clearCelebration() {
   $("celebration").replaceChildren();
 }
 function reset() {
+  $("learningUnresolvedConfirm").hidden=true;
   playtest?.reset();
   clearCelebration();
   epoch++;

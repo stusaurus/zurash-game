@@ -1,0 +1,142 @@
+[
+  {
+    "mode": "A",
+    "adaptationSeeds": [
+      519010,
+      519011
+    ],
+    "heldOutSeeds": [
+      519012,
+      519013
+    ],
+    "loss": [
+      {
+        "samples": 59,
+        "logLoss": 1.93928353876241,
+        "heldOutMoves": 24
+      },
+      {
+        "samples": 75,
+        "logLoss": 1.9333298191896027,
+        "heldOutMoves": 24
+      },
+      {
+        "samples": 84,
+        "logLoss": 1.9351652719059815,
+        "heldOutMoves": 24
+      }
+    ]
+  },
+  {
+    "mode": "B",
+    "adaptationSeeds": [
+      519010,
+      519011
+    ],
+    "heldOutSeeds": [
+      519012,
+      519013
+    ],
+    "loss": [
+      {
+        "samples": 70,
+        "logLoss": 1.1910270283686244,
+        "heldOutMoves": 31
+      },
+      {
+        "samples": 73,
+        "logLoss": 1.1633468322528087,
+        "heldOutMoves": 31
+      },
+      {
+        "samples": 83,
+        "logLoss": 1.1642138836858502,
+        "heldOutMoves": 31
+      }
+    ]
+  },
+  {
+    "mode": "C",
+    "adaptationSeeds": [
+      519010,
+      519011
+    ],
+    "heldOutSeeds": [
+      519012,
+      519013
+    ],
+    "loss": [
+      {
+        "samples": 16,
+        "logLoss": 2.5012268231717316,
+        "heldOutMoves": 8
+      },
+      {
+        "samples": 20,
+        "logLoss": 2.3976379260877296,
+        "heldOutMoves": 8
+      },
+      {
+        "samples": 24,
+        "logLoss": 2.3132837271848836,
+        "heldOutMoves": 8
+      }
+    ]
+  },
+  {
+    "mode": "D",
+    "adaptationSeeds": [
+      519010,
+      519011
+    ],
+    "heldOutSeeds": [
+      519012,
+      519013
+    ],
+    "loss": [
+      {
+        "samples": 25,
+        "logLoss": 1.5899416180366714,
+        "heldOutMoves": 11
+      },
+      {
+        "samples": 36,
+        "logLoss": 1.5735828509624774,
+        "heldOutMoves": 11
+      },
+      {
+        "samples": 41,
+        "logLoss": 1.542142230995683,
+        "heldOutMoves": 11
+      }
+    ]
+  },
+  {
+    "mode": "E",
+    "adaptationSeeds": [
+      519010,
+      519011
+    ],
+    "heldOutSeeds": [
+      519012,
+      519013
+    ],
+    "loss": [
+      {
+        "samples": 48,
+        "logLoss": 1.36047076035573,
+        "heldOutMoves": 23
+      },
+      {
+        "samples": 57,
+        "logLoss": 1.3530292017960666,
+        "heldOutMoves": 23
+      },
+      {
+        "samples": 62,
+        "logLoss": 1.3611100063700032,
+        "heldOutMoves": 23
+      }
+    ]
+  }
+]

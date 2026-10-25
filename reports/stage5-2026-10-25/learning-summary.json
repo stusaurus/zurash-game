@@ -1,0 +1,542 @@
+[
+  {
+    "mode": "A",
+    "profile": "star",
+    "samples": 59,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 2,
+      "humanWins": 2,
+      "unresolved": 0,
+      "cpuScore": 9,
+      "humanScore": 13,
+      "featureLogLoss": 1.8426802272799219,
+      "medianMs": 0.4803200000000061,
+      "p90Ms": 0.8100929999999948
+    },
+    "trained": {
+      "cpuWins": 2,
+      "humanWins": 2,
+      "unresolved": 0,
+      "cpuScore": 11,
+      "humanScore": 14,
+      "featureLogLoss": 1.7947694550652573,
+      "medianMs": 2.120228999999995,
+      "p90Ms": 6.003648000000055
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "A",
+    "profile": "wall",
+    "samples": 59,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 1,
+      "humanWins": 3,
+      "unresolved": 0,
+      "cpuScore": 6,
+      "humanScore": 14,
+      "featureLogLoss": 1.9274636456151837,
+      "medianMs": 0.4088730000000851,
+      "p90Ms": 0.7646340000000009
+    },
+    "trained": {
+      "cpuWins": 1,
+      "humanWins": 3,
+      "unresolved": 0,
+      "cpuScore": 10,
+      "humanScore": 15,
+      "featureLogLoss": 1.7351666218609065,
+      "medianMs": 2.2048509999999624,
+      "p90Ms": 7.1371959999999035
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "A",
+    "profile": "defense",
+    "samples": 44,
+    "completedTraining": 3,
+    "cold": {
+      "cpuWins": 0,
+      "humanWins": 3,
+      "unresolved": 1,
+      "cpuScore": 4,
+      "humanScore": 14,
+      "featureLogLoss": 1.4568568248141587,
+      "medianMs": 0.4963129999996454,
+      "p90Ms": 0.771987000000081
+    },
+    "trained": {
+      "cpuWins": 0,
+      "humanWins": 2,
+      "unresolved": 2,
+      "cpuScore": 7,
+      "humanScore": 11,
+      "featureLogLoss": 1.2435178310426063,
+      "medianMs": 3.232991000000766,
+      "p90Ms": 5.167987999999241
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "A",
+    "profile": "switch",
+    "samples": 59,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 2,
+      "humanWins": 2,
+      "unresolved": 0,
+      "cpuScore": 9,
+      "humanScore": 13,
+      "featureLogLoss": 1.8426802272799219,
+      "medianMs": 0.41401000000041677,
+      "p90Ms": 0.7327669999995123
+    },
+    "trained": {
+      "cpuWins": 2,
+      "humanWins": 2,
+      "unresolved": 0,
+      "cpuScore": 11,
+      "humanScore": 14,
+      "featureLogLoss": 1.7947694550652573,
+      "medianMs": 1.6620889999994688,
+      "p90Ms": 4.718135000000984
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "B",
+    "profile": "star",
+    "samples": 70,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 0,
+      "humanWins": 4,
+      "unresolved": 0,
+      "cpuScore": 2,
+      "humanScore": 12,
+      "featureLogLoss": 2.245780463677899,
+      "medianMs": 0.841470000001209,
+      "p90Ms": 1.7195549999996729
+    },
+    "trained": {
+      "cpuWins": 1,
+      "humanWins": 3,
+      "unresolved": 0,
+      "cpuScore": 5,
+      "humanScore": 11,
+      "featureLogLoss": 1.598984510188433,
+      "medianMs": 8.810843999999634,
+      "p90Ms": 13.081178999998883
+    },
+    "changedTraces": 2
+  },
+  {
+    "mode": "B",
+    "profile": "wall",
+    "samples": 59,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 1,
+      "humanWins": 3,
+      "unresolved": 0,
+      "cpuScore": 4,
+      "humanScore": 11,
+      "featureLogLoss": 1.5637131990559894,
+      "medianMs": 0.9195670000008249,
+      "p90Ms": 1.3028309999990597
+    },
+    "trained": {
+      "cpuWins": 1,
+      "humanWins": 3,
+      "unresolved": 0,
+      "cpuScore": 5,
+      "humanScore": 11,
+      "featureLogLoss": 1.5922719697895158,
+      "medianMs": 8.22128199999861,
+      "p90Ms": 13.363871999999901
+    },
+    "changedTraces": 2
+  },
+  {
+    "mode": "B",
+    "profile": "defense",
+    "samples": 79,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 0,
+      "humanWins": 3,
+      "unresolved": 1,
+      "cpuScore": 2,
+      "humanScore": 11,
+      "featureLogLoss": 1.4881815737086284,
+      "medianMs": 0.8616689999980736,
+      "p90Ms": 1.600362999997742
+    },
+    "trained": {
+      "cpuWins": 0,
+      "humanWins": 2,
+      "unresolved": 2,
+      "cpuScore": 2,
+      "humanScore": 10,
+      "featureLogLoss": 1.0317434952372222,
+      "medianMs": 6.6359730000003765,
+      "p90Ms": 11.771715999999287
+    },
+    "changedTraces": 2
+  },
+  {
+    "mode": "B",
+    "profile": "switch",
+    "samples": 70,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 0,
+      "humanWins": 4,
+      "unresolved": 0,
+      "cpuScore": 2,
+      "humanScore": 12,
+      "featureLogLoss": 2.245780463677899,
+      "medianMs": 0.8195269999996526,
+      "p90Ms": 1.5995240000011108
+    },
+    "trained": {
+      "cpuWins": 0,
+      "humanWins": 4,
+      "unresolved": 0,
+      "cpuScore": 4,
+      "humanScore": 12,
+      "featureLogLoss": 1.8209140622441,
+      "medianMs": 7.568678999999975,
+      "p90Ms": 12.392847999999503
+    },
+    "changedTraces": 2
+  },
+  {
+    "mode": "C",
+    "profile": "star",
+    "samples": 16,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 0,
+      "humanWins": 4,
+      "unresolved": 0,
+      "cpuScore": 0,
+      "humanScore": 12,
+      "featureLogLoss": 3.562576906342762,
+      "medianMs": 1.269319999999425,
+      "p90Ms": 1.4843609999988985
+    },
+    "trained": {
+      "cpuWins": 0,
+      "humanWins": 4,
+      "unresolved": 0,
+      "cpuScore": 2,
+      "humanScore": 12,
+      "featureLogLoss": 2.223186146484033,
+      "medianMs": 6.60967299999902,
+      "p90Ms": 14.370780000001105
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "C",
+    "profile": "wall",
+    "samples": 16,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 0,
+      "humanWins": 4,
+      "unresolved": 0,
+      "cpuScore": 0,
+      "humanScore": 12,
+      "featureLogLoss": 3.562576906342762,
+      "medianMs": 1.4834299999965879,
+      "p90Ms": 2.161455000001297
+    },
+    "trained": {
+      "cpuWins": 0,
+      "humanWins": 4,
+      "unresolved": 0,
+      "cpuScore": 2,
+      "humanScore": 12,
+      "featureLogLoss": 2.223186146484033,
+      "medianMs": 7.0298320000001695,
+      "p90Ms": 16.42095799999879
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "C",
+    "profile": "defense",
+    "samples": 32,
+    "completedTraining": 2,
+    "cold": {
+      "cpuWins": 0,
+      "humanWins": 4,
+      "unresolved": 0,
+      "cpuScore": 0,
+      "humanScore": 12,
+      "featureLogLoss": 2.6621060289275653,
+      "medianMs": 1.3680480000039097,
+      "p90Ms": 1.7525040000036824
+    },
+    "trained": {
+      "cpuWins": 0,
+      "humanWins": 3,
+      "unresolved": 1,
+      "cpuScore": 4,
+      "humanScore": 11,
+      "featureLogLoss": 1.5682616884621035,
+      "medianMs": 10.600500000000466,
+      "p90Ms": 15.132566000000224
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "C",
+    "profile": "switch",
+    "samples": 16,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 0,
+      "humanWins": 4,
+      "unresolved": 0,
+      "cpuScore": 0,
+      "humanScore": 12,
+      "featureLogLoss": 3.562576906342762,
+      "medianMs": 1.128991000005044,
+      "p90Ms": 1.3872380000029807
+    },
+    "trained": {
+      "cpuWins": 0,
+      "humanWins": 4,
+      "unresolved": 0,
+      "cpuScore": 2,
+      "humanScore": 12,
+      "featureLogLoss": 2.223186146484033,
+      "medianMs": 6.169823999996879,
+      "p90Ms": 12.881579000000784
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "D",
+    "profile": "star",
+    "samples": 25,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 3,
+      "humanWins": 1,
+      "unresolved": 0,
+      "cpuScore": 15,
+      "humanScore": 11,
+      "featureLogLoss": 1.897550586468198,
+      "medianMs": 0.2164039999988745,
+      "p90Ms": 0.2970449999993434
+    },
+    "trained": {
+      "cpuWins": 4,
+      "humanWins": 0,
+      "unresolved": 0,
+      "cpuScore": 16,
+      "humanScore": 9,
+      "featureLogLoss": 1.5638735429795474,
+      "medianMs": 0.39973900000040885,
+      "p90Ms": 1.613827000001038
+    },
+    "changedTraces": 2
+  },
+  {
+    "mode": "D",
+    "profile": "wall",
+    "samples": 25,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 3,
+      "humanWins": 1,
+      "unresolved": 0,
+      "cpuScore": 15,
+      "humanScore": 11,
+      "featureLogLoss": 1.897550586468198,
+      "medianMs": 0.21480199999496108,
+      "p90Ms": 0.29838800000288757
+    },
+    "trained": {
+      "cpuWins": 4,
+      "humanWins": 0,
+      "unresolved": 0,
+      "cpuScore": 16,
+      "humanScore": 9,
+      "featureLogLoss": 1.5638735429795474,
+      "medianMs": 0.41310900000098627,
+      "p90Ms": 1.6163220000016736
+    },
+    "changedTraces": 2
+  },
+  {
+    "mode": "D",
+    "profile": "defense",
+    "samples": 38,
+    "completedTraining": 3,
+    "cold": {
+      "cpuWins": 0,
+      "humanWins": 4,
+      "unresolved": 0,
+      "cpuScore": 9,
+      "humanScore": 16,
+      "featureLogLoss": 1.5807586515795313,
+      "medianMs": 0.2004700000034063,
+      "p90Ms": 0.2982170000032056
+    },
+    "trained": {
+      "cpuWins": 1,
+      "humanWins": 3,
+      "unresolved": 0,
+      "cpuScore": 9,
+      "humanScore": 15,
+      "featureLogLoss": 1.6364180630378662,
+      "medianMs": 1.675810000000638,
+      "p90Ms": 2.5790840000045137
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "D",
+    "profile": "switch",
+    "samples": 25,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 3,
+      "humanWins": 1,
+      "unresolved": 0,
+      "cpuScore": 15,
+      "humanScore": 11,
+      "featureLogLoss": 1.897550586468198,
+      "medianMs": 0.2136610000015935,
+      "p90Ms": 0.2851379999992787
+    },
+    "trained": {
+      "cpuWins": 4,
+      "humanWins": 0,
+      "unresolved": 0,
+      "cpuScore": 16,
+      "humanScore": 9,
+      "featureLogLoss": 1.5638735429795474,
+      "medianMs": 0.4283419999992475,
+      "p90Ms": 2.024151999998139
+    },
+    "changedTraces": 2
+  },
+  {
+    "mode": "E",
+    "profile": "star",
+    "samples": 48,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 2,
+      "humanWins": 2,
+      "unresolved": 0,
+      "cpuScore": 9,
+      "humanScore": 6,
+      "featureLogLoss": 1.3585462861060742,
+      "medianMs": 2.0729839999985415,
+      "p90Ms": 3.094973999999638
+    },
+    "trained": {
+      "cpuWins": 4,
+      "humanWins": 0,
+      "unresolved": 0,
+      "cpuScore": 12,
+      "humanScore": 4,
+      "featureLogLoss": 1.1628209227628996,
+      "medianMs": 5.447571000004245,
+      "p90Ms": 20.670329999993555
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "E",
+    "profile": "wall",
+    "samples": 47,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 2,
+      "humanWins": 2,
+      "unresolved": 0,
+      "cpuScore": 9,
+      "humanScore": 6,
+      "featureLogLoss": 1.3585462861060742,
+      "medianMs": 2.0880059999981313,
+      "p90Ms": 3.036667000000307
+    },
+    "trained": {
+      "cpuWins": 4,
+      "humanWins": 0,
+      "unresolved": 0,
+      "cpuScore": 12,
+      "humanScore": 4,
+      "featureLogLoss": 1.1597492711090251,
+      "medianMs": 5.477852999996685,
+      "p90Ms": 19.700097000000824
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "E",
+    "profile": "defense",
+    "samples": 48,
+    "completedTraining": 2,
+    "cold": {
+      "cpuWins": 0,
+      "humanWins": 3,
+      "unresolved": 1,
+      "cpuScore": 4,
+      "humanScore": 9,
+      "featureLogLoss": 1.089340503577643,
+      "medianMs": 1.4729850000003353,
+      "p90Ms": 2.785210999994888
+    },
+    "trained": {
+      "cpuWins": 2,
+      "humanWins": 1,
+      "unresolved": 1,
+      "cpuScore": 8,
+      "humanScore": 8,
+      "featureLogLoss": 1.1538826551140084,
+      "medianMs": 16.254698999997345,
+      "p90Ms": 28.047833999997238
+    },
+    "changedTraces": 4
+  },
+  {
+    "mode": "E",
+    "profile": "switch",
+    "samples": 48,
+    "completedTraining": 4,
+    "cold": {
+      "cpuWins": 2,
+      "humanWins": 2,
+      "unresolved": 0,
+      "cpuScore": 9,
+      "humanScore": 6,
+      "featureLogLoss": 1.3585462861060742,
+      "medianMs": 2.403449000004912,
+      "p90Ms": 3.6361439999891445
+    },
+    "trained": {
+      "cpuWins": 4,
+      "humanWins": 0,
+      "unresolved": 0,
+      "cpuScore": 12,
+      "humanScore": 4,
+      "featureLogLoss": 1.1628209227628996,
+      "medianMs": 7.502133000001777,
+      "p90Ms": 21.562355000001844
+    },
+    "changedTraces": 4
+  }
+]
