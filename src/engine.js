@@ -73,7 +73,11 @@ export function slide(s, p, dir) {
 export function mobility(s, p) {
   return DIRS.map((_, d) => slide(s, p, d)).filter((n) => n !== s.players[p]);
 }
-export function movableWalls(s) {
+function hasMobility(s, p) {
+  return DIRS.some((_, d) => slide(s, p, d) !== s.players[p]);
+}
+// Share validated slide options within one enumeration; no persistent state cache.
+function wallVariants(s) {
   if (s.winner !== null) return [];
   const out = [];
   for (let w = 0; w < s.walls.length; w++)
@@ -89,10 +93,18 @@ export function movableWalls(s) {
       const n = { ...s, walls: s.walls.map((v, i) => (i === w ? to : v)) };
       // A selectable wall shift must admit a complete legal turn. Merely
       // checking mobility can leave only slides that trap the opponent.
-      if (mobility(n, 0).length && mobility(n, 1).length && slideOptions(n).length)
-        out.push({ wall: w, to });
+      if (hasMobility(n, 0) && hasMobility(n, 1)) {
+        const slides = slideOptions(n);
+        if (slides.length) out.push({ wall: { wall: w, to }, n, slides });
+      }
     }
   return out;
+}
+export function movableWalls(s) {
+  return wallVariants(s).map(v => v.wall);
+}
+function turnVariants(s) {
+  return [{ wall: null, n: s, slides: slideOptions(s) }, ...wallVariants(s)];
 }
 export function moveWall(s, move) {
   if (move === null) return clone(s);
@@ -111,7 +123,7 @@ export function slideOptions(s) {
       ...s,
       players: s.players.map((v, i) => (i === s.turn ? to : v)),
     };
-    return mobility(n, 0).length && mobility(n, 1).length ? [{ dir, to }] : [];
+    return hasMobility(n, 0) && hasMobility(n, 1) ? [{ dir, to }] : [];
   });
 }
 export function finishSlide(s, dir) {
@@ -131,14 +143,10 @@ export function finishSlide(s, dir) {
 export function actions(s) {
   if (s.winner !== null) return [];
   const out = [];
-  for (const wall of [null, ...movableWalls(s)]) {
-    const n = wall === null ? s : moveWallUnchecked(s, wall);
-    for (const m of slideOptions(n)) out.push({ wall, dir: m.dir });
+  for (const {wall, slides} of turnVariants(s)) {
+    for (const m of slides) out.push({ wall, dir: m.dir });
   }
   return out;
-}
-function moveWallUnchecked(s, w) {
-  return { ...s, walls: s.walls.map((v, i) => (i === w.wall ? w.to : v)) };
 }
 export function apply(s, a) {
   return finishSlide(a.wall === null ? s : moveWall(s, a.wall), a.dir);
@@ -148,9 +156,8 @@ export function apply(s, a) {
 export function successors(s) {
   if (s.winner !== null) return [];
   const out = [];
-  for (const wall of [null, ...movableWalls(s)]) {
-    const n = wall === null ? s : moveWallUnchecked(s, wall);
-    for (const { dir, to } of slideOptions(n)) {
+  for (const {wall, n, slides} of turnVariants(s)) {
+    for (const { dir, to } of slides) {
       const p = s.turn, scored = s.stars.includes(to);
       const scores = s.scores.map((v, i) => v + (i === p && scored ? 1 : 0));
       const winner = scores[p] >= (s.target ?? 3) ? p : null;
@@ -177,9 +184,11 @@ export function distances(s, p) {
   const dist = Array(widthOf(s) * heightOf(s)).fill(Infinity),
     q = [s.players[p]];
   dist[q[0]] = 0;
+  // Scratch board is local to this breadth-first traversal; caller state is untouched.
+  const n = { ...s, players: [...s.players] };
   for (let i = 0; i < q.length; i++) {
-    const from = q[i],
-      n = { ...s, players: s.players.map((v, j) => (j === p ? from : v)) };
+    const from = q[i];
+    n.players[p] = from;
     for (let d = 0; d < 4; d++) {
       const to = slide(n, p, d);
       if (dist[to] === Infinity) {

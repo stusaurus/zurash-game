@@ -28,9 +28,10 @@ export function choose(
   { level = "search", rng = Math.random, seen = new Map(), beam = 8 } = {},
 ) {
   if (level === "strong") return chooseRoute(s, { rng, seen });
-  const all = actions(s);
-  if (!all.length) return null;
-  if (level === "random") return all[Math.floor(rng() * all.length)];
+  if (level === "random") {
+    const all = actions(s);
+    return all.length ? all[Math.floor(rng() * all.length)] : null;
+  }
   const p = s.turn;
   const ranked = successors(s)
     .map(({ a, n }) => {
@@ -42,6 +43,7 @@ export function choose(
       };
     })
     .sort((a, b) => b.score - a.score || a.tie - b.tie);
+  if (!ranked.length) return null;
   if (level === "greedy" || ranked[0].n.winner === p) return ranked[0].a;
   let best = -Infinity,
     pick = ranked[0].a;

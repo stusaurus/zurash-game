@@ -1,0 +1,129 @@
+{
+  "states": [
+    {
+      "mode": "A",
+      "id": "s-06016e2ba000e27318592fad6d97e441a3603ff82cea2bccd151490c3a72986f",
+      "ply": 8,
+      "sha": "be052862ddeb7eb67693b216f80c4f3fc2ce4befbf604c37fe3e5a5ac34c7719"
+    },
+    {
+      "mode": "A",
+      "id": "s-0a4fe56b17668f6fe808e55b7f3b2f41692ffca749cf9e6fa2e7fe28c33ba246",
+      "ply": 8,
+      "sha": "cce19f10131c91a70573fb569e2960310f478bebfc9321f3f53c5f1ccaf443dc"
+    },
+    {
+      "mode": "A",
+      "id": "s-0a95e8801d48ae3fbbaf73327be8daf6671ab3d1e13a7a925fd5f438dcbc49a7",
+      "ply": 8,
+      "sha": "d469dbfb7ef4867801d8efa2c23dc2211a0239cd063482481114879c8c3d4a63"
+    },
+    {
+      "mode": "A",
+      "id": "s-0e187c7a42cdec89922a6e9c513404b5b88fed20be66ba117286b848f4676b6a",
+      "ply": 8,
+      "sha": "fe242f2fd71bfd9a5141a136ae1f5c9ca49c8784afdd9dfde6935f58a7882c4f"
+    },
+    {
+      "mode": "B",
+      "id": "guard-006dd5b9ef31514a7d9899ba91b3500e9cf7067459bab02f9077c7909e79718f",
+      "ply": 8,
+      "sha": "b4c97c388584605a13e826a63d2dfa521648b41ddcf1b9040878ef4b864ce778"
+    },
+    {
+      "mode": "B",
+      "id": "guard-026f18dca56f38ae5af2234aae9d47e661281741d59e98c4d326a2070b14ab2d",
+      "ply": 8,
+      "sha": "4e5b5f89803600a60e880443651dc38eb238e898baf8cb19156c3bfc801af1fc"
+    },
+    {
+      "mode": "B",
+      "id": "guard-0334821e2e84e98ce4a138d20581c1ba0a036ad7bb4d6f33dba5675ee22feeb3",
+      "ply": 8,
+      "sha": "8c40b5cf27a48838226e478a5456604c836451c34f684a9adb225c6efff29343"
+    },
+    {
+      "mode": "B",
+      "id": "guard-039a7c18d3b1167ddd2d337c9fff54e745d2b3d5856a2a169e720deedad0f475",
+      "ply": 8,
+      "sha": "ebf6c38c0b72b9953cd7edd689a3253c525c97cdc5cf731b45f96d3735fe7016"
+    },
+    {
+      "mode": "C",
+      "id": "s-016147a0200b8deeed779de194201d88e88af400559a548a46916a15196550f9",
+      "ply": 8,
+      "sha": "f2cdf0571ad07b16c93cd331c4d8002868c0278f94428575ac30c593706eae75"
+    },
+    {
+      "mode": "C",
+      "id": "s-04b3648c0a7c44d713debea076597af6f5a3bf2f51c5ac7c06188fab4b4ea0a3",
+      "ply": 8,
+      "sha": "c9a22d3b67a68a35311ab2cfd260408c8ef952d78a21ac7434168ec0f95fc825"
+    },
+    {
+      "mode": "C",
+      "id": "s-0b9a0ff63f80aaeb7d79e12463d8bf464a23e3997442ec1739b074f8118d90f4",
+      "ply": 8,
+      "sha": "d967df8b2361b407ac886bfef6d152066ad45c414e7bf94ce4dbac2c49a0e5fb"
+    },
+    {
+      "mode": "C",
+      "id": "s-112348c92b76597b0890e573f97dbdd21df7d1aba323d167f7b5a46f1e1cedd3",
+      "ply": 8,
+      "sha": "04d06631ca9050430af2281815bd9710ff4efeac59fe64e032e287ceb8219640"
+    },
+    {
+      "mode": "D",
+      "id": "factor-D-019c070a29013115666a82bc5ae7c06cb752b5fe14251a6d3f7ac3d4ceb3b9f1",
+      "ply": 8,
+      "sha": "b93e17a1630950044e3661e0dbb801b7e66ff1a04ad8c94d99867693807d13a4"
+    },
+    {
+      "mode": "D",
+      "id": "factor-D-02a81a305f1b3327c1bf91f11f4e659ab75bb3d55c63f6838653cf4480d5e90e",
+      "ply": 8,
+      "sha": "9eed5b529c07e81c670c5ef8f4a19a098839dd53d54f4955e99d9bba6ee9c3d6"
+    },
+    {
+      "mode": "D",
+      "id": "factor-D-031a78f9c32ed5f8169681f6cd7539ecd545ff59934e247ede84c3305feb33e7",
+      "ply": 8,
+      "sha": "2d5e9d75790de3b35b413d98f1fddea1dffc0981dc390f5af3be760cdcc7defa"
+    },
+    {
+      "mode": "D",
+      "id": "factor-D-0755facfaf92c311485e9e4c42cb69670b3626e098b1d0524bd575fafa245967",
+      "ply": 8,
+      "sha": "386f5ca0aca8135dd5a0555cd0811b3f5a29e073cde6ab75abda6f221e655bfb"
+    },
+    {
+      "mode": "E",
+      "id": "s-0349917945f7da4161d25413fab78ee11592c7d4615ea6a018acb8ec62a29d44",
+      "ply": 8,
+      "sha": "0eeffa473d43ba04a5db20514a7a92a78b7305acd5ca87d9785de576d587621a"
+    },
+    {
+      "mode": "E",
+      "id": "s-0669e9acc2dc5c7d929c3625691ced1a85d280130b4b37a22d29522e88171754",
+      "ply": 8,
+      "sha": "134ce6bc53e0406055144cf126d0f1b256e17742ed6da2307cc0667af8e9407a"
+    },
+    {
+      "mode": "E",
+      "id": "s-08bbb538e475ccb5d209b0752a323559f43090e4c20b2e2c156c71fd99b48184",
+      "ply": 8,
+      "sha": "885e26094ed79e2e8cca1292c4e4f29ede0c91b5a4bfd7610d13440e0e1d6c47"
+    },
+    {
+      "mode": "E",
+      "id": "s-094c364c7d494d864850cc42e8862c69834b13ba76a75f0278827366da929c95",
+      "ply": 8,
+      "sha": "e4856ec6a7f4ce00a4a64cc1f233bdc74f584b764369840fcf4fd7576762ad38"
+    }
+  ],
+  "batches": 5,
+  "repeats": 8,
+  "minimumLegalGain": 0.1,
+  "maximumModeRegression": 0.05,
+  "scope": "20 archived real normalized positions, all five modes; fixed search CPU RNG/beam; non-additive phase timings; no new games"
+}
