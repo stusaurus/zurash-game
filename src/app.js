@@ -40,7 +40,7 @@ for (let i = 4; i < LAYOUTS.length; i++) {
 const playtest = new URLSearchParams(location.search).get('playtest') === '1'
   ? (await import('./playtest-record.js')).mountPlaytest(() => ({
       mode: !customBoard && activeSettings.layout >= 4 ? LAYOUTS[activeSettings.layout].id : null,
-      opponent: mode, state,
+      opponent: mode, difficulty: mode === "cpu" ? activeSettings.level : null, state,
     })) : null;
 const tokenEls = [0, 1].map((p) => {
   const el = document.createElement("div");
@@ -131,7 +131,7 @@ function render() {
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === state.target - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(state.target - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${activeSettings.level === "strong" ? "つよい" : "ふつう"}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${state.target}${state.scores[p] === state.target - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === state.target - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(state.target - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${({random: "やさしい", greedy: "ふつう", search: "つよい", strong: "恐つよ"})[activeSettings.level]}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${state.target}${state.scores[p] === state.target - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
     )
     .join("");
   const last = moveLog.at(-1);

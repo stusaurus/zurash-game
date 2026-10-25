@@ -1,7 +1,7 @@
 // Opt-in, in-memory research recording. No storage, networking or identifiers.
 export class PlaytestRecord {
   constructor(now=()=>performance.now()){this.now=now;this.active=false;this.value=null;}
-  start(meta,s){this.value={version:1,mode:meta.mode,opponent:meta.opponent,status:'in-progress',durationSeconds:0,initialPly:s.ply,finalPly:s.ply,movesPlayed:0,undoCount:0,reselectCount:0,longestScorelessRun:0,winner:null,finalScores:[...s.scores],ratings:{},note:'Opt-in research record; elapsed wall time includes CPU, animation and inactive tabs. Counters include attempted play; quiet run resets on undo. Not an AI balance match.'};this.started=this.now();this.quiet=0;this.active=true;}
+  start(meta,s){this.value={version:1,mode:meta.mode,opponent:meta.opponent,difficulty:meta.difficulty??null,status:'in-progress',durationSeconds:0,initialPly:s.ply,finalPly:s.ply,movesPlayed:0,undoCount:0,reselectCount:0,longestScorelessRun:0,winner:null,finalScores:[...s.scores],ratings:{},note:'Opt-in research record; elapsed wall time includes CPU, animation and inactive tabs. Counters include attempted play; quiet run resets on undo. Not an AI balance match.'};this.started=this.now();this.quiet=0;this.active=true;}
   turn(before,after){if(!this.active)return;this.value.movesPlayed++;this.quiet=after.scores.some((v,p)=>v>before.scores[p])?0:this.quiet+1;this.value.longestScorelessRun=Math.max(this.value.longestScorelessRun,this.quiet);this.snapshot(after);if(after.winner!==null)this.stop('finished');}
   undo(reselect,s){if(!this.active)return;this.value[reselect?'reselectCount':'undoCount']++;this.quiet=0;this.snapshot(s);}
   snapshot(s){this.value.finalPly=s.ply;this.value.winner=s.winner;this.value.finalScores=[...s.scores];}
