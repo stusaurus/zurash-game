@@ -9,3 +9,4 @@ test('legacy results migrate; explicit unresolved results persist and reset with
  let store=openLearning(storage);assert.equal(store.model.total,5);assert.equal(store.model.draws,0);
  store.finish([],null);store=openLearning(storage);assert.equal(store.model.total,6);assert.equal(store.model.draws,1);assert.equal(store.model.wins,2);assert.equal(store.model.losses,3);store.reset();assert.equal(store.model.total,0);
 });
+test('history from another board context never activates learning in an unseen context',()=>{for(let layout=4;layout<9;layout++){const s=initial(layout),model={...freshLearning(),samples:160,contexts:{'99x99:9:0':Array(16).fill(10)}},a=seeded(541),b=seeded(541);assert.deepEqual(choose(s,{level:'learning',opponentModel:model,rng:a}),choose(s,{level:'greedy',rng:b}));assert.equal(a(),b());}});

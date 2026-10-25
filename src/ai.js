@@ -1,4 +1,4 @@
-import {learnWeight} from './learning.js';
+import {learnWeight,learningContext} from './learning.js';
 import { chooseRoute } from './route-ai.js';
 import { actions, distances, key, successors } from "./engine.js";
 export function seeded(seed = 1) {
@@ -67,7 +67,7 @@ export function choose(
 
 // Start exactly at normal (greedy); learn only how to choose between equal evaluations.
 function chooseLearning(s,{rng,seen,opponentModel}) {
- if(!opponentModel || opponentModel.samples<8)return choose(s,{level:'greedy',rng,seen});
+ if(!opponentModel || opponentModel.samples<8 || !opponentModel.contexts?.[learningContext(s)])return choose(s,{level:'greedy',rng,seen});
  const p=s.turn,ranked=successors(s).map(c=>({...c,score:evaluate(c.n,p)-(seen.get(key(c.n))||0)*130,tie:rng()})).sort((a,b)=>b.score-a.score||a.tie-b.tie);
  if(!ranked.length)return null;
  if(ranked[0].n.winner===p)return ranked[0].a;
