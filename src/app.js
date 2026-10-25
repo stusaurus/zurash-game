@@ -1,3 +1,4 @@
+import {openLearning,learningContext,learningFeature} from './learning.js';
 import {widthOf,heightOf,isPlayable} from "./geometry.js";
 import {mountLab} from "./lab-ui.js";
 import {
@@ -42,6 +43,18 @@ const playtest = new URLSearchParams(location.search).get('playtest') === '1'
       mode: !customBoard && activeSettings.layout >= 4 ? LAYOUTS[activeSettings.layout].id : null,
       opponent: mode, difficulty: mode === "cpu" ? activeSettings.level : null, state,
     })) : null;
+let learningTurns=[], learningCounted=false;
+const learningStore=openLearning({getItem:k=>localStorage.getItem(k),setItem:(k,v)=>localStorage.setItem(k,v),removeItem:k=>localStorage.removeItem(k)});
+function renderLearning(){
+ const m=learningStore.model, text=`あなたの学習対戦：${m.wins}勝 ${m.losses}敗 · ${m.samples}手を学習。${learningStore.warning}`;
+ $('learningStats').textContent=text;$('learningStatus').textContent=text;
+ $('learningStatus').hidden=!(mode==='cpu'&&activeSettings.level==='learning');
+ $('learningOptions').hidden=$('cpuLevel').value!=='learning';
+}
+$('cpuLevel').addEventListener('change',renderLearning);
+$('learningReset').onclick=()=>{$('learningResetConfirm').hidden=false;};
+$('learningResetNo').onclick=()=>{$('learningResetConfirm').hidden=true;};
+$('learningResetYes').onclick=()=>{const cleared=learningStore.reset();$('learningResetConfirm').hidden=true;if(cleared&&mode==='cpu'&&activeSettings.level==='learning')reset();renderLearning();};
 const tokenEls = [0, 1].map((p) => {
   const el = document.createElement("div");
   el.className = `token p${p + 1}`;
@@ -60,6 +73,8 @@ function remember() {
   seen.set(k, (seen.get(k) || 0) + 1);
 }
 function render() {
+  renderLearning();
+  $("undo").hidden=mode === "cpu" && activeSettings.level === "learning";
   const locked = busy || cpuTurn() || state.winner !== null,
     moves = phase === "wall" ? movableWalls(state) : [],
     stops = phase === "slide" ? slideOptions(state) : [];
@@ -131,7 +146,7 @@ function render() {
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === state.target - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(state.target - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${({random: "やさしい", greedy: "ふつう", search: "つよい", strong: "恐つよ"})[activeSettings.level]}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${state.target}${state.scores[p] === state.target - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === state.target - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(state.target - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${({random: "やさしい", greedy: "ふつう", search: "つよい", strong: "恐つよ", learning: "学習"})[activeSettings.level]}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${state.target}${state.scores[p] === state.target - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
     )
     .join("");
   const last = moveLog.at(-1);
@@ -237,6 +252,8 @@ async function playSlide(dir) {
       ? null : shiftArrow(turnStart.walls[wallIndex], state.walls[wallIndex]),
     scored: next.scores[player] > state.scores[player],
   };
+  learningTurns.push(mode==='cpu'&&activeSettings.level==='learning'&&player===0
+    ? {context:learningContext(turnStart),feature:learningFeature(turnStart,{wall:wallIndex===-1?null:{wall:wallIndex},dir},next)} : null);
   history.push(clone(turnStart));
   moveLog.push(lastAction);
   playtest?.turn(turnStart, next);
@@ -247,6 +264,9 @@ async function playSlide(dir) {
   await new Promise((r) => setTimeout(r, 280));
   if (myEpoch !== epoch) return;
   busy = false;
+  if(mode==='cpu'&&activeSettings.level==='learning'&&state.winner!==null&&!learningCounted){
+    learningCounted=true;learningStore.finish(learningTurns,state.winner);
+  }
   if (state.scores.reduce((a, b) => a + b, 0) > oldScore) flash();
   phase = "wall";
   turnStart = clone(state);
@@ -299,7 +319,7 @@ function runCPU() {
     }
   }
   try {
-    worker.postMessage({ id, state: clone(state), history: [...seen], seed: matchSeed, level: activeSettings.level });
+    worker.postMessage({ id, state: clone(state), history: [...seen], seed: matchSeed, level: activeSettings.level, opponentModel: activeSettings.level === "learning" ? learningStore.model : null });
   } catch {
     stopCPU();
     fallback(id);
@@ -355,6 +375,7 @@ function reset() {
   selected = null;
   history = [];
   moveLog = [];
+  learningTurns=[];learningCounted=false;
   seen = new Map();
   remember();
   turnStart = clone(state);
@@ -367,6 +388,7 @@ $("skip").onclick = () => {
   render();
 };
 $("undo").onclick = () => {
+  if(mode === "cpu" && activeSettings.level === "learning")return;
   const studyReselect = phase === "slide" && !cpuTurn();
   clearCelebration();
   epoch++;
@@ -385,6 +407,7 @@ $("undo").onclick = () => {
   selected = null;
   resultSeen = false;
   playtest?.undo(studyReselect, state);
+  learningTurns.length = history.length;
   moveLog.length = history.length;
   turnStart = clone(state);
   seen = new Map();
