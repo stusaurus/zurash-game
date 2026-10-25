@@ -1,0 +1,1904 @@
+{
+  "planSHA256": "65893fea7b5cc11245ceaa9922e615e2f5c05e3f69fccbed82adb75e5f28b58c",
+  "ledger": {
+    "newInitialGames": 160,
+    "sourceInitialGames": 32,
+    "selfInitialGames": 128,
+    "sourceExtensionGames": 19,
+    "selfExtensionGames": 55,
+    "selfAddedPlies": 8814,
+    "checkpointForks": 228,
+    "checkpointForkAddedPlies": 7658,
+    "forkExtensionCount": 65,
+    "forkExtraPlies": 5768,
+    "sourceTotalPlies": 2788,
+    "selfInitialPlies": 9726,
+    "continuedGamesAreNotNew": true
+  },
+  "results": {
+    "development": {
+      "arms": {
+        "A": {
+          "n": 25,
+          "wins": 0,
+          "losses": 21,
+          "unresolved": 4,
+          "safetyEligible": 25,
+          "anySafeRetained": 21,
+          "avoidableDanger": 4,
+          "dangerous": 4,
+          "safeActionRetentionMean": 0.10242202919764169,
+          "forcedAvailable": 0,
+          "forcedChosen": 0,
+          "probeMedianMs": 78.86737499998708,
+          "probeP90Ms": 115.06294100000014,
+          "probeMaxMs": 213.7286000000022,
+          "medianRoots": 8,
+          "medianSearchPositions": 682,
+          "probeIncomplete": 0,
+          "moves": 126,
+          "moveMedianMs": 92.64301500000875,
+          "moveP90Ms": 158.75623199999973,
+          "maxSampledHeapBytes": 89876624,
+          "cumulativePeakRssKB": 221556,
+          "incompleteMoves": 1,
+          "uniqueFullTrajectories": 25,
+          "diversity": {
+            "records": 25,
+            "observedTrace": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 25,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "completed": {
+              "eligible": 21,
+              "tooShort": 0,
+              "unique": 21,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "first5": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 19,
+              "repeatedRecords": 6,
+              "maxMultiplicity": 3
+            },
+            "first10": {
+              "eligible": 20,
+              "tooShort": 5,
+              "unique": 19,
+              "repeatedRecords": 1,
+              "maxMultiplicity": 2
+            },
+            "uniqueCompletedOutcomes": {
+              "first": 20,
+              "second": 1
+            },
+            "physicalUniqueCompletedOutcomes": {
+              "first": 20,
+              "second": 1
+            },
+            "physicalCompleted": {
+              "eligible": 21,
+              "tooShort": 0,
+              "unique": 21,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "physicalFirst5": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 14,
+              "repeatedRecords": 11,
+              "maxMultiplicity": 5
+            },
+            "censored": 4
+          }
+        },
+        "B": {
+          "n": 25,
+          "wins": 1,
+          "losses": 20,
+          "unresolved": 4,
+          "safetyEligible": 25,
+          "anySafeRetained": 25,
+          "avoidableDanger": 0,
+          "dangerous": 0,
+          "safeActionRetentionMean": 0.26652583755145004,
+          "forcedAvailable": 0,
+          "forcedChosen": 0,
+          "probeMedianMs": 90.74541300000055,
+          "probeP90Ms": 120.99317099999462,
+          "probeMaxMs": 2263.352755999993,
+          "medianRoots": 8,
+          "medianSearchPositions": 595,
+          "probeIncomplete": 1,
+          "moves": 167,
+          "moveMedianMs": 86.78936500000054,
+          "moveP90Ms": 167.4246839999978,
+          "maxSampledHeapBytes": 88243800,
+          "cumulativePeakRssKB": 225888,
+          "incompleteMoves": 0,
+          "uniqueFullTrajectories": 25,
+          "diversity": {
+            "records": 25,
+            "observedTrace": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 25,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "completed": {
+              "eligible": 21,
+              "tooShort": 0,
+              "unique": 21,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "first5": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 19,
+              "repeatedRecords": 6,
+              "maxMultiplicity": 3
+            },
+            "first10": {
+              "eligible": 20,
+              "tooShort": 5,
+              "unique": 19,
+              "repeatedRecords": 1,
+              "maxMultiplicity": 2
+            },
+            "uniqueCompletedOutcomes": {
+              "first": 20,
+              "second": 1
+            },
+            "physicalUniqueCompletedOutcomes": {
+              "first": 20,
+              "second": 1
+            },
+            "physicalCompleted": {
+              "eligible": 21,
+              "tooShort": 0,
+              "unique": 21,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "physicalFirst5": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 14,
+              "repeatedRecords": 11,
+              "maxMultiplicity": 5
+            },
+            "censored": 4
+          }
+        },
+        "C": {
+          "n": 25,
+          "wins": 2,
+          "losses": 19,
+          "unresolved": 4,
+          "safetyEligible": 25,
+          "anySafeRetained": 21,
+          "avoidableDanger": 4,
+          "dangerous": 4,
+          "safeActionRetentionMean": 0.10242202919764169,
+          "forcedAvailable": 0,
+          "forcedChosen": 0,
+          "probeMedianMs": 106.24808599999233,
+          "probeP90Ms": 155.1583580000006,
+          "probeMaxMs": 179.45104999999967,
+          "medianRoots": 8,
+          "medianSearchPositions": 682,
+          "probeIncomplete": 0,
+          "moves": 165,
+          "moveMedianMs": 81.01669100000072,
+          "moveP90Ms": 152.692320999995,
+          "maxSampledHeapBytes": 88314688,
+          "cumulativePeakRssKB": 226156,
+          "incompleteMoves": 0,
+          "uniqueFullTrajectories": 25,
+          "diversity": {
+            "records": 25,
+            "observedTrace": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 25,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "completed": {
+              "eligible": 21,
+              "tooShort": 0,
+              "unique": 21,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "first5": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 19,
+              "repeatedRecords": 6,
+              "maxMultiplicity": 3
+            },
+            "first10": {
+              "eligible": 20,
+              "tooShort": 5,
+              "unique": 19,
+              "repeatedRecords": 1,
+              "maxMultiplicity": 2
+            },
+            "uniqueCompletedOutcomes": {
+              "first": 19,
+              "second": 2
+            },
+            "physicalUniqueCompletedOutcomes": {
+              "first": 19,
+              "second": 2
+            },
+            "physicalCompleted": {
+              "eligible": 21,
+              "tooShort": 0,
+              "unique": 21,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "physicalFirst5": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 14,
+              "repeatedRecords": 11,
+              "maxMultiplicity": 5
+            },
+            "censored": 4
+          }
+        },
+        "D": {
+          "n": 25,
+          "wins": 4,
+          "losses": 17,
+          "unresolved": 4,
+          "safetyEligible": 25,
+          "anySafeRetained": 25,
+          "avoidableDanger": 0,
+          "dangerous": 0,
+          "safeActionRetentionMean": 0.26652583755145004,
+          "forcedAvailable": 0,
+          "forcedChosen": 0,
+          "probeMedianMs": 89.50670500000706,
+          "probeP90Ms": 163.32171499999822,
+          "probeMaxMs": 248.55293900000106,
+          "medianRoots": 8,
+          "medianSearchPositions": 634,
+          "probeIncomplete": 0,
+          "moves": 187,
+          "moveMedianMs": 87.74591399999917,
+          "moveP90Ms": 173.46539300000586,
+          "maxSampledHeapBytes": 87758760,
+          "cumulativePeakRssKB": 226444,
+          "incompleteMoves": 0,
+          "uniqueFullTrajectories": 25,
+          "diversity": {
+            "records": 25,
+            "observedTrace": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 25,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "completed": {
+              "eligible": 21,
+              "tooShort": 0,
+              "unique": 21,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "first5": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 19,
+              "repeatedRecords": 6,
+              "maxMultiplicity": 3
+            },
+            "first10": {
+              "eligible": 20,
+              "tooShort": 5,
+              "unique": 19,
+              "repeatedRecords": 1,
+              "maxMultiplicity": 2
+            },
+            "uniqueCompletedOutcomes": {
+              "first": 20,
+              "second": 1
+            },
+            "physicalUniqueCompletedOutcomes": {
+              "first": 20,
+              "second": 1
+            },
+            "physicalCompleted": {
+              "eligible": 21,
+              "tooShort": 0,
+              "unique": 21,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "physicalFirst5": {
+              "eligible": 25,
+              "tooShort": 0,
+              "unique": 14,
+              "repeatedRecords": 11,
+              "maxMultiplicity": 5
+            },
+            "censored": 4
+          }
+        }
+      }
+    },
+    "holdout": {
+      "arms": {
+        "A": {
+          "n": 32,
+          "wins": 5,
+          "losses": 14,
+          "unresolved": 13,
+          "safetyEligible": 32,
+          "anySafeRetained": 32,
+          "avoidableDanger": 0,
+          "dangerous": 0,
+          "safeActionRetentionMean": 0.14369679892331796,
+          "forcedAvailable": 0,
+          "forcedChosen": 0,
+          "probeMedianMs": 22.17075499999919,
+          "probeP90Ms": 34.062318000011146,
+          "probeMaxMs": 49.27254500001436,
+          "medianRoots": 8,
+          "medianSearchPositions": 572,
+          "probeIncomplete": 0,
+          "moves": 1894,
+          "moveMedianMs": 30.180688999993436,
+          "moveP90Ms": 65.37200099998154,
+          "maxSampledHeapBytes": 96832848,
+          "cumulativePeakRssKB": 230820,
+          "incompleteMoves": 0,
+          "uniqueFullTrajectories": 32,
+          "diversity": {
+            "records": 32,
+            "observedTrace": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 32,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "completed": {
+              "eligible": 19,
+              "tooShort": 0,
+              "unique": 19,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "first5": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 22,
+              "repeatedRecords": 10,
+              "maxMultiplicity": 3
+            },
+            "first10": {
+              "eligible": 26,
+              "tooShort": 6,
+              "unique": 26,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "uniqueCompletedOutcomes": {
+              "first": 16,
+              "second": 3
+            },
+            "physicalUniqueCompletedOutcomes": {
+              "first": 16,
+              "second": 3
+            },
+            "physicalCompleted": {
+              "eligible": 19,
+              "tooShort": 0,
+              "unique": 19,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "physicalFirst5": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 18,
+              "repeatedRecords": 14,
+              "maxMultiplicity": 6
+            },
+            "censored": 13
+          }
+        },
+        "B": {
+          "n": 32,
+          "wins": 4,
+          "losses": 12,
+          "unresolved": 16,
+          "safetyEligible": 32,
+          "anySafeRetained": 32,
+          "avoidableDanger": 0,
+          "dangerous": 0,
+          "safeActionRetentionMean": 0.15475455331045887,
+          "forcedAvailable": 0,
+          "forcedChosen": 0,
+          "probeMedianMs": 20.44060499999614,
+          "probeP90Ms": 32.739040999964345,
+          "probeMaxMs": 48.62380800000392,
+          "medianRoots": 8,
+          "medianSearchPositions": 609,
+          "probeIncomplete": 0,
+          "moves": 988,
+          "moveMedianMs": 22.17961700001615,
+          "moveP90Ms": 45.29519399999117,
+          "maxSampledHeapBytes": 93964912,
+          "cumulativePeakRssKB": 230984,
+          "incompleteMoves": 1,
+          "uniqueFullTrajectories": 32,
+          "diversity": {
+            "records": 32,
+            "observedTrace": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 32,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "completed": {
+              "eligible": 16,
+              "tooShort": 0,
+              "unique": 16,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "first5": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 24,
+              "repeatedRecords": 8,
+              "maxMultiplicity": 3
+            },
+            "first10": {
+              "eligible": 28,
+              "tooShort": 4,
+              "unique": 28,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "uniqueCompletedOutcomes": {
+              "first": 14,
+              "second": 2
+            },
+            "physicalUniqueCompletedOutcomes": {
+              "first": 14,
+              "second": 2
+            },
+            "physicalCompleted": {
+              "eligible": 16,
+              "tooShort": 0,
+              "unique": 16,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "physicalFirst5": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 20,
+              "repeatedRecords": 12,
+              "maxMultiplicity": 4
+            },
+            "censored": 16
+          }
+        },
+        "C": {
+          "n": 32,
+          "wins": 8,
+          "losses": 12,
+          "unresolved": 12,
+          "safetyEligible": 32,
+          "anySafeRetained": 32,
+          "avoidableDanger": 0,
+          "dangerous": 0,
+          "safeActionRetentionMean": 0.14369679892331796,
+          "forcedAvailable": 0,
+          "forcedChosen": 0,
+          "probeMedianMs": 28.157763999974122,
+          "probeP90Ms": 47.06355699998676,
+          "probeMaxMs": 2205.1070590000018,
+          "medianRoots": 8,
+          "medianSearchPositions": 572,
+          "probeIncomplete": 1,
+          "moves": 755,
+          "moveMedianMs": 31.15728300000046,
+          "moveP90Ms": 65.55015799999819,
+          "maxSampledHeapBytes": 96725352,
+          "cumulativePeakRssKB": 231152,
+          "incompleteMoves": 0,
+          "uniqueFullTrajectories": 31,
+          "diversity": {
+            "records": 32,
+            "observedTrace": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 31,
+              "repeatedRecords": 1,
+              "maxMultiplicity": 2
+            },
+            "completed": {
+              "eligible": 20,
+              "tooShort": 0,
+              "unique": 19,
+              "repeatedRecords": 1,
+              "maxMultiplicity": 2
+            },
+            "first5": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 22,
+              "repeatedRecords": 10,
+              "maxMultiplicity": 3
+            },
+            "first10": {
+              "eligible": 26,
+              "tooShort": 6,
+              "unique": 26,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "uniqueCompletedOutcomes": {
+              "first": 14,
+              "second": 5
+            },
+            "physicalUniqueCompletedOutcomes": {
+              "first": 13,
+              "second": 5
+            },
+            "physicalCompleted": {
+              "eligible": 20,
+              "tooShort": 0,
+              "unique": 18,
+              "repeatedRecords": 2,
+              "maxMultiplicity": 3
+            },
+            "physicalFirst5": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 18,
+              "repeatedRecords": 14,
+              "maxMultiplicity": 6
+            },
+            "censored": 12
+          }
+        },
+        "D": {
+          "n": 32,
+          "wins": 16,
+          "losses": 8,
+          "unresolved": 8,
+          "safetyEligible": 32,
+          "anySafeRetained": 32,
+          "avoidableDanger": 0,
+          "dangerous": 0,
+          "safeActionRetentionMean": 0.15475455331045887,
+          "forcedAvailable": 0,
+          "forcedChosen": 0,
+          "probeMedianMs": 29.31310400000075,
+          "probeP90Ms": 50.26738000003388,
+          "probeMaxMs": 2345.8361279999954,
+          "medianRoots": 8,
+          "medianSearchPositions": 609,
+          "probeIncomplete": 1,
+          "moves": 524,
+          "moveMedianMs": 40.705933000001096,
+          "moveP90Ms": 72.75825499999337,
+          "maxSampledHeapBytes": 95705936,
+          "cumulativePeakRssKB": 230732,
+          "incompleteMoves": 1,
+          "uniqueFullTrajectories": 31,
+          "diversity": {
+            "records": 32,
+            "observedTrace": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 31,
+              "repeatedRecords": 1,
+              "maxMultiplicity": 2
+            },
+            "completed": {
+              "eligible": 24,
+              "tooShort": 0,
+              "unique": 23,
+              "repeatedRecords": 1,
+              "maxMultiplicity": 2
+            },
+            "first5": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 24,
+              "repeatedRecords": 8,
+              "maxMultiplicity": 3
+            },
+            "first10": {
+              "eligible": 28,
+              "tooShort": 4,
+              "unique": 28,
+              "repeatedRecords": 0,
+              "maxMultiplicity": 1
+            },
+            "uniqueCompletedOutcomes": {
+              "first": 11,
+              "second": 12
+            },
+            "physicalUniqueCompletedOutcomes": {
+              "first": 10,
+              "second": 12
+            },
+            "physicalCompleted": {
+              "eligible": 24,
+              "tooShort": 0,
+              "unique": 22,
+              "repeatedRecords": 2,
+              "maxMultiplicity": 3
+            },
+            "physicalFirst5": {
+              "eligible": 32,
+              "tooShort": 0,
+              "unique": 20,
+              "repeatedRecords": 12,
+              "maxMultiplicity": 4
+            },
+            "censored": 8
+          }
+        }
+      },
+      "effects": [
+        {
+          "control": "A",
+          "treatment": "B",
+          "clusters": 8,
+          "seedEffects": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -0.25
+          ],
+          "observedWinDifference": -0.03125,
+          "seedBootstrap95": [
+            -0.09375,
+            0
+          ],
+          "twoSidedSeedSignFlipP": 1,
+          "note": "Exploratory observed wins, not final win probabilities. Bootstrap intervals are unadjusted and unstable with eight clusters. Sign-flip exchangeability is an assumption; censored outcomes stay separate.",
+          "holmReferenceP": 1
+        },
+        {
+          "control": "C",
+          "treatment": "D",
+          "clusters": 8,
+          "seedEffects": [
+            0.5,
+            0,
+            0.25,
+            -0.25,
+            0.5,
+            0.5,
+            0.25,
+            0.25
+          ],
+          "observedWinDifference": 0.25,
+          "seedBootstrap95": [
+            0.0625,
+            0.40625
+          ],
+          "twoSidedSeedSignFlipP": 0.078125,
+          "note": "Exploratory observed wins, not final win probabilities. Bootstrap intervals are unadjusted and unstable with eight clusters. Sign-flip exchangeability is an assumption; censored outcomes stay separate.",
+          "holmReferenceP": 0.234375
+        },
+        {
+          "control": "A",
+          "treatment": "C",
+          "clusters": 8,
+          "seedEffects": [
+            0,
+            0,
+            0.25,
+            0.25,
+            0,
+            0,
+            0.25,
+            0
+          ],
+          "observedWinDifference": 0.09375,
+          "seedBootstrap95": [
+            0.03125,
+            0.1875
+          ],
+          "twoSidedSeedSignFlipP": 0.25,
+          "note": "Exploratory observed wins, not final win probabilities. Bootstrap intervals are unadjusted and unstable with eight clusters. Sign-flip exchangeability is an assumption; censored outcomes stay separate.",
+          "holmReferenceP": 0.5
+        },
+        {
+          "control": "B",
+          "treatment": "D",
+          "clusters": 8,
+          "seedEffects": [
+            0.5,
+            0,
+            0.5,
+            0,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "observedWinDifference": 0.375,
+          "seedBootstrap95": [
+            0.1875,
+            0.5
+          ],
+          "twoSidedSeedSignFlipP": 0.03125,
+          "note": "Exploratory observed wins, not final win probabilities. Bootstrap intervals are unadjusted and unstable with eight clusters. Sign-flip exchangeability is an assumption; censored outcomes stay separate.",
+          "holmReferenceP": 0.125
+        },
+        {
+          "control": "interaction",
+          "treatment": "D-B-C+A",
+          "clusters": 8,
+          "seedEffects": [
+            0.5,
+            0,
+            0.25,
+            -0.25,
+            0.5,
+            0.5,
+            0.25,
+            0.5
+          ],
+          "observedWinDifference": 0.28125,
+          "seedBootstrap95": [
+            0.09375,
+            0.4375
+          ],
+          "twoSidedSeedSignFlipP": 0.0625,
+          "note": "Exploratory observed wins, not final win probabilities. Bootstrap intervals are unadjusted and unstable with eight clusters. Sign-flip exchangeability is an assumption; censored outcomes stay separate."
+        }
+      ]
+    },
+    "self": {
+      "A": {
+        "n": 32,
+        "wins": 25,
+        "losses": 4,
+        "unresolved": 3,
+        "safetyEligible": 0,
+        "anySafeRetained": 0,
+        "avoidableDanger": 0,
+        "dangerous": 0,
+        "safeActionRetentionMean": null,
+        "forcedAvailable": 0,
+        "forcedChosen": 0,
+        "probeMedianMs": null,
+        "probeP90Ms": null,
+        "probeMaxMs": 0,
+        "medianRoots": null,
+        "medianSearchPositions": null,
+        "probeIncomplete": 0,
+        "moves": 2768,
+        "moveMedianMs": 23.688708000001498,
+        "moveP90Ms": 46.16592499999388,
+        "maxSampledHeapBytes": 111787648,
+        "cumulativePeakRssKB": 250040,
+        "incompleteMoves": 4,
+        "uniqueFullTrajectories": 32,
+        "diversity": {
+          "records": 32,
+          "observedTrace": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 32,
+            "repeatedRecords": 0,
+            "maxMultiplicity": 1
+          },
+          "completed": {
+            "eligible": 29,
+            "tooShort": 0,
+            "unique": 29,
+            "repeatedRecords": 0,
+            "maxMultiplicity": 1
+          },
+          "first5": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 16,
+            "repeatedRecords": 16,
+            "maxMultiplicity": 7
+          },
+          "first10": {
+            "eligible": 18,
+            "tooShort": 14,
+            "unique": 18,
+            "repeatedRecords": 0,
+            "maxMultiplicity": 1
+          },
+          "uniqueCompletedOutcomes": {
+            "first": 25,
+            "second": 4
+          },
+          "physicalUniqueCompletedOutcomes": {
+            "first": 24,
+            "second": 4
+          },
+          "physicalCompleted": {
+            "eligible": 29,
+            "tooShort": 0,
+            "unique": 28,
+            "repeatedRecords": 1,
+            "maxMultiplicity": 2
+          },
+          "physicalFirst5": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 13,
+            "repeatedRecords": 19,
+            "maxMultiplicity": 14
+          },
+          "censored": 3
+        },
+        "positionWins": [
+          20,
+          9
+        ],
+        "firstFinalPossible": [
+          0.78125,
+          0.875
+        ]
+      },
+      "B": {
+        "n": 32,
+        "wins": 18,
+        "losses": 1,
+        "unresolved": 13,
+        "safetyEligible": 0,
+        "anySafeRetained": 0,
+        "avoidableDanger": 0,
+        "dangerous": 0,
+        "safeActionRetentionMean": null,
+        "forcedAvailable": 0,
+        "forcedChosen": 0,
+        "probeMedianMs": null,
+        "probeP90Ms": null,
+        "probeMaxMs": 0,
+        "medianRoots": null,
+        "medianSearchPositions": null,
+        "probeIncomplete": 0,
+        "moves": 7451,
+        "moveMedianMs": 24.133075999998255,
+        "moveP90Ms": 47.233950999972876,
+        "maxSampledHeapBytes": 112699952,
+        "cumulativePeakRssKB": 262300,
+        "incompleteMoves": 2,
+        "uniqueFullTrajectories": 32,
+        "diversity": {
+          "records": 32,
+          "observedTrace": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 32,
+            "repeatedRecords": 0,
+            "maxMultiplicity": 1
+          },
+          "completed": {
+            "eligible": 19,
+            "tooShort": 0,
+            "unique": 19,
+            "repeatedRecords": 0,
+            "maxMultiplicity": 1
+          },
+          "first5": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 26,
+            "repeatedRecords": 6,
+            "maxMultiplicity": 2
+          },
+          "first10": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 32,
+            "repeatedRecords": 0,
+            "maxMultiplicity": 1
+          },
+          "uniqueCompletedOutcomes": {
+            "first": 18,
+            "second": 1
+          },
+          "physicalUniqueCompletedOutcomes": {
+            "first": 18,
+            "second": 1
+          },
+          "physicalCompleted": {
+            "eligible": 19,
+            "tooShort": 0,
+            "unique": 19,
+            "repeatedRecords": 0,
+            "maxMultiplicity": 1
+          },
+          "physicalFirst5": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 21,
+            "repeatedRecords": 11,
+            "maxMultiplicity": 4
+          },
+          "censored": 13
+        },
+        "positionWins": [
+          10,
+          9
+        ],
+        "firstFinalPossible": [
+          0.5625,
+          0.96875
+        ]
+      },
+      "C": {
+        "n": 32,
+        "wins": 27,
+        "losses": 1,
+        "unresolved": 4,
+        "safetyEligible": 0,
+        "anySafeRetained": 0,
+        "avoidableDanger": 0,
+        "dangerous": 0,
+        "safeActionRetentionMean": null,
+        "forcedAvailable": 0,
+        "forcedChosen": 0,
+        "probeMedianMs": null,
+        "probeP90Ms": null,
+        "probeMaxMs": 0,
+        "medianRoots": null,
+        "medianSearchPositions": null,
+        "probeIncomplete": 0,
+        "moves": 3863,
+        "moveMedianMs": 26.037987999996403,
+        "moveP90Ms": 47.73065199999837,
+        "maxSampledHeapBytes": 111886784,
+        "cumulativePeakRssKB": 260124,
+        "incompleteMoves": 3,
+        "uniqueFullTrajectories": 25,
+        "diversity": {
+          "records": 32,
+          "observedTrace": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 25,
+            "repeatedRecords": 7,
+            "maxMultiplicity": 4
+          },
+          "completed": {
+            "eligible": 28,
+            "tooShort": 0,
+            "unique": 21,
+            "repeatedRecords": 7,
+            "maxMultiplicity": 4
+          },
+          "first5": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 6,
+            "repeatedRecords": 26,
+            "maxMultiplicity": 8
+          },
+          "first10": {
+            "eligible": 18,
+            "tooShort": 14,
+            "unique": 8,
+            "repeatedRecords": 10,
+            "maxMultiplicity": 6
+          },
+          "uniqueCompletedOutcomes": {
+            "first": 20,
+            "second": 1
+          },
+          "physicalUniqueCompletedOutcomes": {
+            "first": 17,
+            "second": 1
+          },
+          "physicalCompleted": {
+            "eligible": 28,
+            "tooShort": 0,
+            "unique": 18,
+            "repeatedRecords": 10,
+            "maxMultiplicity": 7
+          },
+          "physicalFirst5": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 4,
+            "repeatedRecords": 28,
+            "maxMultiplicity": 16
+          },
+          "censored": 4
+        },
+        "positionWins": [
+          17,
+          11
+        ],
+        "firstFinalPossible": [
+          0.84375,
+          0.96875
+        ]
+      },
+      "D": {
+        "n": 32,
+        "wins": 21,
+        "losses": 3,
+        "unresolved": 8,
+        "safetyEligible": 0,
+        "anySafeRetained": 0,
+        "avoidableDanger": 0,
+        "dangerous": 0,
+        "safeActionRetentionMean": null,
+        "forcedAvailable": 0,
+        "forcedChosen": 0,
+        "probeMedianMs": null,
+        "probeP90Ms": null,
+        "probeMaxMs": 0,
+        "medianRoots": null,
+        "medianSearchPositions": null,
+        "probeIncomplete": 0,
+        "moves": 4458,
+        "moveMedianMs": 27.750416999988374,
+        "moveP90Ms": 54.04787799998303,
+        "maxSampledHeapBytes": 110050296,
+        "cumulativePeakRssKB": 261000,
+        "incompleteMoves": 1,
+        "uniqueFullTrajectories": 32,
+        "diversity": {
+          "records": 32,
+          "observedTrace": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 32,
+            "repeatedRecords": 0,
+            "maxMultiplicity": 1
+          },
+          "completed": {
+            "eligible": 24,
+            "tooShort": 0,
+            "unique": 24,
+            "repeatedRecords": 0,
+            "maxMultiplicity": 1
+          },
+          "first5": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 14,
+            "repeatedRecords": 18,
+            "maxMultiplicity": 8
+          },
+          "first10": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 24,
+            "repeatedRecords": 8,
+            "maxMultiplicity": 4
+          },
+          "uniqueCompletedOutcomes": {
+            "first": 21,
+            "second": 3
+          },
+          "physicalUniqueCompletedOutcomes": {
+            "first": 21,
+            "second": 3
+          },
+          "physicalCompleted": {
+            "eligible": 24,
+            "tooShort": 0,
+            "unique": 24,
+            "repeatedRecords": 0,
+            "maxMultiplicity": 1
+          },
+          "physicalFirst5": {
+            "eligible": 32,
+            "tooShort": 0,
+            "unique": 11,
+            "repeatedRecords": 21,
+            "maxMultiplicity": 16
+          },
+          "censored": 8
+        },
+        "positionWins": [
+          9,
+          15
+        ],
+        "firstFinalPossible": [
+          0.65625,
+          0.90625
+        ]
+      }
+    },
+    "supplementary": {
+      "development": {
+        "arms": {
+          "A": {
+            "n": 25,
+            "wins": 1,
+            "losses": 21,
+            "unresolved": 3,
+            "safetyEligible": 25,
+            "anySafeRetained": 21,
+            "avoidableDanger": 4,
+            "dangerous": 4,
+            "safeActionRetentionMean": 0.10242202919764169,
+            "forcedAvailable": 0,
+            "forcedChosen": 0,
+            "probeMedianMs": 78.86737499998708,
+            "probeP90Ms": 115.06294100000014,
+            "probeMaxMs": 213.7286000000022,
+            "medianRoots": 8,
+            "medianSearchPositions": 682,
+            "probeIncomplete": 0,
+            "moves": 344,
+            "moveMedianMs": 79.43651199999658,
+            "moveP90Ms": 157.1230329999962,
+            "maxSampledHeapBytes": 101293432,
+            "cumulativePeakRssKB": 246756,
+            "incompleteMoves": 1,
+            "uniqueFullTrajectories": 25,
+            "diversity": {
+              "records": 25,
+              "observedTrace": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 25,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "completed": {
+                "eligible": 22,
+                "tooShort": 0,
+                "unique": 22,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "first5": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 19,
+                "repeatedRecords": 6,
+                "maxMultiplicity": 3
+              },
+              "first10": {
+                "eligible": 20,
+                "tooShort": 5,
+                "unique": 19,
+                "repeatedRecords": 1,
+                "maxMultiplicity": 2
+              },
+              "uniqueCompletedOutcomes": {
+                "first": 21,
+                "second": 1
+              },
+              "physicalUniqueCompletedOutcomes": {
+                "first": 21,
+                "second": 1
+              },
+              "physicalCompleted": {
+                "eligible": 22,
+                "tooShort": 0,
+                "unique": 22,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "physicalFirst5": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 14,
+                "repeatedRecords": 11,
+                "maxMultiplicity": 5
+              },
+              "censored": 3
+            }
+          },
+          "B": {
+            "n": 25,
+            "wins": 1,
+            "losses": 21,
+            "unresolved": 3,
+            "safetyEligible": 25,
+            "anySafeRetained": 25,
+            "avoidableDanger": 0,
+            "dangerous": 0,
+            "safeActionRetentionMean": 0.26652583755145004,
+            "forcedAvailable": 0,
+            "forcedChosen": 0,
+            "probeMedianMs": 90.74541300000055,
+            "probeP90Ms": 120.99317099999462,
+            "probeMaxMs": 2263.352755999993,
+            "medianRoots": 8,
+            "medianSearchPositions": 595,
+            "probeIncomplete": 1,
+            "moves": 367,
+            "moveMedianMs": 90.7225449999969,
+            "moveP90Ms": 167.4246839999978,
+            "maxSampledHeapBytes": 101833168,
+            "cumulativePeakRssKB": 248164,
+            "incompleteMoves": 0,
+            "uniqueFullTrajectories": 25,
+            "diversity": {
+              "records": 25,
+              "observedTrace": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 25,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "completed": {
+                "eligible": 22,
+                "tooShort": 0,
+                "unique": 22,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "first5": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 19,
+                "repeatedRecords": 6,
+                "maxMultiplicity": 3
+              },
+              "first10": {
+                "eligible": 20,
+                "tooShort": 5,
+                "unique": 19,
+                "repeatedRecords": 1,
+                "maxMultiplicity": 2
+              },
+              "uniqueCompletedOutcomes": {
+                "first": 21,
+                "second": 1
+              },
+              "physicalUniqueCompletedOutcomes": {
+                "first": 21,
+                "second": 1
+              },
+              "physicalCompleted": {
+                "eligible": 22,
+                "tooShort": 0,
+                "unique": 22,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "physicalFirst5": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 14,
+                "repeatedRecords": 11,
+                "maxMultiplicity": 5
+              },
+              "censored": 3
+            }
+          },
+          "C": {
+            "n": 25,
+            "wins": 2,
+            "losses": 19,
+            "unresolved": 4,
+            "safetyEligible": 25,
+            "anySafeRetained": 21,
+            "avoidableDanger": 4,
+            "dangerous": 4,
+            "safeActionRetentionMean": 0.10242202919764169,
+            "forcedAvailable": 0,
+            "forcedChosen": 0,
+            "probeMedianMs": 106.24808599999233,
+            "probeP90Ms": 155.1583580000006,
+            "probeMaxMs": 179.45104999999967,
+            "medianRoots": 8,
+            "medianSearchPositions": 682,
+            "probeIncomplete": 0,
+            "moves": 314,
+            "moveMedianMs": 87.12709400000313,
+            "moveP90Ms": 161.7102290000039,
+            "maxSampledHeapBytes": 102371064,
+            "cumulativePeakRssKB": 248864,
+            "incompleteMoves": 0,
+            "uniqueFullTrajectories": 25,
+            "diversity": {
+              "records": 25,
+              "observedTrace": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 25,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "completed": {
+                "eligible": 21,
+                "tooShort": 0,
+                "unique": 21,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "first5": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 19,
+                "repeatedRecords": 6,
+                "maxMultiplicity": 3
+              },
+              "first10": {
+                "eligible": 20,
+                "tooShort": 5,
+                "unique": 19,
+                "repeatedRecords": 1,
+                "maxMultiplicity": 2
+              },
+              "uniqueCompletedOutcomes": {
+                "first": 19,
+                "second": 2
+              },
+              "physicalUniqueCompletedOutcomes": {
+                "first": 19,
+                "second": 2
+              },
+              "physicalCompleted": {
+                "eligible": 21,
+                "tooShort": 0,
+                "unique": 21,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "physicalFirst5": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 14,
+                "repeatedRecords": 11,
+                "maxMultiplicity": 5
+              },
+              "censored": 4
+            }
+          },
+          "D": {
+            "n": 25,
+            "wins": 6,
+            "losses": 18,
+            "unresolved": 1,
+            "safetyEligible": 25,
+            "anySafeRetained": 25,
+            "avoidableDanger": 0,
+            "dangerous": 0,
+            "safeActionRetentionMean": 0.26652583755145004,
+            "forcedAvailable": 0,
+            "forcedChosen": 0,
+            "probeMedianMs": 89.50670500000706,
+            "probeP90Ms": 163.32171499999822,
+            "probeMaxMs": 248.55293900000106,
+            "medianRoots": 8,
+            "medianSearchPositions": 634,
+            "probeIncomplete": 0,
+            "moves": 275,
+            "moveMedianMs": 91.54685900000914,
+            "moveP90Ms": 173.65663399999903,
+            "maxSampledHeapBytes": 102255128,
+            "cumulativePeakRssKB": 248856,
+            "incompleteMoves": 0,
+            "uniqueFullTrajectories": 25,
+            "diversity": {
+              "records": 25,
+              "observedTrace": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 25,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "completed": {
+                "eligible": 24,
+                "tooShort": 0,
+                "unique": 24,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "first5": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 19,
+                "repeatedRecords": 6,
+                "maxMultiplicity": 3
+              },
+              "first10": {
+                "eligible": 20,
+                "tooShort": 5,
+                "unique": 19,
+                "repeatedRecords": 1,
+                "maxMultiplicity": 2
+              },
+              "uniqueCompletedOutcomes": {
+                "first": 21,
+                "second": 3
+              },
+              "physicalUniqueCompletedOutcomes": {
+                "first": 21,
+                "second": 3
+              },
+              "physicalCompleted": {
+                "eligible": 24,
+                "tooShort": 0,
+                "unique": 24,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "physicalFirst5": {
+                "eligible": 25,
+                "tooShort": 0,
+                "unique": 14,
+                "repeatedRecords": 11,
+                "maxMultiplicity": 5
+              },
+              "censored": 1
+            }
+          }
+        }
+      },
+      "holdout": {
+        "arms": {
+          "A": {
+            "n": 32,
+            "wins": 6,
+            "losses": 22,
+            "unresolved": 4,
+            "safetyEligible": 32,
+            "anySafeRetained": 32,
+            "avoidableDanger": 0,
+            "dangerous": 0,
+            "safeActionRetentionMean": 0.14369679892331796,
+            "forcedAvailable": 0,
+            "forcedChosen": 0,
+            "probeMedianMs": 22.17075499999919,
+            "probeP90Ms": 34.062318000011146,
+            "probeMaxMs": 49.27254500001436,
+            "medianRoots": 8,
+            "medianSearchPositions": 572,
+            "probeIncomplete": 0,
+            "moves": 3137,
+            "moveMedianMs": 33.93392199999653,
+            "moveP90Ms": 66.54723500000546,
+            "maxSampledHeapBytes": 117408856,
+            "cumulativePeakRssKB": 287820,
+            "incompleteMoves": 0,
+            "uniqueFullTrajectories": 32,
+            "diversity": {
+              "records": 32,
+              "observedTrace": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 32,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "completed": {
+                "eligible": 28,
+                "tooShort": 0,
+                "unique": 28,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "first5": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 22,
+                "repeatedRecords": 10,
+                "maxMultiplicity": 3
+              },
+              "first10": {
+                "eligible": 26,
+                "tooShort": 6,
+                "unique": 26,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "uniqueCompletedOutcomes": {
+                "first": 22,
+                "second": 6
+              },
+              "physicalUniqueCompletedOutcomes": {
+                "first": 22,
+                "second": 6
+              },
+              "physicalCompleted": {
+                "eligible": 28,
+                "tooShort": 0,
+                "unique": 28,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "physicalFirst5": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 18,
+                "repeatedRecords": 14,
+                "maxMultiplicity": 6
+              },
+              "censored": 4
+            }
+          },
+          "B": {
+            "n": 32,
+            "wins": 10,
+            "losses": 17,
+            "unresolved": 5,
+            "safetyEligible": 32,
+            "anySafeRetained": 32,
+            "avoidableDanger": 0,
+            "dangerous": 0,
+            "safeActionRetentionMean": 0.15475455331045887,
+            "forcedAvailable": 0,
+            "forcedChosen": 0,
+            "probeMedianMs": 20.44060499999614,
+            "probeP90Ms": 32.739040999964345,
+            "probeMaxMs": 48.62380800000392,
+            "medianRoots": 8,
+            "medianSearchPositions": 609,
+            "probeIncomplete": 0,
+            "moves": 1703,
+            "moveMedianMs": 23.882204000001366,
+            "moveP90Ms": 59.70858900001622,
+            "maxSampledHeapBytes": 116232264,
+            "cumulativePeakRssKB": 287820,
+            "incompleteMoves": 1,
+            "uniqueFullTrajectories": 32,
+            "diversity": {
+              "records": 32,
+              "observedTrace": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 32,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "completed": {
+                "eligible": 27,
+                "tooShort": 0,
+                "unique": 27,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "first5": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 24,
+                "repeatedRecords": 8,
+                "maxMultiplicity": 3
+              },
+              "first10": {
+                "eligible": 28,
+                "tooShort": 4,
+                "unique": 28,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "uniqueCompletedOutcomes": {
+                "first": 18,
+                "second": 9
+              },
+              "physicalUniqueCompletedOutcomes": {
+                "first": 18,
+                "second": 9
+              },
+              "physicalCompleted": {
+                "eligible": 27,
+                "tooShort": 0,
+                "unique": 27,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "physicalFirst5": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 20,
+                "repeatedRecords": 12,
+                "maxMultiplicity": 4
+              },
+              "censored": 5
+            }
+          },
+          "C": {
+            "n": 32,
+            "wins": 14,
+            "losses": 13,
+            "unresolved": 5,
+            "safetyEligible": 32,
+            "anySafeRetained": 32,
+            "avoidableDanger": 0,
+            "dangerous": 0,
+            "safeActionRetentionMean": 0.14369679892331796,
+            "forcedAvailable": 0,
+            "forcedChosen": 0,
+            "probeMedianMs": 28.157763999974122,
+            "probeP90Ms": 47.06355699998676,
+            "probeMaxMs": 2205.1070590000018,
+            "medianRoots": 8,
+            "medianSearchPositions": 572,
+            "probeIncomplete": 1,
+            "moves": 1386,
+            "moveMedianMs": 37.316362999990815,
+            "moveP90Ms": 66.914414999992,
+            "maxSampledHeapBytes": 116188344,
+            "cumulativePeakRssKB": 287820,
+            "incompleteMoves": 0,
+            "uniqueFullTrajectories": 31,
+            "diversity": {
+              "records": 32,
+              "observedTrace": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 31,
+                "repeatedRecords": 1,
+                "maxMultiplicity": 2
+              },
+              "completed": {
+                "eligible": 27,
+                "tooShort": 0,
+                "unique": 26,
+                "repeatedRecords": 1,
+                "maxMultiplicity": 2
+              },
+              "first5": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 22,
+                "repeatedRecords": 10,
+                "maxMultiplicity": 3
+              },
+              "first10": {
+                "eligible": 26,
+                "tooShort": 6,
+                "unique": 26,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "uniqueCompletedOutcomes": {
+                "first": 15,
+                "second": 11
+              },
+              "physicalUniqueCompletedOutcomes": {
+                "first": 14,
+                "second": 11
+              },
+              "physicalCompleted": {
+                "eligible": 27,
+                "tooShort": 0,
+                "unique": 25,
+                "repeatedRecords": 2,
+                "maxMultiplicity": 3
+              },
+              "physicalFirst5": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 18,
+                "repeatedRecords": 14,
+                "maxMultiplicity": 6
+              },
+              "censored": 5
+            }
+          },
+          "D": {
+            "n": 32,
+            "wins": 23,
+            "losses": 8,
+            "unresolved": 1,
+            "safetyEligible": 32,
+            "anySafeRetained": 32,
+            "avoidableDanger": 0,
+            "dangerous": 0,
+            "safeActionRetentionMean": 0.15475455331045887,
+            "forcedAvailable": 0,
+            "forcedChosen": 0,
+            "probeMedianMs": 29.31310400000075,
+            "probeP90Ms": 50.26738000003388,
+            "probeMaxMs": 2345.8361279999954,
+            "medianRoots": 8,
+            "medianSearchPositions": 609,
+            "probeIncomplete": 1,
+            "moves": 789,
+            "moveMedianMs": 42.68113499999163,
+            "moveP90Ms": 78.19953800001531,
+            "maxSampledHeapBytes": 110127952,
+            "cumulativePeakRssKB": 287820,
+            "incompleteMoves": 1,
+            "uniqueFullTrajectories": 31,
+            "diversity": {
+              "records": 32,
+              "observedTrace": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 31,
+                "repeatedRecords": 1,
+                "maxMultiplicity": 2
+              },
+              "completed": {
+                "eligible": 31,
+                "tooShort": 0,
+                "unique": 30,
+                "repeatedRecords": 1,
+                "maxMultiplicity": 2
+              },
+              "first5": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 24,
+                "repeatedRecords": 8,
+                "maxMultiplicity": 3
+              },
+              "first10": {
+                "eligible": 28,
+                "tooShort": 4,
+                "unique": 28,
+                "repeatedRecords": 0,
+                "maxMultiplicity": 1
+              },
+              "uniqueCompletedOutcomes": {
+                "first": 11,
+                "second": 19
+              },
+              "physicalUniqueCompletedOutcomes": {
+                "first": 10,
+                "second": 19
+              },
+              "physicalCompleted": {
+                "eligible": 31,
+                "tooShort": 0,
+                "unique": 29,
+                "repeatedRecords": 2,
+                "maxMultiplicity": 3
+              },
+              "physicalFirst5": {
+                "eligible": 32,
+                "tooShort": 0,
+                "unique": 20,
+                "repeatedRecords": 12,
+                "maxMultiplicity": 4
+              },
+              "censored": 1
+            }
+          }
+        },
+        "effects": [
+          {
+            "control": "A",
+            "treatment": "B",
+            "clusters": 8,
+            "seedEffects": [
+              0.5,
+              0.25,
+              0,
+              0,
+              0.25,
+              0,
+              0,
+              0
+            ],
+            "observedWinDifference": 0.125,
+            "seedBootstrap95": [
+              0.03125,
+              0.25
+            ],
+            "twoSidedSeedSignFlipP": 0.25,
+            "note": "Exploratory observed wins, not final win probabilities. Bootstrap intervals are unadjusted and unstable with eight clusters. Sign-flip exchangeability is an assumption; censored outcomes stay separate.",
+            "holmReferenceP": 0.25
+          },
+          {
+            "control": "C",
+            "treatment": "D",
+            "clusters": 8,
+            "seedEffects": [
+              0,
+              0.25,
+              0.5,
+              -0.25,
+              0.5,
+              0.5,
+              0.25,
+              0.5
+            ],
+            "observedWinDifference": 0.28125,
+            "seedBootstrap95": [
+              0.09375,
+              0.4375
+            ],
+            "twoSidedSeedSignFlipP": 0.0625,
+            "note": "Exploratory observed wins, not final win probabilities. Bootstrap intervals are unadjusted and unstable with eight clusters. Sign-flip exchangeability is an assumption; censored outcomes stay separate.",
+            "holmReferenceP": 0.125
+          },
+          {
+            "control": "A",
+            "treatment": "C",
+            "clusters": 8,
+            "seedEffects": [
+              0.5,
+              0,
+              0.25,
+              0.5,
+              0.25,
+              0,
+              0.25,
+              0.25
+            ],
+            "observedWinDifference": 0.25,
+            "seedBootstrap95": [
+              0.125,
+              0.375
+            ],
+            "twoSidedSeedSignFlipP": 0.03125,
+            "note": "Exploratory observed wins, not final win probabilities. Bootstrap intervals are unadjusted and unstable with eight clusters. Sign-flip exchangeability is an assumption; censored outcomes stay separate.",
+            "holmReferenceP": 0.125
+          },
+          {
+            "control": "B",
+            "treatment": "D",
+            "clusters": 8,
+            "seedEffects": [
+              0,
+              0,
+              0.75,
+              0.25,
+              0.5,
+              0.5,
+              0.5,
+              0.75
+            ],
+            "observedWinDifference": 0.40625,
+            "seedBootstrap95": [
+              0.21875,
+              0.59375
+            ],
+            "twoSidedSeedSignFlipP": 0.03125,
+            "note": "Exploratory observed wins, not final win probabilities. Bootstrap intervals are unadjusted and unstable with eight clusters. Sign-flip exchangeability is an assumption; censored outcomes stay separate.",
+            "holmReferenceP": 0.125
+          },
+          {
+            "control": "interaction",
+            "treatment": "D-B-C+A",
+            "clusters": 8,
+            "seedEffects": [
+              -0.5,
+              0,
+              0.5,
+              -0.25,
+              0.25,
+              0.5,
+              0.25,
+              0.5
+            ],
+            "observedWinDifference": 0.15625,
+            "seedBootstrap95": [
+              -0.09375,
+              0.375
+            ],
+            "twoSidedSeedSignFlipP": 0.375,
+            "note": "Exploratory observed wins, not final win probabilities. Bootstrap intervals are unadjusted and unstable with eight clusters. Sign-flip exchangeability is an assumption; censored outcomes stay separate."
+          }
+        ]
+      }
+    }
+  }
+}

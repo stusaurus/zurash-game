@@ -1,0 +1,16 @@
+{
+  "version":1,
+  "researchBase":"d20b58065d9365c51ae603f96c0fb6b3e011d234",
+  "verifierBase":"7d9461538ae7c6fb27d6f10d51afb9b58aabae08",
+  "arms":{"A":{"keeper":false,"routes":false},"B":{"keeper":true,"routes":false},"C":{"keeper":false,"routes":true},"D":{"keeper":true,"routes":true}},
+  "kernel":"Distance root order and identical RNG consumption; A/C use unshielded top8; B/D use safe pool plus category and three-ply certificate representatives; same depth2 and complete opponent replies. Immediate wins shared by every arm. No automatic three-ply override.",
+  "moveBudget":{"maxLeaves":8192,"maxMs":1500},
+  "development":{"source":"reports/guard-followup-2026-10-24/checkpoints.json.gz","expectedCases":25,"forkMs":4000,"extraPlies":256},
+  "freshSource":{"seeds":[10102401,10102423,10102449,10102471,10102493,10102517,10102541,10102567],"arm":"A","initialMs":2000,"extensionMs":4000,"maxPlies":4096},
+  "holdout":{"selection":"At most one distinct physical state per source game; scan recorded pre-move states in order: ply>=8 and opponent one star from victory, then ply>=12, then all pre-move states. Exclude all development states and earlier selected holdout states. Outcome of comparison arms is never used for selection.","forkMs":4000,"extraPlies":256},
+  "selfPlay":{"seeds":[11102401,11102423,11102449,11102471,11102493,11102517,11102541,11102567],"arms":["A","B","C","D"],"initialMs":4000,"extensionMs":8000,"maxPlies":4096},
+  "counterbalance":"Every initial game crosses starter 0/1 and physical position swap false/true; no redundant same-AI identity swap. Arm execution order rotates by seed/case.",
+  "statistics":{"bootstrapSeed":1199,"samples":4000,"unit":"fresh source seed for holdout forks; self-play seed for initial games","contrasts":[["A","B"],["C","D"],["A","C"],["B","D"]],"interpretation":"Observed win indicators with censoring separately reported; not final win probabilities. Seed-block intervals, all unresolved retained, complete trajectory duplicates reported."},
+  "adoption":{"keeper":"Local safety improvement requires all three rank23/17/24 regressions retained and no avoidable immediate-loss selection when a safe root exists.","generalStrength":"No promotion unless holdout paired observed-win gain has a positive 95% lower bound, no unresolved-rate worsening, and no immediate-win/safety regression. Fixed exploratory evidence does not establish board fairness.","evaluation":"Use existing 180 route-count and 20000 next-turn-win terms; no tuning after new outcomes. Compare the route-count and threat terms separately as static diagnostic ablations only."},
+  "limits":["No official boards, rules, CPU, images, Sprint or A–E changes","New initial games, extensions and checkpoint forks have separate ledgers","Time budgets are soft and never treated as draws","Shared feature prepass is timed in every arm, not counted as minimax search positions","Heap sampled and RSS cumulative; no isolated allocation-peak claim","A is a controlled full-reply implementation of current root/evaluation; archived choose is recorded as a shadow baseline to expose differences","Do not merge PR15 or PR16, and do not deploy"]
+}

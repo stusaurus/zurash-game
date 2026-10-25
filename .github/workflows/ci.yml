@@ -18,6 +18,45 @@ jobs:
           node-version: 22
       - run: npm ci
       - run: npm run check && npm test
+      - name: Reproduce bounded tactical contracts and archived B checkpoints
+        run: |
+          node --max-old-space-size=768 scripts/guard-contract.js --verify
+          node --max-old-space-size=768 scripts/guard-contract.js --archived --verify
+      - name: Verify frozen B factorial data and complete AI replay manifest
+        run: |
+          node --max-old-space-size=768 scripts/b-factorial-study.js --verify
+          node scripts/b-factorial-analysis.js --verify-replays
+      - name: Verify B settlement, crossed matches and progress candidate archives
+        run: |
+          node --max-old-space-size=768 scripts/b-performance-study.js --verify
+          node --max-old-space-size=768 scripts/b-progress-study.js --verify
+          node scripts/b-progress-study.js --verify-replays
+          node scripts/b-performance-report.js
+          git diff --exit-code -- reports/b-performance-2026-10-24.md reports/b-performance-2026-10-24/
+      - name: Verify independent D-walk games, continuations, tie controls and reports
+        run: |
+          node --max-old-space-size=768 scripts/d-walk-study.js --verify
+          node scripts/d-walk-analysis.js --verify
+          node scripts/d-walk-report.js
+          git diff --exit-code -- reports/d-walk-independent-2026-10-24.md reports/d-walk-independent-2026-10-24/
+      - name: Verify fixed horizon and final D-walk confirmation archives
+        run: |
+          node --max-old-space-size=768 scripts/d-walk-horizon.js --verify
+          node --max-old-space-size=768 scripts/d-walk-final.js --verify
+          node scripts/d-walk-final-report.js
+          git diff --exit-code -- reports/d-walk-horizon-2026-10-24/ reports/d-walk-final-2026-10-25/ reports/d-walk-final-2026-10-25.md
+      - name: Recompute bounded deep scoring diagnostics independently
+        run: |
+          for part in 0 1 2 3; do node scripts/d-walk-depth.js --run "$part"; done
+          node scripts/d-walk-depth.js --verify
+          git diff --exit-code -- reports/d-walk-depth-2026-10-25/ reports/d-walk-depth-2026-10-25.md
+      - name: Independently verify scoring proof efficiency certificates
+        run: |
+          node --max-old-space-size=768 scripts/scoring-proof-study.js --verify
+          node --max-old-space-size=768 scripts/scoring-proof-early.js --verify
+          node scripts/scoring-proof-study.js --structure
+          node scripts/scoring-proof-report.js
+          git diff --exit-code -- reports/scoring-proof-2026-10-25/ reports/scoring-proof-2026-10-25.md
       - run: PAIRS=2 MAX_PLIES=35 MATCHUPS=greedy/greedy npm run quality:audit
       - run: LAYOUT_TRIALS=20 PAIRS=2 MAX_PLIES=25 npm run quality:layouts
       - run: PAIRS=1 MAX_PLIES=12 MATCHUPS=greedy/greedy REPORT=/tmp/strategy-smoke.json npm run quality:study

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "baseCommit": "6e93f54c9cf12d2a704f320de5ae2e4b9bcaa543",
+  "board": "B",
+  "source": "reports/b-factorial-2026-10-24",
+  "extension": {"expected": 8, "stagesMs": [8000,24000,64000], "extraPliesPerStage": 8192},
+  "seeds": [2412001,2412023,2412049,2412071,2412093,2412117,2412141,2412167,2412191,2412213,2412239,2412263],
+  "pairs": [["A","A"],["D","D"],["A","D"],["D","A"]],
+  "cross": "Every seed x four actor-label pairs x starter 0/1 x physical swap false/true. These are 192 new initial games, not 384. Report actor pair and actual first/second AI separately.",
+  "freshStagesMs": [3000,9000],
+  "freshExtraPliesPerStage": 2048,
+  "moveBudget": {"maxLeaves":8192,"maxMs":1500},
+  "diagnostic": {"horizon":3,"maxNodes":100000,"maxMs":1000,"description":"Independent OR/AND proof of gaining a point within horizon, not cooperative reachability. Unknown on any cap. Original terminal wins/losses respected."},
+  "statistics": {"bootstrapSeed":2412999,"samples":4000,"unit":"seed, preserving all crossed conditions","primary":"Observed D vs A win-indicator difference on mixed games; no renormalization excluding unresolved","secondary":"D/D minus A/A settlement, completed plies and quiet runs descriptive"},
+  "adoption": "No production/default AI promotion. D is not generally superior unless mixed-game observed win advantage is robust, settlement does not worsen, safety is maintained, and resource cost is acceptable. Human enjoyment and real-device performance remain untested.",
+  "limits": ["Frozen file before new outcomes, not external preregistration","Wall-clock caps are unresolved, never draws","Parallel workers share host, so timing is descriptive and cannot establish isolated device speed","No parameter tuning from fresh seed outcomes","Important-choice counts are an evaluator-based proxy, not validated human strategy","No official rules, boards, src, images, modes A-E, merging or deployment changes"]
+}
