@@ -1,0 +1,473 @@
+{
+  "complete": true,
+  "games": 128,
+  "extensions": 0,
+  "forks": 0,
+  "transitions": 13340,
+  "aiRecalculated": 1266,
+  "rows": [
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 32,
+      "uniqueTraces": 32,
+      "uniqueCompletedTraces": 18,
+      "first": 6,
+      "second": 12,
+      "unresolved": 14,
+      "positionWins": [
+        14,
+        4
+      ],
+      "settlement": 0.5625,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 187.8125,
+        "median": 224,
+        "p90": 256
+      },
+      "decidedPlies": {
+        "mean": 134.77777777777777,
+        "median": 106,
+        "p90": 224
+      },
+      "quiet": {
+        "mean": 106.125,
+        "max": 206
+      },
+      "thinkCpuMs": {
+        "mean": 4.0518527454242825,
+        "p90": 6.36,
+        "max": 17.627
+      },
+      "generated": 2662770,
+      "evaluated": 2576214,
+      "routeQueries": 0,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "path",
+          "path"
+        ]
+      ],
+      "games": 32,
+      "uniqueTraces": 32,
+      "uniqueCompletedTraces": 26,
+      "first": 20,
+      "second": 6,
+      "unresolved": 6,
+      "positionWins": [
+        8,
+        18
+      ],
+      "settlement": 0.8125,
+      "firstScoreStarter": 32,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 136.75,
+        "median": 71,
+        "p90": 256
+      },
+      "decidedPlies": {
+        "mean": 109.23076923076923,
+        "median": 69,
+        "p90": 233
+      },
+      "quiet": {
+        "mean": 83.625,
+        "max": 198
+      },
+      "thinkCpuMs": {
+        "mean": 4.86382061243145,
+        "p90": 7.674,
+        "max": 25.148
+      },
+      "generated": 1931354,
+      "evaluated": 1814096,
+      "routeQueries": 3626832,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "path",
+          "control"
+        ]
+      ],
+      "games": 32,
+      "uniqueTraces": 32,
+      "uniqueCompletedTraces": 32,
+      "first": 17,
+      "second": 15,
+      "unresolved": 0,
+      "positionWins": [
+        17,
+        15
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 24,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 46.15625,
+        "median": 37,
+        "p90": 82
+      },
+      "decidedPlies": {
+        "mean": 46.15625,
+        "median": 37,
+        "p90": 82
+      },
+      "quiet": {
+        "mean": 23.6875,
+        "max": 73
+      },
+      "thinkCpuMs": {
+        "mean": 3.923117129316179,
+        "p90": 6.577,
+        "max": 16.589
+      },
+      "generated": 626771,
+      "evaluated": 567035,
+      "routeQueries": 529030,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "control",
+          "path"
+        ]
+      ],
+      "games": 32,
+      "uniqueTraces": 32,
+      "uniqueCompletedTraces": 32,
+      "first": 17,
+      "second": 15,
+      "unresolved": 0,
+      "positionWins": [
+        17,
+        15
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 24,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 46.15625,
+        "median": 37,
+        "p90": 82
+      },
+      "decidedPlies": {
+        "mean": 46.15625,
+        "median": 37,
+        "p90": 82
+      },
+      "quiet": {
+        "mean": 23.6875,
+        "max": 73
+      },
+      "thinkCpuMs": {
+        "mean": 3.867789438050098,
+        "p90": 6.338,
+        "max": 16.414
+      },
+      "generated": 626771,
+      "evaluated": 567035,
+      "routeQueries": 529030,
+      "cpuCap": 0
+    }
+  ],
+  "mixed": [
+    {
+      "mode": "A",
+      "candidate": "control",
+      "variant": "path",
+      "games": 64,
+      "wins": 62,
+      "losses": 2,
+      "unresolved": 0,
+      "seedBlocks": 8,
+      "winMinusLossPerGame": 0.9375,
+      "exploratorySeedBootstrap95": [
+        0.8125,
+        1
+      ],
+      "selfSettlementDifference": 0.25,
+      "selfSettlementBootstrap95": [
+        0,
+        0.4375
+      ],
+      "adopt": false
+    }
+  ],
+  "reachability": [
+    {
+      "mode": "A",
+      "actorPositions": 64,
+      "legalNextTurnScoreTargets": 13,
+      "missedByFixedWallDistanceOne": 8,
+      "meaning": "geometry reachability only; not a guaranteed score against intervening opponent"
+    },
+    {
+      "mode": "B",
+      "actorPositions": 64,
+      "legalNextTurnScoreTargets": 27,
+      "missedByFixedWallDistanceOne": 17,
+      "meaning": "geometry reachability only; not a guaranteed score against intervening opponent"
+    },
+    {
+      "mode": "C",
+      "actorPositions": 64,
+      "legalNextTurnScoreTargets": 20,
+      "missedByFixedWallDistanceOne": 11,
+      "meaning": "geometry reachability only; not a guaranteed score against intervening opponent"
+    },
+    {
+      "mode": "D",
+      "actorPositions": 64,
+      "legalNextTurnScoreTargets": 32,
+      "missedByFixedWallDistanceOne": 23,
+      "meaning": "geometry reachability only; not a guaranteed score against intervening opponent"
+    },
+    {
+      "mode": "E",
+      "actorPositions": 64,
+      "legalNextTurnScoreTargets": 9,
+      "missedByFixedWallDistanceOne": 3,
+      "meaning": "geometry reachability only; not a guaranteed score against intervening opponent"
+    }
+  ],
+  "holdoutSummary": [
+    {
+      "mode": "A",
+      "positions": 6,
+      "byVariant": {
+        "control": {
+          "positions": 6,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "defense": {
+          "positions": 6,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "positions": 6,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "positions": 6,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "B",
+      "positions": 0,
+      "byVariant": {
+        "control": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "defense": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "C",
+      "positions": 0,
+      "byVariant": {
+        "control": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "defense": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "D",
+      "positions": 0,
+      "byVariant": {
+        "control": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "defense": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "E",
+      "positions": 0,
+      "byVariant": {
+        "control": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "defense": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "positions": 0,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    }
+  ],
+  "limits": [
+    "8 seed blocks; games within a block are dependent; percentile bootstrap may be degenerate",
+    "Paired actor/position swaps are clustered by seed",
+    "1500ms soft process CPU budget per game and 256-ply censoring; unresolved are not draws",
+    "Generation and reference verification are separate; shared-host timing is descriptive",
+    "No best-play fairness proof, human-fun assessment or production adoption"
+  ]
+}

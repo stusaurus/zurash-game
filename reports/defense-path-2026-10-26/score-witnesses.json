@@ -1,0 +1,1688 @@
+[
+  {
+    "mode": "A",
+    "source": {
+      "seed": 581003,
+      "starter": 0,
+      "swap": false,
+      "ply": 255,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 5,
+          "to": 24
+        },
+        "dir": 3
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 33
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 24
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 33
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 24
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 33
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 24
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 33
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 24
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 33
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 24
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 0
+      },
+      "replyCount": 50
+    },
+    "limitedReferenceCensus": true
+  },
+  {
+    "mode": "A",
+    "source": {
+      "seed": 581003,
+      "starter": 0,
+      "swap": true,
+      "ply": 255,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 2,
+          "to": 28
+        },
+        "dir": 3
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 48
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 26
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 48
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 26
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 48
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 26
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 48
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 26
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 48
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 26
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 0
+      },
+      "replyCount": 52
+    },
+    "limitedReferenceCensus": true
+  },
+  {
+    "mode": "A",
+    "source": {
+      "seed": 581003,
+      "starter": 1,
+      "swap": false,
+      "ply": 255,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 2,
+          "to": 28
+        },
+        "dir": 3
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 21
+          },
+          "dir": 3
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 52
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 21
+          },
+          "dir": 3
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 52
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 21
+          },
+          "dir": 3
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 52
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 21
+          },
+          "dir": 3
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 52
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 21
+          },
+          "dir": 3
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 52
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 0
+      },
+      "replyCount": 52
+    },
+    "limitedReferenceCensus": true
+  },
+  {
+    "mode": "A",
+    "source": {
+      "seed": 581003,
+      "starter": 1,
+      "swap": true,
+      "ply": 255,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 5,
+          "to": 24
+        },
+        "dir": 3
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 4
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 30
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 4
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 30
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 4
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 30
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 4
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 30
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 4
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 30
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 0
+      },
+      "replyCount": 50
+    },
+    "limitedReferenceCensus": true
+  },
+  {
+    "mode": "A",
+    "source": {
+      "seed": 581029,
+      "starter": 0,
+      "swap": true,
+      "ply": 255,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 1,
+          "to": 5
+        },
+        "dir": 1
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 2,
+            "to": 49
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 76
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 2,
+            "to": 49
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 76
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 34
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 79
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 34
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 79
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 34
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 79
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 0
+      },
+      "replyCount": 67
+    },
+    "limitedReferenceCensus": true
+  },
+  {
+    "mode": "A",
+    "source": {
+      "seed": 581029,
+      "starter": 1,
+      "swap": false,
+      "ply": 255,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 1,
+          "to": 5
+        },
+        "dir": 1
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 21
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 60
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 21
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 60
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 34
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 79
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 34
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 79
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 34
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 79
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 0
+      },
+      "replyCount": 67
+    },
+    "limitedReferenceCensus": true
+  },
+  {
+    "mode": "A",
+    "source": {
+      "seed": 581053,
+      "starter": 0,
+      "swap": true,
+      "ply": 255,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 6,
+          "to": 22
+        },
+        "dir": 1
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 28
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 28
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 28
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 28
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 7,
+            "to": 48
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 26
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 7,
+            "to": 48
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 26
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 7,
+            "to": 48
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 26
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 2
+      },
+      "replyCount": 28
+    },
+    "limitedReferenceCensus": true
+  },
+  {
+    "mode": "A",
+    "source": {
+      "seed": 581053,
+      "starter": 1,
+      "swap": false,
+      "ply": 255,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 6,
+          "to": 22
+        },
+        "dir": 1
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 34
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 27
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 34
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 27
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 7,
+            "to": 57
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 27
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 7,
+            "to": 57
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 27
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 7,
+            "to": 57
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "replyCount": 27
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 2
+      },
+      "replyCount": 28
+    },
+    "limitedReferenceCensus": true
+  },
+  {
+    "mode": "E",
+    "source": {
+      "seed": 581029,
+      "starter": 0,
+      "swap": true,
+      "ply": 65,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 2,
+          "to": 17
+        },
+        "dir": 0
+      }
+    },
+    "witnesses": [
+      {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "plies": 3
+      }
+    ],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "forced": true,
+        "plies": 3,
+        "replyCount": 92
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "forced": true,
+        "plies": 3,
+        "replyCount": 92
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 17
+          },
+          "dir": 0
+        },
+        "forced": true,
+        "plies": 3,
+        "replyCount": 98
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 17
+          },
+          "dir": 0
+        },
+        "forced": true,
+        "plies": 3,
+        "replyCount": 98
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 17
+          },
+          "dir": 0
+        },
+        "forced": true,
+        "plies": 3,
+        "replyCount": 98
+      }
+    },
+    "archivedChoice": {
+      "forced": true,
+      "plies": 3,
+      "replyCount": 92
+    },
+    "limitedReferenceCensus": false
+  },
+  {
+    "mode": "E",
+    "source": {
+      "seed": 581029,
+      "starter": 1,
+      "swap": false,
+      "ply": 65,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 2,
+          "to": 17
+        },
+        "dir": 0
+      }
+    },
+    "witnesses": [
+      {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "plies": 3
+      }
+    ],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "forced": true,
+        "plies": 3,
+        "replyCount": 92
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "forced": true,
+        "plies": 3,
+        "replyCount": 92
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 2,
+            "to": 17
+          },
+          "dir": 0
+        },
+        "forced": true,
+        "plies": 3,
+        "replyCount": 92
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 2,
+            "to": 17
+          },
+          "dir": 0
+        },
+        "forced": true,
+        "plies": 3,
+        "replyCount": 92
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 2,
+            "to": 17
+          },
+          "dir": 0
+        },
+        "forced": true,
+        "plies": 3,
+        "replyCount": 92
+      }
+    },
+    "archivedChoice": {
+      "forced": true,
+      "plies": 3,
+      "replyCount": 92
+    },
+    "limitedReferenceCensus": false
+  },
+  {
+    "mode": "E",
+    "source": {
+      "seed": 581029,
+      "starter": 0,
+      "swap": true,
+      "ply": 64,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 13,
+          "to": 18
+        },
+        "dir": 0
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 28
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 153
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 28
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 153
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 28
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 153
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 28
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 153
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 28
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 153
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 0
+      },
+      "replyCount": 147
+    },
+    "limitedReferenceCensus": true
+  },
+  {
+    "mode": "E",
+    "source": {
+      "seed": 581029,
+      "starter": 1,
+      "swap": false,
+      "ply": 64,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 13,
+          "to": 18
+        },
+        "dir": 0
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 31
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 156
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 31
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 156
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 31
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 156
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 31
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 156
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 0,
+            "to": 31
+          },
+          "dir": 0
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 156
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 0
+      },
+      "replyCount": 147
+    },
+    "limitedReferenceCensus": true
+  },
+  {
+    "mode": "E",
+    "source": {
+      "seed": 581029,
+      "starter": 0,
+      "swap": true,
+      "ply": 63,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 13,
+          "to": 17
+        },
+        "dir": 1
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 17
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 52
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 17
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 52
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 8,
+            "to": 8
+          },
+          "dir": 0
+        },
+        "replyCount": 51
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 8,
+            "to": 8
+          },
+          "dir": 0
+        },
+        "replyCount": 51
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 8,
+            "to": 8
+          },
+          "dir": 0
+        },
+        "replyCount": 51
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 0
+      },
+      "replyCount": 52
+    },
+    "limitedReferenceCensus": false
+  },
+  {
+    "mode": "E",
+    "source": {
+      "seed": 581029,
+      "starter": 1,
+      "swap": false,
+      "ply": 63,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 13,
+          "to": 17
+        },
+        "dir": 1
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 61
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 53
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 61
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "replyCount": 53
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 8,
+            "to": 8
+          },
+          "dir": 0
+        },
+        "replyCount": 51
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 8,
+            "to": 8
+          },
+          "dir": 0
+        },
+        "replyCount": 51
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 1,
+            "to": 63
+          },
+          "dir": 1
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 8,
+            "to": 8
+          },
+          "dir": 0
+        },
+        "replyCount": 51
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 0
+      },
+      "replyCount": 52
+    },
+    "limitedReferenceCensus": false
+  },
+  {
+    "mode": "E",
+    "source": {
+      "seed": 581029,
+      "starter": 0,
+      "swap": true,
+      "ply": 62,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 13,
+          "to": 6
+        },
+        "dir": 2
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 28
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 1
+        },
+        "replyCount": 97
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 28
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 1
+        },
+        "replyCount": 97
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 14,
+            "to": 33
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 0,
+            "to": 31
+          },
+          "dir": 1
+        },
+        "replyCount": 91
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 14,
+            "to": 33
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 0,
+            "to": 31
+          },
+          "dir": 1
+        },
+        "replyCount": 91
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 14,
+            "to": 33
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 0,
+            "to": 31
+          },
+          "dir": 1
+        },
+        "replyCount": 91
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 1
+      },
+      "replyCount": 97
+    },
+    "limitedReferenceCensus": true
+  },
+  {
+    "mode": "E",
+    "source": {
+      "seed": 581029,
+      "starter": 1,
+      "swap": false,
+      "ply": 62,
+      "winner": null,
+      "archivedAction": {
+        "wall": {
+          "wall": 13,
+          "to": 6
+        },
+        "dir": 2
+      }
+    },
+    "witnesses": [],
+    "selected": {
+      "control": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 28
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 1
+        },
+        "replyCount": 97
+      },
+      "defense": {
+        "action": {
+          "wall": {
+            "wall": 13,
+            "to": 28
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": null,
+          "dir": 1
+        },
+        "replyCount": 97
+      },
+      "path": {
+        "action": {
+          "wall": {
+            "wall": 14,
+            "to": 33
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 0,
+            "to": 31
+          },
+          "dir": 1
+        },
+        "replyCount": 91
+      },
+      "combined": {
+        "action": {
+          "wall": {
+            "wall": 14,
+            "to": 33
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 0,
+            "to": 31
+          },
+          "dir": 1
+        },
+        "replyCount": 91
+      },
+      "strong": {
+        "action": {
+          "wall": {
+            "wall": 14,
+            "to": 33
+          },
+          "dir": 2
+        },
+        "forced": false,
+        "counterexampleReply": {
+          "wall": {
+            "wall": 0,
+            "to": 31
+          },
+          "dir": 1
+        },
+        "replyCount": 91
+      }
+    },
+    "archivedChoice": {
+      "forced": false,
+      "counterexampleReply": {
+        "wall": null,
+        "dir": 1
+      },
+      "replyCount": 97
+    },
+    "limitedReferenceCensus": true
+  }
+]

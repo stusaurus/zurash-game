@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "source": "4f7af9ace2cc2931f6cacc2b6e4ece64dcf7efe6",
+  "boards": [
+    {
+      "mode": "E",
+      "name": "control",
+      "factor": "none",
+      "board": {
+        "size": 11,
+        "target": 3,
+        "walls": [
+          31,
+          51,
+          5,
+          115,
+          9,
+          111,
+          13,
+          107,
+          7,
+          113,
+          87,
+          33,
+          104,
+          16,
+          23
+        ],
+        "stars": [
+          91,
+          29,
+          88,
+          32,
+          86
+        ],
+        "players": [
+          110,
+          10
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    }
+  ],
+  "pairs": [
+    [
+      "control",
+      "control"
+    ],
+    [
+      "path",
+      "path"
+    ],
+    [
+      "path",
+      "control"
+    ],
+    [
+      "control",
+      "path"
+    ]
+  ],
+  "seeds": [
+    639003,
+    639029,
+    639053,
+    639081,
+    639107,
+    639131,
+    639153,
+    639179
+  ],
+  "selection": "E path selected after exploratory 30 wins/2 losses and 14/16 vs 10/16 self-settlement; confirm without retuning",
+  "split": "independent confirmation; 8 new seed blocks",
+  "maxPlies": 256,
+  "softProcessCpuMs": 1500,
+  "beam": 8,
+  "depth": 2,
+  "adoption": "No production change. Independent confirmation required after consistent strength + fairness + time benefits.",
+  "games": 128
+}

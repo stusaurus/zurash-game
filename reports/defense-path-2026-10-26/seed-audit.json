@@ -1,0 +1,27 @@
+{
+  "checkedPlanFiles": 35,
+  "requestedSeeds": [
+    619003,
+    619031,
+    619061,
+    619091,
+    629003,
+    629029,
+    629053,
+    629081,
+    629107,
+    629131,
+    629153,
+    629179,
+    639003,
+    639029,
+    639053,
+    639081,
+    639107,
+    639131,
+    639153,
+    639179
+  ],
+  "overlapHits": [],
+  "scope": "Saved JSON plans/protocols/frozen metadata; not every historical compressed trajectory"
+}

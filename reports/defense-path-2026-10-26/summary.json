@@ -1,0 +1,4452 @@
+{
+  "complete": true,
+  "games": 1280,
+  "extensions": 0,
+  "forks": 0,
+  "transitions": 81273,
+  "aiRecalculated": 20500,
+  "rows": [
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 6,
+      "first": 0,
+      "second": 6,
+      "unresolved": 10,
+      "positionWins": [
+        4,
+        2
+      ],
+      "settlement": 0.375,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 196.25,
+        "median": 256,
+        "p90": 256
+      },
+      "decidedPlies": {
+        "mean": 96.66666666666667,
+        "median": 78,
+        "p90": 160
+      },
+      "quiet": {
+        "mean": 107.125,
+        "max": 190
+      },
+      "thinkCpuMs": {
+        "mean": 4.234473566878993,
+        "p90": 6.344,
+        "max": 17.534
+      },
+      "generated": 1426222,
+      "evaluated": 1380304,
+      "routeQueries": 0,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "defense",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 2,
+      "first": 0,
+      "second": 2,
+      "unresolved": 14,
+      "positionWins": [
+        0,
+        2
+      ],
+      "settlement": 0.125,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 245.25,
+        "median": 256,
+        "p90": 256
+      },
+      "decidedPlies": {
+        "mean": 170,
+        "median": 170,
+        "p90": 170
+      },
+      "quiet": {
+        "mean": 145.25,
+        "max": 228
+      },
+      "thinkCpuMs": {
+        "mean": 4.245080020387359,
+        "p90": 6.416,
+        "max": 20.099
+      },
+      "generated": 1795148,
+      "evaluated": 1743602,
+      "routeQueries": 198426,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "path",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 4,
+      "first": 4,
+      "second": 0,
+      "unresolved": 12,
+      "positionWins": [
+        0,
+        4
+      ],
+      "settlement": 0.25,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 210.25,
+        "median": 256,
+        "p90": 256
+      },
+      "decidedPlies": {
+        "mean": 73,
+        "median": 55,
+        "p90": 91
+      },
+      "quiet": {
+        "mean": 146.625,
+        "max": 234
+      },
+      "thinkCpuMs": {
+        "mean": 4.840269024970281,
+        "p90": 7.259,
+        "max": 28.923
+      },
+      "generated": 1478944,
+      "evaluated": 1422108,
+      "routeQueries": 2843412,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "combined",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 4,
+      "first": 4,
+      "second": 0,
+      "unresolved": 12,
+      "positionWins": [
+        0,
+        4
+      ],
+      "settlement": 0.25,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 214.375,
+        "median": 254,
+        "p90": 256
+      },
+      "decidedPlies": {
+        "mean": 101,
+        "median": 91,
+        "p90": 111
+      },
+      "quiet": {
+        "mean": 147.75,
+        "max": 234
+      },
+      "thinkCpuMs": {
+        "mean": 5.256534110787172,
+        "p90": 8.139,
+        "max": 19.335
+      },
+      "generated": 1505764,
+      "evaluated": 1450271,
+      "routeQueries": 3064662,
+      "cpuCap": 4
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "defense",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 5,
+      "first": 0,
+      "second": 5,
+      "unresolved": 11,
+      "positionWins": [
+        3,
+        2
+      ],
+      "settlement": 0.3125,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 212.125,
+        "median": 256,
+        "p90": 256
+      },
+      "decidedPlies": {
+        "mean": 115.6,
+        "median": 118,
+        "p90": 160
+      },
+      "quiet": {
+        "mean": 120.25,
+        "max": 228
+      },
+      "thinkCpuMs": {
+        "mean": 4.3700774896876835,
+        "p90": 6.503,
+        "max": 32.335
+      },
+      "generated": 1552143,
+      "evaluated": 1503474,
+      "routeQueries": 85496,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "control",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 5,
+      "first": 0,
+      "second": 5,
+      "unresolved": 11,
+      "positionWins": [
+        3,
+        2
+      ],
+      "settlement": 0.3125,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 211.6875,
+        "median": 256,
+        "p90": 256
+      },
+      "decidedPlies": {
+        "mean": 115.6,
+        "median": 118,
+        "p90": 160
+      },
+      "quiet": {
+        "mean": 120.25,
+        "max": 228
+      },
+      "thinkCpuMs": {
+        "mean": 4.443379982285202,
+        "p90": 6.769,
+        "max": 14.138
+      },
+      "generated": 1548791,
+      "evaluated": 1500122,
+      "routeQueries": 85338,
+      "cpuCap": 1
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "path",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 10,
+      "second": 6,
+      "unresolved": 0,
+      "positionWins": [
+        10,
+        6
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 60.375,
+        "median": 42,
+        "p90": 109
+      },
+      "decidedPlies": {
+        "mean": 60.375,
+        "median": 42,
+        "p90": 109
+      },
+      "quiet": {
+        "mean": 34.1875,
+        "max": 104
+      },
+      "thinkCpuMs": {
+        "mean": 4.040613871635609,
+        "p90": 6.642,
+        "max": 23.069
+      },
+      "generated": 414690,
+      "evaluated": 383327,
+      "routeQueries": 363510,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "control",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 10,
+      "second": 6,
+      "unresolved": 0,
+      "positionWins": [
+        10,
+        6
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 60.375,
+        "median": 42,
+        "p90": 109
+      },
+      "decidedPlies": {
+        "mean": 60.375,
+        "median": 42,
+        "p90": 109
+      },
+      "quiet": {
+        "mean": 34.1875,
+        "max": 104
+      },
+      "thinkCpuMs": {
+        "mean": 4.133408902691517,
+        "p90": 6.861,
+        "max": 14.461
+      },
+      "generated": 414690,
+      "evaluated": 383327,
+      "routeQueries": 363510,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "combined",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 10,
+      "second": 6,
+      "unresolved": 0,
+      "positionWins": [
+        10,
+        6
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 60.375,
+        "median": 42,
+        "p90": 109
+      },
+      "decidedPlies": {
+        "mean": 60.375,
+        "median": 42,
+        "p90": 109
+      },
+      "quiet": {
+        "mean": 34.1875,
+        "max": 104
+      },
+      "thinkCpuMs": {
+        "mean": 4.212873706004139,
+        "p90": 7.009,
+        "max": 24.869
+      },
+      "generated": 414666,
+      "evaluated": 383362,
+      "routeQueries": 386886,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "control",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 10,
+      "second": 6,
+      "unresolved": 0,
+      "positionWins": [
+        10,
+        6
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 60.375,
+        "median": 42,
+        "p90": 109
+      },
+      "decidedPlies": {
+        "mean": 60.375,
+        "median": 42,
+        "p90": 109
+      },
+      "quiet": {
+        "mean": 34.1875,
+        "max": 104
+      },
+      "thinkCpuMs": {
+        "mean": 4.3417329192546585,
+        "p90": 7.197,
+        "max": 15.072
+      },
+      "generated": 414666,
+      "evaluated": 383362,
+      "routeQueries": 386886,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 8,
+      "first": 8,
+      "second": 0,
+      "unresolved": 8,
+      "positionWins": [
+        4,
+        4
+      ],
+      "settlement": 0.5,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 94.25,
+        "median": 37,
+        "p90": 173
+      },
+      "decidedPlies": {
+        "mean": 24,
+        "median": 15,
+        "p90": 37
+      },
+      "quiet": {
+        "mean": 76.4375,
+        "max": 170
+      },
+      "thinkCpuMs": {
+        "mean": 8.936753315649863,
+        "p90": 14.192,
+        "max": 25.109
+      },
+      "generated": 956030,
+      "evaluated": 930787,
+      "routeQueries": 0,
+      "cpuCap": 8
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "defense",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 4,
+      "first": 4,
+      "second": 0,
+      "unresolved": 12,
+      "positionWins": [
+        2,
+        2
+      ],
+      "settlement": 0.25,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 130.875,
+        "median": 147,
+        "p90": 189
+      },
+      "decidedPlies": {
+        "mean": 26,
+        "median": 15,
+        "p90": 37
+      },
+      "quiet": {
+        "mean": 103.75,
+        "max": 170
+      },
+      "thinkCpuMs": {
+        "mean": 8.91504154727792,
+        "p90": 14.07,
+        "max": 54.486
+      },
+      "generated": 1303827,
+      "evaluated": 1277466,
+      "routeQueries": 143740,
+      "cpuCap": 12
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "path",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 8,
+      "first": 8,
+      "second": 0,
+      "unresolved": 8,
+      "positionWins": [
+        6,
+        2
+      ],
+      "settlement": 0.5,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 84.25,
+        "median": 23,
+        "p90": 163
+      },
+      "decidedPlies": {
+        "mean": 20,
+        "median": 19,
+        "p90": 23
+      },
+      "quiet": {
+        "mean": 60.625,
+        "max": 138
+      },
+      "thinkCpuMs": {
+        "mean": 10.059942136498513,
+        "p90": 15.515,
+        "max": 29.62
+      },
+      "generated": 820094,
+      "evaluated": 764850,
+      "routeQueries": 1528552,
+      "cpuCap": 8
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "combined",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 8,
+      "first": 8,
+      "second": 0,
+      "unresolved": 8,
+      "positionWins": [
+        6,
+        2
+      ],
+      "settlement": 0.5,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 93.1875,
+        "median": 23,
+        "p90": 178
+      },
+      "decidedPlies": {
+        "mean": 20,
+        "median": 19,
+        "p90": 23
+      },
+      "quiet": {
+        "mean": 67.75,
+        "max": 158
+      },
+      "thinkCpuMs": {
+        "mean": 8.978181086519115,
+        "p90": 13.652,
+        "max": 40.64
+      },
+      "generated": 907019,
+      "evaluated": 850156,
+      "routeQueries": 1798048,
+      "cpuCap": 8
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "defense",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 6,
+      "first": 6,
+      "second": 0,
+      "unresolved": 10,
+      "positionWins": [
+        3,
+        3
+      ],
+      "settlement": 0.375,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 129.4375,
+        "median": 181,
+        "p90": 201
+      },
+      "decidedPlies": {
+        "mean": 24.666666666666668,
+        "median": 15,
+        "p90": 37
+      },
+      "quiet": {
+        "mean": 105,
+        "max": 192
+      },
+      "thinkCpuMs": {
+        "mean": 7.712742636407532,
+        "p90": 11.81,
+        "max": 23.974
+      },
+      "generated": 1297072,
+      "evaluated": 1269949,
+      "routeQueries": 71272,
+      "cpuCap": 10
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "control",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 6,
+      "first": 6,
+      "second": 0,
+      "unresolved": 10,
+      "positionWins": [
+        3,
+        3
+      ],
+      "settlement": 0.375,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 129.8125,
+        "median": 173,
+        "p90": 214
+      },
+      "decidedPlies": {
+        "mean": 24.666666666666668,
+        "median": 15,
+        "p90": 37
+      },
+      "quiet": {
+        "mean": 105.125,
+        "max": 194
+      },
+      "thinkCpuMs": {
+        "mean": 7.677052479537817,
+        "p90": 11.719,
+        "max": 23.014
+      },
+      "generated": 1302497,
+      "evaluated": 1275165,
+      "routeQueries": 71524,
+      "cpuCap": 10
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "path",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 9,
+      "second": 7,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 45.4375,
+        "median": 26,
+        "p90": 98
+      },
+      "decidedPlies": {
+        "mean": 45.4375,
+        "median": 26,
+        "p90": 98
+      },
+      "quiet": {
+        "mean": 34.5625,
+        "max": 119
+      },
+      "thinkCpuMs": {
+        "mean": 7.737191196698762,
+        "p90": 11.907,
+        "max": 25.563
+      },
+      "generated": 431208,
+      "evaluated": 399587,
+      "routeQueries": 384742,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "control",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 9,
+      "second": 7,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 45.4375,
+        "median": 26,
+        "p90": 98
+      },
+      "decidedPlies": {
+        "mean": 45.4375,
+        "median": 26,
+        "p90": 98
+      },
+      "quiet": {
+        "mean": 34.5625,
+        "max": 119
+      },
+      "thinkCpuMs": {
+        "mean": 7.777229711141683,
+        "p90": 11.494,
+        "max": 140.59
+      },
+      "generated": 431208,
+      "evaluated": 399587,
+      "routeQueries": 384742,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "combined",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 9,
+      "second": 7,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 45.4375,
+        "median": 26,
+        "p90": 98
+      },
+      "decidedPlies": {
+        "mean": 45.4375,
+        "median": 26,
+        "p90": 98
+      },
+      "quiet": {
+        "mean": 34.5625,
+        "max": 119
+      },
+      "thinkCpuMs": {
+        "mean": 8.01597248968364,
+        "p90": 12.293,
+        "max": 22.64
+      },
+      "generated": 431208,
+      "evaluated": 399587,
+      "routeQueries": 408178,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "control",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 9,
+      "second": 7,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 45.4375,
+        "median": 26,
+        "p90": 98
+      },
+      "decidedPlies": {
+        "mean": 45.4375,
+        "median": 26,
+        "p90": 98
+      },
+      "quiet": {
+        "mean": 34.5625,
+        "max": 119
+      },
+      "thinkCpuMs": {
+        "mean": 8.237163686382395,
+        "p90": 12.585,
+        "max": 51.321
+      },
+      "generated": 431208,
+      "evaluated": 399587,
+      "routeQueries": 408178,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 6,
+      "first": 6,
+      "second": 0,
+      "unresolved": 10,
+      "positionWins": [
+        0,
+        6
+      ],
+      "settlement": 0.375,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 124.25,
+        "median": 172,
+        "p90": 204
+      },
+      "decidedPlies": {
+        "mean": 15.666666666666666,
+        "median": 15,
+        "p90": 17
+      },
+      "quiet": {
+        "mean": 84.75,
+        "max": 198
+      },
+      "thinkCpuMs": {
+        "mean": 7.83389738430585,
+        "p90": 11.607,
+        "max": 27.634
+      },
+      "generated": 1241594,
+      "evaluated": 1212142,
+      "routeQueries": 0,
+      "cpuCap": 10
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "defense",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 6,
+      "first": 4,
+      "second": 2,
+      "unresolved": 10,
+      "positionWins": [
+        0,
+        6
+      ],
+      "settlement": 0.375,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 139.6875,
+        "median": 167,
+        "p90": 207
+      },
+      "decidedPlies": {
+        "mean": 59.333333333333336,
+        "median": 47,
+        "p90": 116
+      },
+      "quiet": {
+        "mean": 105.25,
+        "max": 190
+      },
+      "thinkCpuMs": {
+        "mean": 7.8427543624161045,
+        "p90": 11.598,
+        "max": 22.305
+      },
+      "generated": 1391637,
+      "evaluated": 1360547,
+      "routeQueries": 154551,
+      "cpuCap": 10
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "path",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 2,
+      "first": 2,
+      "second": 0,
+      "unresolved": 14,
+      "positionWins": [
+        0,
+        2
+      ],
+      "settlement": 0.125,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 148.3125,
+        "median": 151,
+        "p90": 170
+      },
+      "decidedPlies": {
+        "mean": 101,
+        "median": 101,
+        "p90": 101
+      },
+      "quiet": {
+        "mean": 132,
+        "max": 175
+      },
+      "thinkCpuMs": {
+        "mean": 9.526600084281496,
+        "p90": 15.035,
+        "max": 43.097
+      },
+      "generated": 1461956,
+      "evaluated": 1417089,
+      "routeQueries": 2833930,
+      "cpuCap": 14
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "combined",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 3,
+      "first": 3,
+      "second": 0,
+      "unresolved": 13,
+      "positionWins": [
+        1,
+        2
+      ],
+      "settlement": 0.1875,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 161.6875,
+        "median": 161,
+        "p90": 188
+      },
+      "decidedPlies": {
+        "mean": 119,
+        "median": 101,
+        "p90": 101
+      },
+      "quiet": {
+        "mean": 144.5,
+        "max": 199
+      },
+      "thinkCpuMs": {
+        "mean": 8.716967916505617,
+        "p90": 13.625,
+        "max": 26.976
+      },
+      "generated": 1591813,
+      "evaluated": 1545015,
+      "routeQueries": 3266061,
+      "cpuCap": 13
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "defense",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 8,
+      "first": 5,
+      "second": 3,
+      "unresolved": 8,
+      "positionWins": [
+        2,
+        6
+      ],
+      "settlement": 0.5,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 135.3125,
+        "median": 170,
+        "p90": 205
+      },
+      "decidedPlies": {
+        "mean": 66.375,
+        "median": 15,
+        "p90": 116
+      },
+      "quiet": {
+        "mean": 103.625,
+        "max": 195
+      },
+      "thinkCpuMs": {
+        "mean": 7.388364434180146,
+        "p90": 10.976,
+        "max": 19.627
+      },
+      "generated": 1350306,
+      "evaluated": 1319077,
+      "routeQueries": 75753,
+      "cpuCap": 8
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "control",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 8,
+      "first": 5,
+      "second": 3,
+      "unresolved": 8,
+      "positionWins": [
+        2,
+        6
+      ],
+      "settlement": 0.5,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 130.6875,
+        "median": 170,
+        "p90": 196
+      },
+      "decidedPlies": {
+        "mean": 66.375,
+        "median": 15,
+        "p90": 116
+      },
+      "quiet": {
+        "mean": 98.5625,
+        "max": 190
+      },
+      "thinkCpuMs": {
+        "mean": 7.682339072214254,
+        "p90": 11.457,
+        "max": 24.82
+      },
+      "generated": 1308192,
+      "evaluated": 1277050,
+      "routeQueries": 73331,
+      "cpuCap": 8
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "path",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 47.625,
+        "median": 39,
+        "p90": 97
+      },
+      "decidedPlies": {
+        "mean": 47.625,
+        "median": 39,
+        "p90": 97
+      },
+      "quiet": {
+        "mean": 34.6875,
+        "max": 93
+      },
+      "thinkCpuMs": {
+        "mean": 9.821998687664053,
+        "p90": 15.246,
+        "max": 36.461
+      },
+      "generated": 498304,
+      "evaluated": 462814,
+      "routeQueries": 446878,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "control",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 47.625,
+        "median": 39,
+        "p90": 97
+      },
+      "decidedPlies": {
+        "mean": 47.625,
+        "median": 39,
+        "p90": 97
+      },
+      "quiet": {
+        "mean": 34.6875,
+        "max": 93
+      },
+      "thinkCpuMs": {
+        "mean": 9.282984251968506,
+        "p90": 14.731,
+        "max": 28.932
+      },
+      "generated": 498304,
+      "evaluated": 462814,
+      "routeQueries": 446878,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "combined",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 47.625,
+        "median": 39,
+        "p90": 97
+      },
+      "decidedPlies": {
+        "mean": 47.625,
+        "median": 39,
+        "p90": 97
+      },
+      "quiet": {
+        "mean": 34.6875,
+        "max": 93
+      },
+      "thinkCpuMs": {
+        "mean": 9.444975065616802,
+        "p90": 14.634,
+        "max": 27.541
+      },
+      "generated": 498304,
+      "evaluated": 462814,
+      "routeQueries": 474549,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "control",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 47.625,
+        "median": 39,
+        "p90": 97
+      },
+      "decidedPlies": {
+        "mean": 47.625,
+        "median": 39,
+        "p90": 97
+      },
+      "quiet": {
+        "mean": 34.6875,
+        "max": 93
+      },
+      "thinkCpuMs": {
+        "mean": 9.039795275590544,
+        "p90": 13.861,
+        "max": 29.246
+      },
+      "generated": 498304,
+      "evaluated": 462814,
+      "routeQueries": 474549,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        16,
+        0
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 8.25,
+        "median": 8,
+        "p90": 9
+      },
+      "decidedPlies": {
+        "mean": 8.25,
+        "median": 8,
+        "p90": 9
+      },
+      "quiet": {
+        "mean": 2.625,
+        "max": 3
+      },
+      "thinkCpuMs": {
+        "mean": 6.422060606060611,
+        "p90": 12.882,
+        "max": 17.56
+      },
+      "generated": 85396,
+      "evaluated": 57492,
+      "routeQueries": 0,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "defense",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 8,
+      "first": 2,
+      "second": 6,
+      "unresolved": 8,
+      "positionWins": [
+        6,
+        2
+      ],
+      "settlement": 0.5,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 96.3125,
+        "median": 62,
+        "p90": 161
+      },
+      "decidedPlies": {
+        "mean": 39.25,
+        "median": 32,
+        "p90": 62
+      },
+      "quiet": {
+        "mean": 72.6875,
+        "max": 160
+      },
+      "thinkCpuMs": {
+        "mean": 9.974297858533408,
+        "p90": 15.08,
+        "max": 26.455
+      },
+      "generated": 1141435,
+      "evaluated": 1087941,
+      "routeQueries": 125262,
+      "cpuCap": 8
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "path",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 12,
+      "first": 8,
+      "second": 4,
+      "unresolved": 4,
+      "positionWins": [
+        8,
+        4
+      ],
+      "settlement": 0.75,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 60.25,
+        "median": 43,
+        "p90": 119
+      },
+      "decidedPlies": {
+        "mean": 40.666666666666664,
+        "median": 37,
+        "p90": 44
+      },
+      "quiet": {
+        "mean": 32.1875,
+        "max": 66
+      },
+      "thinkCpuMs": {
+        "mean": 12.69626970954356,
+        "p90": 20.015,
+        "max": 31.678
+      },
+      "generated": 743502,
+      "evaluated": 665064,
+      "routeQueries": 1329712,
+      "cpuCap": 4
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "combined",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 12,
+      "first": 8,
+      "second": 4,
+      "unresolved": 4,
+      "positionWins": [
+        8,
+        4
+      ],
+      "settlement": 0.75,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 59.875,
+        "median": 43,
+        "p90": 117
+      },
+      "decidedPlies": {
+        "mean": 40.666666666666664,
+        "median": 37,
+        "p90": 44
+      },
+      "quiet": {
+        "mean": 31.6875,
+        "max": 61
+      },
+      "thinkCpuMs": {
+        "mean": 12.889819415448846,
+        "p90": 19.82,
+        "max": 27.715
+      },
+      "generated": 737329,
+      "evaluated": 658599,
+      "routeQueries": 1397375,
+      "cpuCap": 4
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "defense",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 13,
+      "first": 6,
+      "second": 7,
+      "unresolved": 3,
+      "positionWins": [
+        11,
+        2
+      ],
+      "settlement": 0.8125,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 42.625,
+        "median": 10,
+        "p90": 142
+      },
+      "decidedPlies": {
+        "mean": 16.46153846153846,
+        "median": 9,
+        "p90": 31
+      },
+      "quiet": {
+        "mean": 28.125,
+        "max": 162
+      },
+      "thinkCpuMs": {
+        "mean": 9.412609970674492,
+        "p90": 14.336,
+        "max": 24.265
+      },
+      "generated": 497867,
+      "evaluated": 457256,
+      "routeQueries": 27325,
+      "cpuCap": 3
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "control",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 13,
+      "first": 6,
+      "second": 7,
+      "unresolved": 3,
+      "positionWins": [
+        11,
+        2
+      ],
+      "settlement": 0.8125,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 41.3125,
+        "median": 10,
+        "p90": 130
+      },
+      "decidedPlies": {
+        "mean": 16.46153846153846,
+        "median": 9,
+        "p90": 31
+      },
+      "quiet": {
+        "mean": 26.8125,
+        "max": 162
+      },
+      "thinkCpuMs": {
+        "mean": 9.779686838124062,
+        "p90": 14.993,
+        "max": 27.636
+      },
+      "generated": 481384,
+      "evaluated": 440821,
+      "routeQueries": 26381,
+      "cpuCap": 3
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "path",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 7,
+      "second": 9,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 19.8125,
+        "median": 10,
+        "p90": 36
+      },
+      "decidedPlies": {
+        "mean": 19.8125,
+        "median": 10,
+        "p90": 36
+      },
+      "quiet": {
+        "mean": 8.25,
+        "max": 34
+      },
+      "thinkCpuMs": {
+        "mean": 11.73556466876971,
+        "p90": 19.434,
+        "max": 31.534
+      },
+      "generated": 236637,
+      "evaluated": 188915,
+      "routeQueries": 180740,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "control",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 7,
+      "second": 9,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 19.8125,
+        "median": 10,
+        "p90": 36
+      },
+      "decidedPlies": {
+        "mean": 19.8125,
+        "median": 10,
+        "p90": 36
+      },
+      "quiet": {
+        "mean": 8.25,
+        "max": 34
+      },
+      "thinkCpuMs": {
+        "mean": 11.483542586750794,
+        "p90": 19.542,
+        "max": 29.889
+      },
+      "generated": 236637,
+      "evaluated": 188915,
+      "routeQueries": 180740,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "combined",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 7,
+      "second": 9,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 19.8125,
+        "median": 10,
+        "p90": 36
+      },
+      "decidedPlies": {
+        "mean": 19.8125,
+        "median": 10,
+        "p90": 36
+      },
+      "quiet": {
+        "mean": 8.25,
+        "max": 34
+      },
+      "thinkCpuMs": {
+        "mean": 12.234148264984217,
+        "p90": 20.698,
+        "max": 39.431
+      },
+      "generated": 236658,
+      "evaluated": 189172,
+      "routeQueries": 193259,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "control",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 7,
+      "second": 9,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 19.8125,
+        "median": 10,
+        "p90": 36
+      },
+      "decidedPlies": {
+        "mean": 19.8125,
+        "median": 10,
+        "p90": 36
+      },
+      "quiet": {
+        "mean": 8.25,
+        "max": 34
+      },
+      "thinkCpuMs": {
+        "mean": 11.603157728706627,
+        "p90": 19.213,
+        "max": 35.216
+      },
+      "generated": 236658,
+      "evaluated": 189172,
+      "routeQueries": 193259,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        16,
+        0
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 7.75,
+        "median": 7,
+        "p90": 8
+      },
+      "decidedPlies": {
+        "mean": 7.75,
+        "median": 7,
+        "p90": 8
+      },
+      "quiet": {
+        "mean": 2.5,
+        "max": 3
+      },
+      "thinkCpuMs": {
+        "mean": 6.2881935483870945,
+        "p90": 11.855,
+        "max": 17.794
+      },
+      "generated": 84510,
+      "evaluated": 52424,
+      "routeQueries": 0,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "defense",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 10,
+      "first": 8,
+      "second": 2,
+      "unresolved": 6,
+      "positionWins": [
+        10,
+        0
+      ],
+      "settlement": 0.625,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 49.75,
+        "median": 7,
+        "p90": 121
+      },
+      "decidedPlies": {
+        "mean": 8.4,
+        "median": 7,
+        "p90": 14
+      },
+      "quiet": {
+        "mean": 34.3125,
+        "max": 109
+      },
+      "thinkCpuMs": {
+        "mean": 11.953146984924626,
+        "p90": 18.783,
+        "max": 46.596
+      },
+      "generated": 641577,
+      "evaluated": 592595,
+      "routeQueries": 70613,
+      "cpuCap": 6
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "path",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 14,
+      "first": 12,
+      "second": 2,
+      "unresolved": 2,
+      "positionWins": [
+        10,
+        4
+      ],
+      "settlement": 0.875,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 24.1875,
+        "median": 7,
+        "p90": 28
+      },
+      "decidedPlies": {
+        "mean": 13.428571428571429,
+        "median": 7,
+        "p90": 19
+      },
+      "quiet": {
+        "mean": 10.5625,
+        "max": 52
+      },
+      "thinkCpuMs": {
+        "mean": 13.947894056847538,
+        "p90": 21.086,
+        "max": 56.761
+      },
+      "generated": 303128,
+      "evaluated": 249016,
+      "routeQueries": 496480,
+      "cpuCap": 2
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "combined",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 14,
+      "first": 12,
+      "second": 2,
+      "unresolved": 2,
+      "positionWins": [
+        10,
+        4
+      ],
+      "settlement": 0.875,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 22.9375,
+        "median": 7,
+        "p90": 28
+      },
+      "decidedPlies": {
+        "mean": 13.428571428571429,
+        "median": 7,
+        "p90": 19
+      },
+      "quiet": {
+        "mean": 13.4375,
+        "max": 67
+      },
+      "thinkCpuMs": {
+        "mean": 14.743291553133519,
+        "p90": 24.274,
+        "max": 51.468
+      },
+      "generated": 286698,
+      "evaluated": 230610,
+      "routeQueries": 489976,
+      "cpuCap": 2
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "defense",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 14,
+      "first": 9,
+      "second": 5,
+      "unresolved": 2,
+      "positionWins": [
+        13,
+        1
+      ],
+      "settlement": 0.875,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 26.875,
+        "median": 7,
+        "p90": 87
+      },
+      "decidedPlies": {
+        "mean": 13.642857142857142,
+        "median": 7,
+        "p90": 10
+      },
+      "quiet": {
+        "mean": 17.25,
+        "max": 102
+      },
+      "thinkCpuMs": {
+        "mean": 11.427267441860474,
+        "p90": 18.463,
+        "max": 53.015
+      },
+      "generated": 334396,
+      "evaluated": 295535,
+      "routeQueries": 18084,
+      "cpuCap": 2
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "control",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 14,
+      "first": 9,
+      "second": 5,
+      "unresolved": 2,
+      "positionWins": [
+        13,
+        1
+      ],
+      "settlement": 0.875,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 27.5,
+        "median": 7,
+        "p90": 87
+      },
+      "decidedPlies": {
+        "mean": 13.642857142857142,
+        "median": 7,
+        "p90": 10
+      },
+      "quiet": {
+        "mean": 17.625,
+        "max": 103
+      },
+      "thinkCpuMs": {
+        "mean": 10.864922727272733,
+        "p90": 17.586,
+        "max": 32.182
+      },
+      "generated": 342742,
+      "evaluated": 303650,
+      "routeQueries": 18621,
+      "cpuCap": 2
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "path",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 11,
+      "second": 5,
+      "unresolved": 0,
+      "positionWins": [
+        13,
+        3
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 12.3125,
+        "median": 7,
+        "p90": 15
+      },
+      "decidedPlies": {
+        "mean": 12.3125,
+        "median": 7,
+        "p90": 15
+      },
+      "quiet": {
+        "mean": 3.9375,
+        "max": 15
+      },
+      "thinkCpuMs": {
+        "mean": 10.235040609137053,
+        "p90": 19.43,
+        "max": 38.476
+      },
+      "generated": 144794,
+      "evaluated": 102886,
+      "routeQueries": 98396,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "control",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 11,
+      "second": 5,
+      "unresolved": 0,
+      "positionWins": [
+        13,
+        3
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 12.3125,
+        "median": 7,
+        "p90": 15
+      },
+      "decidedPlies": {
+        "mean": 12.3125,
+        "median": 7,
+        "p90": 15
+      },
+      "quiet": {
+        "mean": 3.9375,
+        "max": 15
+      },
+      "thinkCpuMs": {
+        "mean": 9.28626395939086,
+        "p90": 16.603,
+        "max": 30.25
+      },
+      "generated": 144794,
+      "evaluated": 102886,
+      "routeQueries": 98396,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "combined",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 11,
+      "second": 5,
+      "unresolved": 0,
+      "positionWins": [
+        13,
+        3
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 12.3125,
+        "median": 7,
+        "p90": 15
+      },
+      "decidedPlies": {
+        "mean": 12.3125,
+        "median": 7,
+        "p90": 15
+      },
+      "quiet": {
+        "mean": 3.9375,
+        "max": 15
+      },
+      "thinkCpuMs": {
+        "mean": 10.265197969543145,
+        "p90": 18.744,
+        "max": 32.071
+      },
+      "generated": 144824,
+      "evaluated": 103173,
+      "routeQueries": 106409,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "control",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 11,
+      "second": 5,
+      "unresolved": 0,
+      "positionWins": [
+        13,
+        3
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 12.3125,
+        "median": 7,
+        "p90": 15
+      },
+      "decidedPlies": {
+        "mean": 12.3125,
+        "median": 7,
+        "p90": 15
+      },
+      "quiet": {
+        "mean": 3.9375,
+        "max": 15
+      },
+      "thinkCpuMs": {
+        "mean": 10.332187817258884,
+        "p90": 18.922,
+        "max": 35.771
+      },
+      "generated": 144824,
+      "evaluated": 103173,
+      "routeQueries": 106409,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 14,
+      "second": 2,
+      "unresolved": 0,
+      "positionWins": [
+        6,
+        10
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 38.625,
+        "median": 20,
+        "p90": 77
+      },
+      "decidedPlies": {
+        "mean": 38.625,
+        "median": 20,
+        "p90": 77
+      },
+      "quiet": {
+        "mean": 28.5,
+        "max": 105
+      },
+      "thinkCpuMs": {
+        "mean": 1.8187508090614877,
+        "p90": 2.948,
+        "max": 6.063
+      },
+      "generated": 200400,
+      "evaluated": 175350,
+      "routeQueries": 0,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "defense",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 14,
+      "first": 8,
+      "second": 6,
+      "unresolved": 2,
+      "positionWins": [
+        8,
+        6
+      ],
+      "settlement": 0.875,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 107.75,
+        "median": 74,
+        "p90": 196
+      },
+      "decidedPlies": {
+        "mean": 86.57142857142857,
+        "median": 74,
+        "p90": 153
+      },
+      "quiet": {
+        "mean": 86.875,
+        "max": 247
+      },
+      "thinkCpuMs": {
+        "mean": 1.755026102088167,
+        "p90": 2.698,
+        "max": 5.388
+      },
+      "generated": 545148,
+      "evaluated": 510628,
+      "routeQueries": 60418,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "path",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 14,
+      "first": 0,
+      "second": 14,
+      "unresolved": 2,
+      "positionWins": [
+        6,
+        8
+      ],
+      "settlement": 0.875,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 88.75,
+        "median": 42,
+        "p90": 166
+      },
+      "decidedPlies": {
+        "mean": 64.85714285714286,
+        "median": 42,
+        "p90": 94
+      },
+      "quiet": {
+        "mean": 70.875,
+        "max": 231
+      },
+      "thinkCpuMs": {
+        "mean": 2.4425838028169067,
+        "p90": 3.76,
+        "max": 34.285
+      },
+      "generated": 474264,
+      "evaluated": 439196,
+      "routeQueries": 877460,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "combined",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 14,
+      "first": 0,
+      "second": 14,
+      "unresolved": 2,
+      "positionWins": [
+        6,
+        8
+      ],
+      "settlement": 0.875,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 88.75,
+        "median": 42,
+        "p90": 166
+      },
+      "decidedPlies": {
+        "mean": 64.85714285714286,
+        "median": 42,
+        "p90": 94
+      },
+      "quiet": {
+        "mean": 70.875,
+        "max": 231
+      },
+      "thinkCpuMs": {
+        "mean": 2.437814084507041,
+        "p90": 3.747,
+        "max": 9.107
+      },
+      "generated": 474172,
+      "evaluated": 439110,
+      "routeQueries": 928736,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "defense",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 12,
+      "second": 4,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 56,
+        "median": 29,
+        "p90": 123
+      },
+      "decidedPlies": {
+        "mean": 56,
+        "median": 29,
+        "p90": 123
+      },
+      "quiet": {
+        "mean": 44.1875,
+        "max": 126
+      },
+      "thinkCpuMs": {
+        "mean": 1.680465401785715,
+        "p90": 2.584,
+        "max": 4.491
+      },
+      "generated": 288842,
+      "evaluated": 260465,
+      "routeQueries": 15930,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "control",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 12,
+      "second": 4,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 56,
+        "median": 29,
+        "p90": 123
+      },
+      "decidedPlies": {
+        "mean": 56,
+        "median": 29,
+        "p90": 123
+      },
+      "quiet": {
+        "mean": 44.1875,
+        "max": 126
+      },
+      "thinkCpuMs": {
+        "mean": 1.7732879464285733,
+        "p90": 2.799,
+        "max": 5.712
+      },
+      "generated": 288842,
+      "evaluated": 260465,
+      "routeQueries": 15930,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "path",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        10,
+        6
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 25.875,
+        "median": 22,
+        "p90": 35
+      },
+      "decidedPlies": {
+        "mean": 25.875,
+        "median": 22,
+        "p90": 35
+      },
+      "quiet": {
+        "mean": 12.5625,
+        "max": 55
+      },
+      "thinkCpuMs": {
+        "mean": 1.986553140096619,
+        "p90": 3.409,
+        "max": 6.788
+      },
+      "generated": 128618,
+      "evaluated": 104332,
+      "routeQueries": 97628,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "control",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        10,
+        6
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 25.875,
+        "median": 22,
+        "p90": 35
+      },
+      "decidedPlies": {
+        "mean": 25.875,
+        "median": 22,
+        "p90": 35
+      },
+      "quiet": {
+        "mean": 12.5625,
+        "max": 55
+      },
+      "thinkCpuMs": {
+        "mean": 1.9875362318840564,
+        "p90": 3.328,
+        "max": 5.721
+      },
+      "generated": 128618,
+      "evaluated": 104332,
+      "routeQueries": 97628,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "combined",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        10,
+        6
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 25.875,
+        "median": 22,
+        "p90": 35
+      },
+      "decidedPlies": {
+        "mean": 25.875,
+        "median": 22,
+        "p90": 35
+      },
+      "quiet": {
+        "mean": 12.5625,
+        "max": 55
+      },
+      "thinkCpuMs": {
+        "mean": 1.905659420289854,
+        "p90": 3.192,
+        "max": 8.503
+      },
+      "generated": 128574,
+      "evaluated": 104393,
+      "routeQueries": 104825,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "control",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        10,
+        6
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 8,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 25.875,
+        "median": 22,
+        "p90": 35
+      },
+      "decidedPlies": {
+        "mean": 25.875,
+        "median": 22,
+        "p90": 35
+      },
+      "quiet": {
+        "mean": 12.5625,
+        "max": 55
+      },
+      "thinkCpuMs": {
+        "mean": 2.460710144927537,
+        "p90": 4.627,
+        "max": 11.415
+      },
+      "generated": 128574,
+      "evaluated": 104393,
+      "routeQueries": 104825,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        0,
+        16
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 15.25,
+        "median": 13,
+        "p90": 18
+      },
+      "decidedPlies": {
+        "mean": 15.25,
+        "median": 13,
+        "p90": 18
+      },
+      "quiet": {
+        "mean": 4,
+        "max": 5
+      },
+      "thinkCpuMs": {
+        "mean": 1.7345409836065566,
+        "p90": 3.066,
+        "max": 4.892
+      },
+      "generated": 85242,
+      "evaluated": 60632,
+      "routeQueries": 0,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "defense",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 2,
+      "second": 14,
+      "unresolved": 0,
+      "positionWins": [
+        6,
+        10
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 14.875,
+        "median": 12,
+        "p90": 18
+      },
+      "decidedPlies": {
+        "mean": 14.875,
+        "median": 12,
+        "p90": 18
+      },
+      "quiet": {
+        "mean": 4,
+        "max": 5
+      },
+      "thinkCpuMs": {
+        "mean": 1.9216680672268898,
+        "p90": 3.352,
+        "max": 6.955
+      },
+      "generated": 81094,
+      "evaluated": 58106,
+      "routeQueries": 9730,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "path",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 10,
+      "second": 6,
+      "unresolved": 0,
+      "positionWins": [
+        2,
+        14
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 20.125,
+        "median": 17,
+        "p90": 25
+      },
+      "decidedPlies": {
+        "mean": 20.125,
+        "median": 17,
+        "p90": 25
+      },
+      "quiet": {
+        "mean": 11.625,
+        "max": 31
+      },
+      "thinkCpuMs": {
+        "mean": 2.691692546583849,
+        "p90": 4.755,
+        "max": 10.852
+      },
+      "generated": 112780,
+      "evaluated": 79556,
+      "routeQueries": 158452,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "combined",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 10,
+      "second": 6,
+      "unresolved": 0,
+      "positionWins": [
+        2,
+        14
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 20.125,
+        "median": 17,
+        "p90": 25
+      },
+      "decidedPlies": {
+        "mean": 20.125,
+        "median": 17,
+        "p90": 25
+      },
+      "quiet": {
+        "mean": 11.625,
+        "max": 31
+      },
+      "thinkCpuMs": {
+        "mean": 2.8662360248447194,
+        "p90": 5.146,
+        "max": 13.096
+      },
+      "generated": 112728,
+      "evaluated": 79532,
+      "routeQueries": 171294,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "defense",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 5,
+      "second": 11,
+      "unresolved": 0,
+      "positionWins": [
+        3,
+        13
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 15.0625,
+        "median": 13,
+        "p90": 18
+      },
+      "decidedPlies": {
+        "mean": 15.0625,
+        "median": 13,
+        "p90": 18
+      },
+      "quiet": {
+        "mean": 4,
+        "max": 5
+      },
+      "thinkCpuMs": {
+        "mean": 2.0102323651452303,
+        "p90": 3.083,
+        "max": 61.255
+      },
+      "generated": 83177,
+      "evaluated": 59369,
+      "routeQueries": 5033,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "control",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 5,
+      "second": 11,
+      "unresolved": 0,
+      "positionWins": [
+        3,
+        13
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 15.0625,
+        "median": 13,
+        "p90": 18
+      },
+      "decidedPlies": {
+        "mean": 15.0625,
+        "median": 13,
+        "p90": 18
+      },
+      "quiet": {
+        "mean": 4,
+        "max": 5
+      },
+      "thinkCpuMs": {
+        "mean": 1.7317053941908715,
+        "p90": 3.002,
+        "max": 8.231
+      },
+      "generated": 83177,
+      "evaluated": 59369,
+      "routeQueries": 5033,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "path",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 15,
+      "uniqueCompletedTraces": 15,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 15.875,
+        "median": 13,
+        "p90": 20
+      },
+      "decidedPlies": {
+        "mean": 15.875,
+        "median": 13,
+        "p90": 20
+      },
+      "quiet": {
+        "mean": 5.6875,
+        "max": 22
+      },
+      "thinkCpuMs": {
+        "mean": 2.3207913385826773,
+        "p90": 4.691,
+        "max": 9.034
+      },
+      "generated": 89841,
+      "evaluated": 64639,
+      "routeQueries": 63124,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "control",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 15,
+      "uniqueCompletedTraces": 15,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 15.875,
+        "median": 13,
+        "p90": 20
+      },
+      "decidedPlies": {
+        "mean": 15.875,
+        "median": 13,
+        "p90": 20
+      },
+      "quiet": {
+        "mean": 5.6875,
+        "max": 22
+      },
+      "thinkCpuMs": {
+        "mean": 2.194653543307086,
+        "p90": 4.107,
+        "max": 7.967
+      },
+      "generated": 89841,
+      "evaluated": 64639,
+      "routeQueries": 63124,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "combined",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 15,
+      "uniqueCompletedTraces": 15,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 15.875,
+        "median": 13,
+        "p90": 20
+      },
+      "decidedPlies": {
+        "mean": 15.875,
+        "median": 13,
+        "p90": 20
+      },
+      "quiet": {
+        "mean": 5.6875,
+        "max": 22
+      },
+      "thinkCpuMs": {
+        "mean": 2.2083582677165357,
+        "p90": 4.188,
+        "max": 11.298
+      },
+      "generated": 89814,
+      "evaluated": 64612,
+      "routeQueries": 68487,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "control",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 15,
+      "uniqueCompletedTraces": 15,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 16,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 15.875,
+        "median": 13,
+        "p90": 20
+      },
+      "decidedPlies": {
+        "mean": 15.875,
+        "median": 13,
+        "p90": 20
+      },
+      "quiet": {
+        "mean": 5.6875,
+        "max": 22
+      },
+      "thinkCpuMs": {
+        "mean": 2.343826771653544,
+        "p90": 4.218,
+        "max": 10.68
+      },
+      "generated": 89814,
+      "evaluated": 64612,
+      "routeQueries": 68487,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 10,
+      "first": 8,
+      "second": 2,
+      "unresolved": 6,
+      "positionWins": [
+        4,
+        6
+      ],
+      "settlement": 0.625,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 59.25,
+        "median": 39,
+        "p90": 97
+      },
+      "decidedPlies": {
+        "mean": 40.8,
+        "median": 24,
+        "p90": 97
+      },
+      "quiet": {
+        "mean": 39.875,
+        "max": 82
+      },
+      "thinkCpuMs": {
+        "mean": 15.965281645569622,
+        "p90": 26.276,
+        "max": 51.364
+      },
+      "generated": 789627,
+      "evaluated": 746474,
+      "routeQueries": 0,
+      "cpuCap": 6
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "defense",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 14,
+      "first": 8,
+      "second": 6,
+      "unresolved": 2,
+      "positionWins": [
+        6,
+        8
+      ],
+      "settlement": 0.875,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 52.6875,
+        "median": 39,
+        "p90": 88
+      },
+      "decidedPlies": {
+        "mean": 48.57142857142857,
+        "median": 39,
+        "p90": 88
+      },
+      "quiet": {
+        "mean": 32.3125,
+        "max": 81
+      },
+      "thinkCpuMs": {
+        "mean": 16.189850533807828,
+        "p90": 28.265,
+        "max": 53.264
+      },
+      "generated": 708464,
+      "evaluated": 666423,
+      "routeQueries": 77206,
+      "cpuCap": 2
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "path",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 14,
+      "first": 12,
+      "second": 2,
+      "unresolved": 2,
+      "positionWins": [
+        8,
+        6
+      ],
+      "settlement": 0.875,
+      "firstScoreStarter": 14,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 29.625,
+        "median": 28,
+        "p90": 33
+      },
+      "decidedPlies": {
+        "mean": 26.571428571428573,
+        "median": 28,
+        "p90": 31
+      },
+      "quiet": {
+        "mean": 13.6875,
+        "max": 17
+      },
+      "thinkCpuMs": {
+        "mean": 24.85784599156119,
+        "p90": 40.526,
+        "max": 61.741
+      },
+      "generated": 460990,
+      "evaluated": 375299,
+      "routeQueries": 749858,
+      "cpuCap": 2
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "combined",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 14,
+      "first": 12,
+      "second": 2,
+      "unresolved": 2,
+      "positionWins": [
+        8,
+        6
+      ],
+      "settlement": 0.875,
+      "firstScoreStarter": 14,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 29.25,
+        "median": 28,
+        "p90": 33
+      },
+      "decidedPlies": {
+        "mean": 26.571428571428573,
+        "median": 28,
+        "p90": 31
+      },
+      "quiet": {
+        "mean": 13.625,
+        "max": 16
+      },
+      "thinkCpuMs": {
+        "mean": 25.55646794871795,
+        "p90": 42.52,
+        "max": 67.48
+      },
+      "generated": 453684,
+      "evaluated": 366256,
+      "routeQueries": 781046,
+      "cpuCap": 2
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "defense",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 12,
+      "first": 8,
+      "second": 4,
+      "unresolved": 4,
+      "positionWins": [
+        5,
+        7
+      ],
+      "settlement": 0.75,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 57.9375,
+        "median": 39,
+        "p90": 97
+      },
+      "decidedPlies": {
+        "mean": 44.5,
+        "median": 24,
+        "p90": 78
+      },
+      "quiet": {
+        "mean": 38.6875,
+        "max": 88
+      },
+      "thinkCpuMs": {
+        "mean": 14.73800107874864,
+        "p90": 24.911,
+        "max": 43.703
+      },
+      "generated": 768299,
+      "evaluated": 724135,
+      "routeQueries": 41974,
+      "cpuCap": 4
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "control",
+          "defense"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 12,
+      "first": 8,
+      "second": 4,
+      "unresolved": 4,
+      "positionWins": [
+        5,
+        7
+      ],
+      "settlement": 0.75,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 55.125,
+        "median": 39,
+        "p90": 89
+      },
+      "decidedPlies": {
+        "mean": 44.5,
+        "median": 24,
+        "p90": 78
+      },
+      "quiet": {
+        "mean": 35.875,
+        "max": 81
+      },
+      "thinkCpuMs": {
+        "mean": 16.188405895691627,
+        "p90": 27.748,
+        "max": 58.57
+      },
+      "generated": 735323,
+      "evaluated": 691779,
+      "routeQueries": 40018,
+      "cpuCap": 4
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "path",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 7,
+      "second": 9,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 22.6875,
+        "median": 21,
+        "p90": 30
+      },
+      "decidedPlies": {
+        "mean": 22.6875,
+        "median": 21,
+        "p90": 30
+      },
+      "quiet": {
+        "mean": 10.625,
+        "max": 34
+      },
+      "thinkCpuMs": {
+        "mean": 19.76732782369147,
+        "p90": 35.4,
+        "max": 48.752
+      },
+      "generated": 342624,
+      "evaluated": 282172,
+      "routeQueries": 274802,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "control",
+          "path"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 7,
+      "second": 9,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 22.6875,
+        "median": 21,
+        "p90": 30
+      },
+      "decidedPlies": {
+        "mean": 22.6875,
+        "median": 21,
+        "p90": 30
+      },
+      "quiet": {
+        "mean": 10.625,
+        "max": 34
+      },
+      "thinkCpuMs": {
+        "mean": 21.133112947658407,
+        "p90": 39.316,
+        "max": 93.209
+      },
+      "generated": 342624,
+      "evaluated": 282172,
+      "routeQueries": 274802,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "combined",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 7,
+      "second": 9,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 22.6875,
+        "median": 21,
+        "p90": 30
+      },
+      "decidedPlies": {
+        "mean": 22.6875,
+        "median": 21,
+        "p90": 30
+      },
+      "quiet": {
+        "mean": 10.625,
+        "max": 34
+      },
+      "thinkCpuMs": {
+        "mean": 19.31107162534435,
+        "p90": 33.576,
+        "max": 52.045
+      },
+      "generated": 342624,
+      "evaluated": 282172,
+      "routeQueries": 292779,
+      "cpuCap": 0
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "control",
+          "combined"
+        ]
+      ],
+      "games": 16,
+      "uniqueTraces": 16,
+      "uniqueCompletedTraces": 16,
+      "first": 7,
+      "second": 9,
+      "unresolved": 0,
+      "positionWins": [
+        9,
+        7
+      ],
+      "settlement": 1,
+      "firstScoreStarter": 12,
+      "noScore": 0,
+      "allPlies": {
+        "mean": 22.6875,
+        "median": 21,
+        "p90": 30
+      },
+      "decidedPlies": {
+        "mean": 22.6875,
+        "median": 21,
+        "p90": 30
+      },
+      "quiet": {
+        "mean": 10.625,
+        "max": 34
+      },
+      "thinkCpuMs": {
+        "mean": 19.661355371900836,
+        "p90": 34.464,
+        "max": 55.286
+      },
+      "generated": 342624,
+      "evaluated": 282172,
+      "routeQueries": 292779,
+      "cpuCap": 0
+    }
+  ],
+  "mixed": [
+    {
+      "mode": "A",
+      "candidate": "control",
+      "variant": "defense",
+      "games": 32,
+      "wins": 6,
+      "losses": 4,
+      "unresolved": 22,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.0625,
+      "exploratorySeedBootstrap95": [
+        -0.125,
+        0.25
+      ],
+      "selfSettlementDifference": -0.25,
+      "selfSettlementBootstrap95": [
+        -0.5,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "A",
+      "candidate": "control",
+      "variant": "path",
+      "games": 32,
+      "wins": 28,
+      "losses": 4,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.75,
+      "exploratorySeedBootstrap95": [
+        0.5,
+        1
+      ],
+      "selfSettlementDifference": -0.125,
+      "selfSettlementBootstrap95": [
+        -0.75,
+        0.375
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "A",
+      "candidate": "control",
+      "variant": "combined",
+      "games": 32,
+      "wins": 28,
+      "losses": 4,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.75,
+      "exploratorySeedBootstrap95": [
+        0.5,
+        1
+      ],
+      "selfSettlementDifference": -0.125,
+      "selfSettlementBootstrap95": [
+        -0.75,
+        0.375
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "B",
+      "candidate": "control",
+      "variant": "defense",
+      "games": 32,
+      "wins": 8,
+      "losses": 4,
+      "unresolved": 20,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.125,
+      "exploratorySeedBootstrap95": [
+        0,
+        0.25
+      ],
+      "selfSettlementDifference": -0.25,
+      "selfSettlementBootstrap95": [
+        -0.5,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "B",
+      "candidate": "control",
+      "variant": "path",
+      "games": 32,
+      "wins": 30,
+      "losses": 2,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.875,
+      "exploratorySeedBootstrap95": [
+        0.625,
+        1
+      ],
+      "selfSettlementDifference": 0,
+      "selfSettlementBootstrap95": [
+        -0.625,
+        0.5
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "B",
+      "candidate": "control",
+      "variant": "combined",
+      "games": 32,
+      "wins": 30,
+      "losses": 2,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.875,
+      "exploratorySeedBootstrap95": [
+        0.625,
+        1
+      ],
+      "selfSettlementDifference": 0,
+      "selfSettlementBootstrap95": [
+        -0.625,
+        0.5
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "B",
+      "candidate": "positions-central",
+      "variant": "defense",
+      "games": 32,
+      "wins": 14,
+      "losses": 2,
+      "unresolved": 16,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.375,
+      "exploratorySeedBootstrap95": [
+        0.125,
+        0.5
+      ],
+      "selfSettlementDifference": 0,
+      "selfSettlementBootstrap95": [
+        -0.5,
+        0.625
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "B",
+      "candidate": "positions-central",
+      "variant": "path",
+      "games": 32,
+      "wins": 32,
+      "losses": 0,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 1,
+      "exploratorySeedBootstrap95": [
+        1,
+        1
+      ],
+      "selfSettlementDifference": -0.25,
+      "selfSettlementBootstrap95": [
+        -0.5,
+        0.25
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "B",
+      "candidate": "positions-central",
+      "variant": "combined",
+      "games": 32,
+      "wins": 32,
+      "losses": 0,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 1,
+      "exploratorySeedBootstrap95": [
+        1,
+        1
+      ],
+      "selfSettlementDifference": -0.1875,
+      "selfSettlementBootstrap95": [
+        -0.5,
+        0.4375
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "C",
+      "candidate": "control",
+      "variant": "defense",
+      "games": 32,
+      "wins": 20,
+      "losses": 6,
+      "unresolved": 6,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.4375,
+      "exploratorySeedBootstrap95": [
+        0.125,
+        0.75
+      ],
+      "selfSettlementDifference": -0.5,
+      "selfSettlementBootstrap95": [
+        -0.875,
+        -0.125
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "C",
+      "candidate": "control",
+      "variant": "path",
+      "games": 32,
+      "wins": 30,
+      "losses": 2,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.875,
+      "exploratorySeedBootstrap95": [
+        0.625,
+        1
+      ],
+      "selfSettlementDifference": -0.25,
+      "selfSettlementBootstrap95": [
+        -0.5,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "C",
+      "candidate": "control",
+      "variant": "combined",
+      "games": 32,
+      "wins": 30,
+      "losses": 2,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.875,
+      "exploratorySeedBootstrap95": [
+        0.625,
+        1
+      ],
+      "selfSettlementDifference": -0.25,
+      "selfSettlementBootstrap95": [
+        -0.5,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "C",
+      "candidate": "star-relocate",
+      "variant": "defense",
+      "games": 32,
+      "wins": 18,
+      "losses": 10,
+      "unresolved": 4,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.25,
+      "exploratorySeedBootstrap95": [
+        0.0625,
+        0.4375
+      ],
+      "selfSettlementDifference": -0.375,
+      "selfSettlementBootstrap95": [
+        -0.5,
+        -0.125
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "C",
+      "candidate": "star-relocate",
+      "variant": "path",
+      "games": 32,
+      "wins": 22,
+      "losses": 10,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.375,
+      "exploratorySeedBootstrap95": [
+        0.125,
+        0.5
+      ],
+      "selfSettlementDifference": -0.125,
+      "selfSettlementBootstrap95": [
+        -0.375,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "C",
+      "candidate": "star-relocate",
+      "variant": "combined",
+      "games": 32,
+      "wins": 22,
+      "losses": 10,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.375,
+      "exploratorySeedBootstrap95": [
+        0.125,
+        0.5
+      ],
+      "selfSettlementDifference": -0.125,
+      "selfSettlementBootstrap95": [
+        -0.375,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "D",
+      "candidate": "control",
+      "variant": "defense",
+      "games": 32,
+      "wins": 24,
+      "losses": 8,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.5,
+      "exploratorySeedBootstrap95": [
+        0,
+        1
+      ],
+      "selfSettlementDifference": -0.125,
+      "selfSettlementBootstrap95": [
+        -0.375,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "D",
+      "candidate": "control",
+      "variant": "path",
+      "games": 32,
+      "wins": 28,
+      "losses": 4,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.75,
+      "exploratorySeedBootstrap95": [
+        0.25,
+        1
+      ],
+      "selfSettlementDifference": -0.125,
+      "selfSettlementBootstrap95": [
+        -0.375,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "D",
+      "candidate": "control",
+      "variant": "combined",
+      "games": 32,
+      "wins": 28,
+      "losses": 4,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.75,
+      "exploratorySeedBootstrap95": [
+        0.25,
+        1
+      ],
+      "selfSettlementDifference": -0.125,
+      "selfSettlementBootstrap95": [
+        -0.375,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "D",
+      "candidate": "positions-14-21",
+      "variant": "defense",
+      "games": 32,
+      "wins": 10,
+      "losses": 22,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": -0.375,
+      "exploratorySeedBootstrap95": [
+        -0.5,
+        -0.125
+      ],
+      "selfSettlementDifference": 0,
+      "selfSettlementBootstrap95": [
+        0,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "D",
+      "candidate": "positions-14-21",
+      "variant": "path",
+      "games": 32,
+      "wins": 16,
+      "losses": 16,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0,
+      "exploratorySeedBootstrap95": [
+        0,
+        0
+      ],
+      "selfSettlementDifference": 0,
+      "selfSettlementBootstrap95": [
+        0,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "D",
+      "candidate": "positions-14-21",
+      "variant": "combined",
+      "games": 32,
+      "wins": 16,
+      "losses": 16,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0,
+      "exploratorySeedBootstrap95": [
+        0,
+        0
+      ],
+      "selfSettlementDifference": 0,
+      "selfSettlementBootstrap95": [
+        0,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "E",
+      "candidate": "control",
+      "variant": "defense",
+      "games": 32,
+      "wins": 10,
+      "losses": 14,
+      "unresolved": 8,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": -0.125,
+      "exploratorySeedBootstrap95": [
+        -0.25,
+        0
+      ],
+      "selfSettlementDifference": 0.25,
+      "selfSettlementBootstrap95": [
+        0,
+        0.5
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "E",
+      "candidate": "control",
+      "variant": "path",
+      "games": 32,
+      "wins": 30,
+      "losses": 2,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.875,
+      "exploratorySeedBootstrap95": [
+        0.625,
+        1
+      ],
+      "selfSettlementDifference": 0.25,
+      "selfSettlementBootstrap95": [
+        0,
+        0.5
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "E",
+      "candidate": "control",
+      "variant": "combined",
+      "games": 32,
+      "wins": 30,
+      "losses": 2,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLossPerGame": 0.875,
+      "exploratorySeedBootstrap95": [
+        0.625,
+        1
+      ],
+      "selfSettlementDifference": 0.25,
+      "selfSettlementBootstrap95": [
+        0,
+        0.5
+      ],
+      "adopt": false
+    }
+  ],
+  "reachability": [
+    {
+      "mode": "A",
+      "actorPositions": 64,
+      "legalNextTurnScoreTargets": 13,
+      "missedByFixedWallDistanceOne": 8,
+      "meaning": "geometry reachability only; not a guaranteed score against intervening opponent"
+    },
+    {
+      "mode": "B",
+      "actorPositions": 64,
+      "legalNextTurnScoreTargets": 27,
+      "missedByFixedWallDistanceOne": 17,
+      "meaning": "geometry reachability only; not a guaranteed score against intervening opponent"
+    },
+    {
+      "mode": "C",
+      "actorPositions": 64,
+      "legalNextTurnScoreTargets": 20,
+      "missedByFixedWallDistanceOne": 11,
+      "meaning": "geometry reachability only; not a guaranteed score against intervening opponent"
+    },
+    {
+      "mode": "D",
+      "actorPositions": 64,
+      "legalNextTurnScoreTargets": 32,
+      "missedByFixedWallDistanceOne": 23,
+      "meaning": "geometry reachability only; not a guaranteed score against intervening opponent"
+    },
+    {
+      "mode": "E",
+      "actorPositions": 64,
+      "legalNextTurnScoreTargets": 9,
+      "missedByFixedWallDistanceOne": 3,
+      "meaning": "geometry reachability only; not a guaranteed score against intervening opponent"
+    }
+  ],
+  "holdoutSummary": [
+    {
+      "mode": "A",
+      "positions": 12,
+      "byVariant": {
+        "control": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 1,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "defense": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 1,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 1,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 1,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "B",
+      "positions": 12,
+      "byVariant": {
+        "control": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 6,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "defense": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 6,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 6,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 6,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "C",
+      "positions": 12,
+      "byVariant": {
+        "control": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 0,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 1,
+          "avoidableLoss": 0,
+          "avoidableScore": 1
+        },
+        "defense": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 1,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 1,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 1,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "D",
+      "positions": 12,
+      "byVariant": {
+        "control": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "defense": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": null,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 0,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "E",
+      "positions": 12,
+      "byVariant": {
+        "control": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 10,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "defense": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 10,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 10,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "positions": 12,
+          "immediateWinDefenseSuccessRate": null,
+          "immediateScoreDefenseSuccessRate": 1,
+          "winDefenseOpportunities": 0,
+          "scoreDefenseOpportunities": 10,
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    }
+  ],
+  "limits": [
+    "4 seed blocks; games within a block are dependent; percentile bootstrap may be degenerate",
+    "Paired actor/position swaps are clustered by seed",
+    "1500ms soft process CPU budget per game and 256-ply censoring; unresolved are not draws",
+    "Generation and reference verification are separate; shared-host timing is descriptive",
+    "No best-play fairness proof, human-fun assessment or production adoption"
+  ]
+}

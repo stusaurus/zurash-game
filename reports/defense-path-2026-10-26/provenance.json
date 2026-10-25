@@ -1,0 +1,21 @@
+{
+  "parent": "4f7af9ace2cc2931f6cacc2b6e4ece64dcf7efe6",
+  "productionSourceChanged": false,
+  "policyTunedAfterResults": false,
+  "calibration": "160 archived stratified positions, no coefficient fit",
+  "evaluation": "4 new seed blocks / all 8 board conditions",
+  "confirmation": "A and E each 8 additional new seed blocks, selected after the exploratory comparisons",
+  "holdout": "60 main / 6 A / 6 E positions; never used for tuning",
+  "codeHashes": {
+    "tests/defense-path.test.js": "415d68888b087859c11990b3adda889b2e7672aa5ffe2abab5186c3f6b15ff0d",
+    "scripts/defense-path-audit.js": "b358c2614d9d9b1791297a76db497f60640628b12cfd0d52824cedf62061d389",
+    "scripts/defense-path-study.js": "b620e3e1232a50c0b6d6106ac0f5b75e7ab25d272eab1636e2b05d6283905b64",
+    "scripts/score-witness-analysis.js": "f38566fede801c68a93ebe15713029e933abe78c55492b2d8123de48bf1b0900",
+    "scripts/defense-path-e-confirm.js": "66d7314f87f46e6ab02666f60e12ece825ba5dbb6eed4fc9cbb968c2b600bca8",
+    "scripts/defense-path-confirm.js": "d54b7dc7e030cc71d90f58fb30016c80eeb13211c1c534009350b800a428ffdf",
+    "scripts/defense-path-verify.js": "806372abf2bec590625ab92e705df2acb8b2cd7988e570a2819477612e3d533a",
+    "scripts/defense-source-replay.js": "da4d7aad30bcd11515d6c250b67b4c0c645be95373f54881c647bc8bdb6b0b6f",
+    "scripts/defense-path-ai.js": "daaefe5781e15a9f40d4e2af05b98af923d3d3f10a7a4e45b95a40f4881bb61e",
+    "scripts/defense-path-report.js": "370b56f8f58e0fa7301b2e18522fa880124ecf55da28702a5fbdd03430826ce9"
+  }
+}
