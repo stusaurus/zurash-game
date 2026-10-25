@@ -16,7 +16,7 @@ export function pathValue(s,p) {
 // Defense reserves safe moves only in mixed safe/unsafe tactical positions.
 export function researchDecision(s,{variant='control',rng=Math.random,seen=new Map(),beam=8}={}) {
   const p=s.turn,stats={generated:0,evaluated:0,routeQueries:0,rootCandidates:0,defenseActivated:false};
-  const paths=variant==='path'||variant==='combined',defense=variant==='defense'||variant==='combined';
+  const paths=variant==='path'||variant==='combined',defense=variant==='defense'||variant==='combined'||variant==='win-guard'&&s.scores[1-p]===(s.target??3)-1;
   const children=n=>{const cs=successors(n);stats.generated+=cs.length;return cs;};
   const value=n=>{stats.evaluated++;if(paths){stats.routeQueries+=n.winner===null?2:0;return pathValue(n,p);}return evaluate(n,p);};
   let ranked=children(s).map(c=>({...c,score:value(c.n)-(seen.get(key(c.n))||0)*130,tie:rng()}))

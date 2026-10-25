@@ -46,6 +46,10 @@ jobs:
           node scripts/defense-path-verify.js --confirm-e
           node scripts/score-witness-analysis.js
           node scripts/defense-path-report.js
+          node scripts/stage10-audit.js
+          node scripts/stage10-verify.js
+          node scripts/stage10-verify.js --calibration
+          node scripts/stage10-report.js
       - run: PAIRS=2 MAX_PLIES=35 MATCHUPS=greedy/greedy npm run quality:audit
       - run: LAYOUT_TRIALS=20 PAIRS=2 MAX_PLIES=25 npm run quality:layouts
       - run: PAIRS=1 MAX_PLIES=12 MATCHUPS=greedy/greedy REPORT=/tmp/strategy-smoke.json npm run quality:study
