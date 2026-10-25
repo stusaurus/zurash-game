@@ -1,0 +1,501 @@
+{
+  "version": 1,
+  "newGames": 0,
+  "reusedGames": 320,
+  "sourceSHA256": "da01a9cab536604aaf16be52825e3c21d59b77917df3ad6042e6de0170d1c7c7",
+  "deltaSHA256": "ec46687b303ec9f19b35fd959a5f05422955778d911ff7facc3492d884d7cf33",
+  "scope": "Fixed old64-per-mode cohort; do not merge with separate B AI experiments",
+  "rows": [
+    {
+      "mode": "A",
+      "status": "調整が必要",
+      "priority": 3,
+      "problem": "無得点区間と反復、物理位置の偏り",
+      "board": {
+        "size": 8,
+        "target": 4,
+        "walls": [
+          18,
+          36,
+          29,
+          25,
+          26,
+          8,
+          34,
+          27
+        ],
+        "stars": [
+          24,
+          45,
+          43,
+          9,
+          50,
+          33,
+          61
+        ],
+        "players": [
+          56,
+          7
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null,
+        "id": "A",
+        "seed": 1037,
+        "family": "corridor",
+        "name": "【検証用】A 8×8"
+      },
+      "sourceGames": 64,
+      "sourceSeeds": 8,
+      "checkedPlies": 3319,
+      "meanDecided": 41.04,
+      "medianDecided": 37,
+      "p90Decided": 64,
+      "maxDecided": 101,
+      "observedPrefixMean": 51.859375,
+      "first": 26,
+      "second": 24,
+      "unresolved": 14,
+      "physicalWins": [
+        31,
+        19
+      ],
+      "byPolicy": {
+        "search": {
+          "appearances": 32,
+          "wins": 1,
+          "losses": 31,
+          "unresolved": 0,
+          "selfPlay": 0
+        },
+        "route": {
+          "appearances": 32,
+          "wins": 31,
+          "losses": 1,
+          "unresolved": 0,
+          "selfPlay": 0
+        },
+        "mixed": {
+          "appearances": 32,
+          "wins": 16,
+          "losses": 2,
+          "unresolved": 14,
+          "selfPlay": 0
+        },
+        "defensive": {
+          "appearances": 32,
+          "wins": 2,
+          "losses": 16,
+          "unresolved": 14,
+          "selfPlay": 0
+        }
+      },
+      "firstFinalPossible": [
+        0.40625,
+        0.625
+      ],
+      "wallMoveRate": 0.9746911720397711,
+      "leadChangeGames": 15,
+      "declinedCaptures": 1,
+      "knownQuietMax": 129
+    },
+    {
+      "mode": "B",
+      "status": "根本的な問題が残る",
+      "priority": 2,
+      "problem": "先攻集中と長期尾部。盤面欠陥の数学的認定ではない",
+      "board": {
+        "size": 9,
+        "target": 3,
+        "walls": [
+          50,
+          48,
+          61,
+          55,
+          74,
+          78,
+          7,
+          1,
+          41,
+          39
+        ],
+        "stars": [
+          71,
+          63,
+          12,
+          14,
+          17
+        ],
+        "players": [
+          72,
+          8
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null,
+        "id": "B",
+        "seed": 1057,
+        "family": "mirror",
+        "name": "【検証用】B 9×9"
+      },
+      "sourceGames": 64,
+      "sourceSeeds": 8,
+      "checkedPlies": 1751,
+      "meanDecided": 20.78723404255319,
+      "medianDecided": 15,
+      "p90Decided": 36,
+      "maxDecided": 90,
+      "observedPrefixMean": 27.359375,
+      "first": 37,
+      "second": 10,
+      "unresolved": 17,
+      "physicalWins": [
+        29,
+        18
+      ],
+      "byPolicy": {
+        "search": {
+          "appearances": 32,
+          "wins": 4,
+          "losses": 24,
+          "unresolved": 4,
+          "selfPlay": 0
+        },
+        "route": {
+          "appearances": 32,
+          "wins": 24,
+          "losses": 4,
+          "unresolved": 4,
+          "selfPlay": 0
+        },
+        "mixed": {
+          "appearances": 32,
+          "wins": 16,
+          "losses": 3,
+          "unresolved": 13,
+          "selfPlay": 0
+        },
+        "defensive": {
+          "appearances": 32,
+          "wins": 3,
+          "losses": 16,
+          "unresolved": 13,
+          "selfPlay": 0
+        }
+      },
+      "firstFinalPossible": [
+        0.578125,
+        0.84375
+      ],
+      "wallMoveRate": 0.9834380354083381,
+      "leadChangeGames": 14,
+      "declinedCaptures": 1,
+      "knownQuietMax": 87
+    },
+    {
+      "mode": "C",
+      "status": "調整が必要",
+      "priority": 5,
+      "problem": "未決着と計算予算不足の分離",
+      "board": {
+        "size": 10,
+        "target": 3,
+        "walls": [
+          54,
+          32,
+          83,
+          47,
+          13,
+          73,
+          63,
+          49,
+          34,
+          16,
+          36,
+          93
+        ],
+        "stars": [
+          44,
+          52,
+          65,
+          42,
+          53
+        ],
+        "players": [
+          90,
+          9
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null,
+        "id": "C",
+        "seed": 1113,
+        "family": "central",
+        "name": "【検証用】C 10×10"
+      },
+      "sourceGames": 64,
+      "sourceSeeds": 8,
+      "checkedPlies": 1243,
+      "meanDecided": 18.77777777777778,
+      "medianDecided": 20,
+      "p90Decided": 30,
+      "maxDecided": 38,
+      "observedPrefixMean": 19.421875,
+      "first": 21,
+      "second": 24,
+      "unresolved": 19,
+      "physicalWins": [
+        30,
+        15
+      ],
+      "byPolicy": {
+        "search": {
+          "appearances": 32,
+          "wins": 2,
+          "losses": 30,
+          "unresolved": 0,
+          "selfPlay": 0
+        },
+        "route": {
+          "appearances": 32,
+          "wins": 30,
+          "losses": 2,
+          "unresolved": 0,
+          "selfPlay": 0
+        },
+        "mixed": {
+          "appearances": 32,
+          "wins": 12,
+          "losses": 1,
+          "unresolved": 19,
+          "selfPlay": 0
+        },
+        "defensive": {
+          "appearances": 32,
+          "wins": 1,
+          "losses": 12,
+          "unresolved": 19,
+          "selfPlay": 0
+        }
+      },
+      "firstFinalPossible": [
+        0.328125,
+        0.625
+      ],
+      "wallMoveRate": 0.995172968624296,
+      "leadChangeGames": 17,
+      "declinedCaptures": 11,
+      "knownQuietMax": 26
+    },
+    {
+      "mode": "D",
+      "status": "調整が必要",
+      "priority": 4,
+      "problem": "決着性は良好だが先後・物理位置の偏り",
+      "board": {
+        "size": 6,
+        "target": 4,
+        "walls": [
+          4,
+          31,
+          2,
+          33,
+          9,
+          26,
+          23
+        ],
+        "stars": [
+          10,
+          25,
+          20,
+          15,
+          24,
+          11,
+          35
+        ],
+        "players": [
+          30,
+          5
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null,
+        "id": "D",
+        "seed": 1151,
+        "family": "rotation",
+        "name": "【検証用】D 6×6"
+      },
+      "sourceGames": 64,
+      "sourceSeeds": 8,
+      "checkedPlies": 1384,
+      "meanDecided": 21.625,
+      "medianDecided": 19,
+      "p90Decided": 33,
+      "maxDecided": 61,
+      "observedPrefixMean": 21.625,
+      "first": 40,
+      "second": 24,
+      "unresolved": 0,
+      "physicalWins": [
+        22,
+        42
+      ],
+      "byPolicy": {
+        "search": {
+          "appearances": 32,
+          "wins": 5,
+          "losses": 27,
+          "unresolved": 0,
+          "selfPlay": 0
+        },
+        "route": {
+          "appearances": 32,
+          "wins": 27,
+          "losses": 5,
+          "unresolved": 0,
+          "selfPlay": 0
+        },
+        "mixed": {
+          "appearances": 32,
+          "wins": 25,
+          "losses": 7,
+          "unresolved": 0,
+          "selfPlay": 0
+        },
+        "defensive": {
+          "appearances": 32,
+          "wins": 7,
+          "losses": 25,
+          "unresolved": 0,
+          "selfPlay": 0
+        }
+      },
+      "firstFinalPossible": [
+        0.625,
+        0.625
+      ],
+      "wallMoveRate": 0.9884393063583815,
+      "leadChangeGames": 23,
+      "declinedCaptures": 27,
+      "knownQuietMax": 48
+    },
+    {
+      "mode": "E",
+      "status": "根本的な問題が残る",
+      "priority": 1,
+      "problem": "大盤面の計算負荷と未決着の切り分けが未完",
+      "board": {
+        "size": 11,
+        "target": 3,
+        "walls": [
+          31,
+          51,
+          5,
+          115,
+          9,
+          111,
+          13,
+          107,
+          7,
+          113,
+          87,
+          33,
+          104,
+          16,
+          23
+        ],
+        "stars": [
+          91,
+          29,
+          88,
+          32,
+          86
+        ],
+        "players": [
+          110,
+          10
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null,
+        "id": "E",
+        "seed": 1233,
+        "family": "perturbed",
+        "name": "【検証用】E 11×11"
+      },
+      "sourceGames": 64,
+      "sourceSeeds": 8,
+      "checkedPlies": 1049,
+      "meanDecided": 15.75,
+      "medianDecided": 15,
+      "p90Decided": 20,
+      "maxDecided": 28,
+      "observedPrefixMean": 16.390625,
+      "first": 17,
+      "second": 11,
+      "unresolved": 36,
+      "physicalWins": [
+        12,
+        16
+      ],
+      "byPolicy": {
+        "search": {
+          "appearances": 32,
+          "wins": 0,
+          "losses": 25,
+          "unresolved": 7,
+          "selfPlay": 0
+        },
+        "route": {
+          "appearances": 32,
+          "wins": 25,
+          "losses": 0,
+          "unresolved": 7,
+          "selfPlay": 0
+        },
+        "mixed": {
+          "appearances": 32,
+          "wins": 3,
+          "losses": 0,
+          "unresolved": 29,
+          "selfPlay": 0
+        },
+        "defensive": {
+          "appearances": 32,
+          "wins": 0,
+          "losses": 3,
+          "unresolved": 29,
+          "selfPlay": 0
+        }
+      },
+      "firstFinalPossible": [
+        0.265625,
+        0.828125
+      ],
+      "wallMoveRate": 0.9971401334604385,
+      "leadChangeGames": 15,
+      "declinedCaptures": 0,
+      "knownQuietMax": 25
+    }
+  ]
+}

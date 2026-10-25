@@ -84,6 +84,7 @@ test("wall selection, shift, undo, skip, slide, local handoff, victory and remat
   await expect(page.locator(`[data-cell="${wall.to}"]`)).toHaveText(arrow);
   await page.locator(`[data-cell="${wall.to}"]`).click();
   await expect(page.locator("#phaseBadge")).toHaveText("2");
+  await expect(page.locator("#undo")).toContainText("選び直す");
   await page.locator("#undo").click();
   await expect(page.locator("#phaseBadge")).toHaveText("1");
   const rng = seeded(99),
@@ -113,13 +114,24 @@ test("wall selection, shift, undo, skip, slide, local handoff, victory and remat
   await page.locator("#reviewFinal").click();
   await expect(page.locator("#result")).toBeHidden();
   await expect(page.locator("#board")).toBeVisible();
+  await expect(page.locator("#showResult")).toBeVisible();
+  await page.locator("#showResult").click();
+  await expect(page.locator("#result")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.locator("#result")).toBeHidden();
+  await expect(page.locator("#showResult")).toBeFocused();
+  await page.locator("#showResult").click();
+  await expect(page.locator("#result")).toBeVisible();
+  await page.locator("#reviewFinal").click();
   await page.locator("#undo").click();
+  await expect(page.locator("#showResult")).toBeHidden();
   expect(finalAction).toBeDefined();
   await doAction(page, finalState, finalAction);
   await expect(page.locator("#result")).toBeVisible();
   await page.locator("#rematch").click();
   await expect(page.locator("#result")).toBeHidden();
   await expect(page.locator("#turnCount")).toHaveText("1手目");
+  await expect(page.locator("#showResult")).toBeHidden();
   await page.locator("#skip").click();
   await page.locator("#directions button:not([disabled])").first().click();
   await expect(page.locator("#turnCount")).toHaveText("2手目");

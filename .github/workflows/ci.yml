@@ -18,6 +18,10 @@ jobs:
           node-version: 22
       - run: npm ci
       - run: npm run check && npm test
+      - name: Reuse and independently replay the five-mode readiness cohort
+        run: |
+          node --max-old-space-size=768 scripts/balanced-audit.js
+          git diff --exit-code -- reports/balanced-2026-10-25.md reports/balanced-2026-10-25/
       - run: PAIRS=2 MAX_PLIES=35 MATCHUPS=greedy/greedy npm run quality:audit
       - run: LAYOUT_TRIALS=20 PAIRS=2 MAX_PLIES=25 npm run quality:layouts
       - run: PAIRS=1 MAX_PLIES=12 MATCHUPS=greedy/greedy REPORT=/tmp/strategy-smoke.json npm run quality:study
