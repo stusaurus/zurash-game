@@ -1,0 +1,8 @@
+{
+  "samples": 50,
+  "batches": 5,
+  "repeats": 4,
+  "minimumOverallGain": 0.1,
+  "maximumModeRegression": 0.05,
+  "limits": "Same process, interleaved order, warmup both, timings descriptive; normalized full-mask archived states only"
+}

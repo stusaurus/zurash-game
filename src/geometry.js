@@ -6,7 +6,7 @@ export const heightOf = s => s.height ?? s.size ?? 7;
 export const cellCount = s => widthOf(s) * heightOf(s);
 export function isPlayable(s, cell) {
   return Number.isInteger(cell) && cell >= 0 && cell < cellCount(s) &&
-    (!s.playableCells || s.playableCells.includes(cell));
+    (!s.playableCells || s.playableCells[cell] === cell || s.playableCells.includes(cell));
 }
 export function geometryKey(s) {
   if (s.width === undefined && s.height === undefined && !s.playableCells) return s.size ?? 7;
