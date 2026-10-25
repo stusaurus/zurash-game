@@ -1,0 +1,136 @@
+{
+  "candidates": [
+    {
+      "mode": "D",
+      "name": "control",
+      "factor": "none",
+      "board": {
+        "size": 6,
+        "target": 4,
+        "walls": [
+          4,
+          31,
+          2,
+          33,
+          9,
+          26,
+          23
+        ],
+        "stars": [
+          10,
+          25,
+          20,
+          15,
+          24,
+          11,
+          35
+        ],
+        "players": [
+          30,
+          5
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    },
+    {
+      "mode": "D",
+      "name": "positions-13-22",
+      "factor": "players",
+      "board": {
+        "size": 6,
+        "target": 4,
+        "walls": [
+          4,
+          31,
+          2,
+          33,
+          9,
+          26,
+          23
+        ],
+        "stars": [
+          10,
+          25,
+          20,
+          15,
+          24,
+          11,
+          35
+        ],
+        "players": [
+          13,
+          22
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    },
+    {
+      "mode": "D",
+      "name": "positions-16-19",
+      "factor": "players",
+      "board": {
+        "size": 6,
+        "target": 4,
+        "walls": [
+          4,
+          31,
+          2,
+          33,
+          9,
+          26,
+          23
+        ],
+        "stars": [
+          10,
+          25,
+          20,
+          15,
+          24,
+          11,
+          35
+        ],
+        "players": [
+          16,
+          19
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    }
+  ],
+  "seeds": [
+    583003,
+    583027,
+    583051,
+    583079,
+    583103,
+    583127,
+    583151,
+    583177
+  ],
+  "policies": [
+    "search",
+    "greedy"
+  ],
+  "softTimeMs": 1500,
+  "maxPlies": 256,
+  "adopt": false,
+  "exploratoryFollowup": true
+}

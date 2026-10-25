@@ -1,0 +1,80 @@
+{
+  "initialGames": 192,
+  "extensions": 0,
+  "forks": 0,
+  "transitions": 7796,
+  "rows": [
+    {
+      "candidate": "control",
+      "policy": "search",
+      "positionWins": [
+        10,
+        20
+      ],
+      "first": 18,
+      "second": 12,
+      "unresolved": 2,
+      "maxQuiet": 247
+    },
+    {
+      "candidate": "control",
+      "policy": "greedy",
+      "positionWins": [
+        6,
+        26
+      ],
+      "first": 22,
+      "second": 10,
+      "unresolved": 0,
+      "maxQuiet": 8
+    },
+    {
+      "candidate": "positions-13-22",
+      "policy": "search",
+      "positionWins": [
+        16,
+        16
+      ],
+      "first": 20,
+      "second": 12,
+      "unresolved": 0,
+      "maxQuiet": 203
+    },
+    {
+      "candidate": "positions-13-22",
+      "policy": "greedy",
+      "positionWins": [
+        2,
+        30
+      ],
+      "first": 18,
+      "second": 14,
+      "unresolved": 0,
+      "maxQuiet": 7
+    },
+    {
+      "candidate": "positions-16-19",
+      "policy": "search",
+      "positionWins": [
+        12,
+        18
+      ],
+      "first": 22,
+      "second": 8,
+      "unresolved": 2,
+      "maxQuiet": 190
+    },
+    {
+      "candidate": "positions-16-19",
+      "policy": "greedy",
+      "positionWins": [
+        32,
+        0
+      ],
+      "first": 16,
+      "second": 16,
+      "unresolved": 0,
+      "maxQuiet": 5
+    }
+  ]
+}

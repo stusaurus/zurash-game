@@ -3,7 +3,7 @@ import {EVALUATED_MASK_LIBRARY} from './evaluated-mask-library.js';
 import {SHAPES,generateBoard,validateBoard,parseBoardJSON,recordBoard,definitionKey} from './board-lab.js';
 export function mountLab(play) {
  const host=document.getElementById('boardLab');
- host.innerHTML=`<section aria-label="比較試遊"><p>比較試遊【研究用・未認定】</p><label>比較する盤面<select id="quickResearch"><option value="A-control">現行A</option><option value="D-positions-14-21">D候補［14,21］</option><option value="C-star-relocate">C候補：星配置</option><option value="C-control">現行C</option><option value="D-control">現行D</option><option value="B-control">現行B</option><option value="E-control">現行E</option></select></label><button id="quickResearchPlay">この比較盤面で対戦</button><p id="quickResearchStatus" role="status"></p></section><details><summary>盤面ラボ【研究用・未認定】</summary>
+ host.innerHTML=`<section aria-label="比較試遊"><p>比較試遊【研究用・未認定】</p><label>比較する盤面<select id="quickResearch"><option value="A-control">現行A</option><option value="D-positions-14-21">D候補［14,21］</option><option value="C-star-relocate">C候補：星配置</option><option value="C-control">現行C</option><option value="D-control">現行D</option><option value="B-control">現行B</option><option value="E-control">現行E</option></select></label><p id="quickResearchWarning">研究用：C候補は今回の両CPUで初期位置別32勝対0勝。D候補はCPU難度で有利な位置が反転しました。先後の勝率だけで公平とは判断していません。</p><button id="quickResearchPlay">この比較盤面で対戦</button><p id="quickResearchStatus" role="status"></p></section><details><summary>盤面ラボ【研究用・未認定】</summary>
  <p>保存された盤面で遊ぶ／条件を変えて作る。公平性や決着は未認定です。</p>
  <label>盤面ライブラリ<select id="labLibrary"></select></label>
  <label>検索<input id="labSearch" placeholder="形状・名前・検証状態"></label>
