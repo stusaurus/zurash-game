@@ -1,5 +1,5 @@
 {
-  "transitions": 17537,
+  "transitions": 20076,
   "witnesses": 2,
   "pairedPrediction": [
     {
@@ -9,6 +9,7 @@
       "coldFeatureLogLoss": 1.8426802272799219,
       "trainedFeatureLogLoss": 1.874174022822013,
       "changedSameStateDecisions": 22,
+      "historySpecificDecisions": 3,
       "cpuStates": 55
     },
     {
@@ -18,6 +19,7 @@
       "coldFeatureLogLoss": 1.9274636456151837,
       "trainedFeatureLogLoss": 1.9650617355192004,
       "changedSameStateDecisions": 23,
+      "historySpecificDecisions": 3,
       "cpuStates": 48
     },
     {
@@ -27,6 +29,7 @@
       "coldFeatureLogLoss": 1.4568568248141587,
       "trainedFeatureLogLoss": 1.5593591897683274,
       "changedSameStateDecisions": 71,
+      "historySpecificDecisions": 4,
       "cpuStates": 112
     },
     {
@@ -36,6 +39,7 @@
       "coldFeatureLogLoss": 1.8426802272799219,
       "trainedFeatureLogLoss": 1.874174022822013,
       "changedSameStateDecisions": 22,
+      "historySpecificDecisions": 3,
       "cpuStates": 55
     },
     {
@@ -45,6 +49,7 @@
       "coldFeatureLogLoss": 2.245780463677899,
       "trainedFeatureLogLoss": 2.3223239931449546,
       "changedSameStateDecisions": 10,
+      "historySpecificDecisions": 1,
       "cpuStates": 26
     },
     {
@@ -54,6 +59,7 @@
       "coldFeatureLogLoss": 1.5637131990559894,
       "trainedFeatureLogLoss": 1.4874541797710983,
       "changedSameStateDecisions": 12,
+      "historySpecificDecisions": 1,
       "cpuStates": 43
     },
     {
@@ -63,6 +69,7 @@
       "coldFeatureLogLoss": 1.4881815737086284,
       "trainedFeatureLogLoss": 1.4577526159776846,
       "changedSameStateDecisions": 29,
+      "historySpecificDecisions": 1,
       "cpuStates": 51
     },
     {
@@ -72,6 +79,7 @@
       "coldFeatureLogLoss": 2.245780463677899,
       "trainedFeatureLogLoss": 2.3223239931449546,
       "changedSameStateDecisions": 10,
+      "historySpecificDecisions": 1,
       "cpuStates": 26
     },
     {
@@ -81,6 +89,7 @@
       "coldFeatureLogLoss": 3.562576906342762,
       "trainedFeatureLogLoss": 2.462383519037947,
       "changedSameStateDecisions": 8,
+      "historySpecificDecisions": 4,
       "cpuStates": 14
     },
     {
@@ -90,6 +99,7 @@
       "coldFeatureLogLoss": 3.562576906342762,
       "trainedFeatureLogLoss": 2.462383519037947,
       "changedSameStateDecisions": 8,
+      "historySpecificDecisions": 4,
       "cpuStates": 14
     },
     {
@@ -99,6 +109,7 @@
       "coldFeatureLogLoss": 2.6621060289275653,
       "trainedFeatureLogLoss": 3.0733593679991955,
       "changedSameStateDecisions": 18,
+      "historySpecificDecisions": 3,
       "cpuStates": 24
     },
     {
@@ -108,6 +119,7 @@
       "coldFeatureLogLoss": 3.562576906342762,
       "trainedFeatureLogLoss": 2.462383519037947,
       "changedSameStateDecisions": 8,
+      "historySpecificDecisions": 4,
       "cpuStates": 14
     },
     {
@@ -117,6 +129,7 @@
       "coldFeatureLogLoss": 1.897550586468198,
       "trainedFeatureLogLoss": 1.8397712914269837,
       "changedSameStateDecisions": 7,
+      "historySpecificDecisions": 3,
       "cpuStates": 28
     },
     {
@@ -126,6 +139,7 @@
       "coldFeatureLogLoss": 1.897550586468198,
       "trainedFeatureLogLoss": 1.8397712914269837,
       "changedSameStateDecisions": 7,
+      "historySpecificDecisions": 3,
       "cpuStates": 28
     },
     {
@@ -135,6 +149,7 @@
       "coldFeatureLogLoss": 1.5807586515795313,
       "trainedFeatureLogLoss": 1.7201736495989113,
       "changedSameStateDecisions": 33,
+      "historySpecificDecisions": 1,
       "cpuStates": 63
     },
     {
@@ -144,6 +159,7 @@
       "coldFeatureLogLoss": 1.897550586468198,
       "trainedFeatureLogLoss": 1.8397712914269837,
       "changedSameStateDecisions": 7,
+      "historySpecificDecisions": 3,
       "cpuStates": 28
     },
     {
@@ -153,6 +169,7 @@
       "coldFeatureLogLoss": 1.3585462861060742,
       "trainedFeatureLogLoss": 1.4629051899570693,
       "changedSameStateDecisions": 8,
+      "historySpecificDecisions": 1,
       "cpuStates": 37
     },
     {
@@ -162,6 +179,7 @@
       "coldFeatureLogLoss": 1.3585462861060742,
       "trainedFeatureLogLoss": 1.457866585100719,
       "changedSameStateDecisions": 8,
+      "historySpecificDecisions": 1,
       "cpuStates": 37
     },
     {
@@ -171,6 +189,7 @@
       "coldFeatureLogLoss": 1.089340503577643,
       "trainedFeatureLogLoss": 1.2293395411825578,
       "changedSameStateDecisions": 80,
+      "historySpecificDecisions": 2,
       "cpuStates": 109
     },
     {
@@ -180,6 +199,7 @@
       "coldFeatureLogLoss": 1.3585462861060742,
       "trainedFeatureLogLoss": 1.4629051899570693,
       "changedSameStateDecisions": 8,
+      "historySpecificDecisions": 1,
       "cpuStates": 37
     }
   ]
