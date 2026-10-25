@@ -10,6 +10,7 @@ export function mountLab(play) {
  <button id="labLoad">選んだ盤面を編集・確認</button>
  <button id="labCorpus">生成済みの研究候補を追加表示</button>
  <button id="labDiscovery">名盤研究・全件の基礎評価を読み込む</button>
+ <button id="labStage7">第7段階の全5モード比較を読み込む</button>
  <button id="labStall">停滞原因と改善比較を読み込む</button>
  <button id="labBSettlement">Bの決着改善・独立比較を読み込む</button>
  <div id="labEvidence" aria-live="polite"></div>
@@ -123,6 +124,7 @@ export function mountLab(play) {
   }catch(e){say(e.message);$('labDiscovery').disabled=false;}
  };
  for(const [button,path,message] of [
+  ['labStage7','stage7-2026-10-25','現行AI固定の盤面比較。すべて研究候補・正式採用なし'],
   ['labStall','mode-continuation-2026-10-23','勝利不能の原因・改善候補・全モードの継続結果'],
   ['labBSettlement','b-followup-2026-10-23','Bの壁・位置・星比較。実験ごとの予算を確認。正式採用なし']
  ])$(button).onclick=async()=>{

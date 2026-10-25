@@ -40,7 +40,7 @@ for (let i = 4; i < LAYOUTS.length; i++) {
 // Research recording is loaded only through an explicit research URL and starts on consent.
 const playtest = new URLSearchParams(location.search).get('playtest') === '1'
   ? (await import('./playtest-record.js')).mountPlaytest(() => ({
-      mode: !customBoard && activeSettings.layout >= 4 ? LAYOUTS[activeSettings.layout].id : null,
+      mode: customBoard ? customName : activeSettings.layout >= 4 ? LAYOUTS[activeSettings.layout].id : null,
       opponent: mode, difficulty: mode === "cpu" ? activeSettings.level : null, state,
     })) : null;
 let learningTurns=[], learningCounted=false;
