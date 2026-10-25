@@ -1,0 +1,182 @@
+{
+  "candidates": [
+    {
+      "mode": "D",
+      "name": "base-14-21",
+      "wallsPaired": false,
+      "starsPaired": false,
+      "board": {
+        "size": 6,
+        "target": 4,
+        "walls": [
+          4,
+          31,
+          2,
+          33,
+          9,
+          26,
+          23
+        ],
+        "stars": [
+          10,
+          25,
+          20,
+          15,
+          24,
+          11,
+          35
+        ],
+        "players": [
+          14,
+          21
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    },
+    {
+      "mode": "D",
+      "name": "pair-wall",
+      "wallsPaired": true,
+      "starsPaired": false,
+      "board": {
+        "size": 6,
+        "target": 4,
+        "walls": [
+          4,
+          31,
+          2,
+          33,
+          9,
+          26,
+          23,
+          12
+        ],
+        "stars": [
+          10,
+          25,
+          20,
+          15,
+          24,
+          11,
+          35
+        ],
+        "players": [
+          14,
+          21
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    },
+    {
+      "mode": "D",
+      "name": "pair-star",
+      "wallsPaired": false,
+      "starsPaired": true,
+      "board": {
+        "size": 6,
+        "target": 4,
+        "walls": [
+          4,
+          31,
+          2,
+          33,
+          9,
+          26,
+          23
+        ],
+        "stars": [
+          10,
+          25,
+          20,
+          15,
+          24,
+          11,
+          35,
+          0
+        ],
+        "players": [
+          14,
+          21
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    },
+    {
+      "mode": "D",
+      "name": "pair-both",
+      "wallsPaired": true,
+      "starsPaired": true,
+      "board": {
+        "size": 6,
+        "target": 4,
+        "walls": [
+          4,
+          31,
+          2,
+          33,
+          9,
+          26,
+          23,
+          12
+        ],
+        "stars": [
+          10,
+          25,
+          20,
+          15,
+          24,
+          11,
+          35,
+          0
+        ],
+        "players": [
+          14,
+          21
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    }
+  ],
+  "seeds": [
+    584003,
+    584027,
+    584051,
+    584079,
+    584101,
+    584129,
+    584153,
+    584177
+  ],
+  "policies": [
+    "search",
+    "greedy"
+  ],
+  "softTimeMs": 1500,
+  "maxPlies": 256,
+  "adopt": false,
+  "factorial": "2x2; each edge changes one factor; target/players/AI held constant"
+}
