@@ -1,0 +1,21 @@
+// Opt-in, in-memory research recording. No storage, networking or identifiers.
+export class PlaytestRecord {
+  constructor(now=()=>performance.now()){this.now=now;this.active=false;this.value=null;}
+  start(meta,s){this.value={version:1,mode:meta.mode,opponent:meta.opponent,status:'in-progress',durationSeconds:0,initialPly:s.ply,finalPly:s.ply,movesPlayed:0,undoCount:0,reselectCount:0,longestScorelessRun:0,winner:null,finalScores:[...s.scores],ratings:{},note:'Opt-in research record; elapsed wall time includes CPU, animation and inactive tabs. Counters include attempted play; quiet run resets on undo. Not an AI balance match.'};this.started=this.now();this.quiet=0;this.active=true;}
+  turn(before,after){if(!this.active)return;this.value.movesPlayed++;this.quiet=after.scores.some((v,p)=>v>before.scores[p])?0:this.quiet+1;this.value.longestScorelessRun=Math.max(this.value.longestScorelessRun,this.quiet);this.snapshot(after);if(after.winner!==null)this.stop('finished');}
+  undo(reselect,s){if(!this.active)return;this.value[reselect?'reselectCount':'undoCount']++;this.quiet=0;this.snapshot(s);}
+  snapshot(s){this.value.finalPly=s.ply;this.value.winner=s.winner;this.value.finalScores=[...s.scores];}
+  stop(reason='stopped'){if(!this.active)return;this.value.durationSeconds=Math.round((this.now()-this.started)/100)/10;this.value.status=reason;this.active=false;}
+  export(ratings={}){if(!this.value)return null;const copy=structuredClone(this.value);if(this.active)copy.durationSeconds=Math.round((this.now()-this.started)/100)/10;for(const [k,v] of Object.entries(ratings))if(['understanding','operation','attackDefense','wallMeaning','resultReason','replayDesire'].includes(k)&&Number.isInteger(v)&&v>=1&&v<=5)copy.ratings[k]=v;return copy;}
+}
+export function mountPlaytest(getContext){
+ const recorder=new PlaytestRecord(),panel=document.createElement('section');panel.id='playtest';panel.style.cssText='max-width:46rem;margin:1rem auto;padding:1rem;border:2px solid #357b89;border-radius:1rem;background:#fff;color:#173d49';
+ panel.innerHTML='<h2>研究用・試遊記録</h2><p>まず設定からA〜Eを選んでね。明示的に開始するまで記録しません。記録はこのページ内だけで、送信・自動保存はありません。名前などは入力しません。</p><button id="recordStart">この対局の記録を開始</button> <button id="recordStop" disabled>記録を止める</button> <button id="recordDownload" disabled>記録JSONを保存</button><p id="recordStatus" role="status">未開始</p><p>終了後の感想（任意・1：難しい／感じない、5：簡単／強く感じる）</p>';
+ const labels={understanding:'ルールの理解しやすさ',operation:'操作のわかりやすさ',attackDefense:'攻撃と防御の判断',wallMeaning:'壁移動の意味',resultReason:'勝敗の理由のわかりやすさ',replayDesire:'もう一度遊びたい'};
+ for(const [id,label] of Object.entries(labels)){const el=document.createElement('label');el.style.cssText='display:inline-block;margin:.4rem';el.textContent=label+' ';const sel=document.createElement('select');sel.dataset.rating=id;sel.setAttribute('aria-label',label);sel.innerHTML='<option value="">未回答</option>'+[1,2,3,4,5].map(n=>`<option>${n}</option>`).join('');el.append(sel);panel.append(el);}
+ document.querySelector('main').before(panel);const $=id=>panel.querySelector('#'+id),status=()=>{$('recordStop').disabled=!recorder.active;$('recordStart').disabled=recorder.active;$('recordDownload').disabled=!recorder.value;$('recordStatus').textContent=recorder.active?'記録中（ページを閉じると消えます）':recorder.value?`記録終了：${recorder.value.status}`:'未開始';};
+ $('recordStart').onclick=()=>{const c=getContext();if(!c.mode || c.state.winner !== null){$('recordStatus').textContent='設定からA〜Eの新しい対局を選んでください。';return;}recorder.start(c,c.state);for(const el of panel.querySelectorAll('select'))el.value='';status();};
+ $('recordStop').onclick=()=>{recorder.stop();status();};
+ $('recordDownload').onclick=()=>{const ratings=Object.fromEntries([...panel.querySelectorAll('select')].map(el=>[el.dataset.rating,Number(el.value)]));const data=recorder.export(ratings),url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='zurash-playtest.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+ return {turn:(a,b)=>{recorder.turn(a,b);status();},undo:(retry,s)=>recorder.undo(retry,s),reset:()=>{recorder.stop('match-changed');status();}};
+}

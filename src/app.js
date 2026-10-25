@@ -36,6 +36,12 @@ for (let i = 4; i < LAYOUTS.length; i++) {
   const l = LAYOUTS[i]; option.textContent = `${l.name} · 星${l.stars.length}／壁${l.walls.length}／${l.target}個先取`;
   $("layout").append(option);
 }
+// Research recording is loaded only through an explicit research URL and starts on consent.
+const playtest = new URLSearchParams(location.search).get('playtest') === '1'
+  ? (await import('./playtest-record.js')).mountPlaytest(() => ({
+      mode: !customBoard && activeSettings.layout >= 4 ? LAYOUTS[activeSettings.layout].id : null,
+      opponent: mode, state,
+    })) : null;
 const tokenEls = [0, 1].map((p) => {
   const el = document.createElement("div");
   el.className = `token p${p + 1}`;
@@ -233,6 +239,7 @@ async function playSlide(dir) {
   };
   history.push(clone(turnStart));
   moveLog.push(lastAction);
+  playtest?.turn(turnStart, next);
   state = next;
   busy = true;
   selected = null;
@@ -333,6 +340,7 @@ function clearCelebration() {
   $("celebration").replaceChildren();
 }
 function reset() {
+  playtest?.reset();
   clearCelebration();
   epoch++;
   matchSeed = globalThis.crypto?.getRandomValues
@@ -359,6 +367,7 @@ $("skip").onclick = () => {
   render();
 };
 $("undo").onclick = () => {
+  const studyReselect = phase === "slide" && !cpuTurn();
   clearCelebration();
   epoch++;
   stopCPU();
@@ -375,6 +384,7 @@ $("undo").onclick = () => {
   phase = "wall";
   selected = null;
   resultSeen = false;
+  playtest?.undo(studyReselect, state);
   moveLog.length = history.length;
   turnStart = clone(state);
   seen = new Map();

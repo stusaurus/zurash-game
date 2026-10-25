@@ -1,0 +1,4659 @@
+{
+  "plan": {
+    "sourceHash": "985a27aa6c0b3757923fa05d7c34349e3fe7cce6f51274286ace6aa38a38ffd7",
+    "targets": [
+      "s-0669e9acc2dc5c7d929c3625691ced1a85d280130b4b37a22d29522e88171754",
+      "s-0b9a0ff63f80aaeb7d79e12463d8bf464a23e3997442ec1739b074f8118d90f4",
+      "s-118252d8ee2e9d1fc050523c15e9e5a40dda4c14cf8c778d4fc5e0a6a4a127cf",
+      "s-15f045d61a913d2708de88b2fafd6d08246305f351d8f38e9561f2a3fc059d71",
+      "s-1dbc59f3f5568e4e473995b871b8bf90616c8e00615418db5329f830658d8c93",
+      "s-2265fc47c3ffda51ad2ac189ba061aeba7707d57185461b32407a9234ccb62a2",
+      "s-26513ff31520aa59263a413b47056c57d3e59f070acee0135adb0656ba5e2609",
+      "s-3a87946c15bb4c85b3077de17bed1f35a3cfa5ca7f3d758e86889f6e23c5562c",
+      "s-426745a1be8253a885d25db6d58970324bd209c9db5d21bb3be90be21e449404",
+      "s-53621077d4b77d9e70a1a3aa962bfc0a7fd49f67b06b1574c370762f9c05ca6c",
+      "s-585776d7155c03421192f30325ec6589f3e9b378503e2b20a31a760fb3d45d23",
+      "s-5fcbbe463aaa0c808ab5556f128f1a4e2d10c318a54ce0a9b26e144e889c8666",
+      "s-7363a33ddb6c76bda5e341beca36e79c4a8d35e7542ecf9376370bc881bc440a",
+      "s-77725f0e50b6aacbb7cfad7bbd78dca12332fb3fefb8cbd9dd29419269aed3a8",
+      "s-82b98a2da13bb5808b3c3f71e9b8573f767692453b228a0211d781b423ed0f44",
+      "s-85c5edc492e55a859991a8a20d049b7d4d58db50c2aa8a5b4dd214334d157964",
+      "s-a82dbce0fe8c758a98a23ae3db290af8cd1e7272ff51289868a6630a47620b42",
+      "s-a87e17104796d8ae7cb7c34f0265336fff439cc8df34c6b2d4f5ffe74bd9cda0",
+      "s-c6e7db33557ea37198e583ae03c10ea7a10b14c124acd481e3b3ba4845dcaec7",
+      "s-d2358254959fe36d1e96b218feb888c7c195f00fe72dca9535fdbc39d20721cd",
+      "s-e83c16a2464c5e517fa9e692e7d04d3c64eaf1c2fc2410c7f0d391ebb6304cb3",
+      "s-ed39b4edb2add39a054ba925154249168c7bae4183f35ab1177efd1c91b7cf6b",
+      "s-ee96d90b797d6401769fdd16aa2087366351c449d92bd5555dd31312a5e8e16e",
+      "s-f40588794c3fba954a48b479b19519d2128e33aeb5bd2bc904bd2a6b0d189532"
+    ],
+    "forkModes": [
+      "A"
+    ],
+    "variants": [
+      "control",
+      "repeat"
+    ],
+    "additionalMs": 1500,
+    "additionalPlies": 64,
+    "cooperativeReplyBudget": 30000,
+    "newInitialGames": 0,
+    "diagnosticAmendment": "Complete two-ply census budget increased from 3000 to 30000; preserve initial-plan/summary. Fork budget/policies unchanged. Immediate score witnesses checked before work cap.",
+    "limits": [
+      "checkpoint forks are not continuations or initial games",
+      "cooperative two-ply score path is not forced",
+      "no path within budget is unknown; no infinite-no-score claim",
+      "same soft time caps, unchanged rules; candidate changes both A actors to existing research repeat policy",
+      "six reused A checkpoints are diagnostic, not independent strength/fairness validation"
+    ]
+  },
+  "cases": [
+    {
+      "id": "s-0669e9acc2dc5c7d929c3625691ced1a85d280130b4b37a22d29522e88171754",
+      "mode": "E",
+      "ply": 77,
+      "quiet": 45,
+      "longestQuiet": 12,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 96,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 0,
+      "pawnBacktracks": 20,
+      "cooperative": {
+        "checked": 9190,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-0b9a0ff63f80aaeb7d79e12463d8bf464a23e3997442ec1739b074f8118d90f4",
+      "mode": "C",
+      "ply": 100,
+      "quiet": 72,
+      "longestQuiet": 14,
+      "reason": "budget-time",
+      "repetitions": 15,
+      "legal": 78,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 0,
+      "pawnBacktracks": 44,
+      "cooperative": {
+        "checked": 6048,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget",
+        "observed-full-state-repeat"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-118252d8ee2e9d1fc050523c15e9e5a40dda4c14cf8c778d4fc5e0a6a4a127cf",
+      "mode": "E",
+      "ply": 104,
+      "quiet": 51,
+      "longestQuiet": 29,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 71,
+      "immediateScores": [],
+      "revisitActions": 1,
+      "wallBacktracks": 1,
+      "pawnBacktracks": 31,
+      "cooperative": {
+        "checked": 5660,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-15f045d61a913d2708de88b2fafd6d08246305f351d8f38e9561f2a3fc059d71",
+      "mode": "E",
+      "ply": 73,
+      "quiet": 21,
+      "longestQuiet": 37,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 49,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 2,
+      "pawnBacktracks": 17,
+      "cooperative": {
+        "checked": 6735,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-1dbc59f3f5568e4e473995b871b8bf90616c8e00615418db5329f830658d8c93",
+      "mode": "A",
+      "ply": 503,
+      "quiet": 499,
+      "longestQuiet": 3,
+      "reason": "budget-plies",
+      "repetitions": 481,
+      "legal": 21,
+      "immediateScores": [],
+      "revisitActions": 2,
+      "wallBacktracks": 0,
+      "pawnBacktracks": 492,
+      "cooperative": {
+        "checked": 1338,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "ply-budget",
+        "observed-full-state-repeat"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-2265fc47c3ffda51ad2ac189ba061aeba7707d57185461b32407a9234ccb62a2",
+      "mode": "E",
+      "ply": 195,
+      "quiet": 103,
+      "longestQuiet": 66,
+      "reason": "budget-plies",
+      "repetitions": 0,
+      "legal": 126,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 1,
+      "pawnBacktracks": 55,
+      "cooperative": {
+        "checked": 16260,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "ply-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-26513ff31520aa59263a413b47056c57d3e59f070acee0135adb0656ba5e2609",
+      "mode": "C",
+      "ply": 121,
+      "quiet": 4,
+      "longestQuiet": 102,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 88,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 1,
+      "pawnBacktracks": 37,
+      "cooperative": {
+        "checked": 7616,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-3a87946c15bb4c85b3077de17bed1f35a3cfa5ca7f3d758e86889f6e23c5562c",
+      "mode": "E",
+      "ply": 140,
+      "quiet": 116,
+      "longestQuiet": 12,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 148,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 4,
+      "pawnBacktracks": 48,
+      "cooperative": {
+        "checked": 14625,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-426745a1be8253a885d25db6d58970324bd209c9db5d21bb3be90be21e449404",
+      "mode": "C",
+      "ply": 115,
+      "quiet": 101,
+      "longestQuiet": 8,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 108,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 2,
+      "pawnBacktracks": 35,
+      "cooperative": {
+        "checked": 11631,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-53621077d4b77d9e70a1a3aa962bfc0a7fd49f67b06b1574c370762f9c05ca6c",
+      "mode": "E",
+      "ply": 82,
+      "quiet": 50,
+      "longestQuiet": 16,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 133,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 1,
+      "pawnBacktracks": 22,
+      "cooperative": {
+        "checked": 12629,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-585776d7155c03421192f30325ec6589f3e9b378503e2b20a31a760fb3d45d23",
+      "mode": "E",
+      "ply": 204,
+      "quiet": 7,
+      "longestQuiet": 174,
+      "reason": "budget-plies",
+      "repetitions": 0,
+      "legal": 129,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 3,
+      "pawnBacktracks": 60,
+      "cooperative": {
+        "checked": 6713,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "ply-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-5fcbbe463aaa0c808ab5556f128f1a4e2d10c318a54ce0a9b26e144e889c8666",
+      "mode": "A",
+      "ply": 467,
+      "quiet": 422,
+      "longestQuiet": 31,
+      "reason": "budget-plies",
+      "repetitions": 0,
+      "legal": 43,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 21,
+      "pawnBacktracks": 158,
+      "cooperative": {
+        "checked": 2237,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "ply-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-7363a33ddb6c76bda5e341beca36e79c4a8d35e7542ecf9376370bc881bc440a",
+      "mode": "E",
+      "ply": 57,
+      "quiet": 31,
+      "longestQuiet": 8,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 100,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 1,
+      "pawnBacktracks": 14,
+      "cooperative": {
+        "checked": 10220,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-77725f0e50b6aacbb7cfad7bbd78dca12332fb3fefb8cbd9dd29419269aed3a8",
+      "mode": "C",
+      "ply": 91,
+      "quiet": 72,
+      "longestQuiet": 7,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 84,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 2,
+      "pawnBacktracks": 37,
+      "cooperative": {
+        "checked": 10375,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-82b98a2da13bb5808b3c3f71e9b8573f767692453b228a0211d781b423ed0f44",
+      "mode": "E",
+      "ply": 80,
+      "quiet": 45,
+      "longestQuiet": 14,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 145,
+      "immediateScores": [
+        {
+          "wall": {
+            "wall": 10,
+            "to": 87
+          },
+          "dir": 1
+        }
+      ],
+      "revisitActions": 0,
+      "wallBacktracks": 2,
+      "pawnBacktracks": 22,
+      "cooperative": {
+        "checked": 0,
+        "witness": [
+          {
+            "wall": {
+              "wall": 10,
+              "to": 87
+            },
+            "dir": 1
+          }
+        ],
+        "status": "witness"
+      },
+      "classification": [
+        "time-budget",
+        "immediate-score-available",
+        "cooperative-score-path"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-85c5edc492e55a859991a8a20d049b7d4d58db50c2aa8a5b4dd214334d157964",
+      "mode": "A",
+      "ply": 443,
+      "quiet": 87,
+      "longestQuiet": 170,
+      "reason": "budget-plies",
+      "repetitions": 0,
+      "legal": 68,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 15,
+      "pawnBacktracks": 154,
+      "cooperative": {
+        "checked": 1786,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "ply-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-a82dbce0fe8c758a98a23ae3db290af8cd1e7272ff51289868a6630a47620b42",
+      "mode": "E",
+      "ply": 82,
+      "quiet": 42,
+      "longestQuiet": 10,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 134,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 0,
+      "pawnBacktracks": 11,
+      "cooperative": {
+        "checked": 11809,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-a87e17104796d8ae7cb7c34f0265336fff439cc8df34c6b2d4f5ffe74bd9cda0",
+      "mode": "E",
+      "ply": 171,
+      "quiet": 128,
+      "longestQuiet": 17,
+      "reason": "budget-plies",
+      "repetitions": 0,
+      "legal": 50,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 7,
+      "pawnBacktracks": 47,
+      "cooperative": {
+        "checked": 5365,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "ply-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-c6e7db33557ea37198e583ae03c10ea7a10b14c124acd481e3b3ba4845dcaec7",
+      "mode": "E",
+      "ply": 160,
+      "quiet": 140,
+      "longestQuiet": 10,
+      "reason": "budget-plies",
+      "repetitions": 0,
+      "legal": 138,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 1,
+      "pawnBacktracks": 43,
+      "cooperative": {
+        "checked": 13132,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "ply-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-d2358254959fe36d1e96b218feb888c7c195f00fe72dca9535fdbc39d20721cd",
+      "mode": "A",
+      "ply": 286,
+      "quiet": 150,
+      "longestQuiet": 88,
+      "reason": "budget-plies",
+      "repetitions": 1,
+      "legal": 21,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 10,
+      "pawnBacktracks": 94,
+      "cooperative": {
+        "checked": 1263,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "ply-budget",
+        "observed-full-state-repeat"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-e83c16a2464c5e517fa9e692e7d04d3c64eaf1c2fc2410c7f0d391ebb6304cb3",
+      "mode": "E",
+      "ply": 68,
+      "quiet": 50,
+      "longestQuiet": 6,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 103,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 2,
+      "pawnBacktracks": 15,
+      "cooperative": {
+        "checked": 10206,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-ed39b4edb2add39a054ba925154249168c7bae4183f35ab1177efd1c91b7cf6b",
+      "mode": "A",
+      "ply": 267,
+      "quiet": 105,
+      "longestQuiet": 94,
+      "reason": "budget-plies",
+      "repetitions": 0,
+      "legal": 52,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 10,
+      "pawnBacktracks": 76,
+      "cooperative": {
+        "checked": 2017,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "ply-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-ee96d90b797d6401769fdd16aa2087366351c449d92bd5555dd31312a5e8e16e",
+      "mode": "E",
+      "ply": 70,
+      "quiet": 20,
+      "longestQuiet": 17,
+      "reason": "budget-time",
+      "repetitions": 0,
+      "legal": 90,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 2,
+      "pawnBacktracks": 13,
+      "cooperative": {
+        "checked": 8308,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "time-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    },
+    {
+      "id": "s-f40588794c3fba954a48b479b19519d2128e33aeb5bd2bc904bd2a6b0d189532",
+      "mode": "A",
+      "ply": 240,
+      "quiet": 176,
+      "longestQuiet": 24,
+      "reason": "budget-plies",
+      "repetitions": 0,
+      "legal": 48,
+      "immediateScores": [],
+      "revisitActions": 0,
+      "wallBacktracks": 9,
+      "pawnBacktracks": 54,
+      "cooperative": {
+        "checked": 1738,
+        "witness": null,
+        "status": "no-score-within-two-plies"
+      },
+      "classification": [
+        "ply-budget"
+      ],
+      "unproven": [
+        "permanent blockade",
+        "forced defense",
+        "unreachable remaining stars"
+      ]
+    }
+  ],
+  "forks": [
+    {
+      "variant": "control",
+      "forks": 6,
+      "settled": 1,
+      "unresolved": 5,
+      "addedPlies": 343,
+      "meanDecided": 466,
+      "medianDecided": 466,
+      "p90Decided": 466,
+      "first": 0,
+      "second": 1,
+      "maxQuiet": 563,
+      "newRepetitions": 65
+    },
+    {
+      "variant": "repeat",
+      "forks": 6,
+      "settled": 3,
+      "unresolved": 3,
+      "addedPlies": 251,
+      "meanDecided": 490.6666666666667,
+      "medianDecided": 489,
+      "p90Decided": 489,
+      "first": 2,
+      "second": 1,
+      "maxQuiet": 506,
+      "newRepetitions": 1
+    }
+  ],
+  "pairing": [
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "search",
+          "search"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "s-808add3885a3be3d3af5f28adb31639fdd6d159bb15b665dbd80867e9b2f2eef",
+        "s-e1a8b02fd3168b963f7a82407eeb2909f0a46d4d2c04dfde0d9dfb9c36ca6b95",
+        "s-c429f68d4c29452959ec9a730501a00677c5ebc32c4adc50f9b10f55ebe0a676",
+        "s-8a9e487ffac01ab955d5839ac36080c0ce3e7797e95d14b6759f4fe3352c7475"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 15
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "search",
+          "search"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "s-41238231bad7c155748f000227bac52f1f49fc12588c32ed6cca489d34cfe16c",
+        "s-bf714c786be5e0810f3bfe1d25934ceab2ac9c83334fc0bfd9569c733dde4617",
+        "s-b677c5393e26a46931eef591f7150f64b8809d64f37c3e0b940a123186e15945",
+        "s-e5657fcc7317cdc20b43d87cb683fb6e7d215c93e5256f184076792e65a6b9d9"
+      ],
+      "n": 4,
+      "firstWins": 1,
+      "secondWins": 0,
+      "unresolved": 3,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 24
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "search",
+          "search"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "s-44e08b02e58f8185c82433047cc6ae928c3513b56a956e4bbf62a426f5aaa1b3",
+        "s-297c1795407ef033f898524262dede185a9690a7df7ee10651e8bb0bbbc15e31",
+        "s-62f56a557a1dbc0e292d84685bb3879610903152302f1b5cb5a5b4decfd35f17",
+        "s-0b4d2e90e939288efd62d6714bfb5d7b119c8babeafc0324d1bb8fd2bfb58360"
+      ],
+      "n": 4,
+      "firstWins": 1,
+      "secondWins": 0,
+      "unresolved": 3,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 20
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "search",
+          "search"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "s-e6aafde35d943a750e3982b92d833b78c3e973c0fa642e8572524685de1b41c2",
+        "s-56c963cecb6a0d9694aa9493f7662dfad6b34739d9671cacbefab6370ae40110",
+        "s-2af7392934217da88f080bdaaded469bb40c99651d4e6928e1f41aa76725e3b9",
+        "s-b99f23288eefb5cd3dab13f8d77e4fbd6a9dfbce74e0801a700d7840551fe475"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 0,
+      "unresolved": 1,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 33
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "s-3c1db6a25c4faa5be51a1bf866a7dc800582d63e75e65fea3408170ddb109365",
+        "s-749ea28116587813974ab024c550a84358d62250a9ee765bfad5c27295748ea0",
+        "s-e67c32304bddef836feec9138be8e8956e6fa820779f93dc8299449227ca03b2",
+        "s-f567e3c2daca742324a2f9032f14ffb68fd8d799e1652fc929002abaf9148ef4"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 1,
+      "unresolved": 3,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 136
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "s-2cd7c2de503baba55c44bf8f14a8e5a4838d7d7b6a49fe35510b01becf7325eb",
+        "s-5f57d2bdf8886d2fadc9c9d0e5142fc634e65fc4031bb8ba4a03f628c095b381",
+        "s-6a4a887c4efcd6148cb6d1912cc1b5b8664dfcd513468b76435b058acc53e75e",
+        "s-655211bc6ad5e054c5695e02b0dc8c534acaf727784785474e582179e9cd5b3d"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 3
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        0,
+        false,
+        true
+      ],
+      "ids": [
+        "s-bc348b9a193b730324b9894cb8daf3375581841a814833ef661d6a09931284e1",
+        "s-d128fec7a2378c1c395ae21acfa29dfd8b3ed13db90665c951050c68e69844d5",
+        "s-f3c7443ddd8c73a55f1a2b22ce5f5a4905bf3b3c7a690c9a8af969d1b2038a32",
+        "s-0d99faf5afe87c4f74afaa09b6c0dafe4165498bb8272033f3866c7aa747224c"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 1
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        1,
+        false,
+        true
+      ],
+      "ids": [
+        "s-dc41c6f34ce67ff9f92138dff5ab86cc27102b8ab9df7a1311037b26957e8d22",
+        "s-93bb8a735efd720601157af631ac4a0328edcddaf454c5097568c9d4f912495d",
+        "s-dc5e2b2b5003bd0e3058cb0036429be1bf263ed01dd2bdce70d7d89ba635ee37",
+        "s-0d2219ea49f88c6405492f5f9c92211deccb206c2b5a96f7599c06c2de48f40c"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 4
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "s-999921a8cf3e9d4424559056a808749e0ecbebb42b1029e64572e9f2bc648ad4",
+        "s-3898ec390e746a0e849ac1b58802418a2d5ab6eb286f89a946de24accc001efd",
+        "s-0116f41eab50ec1ad5287cfa45ed8fff95885ccfa30ac4fa94f9581ed12bba2b",
+        "s-767de3d9ae1f9fee5e78471028835870219bb1b4428aca7bc1bd7583bf6fc75a"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 29
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "s-23f2e6dfa349f60b22db45e73b9dc00434f25a0892d60443293f439b0e95b199",
+        "s-eca89a37b522a5ae4ff4475bdc138d4085a7017a333aa4a6e91f8d70ef6a5643",
+        "s-cbd87b7ffc3aaf435e581a25115977637b3886ae27489f7df5f81ab1d6808c5b",
+        "s-ed748e29225766319e570f031a02c8092b72edb24a827ede8043f5f7b58ed64f"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 1
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        0,
+        true,
+        true
+      ],
+      "ids": [
+        "s-4e298e69d87ff694eea2c35235d15ab2a40f8b2f14f663b744ef3105a16b7b96",
+        "s-80bd224c943448f95c5273c2558804db59610a76e8a321bacfeab01c31ff339b",
+        "s-288da2cb0776f7b2276af4f36443abbf6b3cdadcac7fda5b799b82845d751aaf",
+        "s-966031792d3cdb6992dd2fe0cc61673584e75ca7784608af7ae20b59fb1dc9e5"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 3
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        1,
+        true,
+        true
+      ],
+      "ids": [
+        "s-16fdb6d329c8752cfed7312500df61a6369911b01442a6baf022584a53fa7a53",
+        "s-0537c03ee1f05940da35922287ec96cbf2395de6339750a64d13b0871d8e1d47",
+        "s-a5f1e21843c554b5534dd703aadee4252fe6a1e2294ffde181d797e44e41972d",
+        "s-4248abf5035324ef6163d05e3607624109a01097baea6d3bdbc5ef308d790f11"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 55
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "s-9d89f200f9ba50fd8859b1b0078cee446d8d30f460f6580459b52e74eb61e7de",
+        "s-0cdb209fb1c6271d1277f47adf975004dee83fc7ef3ced644964db36f91c0b0c",
+        "s-4589fcbc7939ee5c7dd5a5d9971ad7750ad5032b03bb8c2d5855d1cbec40c685",
+        "s-c6fd156efe8260373d8c7cd287cc8853885d28eb9b3ae5816816f4c2594628c0"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 5
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "s-20f2a5124221bd324980c714d17118a0f7aecff8ecfd5043a3f3ecca97f38ae4",
+        "s-4e4ce888557d195fac691aa71697051306349350d659c322a30ff7174eb3d7c2",
+        "s-86b401c1a64ddfbd4a576071d7c9ae9776583c501bccca5605949e246b3d7160",
+        "s-7f92ad64d762f57745ab6e0175e0d42491ccc35cc0f2c3cc88f59e3b8ae4f447"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 4,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 11
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        false,
+        true
+      ],
+      "ids": [
+        "s-7158d2836d693694d7a18bf45523521a3218ef0ffa891a33f11795a94142e9ce",
+        "s-55b941185a8dceb8055a32001cf85e7ba936d636c54b03e1b8b0b4874edd5751",
+        "s-bc6f7e08c1349e79d55f9a6b49fbcd40368f0cb698b9a60a328724e142e4af33",
+        "s-1e8ca3e7ad0a53dc79af4732b9dc5314c172e664cdaba968d3115136b50c8818"
+      ],
+      "n": 4,
+      "firstWins": 1,
+      "secondWins": 0,
+      "unresolved": 3,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 13
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        false,
+        true
+      ],
+      "ids": [
+        "s-14a98f85dc0bd3efd68bcdfed2230db5a94cc25ca8a5a9be2e3593dc533f5375",
+        "s-cf3cb324d8df7e0e3e4d17df602983cd34c8e676ed64a2248d25072a43e55416",
+        "s-f78781f87da622c7bca07e2b1bb4d2a9d0ee3157f991305945ccff5fcf17fb71",
+        "s-229e5367d640713612eceb547b25f067b3b7ddebef7771565798687bfdeb5c24"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 0,
+      "unresolved": 1,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 7
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "s-734c57f8de1f8dca701210c31a72df3c510bc42fc16e0cab70f404bfa8a94e5b",
+        "s-caa98b0208a028d0694fb90c020488726bed2f2a24ff36fabe06d8183e98140c",
+        "s-667ae8841a2aa6c79f6bc9749e6addadeb2e9c2f6f99be6412345fd8bac8634c",
+        "s-14edebc057fb143898b432b6daef5fac0bc796dfea51a3120ad0a2b720a97c2f"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 7
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "s-a2af8f3ab401dde70dee88a0e597f487503ef9802b10169a083f6307414ad76e",
+        "s-34dd6e74ee293613aea74fdb7f92132687e11a5239d1ca82435cc69f42f2fa19",
+        "s-42b30fe5e02adf98ea3b96a130219ccedbfdfb462ffc2e4a138b0cdb6d34d79f",
+        "s-df7055267fcd99aca918dafc0a6b16f96b9cbbfdee3924b52c61e8ff3d6bac85"
+      ],
+      "n": 4,
+      "firstWins": 1,
+      "secondWins": 0,
+      "unresolved": 3,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 16
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        true,
+        true
+      ],
+      "ids": [
+        "s-97c7ec7a2ca43a1b68bb40c93a58480d064163ff47346acec5ac4ad300c576e6",
+        "s-fa5009302f4c33f5093a432eeec6a885bd4f2342b285c9f4a19d83fed4353429",
+        "s-d5cc1f948e99424212c2b1a85bf22c715baa939dea004c04da34c59b3424c0c3",
+        "s-5569f83aba172aba37edbf31ab0093032c7fa24e95c72becd6d83094ed03a6dd"
+      ],
+      "n": 4,
+      "firstWins": 1,
+      "secondWins": 0,
+      "unresolved": 3,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 9
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        true,
+        true
+      ],
+      "ids": [
+        "s-b0c7fcfeab7978024c346599902f76a6e4c688feb3c11d230de9b47b8905b192",
+        "s-02e7f1fd0bdf5707cd0ee312ed3afce255caf6c838410a3b97f8c95ae958b538",
+        "s-6ffd760c9827e9e896532c3e934cdf8ddd111d136eb29227edd55225b25ff712",
+        "s-2359263d680c59eb95594b4017e5e76eaf9942e67cb7d8925c1bf5319aba0b54"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 5
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "archived",
+          "archived"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-b0048e5b4067b28c0ef278db04625a92547f017e536ed38152fd080252164b80",
+        "guard-8cbab31dc49b8c80de767dff5684e28200327c2a4b36242b92aa54f1f62849ac",
+        "guard-fd7681ec6ed242da0b0ac198846827540c93e6f0231184bca4fb3226fe264e0f",
+        "guard-bf0cbf5ff0f7f00e5c53d8b35a5064caa4cba980de8f74948f7157e2f18cbbe5",
+        "guard-4125c7d49b7ee58dc15fab95a94a8965a53614bec5a79fef31a06e1363012ecc",
+        "guard-838d04aa85f88667baa295b3c42603e911ddaba7554ec706baebdbb81abf877d",
+        "guard-6b606006ab065fe4a60ef0d783acf11d957f84333fe6d21ee3f9593bc8f683a2",
+        "guard-039a7c18d3b1167ddd2d337c9fff54e745d2b3d5856a2a169e720deedad0f475"
+      ],
+      "n": 8,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 4,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 185
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "archived",
+          "archived"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-d74f7fe8de65c0d25b98117e3326993c38eb690f91c5613b6a651f72345972b9",
+        "guard-d0a49bb196c7541c2bbff53dbf1d1cde8670db16b8e75234a636a49f9c6def3d",
+        "guard-41ed7f6844a9d90700264e20e57722da9a5f4b92a177c70bf06d1f2ed4218931",
+        "guard-8ec4084bcffe363905d34c3c84bd23778435043d2e43c29db9df2ca9dee9f409",
+        "guard-84115ddbec729399185609372a89483b47b4f8b4b15183670dd74d3de261010b",
+        "guard-0334821e2e84e98ce4a138d20581c1ba0a036ad7bb4d6f33dba5675ee22feeb3",
+        "guard-3ab147f3c06bef98864d3afc07bf54c39c13bc6ceea348da45c13a822c8fc429",
+        "guard-1aa98594823153de9daec72ff901dad3d2cca72b8dd4e0b81c4fd2b26abaea14"
+      ],
+      "n": 8,
+      "firstWins": 2,
+      "secondWins": 1,
+      "unresolved": 5,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 207
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "archived",
+          "archived"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-ecf46f0bd5f72aaaa893a8adafa9eb542ddb28081c41be9bbfe60a6ae0263795",
+        "guard-3b79797187980c8834f736f752f8acfed27a0d77adb22de6ee0e2522d3c8d568",
+        "guard-1df11e9a411110710935f831dbd7ea5369db524dc03f4db539164055d2191fbc",
+        "guard-2ebe541342493867b9ee675f44082ed22dc6bd36d3b354ad27c5aeee6a2f21bc",
+        "guard-3534fcdb0bc7509fd44678a21339c018e8d67944cded32c577846608a7d9aea1",
+        "guard-c040a248b74f95012da8ce90bcc80194b17d1d9fe8c503b06e7e26b79a5c5c51",
+        "guard-7e42a35124576bd9231525315550cb1fec5de884de07022aa0da69d4d63e8e73",
+        "guard-7741dc01ae20179f43cb6cf2469e8055776e5ff1890a491b86222d345fd28b94"
+      ],
+      "n": 8,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 4,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 219
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "archived",
+          "archived"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-87d4ec238d6e24e4bd00baf0def698c480f546d288c3972defa81822d83ca961",
+        "guard-0cfe754fbbe034f6039c5d6023ef1a8c0c4e4aba94303c68e7c8b47f1ee7785c",
+        "guard-b394c6ec5f5c38a5d3cd5a5f2eb9196d387cf80322a3369eb67273255b6c4f5d",
+        "guard-bd806c37776dab09ed7eed555746437b49027a959af70a2655662671bf8f8121",
+        "guard-967604ecacb0b1c2cc2702f3a8cc9f8a8950b2a1a2284b86f4e8acaeda9e5ff7",
+        "guard-9edf64bf180893fb34fcc59059979ee35415099344a4205a85f57fde6786a4d3",
+        "guard-ce371f6fa0cf904b52794b4a4e973360ba52484b0bdc8fcb33243b0ae75163b8",
+        "guard-b581c1ce60325fa2396cdd195415dffda19f01d9d2622c4c82f1470b188cfc84"
+      ],
+      "n": 8,
+      "firstWins": 7,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 140
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "retain"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-621cf5057fc2830a305f60bdf6d65e4e904b56aa0c6173f9d0e05887a5e7626a",
+        "guard-1408182e969f7426dc1bb7d2e8b49d6e9bb91959bc13fb0a8d1970ec835590fb",
+        "guard-8b1d9f4cda38969061138b45da1ef8783d7fc519bf99a0e21b632b0ca52a1cb9",
+        "guard-a548f3df051a44988fdfb817b3912dee859f88ea5f4af8ddc3c50e2c7fe2c2e0",
+        "guard-32c7ea1667d27d50e65b0bc78901435b6fc795031e7a8e33ba28240686d3b4e7",
+        "guard-63ef98aa84f80b1d4fb1c112788ff6ff8daaa90cc8406403543dd34924eb122f",
+        "guard-d47f58b76e46038b3efdb7fb1840ca3fe0263278f04fae6ffccfa01019479c85",
+        "guard-84e139c2f02579fef99d9a3b6deb6a5d0acd626e77ac77ded24c2bf3a454aedc"
+      ],
+      "n": 8,
+      "firstWins": 6,
+      "secondWins": 0,
+      "unresolved": 2,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 123
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "retain"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-1417c2801242752ec4e971e5b433f4c648a73e30daa858a3ffe656c89ca0f6b8",
+        "guard-a016daf19e88cd975fa8c742f3f6c6a081eda857afe7f64f72514df2482e2a71",
+        "guard-0836bad9942c1faf3a7c5ca4a618d4b9d6c55058389c50db3c2ef5953c681927",
+        "guard-af8058feed83d211b3d3c3ab871b9d3df565ba99a4d5876bd2a6b5ccc367977a",
+        "guard-2a60ee0b82b02ef0f8385f91979237cdf37096e1856c5361db5c6b8f05bc848c",
+        "guard-def4199bc546b77ec018c1cba1691d6dee42e4e6df0c7f70e14e56bb24c37099",
+        "guard-8328ba84517d3c5e0d204797a8efaa27582671f4faa171ed69a8d7bba3db6f26",
+        "guard-7cd8718aece5663ec40440bf3b0d10d8c318778ceb29ec41258dfedcdb322ed1"
+      ],
+      "n": 8,
+      "firstWins": 2,
+      "secondWins": 0,
+      "unresolved": 6,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 137
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "retain"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-13ca225d19be98c36919d560d2bdd82ed0415ccd62589cd8a5e28b6595dc8404",
+        "guard-206d8350dd831a0b1d514d01a1186561df8126dee61cae40c8edbcc63702c698",
+        "guard-1c4208817470d88b958a1cd5367761fd671383d70605a20f9e06010a921133f6",
+        "guard-05e93f5fd358e0f81c28dffc700e5a24fdc1f4ee3cc84b366f495ae09a13bf30",
+        "guard-db6a866eb542c4cdfa5676b7af9eccb916f9bbbc19f00280b232d7f27487d1e5",
+        "guard-e08a5d9371c36810765c37f9b95a564bbd463d362a7a6ccce8a506309a84fd8c",
+        "guard-2a858549d5d028ecb16fa735661ccd8126f1013ed0a0cf1629529cca683f2d97",
+        "guard-4fae0087d7268e52775a62c22a29eebdde4d598accec77042e675346fea21877"
+      ],
+      "n": 8,
+      "firstWins": 1,
+      "secondWins": 1,
+      "unresolved": 6,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 141
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "retain"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-19021f7d9911f35fe1fa766f27ce71647d287c1f12aa985150827b468c3a6e5a",
+        "guard-f079edb24528d5a248fb1fe474454961f7539f7599fc74bbbddd2962f9401bad",
+        "guard-8940164232c6bbc4077ff07da763c155912343c4e1682c9cbb9aa2786a52153f",
+        "guard-ec8ab9d8ed98e3c69b4e1098b0c2cc41cb78d3b39b2bd1e46ccbdd1cb00a16fe",
+        "guard-2a12c097f3223dc0e890f0fbd7f0ecf87d7a7ffff4fe965ac56a9f3a425eaf34",
+        "guard-f22098e980337b9dd9a7d4eced338d0d664ca991c49fd648f74564117347ee8b",
+        "guard-e741bc6d45370684876a9e11ec2751cb4bdd53ea552a1b9d2aaf4b997020c8bc",
+        "guard-4a0125856cdfa85a1d30c9d5fde8ca7107b05691d934a6e4edd8e24d3868a6c5"
+      ],
+      "n": 8,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 4,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 153
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "routes2"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-5f5a9f15475779ab86be93a2a6578178f2f30404bcff4a1b670f93cfc1c86acd",
+        "guard-28c91f110dc0149d92ce0e6b7d2a8816427b98c38d0e7cc0bf3fa42b9a8d23c0",
+        "guard-f9bccb84886efe5562c3c13b830f1ce2eca4da584e2876ceecc01b56582023d2",
+        "guard-16f1e3d722d9c9593c36ec463d9570c72c518ad86d5ec51c10e8f4aa46af1c75",
+        "guard-2280fa88342fe3ffbeb0bf3b54e27caaf92fabf48e257c29f168e3103cecccf1",
+        "guard-9567c4725e6280e8b0aabe961ef2e66fb89af856dca0c33efa10d54961b87afc",
+        "guard-c6db45a656fd78ce77649e1faa980dcb4a0259b3aadf4897195b01cd200af79d",
+        "guard-ed46789c7b1226bc2eb63cf63f2df22fe5f12cdc1767fa50539d5d0aaf08375d"
+      ],
+      "n": 8,
+      "firstWins": 1,
+      "secondWins": 0,
+      "unresolved": 7,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 128
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "routes2"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-fffebd409eb34cbbd7a5ef7ff972b97b875280286233b427094d12ea65609c8f",
+        "guard-6713b8919a45ceef64cda0e6e7890e94f1e36274b0c635e32e86463ca1222bd3",
+        "guard-0ac261f3f70ced262fcd4ee72b271c627df2d122add61fe3294c9724f9301fbc",
+        "guard-006dd5b9ef31514a7d9899ba91b3500e9cf7067459bab02f9077c7909e79718f",
+        "guard-9a31ea6c390e608adc39c8ba4eb5f3833ab4f3dfb242d5641822252cba26f5c6",
+        "guard-7661ef7c37f8d81011a52d75ffdbfe3290d7ab656fa166cbd2903b576e8e39dc",
+        "guard-1eaadb86ef377d57c9e274ec2467afba293de386d842eac1f1f17f69acc87c1d",
+        "guard-ae8f42181f224047962af9b25ed8ad53f813b00ad4912e34c08396000ca5bb4f"
+      ],
+      "n": 8,
+      "firstWins": 3,
+      "secondWins": 0,
+      "unresolved": 5,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 117
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "routes2"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-ccf99cd264e0720b31c5bd5ecef9f78da7d92d01c6f59ae963b63c36225b9ec0",
+        "guard-df8d4dfe3cfbac66a1f517616f3d5bde137adb6e4a6f1895627763b452add802",
+        "guard-137ade8bd7df907379b103a045bf921329a87f25f1afb26093d0b4d10adf2b3c",
+        "guard-ffa58a4ef11f409eb71fd9faed08963b9aab1375ea44cde3f1ec578d2e5707fb",
+        "guard-6aee3497a14882c94987356cf559ba663bee33cf182c8b20c4e98ec98709c7b1",
+        "guard-801134e8bb00e5d03db70bc67879a82ef659e7212c59b3d4f774021aab896fc2",
+        "guard-dc28660574724e12e4574e2da122c64cddb8cccdf1fd49a6d6729c7851b39431",
+        "guard-f726d4bb5946dad5f16e37973f9fe33e4f2230739d306b19b5d0c178b468e654"
+      ],
+      "n": 8,
+      "firstWins": 4,
+      "secondWins": 1,
+      "unresolved": 3,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 124
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "routes2"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-c0ffe7aa5ddce51de19a97ec8c8974a8bdd49af220c82a50ea41d6ff3ba551b5",
+        "guard-2df7a93bc199cc509ba1a17a0bc74b2b9ef4da818808301de1b8d15b70e0209f",
+        "guard-367c58703c237a2a4f4c9135b33f3c965fa9153b7a08c1e304ccb25e42485bcb",
+        "guard-a71c9c3c271ce095087ba380576f0e81e31011e11318b6736293aa648b0474d1",
+        "guard-fd17fba37d9ad1420f22e7725ff99b022e0f1c6184b89a292df44b9b1ae5354a",
+        "guard-b1c8d6cfe777a8bd76d4eb4c12f17df3b4cdb2716f7530723d60a9057913f354",
+        "guard-17bcb10034c103215a745b44ff3efc213739235fae13ed0540a30f9c7cc1fb41",
+        "guard-e47449ebc78f4178b6ff02b4f1e2c9041b9fa793a054d85001332fa2bd629ad7"
+      ],
+      "n": 8,
+      "firstWins": 3,
+      "secondWins": 0,
+      "unresolved": 5,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 124
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "route"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-54577a948a32b8c7e8f7778676b270daa891af7ed9cafa937de7a7a02f152931",
+        "guard-b0516edc95bbd81451b2f671979c3fbafa1b9fe8f3a6c6375f0b4a1a73de9e4d",
+        "guard-05536a9583c05a60660046aa7b3a6b074a5dc33851cd00b846688b1869a237c0",
+        "guard-1fc2d072872f2340758f273ed36dc081d31a6401235adafff66983afe78f17a7",
+        "guard-e59d2065cb3874dbd0f72dbbb632c6c23d8cbeb2c8cf05dec603adfcbf3c2e76",
+        "guard-1973c7d30a50442581f136051ea968cdcd4333b91cdcc3406c0c99cd28405082",
+        "guard-a7ed1964197a1734694493d471936c1219d9ad8e79de38730d1be31d84cf7459",
+        "guard-ef48d03862702ec6dabd58ffbcc765986b2060fed1a5108c43840257c0a896ee"
+      ],
+      "n": 8,
+      "firstWins": 5,
+      "secondWins": 0,
+      "unresolved": 3,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 20
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "route"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-192c660cddd3a31cffae80ef79e3180562b270f225a01026d83318265d57065f",
+        "guard-ec3ef00f08bf4e424cab4ad20f86cb0b2cd0e923225ff8383a6f67519216da0b",
+        "guard-4bc68a802b705ddcb080ba809dab0e21018d9be47b6330869d156d285b91e7f5",
+        "guard-b295a190d3c657c7b3325993fdebb1e19daf236835704f858908a981f66a6d2d",
+        "guard-a5f1fd5b7b34e7d15d1c912c66170ca7a2dca59e4079ef58bd0fbacd6591a86e",
+        "guard-c1329ce9f62924ed6e84efffa0d5ececd59444e316dbedb6837ba0b2fa1da693",
+        "guard-173f1ecab5d8c584ecec9e6c5433f6d5120090ee55a488fc482ffc1a09886a4e",
+        "guard-7c2d3b69e94c49b01c6dec4a413f61ddd30c00b224da55672ed721aa7d607642"
+      ],
+      "n": 8,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 4,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 52
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "route"
+        ],
+        0,
+        false,
+        true
+      ],
+      "ids": [
+        "guard-c9913c64676c0f68a51344fd434b76124f1f308e40669681bfc6fd3f0e7040ef",
+        "guard-6cffa01b120baaf1253273a7e7c09faa515376c0c4af06fb42ad88e650ffd605",
+        "guard-0b3e04307698b32e8e74e868d1e0e2e807a4d46a6d7a2df150b21e908364c69d",
+        "guard-e799fa6e0d785850dbe3258541dd4f131b59a74f582277596ae23aca235c7003",
+        "guard-6ba5ffdb75c400f5e3fa419a3aaf20343d620d8136fb6a9fc12692b2274f8399",
+        "guard-f234c6e28389678da1ac0c7f8718716bd4973e3ef6f2c5513601211efcaa5088",
+        "guard-42e0a5275d3f703b2a3a637128fdb3f6075cd9b83ab9ddb2d3a6b0b4e88d9ab8",
+        "guard-2cb74f7cd642249323a6dbe86231858c7635c89108f970d7bd8bf1a4b2d70656"
+      ],
+      "n": 8,
+      "firstWins": 1,
+      "secondWins": 0,
+      "unresolved": 7,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 32
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "route"
+        ],
+        1,
+        false,
+        true
+      ],
+      "ids": [
+        "guard-fc7c51107097cb0f681e2276beee22e03be05f1106734a7fc65665c8ad0123d9",
+        "guard-883f124dacf8edf7d54e0bb99c366437035f6991a03a6e950711da574937601c",
+        "guard-fa31cbac5a51e4ba335f5a53e0173c14f19696b3fe9758275b61f28b84951758",
+        "guard-6842bca08fbf7ff8edfcd3eca25ea777cc6532e140c594d7437981c6914fba0c",
+        "guard-516cda2c88ff1582db08ba802665e1a6abf6f512388eb9715a94687874a1afdf",
+        "guard-7688b54caee612be6b8de0993d1c1bcde8469e79bcfa0fefc7ead150b9874116",
+        "guard-74754758af0246ce59c922b1902b01d356086c2d16739412d2f0c7bec4c8afd7",
+        "guard-78aa111b521dcb3f47f3ef83d240653cc5b7a81d441b85031fa3157e2906e579"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 8,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 35
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "route"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-fd38c6438276f29b7b5a7b926791bc99d7baaa6f3a530392d7327decc8e8dd19",
+        "guard-ae89e9990a55b90ef73708450849679dd184265819a9557a2622dd5e55e38bc6",
+        "guard-b356600a752c45e2a7fd03ea2a66817f55251271ded5f4f6d5d252b5e4309531",
+        "guard-b73834bf0943570c2af9ed366f187f63d03ff6aadb6ac539d761b5674b9fe637",
+        "guard-6cb89466783605af1d99e6944b79c5ca66439d82d0a39311227fcc302bf845a6",
+        "guard-1487c8d46266df823773da8e8963812e8ce9dd4a17848d98977c625f65f5647e",
+        "guard-6590e7970fc8c8810cab09edbbf782023ac4f3694d91b7bcb7de76f4909dfa54",
+        "guard-33a407ac5ec0da878348aca0b3102ed4ff0920fed625d0e12108f31b8f1228a5"
+      ],
+      "n": 8,
+      "firstWins": 1,
+      "secondWins": 0,
+      "unresolved": 7,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 28
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "route"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-cbc8af1d1d5ac716af60cedeecf2d0c38866b58167064f7821c19071b1b89b44",
+        "guard-ec1b08abc2601bea75deee62d880299e114e6613e262e7c1114938742da53477",
+        "guard-57cfc8cff902ed362f8ff0dd12e997338ad3a328d94587c702f999a079af2209",
+        "guard-74c82379989b5663ed154d0279e712057b5f94a8ef4b2ab6671734ccc8f2afc5",
+        "guard-1a050ccc597482be5e9227e85b772e15994f612bd421ba2691bcc601029d687a",
+        "guard-4f39e3e8e91d13b5db42ddf7dcca8057d00a5b41fd55d0f59989268d8358dabe",
+        "guard-cc5739ba471f32ec961429f647a2365800bacc911e45bd78610f5087a2a5fe9b",
+        "guard-a4872a35c779f95dd9ae1923443af4984062ceb7f3cad6d78fad4aac986c5bda"
+      ],
+      "n": 8,
+      "firstWins": 2,
+      "secondWins": 0,
+      "unresolved": 6,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 32
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "route"
+        ],
+        0,
+        true,
+        true
+      ],
+      "ids": [
+        "guard-38952d2c76cebf2e295c4fc43943fe58da219c318f48086bbe6a91cadc634dc5",
+        "guard-27d836514ccd4960a32aa113d7167c3b0007da620f2cc93b3c4d36f53d99fd0c",
+        "guard-bb199e725e301d572e31b87f0a6c603cf991a1c53948743a727c2cb394823aac",
+        "guard-3816b9c415adc3661cb35342bca52aa8f13e2d1801019ce4d988d35cae262b46",
+        "guard-05717cf66cf9dc17f7dfdc0bcee1345dda03c3d9939f2ed3a7a2b7defda4e1a5",
+        "guard-f7d0c5f2962ee544710f54d24bc56e8b8babdb8ba89e24f63251eca99d56652f",
+        "guard-2eafee841f0ffc66b382101425c77868def1622085a3575e903d7a49decb348e",
+        "guard-b0d31ddc40d9dedd90e695f9060e51dd5a16b1500219da011ead550b767e998b"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 8,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 30
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "route"
+        ],
+        1,
+        true,
+        true
+      ],
+      "ids": [
+        "guard-70016b14ec9622060f72aa64ec3734b217ed597f37f3d547520f2875abf9523a",
+        "guard-849342fae494234c62d5e456adee032284d69a9c2beb55d9ff1af849d0af05d4",
+        "guard-2f2051c68f0a23b184327e82fe37f11027b5fec738fcad4d559fe5c830493e6c",
+        "guard-16284cd3c2750d1d6c04dae194828c0211aba38eadf01eced52ee7cc2f7f0f9a",
+        "guard-5dad00af373b493417e20597b218b9d3449d2dae52aa528fadcd1b71fba8fd4f",
+        "guard-ce0df99a426b3a167c89760603c78f7760866db47400f844ba36dd2216377e2e",
+        "guard-51d6dfa4d6cf709d643d9358cbb9d6a2c466f9c06155dfeaae0c742390214e95",
+        "guard-bb836c806d3ab6caf68abe7fda8470d197a5dc5089f6e7b9784c098ef9fbed1a"
+      ],
+      "n": 8,
+      "firstWins": 5,
+      "secondWins": 0,
+      "unresolved": 3,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 19
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "route"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-0d3413c04ef74267197b3be1151186578341de4e181872ff0f033544f9db4d2b",
+        "guard-f530b8bc6f90a7e1b9e92b4bc36f1e7ba1ea2c6b65a20d78d9514953bfdcb222",
+        "guard-a977c11cb5e2c9ced1a549dedbedf881ff84b44ce52ab34edecf5e6e13948e7f",
+        "guard-2fd8a656c8a643a162e55ecea7c2c630766b8928019c1d0fa5e7a425477d21f3",
+        "guard-047bf91e858acf1979d43c67c7187c0324d7dd3325497e34299d044406601768",
+        "guard-879eb83b541a34ca2518e00fe31069e5f8b58adc6eecf622ddcac08971ac84de",
+        "guard-d6ac1d8577d9af0002753401775c8dcf3b4116222b51e4efcc346771a46ae32a",
+        "guard-1c9019389a488580bd9ea9cddb87decda4768c35f18e38859f86d2d2b266ddf3"
+      ],
+      "n": 8,
+      "firstWins": 3,
+      "secondWins": 0,
+      "unresolved": 5,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 13
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "route"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-6f3b32f5e13ca0a9d6a2525e4dfe7140825865d786dc1df28aac87c04463391b",
+        "guard-0ebce5d518eba65ec2dac3e83633d9267e4ddf0c24fcc62551a5cdb85a6691df",
+        "guard-f56aed9e87869b9d514cdaf736d50ff5a660627193b362e9601d5fbfebd6f4ee",
+        "guard-bd8d835e3a89e76f2adfb05693922b5f7022af399d36382eba66819dbaf3cfa1",
+        "guard-868a52143eea19a2c11f7c0a41256bf00b2eed114b37abb21262fe700df28e30",
+        "guard-62338714987eea62c84be2e824aa71f3625d9329414fd1bc7e696ef4dc833dee",
+        "guard-dc94d45a35b5d8714411d05ae4828ac0bab29b15ff4d95ed367839dc67316f35",
+        "guard-0ef0241a41a8faf856f06cb77d128bec1133a316aea1c462b6b8c5e9410aef3d"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 8,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 16
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "route"
+        ],
+        0,
+        false,
+        true
+      ],
+      "ids": [
+        "guard-a188ca5c5e3bb5aac8786f5c43a0bf2cd522155df0f9c0b4ffec1d0ccf15c8b9",
+        "guard-2a3b18a05e2a5ec74298c37b512caebced1bd16020cfd10d16881a334d09b7aa",
+        "guard-1722711587e663cb338be66ceaf8ffc06e1dc04c59fe3dc1a1074740764e771b",
+        "guard-918441002ab88a093bc08bb9a68f1163d5a3126228b4ee20a666ff564a2ff620",
+        "guard-81bd743c884cc18198ff365b763e965d217301679f606c0eb6724e73b380676d",
+        "guard-3b65dcfb7aae6e2bce611c8b137d05993833800a8a801c5b32e3e3d35cda7ea2",
+        "guard-7658180bcab92bc1b9853fec98116b05cce69328b8c75c6392946fb2624e3ce8",
+        "guard-a8f949f2696db1ce5744c7f819aa79d21ba3dd0444e21a44701c7394e71dc386"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 8,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 22
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "route"
+        ],
+        1,
+        false,
+        true
+      ],
+      "ids": [
+        "guard-7d181a419e40bef204c6f876008efc967f34e43bf3cef9f0cd8ac6e07cca59ef",
+        "guard-fa59e312cce7a8274d89718d3d3c0c723a647f3660dbc75d4171534dd211c82f",
+        "guard-24f3aae6d698e1dd7b41156a3f5e41710e56897c889f5a815e8882677ed745e9",
+        "guard-6d200be4481626401a0f0ea20610772a1eaea0d7854f63241ac945a3204d3468",
+        "guard-970431dea037a489093dec7783faa34ba664282267bcc073ae6afa710c7fc8e5",
+        "guard-4f290b6cc5f0dce643685e664d41f78c5b216bc8dbe55dd7cf58654ec74b7bd8",
+        "guard-3802601b325693fa81e9ae11f66f0632c2bb4bb32299e92eedebdaecb74c4511",
+        "guard-5e9ed048a266936f10b7a0b8de2cf30f7800d1da0a26ab06995e4556c4a037c9"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 8,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 25
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "route"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-a113ba2d4735d3e91943780fc150c9902bad8ab2fbfff3258b65cadc1f022a16",
+        "guard-ab9132a212c42ab468d3d766e93fe332a6f8c5436c535518f3303d1511f262ae",
+        "guard-d1508ae97b12a4c96566a426db3f151a4f7951c1918bfa0b6c346281167255e1",
+        "guard-bb1cd5924dbc754a4f893b79ce9c446012f9ecdd02a8c4a967fbacc7a00f8bd4",
+        "guard-ad2977b11e7f3f8ffde80e86447e5c2f7f8cf423f6677b746e18ad4f3d2b1aa6",
+        "guard-82077438823dcc938dfe6a08cafe447c58ee78989e85a1897c589110d0876085",
+        "guard-b3d0b515b79d486ae55d7f20d68de3af9bd2b467fdb69fe172d9fbcb2239d790",
+        "guard-2d830079589f4a473fa9ff1b096763b1969f5a1f61a93d607d00aec1bb6da4a9"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 8,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 22
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "route"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-37e5ab8257be71d49fd52649ac01c2cffc12f16442777ef0798010bc063e075c",
+        "guard-7b1744f09bd441bcc889d6d5690495354a01d1121d7575b4c7b466c5b2cae3f4",
+        "guard-a0e128b121afe010cce556849525a69473a80c2b32596e64355835a3ac87c337",
+        "guard-6caf425c35a26ad07c531f778bf723c9aff5703dbede7b3a38019000ec99e923",
+        "guard-3cdb29400a04a6b4e379e9b80bc6917333a0797f473478aeeb47a68f1470a2ba",
+        "guard-07e21d653e643c526eeae3560a82e9b49d18a9cd0a10eb5941845d48669acc7e",
+        "guard-8ca48a5fc33b790866c712e9606a847f731eab64d8f08c042b0583c37ce11c2c",
+        "guard-32f9d49f6aa16ed968be3260a5ff1f4b268ffa0fa4d3690353bdd74dd8e85f9c"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 8,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 23
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "route"
+        ],
+        0,
+        true,
+        true
+      ],
+      "ids": [
+        "guard-351712a73aed44b9828d0430461341cd75b59185061e83b760200710ef64c069",
+        "guard-ed09dda01ece65e175f24d479dc22206204c32673abcc51ed8d1a160a0439c93",
+        "guard-3cdbd675ec71ccb792ffd2730b61c3f0a9ff7dc0a76548e66f1ccff64869cfd9",
+        "guard-2e6efe50acfe94b596b7384be7e74781750b0cf40fb3f398f95bbd888eeaef20",
+        "guard-f4bad82511237416a7643fac8c38b98e64da96b25251d799504d7d61f50b97f2",
+        "guard-58bc42a7c956c10c0f56c0c017a7d4c212d5e834263cf605b1ac2b61bb5922a1",
+        "guard-b735e295e01cbb68a9788b55464eec119bc7abf4b4dd55c006edcf8bc5f30d0c",
+        "guard-d305b9224175ce290214120d958872e1f609f1ea1f00d60cd3d6f27ce477d576"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 8,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 17
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "routes2",
+          "route"
+        ],
+        1,
+        true,
+        true
+      ],
+      "ids": [
+        "guard-1cd15158c59087fb8c572e4d5853f8920eb964be7d9025704a65d5b454afd3e0",
+        "guard-cc82a2ec22ff591a6c72bee3b20103169b480cc4c479025824b8321f37e2c548",
+        "guard-c861d160d9af6fa090d1a0c1b3d395e1d7daaccd4206909cc812b39d0a4b5a29",
+        "guard-adb7dcf47347c18ab39ec7014bc635010c62e0aa9d1d361b9206c39b4debfaf6",
+        "guard-79cb86a221c01ee5daa573f3e4b7bb89a12ae2c5b686337eaf177ea6ba1ca4b3",
+        "guard-e36bb8f60466682c07e6fb8ff571ba1ae09fc099782f0be4ec1c2a95872b2346",
+        "guard-e3be37b947e87642477ecd0026069d54e454eeb8ec5eaba36d2487f68a131823",
+        "guard-40a90d15db6461e776f7c40f6ad00a163b952a1b76d34c48aaecc7098e2917f0"
+      ],
+      "n": 8,
+      "firstWins": 3,
+      "secondWins": 0,
+      "unresolved": 5,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 21
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "routes2"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-120e5ea1defaa388021fe6039f6e6770056cd90a812d286b2b1f5515200e928d",
+        "guard-e0de10ab2fd2f2674b124f5ee0e31411cd4b1d8d38a9a35daa4297ced676b1e1",
+        "guard-cc2097525057653bdbbce3ea507c817061a0ae0e49cc64f8097abd0b7b96807e",
+        "guard-0efb1149e8bce7cf398901a0f31fd689f5bd7c9206b8283b609b9eb74a3629fd",
+        "guard-9b775f6d21b09e8f9b4a59b61b299c2cfba14b4667293ecc1562a40fcb9b8220",
+        "guard-d4d066cbfde0a862b792fec9cc8ae0a23bf42ff90470cbfe0d7daccdae777d90",
+        "guard-54507f9f3a999acdc9a721d7bf7dbc6441a05e793b935829f09d1c7b81a99d1c",
+        "guard-f0261c6e044da1bf89351d7bbb9279b48dbb1d7721226fc6fbf2f09249e541b1"
+      ],
+      "n": 8,
+      "firstWins": 2,
+      "secondWins": 0,
+      "unresolved": 6,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 20
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "routes2"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-be37a660712715134fdc4b462067add7a95082b7310cb50f3d648c21e71e7c62",
+        "guard-dad375d8b0f1f7636385b4e555d3c946ef281548e77d5ec2b5f7c0c76e406863",
+        "guard-8c963979389ce504c4ee543912f2ba87c1446dbbd0b5c592b49464cd6ba9a19d",
+        "guard-8c4c3b228f01bbe0deb7bd8eb64994359734d5e17a45883100e044892103d4cc",
+        "guard-fc5793d1eff2924f9c7336a6a8a0ebe1889adec283f4124ca3e1b6998a78248b",
+        "guard-1b31da2d7c7a74ff8c7b959223ea7498bdf783a22eb9675b24ba72dca665286a",
+        "guard-5d192a19fdb36478836e427925808f4b7e1b280c0e7f6e96a9002e9ed891ca74",
+        "guard-13e3cb5e7d46cba67231119223bf7c6a0d497d633e24e2166b3db3998969b69d"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 8,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 20
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "routes2"
+        ],
+        0,
+        false,
+        true
+      ],
+      "ids": [
+        "guard-045633594455d30b02b0bbefb229b2aa389d69a3bd7c1ae945298d86d9ef70bf",
+        "guard-461875f7a604f9375d24373cfecf39f554b3b322859a4e46c8384f6261c5b009",
+        "guard-fe56dc2fe3f386d26b3df4063b1f8f1fc190933d2cd0c6dc5ed9903e8a7e17bd",
+        "guard-fe2f781d5e33fe624a4b8333877c745b1e15d6dc3b417f67c827f039a59c98d4",
+        "guard-c5578a1b63fc5561c0e56b4f4eb4ca0ad86b266fe29e8ad04bb73cd28de4087e",
+        "guard-026f18dca56f38ae5af2234aae9d47e661281741d59e98c4d326a2070b14ab2d",
+        "guard-0c964b0dde6f05f3486fed3e6993ee28c601d9bed1218d7970bd376bc75b28f0",
+        "guard-b60d1e26ea34cce984904d30fd2bee84040425d38fa41bcd921085ae36081efc"
+      ],
+      "n": 8,
+      "firstWins": 3,
+      "secondWins": 0,
+      "unresolved": 5,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 20
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "routes2"
+        ],
+        1,
+        false,
+        true
+      ],
+      "ids": [
+        "guard-c8d603cc87fb52906f256735afffc1a70d29223d416598451b68bee0fba11eb9",
+        "guard-7353c5c2ebd0ff56fd95b6c4bbbcf1e8b29c81a1fa515b133fa9502e18381266",
+        "guard-5442ab5cc9e143b7e73e0e50130d10bbfc2ba13e266df9abad955e504e4daa95",
+        "guard-368a224b4a6c2a4d512c75e778ac07dcac62bc6f849a71dfbfc15803d8e4b7dc",
+        "guard-90a27e2d517a6ec323890e624c6130fae93e8eff2ac8c1a7697453a2c977a921",
+        "guard-a827cd9ca83119d64c93d4d30f222c6d08460936655ce7899a99ec031da6c841",
+        "guard-6d5aa1189cd9a06cbf740e85fc77461f4fb30eba85dad6c42f35747431428fb2",
+        "guard-6975e51ae8f3b0a42fc2c530370a1fbb1c02db25b20c18efba407708b391ece8"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 8,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 22
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "routes2"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-cff9893d5da39d450a10d076f37cfcc99dbc494453733390ff2eb57bb779f6ae",
+        "guard-9ae87dedbb74c230b23328c76fc269a9abf8d96307a4f45eb51d5ee9b4b55ed0",
+        "guard-74f76c7aaef0bf8ed2386d61cf6a200c1fe01223109d9384393b8d294baa8abf",
+        "guard-cff8a2dd8c7081e4084930d815c58b3d06ba5185fc044b5fb4e4b03bd8f5fc80",
+        "guard-e24f40e3dce6a0722b995ea0ed2cbf4d24883d993971bb8a69f6209644699801",
+        "guard-fde44484eb7ed55c4100664c761a6d8afb986332b03aaf10570fcda747c7fa7e",
+        "guard-3ae005e3a715e87cdf4a2e2d3238413abad6ad024c18373d6ac4d8f0e0cc73f6",
+        "guard-11d7cb7073946c447f26525ae37e095e2bd27aee6b0561b4d1b0cae62854509b"
+      ],
+      "n": 8,
+      "firstWins": 1,
+      "secondWins": 0,
+      "unresolved": 7,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 20
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "routes2"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-a602b5adbb48751291e0a87e14e18dab67b30f6bed8e608ae1e6f66386a64bb0",
+        "guard-e33f6a18e7f8d007cf27787462b0f90e7eef706b49d1a590df15fa0888032113",
+        "guard-6584ed0bd04bbfa5700cbf51c76d8c256b4cc60ee2f4d378954195cf4bbcf87f",
+        "guard-3d3432e6a303dea35a72f834d16e2e20f342d7eb9252a8a9f77d293e5d441db2",
+        "guard-e3d930a877caa904aa6835a0e98243fb391a7ba6135c403de11602fc1ddd2fa2",
+        "guard-adb94c1fb1fa14cc655b9dc4a4c285c12fff9905f711d0a3d5c20c55706cf01c",
+        "guard-b0b47e59ee8a1d9c740fcff9a8a2d8c46dd6ebac372e7f0b7a4b85afd6d01824",
+        "guard-df83c95d597799d87342e08578bc7c36e0d3c147dca2247ceaf70bced7bb2a4d"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "unresolved": 8,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 20
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "routes2"
+        ],
+        0,
+        true,
+        true
+      ],
+      "ids": [
+        "guard-f359bc88c46fce6e8cf5b7b9a3522e3a5b20c8d1ba112478ba175ef166760d33",
+        "guard-b8de5299bcbedb40aabf94bc428e23ff12df815d4bf9679e1d0a8eb7ad255e1b",
+        "guard-d02c199e5f7f34a6dec98a62cd7007a3c04295266df52c8ea3f6d19cbc2dd530",
+        "guard-54ebdcb467cff01a39f417cb1f41b3860654096a3c622e7f1c1e7cf7c374f783",
+        "guard-a62b64a8ac90f716ff13d3c1accca3b5a8c97ea812adad687164a9eb8dc960f2",
+        "guard-953df829e29940e850fc9a3dc77c88531a3c173840d57ff46c7aedc90d4dc1d5",
+        "guard-07811f0eea37226659a6422db7811f84ba9e956cb12b8ae656564dc339757539",
+        "guard-87584871332d40212c52420027ba4e0738979d154c35fd2cdf83ccafebabd4b7"
+      ],
+      "n": 8,
+      "firstWins": 2,
+      "secondWins": 0,
+      "unresolved": 6,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 3,
+      "maxQuiet": 18
+    },
+    {
+      "mode": "B",
+      "condition": [
+        "guard-new-B",
+        [
+          "retain",
+          "routes2"
+        ],
+        1,
+        true,
+        true
+      ],
+      "ids": [
+        "guard-57e52a2959bb2954e3fde716ef72323ae108f66591daf4da35b2cbd50536ccef",
+        "guard-9ec74d2711330f6910f81c5cb7fe60edbed7cc39db26616fdeb14d69369d054d",
+        "guard-e294342861920e12085e24341d2c16ec0683085d5735e3656b3cc83741c16589",
+        "guard-92a664c86dc512799bf3d37b488d9afac24302aa297570a959e92ee0518c564e",
+        "guard-a78c71025436c28a9ef686b6cd42300301a0842fd6c7a00e9400c1f9fab1089d",
+        "guard-e7b1eb78246ad7005987d5ad768c4bf2052ee0e6bdc866333be8d59fa989c797",
+        "guard-90dd3f283b483b4705f3aaa1b493489eaf08ee3489ff20fb355596f64446dd46",
+        "guard-b8fe92c7f7802011432c09dbea7fef547b4fc3623779546a09443e6fa0dd9dd8"
+      ],
+      "n": 8,
+      "firstWins": 2,
+      "secondWins": 0,
+      "unresolved": 6,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 16
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "search",
+          "search"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "s-1574c94762d136647e56410fc632faf6e3575e00f3ba44596b6ce6f8e38ebea2",
+        "s-14c69a03d5c78606835d45b51544ad96cdb18743af789eb75faca64af1c140bf",
+        "s-920a0e477fcd1311f86c5b046b749ac8c4c765be6088b876d17d186b43eea462",
+        "s-567d6f6d315a5fca66322e5ffb0e55aa1e136ec77ac38349edb2a4ecd2de3ce6"
+      ],
+      "n": 4,
+      "firstWins": 2,
+      "secondWins": 2,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 194
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "search",
+          "search"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "s-d315f832c2f5e09f623db1c07716aecd226defb3db7dfb2043af9efe9102152b",
+        "s-2e351934366e8859103c3d1b606a35c8e166d9ed72eedbe3c8ae75a544d51c9f",
+        "s-040f441cf84a60ca61095024c750f825d2f9a1a5249a76c8575328979bfcefa9",
+        "s-b3e6e536581a8e6abf9329abf05370000c03db8d51de204512ce67126b750bcb"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 82
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "search",
+          "search"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "s-485ea0c5a1c243ee1cbf869005336e552567f9e9c799ad2acc865492d733f7c4",
+        "s-4d82e6d0a43a7f8bbfc40efbe22392434320e4942d52581206b820f8ecb5b6c7",
+        "s-a693590563d6eee97739cbbfca4eb4a7e3aa61a81b2f38664088c7dc8c6af029",
+        "s-13918452db25570947d40a60fb41fbb433832a7cd024f5e5800b1729f95e1228"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 34
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "search",
+          "search"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "s-323e455dc1b3788a3738aeda5e403b5d930cd6e3392f357da99bea4810db20bb",
+        "s-69834e791bd648a44fb1d42fcb5d4fcdafff5ecc67ed2b6f9e26285a45af0bd2",
+        "s-0f00e34b9919760a7cb00e520fb2a884639834c56517a707fd9fd2500286836f",
+        "s-6e032f97488f24691818d2958eb1c5b93ec057b6cbc1bad49db5f32a029e4cee"
+      ],
+      "n": 4,
+      "firstWins": 1,
+      "secondWins": 3,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 77
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "s-a0a9f1af6fd9da7d39254cceafd45e8cd057a3868a8da3ee6ee28364be3da00a",
+        "s-a6dd044f35bbdf27ddfd9c18faab85398385fb071e40180e781b9707520acec6",
+        "s-5a6c4865ea65774152bf65e76aeb9aa6b6a4b44621744492d70a41aa2f88ed9c",
+        "s-e69599ddc3df4f2c6f94edf4f4519da6f5933e9d1017885750f47cf8f3057173"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 3
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "s-fa5a8d392ed331f1b84df9d22df4b88cba5529b12c3646d43de1ee9afe00d128",
+        "s-da4921b5e6f9d9ca90641224ec9ce27fd7692eaaac853af4e65f92057539f2b5",
+        "s-df0295487f3be07b3c9f0c0d545dae9c35ae7c6715ee7b0002774f45dc0459b3",
+        "s-4ae4b9a04a179531fdedbd959f98ff582e3324ddbf266387624b65af8cbaed66"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 12
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        0,
+        false,
+        true
+      ],
+      "ids": [
+        "s-73250a0b050a13416999ca2fd84e708c65f87f11d673c3834d12265d316bfc44",
+        "s-1b70f35a702905f8a35e9692061b8bd047872e897e7024e31448fc88690fa8de",
+        "s-344b7ac7d0b8f70f58f97cc0e803e55ed40f7fa3cab797992d6bb7dff153a877",
+        "s-cc13bb715152c6f565c9454d4b45b82d2c4082788733c635f04eb433b6c1cced"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 5
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        1,
+        false,
+        true
+      ],
+      "ids": [
+        "s-4a020a46ef4545c2a4d792d501beb80736723736833a2c9cdc0bcc43a4f5d928",
+        "s-7efbdee3ca245e34fd24d673a30b6708e0f662060e82f6610acfecb434751ec8",
+        "s-e9cbbcfe5001319bac5674f5b0b9c550144a593864ff79a51cf85a3ee18e6ed9",
+        "s-8ad4f292041b90b9ca0eccd29f3b9ea34edf3a18f26662f88373807c168b5202"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 5
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "s-36c18d73310aaa97db417defb5ba4cba11d6cdd6242eebc3bfdcca716863b176",
+        "s-31c862fa6882ff873ca01c376383fea5a932603640b3c37d2b39d94e61d642c0",
+        "s-1fdff92202c9ebb6d06ee7ee41a5553a784bac93a4a7df586c635af4df2be5da",
+        "s-f447f1467bc94f42cc191b579052464880fab659e48660ca4346d2d5445118e2"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 5
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "s-488abf605c6d158b24d463aa2085f7cc9b246d071318d52c3542fc65702d5ec0",
+        "s-f83316fa702e15ff3496769a4c7aac2fd1c2e6ceee0ec5a315efa1b42d90d21d",
+        "s-c580e2e6b806c2ae75891cdb23900c429865fe3d9d3fe899d30c401db3cc5203",
+        "s-65007d68c65df88ad0ff9ca35f9861ac0dfd6a2fe27088b964e4fd1affca7557"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 5
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        0,
+        true,
+        true
+      ],
+      "ids": [
+        "s-20786dd61d8c1be39483094be52ffa2aef74bea7430a2d79192015618ed19140",
+        "s-84278addbe630ba73c763cfb4937300c53049af7869b0209543762da9286a0d2",
+        "s-284bffdadd285704e38d18a52f6c34ca275a55d7e45de9e37d45f4befe8a49aa",
+        "s-c665e94baf06a28c874f25bddd9bd40cd697086faea8710f77eca14bba708bb4"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 6
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "star",
+          "route"
+        ],
+        1,
+        true,
+        true
+      ],
+      "ids": [
+        "s-a64d315f059bf1f12d64502e33bd27085e8e5ea865ea4eab940d639b05427bd9",
+        "s-fad75663337be37ce4cbbddbda63baf81c5dcc2a26ea927119fc46c3fe405ac8",
+        "s-cc84719c350c1a2dcf70862512255afd6e4a4ed080b4867faa75291ebf34dd99",
+        "s-3363a082b6d09f321baff6d2528b6b1ba821d3319e9128b5a731e9d4bb673147"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 3
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "s-fc1979c80d36c7e5d4c8dadcc8a512ffbdb9580031dd7660d29d6812d6e91132",
+        "s-ca9d04a8dcc48a788ad62a4b55eb67ee4b54004aed7f7a6427f73325b4b9d950",
+        "s-3cb9d262dcc7477f29868bf8356a9fa51916d99cfd5c72e36c60417ae310b3e9",
+        "s-61982bdf60cb7b386ad73e4b9b7afee89441cf4c8b0e9d3de8e5ad0768d2e18d"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 33
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "s-d3e4df21e96b90764c982c18dd1a0efe19f62d79f86b9de879a703f2db293463",
+        "s-eb2fe6b9bb77e467716d06655bf7f53f2c2b783ed0be56d004a8f53fe3c02db3",
+        "s-1ceee5bea655c5eea5a6bb9ebf1618508230b650c83eea588cff02f85ec8dce1",
+        "s-146e390de81bfc2a0fdbfe241fc9b4133e78ee50df229c26ef3b87e0ab53c1f6"
+      ],
+      "n": 4,
+      "firstWins": 2,
+      "secondWins": 2,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 19
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        false,
+        true
+      ],
+      "ids": [
+        "s-377b554c95024cb18292a385ecfed70902a0dc2327593dd076428f1cbef0b901",
+        "s-1f189f9119864efb08cb2d33086155b96e7d2356597789e1cb52657ca437aae9",
+        "s-354e9273c97585049368dd9192d024c4b2132c0da52de9f01ad88d40a2a4ff96",
+        "s-fdc41e277f9bffe743d1076d3b80f183ad2c531fad0d60e426098a452e96ef16"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 30
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        false,
+        true
+      ],
+      "ids": [
+        "s-c67382a5f9a752136fbdbb5622b627638f2a8020cccef2cb8a46b0b14a285f28",
+        "s-f717b3601d951a16050c82c1278e6a34a2fcbf5d95bc8bbe278ffad1db193c0a",
+        "s-2c8d6f7384fe2e35831cbf3ebad22c2bc4781a913233fb78acc42006f893c9e1",
+        "s-13fbf2eaab4adb334338bb66261bc55694f66611ac5dd663a45935b80f7f4e91"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 9
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "s-14c09d106e6216a4f71ee11912e6522af2c82fcf031f9eeb2ab32d19b7a057a7",
+        "s-cd024011b1897497632ce14f12c80b70ad28fa192b0b85cac8cbe414ef7bbf05",
+        "s-9e21620bf82e7ca496ead419f9d9ca7f52aa45e8f0ad5e0ea21094b7fb1627d4",
+        "s-5dc209014fac32bc6101f4aa46d33295f9159ccc9215ddb5dd31dacbb67bfde0"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 11
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "s-e7ea28bb96abaa28e5b5111fd8896b7d6a7c16576a2da61da0a03920def15743",
+        "s-4bdd758c6734bc0b7e5395cfa6e821ec19e9b5c283299c9934a6b4dd5b5d0bd3",
+        "s-e109278fdb1fb9296d93730863c027d82f1b2baaa9f34f7fab23cdc112c3bcf2",
+        "s-0d7a771b23d61d2bd9f47ed93cec503bf96b520ef3f83f998893637306101f95"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 11
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        true,
+        true
+      ],
+      "ids": [
+        "s-7eedaedcdcb1feddc6a473c6ee0a5449f9834d3212b8c2b5a0d96fc582c18032",
+        "s-d7da361e1179bfa663653cd4f7dd06c86e51273f975a696b34369c0e0b112721",
+        "s-a264c51af0aceb722cf58c6b9918a2b40d890cd0c239f7165ee7dc832bf8ba26",
+        "s-45b8b686a529e20e59cdcb3574c9e72f417445ef8b48d57e04067ee60fa72aeb"
+      ],
+      "n": 4,
+      "firstWins": 2,
+      "secondWins": 2,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 33
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-audit-fixed",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        true,
+        true
+      ],
+      "ids": [
+        "s-eb979b84c18aecf3b70b7392f46352eccf73e174a73c719b2800175164595cd9",
+        "s-62212240e5de5942f95a605d0b9f966fc8edf79b2f04ccf33b590912d61f3685",
+        "s-1aea794af84af84ede68cebbb9c85dc7db2308f57135de9b556ce275b178d5a9",
+        "s-de660c1c9f5fc9da86564b3a5b87e64fee2b4b7e435e8b88eb0e4ed0b03ec801"
+      ],
+      "n": 4,
+      "firstWins": 2,
+      "secondWins": 2,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 15
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "search",
+          "search"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "s-cb8aa54be3533e15ce381d9cd0e155847961ca430df7b9d9a30446a35d732627",
+        "s-396d03e599d3b6fc7e0f9edd4f8e14875f019b995a885ddf2062f6316a1db817",
+        "s-ad8742d84d6337b73a0b9ad6bfd700bf8db88d8a021187e8d4376e20efbd8a89",
+        "s-2e86fad62f6e616f9bcb91a6408a661855876645b26525eff6c139bdb258b560"
+      ],
+      "n": 4,
+      "firstWins": 1,
+      "secondWins": 3,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 90
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "search",
+          "search"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "s-3ef71f5eaf7697bbd90a86f4a6b540b188239b9a75d8f882f7a7feb690085aa9",
+        "s-7e84a91cfe4c2b81b42349dd0c1279fd0a9310792cf7e2e3163d34a403abc269",
+        "s-d63bd1b37f2a3f20d9312065a69b2c08db6d35ec005f63352c5b84ecd9cca03f",
+        "s-4215661bed983acd3ab63e950374e8bcff8dd4cf48d1e250f69913bfe17e741e"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 308
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "search",
+          "search"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "s-42854a8ed0e3498e85c35c1c19d5f6f8f101ee5e0c34312686b915ee1cf2bfd5",
+        "s-fa8c5a1352baac23c5c7ba42c4a4f257ee3769529d1e0701054091dc628360e4",
+        "s-b1eb0ea7c846ff50e26e363bd5f16f7ecc5e72a2348b9e4abbee00e7e4f0daaa",
+        "s-63f0ed373614e9d0b02193d2076564b52a78c67c9525cbedffa095652b5a976a"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 62
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "search",
+          "search"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "s-8e85bcf828acd6004a4bef4ce9eac3aaf1e38cfca4ab61ed4633cd9ffdb652c6",
+        "s-50db2cea4b3502bce1519b345ee31b769848b8eac9ae500c1e11570215571764",
+        "s-1fb54d2955cabf3a44a87a229fbfbc369d2f536bda5f022dfd776c26cd92eb0c",
+        "s-040a72d8459c3f9793c5a3110a3ec1254d135049f1727cfc4a59186f75080c49"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 312
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "s-d2548be65062e318cd2c80c5edfa8d7dfc3951bdbafff9e691a0ebe63e2abd05",
+        "s-9c8aaa6e6d0e6256313bc38c21e3119b4c33ca61f8596fd65dda63c83e444afc",
+        "s-ea9c6e2d5881511280fc12037ff79218ea319b5f2dd8f1a69eb6f8e43fd1f07a",
+        "s-f69610df7b28b4264df10869ca9ba70cc140d8d8737e7f947f67cd4510506984"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 29
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "s-fababd143721a36914902b0e95803cde3b850f63a320883a33af21338d923713",
+        "s-232acd23fcc873ee1bc239277a2a638c7e78d58995216c93dd39d0b92554f9ba",
+        "s-21c5e464f5728e973601e4ebb4cae5445055475475c26600de60a0d0d3ad37eb",
+        "s-c181baf9a900be4517b7674d45b0e93bc23ce2030ef9ca3eeaed10aecf5616d9"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 69
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        false,
+        true
+      ],
+      "ids": [
+        "s-b0960f414de304100d9d4cbd643cefd9272497ab2e10b5b339e9dae28bc1a843",
+        "s-7793318fbf1f809ad9849d3c23c0e1666d2823bcec724301a5be64f576af5eb8",
+        "s-aff15eaa100c5d86fe7884afc54fdfcf71c5c39dc64429206ec702b308b8a6cd",
+        "s-3cae55047bd06e342573fca36ebd224d50a9ade6312cc6e702b930d7e3b5e7ec"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 92
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        false,
+        true
+      ],
+      "ids": [
+        "s-de6cc2eeb9e2116d72d565598687820f71b77eb12bc960a586c733326e17e956",
+        "s-4d29edc1e39193837f5263fceb66289a329ffa4f5d63aa7c13b6009e7d7230c5",
+        "s-98d00c79f854d429f5b019b8bab641ad82d1ebb1341951384c2ddcafc0326cf5",
+        "s-0e8f914fbfe28bc1f66acd21341a9613f4cb238cd80150fe7e2f4eac06a35506"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 14
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "s-edabeae33850f58ea1859d41829922184abc8708722ded77e3dca514f6fac2ae",
+        "s-e8a6fb9415566e61acf580aa2cad781577de9e63640168d51f07a7159f8d3d9b",
+        "s-f5b52075668ce2878c41fec2faa183d2bd185f864f80bb90d79e1a78d320d409",
+        "s-8863a601fb9c836cd21d6d96ec72d7c41d4c0d77e0db97d511e9ba660fce1ee5"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 19
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "s-17d8e5c43ee3303f6c29103a8cd39c8bf8f8348e318d45804afe26bd2fd0cf0d",
+        "s-75b9eb2725b7e691b29910156a019eb0917e7f40764bd1829bfb68b72603f282",
+        "s-48c79117228f877c1a2a15c4f5b07fd14d662e259709c34065a6dd213e87c0b8",
+        "s-b5f68dcf7fb2031dfa51310ba02812d9ce653756e08827ef3978b052729f5299"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 25
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        true,
+        true
+      ],
+      "ids": [
+        "s-6ef7a782d52d6793a8b402b8a01a7a1360e54890f194c529089abaadde82ef75",
+        "s-acdcf05e4e442da7d115d7ad77cd28f15a6b4e1f4b4820bd850d299b4e5265d6",
+        "s-01c25b0817fdcaae9016b111f6a404403fa786464fc23324bd8ff95d9bb55853",
+        "s-db4d73f3da6c6e1f48db710070e7c2895f5ad8c56655e9058be4edf0cb9522ef"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 5
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "trajectory-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        true,
+        true
+      ],
+      "ids": [
+        "s-eb1acfc46f7865c8962916b5e969723af370d48f7ace8f731fe69d5cefe2f7ab",
+        "s-623211f32423cdb6de0c22209d0a438230896e89f47c93b2df4a26b340cd8447",
+        "s-9179cd20fc3e17a2fece9a1619c64375e90b0b191ffa2eb925ba3da3e1e0797e",
+        "s-ada5d2b55017b31084226a7e5b88fb9af65922250119cfc700244a8fd018c39e"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 49
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "retain"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-51642884a38281196708db9234a6f7f6b4c3fe4fb28c4fdd03bddc5e7f8c850a",
+        "guard-925f23f0323fa6f9df0c86a7d87db9fba006759252a30f6442a94f633750529e",
+        "guard-22fea2070cd0c60fccb32612088c10e1d78132e6041fef687a7a7fd31262fc25",
+        "guard-ae8ed822b6333f2a25a0c34d4e26e3faa9802c59e56352f7f70fd0576dad8167"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 67
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "retain"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-92cdf8dd83b18edd6bde436bc07eadd7fe3a678091ddb12632a957a69bce4319",
+        "guard-5f7ac8e1f8516f5daf3d539ce09d96fcfdbada1f777944c896dea527aecc24f4",
+        "guard-7cd82e3f19281f28cd062dea540bedc91c4ee5915305e049fffb6e48a746dc44",
+        "guard-4b9a67f72c86b1eddda773dda96f083c269893d76ffa00d42761060229cd8af4"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 61
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "retain"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-1ec1f7b1baa68bb38cd49e5586bb79205bea3b439c3fccd1fcfd820978d84504",
+        "guard-cd631ee869559d75ba0f08588ba76ddf234f9cc5e4e941fb2e18e756d01c2c6a",
+        "guard-bed8e7be86436e967f39c5c97a4930341c624a84bb6a03e9b90dec492972c571",
+        "guard-eae567625522e50cdbc67133b19574dbcb102666bf17b17dbd7c39de4e0630ae"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 91
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "retain"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-786701ba29abbdf93f4f577e1604e8b52f0f5ea7bf5dcaab87bf95a9c200f5f1",
+        "guard-e1c4324b3b818f05a1508a49d83b70729330261b37e83435e0cbf4d860dc8f1e",
+        "guard-202ae6cef57f4c035f1c3d84db4b59dffc316cf9a7985ab9fc8dec929b8fc68e",
+        "guard-9f27f1d9c297e9dfbedae1f998b2f9dc21aba6bae274a47a33f267ce08071245"
+      ],
+      "n": 4,
+      "firstWins": 2,
+      "secondWins": 2,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 110
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "routes2",
+          "routes2"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-59b73afc526916199d78f12d99763fce214e576690402cf7155b2373af0b7bba",
+        "guard-a8a44e0301c90a4461753541e705771a95244d6b2d9be83d49312f0dcaf5150c",
+        "guard-f06fa34c59c315dab862b2eb351719a6d4c864f4cf7492956c7500562c88fef0",
+        "guard-e95b7229e2cc37225c23851d8125b3668ea7edd3bca1162a58613d1980261676"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 0,
+      "unresolved": 1,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 4,
+      "maxQuiet": 238
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "routes2",
+          "routes2"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-236fcaae15076420944f02ca00b7a48896636ab808011a1b9a3f3ee4416f627b",
+        "guard-449581fbd8d1bed0996771d194d041d8bcc3f0be938db5c06f88e797f2d02307",
+        "guard-67887b2d7802f3c00f1dc631888ccd368414043e54e3daec4babb63fa258739f",
+        "guard-51e4a2997d321922cb77a9f7eab4b448967a5a64d09c931b5185ab318c637740"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 6
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "routes2",
+          "routes2"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-b3203574fc01f527d082ec8f06ad8d7105523893dae24b87e21236a47e9f7c75",
+        "guard-607952169731c90c70d989789ee1d1e509a0446ae07ceb186a8405a933263837",
+        "guard-f5475509e054591dc6b6e14c3cf53758fdf9192b6066daf4b2325d8078acca6b",
+        "guard-64c9711d65de68443455ab81fc406d223d3827e58a795b42d7a44c1b4f3e8fe5"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 5
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "routes2",
+          "routes2"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-71da9f1b04a77f460b72010755248374425b24157bd81e8d1c24d64c115309b3",
+        "guard-8825bd335b74090c5e00758a2152c7f37c4b26100bfdb97c9290b10a8bce8e32",
+        "guard-970019c49f68874c9e91cf4ed6638dc55aba8023dc041ff3b95230bb10ead77d",
+        "guard-0a6552065c94025770ffe2a5c7443eca98f68ddfa30e677ebd1c832d322fc6b1"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 4,
+      "maxQuiet": 39
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "route"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-7a169a1d5ea58ab81e57b8398a168ef15b1b1dea2d397d9d6d10a875c9b98f81",
+        "guard-b8828b7ec994e17b0b46cf72f034e7c4a3635110245a75c0eb082d4f773f0385",
+        "guard-df26b717fb19d0c0294ba7bd8fc19265e0a727192f17d8b30dbfc613804dff82",
+        "guard-a573ecb2ae5979894c1f45915156e638c9b230dd1f99a94a2535635b736331a5"
+      ],
+      "n": 4,
+      "firstWins": 1,
+      "secondWins": 3,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 4,
+      "maxQuiet": 91
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "route"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-a9b4eaf8cd2a5a7107b96c2fbfb3e5a68b87d8d16e5e3976170c1c461c3ed4b1",
+        "guard-78b724f731eabfa521764508b44bb5346ce2859c87c3c588989c3b3c2b2608a3",
+        "guard-f2ed92024d06b3f31f1837e524bf8a4d05bcc0f987e2c152b1b04b16b58627e4",
+        "guard-1f87a10c2ea51ab3dd2c5a7bf6410e2f34822bd50b502be67ceb441d36a08de2"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 12
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "route"
+        ],
+        0,
+        false,
+        true
+      ],
+      "ids": [
+        "guard-94f4ab1892f7c865a912e93d0bf8653ac65b3b589479c925edc21dd3f4821b3e",
+        "guard-253d63e3ef17559481e4a5fb03aedba585851c13f139f0af5274b58d2a8bed9e",
+        "guard-6615599b5457660a2f18c45fab5be3c888352e21fcb921cd2a6de6be4318f80c",
+        "guard-6c42f80cc259784b440ed9d02ab738426474147720789f47f60ac898ea04d8f1"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 17
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "route"
+        ],
+        1,
+        false,
+        true
+      ],
+      "ids": [
+        "guard-feafa59b608539480d39058b79332957ca3fa4a9fbe5418b2df225339509cd38",
+        "guard-3a22c1e810ed588ddd7d9288bb2357de41f0cae90a656a970621d35d20b58acd",
+        "guard-004b2f891b134fec39a1405ac0cdd36ff375d2b7914834c88f627d5a2967f96d",
+        "guard-2a8b341f922f426b3a6220005ad71c25a5259dab10d371506bd07cdda8da7e0a"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 36
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "route"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-f3b34876b3d3b876487122bad4632d86c763a374555a68e520080fec806741f7",
+        "guard-be767bc8661a3808019fa70fe63a20e33a27c7cadd95e798be2956bef9037c6c",
+        "guard-cedee07d51928c7954b89c5b7806672de5580d729c19e1bb1b9363868a6f8d9e",
+        "guard-26ebc8bdbca989a5ac9232f52dcbf6d4ed87896bad3e986e9affa6df0b477227"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 392
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "route"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-4b52dfb3720b6a556f78938582bb74c2eeef5b15d252dde9da9cf47127ebb367",
+        "guard-9a1060e2f88d3701402e1156599db8a2e8f60741311309b062b5880452c8d347",
+        "guard-9331b745745f69b445d4b99c9f585805747a8415904738573f0bef8d2484e687",
+        "guard-800c349c45b4c936d05f3b1c04ac8fd2bea84242a14e59113074095e1cd9294a"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 269
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "route"
+        ],
+        0,
+        true,
+        true
+      ],
+      "ids": [
+        "guard-b3c2f608be14ab7adbc884a0f841956c755f2a36906d46aa3394beaab7f3ceb3",
+        "guard-a270aa0356dba1c5848cae918ed49778e5c05a57ac2062359c1457ce78245e7a",
+        "guard-b7ff044e3600dcb9951b7856f909a7f111a7dd3959aabe6be0cebe2aa65181e0",
+        "guard-e2e4fd0066c21383ad4c62cede1ecee8c3495acf910056d3eeaa9c732afbb0b6"
+      ],
+      "n": 4,
+      "firstWins": 2,
+      "secondWins": 2,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 27
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "retain",
+          "route"
+        ],
+        1,
+        true,
+        true
+      ],
+      "ids": [
+        "guard-dfa8467008e9499f90c18ef1bb968d0ec88c353b70cd0e55bb680db681381c15",
+        "guard-ed279f7b5afb65750df614987ec51f43617a55672fdac8239ae7fd27db29a0db",
+        "guard-e2a1c52f1211253e79985412718d04b0c26d9cea51fbcf80d73c05ecf0b25832",
+        "guard-94df2daea8927a8fe277bc5f9f62d028c695b9ddcbaa9f02a5ac85df5eed0c70"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 4,
+      "maxQuiet": 72
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "archived",
+          "archived"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-9eb6d53dd1469c07af3a89dedd379073f729c35a137c8b08e20dadd4c39f6ba4",
+        "guard-5e18165d440c2f348f422b6dda6529c03af12d06c5a81d040e6b7859f9151578",
+        "guard-1371db9641aff9274a3f863d7e695194da9aae9e963ad54b547529b95665cb6c",
+        "guard-6c0d87a6d69807e4d87f31d00f7cad9a959f21c4b09db3c4e542748d9860ad40"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 67
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "archived",
+          "archived"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-4e93b9061e3a2514d515ce7a35b652f4dd678ff647100df8db17563c40b6c774",
+        "guard-702f35884ac26b3b6aa81309e03269fb67cda65f9826c8c83870d10acdb7b129",
+        "guard-6a7e40ea3e33b886a0faa5212681794dbd8004f9636ff396c38203c4b1ecc717",
+        "guard-d1eae7cc9f27b68dbc955e3977cec90ddb0d72b731d6700023270d1cbb5869df"
+      ],
+      "n": 4,
+      "firstWins": 1,
+      "secondWins": 3,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 149
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "archived",
+          "archived"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-1500e800ad75981e28901cd6e5707acc7aca5fbf4dddd089eb58f337d86d710b",
+        "guard-4e63238ee275d08345385ed938bbf9032d37f1be1299ed7af299c9432a977cf6",
+        "guard-095e46312cffa12c975ca5ab584d2dc30aa5f2f5f8d28bf68e5aae9ffefca020",
+        "guard-fe28e059c7376e841c27565d051d95df763722ffdfebca346633c25a6d02fe13"
+      ],
+      "n": 4,
+      "firstWins": 2,
+      "secondWins": 2,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 93
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "archived",
+          "archived"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-928a9d788a925468804b16c534c72fb6ad6ec8a92addb2e7ed32ada77fbe6ae6",
+        "guard-d45fd0d17a119db186506d2987fc6e91d8e1e04eadf64e6d0558883de1516f58",
+        "guard-32025f8a8b9bf0c01bcf735fc8eb3d0a022f472c92b24b5685fe454d9d88bb62",
+        "guard-4d1952cc4e345b2c93405ff4155e351dedd0339c332d78aa4b77c0f6b244f780"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 228
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-ff39433364fdddd0de69c6755a207b6297baff34ea440af4cf7d2b7cbd10ecdb",
+        "guard-3c947e8ede437ed341857a3e2a37b368bc97034fa4d362e264db5dfaf0f781fd",
+        "guard-249dc40794799f011ce008dab101ec32e4da1b0407a25f49f78803b6d0464783",
+        "guard-c8a09a2736f0cf92c29360e5a5a3c0fab440d95d88d31aac160358e765a289b5"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 25
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "guard-a26e5954fd3724334097163f6918b50a57ba8d6d98b7da412c46ba7d8f733874",
+        "guard-e3a6ff8fbfdc7368d0b3ed3bc956e192c80ec858203c1f838326891085b04c12",
+        "guard-83f656c171d78da081b119d5b7f92a54ae15dbc72a53044efe86e8ce49ca123d",
+        "guard-b4c00e7d47f834b32d1ad1c185e442c689e3245a2f6d66332be0ab2b3bace541"
+      ],
+      "n": 4,
+      "firstWins": 2,
+      "secondWins": 2,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 25
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        false,
+        true
+      ],
+      "ids": [
+        "guard-2084eb510ddbfb024de31a20f1be9efff2810cd5c0e1ad334203af6eaa937621",
+        "guard-644d7534269a9dc71e08cb02dd2a01d76000125770288b9f1aa5ad5470f1d776",
+        "guard-9aa7bb68a1a770845042e66c759c23bc34d225d5e061f6a2dccc3fc6e0b0dacd",
+        "guard-f0b5100ca1ffc2faa05e6a0aaaf37fa32207720b37b172d74563ed541e6196c8"
+      ],
+      "n": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 14
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        false,
+        true
+      ],
+      "ids": [
+        "guard-360107cbd8bebbd6365dd4ec50c277c38021bb45fbfab65ac82bef895d2f202c",
+        "guard-567c65fc3f8cbcee3948c9d3c1251b29e61bb2cb1f78bec783f33a3ed872fe76",
+        "guard-a0a338e61d0facc4375c03bae76cf51b6fe42b23c08a4d4f1ad79277583cec05",
+        "guard-5ac7b63496a5ff0c7d4764b2d2b4a53ba716c2cb0b373ef0511c64debe0722b5"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 19
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-ff8a598a286036993b571076b3e2cb05095155aeea1137e1dac0cc2822552068",
+        "guard-c5ec8574ba658adf5f08e98243ccbf91c0ff1223589d46d186af28087b7b69d2",
+        "guard-51301286760f2e786ff5db33430422835294050bee55972fa7aa5e42be48e1fb",
+        "guard-5f987e9310bf79353616d83923e0b74a3b2e57c9bd9c5002b2cbaca6cd903b8b"
+      ],
+      "n": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 15
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "guard-8a85c5ed3ce42814c5ce46f96b1a25d79d09dd387cd549e00eff56bc51c1c316",
+        "guard-8ba4119d38313d73bbac6988d4c753c9bc6fd70eeabbfff9f56b40ce513d8bf1",
+        "guard-fd6d86694b9881d6794c9b024c33d88145fc46713ea40d8cf647038000f81ba5",
+        "guard-4f65fac4928543347dc5182bfb06b83b4ce836f93beef0e8cf8bb40e363ee92e"
+      ],
+      "n": 4,
+      "firstWins": 2,
+      "secondWins": 2,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 7
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        true,
+        true
+      ],
+      "ids": [
+        "guard-bf7f47cda59fe2699ba4ede3730e8aea38a309fb3a4f12918e599a33049ddbf1",
+        "guard-1a56281abc7dbca80a08d67fb28f62ed30240657a095f14795606c81bdead264",
+        "guard-90568ac56414ff861a6121e028fba80ab9ffaaa7738b211eb69ad72c8e72a33c",
+        "guard-1b83822a2fcc65fa0a0da790dabc753dfc2289fa27ab1bfabd788dfc7faeca75"
+      ],
+      "n": 4,
+      "firstWins": 2,
+      "secondWins": 2,
+      "unresolved": 0,
+      "firstPointByStarter": 4,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 19
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-new-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        true,
+        true
+      ],
+      "ids": [
+        "guard-02e09c9b12f32a750d352ab7fd71cfeb958eef4c6a16903376003c2456521e0b",
+        "guard-61ebb5223ff6d178b2c8cd7af85850cf07afa32b58ca63d90adf264ccee6563e",
+        "guard-5318a9987e3ae1a1775ebcd9cf40a0dc13f08930e7cc435e487be29b668760bd",
+        "guard-bcaf91825b375d2613c4b07f296eb4110e180fe012da5d15373110ede16f7bf2"
+      ],
+      "n": 4,
+      "firstWins": 3,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 4,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 26
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "archived",
+          "archived"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "factor-D-deaa8b55c1f61b35b2ff149686639c979e1d5f0e9926ba4d3b084ddfa13e69e3",
+        "factor-D-a6ba79f9e2a56b067a330768f3cd3c4a0fbd39571eb1d22ad5b4e9850bb0113d",
+        "factor-D-c7bd44e88c67eeea8a358e7282110973cfbf8929b65f96a840720df392c8823e",
+        "factor-D-0755facfaf92c311485e9e4c42cb69670b3626e098b1d0524bd575fafa245967",
+        "factor-D-25292d2108a291514c3daf2e7862a05bf887023f7f3b22479fa9ba6592633ddf",
+        "factor-D-56b77a7909a7ee1a7be5cf5c93e64a03961f075df4c1994f26890c64683cc29d",
+        "factor-D-e18cea615e4b10780b8b2f17e3ca97c252ae752f13777efd7d3a5c15fa2fd260",
+        "factor-D-d8720dbef7986543ae9562fad3e0712165f2cf8cb8295cf7f10ea23fb20bc7d8"
+      ],
+      "n": 8,
+      "firstWins": 3,
+      "secondWins": 4,
+      "unresolved": 1,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 8,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 213
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "archived",
+          "archived"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "factor-D-dae57e1e1bb363b9364eb8c39fa45f3d0b9bc2d81a6059b1fc76b35ad7fd3ad1",
+        "factor-D-1280e4766e6b8a9d974d41fb1d7a20f097c57691659cb482c023f2f5542e0d0f",
+        "factor-D-f097ffe3ee68cabb81324c8cbd1a47b270b5e19bacbec7b1988c2325702b0c3b",
+        "factor-D-e1e881cd67d741646c53cf2b85005f048aad7a84869a62772436b44da9ff89a8",
+        "factor-D-02a81a305f1b3327c1bf91f11f4e659ab75bb3d55c63f6838653cf4480d5e90e",
+        "factor-D-a1c8c12b78dea07b397ed9c0a722c52401d9d90a308dcaad478610d6eaf317ce",
+        "factor-D-c964e0659d077e7ff2cd6f95a9802d0514dad85322f2951545400d395c2a648b",
+        "factor-D-29776e96adfc912d94f5e762ed15f20a265ab7c19059b7ecc3014ee815ce98d6"
+      ],
+      "n": 8,
+      "firstWins": 6,
+      "secondWins": 2,
+      "unresolved": 0,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 92
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "archived",
+          "archived"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "factor-D-9e6b9e487b928fc392250dcbc13e0c2cf7de802d9abc8579b1b5589db90ae2ad",
+        "factor-D-1414dc2da646e2c236963cd959af3fecb0a78c5246da456a90ab6eacb487a513",
+        "factor-D-e572e1dbae4703e2b33ce56c6a8776c9199cf219b37ca5488647ca82e104ca71",
+        "factor-D-019c070a29013115666a82bc5ae7c06cb752b5fe14251a6d3f7ac3d4ceb3b9f1",
+        "factor-D-0f65ae110d10fd0eceaa6859884da357d447fc4485cebeec35bad8c126764409",
+        "factor-D-2d806c83e111322904377230243551bbb6b3f77f7de645990c467f5c26346de0",
+        "factor-D-b62fab8d4fcd324125015996c97b33e12727b5b19159005e9b60b6ebfa42b875",
+        "factor-D-8139fbe14c183cb283d18e64658f444cd18d30b4ec3873a76977f3f52ea2fff5"
+      ],
+      "n": 8,
+      "firstWins": 7,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 123
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "archived",
+          "archived"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "factor-D-761b280293e50e97575baa13c1360196eee5b9236ee7e5375aba3bca0ebffeaf",
+        "factor-D-1ee4cefa5ce86642f3e43c6b3431a3db6662857ab550be23fb09ae61b4eab997",
+        "factor-D-b80868f41f316cd35eee438171cd25e061ae198dfcb242fa308027bd0caa6ae4",
+        "factor-D-0f94122ffe52bdf74610734569df6d216214056904dcd4f46c0df6aa983a332b",
+        "factor-D-7c49edec3715d9bb94282d62dab4e20eb2a94def6f7d10aeec7adf5d0d86300b",
+        "factor-D-64aef915dfed2ab0138b6bdaf5340ee67dfb7a5fc38b7df3102ab06edaa268f6",
+        "factor-D-58fd74710fc2b718eb706ce5a98e9e37c081cfcc3bdb83442ca1c7efd48201c2",
+        "factor-D-865d3d1757a494cde6f5efd91be550097899ed38276593990cdfb0df2b4ec842"
+      ],
+      "n": 8,
+      "firstWins": 5,
+      "secondWins": 2,
+      "unresolved": 1,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 8,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 155
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "retain",
+          "retain"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "factor-D-37967a3cfe73a9f1bb987aff9cbda1d78e138740e595875c7db9afe4e66ac3a5",
+        "factor-D-727ac453918c8bd6c4efebf2308f317f17a8dbec5e996c8a94ee9cc6ac541fad",
+        "factor-D-94c85b394159b09e3c674bc365714de2bebb1d0ebff839bae9f32a9917d7294f",
+        "factor-D-c1e890f183e617a5280f7d6ada5bc154c9fed9c3eabf1325fd381c63e8911b42",
+        "factor-D-20d51a481b3d407ad690656e055d4093615fdea55e5e531fc9a30e0c26db5a85",
+        "factor-D-2099a21a0bb4bff101ff0b6e82b71137ff99177634dc00d527391e35a75db32c",
+        "factor-D-494e525303fd7be387029ace4d89cd152d5d212dbe056d152a46c34f97cbe3a9",
+        "factor-D-ea3f50a11bc93af4984b2e71cb0a2adbd4872256d0327bf3653aac868d409b59"
+      ],
+      "n": 8,
+      "firstWins": 2,
+      "secondWins": 5,
+      "unresolved": 1,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 8,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 109
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "retain",
+          "retain"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "factor-D-90b21cff7c95e2784d1bc3957a9ffd12052c300047f6c0ffcce75f745d088910",
+        "factor-D-2f3ccb628da7958887938f0c09535216e5056df148f8af0e8d5c589bc7362b7c",
+        "factor-D-717d79baa8268e7c59a5e3f727ba80c40f01725914419bf918dd70d7aeda2397",
+        "factor-D-c821cfb3ffe8212cc8f27ec01a15e7b4f7a9ade3ba2e794f2b81b74418b1fe1c",
+        "factor-D-32f1494fb044643b9297fb2c48ce606aefdce02070213a9ae7dbcc3c1d7818ee",
+        "factor-D-7e9099eb4fba4529fd31edfb4338a74b95f6bd22eb32cb31dd289ea97b752b10",
+        "factor-D-081e3961b80d8a359edf5602e30d4397a5db8a0d6c454a7408413ef9d0155db6",
+        "factor-D-789cde8af3cbf39c75459024c3d5ae5fa4797634b59e0ba174206e1ce3923556"
+      ],
+      "n": 8,
+      "firstWins": 8,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 38
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "retain",
+          "retain"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "factor-D-654197dd9a21ee4d959051d783557c20f166e91ac5cbde35ffc36517cb3bf454",
+        "factor-D-f77b11882d51223923468c327632f8d7b97b7ee549c6fe4d3b0fbc887c8cee95",
+        "factor-D-9b59373bea8bbca32da674f0d45596bc079790aa80c9ae40db6de57695e02e3c",
+        "factor-D-1882ca04bec171f571a2d7335e4b549ffb208226a9054213fc75a812f404e31e",
+        "factor-D-9304387dc952b814cb7cf1c34cd7f7a944cf25ea5b6e871851b5a7051f35d557",
+        "factor-D-4601bc5f5ccd0c4f252f50597b51e3dd25d30b88d58d59e3e684df9a9daed5d3",
+        "factor-D-3975a63a34a75b6c4e3e3c9237b69ce75edd41f4782fb32d9cac82a025e284b4",
+        "factor-D-f055fee7c9ed10378118dde03a6fe7653e79cdc302776e2fd0c587603ef9fe7e"
+      ],
+      "n": 8,
+      "firstWins": 7,
+      "secondWins": 1,
+      "unresolved": 0,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 59
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "retain",
+          "retain"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "factor-D-1ca2a56595616ecc79b8bce11b3e0f29f5ee501ecba1b80aa00b0316766e27b8",
+        "factor-D-a3d7939cc056aa93ad8dfb472eacbcaca2ba47e769fbe6df6a9f86c7d5f61f4f",
+        "factor-D-24adfba9a915d9afe0cefa8812e3a2a93488e6805698cb09198d192b74dd1309",
+        "factor-D-ee4283b43f5dbf57c95085dd59b9a9ef76f7e34717f90678e8f67a6c40963f8a",
+        "factor-D-5fe0f88f3ab46079206df0583aed8a1e75bf1548d298ea754100f1800ca59669",
+        "factor-D-09935b1852d663b64472bde87fb67cd16bd44b868883c8e5affeb2ee1c6bd4e9",
+        "factor-D-7f5bfd283ae959fc0eb3c2c35f8e3297d31381dfba1e1b8d85b5da3b1a4d2a71",
+        "factor-D-634271db6840eed637c6edd27f2a8cc060fa4f90f2658806437261319ba1a142"
+      ],
+      "n": 8,
+      "firstWins": 2,
+      "secondWins": 3,
+      "unresolved": 3,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 8,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 112
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        false,
+        false
+      ],
+      "ids": [
+        "factor-D-b1afcdb99feac708d3f706df4828dbad953de653e9c1b10a0c459cf482bd1b07",
+        "factor-D-79137078971afb96ab364933a089601b9791bc1614c6082831936350aba6b13e",
+        "factor-D-54456309e507f7738e14922ad48fa8f3a733e4ea3aeaf2bc91a86bb2704fe6f7",
+        "factor-D-720342e58b49fd615d97527deb104fb095c57ca2d1320cc3c8b72b3974dec705",
+        "factor-D-214a8d0b46ad9623236bf6e9abf5f4889e1f130eec0603c79e6285db27bada6d",
+        "factor-D-bcf026dcf6960f453bdc82e4c74e574f5f4f8889ea49b0b604dd22c65cbfb73a",
+        "factor-D-89224b8dd78feaa6ee7787f48f4391631ac0c84285fc940b60b9718aa3445feb",
+        "factor-D-599d7481a39cef1d52465e9786f34b763a847aa20af467fcc42e9223b085cabf"
+      ],
+      "n": 8,
+      "firstWins": 5,
+      "secondWins": 3,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 8,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 73
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        false,
+        false
+      ],
+      "ids": [
+        "factor-D-2cdef2198ccc9e66f5160f733a406ef1a468a59805e1e954e4227f3de0406669",
+        "factor-D-a0655079ceefc3390bdecdf8e168d139daf641ac94c5da8313743588d1a8d331",
+        "factor-D-f23384e1d333dc388b7419732b6dce9fca5431bfd84a5761db33b9c69aa2fed1",
+        "factor-D-099dd37aaedee0e4469bcb45bd34b7a9b5d841d8bbd3f58e10efbfaaed5ce9f4",
+        "factor-D-e3445736ef9662e4eee8d199c554d3d1653b0ed93f1384e72354f0493f89ff7b",
+        "factor-D-db5d6d31ea7cc086ad158853ec27d1737c5a0fc22fcd25492558d3736407c322",
+        "factor-D-8ee8cb0d55ce9704aa8a8187f9d24bc005ac5ff0c31b8d0f33538814c402e68f",
+        "factor-D-1a9db3e07824322b07d8705647219b004dd9e5e5d3b87733d320eda1c898183d"
+      ],
+      "n": 8,
+      "firstWins": 4,
+      "secondWins": 4,
+      "unresolved": 0,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 19
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        false,
+        true
+      ],
+      "ids": [
+        "factor-D-a8fce8697fe2a03a2b10ce3bd80560da53f6fed75ceb08f64d331fa3645b8410",
+        "factor-D-97e023100aa0cad4bfcd717fd79d70f1b2c44e89cf9525b4261803779cb102b0",
+        "factor-D-1f315aee46820f85341b939541a8130ef2d37f2dd326a91087b5f796df7c5c3a",
+        "factor-D-60454d852f5b29c544113716673092525e36e21a9bfd2d1d9ba66e353dc6625d",
+        "factor-D-db02832f8454d859c6036b4748bbc626e00bb4259b015a5c5863f09fe1bbed39",
+        "factor-D-ec9e9e4a6e088f61a0f71fdb3bd838f3b22605b8c20d3489d70ab30ea9342857",
+        "factor-D-6cc51a3b0efcadd015a7341326786dfe6edd40fde3cc4b97b5cea563795bfee3",
+        "factor-D-9d5e272b19ed4d5a20841c37ac8ce102b99d22944ac8aacab9f8c84f1905412a"
+      ],
+      "n": 8,
+      "firstWins": 0,
+      "secondWins": 8,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 8,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 48
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        false,
+        true
+      ],
+      "ids": [
+        "factor-D-dd97fde80ef708bf3ccb25e4dd530e4db8b56e23db6e8f01045436fd88a59bf5",
+        "factor-D-2d46319662126eda21eb53fc344d2e864c3b8fb26cd9e579b21cfb6ae61bdbb3",
+        "factor-D-1bb9737e737a0042fe580afccd2d3b26cb11f3c2c70fb901d57a677c9307cc3b",
+        "factor-D-6926d262e02b6d0be6631c11e204f50d56b3e83ff2be28eb2f1f9fa1aa4404c2",
+        "factor-D-3cb34de4ff9a44da1e4befa7645596bf7d3b628d8be1e853ac26d5d4a5dd3007",
+        "factor-D-c283dbabfeba1a1744aaed78b1ac3abc2997d942e41904ea9d070e3a66063b2b",
+        "factor-D-031a78f9c32ed5f8169681f6cd7539ecd545ff59934e247ede84c3305feb33e7",
+        "factor-D-fb61648fd36457b03ec51aaaeadd0229e51ebf1d9640e4c056b5d7592a2b042b"
+      ],
+      "n": 8,
+      "firstWins": 8,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 19
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        true,
+        false
+      ],
+      "ids": [
+        "factor-D-82a8712878e400b58515c0623782eebb49b372af14d01439d21af516dbdf488c",
+        "factor-D-42e4ca841f993d153ddf6fad5b7e06408a0d35fcf60a851dd61fa3cf3ece8101",
+        "factor-D-2165f14447e31c8e8fc7bf4280d2e7dc8763c39bacb1b0fa3b7de1d6b8c543d7",
+        "factor-D-a43182354adf11d5f0662c1caed65fa50f018d1d88d3e0a5e466d20a5aaa3edc",
+        "factor-D-f1f2c05e22bddf78d5df3c351bc44da6dba9b3448fb64b1eae2b8b8b4dc1b018",
+        "factor-D-d1bca43c0a66cdfaa3fdc07021cc5da2fce0c2c4f2a1ffa90a4c6f181c2bafef",
+        "factor-D-27ccd207779d9fbee88fb08b49f4c3eb11e9d7763ebb2ee346877619f7a67fa0",
+        "factor-D-24294563a54afff0f33a4ef042a478c1d93d7fde4f9a4d936769ecbea924a7ee"
+      ],
+      "n": 8,
+      "firstWins": 8,
+      "secondWins": 0,
+      "unresolved": 0,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 19
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        true,
+        false
+      ],
+      "ids": [
+        "factor-D-a7d695a3ef47eb3e26caa138197f1a33a7d4bf6412cbd5392a101e831b0b423c",
+        "factor-D-ca612b80802ffdac144d7d3ab367edb70a6aeb2a5872c27612d121199292dcca",
+        "factor-D-70b47fe0d0667e79d04010c5237fab2ad8c3b1370e4a06983cd6464a8427762c",
+        "factor-D-98c8d2728e7c018f00989d5c1bf3dd47a51878732e09eb16a2b108e2703816f8",
+        "factor-D-eb451d3488fd97f6529ce3134e99d4853ef45f3bd0e344bee12843681bfd6a2f",
+        "factor-D-5056d04cbac2c07166026570ae5fefb3ee937d1aa70d399e086c442ce6067200",
+        "factor-D-408b667f72042333e38e0269a53afe731d5b362cb9add7784d9ff22e75363997",
+        "factor-D-c4cd0db09324a3e1c4b50e25c98dadba23dd37597f66830e0af7e367d7170a9d"
+      ],
+      "n": 8,
+      "firstWins": 1,
+      "secondWins": 7,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 8,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 29
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        0,
+        true,
+        true
+      ],
+      "ids": [
+        "factor-D-7890536e86a9f06d305a2709d6e9c68a4158f24aec9762b00c75a3cffbc46b94",
+        "factor-D-f4dc5d25e1ed38ca78c138ec422b57ff23bd4e732a4524b2715b9932c65be070",
+        "factor-D-7c6589ff67fb2a454b3abd42f4cab177a0b8c472212b646cc251b6e9d0b8919c",
+        "factor-D-cfedc4f532c94de17f5a4880e557090bb71d08d024f413e0c344cc454ff66e40",
+        "factor-D-3c388578e67540c76f31dc7008c794ffdf1f54a56773b07132acf19e61843056",
+        "factor-D-bce5847de9292ed0bfe59ac406edaa58103d0d07921575df070c2dd2b71eb79b",
+        "factor-D-ca90a47b595fa8a87195b960ca7a06881bcacad075d3c997532c4b93551c3e18",
+        "factor-D-bc170b9460bba261e8d3fce590b430ad0bc5b5041d24dd26a92dd585d2884b84"
+      ],
+      "n": 8,
+      "firstWins": 5,
+      "secondWins": 3,
+      "unresolved": 0,
+      "firstPointByStarter": 8,
+      "firstPointBySecond": 0,
+      "noScore": 0,
+      "medianFirstPointPly": 1,
+      "maxQuiet": 39
+    },
+    {
+      "mode": "D",
+      "condition": [
+        "guard-followup-D",
+        [
+          "mixed",
+          "defensive"
+        ],
+        1,
+        true,
+        true
+      ],
+      "ids": [
+        "factor-D-42bb323d47e36e7b4f171f58215476864b459c1dfbbdd1148d79127866a06478",
+        "factor-D-d8e9859cc27d0ddb18dc37026186a8fe5a935fdd340bfff4242e7548090e6ea0",
+        "factor-D-bc0b7eedf60132832a87b294e1239529f08f31bba2a27c7b3db00836288b6c2d",
+        "factor-D-eeaec67b9e0916f82beca81f823a98a9ebd307752622fbd17b77e549289fda34",
+        "factor-D-6c08883391c0ba7384a6ea24a608b834892779f65f0f8fa913e11bc441f46717",
+        "factor-D-37ae4ad8398e9283920715a2a9e4aeb326e7c8b286c2372791704b2c63376a84",
+        "factor-D-f40d231f0d6e049fb23b9664f1b05322fbab9919ada1555c7ada0bbefe221287",
+        "factor-D-7da87158a914a762180cba92a57c98c16662817463511276d33afe2a269bd13d"
+      ],
+      "n": 8,
+      "firstWins": 5,
+      "secondWins": 3,
+      "unresolved": 0,
+      "firstPointByStarter": 0,
+      "firstPointBySecond": 8,
+      "noScore": 0,
+      "medianFirstPointPly": 2,
+      "maxQuiet": 42
+    }
+  ],
+  "adopt": false,
+  "reason": "Small selected checkpoint sample; strength, new-seed fairness and strategic preservation unconfirmed. No production AI or board adoption."
+}
