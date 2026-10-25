@@ -1,0 +1,2738 @@
+{
+  "newInitialGames": 512,
+  "extensions": 0,
+  "forks": 0,
+  "transitions": 6493,
+  "rows": [
+    {
+      "mode": "C",
+      "candidate": "star-relocate",
+      "policies": [
+        "search",
+        "search"
+      ],
+      "n": 32,
+      "first": 16,
+      "second": 16,
+      "unresolved": 0,
+      "positionWins": [
+        32,
+        0
+      ],
+      "actorWins": [
+        16,
+        16
+      ],
+      "byPolicy": {
+        "search": 32
+      },
+      "firstPointStarter": 16,
+      "maxQuiet": 3,
+      "meanPlies": 7.5
+    },
+    {
+      "mode": "C",
+      "candidate": "star-relocate",
+      "policies": [
+        "oriented-search",
+        "oriented-search"
+      ],
+      "n": 32,
+      "first": 16,
+      "second": 12,
+      "unresolved": 4,
+      "positionWins": [
+        28,
+        0
+      ],
+      "actorWins": [
+        14,
+        14
+      ],
+      "byPolicy": {
+        "oriented-search": 28
+      },
+      "firstPointStarter": 16,
+      "maxQuiet": 97,
+      "meanPlies": 27.59375
+    },
+    {
+      "mode": "C",
+      "candidate": "star-relocate",
+      "policies": [
+        "oriented-search",
+        "search"
+      ],
+      "n": 32,
+      "first": 17,
+      "second": 15,
+      "unresolved": 0,
+      "positionWins": [
+        31,
+        1
+      ],
+      "actorWins": [
+        17,
+        15
+      ],
+      "byPolicy": {
+        "oriented-search": 17,
+        "search": 15
+      },
+      "firstPointStarter": 16,
+      "maxQuiet": 44,
+      "meanPlies": 10.90625
+    },
+    {
+      "mode": "C",
+      "candidate": "star-relocate",
+      "policies": [
+        "search",
+        "oriented-search"
+      ],
+      "n": 32,
+      "first": 17,
+      "second": 15,
+      "unresolved": 0,
+      "positionWins": [
+        31,
+        1
+      ],
+      "actorWins": [
+        15,
+        17
+      ],
+      "byPolicy": {
+        "search": 15,
+        "oriented-search": 17
+      },
+      "firstPointStarter": 16,
+      "maxQuiet": 44,
+      "meanPlies": 10.90625
+    },
+    {
+      "mode": "C",
+      "candidate": "star-relocate",
+      "policies": [
+        "greedy",
+        "greedy"
+      ],
+      "n": 32,
+      "first": 16,
+      "second": 16,
+      "unresolved": 0,
+      "positionWins": [
+        32,
+        0
+      ],
+      "actorWins": [
+        16,
+        16
+      ],
+      "byPolicy": {
+        "greedy": 32
+      },
+      "firstPointStarter": 16,
+      "maxQuiet": 3,
+      "meanPlies": 7.5
+    },
+    {
+      "mode": "C",
+      "candidate": "star-relocate",
+      "policies": [
+        "oriented-greedy",
+        "oriented-greedy"
+      ],
+      "n": 32,
+      "first": 16,
+      "second": 16,
+      "unresolved": 0,
+      "positionWins": [
+        32,
+        0
+      ],
+      "actorWins": [
+        16,
+        16
+      ],
+      "byPolicy": {
+        "oriented-greedy": 32
+      },
+      "firstPointStarter": 16,
+      "maxQuiet": 14,
+      "meanPlies": 8.625
+    },
+    {
+      "mode": "D",
+      "candidate": "positions-14-21",
+      "policies": [
+        "search",
+        "search"
+      ],
+      "n": 32,
+      "first": 22,
+      "second": 10,
+      "unresolved": 0,
+      "positionWins": [
+        6,
+        26
+      ],
+      "actorWins": [
+        16,
+        16
+      ],
+      "byPolicy": {
+        "search": 32
+      },
+      "firstPointStarter": 32,
+      "maxQuiet": 5,
+      "meanPlies": 14.8125
+    },
+    {
+      "mode": "D",
+      "candidate": "positions-14-21",
+      "policies": [
+        "oriented-search",
+        "oriented-search"
+      ],
+      "n": 32,
+      "first": 22,
+      "second": 10,
+      "unresolved": 0,
+      "positionWins": [
+        6,
+        26
+      ],
+      "actorWins": [
+        16,
+        16
+      ],
+      "byPolicy": {
+        "oriented-search": 32
+      },
+      "firstPointStarter": 32,
+      "maxQuiet": 5,
+      "meanPlies": 14.5625
+    },
+    {
+      "mode": "D",
+      "candidate": "positions-14-21",
+      "policies": [
+        "oriented-search",
+        "search"
+      ],
+      "n": 32,
+      "first": 23,
+      "second": 9,
+      "unresolved": 0,
+      "positionWins": [
+        7,
+        25
+      ],
+      "actorWins": [
+        15,
+        17
+      ],
+      "byPolicy": {
+        "oriented-search": 15,
+        "search": 17
+      },
+      "firstPointStarter": 32,
+      "maxQuiet": 5,
+      "meanPlies": 14.65625
+    },
+    {
+      "mode": "D",
+      "candidate": "positions-14-21",
+      "policies": [
+        "search",
+        "oriented-search"
+      ],
+      "n": 32,
+      "first": 23,
+      "second": 9,
+      "unresolved": 0,
+      "positionWins": [
+        7,
+        25
+      ],
+      "actorWins": [
+        17,
+        15
+      ],
+      "byPolicy": {
+        "search": 17,
+        "oriented-search": 15
+      },
+      "firstPointStarter": 32,
+      "maxQuiet": 5,
+      "meanPlies": 14.65625
+    },
+    {
+      "mode": "D",
+      "candidate": "positions-14-21",
+      "policies": [
+        "greedy",
+        "greedy"
+      ],
+      "n": 32,
+      "first": 16,
+      "second": 16,
+      "unresolved": 0,
+      "positionWins": [
+        32,
+        0
+      ],
+      "actorWins": [
+        16,
+        16
+      ],
+      "byPolicy": {
+        "greedy": 32
+      },
+      "firstPointStarter": 32,
+      "maxQuiet": 5,
+      "meanPlies": 13.5
+    },
+    {
+      "mode": "D",
+      "candidate": "positions-14-21",
+      "policies": [
+        "oriented-greedy",
+        "oriented-greedy"
+      ],
+      "n": 32,
+      "first": 10,
+      "second": 22,
+      "unresolved": 0,
+      "positionWins": [
+        26,
+        6
+      ],
+      "actorWins": [
+        16,
+        16
+      ],
+      "byPolicy": {
+        "oriented-greedy": 32
+      },
+      "firstPointStarter": 32,
+      "maxQuiet": 5,
+      "meanPlies": 13.6875
+    },
+    {
+      "mode": "D",
+      "candidate": "pair-both",
+      "policies": [
+        "search",
+        "search"
+      ],
+      "n": 32,
+      "first": 32,
+      "second": 0,
+      "unresolved": 0,
+      "positionWins": [
+        16,
+        16
+      ],
+      "actorWins": [
+        16,
+        16
+      ],
+      "byPolicy": {
+        "search": 32
+      },
+      "firstPointStarter": 32,
+      "maxQuiet": 3,
+      "meanPlies": 11
+    },
+    {
+      "mode": "D",
+      "candidate": "pair-both",
+      "policies": [
+        "oriented-search",
+        "oriented-search"
+      ],
+      "n": 32,
+      "first": 32,
+      "second": 0,
+      "unresolved": 0,
+      "positionWins": [
+        16,
+        16
+      ],
+      "actorWins": [
+        16,
+        16
+      ],
+      "byPolicy": {
+        "oriented-search": 32
+      },
+      "firstPointStarter": 32,
+      "maxQuiet": 3,
+      "meanPlies": 11
+    },
+    {
+      "mode": "D",
+      "candidate": "pair-both",
+      "policies": [
+        "oriented-search",
+        "search"
+      ],
+      "n": 32,
+      "first": 32,
+      "second": 0,
+      "unresolved": 0,
+      "positionWins": [
+        16,
+        16
+      ],
+      "actorWins": [
+        16,
+        16
+      ],
+      "byPolicy": {
+        "oriented-search": 16,
+        "search": 16
+      },
+      "firstPointStarter": 32,
+      "maxQuiet": 3,
+      "meanPlies": 11
+    },
+    {
+      "mode": "D",
+      "candidate": "pair-both",
+      "policies": [
+        "search",
+        "oriented-search"
+      ],
+      "n": 32,
+      "first": 32,
+      "second": 0,
+      "unresolved": 0,
+      "positionWins": [
+        16,
+        16
+      ],
+      "actorWins": [
+        16,
+        16
+      ],
+      "byPolicy": {
+        "search": 16,
+        "oriented-search": 16
+      },
+      "firstPointStarter": 32,
+      "maxQuiet": 3,
+      "meanPlies": 11
+    }
+  ],
+  "archivedDiagnostics": [
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": 19.919999999999998,
+          "replies": 574
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": 19.919999999999998,
+          "replies": 574
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": 19.919999999999998,
+          "replies": 264
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 0,
+      "legal": 76,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 3
+          },
+          "value": -568.48,
+          "replies": 521
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 3
+          },
+          "value": -568.48,
+          "replies": 521
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 3
+          },
+          "value": -568.48,
+          "replies": 466
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 1,
+      "legal": 70,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 63
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 126
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 63
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 620
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 63
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 126
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 2,
+      "legal": 78,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 57
+            },
+            "dir": 2
+          },
+          "value": -1445.4,
+          "replies": 839
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 57
+            },
+            "dir": 2
+          },
+          "value": -1445.4,
+          "replies": 891
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 57
+            },
+            "dir": 2
+          },
+          "value": -1445.4,
+          "replies": 582
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 3,
+      "legal": 72,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 62
+            },
+            "dir": 2
+          },
+          "value": 1524.24,
+          "replies": 89
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 62
+            },
+            "dir": 2
+          },
+          "value": 1524.24,
+          "replies": 581
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 62
+            },
+            "dir": 2
+          },
+          "value": 1524.24,
+          "replies": 89
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 4,
+      "legal": 111,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 92
+            },
+            "dir": 3
+          },
+          "value": -138.04,
+          "replies": 622
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 92
+            },
+            "dir": 3
+          },
+          "value": -138.04,
+          "replies": 622
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 92
+            },
+            "dir": 3
+          },
+          "value": -138.04,
+          "replies": 331
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 0,
+      "legal": 76,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 348
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 422
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 175
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 1,
+      "legal": 80,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 2
+          },
+          "value": -489.28000000000003,
+          "replies": 578
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 2
+          },
+          "value": -489.28000000000003,
+          "replies": 578
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 2
+          },
+          "value": -489.28000000000003,
+          "replies": 338
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 2,
+      "legal": 74,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 164
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 401
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 164
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 3,
+      "legal": 45,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 48
+            },
+            "dir": 1
+          },
+          "value": -1572.16,
+          "replies": 650
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 48
+            },
+            "dir": 1
+          },
+          "value": -1572.16,
+          "replies": 1019
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 48
+            },
+            "dir": 1
+          },
+          "value": -1572.16,
+          "replies": 1019
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 4,
+      "legal": 82,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 92
+            },
+            "dir": 3
+          },
+          "value": -138.04,
+          "replies": 622
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 92
+            },
+            "dir": 3
+          },
+          "value": -138.04,
+          "replies": 622
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 92
+            },
+            "dir": 3
+          },
+          "value": -138.04,
+          "replies": 331
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 0,
+      "legal": 76,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 348
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 422
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 175
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 1,
+      "legal": 80,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 2
+          },
+          "value": -489.28000000000003,
+          "replies": 578
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 2
+          },
+          "value": -489.28000000000003,
+          "replies": 578
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 2
+          },
+          "value": -489.28000000000003,
+          "replies": 338
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 2,
+      "legal": 74,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 164
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 401
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 164
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 3,
+      "legal": 45,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 48
+            },
+            "dir": 1
+          },
+          "value": -1572.16,
+          "replies": 650
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 48
+            },
+            "dir": 1
+          },
+          "value": -1572.16,
+          "replies": 1019
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 48
+            },
+            "dir": 1
+          },
+          "value": -1572.16,
+          "replies": 1019
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 4,
+      "legal": 82,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": 19.919999999999998,
+          "replies": 574
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": 19.919999999999998,
+          "replies": 574
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 0,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": 19.919999999999998,
+          "replies": 264
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 0,
+      "legal": 76,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 3
+          },
+          "value": -568.48,
+          "replies": 521
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 3
+          },
+          "value": -568.48,
+          "replies": 521
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 31
+            },
+            "dir": 3
+          },
+          "value": -568.48,
+          "replies": 466
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 1,
+      "legal": 70,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 63
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 126
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 63
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 620
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 63
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 126
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 2,
+      "legal": 78,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 57
+            },
+            "dir": 2
+          },
+          "value": -1445.4,
+          "replies": 839
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 57
+            },
+            "dir": 2
+          },
+          "value": -1445.4,
+          "replies": 891
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 3,
+              "to": 57
+            },
+            "dir": 2
+          },
+          "value": -1445.4,
+          "replies": 582
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 3,
+      "legal": 72,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 62
+            },
+            "dir": 2
+          },
+          "value": 1524.24,
+          "replies": 89
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 62
+            },
+            "dir": 2
+          },
+          "value": 1524.24,
+          "replies": 581
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 62
+            },
+            "dir": 2
+          },
+          "value": 1524.24,
+          "replies": 89
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581003,
+      "ply": 4,
+      "legal": 111,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 158
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 617
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 158
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581029,
+      "ply": 2,
+      "legal": 43,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 353
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 427
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 99
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581029,
+      "ply": 1,
+      "legal": 79,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 83
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 488
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 83
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581029,
+      "ply": 3,
+      "legal": 72,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": -685.12,
+          "replies": 635
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": -685.12,
+          "replies": 936
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": -685.12,
+          "replies": 936
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581029,
+      "ply": 4,
+      "legal": 76,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 353
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 427
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 11,
+              "to": 93
+            },
+            "dir": 1
+          },
+          "value": 17.759999999999998,
+          "replies": 99
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581029,
+      "ply": 1,
+      "legal": 79,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 83
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 488
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 0
+          },
+          "value": 444.24,
+          "replies": 83
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581029,
+      "ply": 3,
+      "legal": 72,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": -685.12,
+          "replies": 635
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": -685.12,
+          "replies": 936
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 64
+            },
+            "dir": 1
+          },
+          "value": -685.12,
+          "replies": 936
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581029,
+      "ply": 4,
+      "legal": 76,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 158
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 617
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 81
+            },
+            "dir": 0
+          },
+          "value": 566.8000000000001,
+          "replies": 158
+        },
+        "changed": false
+      },
+      "mode": "C",
+      "seed": 581029,
+      "ply": 2,
+      "legal": 43,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 8
+            },
+            "dir": 2
+          },
+          "value": 121.80000000000001,
+          "replies": 169
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 8
+            },
+            "dir": 2
+          },
+          "value": 121.80000000000001,
+          "replies": 367
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 8
+            },
+            "dir": 2
+          },
+          "value": 121.80000000000001,
+          "replies": 102
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 0,
+      "legal": 70,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 63
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 386
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 63
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 1,
+      "legal": 42,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 30
+            },
+            "dir": 3
+          },
+          "value": -85.44,
+          "replies": 420
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 30
+            },
+            "dir": 3
+          },
+          "value": -85.44,
+          "replies": 420
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 30
+            },
+            "dir": 3
+          },
+          "value": -85.44,
+          "replies": 84
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 2,
+      "legal": 56,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -635,
+          "replies": 285
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -635,
+          "replies": 399
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -635,
+          "replies": 183
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 3,
+      "legal": 56,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 29
+            },
+            "dir": 2
+          },
+          "value": 461.52,
+          "replies": 381
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 29
+            },
+            "dir": 2
+          },
+          "value": 461.52,
+          "replies": 381
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 29
+            },
+            "dir": 2
+          },
+          "value": 461.52,
+          "replies": 186
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 4,
+      "legal": 51,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 0
+          },
+          "value": 49.43999999999999,
+          "replies": 336
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 0
+          },
+          "value": 49.43999999999999,
+          "replies": 375
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 0
+          },
+          "value": 49.43999999999999,
+          "replies": 186
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 0,
+      "legal": 69,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 26
+            },
+            "dir": 2
+          },
+          "value": -184.48000000000002,
+          "replies": 63
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 26
+            },
+            "dir": 2
+          },
+          "value": -184.48000000000002,
+          "replies": 390
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 26
+            },
+            "dir": 2
+          },
+          "value": -184.48000000000002,
+          "replies": 63
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 1,
+      "legal": 52,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -57.04,
+          "replies": 245
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -57.04,
+          "replies": 392
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -57.04,
+          "replies": 136
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 2,
+      "legal": 56,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 2
+          },
+          "value": -131.52,
+          "replies": 271
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 2
+          },
+          "value": -131.52,
+          "replies": 361
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 2
+          },
+          "value": -131.52,
+          "replies": 109
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 3,
+      "legal": 53,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 3
+            },
+            "dir": 1
+          },
+          "value": -533.5600000000001,
+          "replies": 243
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 3
+            },
+            "dir": 1
+          },
+          "value": -533.5600000000001,
+          "replies": 270
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 3
+            },
+            "dir": 1
+          },
+          "value": -533.5600000000001,
+          "replies": 112
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 4,
+      "legal": 44,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 0
+          },
+          "value": 49.43999999999999,
+          "replies": 336
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 0
+          },
+          "value": 49.43999999999999,
+          "replies": 375
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 0
+          },
+          "value": 49.43999999999999,
+          "replies": 186
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 0,
+      "legal": 69,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 26
+            },
+            "dir": 2
+          },
+          "value": -184.48000000000002,
+          "replies": 63
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 26
+            },
+            "dir": 2
+          },
+          "value": -184.48000000000002,
+          "replies": 390
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 26
+            },
+            "dir": 2
+          },
+          "value": -184.48000000000002,
+          "replies": 63
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 1,
+      "legal": 52,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -57.04,
+          "replies": 245
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -57.04,
+          "replies": 392
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -57.04,
+          "replies": 136
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 2,
+      "legal": 56,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 2
+          },
+          "value": -131.52,
+          "replies": 271
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 2
+          },
+          "value": -131.52,
+          "replies": 361
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 32
+            },
+            "dir": 2
+          },
+          "value": -131.52,
+          "replies": 109
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 3,
+      "legal": 53,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 3
+            },
+            "dir": 1
+          },
+          "value": -533.5600000000001,
+          "replies": 243
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 3
+            },
+            "dir": 1
+          },
+          "value": -533.5600000000001,
+          "replies": 270
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 2,
+              "to": 3
+            },
+            "dir": 1
+          },
+          "value": -533.5600000000001,
+          "replies": 112
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 4,
+      "legal": 44,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 8
+            },
+            "dir": 2
+          },
+          "value": 121.80000000000001,
+          "replies": 169
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 8
+            },
+            "dir": 2
+          },
+          "value": 121.80000000000001,
+          "replies": 367
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 8
+            },
+            "dir": 2
+          },
+          "value": 121.80000000000001,
+          "replies": 102
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 0,
+      "legal": 70,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": false,
+      "oldPermutationSame": false,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 63
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 386
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 63
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 1,
+      "legal": 42,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 30
+            },
+            "dir": 3
+          },
+          "value": -85.44,
+          "replies": 420
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 30
+            },
+            "dir": 3
+          },
+          "value": -85.44,
+          "replies": 420
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 30
+            },
+            "dir": 3
+          },
+          "value": -85.44,
+          "replies": 84
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 2,
+      "legal": 56,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -635,
+          "replies": 285
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -635,
+          "replies": 399
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 5,
+              "to": 27
+            },
+            "dir": 2
+          },
+          "value": -635,
+          "replies": 183
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 3,
+      "legal": 56,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 29
+            },
+            "dir": 2
+          },
+          "value": 461.52,
+          "replies": 381
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 29
+            },
+            "dir": 2
+          },
+          "value": 461.52,
+          "replies": 381
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 6,
+              "to": 29
+            },
+            "dir": 2
+          },
+          "value": 461.52,
+          "replies": 186
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581003,
+      "ply": 4,
+      "legal": 51,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 63
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 408
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 63
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581029,
+      "ply": 1,
+      "legal": 51,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    },
+    {
+      "cutoff": {
+        "legacy": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 63
+        },
+        "exact": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 408
+        },
+        "bounded": {
+          "action": {
+            "wall": {
+              "wall": 4,
+              "to": 9
+            },
+            "dir": 0
+          },
+          "value": -244.95999999999998,
+          "replies": 63
+        },
+        "changed": false
+      },
+      "mode": "D",
+      "seed": 581029,
+      "ply": 1,
+      "legal": 51,
+      "evaluationRotationInvariant": true,
+      "oldRotatedSame": true,
+      "oldPermutationSame": true,
+      "orientedRotatedSame": true
+    }
+  ],
+  "adopt": false,
+  "limits": [
+    "Same-seed rotation mismatch alone is not a bug: old random draws attach to enumeration order.",
+    "Canonicalization changes enumeration and alpha cutoffs as well as tie handling; strength must be measured.",
+    "No optimal-fairness or human-fun certification."
+  ]
+}

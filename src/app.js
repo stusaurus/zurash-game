@@ -1,3 +1,4 @@
+import {openLearning,learningContext,learningFeature} from './learning.js';
 import {widthOf,heightOf,isPlayable} from "./geometry.js";
 import {mountLab} from "./lab-ui.js";
 import {
@@ -36,6 +37,28 @@ for (let i = 4; i < LAYOUTS.length; i++) {
   const l = LAYOUTS[i]; option.textContent = `${l.name} · 星${l.stars.length}／壁${l.walls.length}／${l.target}個先取`;
   $("layout").append(option);
 }
+// Research recording is loaded only through an explicit research URL and starts on consent.
+const playtest = new URLSearchParams(location.search).get('playtest') === '1'
+  ? (await import('./playtest-record.js')).mountPlaytest(() => ({
+      mode: customBoard ? customName : activeSettings.layout >= 4 ? LAYOUTS[activeSettings.layout].id : null,
+      opponent: mode, difficulty: mode === "cpu" ? activeSettings.level : null, state,
+    })) : null;
+let learningTurns=[], learningCounted=false;
+const learningStore=openLearning({getItem:k=>localStorage.getItem(k),setItem:(k,v)=>localStorage.setItem(k,v),removeItem:k=>localStorage.removeItem(k)});
+function renderLearning(){
+ const m=learningStore.model, text=`あなたの学習対戦：${m.wins}勝 ${m.losses}敗 ${m.draws}引き分け・未決着 / 計${m.total}局 · ${m.samples}手を学習。${learningStore.warning}`;
+ $('learningStats').textContent=text;$('learningStatus').textContent=text;
+ $('learningStatus').hidden=!(mode==='cpu'&&activeSettings.level==='learning');
+ $('learningUnresolved').hidden=!(mode==='cpu'&&activeSettings.level==='learning'&&state?.winner===null&&!learningCounted);
+ $('learningOptions').hidden=$('cpuLevel').value!=='learning';
+}
+$('cpuLevel').addEventListener('change',renderLearning);
+$('learningUnresolved').onclick=()=>{$('learningUnresolvedConfirm').hidden=false;};
+$('learningUnresolvedNo').onclick=()=>{$('learningUnresolvedConfirm').hidden=true;};
+$('learningUnresolvedYes').onclick=()=>{if(mode!=='cpu'||activeSettings.level!=='learning'||learningCounted||state.winner!==null)return;learningCounted=true;learningStore.finish(learningTurns,null);reset();};
+$('learningReset').onclick=()=>{$('learningResetConfirm').hidden=false;};
+$('learningResetNo').onclick=()=>{$('learningResetConfirm').hidden=true;};
+$('learningResetYes').onclick=()=>{const cleared=learningStore.reset();$('learningResetConfirm').hidden=true;if(cleared&&mode==='cpu'&&activeSettings.level==='learning')reset();renderLearning();};
 const tokenEls = [0, 1].map((p) => {
   const el = document.createElement("div");
   el.className = `token p${p + 1}`;
@@ -54,6 +77,8 @@ function remember() {
   seen.set(k, (seen.get(k) || 0) + 1);
 }
 function render() {
+  renderLearning();
+  $("undo").hidden=mode === "cpu" && activeSettings.level === "learning";
   const locked = busy || cpuTurn() || state.winner !== null,
     moves = phase === "wall" ? movableWalls(state) : [],
     stops = phase === "slide" ? slideOptions(state) : [];
@@ -93,7 +118,7 @@ function render() {
           : "氷";
     b.setAttribute(
       "aria-label",
-      `${Math.floor(i / width) + 1}行${(i % width) + 1}列 ${item}${target ? " 移動先" : ""}${stop ? " 滑走停止位置" : ""}`,
+      `${Math.floor(i / width) + 1}行${(i % width) + 1}列 ${item}${target ? " 移動先" : ""}${stop ? " 滑走停止位置" : ""}${stop && state.stars.includes(i) ? " 星を獲得" : ""}`,
     );
     b.disabled =
       locked ||
@@ -125,7 +150,7 @@ function render() {
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === state.target - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(state.target - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${activeSettings.level === "strong" ? "つよい" : "ふつう"}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${state.target}${state.scores[p] === state.target - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === state.target - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(state.target - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${({random: "やさしい", greedy: "ふつう", search: "つよい", strong: "恐つよ", learning: "学習"})[activeSettings.level]}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${state.target}${state.scores[p] === state.target - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
     )
     .join("");
   const last = moveLog.at(-1);
@@ -149,7 +174,13 @@ function render() {
           ? "CPUが考えています…"
           : `${mode === "cpu" ? "あなた" : `プレイヤー${state.turn + 1}`}：${phase === "wall" ? "壁をずらそう" : "方向を選んで滑ろう"}`;
   $("message").textContent =
-    (seen.get(key(state)) || 0) >= 3
+    state.winner !== null
+      ? "対戦終了。最後の盤面を見ながら、結果をもう一度確認できます。"
+      : busy
+        ? "滑走中です。動きが止まったら次の手番です。"
+        : cpuTurn()
+          ? "CPUが考えています。次のあなたの手番まで待ってね。"
+          : (seen.get(key(state)) || 0) >= 3
       ? "同じ配置が続いています。別の壁や方向を試そう。"
       : phase === "wall"
         ? selected === null
@@ -162,6 +193,12 @@ function render() {
   $("skip").textContent =
     phase === "wall" ? "壁を動かさずに滑る →" : "停止マスか矢印を選ぼう";
   $("undo").disabled = busy || (!history.length && phase === "wall");
+  $("undo").textContent = phase === "slide" && !busy && !cpuTurn()
+    ? "↶ 選び直す" : "↶ 戻る";
+  $("undo").setAttribute("aria-label", phase === "slide" && !busy && !cpuTurn()
+    ? "この手番の壁と滑走方向を選び直す" : mode === "cpu" ? "あなたの前の手番まで戻る" : "前の手番に戻る");
+  $("showResult").hidden = state.winner === null;
+  $("showResult").disabled = busy;
   $("directions").replaceChildren();
   DIRS.forEach((d, dir) => {
     const b = document.createElement("button");
@@ -219,8 +256,11 @@ async function playSlide(dir) {
       ? null : shiftArrow(turnStart.walls[wallIndex], state.walls[wallIndex]),
     scored: next.scores[player] > state.scores[player],
   };
+  learningTurns.push(mode==='cpu'&&activeSettings.level==='learning'&&player===0
+    ? {context:learningContext(turnStart),feature:learningFeature(turnStart,{wall:wallIndex===-1?null:{wall:wallIndex},dir},next)} : null);
   history.push(clone(turnStart));
   moveLog.push(lastAction);
+  playtest?.turn(turnStart, next);
   state = next;
   busy = true;
   selected = null;
@@ -228,6 +268,9 @@ async function playSlide(dir) {
   await new Promise((r) => setTimeout(r, 280));
   if (myEpoch !== epoch) return;
   busy = false;
+  if(mode==='cpu'&&activeSettings.level==='learning'&&state.winner!==null&&!learningCounted){
+    learningCounted=true;learningStore.finish(learningTurns,state.winner);
+  }
   if (state.scores.reduce((a, b) => a + b, 0) > oldScore) flash();
   phase = "wall";
   turnStart = clone(state);
@@ -280,7 +323,7 @@ function runCPU() {
     }
   }
   try {
-    worker.postMessage({ id, state: clone(state), history: [...seen], seed: matchSeed, level: activeSettings.level });
+    worker.postMessage({ id, state: clone(state), history: [...seen], seed: matchSeed, level: activeSettings.level, opponentModel: activeSettings.level === "learning" ? learningStore.model : null });
   } catch {
     stopCPU();
     fallback(id);
@@ -321,6 +364,8 @@ function clearCelebration() {
   $("celebration").replaceChildren();
 }
 function reset() {
+  $("learningUnresolvedConfirm").hidden=true;
+  playtest?.reset();
   clearCelebration();
   epoch++;
   matchSeed = globalThis.crypto?.getRandomValues
@@ -335,6 +380,7 @@ function reset() {
   selected = null;
   history = [];
   moveLog = [];
+  learningTurns=[];learningCounted=false;
   seen = new Map();
   remember();
   turnStart = clone(state);
@@ -347,6 +393,8 @@ $("skip").onclick = () => {
   render();
 };
 $("undo").onclick = () => {
+  if(mode === "cpu" && activeSettings.level === "learning")return;
+  const studyReselect = phase === "slide" && !cpuTurn();
   clearCelebration();
   epoch++;
   stopCPU();
@@ -363,6 +411,8 @@ $("undo").onclick = () => {
   phase = "wall";
   selected = null;
   resultSeen = false;
+  playtest?.undo(studyReselect, state);
+  learningTurns.length = history.length;
   moveLog.length = history.length;
   turnStart = clone(state);
   seen = new Map();
@@ -392,6 +442,12 @@ function openSetup(nextMode) {
 $("settings").onclick = () => openSetup(mode);
 $("rematch").onclick = reset;
 $("reviewFinal").onclick = () => $("result").close();
+$("result").addEventListener("close", () => {
+  if (state.winner !== null && !busy) $("showResult").focus();
+});
+$("showResult").onclick = () => {
+  if (state.winner !== null && !busy && !$("result").open) $("result").showModal();
+};
 // Mode changes are staged in the new-match dialog; cancellation leaves the active match intact.
 let pendingMode = null;
 for (const [id, m] of [

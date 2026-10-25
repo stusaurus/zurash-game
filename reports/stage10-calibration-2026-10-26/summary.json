@@ -1,0 +1,391 @@
+{
+  "games": 256,
+  "extensions": 0,
+  "forks": 0,
+  "transitions": 29509,
+  "aiDecisions": 2298,
+  "rows": [
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "strong",
+          "strong"
+        ]
+      ],
+      "games": 32,
+      "first": 12,
+      "second": 2,
+      "unresolved": 18,
+      "positionWins": [
+        8,
+        6
+      ],
+      "settlement": 0.4375,
+      "allPlies": {
+        "mean": 197.5,
+        "median": 256,
+        "p90": 256
+      },
+      "maxQuiet": 226,
+      "firstScoreStarter": 32,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 2.632781645569623,
+        "p90": 4.722,
+        "max": 30.832
+      },
+      "nodes": {
+        "measuredTurns": 0,
+        "unmeasuredTurns": 6320,
+        "generated": null,
+        "evaluated": null,
+        "routeQueries": null,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 32
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "path",
+          "path"
+        ]
+      ],
+      "games": 32,
+      "first": 16,
+      "second": 8,
+      "unresolved": 8,
+      "positionWins": [
+        10,
+        14
+      ],
+      "settlement": 0.75,
+      "allPlies": {
+        "mean": 144.1875,
+        "median": 107,
+        "p90": 256
+      },
+      "maxQuiet": 228,
+      "firstScoreStarter": 32,
+      "cpuCap": 1,
+      "thinkCpuMs": {
+        "mean": 4.720291937581283,
+        "p90": 7.342,
+        "max": 23.019
+      },
+      "nodes": {
+        "measuredTurns": 4614,
+        "unmeasuredTurns": 0,
+        "generated": 1985261,
+        "evaluated": 1875769,
+        "routeQueries": 3750378,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 32
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "path",
+          "strong"
+        ]
+      ],
+      "games": 32,
+      "first": 13,
+      "second": 6,
+      "unresolved": 13,
+      "positionWins": [
+        13,
+        6
+      ],
+      "settlement": 0.59375,
+      "allPlies": {
+        "mean": 151.09375,
+        "median": 120,
+        "p90": 256
+      },
+      "maxQuiet": 217,
+      "firstScoreStarter": 32,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 3.862009720785926,
+        "p90": 6.874,
+        "max": 24.898
+      },
+      "nodes": {
+        "measuredTurns": 2414,
+        "unmeasuredTurns": 2421,
+        "generated": 1111497,
+        "evaluated": 1058564,
+        "routeQueries": 2116240,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 32
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "strong",
+          "path"
+        ]
+      ],
+      "games": 32,
+      "first": 13,
+      "second": 6,
+      "unresolved": 13,
+      "positionWins": [
+        13,
+        6
+      ],
+      "settlement": 0.59375,
+      "allPlies": {
+        "mean": 151.09375,
+        "median": 120,
+        "p90": 256
+      },
+      "maxQuiet": 217,
+      "firstScoreStarter": 32,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 3.8509377456049667,
+        "p90": 6.823,
+        "max": 30.868
+      },
+      "nodes": {
+        "measuredTurns": 2414,
+        "unmeasuredTurns": 2421,
+        "generated": 1111497,
+        "evaluated": 1058564,
+        "routeQueries": 2116240,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 32
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "strong",
+          "strong"
+        ]
+      ],
+      "games": 32,
+      "first": 14,
+      "second": 6,
+      "unresolved": 12,
+      "positionWins": [
+        14,
+        6
+      ],
+      "settlement": 0.625,
+      "allPlies": {
+        "mean": 92,
+        "median": 61,
+        "p90": 184
+      },
+      "maxQuiet": 179,
+      "firstScoreStarter": 28,
+      "cpuCap": 12,
+      "thinkCpuMs": {
+        "mean": 10.232281929347815,
+        "p90": 20.078,
+        "max": 102.444
+      },
+      "nodes": {
+        "measuredTurns": 0,
+        "unmeasuredTurns": 2944,
+        "generated": null,
+        "evaluated": null,
+        "routeQueries": null,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 32
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "path",
+          "path"
+        ]
+      ],
+      "games": 32,
+      "first": 26,
+      "second": 0,
+      "unresolved": 6,
+      "positionWins": [
+        12,
+        14
+      ],
+      "settlement": 0.8125,
+      "allPlies": {
+        "mean": 34.78125,
+        "median": 29,
+        "p90": 56
+      },
+      "maxQuiet": 39,
+      "firstScoreStarter": 30,
+      "cpuCap": 6,
+      "thinkCpuMs": {
+        "mean": 23.292816711590277,
+        "p90": 36.477,
+        "max": 77.33
+      },
+      "nodes": {
+        "measuredTurns": 1113,
+        "unmeasuredTurns": 0,
+        "generated": 1077635,
+        "evaluated": 898151,
+        "routeQueries": 1793702,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 32
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "path",
+          "strong"
+        ]
+      ],
+      "games": 32,
+      "first": 7,
+      "second": 8,
+      "unresolved": 17,
+      "positionWins": [
+        12,
+        3
+      ],
+      "settlement": 0.46875,
+      "allPlies": {
+        "mean": 75.8125,
+        "median": 87,
+        "p90": 112
+      },
+      "maxQuiet": 96,
+      "firstScoreStarter": 15,
+      "cpuCap": 17,
+      "thinkCpuMs": {
+        "mean": 15.235451360263836,
+        "p90": 27.762,
+        "max": 78.687
+      },
+      "nodes": {
+        "measuredTurns": 1213,
+        "unmeasuredTurns": 1213,
+        "generated": 1131000,
+        "evaluated": 1023119,
+        "routeQueries": 2045300,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 32
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "strong",
+          "path"
+        ]
+      ],
+      "games": 32,
+      "first": 7,
+      "second": 8,
+      "unresolved": 17,
+      "positionWins": [
+        12,
+        3
+      ],
+      "settlement": 0.46875,
+      "allPlies": {
+        "mean": 75.6875,
+        "median": 81,
+        "p90": 112
+      },
+      "maxQuiet": 93,
+      "firstScoreStarter": 15,
+      "cpuCap": 17,
+      "thinkCpuMs": {
+        "mean": 15.208089182493797,
+        "p90": 27.975,
+        "max": 70.718
+      },
+      "nodes": {
+        "measuredTurns": 1213,
+        "unmeasuredTurns": 1209,
+        "generated": 1132272,
+        "evaluated": 1023912,
+        "routeQueries": 2046884,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 32
+    }
+  ],
+  "comparisons": [
+    {
+      "mode": "A",
+      "board": "control",
+      "candidate": "path",
+      "control": "strong",
+      "games": 64,
+      "wins": 8,
+      "losses": 30,
+      "unresolved": 26,
+      "seedBlocks": 8,
+      "winMinusLoss": -0.34375,
+      "seedBootstrap95": [
+        -0.5625,
+        -0.09375
+      ],
+      "selfSettlementDifference": 0.3125,
+      "selfSettlementBootstrap95": [
+        -0.125,
+        0.625
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "E",
+      "board": "control",
+      "candidate": "path",
+      "control": "strong",
+      "games": 64,
+      "wins": 12,
+      "losses": 18,
+      "unresolved": 34,
+      "seedBlocks": 8,
+      "winMinusLoss": -0.09375,
+      "seedBootstrap95": [
+        -0.34375,
+        0.125
+      ],
+      "selfSettlementDifference": 0.1875,
+      "selfSettlementBootstrap95": [
+        -0.0625,
+        0.4375
+      ],
+      "adopt": false
+    }
+  ],
+  "limits": [
+    "Paired assignment games are clustered by seed, not independent",
+    "Soft 1500ms process CPU/game and 256 plies; unresolved are censored, not draws",
+    "Production strong remains untouched: its internal node counters are unmeasured/null, never zero",
+    "Production strong beam12 versus search/path/guard beam8; native settings and common CPU cap, not an isolated evaluation-only ablation",
+    "Shared host and fixed run order limit timing generalization",
+    "No production adoption or best-play fairness proof"
+  ]
+}

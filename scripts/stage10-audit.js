@@ -1,0 +1,14 @@
+import {readFileSync,writeFileSync} from 'node:fs';import {gunzipSync} from 'node:zlib';import assert from 'node:assert/strict';
+import {seeded} from '../src/ai.js';import {researchDecision,actionID} from './defense-path-ai.js';import {referenceChildren} from './stall-research.js';import {replayOriginalDefense} from './defense-source-replay.js';
+const cases=JSON.parse(gunzipSync(readFileSync('reports/defense-path-2026-10-26/positions.json.gz'))).cases,rows=[];
+for(const c of cases){const seen=new Map(c.seen),base=researchDecision(c.state,{variant:'control',rng:seeded(c.seed),seen}),guard=researchDecision(c.state,{variant:'win-guard',rng:seeded(c.seed),seen}),p=c.state.turn,matchPoint=c.state.scores[1-p]===c.state.target-1;
+ const selected=c.moves.find(m=>actionID(m.action)===actionID(guard.action));assert.ok(selected);assert.deepEqual(base.action,c.selected.control.action);
+ if(!matchPoint)assert.deepEqual(guard,base);
+ if(matchPoint&&c.safeWin)assert.equal(selected.allowsWin,false);
+ const changed=actionID(base.action)!==actionID(guard.action);
+ rows.push({mode:c.mode,source:c.source,matchPoint,changed,safeWin:c.safeWin,baseAllowsWin:c.selected.control.classification.allowsWin,guardAllowsWin:selected.allowsWin,baseAlreadySafeChanged:changed&&!c.selected.control.classification.allowsWin,legal:c.legal,rootCandidates:guard.stats.rootCandidates,guardActivated:guard.stats.defenseActivated});
+}
+const original=replayOriginalDefense(),rng=seeded(original.seed);for(let i=0;i<original.rngOffset;i++)rng();
+const result=researchDecision(original.state,{variant:'win-guard',rng,seen:new Map(original.seen)}),child=referenceChildren(original.state).find(c=>actionID(c.a)===actionID(result.action));assert.ok(child);assert.ok(referenceChildren(child.n).every(r=>r.n.winner!==1-original.state.turn));
+const summary=[...'ABCDE'].map(mode=>{const xs=rows.filter(r=>r.mode===mode);return {mode,positions:xs.length,matchPoint:xs.filter(r=>r.matchPoint).length,changes:xs.filter(r=>r.changed).length,alreadySafeChanges:xs.filter(r=>r.baseAlreadySafeChanged).length,baselineImmediateLoss:xs.filter(r=>r.baseAllowsWin).length,guardImmediateLoss:xs.filter(r=>r.guardAllowsWin).length,avoidableBaselineLoss:xs.filter(r=>r.safeWin&&r.baseAllowsWin).length,avoidableGuardLoss:xs.filter(r=>r.safeWin&&r.guardAllowsWin).length};});
+writeFileSync('reports/stage10-guard-2026-10-26/position-audit.json',JSON.stringify({summary,rows,originalWitness:{seed:original.seed,ply:original.ply,rngOffset:original.rngOffset,action:result.action,rootCandidates:result.stats.rootCandidates,independentlySafe:true},limits:['Archived diagnostic cases, not new independent games','The guard may reorder safe choices at match point: not a selected-move-only rescue','Exact equality with the original search is verified outside opponent match point']},null,2));console.log(summary);

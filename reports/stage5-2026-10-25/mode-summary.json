@@ -1,0 +1,814 @@
+[
+  {
+    "condition": [
+      "A",
+      [
+        "search",
+        "search"
+      ],
+      null
+    ],
+    "n": 16,
+    "first": 2,
+    "second": 6,
+    "actor0": 4,
+    "actor1": 4,
+    "unresolved": 8,
+    "meanDecided": 107.75,
+    "medianDecided": 139,
+    "p90Decided": 142,
+    "repeats": 0,
+    "maxQuiet": 110,
+    "p90ThinkMs": 5.153356000002532,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "A",
+      [
+        "safe",
+        "safe"
+      ],
+      null
+    ],
+    "n": 16,
+    "first": 2,
+    "second": 6,
+    "actor0": 4,
+    "actor1": 4,
+    "unresolved": 8,
+    "meanDecided": 107.75,
+    "medianDecided": 139,
+    "p90Decided": 142,
+    "repeats": 0,
+    "maxQuiet": 110,
+    "p90ThinkMs": 5.10701699999845,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "A",
+      [
+        "safe",
+        "search"
+      ],
+      null
+    ],
+    "n": 16,
+    "first": 2,
+    "second": 6,
+    "actor0": 4,
+    "actor1": 4,
+    "unresolved": 8,
+    "meanDecided": 107.75,
+    "medianDecided": 139,
+    "p90Decided": 142,
+    "repeats": 0,
+    "maxQuiet": 110,
+    "p90ThinkMs": 5.158683999999994,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "A",
+      [
+        "search",
+        "safe"
+      ],
+      null
+    ],
+    "n": 16,
+    "first": 2,
+    "second": 6,
+    "actor0": 4,
+    "actor1": 4,
+    "unresolved": 8,
+    "meanDecided": 107.75,
+    "medianDecided": 139,
+    "p90Decided": 142,
+    "repeats": 0,
+    "maxQuiet": 110,
+    "p90ThinkMs": 5.078186000000187,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "B",
+      [
+        "search",
+        "search"
+      ],
+      null
+    ],
+    "n": 8,
+    "first": 6,
+    "second": 0,
+    "actor0": 3,
+    "actor1": 3,
+    "unresolved": 2,
+    "meanDecided": 11,
+    "medianDecided": 9,
+    "p90Decided": 15,
+    "repeats": 0,
+    "maxQuiet": 86,
+    "p90ThinkMs": 17.647883999998157,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "D",
+      [
+        "search",
+        "search"
+      ],
+      null
+    ],
+    "n": 8,
+    "first": 6,
+    "second": 2,
+    "actor0": 4,
+    "actor1": 4,
+    "unresolved": 0,
+    "meanDecided": 57.25,
+    "medianDecided": 57,
+    "p90Decided": 88,
+    "repeats": 0,
+    "maxQuiet": 49,
+    "p90ThinkMs": 2.7239380000028177,
+    "firstScore": [
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "D",
+      [
+        "search",
+        "search"
+      ],
+      [
+        8,
+        27
+      ]
+    ],
+    "n": 8,
+    "first": 4,
+    "second": 4,
+    "actor0": 4,
+    "actor1": 4,
+    "unresolved": 0,
+    "meanDecided": 14.5,
+    "medianDecided": 14,
+    "p90Decided": 22,
+    "repeats": 0,
+    "maxQuiet": 11,
+    "p90ThinkMs": 2.256898999999976,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "D",
+      [
+        "search",
+        "search"
+      ],
+      [
+        13,
+        22
+      ]
+    ],
+    "n": 8,
+    "first": 2,
+    "second": 6,
+    "actor0": 4,
+    "actor1": 4,
+    "unresolved": 0,
+    "meanDecided": 53.75,
+    "medianDecided": 62,
+    "p90Decided": 91,
+    "repeats": 0,
+    "maxQuiet": 58,
+    "p90ThinkMs": 2.4663430000000517,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "D",
+      [
+        "search",
+        "search"
+      ],
+      [
+        14,
+        21
+      ]
+    ],
+    "n": 8,
+    "first": 4,
+    "second": 4,
+    "actor0": 4,
+    "actor1": 4,
+    "unresolved": 0,
+    "meanDecided": 15.5,
+    "medianDecided": 18,
+    "p90Decided": 18,
+    "repeats": 0,
+    "maxQuiet": 5,
+    "p90ThinkMs": 3.0096559999947203,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "D",
+      [
+        "search",
+        "search"
+      ],
+      [
+        16,
+        19
+      ]
+    ],
+    "n": 8,
+    "first": 6,
+    "second": 0,
+    "actor0": 3,
+    "actor1": 3,
+    "unresolved": 2,
+    "meanDecided": 47,
+    "medianDecided": 45,
+    "p90Decided": 83,
+    "repeats": 0,
+    "maxQuiet": 134,
+    "p90ThinkMs": 3.5415030000003753,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  }
+]

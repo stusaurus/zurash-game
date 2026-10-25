@@ -84,6 +84,7 @@ test("wall selection, shift, undo, skip, slide, local handoff, victory and remat
   await expect(page.locator(`[data-cell="${wall.to}"]`)).toHaveText(arrow);
   await page.locator(`[data-cell="${wall.to}"]`).click();
   await expect(page.locator("#phaseBadge")).toHaveText("2");
+  await expect(page.locator("#undo")).toContainText("選び直す");
   await page.locator("#undo").click();
   await expect(page.locator("#phaseBadge")).toHaveText("1");
   const rng = seeded(99),
@@ -113,13 +114,24 @@ test("wall selection, shift, undo, skip, slide, local handoff, victory and remat
   await page.locator("#reviewFinal").click();
   await expect(page.locator("#result")).toBeHidden();
   await expect(page.locator("#board")).toBeVisible();
+  await expect(page.locator("#showResult")).toBeVisible();
+  await page.locator("#showResult").click();
+  await expect(page.locator("#result")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.locator("#result")).toBeHidden();
+  await expect(page.locator("#showResult")).toBeFocused();
+  await page.locator("#showResult").click();
+  await expect(page.locator("#result")).toBeVisible();
+  await page.locator("#reviewFinal").click();
   await page.locator("#undo").click();
+  await expect(page.locator("#showResult")).toBeHidden();
   expect(finalAction).toBeDefined();
   await doAction(page, finalState, finalAction);
   await expect(page.locator("#result")).toBeVisible();
   await page.locator("#rematch").click();
   await expect(page.locator("#result")).toBeHidden();
   await expect(page.locator("#turnCount")).toHaveText("1手目");
+  await expect(page.locator("#showResult")).toBeHidden();
   await page.locator("#skip").click();
   await page.locator("#directions button:not([disabled])").first().click();
   await expect(page.locator("#turnCount")).toHaveText("2手目");
@@ -174,19 +186,19 @@ test("challenge mode is selectable, survives CPU turns, and can switch to normal
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
   await page.goto("/");
-  await expect(page.locator("#scores")).toContainText("CPU（つよい）");
+  await expect(page.locator("#scores")).toContainText("CPU（恐つよ）");
   await page.locator("#settings")[press]();
   await expect(page.locator("#cpuLevel")).toHaveValue("strong");
   await page.locator("#cpuLevel").selectOption("search");
   await page.locator("#start")[press]();
-  await expect(page.locator("#scores")).toContainText("CPU（ふつう）");
+  await expect(page.locator("#scores")).toContainText("CPU（つよい）");
   await page.locator("#skip")[press]();
   await page.locator("#directions button:not([disabled])").first()[press]();
   await expect(page.locator("#turnCount")).toHaveText("3手目", { timeout: 30000 });
   await page.locator("#settings")[press]();
   await page.locator("#cpuLevel").selectOption("strong");
   await page.locator("#start")[press]();
-  await expect(page.locator("#scores")).toContainText("CPU（つよい）");
+  await expect(page.locator("#scores")).toContainText("CPU（恐つよ）");
   for (let i = 0; i < 2; i++) {
     await page.locator("#skip")[press]();
     await page.locator("#directions button:not([disabled])").first()[press]();

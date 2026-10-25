@@ -1,0 +1,316 @@
+{
+  "summary": [
+    {
+      "mode": "A",
+      "positions": 32,
+      "legal": 1460,
+      "replies": 66435,
+      "uniqueWinDefense": 0,
+      "allWinDefenseOutsideBeam": 0,
+      "allScoreDefenseOutsideBeam": 2,
+      "wallOnlyScoreDefense": 7,
+      "choices": {
+        "control": {
+          "avoidableLoss": 0,
+          "avoidableScore": 2
+        },
+        "defense": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "strong": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "B",
+      "positions": 32,
+      "legal": 2228,
+      "replies": 173036,
+      "uniqueWinDefense": 0,
+      "allWinDefenseOutsideBeam": 0,
+      "allScoreDefenseOutsideBeam": 1,
+      "wallOnlyScoreDefense": 9,
+      "choices": {
+        "control": {
+          "avoidableLoss": 0,
+          "avoidableScore": 1
+        },
+        "defense": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "strong": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "C",
+      "positions": 32,
+      "legal": 2980,
+      "replies": 302183,
+      "uniqueWinDefense": 0,
+      "allWinDefenseOutsideBeam": 0,
+      "allScoreDefenseOutsideBeam": 1,
+      "wallOnlyScoreDefense": 4,
+      "choices": {
+        "control": {
+          "avoidableLoss": 0,
+          "avoidableScore": 1
+        },
+        "defense": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "strong": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "D",
+      "positions": 32,
+      "legal": 1060,
+      "replies": 37429,
+      "uniqueWinDefense": 0,
+      "allWinDefenseOutsideBeam": 1,
+      "allScoreDefenseOutsideBeam": 1,
+      "wallOnlyScoreDefense": 6,
+      "choices": {
+        "control": {
+          "avoidableLoss": 1,
+          "avoidableScore": 4
+        },
+        "defense": {
+          "avoidableLoss": 0,
+          "avoidableScore": 3
+        },
+        "path": {
+          "avoidableLoss": 0,
+          "avoidableScore": 2
+        },
+        "combined": {
+          "avoidableLoss": 0,
+          "avoidableScore": 2
+        },
+        "strong": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    },
+    {
+      "mode": "E",
+      "positions": 32,
+      "legal": 2726,
+      "replies": 277263,
+      "uniqueWinDefense": 0,
+      "allWinDefenseOutsideBeam": 0,
+      "allScoreDefenseOutsideBeam": 1,
+      "wallOnlyScoreDefense": 1,
+      "choices": {
+        "control": {
+          "avoidableLoss": 0,
+          "avoidableScore": 1
+        },
+        "defense": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "path": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "combined": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        },
+        "strong": {
+          "avoidableLoss": 0,
+          "avoidableScore": 0
+        }
+      }
+    }
+  ],
+  "deeper": [
+    {
+      "mode": "A",
+      "ply": 255,
+      "complete": true,
+      "generated": 6425,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    },
+    {
+      "mode": "A",
+      "ply": 255,
+      "complete": true,
+      "generated": 8356,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    },
+    {
+      "mode": "A",
+      "ply": 255,
+      "complete": true,
+      "generated": 8356,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    },
+    {
+      "mode": "A",
+      "ply": 255,
+      "complete": true,
+      "generated": 6425,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    },
+    {
+      "mode": "A",
+      "ply": 255,
+      "complete": true,
+      "generated": 5342,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    },
+    {
+      "mode": "A",
+      "ply": 255,
+      "complete": true,
+      "generated": 5342,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    },
+    {
+      "mode": "A",
+      "ply": 255,
+      "complete": true,
+      "generated": 7116,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    },
+    {
+      "mode": "A",
+      "ply": 255,
+      "complete": true,
+      "generated": 7116,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    },
+    {
+      "mode": "E",
+      "ply": 65,
+      "complete": false,
+      "generated": 20120,
+      "witnesses": [
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 63
+            },
+            "dir": 1
+          },
+          "plies": 3
+        }
+      ],
+      "verdict": "forced-score-witness"
+    },
+    {
+      "mode": "E",
+      "ply": 65,
+      "complete": false,
+      "generated": 20120,
+      "witnesses": [
+        {
+          "action": {
+            "wall": {
+              "wall": 1,
+              "to": 63
+            },
+            "dir": 1
+          },
+          "plies": 3
+        }
+      ],
+      "verdict": "forced-score-witness"
+    },
+    {
+      "mode": "E",
+      "ply": 64,
+      "complete": true,
+      "generated": 13090,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    },
+    {
+      "mode": "E",
+      "ply": 64,
+      "complete": true,
+      "generated": 13090,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    },
+    {
+      "mode": "E",
+      "ply": 63,
+      "complete": false,
+      "generated": 20095,
+      "witnesses": [],
+      "verdict": "unknown"
+    },
+    {
+      "mode": "E",
+      "ply": 63,
+      "complete": false,
+      "generated": 20095,
+      "witnesses": [],
+      "verdict": "unknown"
+    },
+    {
+      "mode": "E",
+      "ply": 62,
+      "complete": true,
+      "generated": 15536,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    },
+    {
+      "mode": "E",
+      "ply": 62,
+      "complete": true,
+      "generated": 15536,
+      "witnesses": [],
+      "verdict": "no-force-within-three"
+    }
+  ]
+}

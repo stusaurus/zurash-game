@@ -1,0 +1,298 @@
+{
+  "initialGames": 432,
+  "extensions": 0,
+  "forks": 0,
+  "transitions": 34394,
+  "openings": [
+    {
+      "id": "stage7-A-control",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 40,
+          "immediateScores": 1,
+          "destinations": 4
+        },
+        {
+          "turn": 1,
+          "legal": 40,
+          "immediateScores": 0,
+          "destinations": 3
+        }
+      ]
+    },
+    {
+      "id": "stage7-A-star-relocate",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 42,
+          "immediateScores": 1,
+          "destinations": 5
+        },
+        {
+          "turn": 1,
+          "legal": 42,
+          "immediateScores": 0,
+          "destinations": 3
+        }
+      ]
+    },
+    {
+      "id": "stage7-A-wall-remove",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 36,
+          "immediateScores": 1,
+          "destinations": 4
+        },
+        {
+          "turn": 1,
+          "legal": 36,
+          "immediateScores": 0,
+          "destinations": 3
+        }
+      ]
+    },
+    {
+      "id": "stage7-B-control",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 63,
+          "immediateScores": 1,
+          "destinations": 6
+        },
+        {
+          "turn": 1,
+          "legal": 34,
+          "immediateScores": 0,
+          "destinations": 4
+        }
+      ]
+    },
+    {
+      "id": "stage7-B-star-relocate",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 61,
+          "immediateScores": 1,
+          "destinations": 6
+        },
+        {
+          "turn": 1,
+          "legal": 33,
+          "immediateScores": 0,
+          "destinations": 4
+        }
+      ]
+    },
+    {
+      "id": "stage7-B-wall-remove",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 59,
+          "immediateScores": 1,
+          "destinations": 6
+        },
+        {
+          "turn": 1,
+          "legal": 32,
+          "immediateScores": 0,
+          "destinations": 4
+        }
+      ]
+    },
+    {
+      "id": "stage7-C-control",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 72,
+          "immediateScores": 0,
+          "destinations": 4
+        },
+        {
+          "turn": 1,
+          "legal": 72,
+          "immediateScores": 0,
+          "destinations": 7
+        }
+      ]
+    },
+    {
+      "id": "stage7-C-star-relocate",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 76,
+          "immediateScores": 0,
+          "destinations": 4
+        },
+        {
+          "turn": 1,
+          "legal": 76,
+          "immediateScores": 0,
+          "destinations": 7
+        }
+      ]
+    },
+    {
+      "id": "stage7-C-wall-remove",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 68,
+          "immediateScores": 0,
+          "destinations": 4
+        },
+        {
+          "turn": 1,
+          "legal": 68,
+          "immediateScores": 0,
+          "destinations": 7
+        }
+      ]
+    },
+    {
+      "id": "stage7-D-control",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 17,
+          "immediateScores": 0,
+          "destinations": 2
+        },
+        {
+          "turn": 1,
+          "legal": 17,
+          "immediateScores": 2,
+          "destinations": 5
+        }
+      ]
+    },
+    {
+      "id": "stage7-D-positions-8-27",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 31,
+          "immediateScores": 14,
+          "destinations": 5
+        },
+        {
+          "turn": 1,
+          "legal": 31,
+          "immediateScores": 14,
+          "destinations": 6
+        }
+      ]
+    },
+    {
+      "id": "stage7-D-positions-13-22",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 68,
+          "immediateScores": 15,
+          "destinations": 7
+        },
+        {
+          "turn": 1,
+          "legal": 53,
+          "immediateScores": 15,
+          "destinations": 6
+        }
+      ]
+    },
+    {
+      "id": "stage7-D-positions-14-21",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 70,
+          "immediateScores": 16,
+          "destinations": 8
+        },
+        {
+          "turn": 1,
+          "legal": 69,
+          "immediateScores": 16,
+          "destinations": 8
+        }
+      ]
+    },
+    {
+      "id": "stage7-D-positions-16-19",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 70,
+          "immediateScores": 16,
+          "destinations": 6
+        },
+        {
+          "turn": 1,
+          "legal": 72,
+          "immediateScores": 16,
+          "destinations": 8
+        }
+      ]
+    },
+    {
+      "id": "stage7-E-control",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 47,
+          "immediateScores": 0,
+          "destinations": 6
+        },
+        {
+          "turn": 1,
+          "legal": 47,
+          "immediateScores": 0,
+          "destinations": 5
+        }
+      ]
+    },
+    {
+      "id": "stage7-E-star-relocate",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 47,
+          "immediateScores": 0,
+          "destinations": 6
+        },
+        {
+          "turn": 1,
+          "legal": 47,
+          "immediateScores": 0,
+          "destinations": 5
+        }
+      ]
+    },
+    {
+      "id": "stage7-E-wall-remove",
+      "opening": [
+        {
+          "turn": 0,
+          "legal": 44,
+          "immediateScores": 0,
+          "destinations": 6
+        },
+        {
+          "turn": 1,
+          "legal": 44,
+          "immediateScores": 0,
+          "destinations": 5
+        }
+      ]
+    }
+  ],
+  "adopt": false
+}

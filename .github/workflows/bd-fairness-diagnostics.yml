@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'scripts/bd-fairness-*.js'
+      - 'scripts/defense-*.js'
+      - 'scripts/score-witness-analysis.js'
       - 'scripts/b-fairness-holdout.js'
       - 'scripts/b-policy-sensitivity.js'
       - 'scripts/stall-research.js'

@@ -1,0 +1,1507 @@
+{
+  "games": 512,
+  "extensions": 0,
+  "forks": 0,
+  "transitions": 36147,
+  "aiDecisions": 12074,
+  "rows": [
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 4,
+      "second": 2,
+      "unresolved": 10,
+      "positionWins": [
+        6,
+        0
+      ],
+      "settlement": 0.375,
+      "allPlies": {
+        "mean": 184,
+        "median": 256,
+        "p90": 256
+      },
+      "maxQuiet": 180,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 3.7496188858695536,
+        "p90": 5.561,
+        "max": 19.075
+      },
+      "nodes": {
+        "measuredTurns": 2944,
+        "unmeasuredTurns": 0,
+        "generated": 1304232,
+        "evaluated": 1260596,
+        "routeQueries": 0,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "win-guard",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 4,
+      "second": 0,
+      "unresolved": 12,
+      "positionWins": [
+        4,
+        0
+      ],
+      "settlement": 0.25,
+      "allPlies": {
+        "mean": 207.75,
+        "median": 256,
+        "p90": 256
+      },
+      "maxQuiet": 199,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 3.687309265944647,
+        "p90": 5.448,
+        "max": 15.722
+      },
+      "nodes": {
+        "measuredTurns": 3324,
+        "unmeasuredTurns": 0,
+        "generated": 1466078,
+        "evaluated": 1425176,
+        "routeQueries": 59662,
+        "guardActivations": 76
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "win-guard",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 4,
+      "second": 1,
+      "unresolved": 11,
+      "positionWins": [
+        5,
+        0
+      ],
+      "settlement": 0.3125,
+      "allPlies": {
+        "mean": 195.875,
+        "median": 256,
+        "p90": 256
+      },
+      "maxQuiet": 199,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 3.865673261008294,
+        "p90": 5.799,
+        "max": 16.67
+      },
+      "nodes": {
+        "measuredTurns": 3134,
+        "unmeasuredTurns": 0,
+        "generated": 1385155,
+        "evaluated": 1342886,
+        "routeQueries": 29831,
+        "guardActivations": 38
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "A",
+        "control",
+        [
+          "control",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 4,
+      "second": 1,
+      "unresolved": 11,
+      "positionWins": [
+        5,
+        0
+      ],
+      "settlement": 0.3125,
+      "allPlies": {
+        "mean": 195.875,
+        "median": 256,
+        "p90": 256
+      },
+      "maxQuiet": 199,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 3.7187166560306335,
+        "p90": 5.571,
+        "max": 11.274
+      },
+      "nodes": {
+        "measuredTurns": 3134,
+        "unmeasuredTurns": 0,
+        "generated": 1385155,
+        "evaluated": 1342886,
+        "routeQueries": 29831,
+        "guardActivations": 38
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 16,
+      "second": 0,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 34.5,
+        "median": 15,
+        "p90": 71
+      },
+      "maxQuiet": 64,
+      "firstScoreStarter": 16,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 7.752108695652172,
+        "p90": 12.271,
+        "max": 21.24
+      },
+      "nodes": {
+        "measuredTurns": 552,
+        "unmeasuredTurns": 0,
+        "generated": 347006,
+        "evaluated": 316132,
+        "routeQueries": 0,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "win-guard",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 14,
+      "second": 0,
+      "unresolved": 2,
+      "positionWins": [
+        8,
+        6
+      ],
+      "settlement": 0.875,
+      "allPlies": {
+        "mean": 53.375,
+        "median": 21,
+        "p90": 79
+      },
+      "maxQuiet": 161,
+      "firstScoreStarter": 16,
+      "cpuCap": 2,
+      "thinkCpuMs": {
+        "mean": 7.80902693208431,
+        "p90": 11.767,
+        "max": 27.382
+      },
+      "nodes": {
+        "measuredTurns": 854,
+        "unmeasuredTurns": 0,
+        "generated": 551204,
+        "evaluated": 520710,
+        "routeQueries": 37487,
+        "guardActivations": 36
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "win-guard",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 15,
+      "second": 0,
+      "unresolved": 1,
+      "positionWins": [
+        8,
+        7
+      ],
+      "settlement": 0.9375,
+      "allPlies": {
+        "mean": 43.9375,
+        "median": 19,
+        "p90": 79
+      },
+      "maxQuiet": 160,
+      "firstScoreStarter": 16,
+      "cpuCap": 1,
+      "thinkCpuMs": {
+        "mean": 7.614058321479374,
+        "p90": 11.661,
+        "max": 17.106
+      },
+      "nodes": {
+        "measuredTurns": 703,
+        "unmeasuredTurns": 0,
+        "generated": 449235,
+        "evaluated": 418551,
+        "routeQueries": 14642,
+        "guardActivations": 17
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "B",
+        "control",
+        [
+          "control",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 15,
+      "second": 0,
+      "unresolved": 1,
+      "positionWins": [
+        8,
+        7
+      ],
+      "settlement": 0.9375,
+      "allPlies": {
+        "mean": 44.0625,
+        "median": 19,
+        "p90": 79
+      },
+      "maxQuiet": 162,
+      "firstScoreStarter": 16,
+      "cpuCap": 1,
+      "thinkCpuMs": {
+        "mean": 7.686418439716308,
+        "p90": 11.801,
+        "max": 14.928
+      },
+      "nodes": {
+        "measuredTurns": 705,
+        "unmeasuredTurns": 0,
+        "generated": 450344,
+        "evaluated": 419660,
+        "routeQueries": 14701,
+        "guardActivations": 18
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 7,
+      "second": 6,
+      "unresolved": 3,
+      "positionWins": [
+        4,
+        9
+      ],
+      "settlement": 0.8125,
+      "allPlies": {
+        "mean": 127.5625,
+        "median": 123,
+        "p90": 185
+      },
+      "maxQuiet": 207,
+      "firstScoreStarter": 16,
+      "cpuCap": 3,
+      "thinkCpuMs": {
+        "mean": 7.991939735423806,
+        "p90": 12.084,
+        "max": 34.142
+      },
+      "nodes": {
+        "measuredTurns": 2041,
+        "unmeasuredTurns": 0,
+        "generated": 1282782,
+        "evaluated": 1246778,
+        "routeQueries": 0,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "win-guard",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 4,
+      "second": 2,
+      "unresolved": 10,
+      "positionWins": [
+        0,
+        6
+      ],
+      "settlement": 0.375,
+      "allPlies": {
+        "mean": 159.6875,
+        "median": 179,
+        "p90": 216
+      },
+      "maxQuiet": 210,
+      "firstScoreStarter": 16,
+      "cpuCap": 10,
+      "thinkCpuMs": {
+        "mean": 7.200513894324871,
+        "p90": 10.477,
+        "max": 17.371
+      },
+      "nodes": {
+        "measuredTurns": 2555,
+        "unmeasuredTurns": 0,
+        "generated": 1591698,
+        "evaluated": 1555179,
+        "routeQueries": 109431,
+        "guardActivations": 94
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "win-guard",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 6,
+      "second": 4,
+      "unresolved": 6,
+      "positionWins": [
+        2,
+        8
+      ],
+      "settlement": 0.625,
+      "allPlies": {
+        "mean": 144.0625,
+        "median": 133,
+        "p90": 216
+      },
+      "maxQuiet": 211,
+      "firstScoreStarter": 16,
+      "cpuCap": 6,
+      "thinkCpuMs": {
+        "mean": 7.389731887201733,
+        "p90": 10.835,
+        "max": 23.551
+      },
+      "nodes": {
+        "measuredTurns": 2305,
+        "unmeasuredTurns": 0,
+        "generated": 1441961,
+        "evaluated": 1405644,
+        "routeQueries": 48773,
+        "guardActivations": 43
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "B",
+        "positions-central",
+        [
+          "control",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 6,
+      "second": 4,
+      "unresolved": 6,
+      "positionWins": [
+        2,
+        8
+      ],
+      "settlement": 0.625,
+      "allPlies": {
+        "mean": 143.9375,
+        "median": 133,
+        "p90": 217
+      },
+      "maxQuiet": 211,
+      "firstScoreStarter": 16,
+      "cpuCap": 6,
+      "thinkCpuMs": {
+        "mean": 7.3421437255753315,
+        "p90": 10.734,
+        "max": 17.417
+      },
+      "nodes": {
+        "measuredTurns": 2303,
+        "unmeasuredTurns": 0,
+        "generated": 1438762,
+        "evaluated": 1402485,
+        "routeQueries": 48704,
+        "guardActivations": 41
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        16,
+        0
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 8.5,
+        "median": 8,
+        "p90": 9
+      },
+      "maxQuiet": 3,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 7.289308823529413,
+        "p90": 14.082,
+        "max": 18.497
+      },
+      "nodes": {
+        "measuredTurns": 136,
+        "unmeasuredTurns": 0,
+        "generated": 91174,
+        "evaluated": 60140,
+        "routeQueries": 0,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "win-guard",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        16,
+        0
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 20.5,
+        "median": 8,
+        "p90": 9
+      },
+      "maxQuiet": 92,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 9.518972560975607,
+        "p90": 16.608,
+        "max": 25.047
+      },
+      "nodes": {
+        "measuredTurns": 328,
+        "unmeasuredTurns": 0,
+        "generated": 248718,
+        "evaluated": 212516,
+        "routeQueries": 18722,
+        "guardActivations": 20
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "win-guard",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        16,
+        0
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 14.5,
+        "median": 8,
+        "p90": 9
+      },
+      "maxQuiet": 92,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 9.02368965517242,
+        "p90": 16.053,
+        "max": 23.157
+      },
+      "nodes": {
+        "measuredTurns": 232,
+        "unmeasuredTurns": 0,
+        "generated": 169940,
+        "evaluated": 136322,
+        "routeQueries": 5177,
+        "guardActivations": 9
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "C",
+        "control",
+        [
+          "control",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        16,
+        0
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 14.5,
+        "median": 8,
+        "p90": 9
+      },
+      "maxQuiet": 92,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 8.720306034482757,
+        "p90": 14.952,
+        "max": 23.343
+      },
+      "nodes": {
+        "measuredTurns": 232,
+        "unmeasuredTurns": 0,
+        "generated": 169940,
+        "evaluated": 136322,
+        "routeQueries": 5177,
+        "guardActivations": 9
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 10,
+      "second": 6,
+      "unresolved": 0,
+      "positionWins": [
+        14,
+        2
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 13.375,
+        "median": 7,
+        "p90": 21
+      },
+      "maxQuiet": 35,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 7.519556074766348,
+        "p90": 13.225,
+        "max": 30.65
+      },
+      "nodes": {
+        "measuredTurns": 214,
+        "unmeasuredTurns": 0,
+        "generated": 144820,
+        "evaluated": 111224,
+        "routeQueries": 0,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "win-guard",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 10,
+      "second": 6,
+      "unresolved": 0,
+      "positionWins": [
+        14,
+        2
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 22.875,
+        "median": 7,
+        "p90": 21
+      },
+      "maxQuiet": 77,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 7.689431693989079,
+        "p90": 13.125,
+        "max": 18.057
+      },
+      "nodes": {
+        "measuredTurns": 366,
+        "unmeasuredTurns": 0,
+        "generated": 243834,
+        "evaluated": 209332,
+        "routeQueries": 6698,
+        "guardActivations": 2
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "win-guard",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 10,
+      "second": 6,
+      "unresolved": 0,
+      "positionWins": [
+        14,
+        2
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 18.125,
+        "median": 7,
+        "p90": 21
+      },
+      "maxQuiet": 77,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 7.961865517241382,
+        "p90": 13.108,
+        "max": 19.048
+      },
+      "nodes": {
+        "measuredTurns": 290,
+        "unmeasuredTurns": 0,
+        "generated": 194327,
+        "evaluated": 160278,
+        "routeQueries": 3349,
+        "guardActivations": 1
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "C",
+        "star-relocate",
+        [
+          "control",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 10,
+      "second": 6,
+      "unresolved": 0,
+      "positionWins": [
+        14,
+        2
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 18.125,
+        "median": 7,
+        "p90": 21
+      },
+      "maxQuiet": 77,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 7.572141379310354,
+        "p90": 13.176,
+        "max": 19.099
+      },
+      "nodes": {
+        "measuredTurns": 290,
+        "unmeasuredTurns": 0,
+        "generated": 194327,
+        "evaluated": 160278,
+        "routeQueries": 3349,
+        "guardActivations": 1
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 12,
+      "second": 4,
+      "unresolved": 0,
+      "positionWins": [
+        8,
+        8
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 53,
+        "median": 31,
+        "p90": 45
+      },
+      "maxQuiet": 144,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 1.5737134433962248,
+        "p90": 2.377,
+        "max": 4.352
+      },
+      "nodes": {
+        "measuredTurns": 848,
+        "unmeasuredTurns": 0,
+        "generated": 251940,
+        "evaluated": 224874,
+        "routeQueries": 0,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "win-guard",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 10,
+      "second": 6,
+      "unresolved": 0,
+      "positionWins": [
+        2,
+        14
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 67.875,
+        "median": 45,
+        "p90": 83
+      },
+      "maxQuiet": 210,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 1.745176795580109,
+        "p90": 2.711,
+        "max": 7.87
+      },
+      "nodes": {
+        "measuredTurns": 1086,
+        "unmeasuredTurns": 0,
+        "generated": 338110,
+        "evaluated": 310586,
+        "routeQueries": 28972,
+        "guardActivations": 96
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "win-guard",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 11,
+      "second": 5,
+      "unresolved": 0,
+      "positionWins": [
+        5,
+        11
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 52.4375,
+        "median": 39,
+        "p90": 79
+      },
+      "maxQuiet": 144,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 1.7682216924910608,
+        "p90": 2.703,
+        "max": 34.246
+      },
+      "nodes": {
+        "measuredTurns": 839,
+        "unmeasuredTurns": 0,
+        "generated": 254605,
+        "evaluated": 228688,
+        "routeQueries": 8764,
+        "guardActivations": 39
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "D",
+        "control",
+        [
+          "control",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 11,
+      "second": 5,
+      "unresolved": 0,
+      "positionWins": [
+        5,
+        11
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 52.4375,
+        "median": 39,
+        "p90": 79
+      },
+      "maxQuiet": 144,
+      "firstScoreStarter": 8,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 1.642531585220501,
+        "p90": 2.51,
+        "max": 7.556
+      },
+      "nodes": {
+        "measuredTurns": 839,
+        "unmeasuredTurns": 0,
+        "generated": 254605,
+        "evaluated": 228688,
+        "routeQueries": 8764,
+        "guardActivations": 39
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        0,
+        16
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 15,
+        "median": 13,
+        "p90": 18
+      },
+      "maxQuiet": 5,
+      "firstScoreStarter": 16,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 1.8714375,
+        "p90": 3.24,
+        "max": 7.795
+      },
+      "nodes": {
+        "measuredTurns": 240,
+        "unmeasuredTurns": 0,
+        "generated": 84066,
+        "evaluated": 60360,
+        "routeQueries": 0,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "win-guard",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        0,
+        16
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 15,
+        "median": 13,
+        "p90": 18
+      },
+      "maxQuiet": 5,
+      "firstScoreStarter": 16,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 1.6673791666666662,
+        "p90": 2.876,
+        "max": 7.168
+      },
+      "nodes": {
+        "measuredTurns": 240,
+        "unmeasuredTurns": 0,
+        "generated": 84066,
+        "evaluated": 60360,
+        "routeQueries": 2846,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "win-guard",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        0,
+        16
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 15,
+        "median": 13,
+        "p90": 18
+      },
+      "maxQuiet": 5,
+      "firstScoreStarter": 16,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 1.632966666666666,
+        "p90": 2.773,
+        "max": 5.117
+      },
+      "nodes": {
+        "measuredTurns": 240,
+        "unmeasuredTurns": 0,
+        "generated": 84066,
+        "evaluated": 60360,
+        "routeQueries": 1423,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "D",
+        "positions-14-21",
+        [
+          "control",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 8,
+      "second": 8,
+      "unresolved": 0,
+      "positionWins": [
+        0,
+        16
+      ],
+      "settlement": 1,
+      "allPlies": {
+        "mean": 15,
+        "median": 13,
+        "p90": 18
+      },
+      "maxQuiet": 5,
+      "firstScoreStarter": 16,
+      "cpuCap": 0,
+      "thinkCpuMs": {
+        "mean": 1.6429958333333337,
+        "p90": 2.81,
+        "max": 4.471
+      },
+      "nodes": {
+        "measuredTurns": 240,
+        "unmeasuredTurns": 0,
+        "generated": 84066,
+        "evaluated": 60360,
+        "routeQueries": 1423,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "control",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 4,
+      "second": 2,
+      "unresolved": 10,
+      "positionWins": [
+        4,
+        2
+      ],
+      "settlement": 0.375,
+      "allPlies": {
+        "mean": 77.3125,
+        "median": 72,
+        "p90": 110
+      },
+      "maxQuiet": 91,
+      "firstScoreStarter": 16,
+      "cpuCap": 10,
+      "thinkCpuMs": {
+        "mean": 14.571679870654803,
+        "p90": 23.769,
+        "max": 39.55
+      },
+      "nodes": {
+        "measuredTurns": 1237,
+        "unmeasuredTurns": 0,
+        "generated": 1066095,
+        "evaluated": 1026367,
+        "routeQueries": 0,
+        "guardActivations": 0
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "win-guard",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 4,
+      "second": 2,
+      "unresolved": 10,
+      "positionWins": [
+        4,
+        2
+      ],
+      "settlement": 0.375,
+      "allPlies": {
+        "mean": 76,
+        "median": 71,
+        "p90": 107
+      },
+      "maxQuiet": 88,
+      "firstScoreStarter": 16,
+      "cpuCap": 10,
+      "thinkCpuMs": {
+        "mean": 14.847246710526301,
+        "p90": 24.222,
+        "max": 47.067
+      },
+      "nodes": {
+        "measuredTurns": 1216,
+        "unmeasuredTurns": 0,
+        "generated": 1046645,
+        "evaluated": 1008459,
+        "routeQueries": 42477,
+        "guardActivations": 21
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "win-guard",
+          "control"
+        ]
+      ],
+      "games": 16,
+      "first": 4,
+      "second": 2,
+      "unresolved": 10,
+      "positionWins": [
+        4,
+        2
+      ],
+      "settlement": 0.375,
+      "allPlies": {
+        "mean": 77.5,
+        "median": 72,
+        "p90": 109
+      },
+      "maxQuiet": 90,
+      "firstScoreStarter": 16,
+      "cpuCap": 10,
+      "thinkCpuMs": {
+        "mean": 14.591504032258053,
+        "p90": 23.894,
+        "max": 42.923
+      },
+      "nodes": {
+        "measuredTurns": 1240,
+        "unmeasuredTurns": 0,
+        "generated": 1070764,
+        "evaluated": 1031765,
+        "routeQueries": 22083,
+        "guardActivations": 11
+      },
+      "uniqueTraces": 16
+    },
+    {
+      "condition": [
+        "E",
+        "control",
+        [
+          "control",
+          "win-guard"
+        ]
+      ],
+      "games": 16,
+      "first": 4,
+      "second": 2,
+      "unresolved": 10,
+      "positionWins": [
+        4,
+        2
+      ],
+      "settlement": 0.375,
+      "allPlies": {
+        "mean": 77.5,
+        "median": 71,
+        "p90": 109
+      },
+      "maxQuiet": 90,
+      "firstScoreStarter": 16,
+      "cpuCap": 10,
+      "thinkCpuMs": {
+        "mean": 14.55581532258063,
+        "p90": 23.525,
+        "max": 41.486
+      },
+      "nodes": {
+        "measuredTurns": 1240,
+        "unmeasuredTurns": 0,
+        "generated": 1068467,
+        "evaluated": 1029456,
+        "routeQueries": 22115,
+        "guardActivations": 11
+      },
+      "uniqueTraces": 16
+    }
+  ],
+  "comparisons": [
+    {
+      "mode": "A",
+      "board": "control",
+      "candidate": "win-guard",
+      "control": "control",
+      "games": 32,
+      "wins": 6,
+      "losses": 4,
+      "unresolved": 22,
+      "seedBlocks": 4,
+      "winMinusLoss": 0.0625,
+      "seedBootstrap95": [
+        0,
+        0.1875
+      ],
+      "selfSettlementDifference": -0.125,
+      "selfSettlementBootstrap95": [
+        -0.375,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "B",
+      "board": "control",
+      "candidate": "win-guard",
+      "control": "control",
+      "games": 32,
+      "wins": 16,
+      "losses": 14,
+      "unresolved": 2,
+      "seedBlocks": 4,
+      "winMinusLoss": 0.0625,
+      "seedBootstrap95": [
+        0,
+        0.1875
+      ],
+      "selfSettlementDifference": -0.125,
+      "selfSettlementBootstrap95": [
+        -0.375,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "B",
+      "board": "positions-central",
+      "candidate": "win-guard",
+      "control": "control",
+      "games": 32,
+      "wins": 14,
+      "losses": 6,
+      "unresolved": 12,
+      "seedBlocks": 4,
+      "winMinusLoss": 0.25,
+      "seedBootstrap95": [
+        0.25,
+        0.25
+      ],
+      "selfSettlementDifference": -0.4375,
+      "selfSettlementBootstrap95": [
+        -0.5,
+        -0.3125
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "C",
+      "board": "control",
+      "candidate": "win-guard",
+      "control": "control",
+      "games": 32,
+      "wins": 16,
+      "losses": 16,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLoss": 0,
+      "seedBootstrap95": [
+        0,
+        0
+      ],
+      "selfSettlementDifference": 0,
+      "selfSettlementBootstrap95": [
+        0,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "C",
+      "board": "star-relocate",
+      "candidate": "win-guard",
+      "control": "control",
+      "games": 32,
+      "wins": 16,
+      "losses": 16,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLoss": 0,
+      "seedBootstrap95": [
+        0,
+        0
+      ],
+      "selfSettlementDifference": 0,
+      "selfSettlementBootstrap95": [
+        0,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "D",
+      "board": "control",
+      "candidate": "win-guard",
+      "control": "control",
+      "games": 32,
+      "wins": 18,
+      "losses": 14,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLoss": 0.125,
+      "seedBootstrap95": [
+        -0.25,
+        0.5
+      ],
+      "selfSettlementDifference": 0,
+      "selfSettlementBootstrap95": [
+        0,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "D",
+      "board": "positions-14-21",
+      "candidate": "win-guard",
+      "control": "control",
+      "games": 32,
+      "wins": 16,
+      "losses": 16,
+      "unresolved": 0,
+      "seedBlocks": 4,
+      "winMinusLoss": 0,
+      "seedBootstrap95": [
+        0,
+        0
+      ],
+      "selfSettlementDifference": 0,
+      "selfSettlementBootstrap95": [
+        0,
+        0
+      ],
+      "adopt": false
+    },
+    {
+      "mode": "E",
+      "board": "control",
+      "candidate": "win-guard",
+      "control": "control",
+      "games": 32,
+      "wins": 6,
+      "losses": 6,
+      "unresolved": 20,
+      "seedBlocks": 4,
+      "winMinusLoss": 0,
+      "seedBootstrap95": [
+        0,
+        0
+      ],
+      "selfSettlementDifference": 0,
+      "selfSettlementBootstrap95": [
+        0,
+        0
+      ],
+      "adopt": false
+    }
+  ],
+  "limits": [
+    "Paired assignment games are clustered by seed, not independent",
+    "Soft 1500ms process CPU/game and 256 plies; unresolved are censored, not draws",
+    "Production strong remains untouched: its internal node counters are unmeasured/null, never zero",
+    "Production strong beam12 versus search/path/guard beam8; native settings and common CPU cap, not an isolated evaluation-only ablation",
+    "Shared host and fixed run order limit timing generalization",
+    "No production adoption or best-play fairness proof"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "c143c31eeffa9a08ee08b89bcc211bb9935fbc10",
+  "newSeeds": [
+    641003,
+    641029,
+    641053,
+    641081,
+    649003,
+    649029,
+    649053,
+    649081,
+    649107,
+    649131,
+    649153,
+    649179
+  ],
+  "checkedOlderPlanFiles": 38,
+  "overlapHits": [],
+  "policyTunedAfterResults": false,
+  "productionSourceChanged": false,
+  "guardProbe": "160 archived diagnostic cases; no parameter tuning",
+  "guardEvaluation": "4 unused seed blocks on eight boards",
+  "calibration": "8 other unused seed blocks, current A/E against unchanged production strong",
+  "codeHashes": {
+    "tests/stage10-guard.test.js": "9d207d337db443268fd6ca39e0a5031d562b68bcf601fe68ece99cdc063534ae",
+    "scripts/stage10-policy.js": "df21c6ea92f1430ab882cab272af065e6a631343c546209090b421ecfedfeead",
+    "scripts/stage10-verify.js": "ac6f49c2e128dea36881f9f63c1f9c2d4a18d19735c71dca8d27ccd46b1cd3ca",
+    "scripts/stage10-audit.js": "2aa919cf5645e08ee99f38c52d467e3ff32ad9950b326debb66e565716e72400",
+    "scripts/defense-path-ai.js": "f639027812f48ff2aa39447042ba956438493b3f61aeb3f75bffb1cbffb4d45e",
+    "scripts/stage10-calibration-study.js": "bae5562a6287b2e962c2470257af88d869b7539f0de5e8647e3c692a620fd9a3",
+    "scripts/stage10-guard-study.js": "746c5e2b51a5fcd50433d0de8fb7fcbb577379221f69d032c60f4555e81c0e64",
+    "scripts/stage10-report.js": "ca7113ca2ec5d8c15777aa6147cca1017bbd168b1ccf9e0728b884b69d6ddc13"
+  }
+}

@@ -1,0 +1,1223 @@
+{
+  "rows": [
+    {
+      "mode": "A",
+      "id": "s-1dbc59f3f5568e4e473995b871b8bf90616c8e00615418db5329f830658d8c93",
+      "ply": 439,
+      "legal": 21,
+      "action": {
+        "wall": {
+          "wall": 5,
+          "to": 17
+        },
+        "dir": 3
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 2.3343580000000657
+        },
+        "distances": {
+          "calls": 1054,
+          "ms": 6.138853999997082
+        },
+        "evaluate": {
+          "calls": 527,
+          "ms": 6.708117000005132
+        },
+        "key": {
+          "calls": 29,
+          "ms": 0.22490900000138936
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 9.916094999999586
+        }
+      },
+      "boardUpdateMs": 0.08660522000000129,
+      "heapBefore": {
+        "rss": 267608064,
+        "heapTotal": 185786368,
+        "heapUsed": 79163176,
+        "external": 37825265,
+        "arrayBuffers": 7458586
+      },
+      "heapAfter": {
+        "rss": 268263424,
+        "heapTotal": 187097088,
+        "heapUsed": 87477216,
+        "external": 37825305,
+        "arrayBuffers": 7458586
+      }
+    },
+    {
+      "mode": "A",
+      "id": "s-593da48722ca96293d037c056d21ad8e199fbab5752120fddcd9bfc5bfd088f5",
+      "ply": 353,
+      "legal": 69,
+      "action": {
+        "wall": {
+          "wall": 1,
+          "to": 27
+        },
+        "dir": 0
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 0.7117919999996047
+        },
+        "distances": {
+          "calls": 886,
+          "ms": 4.58791600000086
+        },
+        "evaluate": {
+          "calls": 443,
+          "ms": 4.786002999998345
+        },
+        "key": {
+          "calls": 77,
+          "ms": 0.40272399999730624
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 6.13392500000009
+        }
+      },
+      "boardUpdateMs": 0.08843437999999879,
+      "heapBefore": {
+        "rss": 268263424,
+        "heapTotal": 187097088,
+        "heapUsed": 87478696,
+        "external": 37825305,
+        "arrayBuffers": 7458586
+      },
+      "heapAfter": {
+        "rss": 268525568,
+        "heapTotal": 187097088,
+        "heapUsed": 97733448,
+        "external": 37825305,
+        "arrayBuffers": 7458586
+      }
+    },
+    {
+      "mode": "A",
+      "id": "s-5fcbbe463aaa0c808ab5556f128f1a4e2d10c318a54ce0a9b26e144e889c8666",
+      "ply": 403,
+      "legal": 69,
+      "action": {
+        "wall": {
+          "wall": 2,
+          "to": 20
+        },
+        "dir": 0
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 0.5448720000003959
+        },
+        "distances": {
+          "calls": 674,
+          "ms": 2.007567000004201
+        },
+        "evaluate": {
+          "calls": 337,
+          "ms": 2.168812000001253
+        },
+        "key": {
+          "calls": 77,
+          "ms": 0.22416600000042308
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 3.1180090000002565
+        }
+      },
+      "boardUpdateMs": 0.09524734999999965,
+      "heapBefore": {
+        "rss": 268525568,
+        "heapTotal": 187097088,
+        "heapUsed": 97951712,
+        "external": 37825305,
+        "arrayBuffers": 7458586
+      },
+      "heapAfter": {
+        "rss": 268656640,
+        "heapTotal": 187097088,
+        "heapUsed": 107451176,
+        "external": 37825305,
+        "arrayBuffers": 7458586
+      }
+    },
+    {
+      "mode": "A",
+      "id": "s-85c5edc492e55a859991a8a20d049b7d4d58db50c2aa8a5b4dd214334d157964",
+      "ply": 379,
+      "legal": 44,
+      "action": {
+        "wall": {
+          "wall": 3,
+          "to": 35
+        },
+        "dir": 1
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 1.0251750000006723
+        },
+        "distances": {
+          "calls": 1132,
+          "ms": 8.348897999989731
+        },
+        "evaluate": {
+          "calls": 566,
+          "ms": 8.550331000003098
+        },
+        "key": {
+          "calls": 52,
+          "ms": 0.18985799999927622
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 9.944016999999803
+        }
+      },
+      "boardUpdateMs": 0.06877003999999942,
+      "heapBefore": {
+        "rss": 268656640,
+        "heapTotal": 187097088,
+        "heapUsed": 107451968,
+        "external": 37825305,
+        "arrayBuffers": 7458586
+      },
+      "heapAfter": {
+        "rss": 268787712,
+        "heapTotal": 187097088,
+        "heapUsed": 116954960,
+        "external": 37825305,
+        "arrayBuffers": 7458586
+      }
+    },
+    {
+      "mode": "B",
+      "id": "guard-006dd5b9ef31514a7d9899ba91b3500e9cf7067459bab02f9077c7909e79718f",
+      "ply": 111,
+      "legal": 129,
+      "action": {
+        "wall": {
+          "wall": 1,
+          "to": 1
+        },
+        "dir": 1
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 2.000843999999688
+        },
+        "distances": {
+          "calls": 1286,
+          "ms": 8.357754000002842
+        },
+        "evaluate": {
+          "calls": 643,
+          "ms": 8.571468999992248
+        },
+        "key": {
+          "calls": 137,
+          "ms": 2.2164239999992787
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 13.062214999999924
+        }
+      },
+      "boardUpdateMs": 0.13807248999999955,
+      "heapBefore": {
+        "rss": 268787712,
+        "heapTotal": 187097088,
+        "heapUsed": 116967280,
+        "external": 37825305,
+        "arrayBuffers": 7458586
+      },
+      "heapAfter": {
+        "rss": 268787712,
+        "heapTotal": 187097088,
+        "heapUsed": 69459856,
+        "external": 37825305,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "B",
+      "id": "guard-026f18dca56f38ae5af2234aae9d47e661281741d59e98c4d326a2070b14ab2d",
+      "ply": 23,
+      "legal": 103,
+      "action": {
+        "wall": {
+          "wall": 9,
+          "to": 37
+        },
+        "dir": 3
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 1.1786059999999452
+        },
+        "distances": {
+          "calls": 1390,
+          "ms": 13.719169000007696
+        },
+        "evaluate": {
+          "calls": 703,
+          "ms": 14.073006999998142
+        },
+        "key": {
+          "calls": 111,
+          "ms": 0.359288999999535
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 15.851008999999976
+        }
+      },
+      "boardUpdateMs": 0.10164689000000181,
+      "heapBefore": {
+        "rss": 268787712,
+        "heapTotal": 187097088,
+        "heapUsed": 69460568,
+        "external": 37825305,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 268787712,
+        "heapTotal": 187359232,
+        "heapUsed": 85936968,
+        "external": 37825305,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "B",
+      "id": "guard-0334821e2e84e98ce4a138d20581c1ba0a036ad7bb4d6f33dba5675ee22feeb3",
+      "ply": 218,
+      "legal": 99,
+      "action": {
+        "wall": {
+          "wall": 1,
+          "to": 63
+        },
+        "dir": 0
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 0.8280879999997524
+        },
+        "distances": {
+          "calls": 874,
+          "ms": 6.852991000003385
+        },
+        "evaluate": {
+          "calls": 437,
+          "ms": 6.987633000002461
+        },
+        "key": {
+          "calls": 107,
+          "ms": 0.3612170000037622
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 8.574473000000125
+        }
+      },
+      "boardUpdateMs": 0.11579752000000099,
+      "heapBefore": {
+        "rss": 268787712,
+        "heapTotal": 187359232,
+        "heapUsed": 85937776,
+        "external": 37825305,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 268787712,
+        "heapTotal": 187359232,
+        "heapUsed": 99391408,
+        "external": 37825305,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "B",
+      "id": "guard-05536a9583c05a60660046aa7b3a6b074a5dc33851cd00b846688b1869a237c0",
+      "ply": 25,
+      "legal": 60,
+      "action": {
+        "wall": {
+          "wall": 3,
+          "to": 55
+        },
+        "dir": 1
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 0.6155170000001817
+        },
+        "distances": {
+          "calls": 1108,
+          "ms": 8.992315999996208
+        },
+        "evaluate": {
+          "calls": 554,
+          "ms": 9.26743700000452
+        },
+        "key": {
+          "calls": 68,
+          "ms": 0.2450530000000981
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 10.27875099999983
+        }
+      },
+      "boardUpdateMs": 0.06426024999999753,
+      "heapBefore": {
+        "rss": 268787712,
+        "heapTotal": 187359232,
+        "heapUsed": 99395944,
+        "external": 37825305,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 268787712,
+        "heapTotal": 187359232,
+        "heapUsed": 111094952,
+        "external": 37825305,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "C",
+      "id": "s-0b9a0ff63f80aaeb7d79e12463d8bf464a23e3997442ec1739b074f8118d90f4",
+      "ply": 56,
+      "legal": 85,
+      "action": {
+        "wall": {
+          "wall": 1,
+          "to": 32
+        },
+        "dir": 1
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 0.9448029999998653
+        },
+        "distances": {
+          "calls": 1478,
+          "ms": 10.349218000004385
+        },
+        "evaluate": {
+          "calls": 739,
+          "ms": 10.587950000014189
+        },
+        "key": {
+          "calls": 93,
+          "ms": 0.3598930000002838
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 12.19476799999984
+        }
+      },
+      "boardUpdateMs": 0.13599876000000222,
+      "heapBefore": {
+        "rss": 268787712,
+        "heapTotal": 187359232,
+        "heapUsed": 111097392,
+        "external": 37825305,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 62961696,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "C",
+      "id": "s-26513ff31520aa59263a413b47056c57d3e59f070acee0135adb0656ba5e2609",
+      "ply": 60,
+      "legal": 131,
+      "action": {
+        "wall": {
+          "wall": 5,
+          "to": 75
+        },
+        "dir": 0
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 0.8452539999989312
+        },
+        "distances": {
+          "calls": 1690,
+          "ms": 12.46748199998774
+        },
+        "evaluate": {
+          "calls": 845,
+          "ms": 12.781412000001637
+        },
+        "key": {
+          "calls": 139,
+          "ms": 0.47157000000106564
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 14.366101000000072
+        }
+      },
+      "boardUpdateMs": 0.10436057999999776,
+      "heapBefore": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 62962504,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 81851992,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "C",
+      "id": "s-426745a1be8253a885d25db6d58970324bd209c9db5d21bb3be90be21e449404",
+      "ply": 57,
+      "legal": 70,
+      "action": {
+        "wall": {
+          "wall": 2,
+          "to": 85
+        },
+        "dir": 3
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 1.1234139999992294
+        },
+        "distances": {
+          "calls": 1904,
+          "ms": 16.645931000012297
+        },
+        "evaluate": {
+          "calls": 952,
+          "ms": 16.980535000005602
+        },
+        "key": {
+          "calls": 78,
+          "ms": 0.2708099999990736
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 18.617808999999852
+        }
+      },
+      "boardUpdateMs": 0.08982377999999698,
+      "heapBefore": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 81852800,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 97982056,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "C",
+      "id": "s-77725f0e50b6aacbb7cfad7bbd78dca12332fb3fefb8cbd9dd29419269aed3a8",
+      "ply": 47,
+      "legal": 43,
+      "action": {
+        "wall": {
+          "wall": 6,
+          "to": 54
+        },
+        "dir": 0
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 1.1506930000000466
+        },
+        "distances": {
+          "calls": 2078,
+          "ms": 20.01748900000348
+        },
+        "evaluate": {
+          "calls": 1039,
+          "ms": 20.238094999993336
+        },
+        "key": {
+          "calls": 51,
+          "ms": 0.17276999999967302
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 21.785110999999688
+        }
+      },
+      "boardUpdateMs": 0.08999724000000242,
+      "heapBefore": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 97982864,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 113862128,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "D",
+      "id": "factor-D-1ca2a56595616ecc79b8bce11b3e0f29f5ee501ecba1b80aa00b0316766e27b8",
+      "ply": 121,
+      "legal": 5,
+      "action": {
+        "wall": {
+          "wall": 0,
+          "to": 9
+        },
+        "dir": 1
+      },
+      "phases": {
+        "successors": {
+          "calls": 6,
+          "ms": 0.35187999999971
+        },
+        "distances": {
+          "calls": 194,
+          "ms": 2.175321000002441
+        },
+        "evaluate": {
+          "calls": 97,
+          "ms": 2.2011809999989964
+        },
+        "key": {
+          "calls": 10,
+          "ms": 0.02572100000043065
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 2.6540799999997944
+        }
+      },
+      "boardUpdateMs": 0.029618940000000295,
+      "heapBefore": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 113864352,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 117242952,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "D",
+      "id": "factor-D-1ee4cefa5ce86642f3e43c6b3431a3db6662857ab550be23fb09ae61b4eab997",
+      "ply": 131,
+      "legal": 32,
+      "action": {
+        "wall": {
+          "wall": 2,
+          "to": 1
+        },
+        "dir": 3
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 0.24688999999943917
+        },
+        "distances": {
+          "calls": 362,
+          "ms": 0.7262220000006891
+        },
+        "evaluate": {
+          "calls": 181,
+          "ms": 0.7649739999983467
+        },
+        "key": {
+          "calls": 40,
+          "ms": 0.0669280000015533
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 1.1224820000002182
+        }
+      },
+      "boardUpdateMs": 0.06401618000000325,
+      "heapBefore": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 117243760,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 55353352,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "D",
+      "id": "factor-D-7f5bfd283ae959fc0eb3c2c35f8e3297d31381dfba1e1b8d85b5da3b1a4d2a71",
+      "ply": 115,
+      "legal": 53,
+      "action": {
+        "wall": {
+          "wall": 1,
+          "to": 19
+        },
+        "dir": 3
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 0.31065799999987576
+        },
+        "distances": {
+          "calls": 494,
+          "ms": 1.841212000003452
+        },
+        "evaluate": {
+          "calls": 247,
+          "ms": 1.8985269999939192
+        },
+        "key": {
+          "calls": 61,
+          "ms": 0.110336000001098
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 2.3826010000002498
+        }
+      },
+      "boardUpdateMs": 0.05674431999999797,
+      "heapBefore": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 55354160,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 62217536,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "D",
+      "id": "factor-D-94c85b394159b09e3c674bc365714de2bebb1d0ebff839bae9f32a9917d7294f",
+      "ply": 118,
+      "legal": 45,
+      "action": {
+        "wall": {
+          "wall": 3,
+          "to": 28
+        },
+        "dir": 0
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 0.4350650000001224
+        },
+        "distances": {
+          "calls": 584,
+          "ms": 2.0419239999937417
+        },
+        "evaluate": {
+          "calls": 292,
+          "ms": 2.12707900000305
+        },
+        "key": {
+          "calls": 53,
+          "ms": 0.09885500000063985
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 2.729573999999957
+        }
+      },
+      "boardUpdateMs": 0.04250205999999707,
+      "heapBefore": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 62218344,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 68404320,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "E",
+      "id": "s-0669e9acc2dc5c7d929c3625691ced1a85d280130b4b37a22d29522e88171754",
+      "ply": 44,
+      "legal": 98,
+      "action": {
+        "wall": {
+          "wall": 3,
+          "to": 116
+        },
+        "dir": 3
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 0.9620210000002771
+        },
+        "distances": {
+          "calls": 1008,
+          "ms": 6.354747000006228
+        },
+        "evaluate": {
+          "calls": 504,
+          "ms": 6.664156999995157
+        },
+        "key": {
+          "calls": 106,
+          "ms": 0.42528000000038446
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 8.211545000000115
+        }
+      },
+      "boardUpdateMs": 0.17422886999999718,
+      "heapBefore": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 68407016,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 85457704,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "E",
+      "id": "s-118252d8ee2e9d1fc050523c15e9e5a40dda4c14cf8c778d4fc5e0a6a4a127cf",
+      "ply": 58,
+      "legal": 94,
+      "action": {
+        "wall": {
+          "wall": 3,
+          "to": 94
+        },
+        "dir": 1
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 0.9415600000002087
+        },
+        "distances": {
+          "calls": 1684,
+          "ms": 17.905340000003434
+        },
+        "evaluate": {
+          "calls": 842,
+          "ms": 18.13349900000776
+        },
+        "key": {
+          "calls": 102,
+          "ms": 0.4178670000001148
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 19.72733100000005
+        }
+      },
+      "boardUpdateMs": 0.1176964799999996,
+      "heapBefore": {
+        "rss": 271802368,
+        "heapTotal": 189980672,
+        "heapUsed": 85458512,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 271933440,
+        "heapTotal": 189980672,
+        "heapUsed": 104443080,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "E",
+      "id": "s-15f045d61a913d2708de88b2fafd6d08246305f351d8f38e9561f2a3fc059d71",
+      "ply": 50,
+      "legal": 145,
+      "action": {
+        "wall": {
+          "wall": 13,
+          "to": 27
+        },
+        "dir": 3
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 1.4275499999998829
+        },
+        "distances": {
+          "calls": 2628,
+          "ms": 31.444666999995206
+        },
+        "evaluate": {
+          "calls": 1314,
+          "ms": 31.71342800000002
+        },
+        "key": {
+          "calls": 153,
+          "ms": 0.6423889999978201
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 34.19149900000002
+        }
+      },
+      "boardUpdateMs": 0.13764744000000065,
+      "heapBefore": {
+        "rss": 271933440,
+        "heapTotal": 189980672,
+        "heapUsed": 104444248,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 272064512,
+        "heapTotal": 189980672,
+        "heapUsed": 63006008,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    },
+    {
+      "mode": "E",
+      "id": "s-2265fc47c3ffda51ad2ac189ba061aeba7707d57185461b32407a9234ccb62a2",
+      "ply": 131,
+      "legal": 89,
+      "action": {
+        "wall": {
+          "wall": 3,
+          "to": 101
+        },
+        "dir": 1
+      },
+      "phases": {
+        "successors": {
+          "calls": 9,
+          "ms": 1.3917180000007647
+        },
+        "distances": {
+          "calls": 2290,
+          "ms": 24.173796000002312
+        },
+        "evaluate": {
+          "calls": 1145,
+          "ms": 24.342781999982435
+        },
+        "key": {
+          "calls": 97,
+          "ms": 0.6035160000010364
+        },
+        "choose": {
+          "calls": 1,
+          "ms": 26.525606000000153
+        }
+      },
+      "boardUpdateMs": 0.12804186999999728,
+      "heapBefore": {
+        "rss": 272064512,
+        "heapTotal": 189980672,
+        "heapUsed": 63006816,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      },
+      "heapAfter": {
+        "rss": 272064512,
+        "heapTotal": 189980672,
+        "heapUsed": 83305776,
+        "external": 31168722,
+        "arrayBuffers": 802003
+      }
+    }
+  ],
+  "membership": [
+    {
+      "mode": "C",
+      "id": "s-0b9a0ff63f80aaeb7d79e12463d8bf464a23e3997442ec1739b074f8118d90f4",
+      "ply": 56,
+      "batches": [
+        {
+          "before": 39.17459999999937,
+          "after": 11.647414000000026
+        },
+        {
+          "after": 10.857372999999825,
+          "before": 38.96798399999989
+        },
+        {
+          "before": 34.73130300000048,
+          "after": 9.483813000000737
+        },
+        {
+          "after": 9.56768000000011,
+          "before": 33.95713599999999
+        },
+        {
+          "before": 33.32752700000037,
+          "after": 9.597413999999844
+        }
+      ]
+    },
+    {
+      "mode": "C",
+      "id": "s-26513ff31520aa59263a413b47056c57d3e59f070acee0135adb0656ba5e2609",
+      "ply": 60,
+      "batches": [
+        {
+          "before": 42.9778409999999,
+          "after": 14.550954000000274
+        },
+        {
+          "after": 13.82349300000078,
+          "before": 50.025783999999476
+        },
+        {
+          "before": 47.94065099999989,
+          "after": 13.75809500000014
+        },
+        {
+          "after": 14.074290999999903,
+          "before": 47.813961000000745
+        },
+        {
+          "before": 53.65720599999986,
+          "after": 14.751382000000376
+        }
+      ]
+    },
+    {
+      "mode": "C",
+      "id": "s-426745a1be8253a885d25db6d58970324bd209c9db5d21bb3be90be21e449404",
+      "ply": 57,
+      "batches": [
+        {
+          "before": 66.78655299999991,
+          "after": 17.831883999999263
+        },
+        {
+          "after": 19.342029999999795,
+          "before": 64.05250299999989
+        },
+        {
+          "before": 61.520125999999436,
+          "after": 16.10752500000035
+        },
+        {
+          "after": 16.101276000000325,
+          "before": 62.92588500000056
+        },
+        {
+          "before": 59.58830500000022,
+          "after": 16.028015999999297
+        }
+      ]
+    },
+    {
+      "mode": "C",
+      "id": "s-77725f0e50b6aacbb7cfad7bbd78dca12332fb3fefb8cbd9dd29419269aed3a8",
+      "ply": 47,
+      "batches": [
+        {
+          "before": 73.15378899999996,
+          "after": 20.27158099999997
+        },
+        {
+          "after": 20.400374999999258,
+          "before": 95.64876100000038
+        },
+        {
+          "before": 101.47827700000016,
+          "after": 23.26548300000013
+        },
+        {
+          "after": 28.597208999999566,
+          "before": 114.02451500000006
+        },
+        {
+          "before": 96.35879100000056,
+          "after": 31.36097299999983
+        }
+      ]
+    },
+    {
+      "mode": "E",
+      "id": "s-0669e9acc2dc5c7d929c3625691ced1a85d280130b4b37a22d29522e88171754",
+      "ply": 44,
+      "batches": [
+        {
+          "before": 29.543644999999742,
+          "after": 8.222552000000178
+        },
+        {
+          "after": 8.673522000000048,
+          "before": 39.96018300000014
+        },
+        {
+          "before": 45.917281,
+          "after": 10.0444379999999
+        },
+        {
+          "after": 18.838731999999254,
+          "before": 46.76455799999985
+        },
+        {
+          "before": 45.0602600000002,
+          "after": 9.766238000000158
+        }
+      ]
+    },
+    {
+      "mode": "E",
+      "id": "s-118252d8ee2e9d1fc050523c15e9e5a40dda4c14cf8c778d4fc5e0a6a4a127cf",
+      "ply": 58,
+      "batches": [
+        {
+          "before": 74.13121200000023,
+          "after": 17.916231000000153
+        },
+        {
+          "after": 20.50819799999954,
+          "before": 74.48074400000041
+        },
+        {
+          "before": 76.59426399999938,
+          "after": 17.79386700000032
+        },
+        {
+          "after": 17.892124999999396,
+          "before": 70.56221300000016
+        },
+        {
+          "before": 69.08844200000021,
+          "after": 17.585322999999335
+        }
+      ]
+    },
+    {
+      "mode": "E",
+      "id": "s-15f045d61a913d2708de88b2fafd6d08246305f351d8f38e9561f2a3fc059d71",
+      "ply": 50,
+      "batches": [
+        {
+          "before": 126.26440199999888,
+          "after": 30.3380619999989
+        },
+        {
+          "after": 30.305593999999473,
+          "before": 123.98127000000022
+        },
+        {
+          "before": 128.86757399999988,
+          "after": 47.288502999999764
+        },
+        {
+          "after": 30.788790999999037,
+          "before": 135.6744239999989
+        },
+        {
+          "before": 127.46855599999981,
+          "after": 30.3486069999999
+        }
+      ]
+    },
+    {
+      "mode": "E",
+      "id": "s-2265fc47c3ffda51ad2ac189ba061aeba7707d57185461b32407a9234ccb62a2",
+      "ply": 131,
+      "batches": [
+        {
+          "before": 89.48024500000065,
+          "after": 22.796596999998656
+        },
+        {
+          "after": 23.255198000000746,
+          "before": 89.90223100000003
+        },
+        {
+          "before": 91.45710400000098,
+          "after": 22.824753000000783
+        },
+        {
+          "after": 22.88988100000097,
+          "before": 89.23075999999855
+        },
+        {
+          "before": 91.11203100000057,
+          "after": 23.079625999998825
+        }
+      ]
+    }
+  ],
+  "note": "Instrumented timings inclusive and perturbed by measurement; memory is unisolated whole-process snapshot, not peak; original membership versus current same engine; no new games"
+}

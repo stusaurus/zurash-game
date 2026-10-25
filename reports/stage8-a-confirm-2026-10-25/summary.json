@@ -1,0 +1,364 @@
+[
+  {
+    "condition": [
+      "A",
+      "control",
+      "search"
+    ],
+    "n": 32,
+    "first": 10,
+    "second": 8,
+    "actor0": 9,
+    "actor1": 9,
+    "unresolved": 14,
+    "meanDecided": 110.33333333333333,
+    "medianDecided": 105,
+    "p90Decided": 236,
+    "repeats": 0,
+    "maxQuiet": 193,
+    "p90ThinkMs": 6.516025999999329,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "A",
+      "wall-relocate",
+      "search"
+    ],
+    "n": 32,
+    "first": 8,
+    "second": 16,
+    "actor0": 12,
+    "actor1": 12,
+    "unresolved": 8,
+    "meanDecided": 82.16666666666667,
+    "medianDecided": 84,
+    "p90Decided": 119,
+    "repeats": 0,
+    "maxQuiet": 208,
+    "p90ThinkMs": 6.282004000000597,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  }
+]

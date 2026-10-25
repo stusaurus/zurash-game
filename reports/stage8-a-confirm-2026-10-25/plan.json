@@ -1,0 +1,96 @@
+{
+  "candidates": [
+    {
+      "mode": "A",
+      "name": "control",
+      "factor": "none",
+      "board": {
+        "size": 8,
+        "target": 4,
+        "walls": [
+          18,
+          36,
+          29,
+          25,
+          26,
+          8,
+          34,
+          27
+        ],
+        "stars": [
+          24,
+          45,
+          43,
+          9,
+          50,
+          33,
+          61
+        ],
+        "players": [
+          56,
+          7
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    },
+    {
+      "mode": "A",
+      "name": "wall-relocate",
+      "factor": "walls",
+      "board": {
+        "size": 8,
+        "target": 4,
+        "walls": [
+          17,
+          36,
+          29,
+          25,
+          26,
+          8,
+          34,
+          27
+        ],
+        "stars": [
+          24,
+          45,
+          43,
+          9,
+          50,
+          33,
+          61
+        ],
+        "players": [
+          56,
+          7
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    }
+  ],
+  "seeds": [
+    582001,
+    582023,
+    582047,
+    582071,
+    582097,
+    582121,
+    582149,
+    582173
+  ],
+  "maxPlies": 256,
+  "softTimeMs": 1500,
+  "policy": "search",
+  "adopt": false
+}

@@ -1,0 +1,458 @@
+[
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      3,
+      77
+    ],
+    "initial": [
+      {
+        "legal": 95,
+        "score": 0
+      },
+      {
+        "legal": 66,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      4,
+      76
+    ],
+    "initial": [
+      {
+        "legal": 99,
+        "score": 0
+      },
+      {
+        "legal": 97,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      5,
+      75
+    ],
+    "initial": [
+      {
+        "legal": 95,
+        "score": 0
+      },
+      {
+        "legal": 66,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      20,
+      60
+    ],
+    "initial": [
+      {
+        "legal": 128,
+        "score": 0
+      },
+      {
+        "legal": 96,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      21,
+      59
+    ],
+    "initial": [
+      {
+        "legal": 127,
+        "score": 0
+      },
+      {
+        "legal": 97,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      22,
+      58
+    ],
+    "initial": [
+      {
+        "legal": 132,
+        "score": 0
+      },
+      {
+        "legal": 128,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      23,
+      57
+    ],
+    "initial": [
+      {
+        "legal": 127,
+        "score": 0
+      },
+      {
+        "legal": 97,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      24,
+      56
+    ],
+    "initial": [
+      {
+        "legal": 128,
+        "score": 0
+      },
+      {
+        "legal": 96,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      28,
+      52
+    ],
+    "initial": [
+      {
+        "legal": 128,
+        "score": 0
+      },
+      {
+        "legal": 98,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      29,
+      51
+    ],
+    "initial": [
+      {
+        "legal": 126,
+        "score": 0
+      },
+      {
+        "legal": 95,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      31,
+      49
+    ],
+    "initial": [
+      {
+        "legal": 120,
+        "score": 0
+      },
+      {
+        "legal": 64,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      33,
+      47
+    ],
+    "initial": [
+      {
+        "legal": 126,
+        "score": 0
+      },
+      {
+        "legal": 95,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      34,
+      46
+    ],
+    "initial": [
+      {
+        "legal": 128,
+        "score": 0
+      },
+      {
+        "legal": 98,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      37,
+      43
+    ],
+    "initial": [
+      {
+        "legal": 130,
+        "score": 0
+      },
+      {
+        "legal": 130,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "B",
+    "changedFactor": "players-only",
+    "from": [
+      72,
+      8
+    ],
+    "to": [
+      38,
+      42
+    ],
+    "initial": [
+      {
+        "legal": 94,
+        "score": 0
+      },
+      {
+        "legal": 94,
+        "score": 0
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "D",
+    "changedFactor": "players-only",
+    "from": [
+      30,
+      5
+    ],
+    "to": [
+      8,
+      27
+    ],
+    "initial": [
+      {
+        "legal": 31,
+        "score": 14
+      },
+      {
+        "legal": 31,
+        "score": 14
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "D",
+    "changedFactor": "players-only",
+    "from": [
+      30,
+      5
+    ],
+    "to": [
+      13,
+      22
+    ],
+    "initial": [
+      {
+        "legal": 68,
+        "score": 15
+      },
+      {
+        "legal": 53,
+        "score": 15
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "D",
+    "changedFactor": "players-only",
+    "from": [
+      30,
+      5
+    ],
+    "to": [
+      14,
+      21
+    ],
+    "initial": [
+      {
+        "legal": 70,
+        "score": 16
+      },
+      {
+        "legal": 69,
+        "score": 16
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  },
+  {
+    "mode": "D",
+    "changedFactor": "players-only",
+    "from": [
+      30,
+      5
+    ],
+    "to": [
+      16,
+      19
+    ],
+    "initial": [
+      {
+        "legal": 70,
+        "score": 16
+      },
+      {
+        "legal": 72,
+        "score": 16
+      }
+    ],
+    "adopt": false,
+    "limits": "Equal first-turn score counts are only a screening proxy; final fairness, duration and strategy untested"
+  }
+]

@@ -1,0 +1,268 @@
+{
+  "candidates": [
+    {
+      "mode": "C",
+      "name": "star-relocate",
+      "factor": "stars",
+      "board": {
+        "size": 10,
+        "target": 3,
+        "walls": [
+          54,
+          32,
+          83,
+          47,
+          13,
+          73,
+          63,
+          49,
+          34,
+          16,
+          36,
+          93
+        ],
+        "stars": [
+          50,
+          52,
+          65,
+          42,
+          53
+        ],
+        "players": [
+          90,
+          9
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    },
+    {
+      "mode": "D",
+      "name": "positions-14-21",
+      "factor": "players",
+      "board": {
+        "size": 6,
+        "target": 4,
+        "walls": [
+          4,
+          31,
+          2,
+          33,
+          9,
+          26,
+          23
+        ],
+        "stars": [
+          10,
+          25,
+          20,
+          15,
+          24,
+          11,
+          35
+        ],
+        "players": [
+          14,
+          21
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    },
+    {
+      "mode": "D",
+      "name": "pair-both",
+      "wallsPaired": true,
+      "starsPaired": true,
+      "board": {
+        "size": 6,
+        "target": 4,
+        "walls": [
+          4,
+          31,
+          2,
+          33,
+          9,
+          26,
+          23,
+          12
+        ],
+        "stars": [
+          10,
+          25,
+          20,
+          15,
+          24,
+          11,
+          35,
+          0
+        ],
+        "players": [
+          14,
+          21
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      }
+    }
+  ],
+  "seeds": [
+    591003,
+    591029,
+    591053,
+    591079,
+    591103,
+    591127,
+    591151,
+    591179
+  ],
+  "specs": [
+    {
+      "mode": "C",
+      "name": "star-relocate",
+      "policies": [
+        "search",
+        "search"
+      ]
+    },
+    {
+      "mode": "C",
+      "name": "star-relocate",
+      "policies": [
+        "oriented-search",
+        "oriented-search"
+      ]
+    },
+    {
+      "mode": "C",
+      "name": "star-relocate",
+      "policies": [
+        "oriented-search",
+        "search"
+      ]
+    },
+    {
+      "mode": "C",
+      "name": "star-relocate",
+      "policies": [
+        "search",
+        "oriented-search"
+      ]
+    },
+    {
+      "mode": "C",
+      "name": "star-relocate",
+      "policies": [
+        "greedy",
+        "greedy"
+      ]
+    },
+    {
+      "mode": "C",
+      "name": "star-relocate",
+      "policies": [
+        "oriented-greedy",
+        "oriented-greedy"
+      ]
+    },
+    {
+      "mode": "D",
+      "name": "positions-14-21",
+      "policies": [
+        "search",
+        "search"
+      ]
+    },
+    {
+      "mode": "D",
+      "name": "positions-14-21",
+      "policies": [
+        "oriented-search",
+        "oriented-search"
+      ]
+    },
+    {
+      "mode": "D",
+      "name": "positions-14-21",
+      "policies": [
+        "oriented-search",
+        "search"
+      ]
+    },
+    {
+      "mode": "D",
+      "name": "positions-14-21",
+      "policies": [
+        "search",
+        "oriented-search"
+      ]
+    },
+    {
+      "mode": "D",
+      "name": "positions-14-21",
+      "policies": [
+        "greedy",
+        "greedy"
+      ]
+    },
+    {
+      "mode": "D",
+      "name": "positions-14-21",
+      "policies": [
+        "oriented-greedy",
+        "oriented-greedy"
+      ]
+    },
+    {
+      "mode": "D",
+      "name": "pair-both",
+      "policies": [
+        "search",
+        "search"
+      ]
+    },
+    {
+      "mode": "D",
+      "name": "pair-both",
+      "policies": [
+        "oriented-search",
+        "oriented-search"
+      ]
+    },
+    {
+      "mode": "D",
+      "name": "pair-both",
+      "policies": [
+        "oriented-search",
+        "search"
+      ]
+    },
+    {
+      "mode": "D",
+      "name": "pair-both",
+      "policies": [
+        "search",
+        "oriented-search"
+      ]
+    }
+  ],
+  "softTimeMs": 1500,
+  "maxPlies": 256,
+  "newInitialGames": 512,
+  "adopt": false
+}

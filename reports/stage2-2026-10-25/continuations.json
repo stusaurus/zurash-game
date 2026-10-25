@@ -1,0 +1,50 @@
+{
+  "newGames": 0,
+  "extensions": 36,
+  "addedPlies": 1415,
+  "rows": [
+    {
+      "mode": "A",
+      "extended": 9,
+      "settled": 3,
+      "remaining": 6,
+      "addedPlies": 475,
+      "addedCaptures": 3,
+      "repeated": 4,
+      "maxQuiet": 499,
+      "stopReasons": {
+        "budget-plies": 6,
+        "win": 3
+      }
+    },
+    {
+      "mode": "C",
+      "extended": 6,
+      "settled": 2,
+      "remaining": 4,
+      "addedPlies": 224,
+      "addedCaptures": 3,
+      "repeated": 2,
+      "maxQuiet": 102,
+      "stopReasons": {
+        "budget-time": 4,
+        "win": 2
+      }
+    },
+    {
+      "mode": "E",
+      "extended": 21,
+      "settled": 7,
+      "remaining": 14,
+      "addedPlies": 716,
+      "addedCaptures": 10,
+      "repeated": 0,
+      "maxQuiet": 174,
+      "stopReasons": {
+        "budget-time": 10,
+        "budget-plies": 4,
+        "win": 7
+      }
+    }
+  ]
+}

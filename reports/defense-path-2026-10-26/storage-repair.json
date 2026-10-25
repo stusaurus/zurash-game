@@ -1,0 +1,11 @@
+{
+  "cohort": "E independent confirmation",
+  "expected": 128,
+  "detectedStored": 127,
+  "missingID": "[\"E\",\"control\",[\"control\",\"path\"],639179,1,true]",
+  "action": "resume missing ID only; replace no stored game",
+  "finalStored": 128,
+  "excludedUnstoredAttempts": true,
+  "policyChange": false,
+  "finalFlush": true
+}

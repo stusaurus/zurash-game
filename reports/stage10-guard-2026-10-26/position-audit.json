@@ -1,0 +1,4240 @@
+{
+  "summary": [
+    {
+      "mode": "A",
+      "positions": 32,
+      "matchPoint": 2,
+      "changes": 0,
+      "alreadySafeChanges": 0,
+      "baselineImmediateLoss": 0,
+      "guardImmediateLoss": 0,
+      "avoidableBaselineLoss": 0,
+      "avoidableGuardLoss": 0
+    },
+    {
+      "mode": "B",
+      "positions": 32,
+      "matchPoint": 14,
+      "changes": 1,
+      "alreadySafeChanges": 1,
+      "baselineImmediateLoss": 2,
+      "guardImmediateLoss": 2,
+      "avoidableBaselineLoss": 0,
+      "avoidableGuardLoss": 0
+    },
+    {
+      "mode": "C",
+      "positions": 32,
+      "matchPoint": 11,
+      "changes": 0,
+      "alreadySafeChanges": 0,
+      "baselineImmediateLoss": 2,
+      "guardImmediateLoss": 2,
+      "avoidableBaselineLoss": 0,
+      "avoidableGuardLoss": 0
+    },
+    {
+      "mode": "D",
+      "positions": 32,
+      "matchPoint": 18,
+      "changes": 1,
+      "alreadySafeChanges": 0,
+      "baselineImmediateLoss": 2,
+      "guardImmediateLoss": 1,
+      "avoidableBaselineLoss": 1,
+      "avoidableGuardLoss": 0
+    },
+    {
+      "mode": "E",
+      "positions": 32,
+      "matchPoint": 2,
+      "changes": 0,
+      "alreadySafeChanges": 0,
+      "baselineImmediateLoss": 2,
+      "guardImmediateLoss": 2,
+      "avoidableBaselineLoss": 0,
+      "avoidableGuardLoss": 0
+    }
+  ],
+  "rows": [
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 0,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 16
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 40,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 40,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 1,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 0,
+            "to": 10
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 40,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 40,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 2,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 8
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 24,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 24,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 3,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 0,
+            "to": 11
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 42,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 42,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 0,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 0,
+            "to": 10
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 40,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 40,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 1,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 16
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 42,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 42,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 2,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 7,
+            "to": 19
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 42,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 42,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 3,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 8
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 26,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 26,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 22,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 34
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 44,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 44,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 33,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 35
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 40,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 40,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 38,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 0
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 45,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 45,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 42,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 37
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 47,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 47,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 44,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 46
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 50,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 50,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 49,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 54
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 46,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 46,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 54,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 34
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 45,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 45,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 55,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 26
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 25,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 25,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 3,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 29
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 36,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 36,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 5,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 24
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 22,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 22,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 7,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 42
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 17,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 17,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 9,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 28
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 38,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 38,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 11,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 3,
+            "to": 17
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 40,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 40,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 13,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 7,
+            "to": 44
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 19,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 19,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 15,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 42
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 42,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 42,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 17,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 41
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 54,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 54,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 255,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 24
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 75,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 75,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 255,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 28
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 81,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 81,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 255,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 28
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 81,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 81,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": true,
+        "ply": 255,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 24
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 75,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 75,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": true,
+        "ply": 255,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 5
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 48,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 48,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581029,
+        "starter": 1,
+        "swap": false,
+        "ply": 255,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 5
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 48,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 48,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581053,
+        "starter": 0,
+        "swap": true,
+        "ply": 255,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 22
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 73,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 73,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "A",
+      "source": {
+        "seed": 581053,
+        "starter": 1,
+        "swap": false,
+        "ply": 255,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 22
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 73,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 73,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 0,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 3,
+            "to": 54
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 63,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 63,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 1,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 65
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 32,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 32,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 2,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 74
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 65,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 65,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 3,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 62
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 3,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 31,
+      "rootCandidates": 8,
+      "guardActivated": true
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 0,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 3,
+            "to": 64
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 34,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 34,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 1,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 7,
+            "to": 0
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 62,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 62,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 2,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 8
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 59,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 59,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 3,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 8,
+            "to": 40
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 57,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 57,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 7,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 8
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 0,
+      "baseAllowsWin": true,
+      "guardAllowsWin": true,
+      "baseAlreadySafeChanged": false,
+      "legal": 62,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 7,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 70
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 92,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 92,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 8,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 61
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 58,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 58,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 11,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 3,
+            "to": 73
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 88,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 88,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 12,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 3,
+            "to": 64
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 56,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 56,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 60,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 7,
+            "to": 9
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 101,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 101,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 136,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 7,
+            "to": 9
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 62,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 62,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 0,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 3,
+            "to": 64
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 34,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 34,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 5,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 8
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 61,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 61,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": true,
+        "ply": 1,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 65
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 32,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 32,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": true,
+        "ply": 3,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 62
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": true,
+      "safeWin": 3,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": true,
+      "legal": 31,
+      "rootCandidates": 8,
+      "guardActivated": true
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": true,
+        "ply": 5,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 8
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 61,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 61,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": true,
+        "ply": 7,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 8
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 0,
+      "baseAllowsWin": true,
+      "guardAllowsWin": true,
+      "baseAlreadySafeChanged": false,
+      "legal": 62,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": true,
+        "ply": 5,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 52
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 64,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 64,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": true,
+        "ply": 7,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 73
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 98,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 98,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": true,
+        "ply": 9,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 72
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 95,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 95,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 180,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 58
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 68,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 68,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 179,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 0,
+            "to": 63
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 96,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 96,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 178,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 8
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 126,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 126,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 177,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 28
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 66,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 66,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 176,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 0,
+            "to": 72
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 104,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 104,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 176,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 0,
+            "to": 72
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 104,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 104,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 175,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 7
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 102,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 102,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "B",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 175,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 7
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 102,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 102,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 0,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 14
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 72,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 72,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 1,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 62
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 70,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 70,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 2,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 61
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 72,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 72,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 3,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 71
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 78,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 78,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 0,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 11,
+            "to": 92
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 72,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 72,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 1,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 11,
+            "to": 93
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 75,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 75,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 2,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 82
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 70,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 70,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 3,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 81
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 43,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 43,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 14,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 63
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 82,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 82,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 17,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 11,
+            "to": 95
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 72,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 72,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 18,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 10,
+            "to": 45
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 106,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 106,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 21,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 64
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 0,
+      "baseAllowsWin": true,
+      "guardAllowsWin": true,
+      "baseAlreadySafeChanged": false,
+      "legal": 115,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 22,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 0,
+            "to": 63
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 120,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 120,
+      "rootCandidates": 0,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 4,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 3,
+            "to": 46
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 78,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 78,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 5,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 62
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 113,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 113,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 6,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 0,
+            "to": 64
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 0,
+      "baseAllowsWin": true,
+      "guardAllowsWin": true,
+      "baseAlreadySafeChanged": false,
+      "legal": 80,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 5,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 10,
+            "to": 35
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 80,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 80,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 7,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 0,
+            "to": 64
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 80,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 80,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 9,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 0,
+            "to": 74
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 79,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 79,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 11,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 7,
+            "to": 69
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 128,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 128,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 13,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 64
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 76,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 76,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 15,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 70
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 114,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 114,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 19,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 4
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 111,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 111,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 0,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 11,
+            "to": 92
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 72,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 72,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581053,
+        "starter": 0,
+        "swap": true,
+        "ply": 125,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 8,
+            "to": 42
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 120,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 120,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581053,
+        "starter": 1,
+        "swap": false,
+        "ply": 125,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 8,
+            "to": 42
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 120,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 120,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581053,
+        "starter": 0,
+        "swap": true,
+        "ply": 124,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 92
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 109,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 109,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581053,
+        "starter": 1,
+        "swap": false,
+        "ply": 124,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 92
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 109,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 109,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581053,
+        "starter": 0,
+        "swap": true,
+        "ply": 123,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 7,
+            "to": 38
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 112,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 112,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581053,
+        "starter": 1,
+        "swap": false,
+        "ply": 123,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 7,
+            "to": 38
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 112,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 112,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581053,
+        "starter": 0,
+        "swap": true,
+        "ply": 122,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 93
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 114,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 120,
+      "rootCandidates": 8,
+      "guardActivated": true
+    },
+    {
+      "mode": "C",
+      "source": {
+        "seed": 581053,
+        "starter": 1,
+        "swap": false,
+        "ply": 122,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 93
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 114,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 120,
+      "rootCandidates": 8,
+      "guardActivated": true
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 0,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 29
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 17,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 17,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 1,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 28
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 17,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 17,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 2,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 30
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 37,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 37,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 3,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 0,
+            "to": 5
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 33,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 33,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 0,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 17
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 17,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 17,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 1,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 3
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 17,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 17,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 2,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 9
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 28,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 28,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 3,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 30
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 35,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 35,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 4,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 3
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 35,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 35,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 7,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 3
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 48,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 48,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 10,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 31
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 6,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 56,
+      "rootCandidates": 8,
+      "guardActivated": true
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 25,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 8
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 4,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 34,
+      "rootCandidates": 8,
+      "guardActivated": true
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 4,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 27
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 36,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 36,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 5,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 26
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 37,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 37,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 21,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 22
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 0,
+      "baseAllowsWin": true,
+      "guardAllowsWin": true,
+      "baseAlreadySafeChanged": false,
+      "legal": 20,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 1,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 3
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 17,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 17,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 5,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 9
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 35,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 35,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 9,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 1
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 34,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 34,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 11,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 7
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 34,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 34,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 13,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 23
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 35,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 35,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 15,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 6
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 53,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 53,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 17,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 3,
+            "to": 32
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 66,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 66,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 19,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 3,
+            "to": 26
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 29,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 29,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 21,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 9
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 36,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 36,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 141,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 9
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 38,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 38,
+      "rootCandidates": 0,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581029,
+        "starter": 1,
+        "swap": true,
+        "ply": 141,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 9
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 38,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 38,
+      "rootCandidates": 0,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 140,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 27
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": true,
+      "safeWin": 3,
+      "baseAllowsWin": true,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 19,
+      "rootCandidates": 8,
+      "guardActivated": true
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581029,
+        "starter": 1,
+        "swap": true,
+        "ply": 140,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 27
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 3,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 19,
+      "rootCandidates": 8,
+      "guardActivated": true
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 139,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 26
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 51,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 51,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581029,
+        "starter": 1,
+        "swap": true,
+        "ply": 139,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 26
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 51,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 51,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": false,
+        "ply": 138,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 28
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 19,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 19,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "D",
+      "source": {
+        "seed": 581029,
+        "starter": 1,
+        "swap": true,
+        "ply": 138,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 28
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 19,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 19,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 0,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 12,
+            "to": 105
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 47,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 47,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 1,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 40
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 49,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 49,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 2,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 51
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 94,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 94,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 3,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 12,
+            "to": 116
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 95,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 95,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 0,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 20
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 47,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 47,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 1,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 52
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 46,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 46,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 2,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 51
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 88,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 88,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 3,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 12,
+            "to": 93
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 90,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 90,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 5,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 8
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 49,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 49,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 8,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 7,
+            "to": 106
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 144,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 144,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": false,
+        "ply": 29,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 10,
+            "to": 109
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 96,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 96,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 45,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 41
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 84,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 84,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 47,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 14,
+            "to": 34
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 0,
+      "baseAllowsWin": true,
+      "guardAllowsWin": true,
+      "baseAlreadySafeChanged": false,
+      "legal": 86,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 3,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 12,
+            "to": 93
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 90,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 90,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 45,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 1,
+            "to": 41
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 84,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 84,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 1,
+        "swap": false,
+        "ply": 47,
+        "winner": 1,
+        "archivedAction": {
+          "wall": {
+            "wall": 14,
+            "to": 34
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": true,
+      "changed": false,
+      "safeWin": 0,
+      "baseAllowsWin": true,
+      "guardAllowsWin": true,
+      "baseAlreadySafeChanged": false,
+      "legal": 86,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 5,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 5,
+            "to": 112
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 47,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 47,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 7,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 7,
+            "to": 106
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 81,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 81,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 9,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 4,
+            "to": 9
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 87,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 87,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 11,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 8,
+            "to": 8
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 135,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 135,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 13,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 10,
+            "to": 76
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 89,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 89,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 15,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 6,
+            "to": 14
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 49,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 49,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 17,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 14,
+            "to": 23
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 89,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 89,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581003,
+        "starter": 0,
+        "swap": true,
+        "ply": 19,
+        "winner": 0,
+        "archivedAction": {
+          "wall": {
+            "wall": 8,
+            "to": 7
+          },
+          "dir": 3
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 86,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 86,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": true,
+        "ply": 65,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 17
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 147,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 147,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581029,
+        "starter": 1,
+        "swap": false,
+        "ply": 65,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 2,
+            "to": 17
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 147,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 147,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": true,
+        "ply": 64,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 13,
+            "to": 18
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 52,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 52,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581029,
+        "starter": 1,
+        "swap": false,
+        "ply": 64,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 13,
+            "to": 18
+          },
+          "dir": 0
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 52,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 52,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": true,
+        "ply": 63,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 13,
+            "to": 17
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 97,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 97,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581029,
+        "starter": 1,
+        "swap": false,
+        "ply": 63,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 13,
+            "to": 17
+          },
+          "dir": 1
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 97,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 97,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581029,
+        "starter": 0,
+        "swap": true,
+        "ply": 62,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 13,
+            "to": 6
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 98,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 98,
+      "rootCandidates": 8,
+      "guardActivated": false
+    },
+    {
+      "mode": "E",
+      "source": {
+        "seed": 581029,
+        "starter": 1,
+        "swap": false,
+        "ply": 62,
+        "winner": null,
+        "archivedAction": {
+          "wall": {
+            "wall": 13,
+            "to": 6
+          },
+          "dir": 2
+        }
+      },
+      "matchPoint": false,
+      "changed": false,
+      "safeWin": 98,
+      "baseAllowsWin": false,
+      "guardAllowsWin": false,
+      "baseAlreadySafeChanged": false,
+      "legal": 98,
+      "rootCandidates": 8,
+      "guardActivated": false
+    }
+  ],
+  "originalWitness": {
+    "seed": 581029,
+    "ply": 140,
+    "rngOffset": 4873,
+    "action": {
+      "wall": {
+        "wall": 1,
+        "to": 32
+      },
+      "dir": 2
+    },
+    "rootCandidates": 8,
+    "independentlySafe": true
+  },
+  "limits": [
+    "Archived diagnostic cases, not new independent games",
+    "The guard may reorder safe choices at match point: not a selected-move-only rescue",
+    "Exact equality with the original search is verified outside opponent match point"
+  ]
+}
