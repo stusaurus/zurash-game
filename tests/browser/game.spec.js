@@ -186,19 +186,19 @@ test("challenge mode is selectable, survives CPU turns, and can switch to normal
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
   await page.goto("/");
-  await expect(page.locator("#scores")).toContainText("CPU（つよい）");
+  await expect(page.locator("#scores")).toContainText("CPU（恐つよ）");
   await page.locator("#settings")[press]();
   await expect(page.locator("#cpuLevel")).toHaveValue("strong");
   await page.locator("#cpuLevel").selectOption("search");
   await page.locator("#start")[press]();
-  await expect(page.locator("#scores")).toContainText("CPU（ふつう）");
+  await expect(page.locator("#scores")).toContainText("CPU（つよい）");
   await page.locator("#skip")[press]();
   await page.locator("#directions button:not([disabled])").first()[press]();
   await expect(page.locator("#turnCount")).toHaveText("3手目", { timeout: 30000 });
   await page.locator("#settings")[press]();
   await page.locator("#cpuLevel").selectOption("strong");
   await page.locator("#start")[press]();
-  await expect(page.locator("#scores")).toContainText("CPU（つよい）");
+  await expect(page.locator("#scores")).toContainText("CPU（恐つよ）");
   for (let i = 0; i < 2; i++) {
     await page.locator("#skip")[press]();
     await page.locator("#directions button:not([disabled])").first()[press]();
