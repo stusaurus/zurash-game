@@ -3,13 +3,14 @@ import {EVALUATED_MASK_LIBRARY} from './evaluated-mask-library.js';
 import {SHAPES,generateBoard,validateBoard,parseBoardJSON,recordBoard,definitionKey} from './board-lab.js';
 export function mountLab(play) {
  const host=document.getElementById('boardLab');
- host.innerHTML=`<details><summary>盤面ラボ【研究用・未認定】</summary>
+ host.innerHTML=`<section aria-label="比較試遊"><p>比較試遊【研究用・未認定】</p><label>比較する盤面<select id="quickResearch"><option value="A-control">現行A</option><option value="D-positions-14-21">D候補［14,21］</option><option value="C-star-relocate">C候補：星配置</option><option value="C-control">現行C</option><option value="D-control">現行D</option><option value="B-control">現行B</option><option value="E-control">現行E</option></select></label><button id="quickResearchPlay">この比較盤面で対戦</button><p id="quickResearchStatus" role="status"></p></section><details><summary>盤面ラボ【研究用・未認定】</summary>
  <p>保存された盤面で遊ぶ／条件を変えて作る。公平性や決着は未認定です。</p>
  <label>盤面ライブラリ<select id="labLibrary"></select></label>
  <label>検索<input id="labSearch" placeholder="形状・名前・検証状態"></label>
  <button id="labLoad">選んだ盤面を編集・確認</button>
  <button id="labCorpus">生成済みの研究候補を追加表示</button>
  <button id="labDiscovery">名盤研究・全件の基礎評価を読み込む</button>
+ <button id="labStage8">第8段階の独立比較を読み込む</button>
  <button id="labStage7">第7段階の全5モード比較を読み込む</button>
  <button id="labStall">停滞原因と改善比較を読み込む</button>
  <button id="labBSettlement">Bの決着改善・独立比較を読み込む</button>
@@ -45,6 +46,7 @@ export function mountLab(play) {
  let saved=[],corpus=[],discovery=[],basicById=new Map();
  try{const text=localStorage.getItem(storageKey);if(text&&text.length<=1048576){const records=JSON.parse(text);if(Array.isArray(records))saved=records.slice(0,100).flatMap(r=>{try{return [recordBoard(r.board,{name:String(r.name).slice(0,80),seed:r.seed})];}catch{return [];}});}}catch{say('保存データを読み込めませんでした。');}
  let current=structuredClone(MASK_LIBRARY[0]),draft=structuredClone(current.board);
+ $('quickResearchPlay').onclick=async()=>{try{const response=await fetch(new URL('../reports/stage8-2026-10-25/quick.json',import.meta.url));if(!response.ok)throw Error('比較盤面を読み込めませんでした');const rs=await response.json();const r=rs.find(r=>r.id==='stage8-'+$('quickResearch').value);if(!r||!validateBoard(r.board).ok)throw Error('比較盤面の形式を確認できません');play(r);}catch(e){$('quickResearchStatus').textContent=e.message;}};
  function records(){const replacement=new Map(discovery.map(r=>[r.id,r])),base=[...MASK_LIBRARY,...EVALUATED_MASK_LIBRARY,...corpus,...saved],ids=new Set(base.map(r=>r.id));return [...base.map(r=>replacement.get(r.id)??r),...discovery.filter(r=>!ids.has(r.id))];}
  function evidence(r){
   const panel=$('labEvidence');panel.replaceChildren();
@@ -124,6 +126,7 @@ export function mountLab(play) {
   }catch(e){say(e.message);$('labDiscovery').disabled=false;}
  };
  for(const [button,path,message] of [
+  ['labStage8','stage8-2026-10-25','未使用seed・難度別の独立比較。正式採用なし'],
   ['labStage7','stage7-2026-10-25','現行AI固定の盤面比較。すべて研究候補・正式採用なし'],
   ['labStall','mode-continuation-2026-10-23','勝利不能の原因・改善候補・全モードの継続結果'],
   ['labBSettlement','b-followup-2026-10-23','Bの壁・位置・星比較。実験ごとの予算を確認。正式採用なし']

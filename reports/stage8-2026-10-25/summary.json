@@ -1,0 +1,2898 @@
+[
+  {
+    "condition": [
+      "A",
+      "control",
+      "search"
+    ],
+    "n": 32,
+    "first": 8,
+    "second": 4,
+    "actor0": 6,
+    "actor1": 6,
+    "unresolved": 20,
+    "meanDecided": 107,
+    "medianDecided": 119,
+    "p90Decided": 194,
+    "repeats": 0,
+    "maxQuiet": 244,
+    "p90ThinkMs": 6.484965999999986,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "A",
+      "wall-relocate",
+      "search"
+    ],
+    "n": 32,
+    "first": 14,
+    "second": 10,
+    "actor0": 12,
+    "actor1": 12,
+    "unresolved": 8,
+    "meanDecided": 100.91666666666667,
+    "medianDecided": 79,
+    "p90Decided": 182,
+    "repeats": 0,
+    "maxQuiet": 226,
+    "p90ThinkMs": 6.133427000000665,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "B",
+      "control",
+      "search"
+    ],
+    "n": 32,
+    "first": 18,
+    "second": 2,
+    "actor0": 10,
+    "actor1": 10,
+    "unresolved": 12,
+    "meanDecided": 20.3,
+    "medianDecided": 15,
+    "p90Decided": 82,
+    "repeats": 0,
+    "maxQuiet": 152,
+    "p90ThinkMs": 13.1910429999989,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "B",
+      "positions-central",
+      "search"
+    ],
+    "n": 32,
+    "first": 8,
+    "second": 6,
+    "actor0": 7,
+    "actor1": 7,
+    "unresolved": 18,
+    "meanDecided": 36.285714285714285,
+    "medianDecided": 26,
+    "p90Decided": 108,
+    "repeats": 0,
+    "maxQuiet": 190,
+    "p90ThinkMs": 13.417033999998239,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "C",
+      "control",
+      "search"
+    ],
+    "n": 32,
+    "first": 15,
+    "second": 12,
+    "actor0": 14,
+    "actor1": 13,
+    "unresolved": 5,
+    "meanDecided": 15.666666666666666,
+    "medianDecided": 8,
+    "p90Decided": 67,
+    "repeats": 0,
+    "maxQuiet": 63,
+    "p90ThinkMs": 22.47251700000197,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "C",
+      "control",
+      "greedy"
+    ],
+    "n": 32,
+    "first": 18,
+    "second": 14,
+    "actor0": 16,
+    "actor1": 16,
+    "unresolved": 0,
+    "meanDecided": 8.5625,
+    "medianDecided": 8,
+    "p90Decided": 9,
+    "repeats": 0,
+    "maxQuiet": 7,
+    "p90ThinkMs": 3.604645999992499,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "C",
+      "star-relocate",
+      "search"
+    ],
+    "n": 32,
+    "first": 16,
+    "second": 16,
+    "actor0": 16,
+    "actor1": 16,
+    "unresolved": 0,
+    "meanDecided": 14.625,
+    "medianDecided": 8,
+    "p90Decided": 44,
+    "repeats": 0,
+    "maxQuiet": 54,
+    "p90ThinkMs": 20.098211000004085,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "C",
+      "star-relocate",
+      "greedy"
+    ],
+    "n": 32,
+    "first": 16,
+    "second": 16,
+    "actor0": 16,
+    "actor1": 16,
+    "unresolved": 0,
+    "meanDecided": 8.125,
+    "medianDecided": 8,
+    "p90Decided": 8,
+    "repeats": 0,
+    "maxQuiet": 6,
+    "p90ThinkMs": 2.945800000001327,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "D",
+      "control",
+      "search"
+    ],
+    "n": 32,
+    "first": 20,
+    "second": 12,
+    "actor0": 16,
+    "actor1": 16,
+    "unresolved": 0,
+    "meanDecided": 65.875,
+    "medianDecided": 45,
+    "p90Decided": 142,
+    "repeats": 0,
+    "maxQuiet": 203,
+    "p90ThinkMs": 4.331409000005806,
+    "firstScore": [
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "D",
+      "control",
+      "greedy"
+    ],
+    "n": 32,
+    "first": 18,
+    "second": 14,
+    "actor0": 16,
+    "actor1": 16,
+    "unresolved": 0,
+    "meanDecided": 13.6875,
+    "medianDecided": 12,
+    "p90Decided": 16,
+    "repeats": 0,
+    "maxQuiet": 20,
+    "p90ThinkMs": 0.7273329999879934,
+    "firstScore": [
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "D",
+      "positions-8-27",
+      "search"
+    ],
+    "n": 32,
+    "first": 18,
+    "second": 14,
+    "actor0": 16,
+    "actor1": 16,
+    "unresolved": 0,
+    "meanDecided": 45.8125,
+    "medianDecided": 34,
+    "p90Decided": 136,
+    "repeats": 0,
+    "maxQuiet": 121,
+    "p90ThinkMs": 3.6650319999898784,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "D",
+      "positions-8-27",
+      "greedy"
+    ],
+    "n": 32,
+    "first": 14,
+    "second": 18,
+    "actor0": 16,
+    "actor1": 16,
+    "unresolved": 0,
+    "meanDecided": 12.5625,
+    "medianDecided": 13,
+    "p90Decided": 14,
+    "repeats": 0,
+    "maxQuiet": 5,
+    "p90ThinkMs": 0.7076859999797307,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "D",
+      "positions-14-21",
+      "search"
+    ],
+    "n": 32,
+    "first": 18,
+    "second": 14,
+    "actor0": 16,
+    "actor1": 16,
+    "unresolved": 0,
+    "meanDecided": 14.6875,
+    "medianDecided": 17,
+    "p90Decided": 18,
+    "repeats": 0,
+    "maxQuiet": 5,
+    "p90ThinkMs": 4.493105000001378,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "D",
+      "positions-14-21",
+      "greedy"
+    ],
+    "n": 32,
+    "first": 14,
+    "second": 18,
+    "actor0": 16,
+    "actor1": 16,
+    "unresolved": 0,
+    "meanDecided": 14.4375,
+    "medianDecided": 16,
+    "p90Decided": 17,
+    "repeats": 0,
+    "maxQuiet": 5,
+    "p90ThinkMs": 0.8276630000036675,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "E",
+      "control",
+      "search"
+    ],
+    "n": 32,
+    "first": 8,
+    "second": 6,
+    "actor0": 7,
+    "actor1": 7,
+    "unresolved": 18,
+    "meanDecided": 31.428571428571427,
+    "medianDecided": 37,
+    "p90Decided": 49,
+    "repeats": 0,
+    "maxQuiet": 81,
+    "p90ThinkMs": 35.611965000018245,
+    "firstScore": [
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  },
+  {
+    "condition": [
+      "E",
+      "positions-central",
+      "search"
+    ],
+    "n": 32,
+    "first": 4,
+    "second": 9,
+    "actor0": 7,
+    "actor1": 6,
+    "unresolved": 19,
+    "meanDecided": 38,
+    "medianDecided": 34,
+    "p90Decided": 66,
+    "repeats": 0,
+    "maxQuiet": 91,
+    "p90ThinkMs": 37.17410299999756,
+    "firstScore": [
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 0,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 0,
+        "swap": true
+      },
+      {
+        "actor": 1,
+        "starter": 1,
+        "swap": false
+      },
+      {
+        "actor": 0,
+        "starter": 1,
+        "swap": true
+      }
+    ]
+  }
+]
