@@ -955,3 +955,70 @@ dialog.result.defeat {
   .cell.wall::before { border-width: 1.5px; border-radius: 8px; }
   .cell.wall.available::after { border-width: 1px; border-radius: 9px; }
 }
+
+
+/* Gold collectible star: one five-pointed toy-like object with a soft bevel.
+   Independent of image loading, and not a new gameplay item. */
+.cell .star {
+  --star-outline: polygon(50% 4%, 61% 35%, 96% 36%, 69% 57%, 79% 92%, 50% 73%, 21% 92%, 31% 57%, 4% 36%, 39% 35%);
+  display: block;
+  position: relative;
+  width: 73%;
+  height: 73%;
+  max-width: 49px;
+  max-height: 49px;
+  aspect-ratio: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 1px #84541a61);
+  transform: translateY(-1px);
+}
+.cell .star > span {
+  position: absolute;
+  inset: 0;
+  display: block;
+  clip-path: var(--star-outline);
+}
+.cell .star-depth {
+  background: linear-gradient(175deg, #a56810 0%, #b87515 60%, #805019 100%);
+  transform: translateY(3px);
+}
+.cell .star-face {
+  background:
+    radial-gradient(ellipse at 27% 20%, #fff6c5 0%, #fff0a5 12%, transparent 48%),
+    linear-gradient(135deg, #fff1a2 3%, #f9cb54 38%, #eba124 70%, #d98911 100%);
+  box-shadow: inset 1px 1px 1px #ffffffc7;
+}
+.cell .star-facet {
+  inset: 8%;
+  clip-path: polygon(50% 3%, 63% 35%, 92% 36%, 66% 49%, 50% 76%, 38% 50%, 11% 36%, 38% 35%);
+  background: linear-gradient(130deg, #fffad485, #ffffff12 58%, #a96a001c);
+  opacity: .7;
+}
+/* The pickup sparkle is positioned over the star's previous cell, not the
+   centre of the whole board; it never intercepts any tap. */
+.celebration .spark-star {
+  position: absolute;
+  display: block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  font-size: clamp(30px, 8vw, 54px);
+  color: #ffd65e;
+  text-shadow: 0 0 9px #fff9d1, 0 0 17px #ffc44399, 0 2px 0 #b67811;
+  filter: drop-shadow(0 2px 1px #84541a66);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(.5);
+}
+.celebration.pop > .spark-star {
+  animation: star-collect-burst 620ms ease-out both;
+}
+@keyframes star-collect-burst {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(.55) rotate(-12deg); }
+  25% { opacity: 1; transform: translate(-50%, -60%) scale(1.17) rotate(6deg); }
+  52% { opacity: 1; transform: translate(-50%, -67%) scale(1.02) rotate(0deg); }
+  100% { opacity: 0; transform: translate(-50%, -80%) scale(.72) rotate(10deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .celebration .spark-star { display: none !important; }
+}

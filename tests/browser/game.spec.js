@@ -96,7 +96,17 @@ test("wall selection, shift, undo, skip, slide, local handoff, victory and remat
       finalState = state;
       finalAction = action;
     }
+    const oldTotal = state.scores[0] + state.scores[1];
+    const scorer = state.turn;
     state = await doAction(page, state, action);
+    if (state.scores[0] + state.scores[1] > oldTotal) {
+      const spark = page.locator(".celebration.pop > .spark-star");
+      await expect(spark).toHaveCount(1);
+      const location = state.players[scorer];
+      const position = await spark.evaluate(el => ({ left: parseFloat(el.style.left), top: parseFloat(el.style.top) }));
+      expect(position.left).toBeCloseTo(((location % 7) + 0.5) / 7 * 100, 4);
+      expect(position.top).toBeCloseTo((Math.floor(location / 7) + 0.5) / 7 * 100, 4);
+    }
   }
   expect(state.winner).not.toBeNull();
   await expect(page.locator("#result")).toBeVisible();
