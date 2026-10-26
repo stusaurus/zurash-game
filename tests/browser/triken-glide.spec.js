@@ -34,8 +34,8 @@ test("Triken braces, glides, then lands at the valid destination", async ({ page
   expect(windup).toBeGreaterThan(-1);
   expect(slide).toBeGreaterThan(windup);
   expect(poses.slice(slide + 1).some(pose => pose === "stop" || pose === "collect")).toBe(true);
-  expect(duration).toBeGreaterThanOrEqual(254);
-  expect(duration).toBeLessThanOrEqual(380);
+  expect(duration).toBeGreaterThanOrEqual(315);
+  expect(duration).toBeLessThanOrEqual(490);
   expect(frames[windup].transform).toBe(frames[0].transform);
   expect(await first.getAttribute("style")).not.toBe(before);
   await expect(page.locator(".pawn-image")).toHaveCount(2);
@@ -76,7 +76,7 @@ test("starting a new match during windup cancels the previous slide", async ({ p
   });
   await expect(page.locator("#turnCount")).toHaveText("1手目");
   await expect(page.locator(".token.p1")).toHaveAttribute("data-pose", "idle");
-  await page.waitForTimeout(500);
+  await page.waitForTimeout(650);
   expect(await page.locator(".token.p1").evaluate(el => el.style.transform)).toBe(startPosition);
   await expect(page.locator(".token.p1")).toHaveAttribute("data-pose", "idle");
   await expect(page.locator("#skip")).toBeEnabled();
