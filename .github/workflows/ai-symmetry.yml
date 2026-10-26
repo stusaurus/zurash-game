@@ -1,0 +1,45 @@
+name: AI symmetry and fairness comparison
+on:
+  push:
+    branches: [feat/two-player-convergence-lab]
+    paths:
+      - .github/workflows/ai-symmetry.yml
+      - scripts/symmetry-policy.js
+      - tests/symmetry-ai.test.js
+      - scripts/experimental-policies.js
+      - scripts/strategy-study.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Verify all existing rules and symmetry invariant
+        run: npm run check && npm test
+      - name: Compare unmodified and symmetry-normalized CPU with fresh seeds
+        env:
+          PAIRS: "40"
+          MAX_PLIES: "120"
+          LAYOUT_IDS: "0,1,2"
+          MATCHUPS: "route/route,sym-route/sym-route,route/sym-route"
+          RNG_MODE: worker
+          SEED_OFFSET: "910001"
+          REPORT: reports/ai-symmetry-comparison.json
+        run: npm run quality:study
+      - name: Replay every saved action, score and winner
+        run: npm run quality:replay -- reports/ai-symmetry-comparison.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ai-symmetry-fairness-comparison
+          path: |
+            reports/ai-symmetry-comparison.json
+            reports/ai-symmetry-comparison.jsonl.gz
+          retention-days: 90
