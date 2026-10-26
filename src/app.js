@@ -34,10 +34,41 @@ const tokenEls = [0, 1].map((p) => {
   el.className = `token p${p + 1}`;
   el.dataset.facing = facing[p];
   el.dataset.pose = "idle";
-  el.innerHTML = `<div class="coin"><span class="pawn-frame"><img class="pawn-image" src="assets/triken-four-colors.webp" alt="" draggable="false" decoding="async"></span></div><b>${p + 1}</b>`;
+  el.innerHTML = `<div class="coin"><span class="pawn-frame"><img class="pawn-image" alt="" draggable="false" decoding="async"></span></div><b>${p + 1}</b>`;
   $("tokens").append(el);
   return el;
 });
+// Crop each approved 80x80 color into its own source image ONCE.
+// On WebKit, CSS positioning a 320x80 atlas inside a clipped grid cell
+// rendered only a narrow strip of the character on some iPhones.
+function installTrikenSprites() {
+  const source = new Image();
+  const pawns = tokenEls.map(el => el.querySelector(".pawn-image"));
+  const fallback = () => {
+    pawns.forEach(img => { img.src = new URL("../assets/triken-pawn.webp", import.meta.url).href; });
+  };
+  source.onload = () => {
+    try {
+      const side = source.naturalHeight;
+      if (!side || source.naturalWidth !== side * 4) throw Error("Invalid four-color atlas");
+      const canvas = document.createElement("canvas");
+      canvas.width = canvas.height = side;
+      const context = canvas.getContext("2d");
+      if (!context) throw Error("Canvas unsupported");
+      pawns.forEach((img, player) => {
+        context.clearRect(0, 0, side, side);
+        context.drawImage(source, side * player, 0, side, side, 0, 0, side, side);
+        img.src = canvas.toDataURL("image/png");
+      });
+    } catch {
+      fallback();
+    }
+  };
+  source.onerror = fallback;
+  source.src = new URL("../assets/triken-four-colors.webp", import.meta.url).href;
+}
+installTrikenSprites();
+
 function setPose(p, pose, duration = 0) {
   clearTimeout(poseTimers[p]);
   tokenEls[p].dataset.pose = pose;
