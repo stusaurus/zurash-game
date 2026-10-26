@@ -11,9 +11,14 @@ test("approved four-color Triken atlas is served and turns follow left/right sli
   await expect.poll(() => page.locator(".pawn-image").evaluateAll(nodes =>
     nodes.every(img => img.complete && img.naturalWidth === 80 && img.naturalHeight === 80)
   )).toBe(true);
-  const dataUrls = await page.locator(".pawn-image").evaluateAll(nodes => nodes.map(img => img.src));
-  expect(dataUrls.every(src => src.startsWith("data:image/png;base64,"))).toBe(true);
-  expect(dataUrls[0]).not.toEqual(dataUrls[1]);
+  const imageUrls = await page.locator(".pawn-image").evaluateAll(nodes => nodes.map(img => img.src));
+  expect(imageUrls[0]).toContain("/assets/triken-orange-80.png");
+  expect(imageUrls[1]).toContain("/assets/triken-aqua-80.png");
+  for (const color of ["orange", "aqua", "lime", "purple"]) {
+    const response = await page.request.get(`/assets/triken-${color}-80.png`);
+    expect(response.status()).toBe(200);
+    expect(response.headers()["content-type"]).toContain("image/png");
+  }
   // Decoding a URL and allocating a box is insufficient: assert actual opaque
   // character pixels survive cropping in both color slots.
   const coverage = await page.locator(".pawn-image").evaluateAll(images =>
