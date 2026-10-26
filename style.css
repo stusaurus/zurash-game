@@ -805,3 +805,17 @@ dialog.result.defeat {
   .token { transition: none !important; }
   .token[data-pose] .coin { animation: none !important; }
 }
+
+
+/* Ensure the Triken image has a real box on iPhone/WebKit.
+   A percentage-height grid child in an implicit auto row may resolve to zero:
+   the numeric badge remains visible while the character disappears. */
+.token .coin,
+.token.p2 .coin {
+  position: absolute;
+  inset: 3px;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+}
