@@ -353,6 +353,7 @@ function reset() {
     : Math.floor(Math.random() * 4294967296);
   stopCPU();
   resetMotion();
+  clearStarFlash();
   if ($("result").open) $("result").close();
   resultSeen = false;
   busy = false;
@@ -376,6 +377,7 @@ $("undo").onclick = () => {
   epoch++;
   stopCPU();
   resetMotion();
+  clearStarFlash();
   busy = false;
   if (phase === "slide" && !cpuTurn()) {
     state = clone(turnStart);
