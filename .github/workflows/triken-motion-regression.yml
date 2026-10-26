@@ -6,6 +6,7 @@ on:
       - "style.css"
       - "index.html"
       - "tests/browser/motion-toggle.spec.js"
+      - "tests/browser/triken-glide.spec.js"
       - ".github/workflows/triken-motion-regression.yml"
   workflow_dispatch:
 permissions:
@@ -24,7 +25,7 @@ jobs:
         run: npx playwright install chromium
         timeout-minutes: 5
       - name: Verify actual mid-cell movement
-        run: npx playwright test tests/browser/motion-toggle.spec.js --project=chromium --workers=1
+        run: npx playwright test tests/browser/motion-toggle.spec.js tests/browser/triken-glide.spec.js --project=chromium --workers=1
         timeout-minutes: 5
   iphone-webkit:
     # macOS has native WebKit runtime libraries; the Ubuntu hosted runner
@@ -41,5 +42,5 @@ jobs:
         run: npx playwright install webkit
         timeout-minutes: 5
       - name: Verify iPhone-like WebKit movement
-        run: npx playwright test tests/browser/motion-toggle.spec.js --project=iphone-webkit --workers=1
+        run: npx playwright test tests/browser/motion-toggle.spec.js tests/browser/triken-glide.spec.js --project=iphone-webkit --workers=1
         timeout-minutes: 5
