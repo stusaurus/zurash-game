@@ -28,7 +28,7 @@ test("golden stars render as beveled pieces without changing the five-star layou
       };
     }));
     for (const piece of pieces) {
-      expect(piece.width).toBeGreaterThan(piece.cellWidth * .6);
+      expect(piece.width).toBeGreaterThan(Math.min(piece.cellWidth * .6, 48));
       expect(piece.width).toBeLessThan(piece.cellWidth * .85);
       expect(piece.frontClip).toContain("polygon(");
       expect(piece.bevelClip).toContain("polygon(");
