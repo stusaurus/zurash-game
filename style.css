@@ -821,8 +821,8 @@ dialog.result.defeat {
 }
 
 
-/* Use a real image, not a pseudo-element background, for reliable iPhone display.
-   The approved atlas is cropped per color on load; each pawn receives a standalone image. */
+/* Use per-color PNG files: no dynamic Canvas data URL, clipped atlas, or CSS offset.
+   This remains supported by iPhone Safari and in-app browsers. */
 .token .coin::before { display: none; }
 .token .pawn-frame {
   position: absolute;
@@ -831,7 +831,7 @@ dialog.result.defeat {
   overflow: hidden;
   transform-origin: center;
 }
-/* Each image is its own 80x80 crop, not a 320px-wide moving atlas. */
+/* Each Triken image is a standalone 80×80 transparent PNG. */
 .token .pawn-image {
   position: absolute;
   inset: 0;
