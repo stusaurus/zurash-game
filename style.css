@@ -1089,3 +1089,48 @@ dialog.result.defeat {
   .token { transition: none !important; }
   .token[data-pose] .coin { animation: none !important; }
 }
+
+
+/* An explicit ON choice can override the device's reduced-motion preference.
+   Default ("auto") still honors device accessibility; an explicit OFF has no motion. */
+.motion-control {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2px 0 0;
+}
+.motion-control #motionToggle {
+  border: 1px solid #bfd7dc;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  min-height: 32px;
+  background: #f6faf9;
+  color: #325e65;
+}
+.motion-control #motionToggle[aria-pressed="false"] {
+  color: #666;
+  background: #f2f3f1;
+}
+html[data-zurash-motion="still"] .token { transition: none !important; }
+html[data-zurash-motion="still"] .token[data-pose] .coin { animation: none !important; }
+html[data-zurash-motion="still"] .board-wrap > .wall-flight { display: none !important; }
+html[data-zurash-motion="animate"] .token {
+  transition: transform var(--triken-glide-ms, 260ms) cubic-bezier(.19, .72, .26, 1) !important;
+}
+html[data-zurash-motion="animate"] .token[data-pose="idle"] .coin {
+  animation: triken-breathe 3.1s ease-in-out infinite !important;
+}
+html[data-zurash-motion="animate"] .token[data-pose="windup"] .coin {
+  animation: triken-windup 85ms ease-out both !important;
+}
+html[data-zurash-motion="animate"] .token[data-pose="slide"] .coin {
+  animation: triken-glide var(--triken-glide-ms, 260ms) ease-in-out both !important;
+}
+html[data-zurash-motion="animate"] .token[data-pose="stop"] .coin {
+  animation: triken-land 220ms ease-out both !important;
+}
+html[data-zurash-motion="animate"] .token[data-pose="collect"] .coin {
+  animation: triken-celebrate 560ms ease-out both !important;
+}
+html[data-zurash-motion="animate"] .board-wrap > .wall-flight { display: grid !important; }
+html[data-zurash-motion="animate"] .celebration .spark-star { display: block !important; }

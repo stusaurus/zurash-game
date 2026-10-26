@@ -11,6 +11,30 @@ import {
 } from "./engine.js";
 import { choose } from "./ai.js";
 const $ = (id) => document.getElementById(id);
+const MOTION_STORAGE_KEY = "zurash-motion-override";
+function readMotionPreference() {
+  try {
+    const setting = localStorage.getItem(MOTION_STORAGE_KEY);
+    return setting === "on" || setting === "off" ? setting : null;
+  } catch { return null; }
+}
+let motionOverride = readMotionPreference();
+function shouldAnimate() {
+  return motionOverride === "on" ||
+    (motionOverride !== "off" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+}
+function syncMotionToggle() {
+  const enabled = shouldAnimate();
+  document.documentElement.dataset.zurashMotion = enabled ? "animate" : "still";
+  const button = document.getElementById("motionToggle");
+  if (!button) return;
+  button.textContent = `動き：${enabled ? "ON" : "OFF"}`;
+  button.setAttribute("aria-pressed", String(enabled));
+  button.title = motionOverride === null
+    ? "現在は端末の動きの設定に従っています。タップで切り替え"
+    : "トリケンと壁の移動アニメーションを切り替え";
+}
+
 const STAR_HTML = '<span class="star" aria-hidden="true"><span class="star-depth"></span><span class="star-face"></span><span class="star-facet"></span></span>';
 let state = initial(),
   turnStart = clone(state),
@@ -90,7 +114,7 @@ async function shiftWallAnimated(move, expectedEpoch = epoch) {
   const board = $("board");
   const origin = board.querySelector(`[data-cell="${from}"]`);
   const target = board.querySelector(`[data-cell="${move.to}"]`);
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reduce = !shouldAnimate();
   if (!origin || !target || reduce || typeof origin.animate !== "function") {
     if (expectedEpoch !== epoch) return false;
     state = next;
@@ -319,7 +343,7 @@ async function playSlide(dir) {
   const endAt = next.players[player];
   const distance = Math.abs(endAt % 7 - startAt % 7) +
     Math.abs(Math.floor(endAt / 7) - Math.floor(startAt / 7));
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reducedMotion = !shouldAnimate();
   // The same pacing is shared by local and CPU turns: longer slides stay legible.
   const travelMs = Math.min(380, 230 + 24 * distance);
   tokenEls[player].style.setProperty("--triken-glide-ms", `${travelMs}ms`);
@@ -501,6 +525,16 @@ function openSetup(nextMode) {
     nextMode === "cpu" ? "プレイヤー2（CPU）" : "プレイヤー2";
   $("setupDialog").showModal();
 }
+$("motionToggle").onclick = () => {
+  motionOverride = shouldAnimate() ? "off" : "on";
+  try { localStorage.setItem(MOTION_STORAGE_KEY, motionOverride); } catch {}
+  syncMotionToggle();
+};
+const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+motionQuery.addEventListener?.("change", () => {
+  if (motionOverride === null) syncMotionToggle();
+});
+syncMotionToggle();
 $("settings").onclick = () => openSetup(mode);
 $("rematch").onclick = reset;
 $("reviewFinal").onclick = () => $("result").close();
