@@ -50,8 +50,8 @@ test("wall slides exactly one tile without changing the number of cells or rules
   const parts = transform.slice(10, -1).replaceAll("px", "").split(",").map(Number);
   expect(parts).toHaveLength(2);
   expect(parts.every(Number.isFinite)).toBe(true);
-  expect(Math.abs(Number(parts[1]) - dx * before.width)).toBeLessThan(1);
-  expect(Math.abs(Number(parts[2]) - dy * before.height)).toBeLessThan(1);
+  expect(Math.abs(parts[0] - dx * before.width)).toBeLessThan(1);
+  expect(Math.abs(parts[1] - dy * before.height)).toBeLessThan(1);
   await expect(page.locator("#skip")).toBeEnabled();
   await page.locator("#undo").click();
   await expect(page.locator(`.cell.wall[data-cell="${source}"]`)).toHaveCount(1);
