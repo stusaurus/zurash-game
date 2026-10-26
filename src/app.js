@@ -11,6 +11,7 @@ import {
 } from "./engine.js";
 import { choose } from "./ai.js";
 const $ = (id) => document.getElementById(id);
+const STAR_HTML = '<span class="star" aria-hidden="true"><span class="star-depth"></span><span class="star-face"></span><span class="star-facet"></span></span>';
 let state = initial(),
   turnStart = clone(state),
   phase = "wall",
@@ -113,7 +114,7 @@ function render() {
         stop ||
         (phase === "wall" && moves.some((m) => m.wall === wall))
       );
-    if (state.stars.includes(i)) b.innerHTML = '<span class="star">★</span>';
+    if (state.stars.includes(i)) b.innerHTML = STAR_HTML;
     if (target) b.textContent = shiftArrow(state.walls[target.wall], target.to);
     b.onclick = () => {
       if (target) {
@@ -205,11 +206,24 @@ function render() {
     }
   }
 }
-function flash() {
+function clearStarFlash() {
   const el = $("celebration");
   el.classList.remove("pop");
+  el.replaceChildren();
+}
+function flash(at) {
+  // The star disappears from game state on collection; show its reward effect
+  // over the actual landing tile without introducing another board item.
+  const el = $("celebration");
+  el.classList.remove("pop");
+  const spark = document.createElement("span");
+  spark.className = "spark-star";
+  spark.setAttribute("aria-hidden", "true");
+  spark.textContent = "★";
+  spark.style.left = `${((at % 7) + 0.5) / 7 * 100}%`;
+  spark.style.top = `${(Math.floor(at / 7) + 0.5) / 7 * 100}%`;
+  el.replaceChildren(spark);
   void el.offsetWidth;
-  el.innerHTML = "<span>★</span>";
   el.classList.add("pop");
 }
 async function playSlide(dir) {
@@ -244,7 +258,7 @@ async function playSlide(dir) {
   busy = false;
   const scored = state.scores.reduce((a, b) => a + b, 0) > oldScore;
   setPose(player, scored ? "collect" : "stop", scored ? 560 : 220);
-  if (scored) flash();
+  if (scored) flash(state.players[player]);
   phase = "wall";
   turnStart = clone(state);
   remember();
