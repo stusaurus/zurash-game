@@ -8,9 +8,12 @@ test("approved four-color Triken atlas is served and turns follow left/right sli
   expect(asset.ok()).toBe(true);
   expect((await asset.body()).length).toBeGreaterThan(2000);
   await expect(page.locator(".token")).toHaveCount(2);
-  const images = await page.locator(".token .coin").evaluateAll(nodes =>
-    nodes.map(node => getComputedStyle(node, "::before").backgroundImage));
-  expect(images.every(value => value.includes("triken-four-colors.webp"))).toBe(true);
+  await expect.poll(() => page.locator(".pawn-image").evaluateAll(nodes =>
+    nodes.every(img => img.complete && img.naturalWidth === 80 && img.naturalHeight === 80)
+  )).toBe(true);
+  const dataUrls = await page.locator(".pawn-image").evaluateAll(nodes => nodes.map(img => img.src));
+  expect(dataUrls.every(src => src.startsWith("data:image/png;base64,"))).toBe(true);
+  expect(dataUrls[0]).not.toEqual(dataUrls[1]);
 
   await page.locator("#localMode").click();
   await page.locator("#start").click();
@@ -42,25 +45,29 @@ test("Triken sprite boxes remain visible at iPhone and narrow screen widths", as
     await page.setViewportSize({ width, height: 844 });
     await page.goto("/");
     await expect(page.locator(".token .coin")).toHaveCount(2);
+    await expect.poll(() => page.locator(".pawn-image").evaluateAll(nodes =>
+      nodes.every(img => img.complete && img.naturalWidth === 80)
+    )).toBe(true);
     const sizes = await page.locator(".token").evaluateAll(nodes => nodes.map(token => {
       const body = token.querySelector(".coin");
-      const pseudo = getComputedStyle(body, "::before");
+      const img = token.querySelector(".pawn-image");
       const outer = token.getBoundingClientRect(), rect = body.getBoundingClientRect();
+      const imageBox = img.getBoundingClientRect();
       return {
         outer: outer.width,
         width: rect.width,
         height: rect.height,
-        pseudoWidth: parseFloat(pseudo.width),
-        pseudoHeight: parseFloat(pseudo.height),
-        background: pseudo.backgroundImage,
+        imageWidth: imageBox.width,
+        imageHeight: imageBox.height,
+        decoded: img.complete && img.naturalWidth === 80,
       };
     }));
     for (const size of sizes) {
       expect(size.width).toBeGreaterThan(size.outer * .7);
       expect(size.height).toBeGreaterThan(size.outer * .7);
-      expect(size.pseudoWidth).toBeGreaterThan(size.outer * .7);
-      expect(size.pseudoHeight).toBeGreaterThan(size.outer * .7);
-      expect(size.background).toContain("triken-four-colors.webp");
+      expect(size.imageWidth).toBeGreaterThan(size.outer * .7);
+      expect(size.imageHeight).toBeGreaterThan(size.outer * .7);
+      expect(size.decoded).toBe(true);
     }
   }
 });
@@ -71,7 +78,7 @@ test("Triken is rendered with decoded image elements, not only numeric badges", 
   const pawns = page.locator(".token .pawn-image");
   await expect(pawns).toHaveCount(2);
   await expect.poll(() => pawns.evaluateAll(nodes =>
-    nodes.every(img => img.complete && img.naturalWidth === 320 && img.naturalHeight === 80)
+    nodes.every(img => img.complete && img.naturalWidth === 80 && img.naturalHeight === 80)
   )).toBe(true);
   const boxes = await page.locator(".token").evaluateAll(nodes => nodes.map(node => {
     const img = node.querySelector(".pawn-image");
@@ -84,6 +91,7 @@ test("Triken is rendered with decoded image elements, not only numeric badges", 
   for (const box of boxes) {
     expect(box.display).not.toBe("none");
     expect(box.frame).toBeGreaterThan(box.outer * .7);
-    expect(box.image).toBeGreaterThan(box.frame * 3.5);
+    expect(box.image).toBeGreaterThan(box.frame * .9);
+    expect(box.image).toBeLessThan(box.frame * 1.1);
   }
 });
