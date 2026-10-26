@@ -1022,3 +1022,31 @@ dialog.result.defeat {
 @media (prefers-reduced-motion: reduce) {
   .celebration .spark-star { display: none !important; }
 }
+
+
+/* The moving block is visually identical to the permanent wall, but is
+   rendered over the grid so the 49 hit targets never change dimensions. */
+.cell.wall.wall-in-flight::before,
+.cell.wall.wall-in-flight::after {
+  visibility: hidden;
+}
+.board-wrap > .wall-flight {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 8;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  pointer-events: none;
+  overflow: visible;
+  will-change: transform;
+}
+.board-wrap > .wall-flight::before {
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .board-wrap > .wall-flight { display: none; }
+}
