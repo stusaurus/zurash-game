@@ -320,6 +320,7 @@ async function playSlide(dir) {
   const distance = Math.abs(endAt % 7 - startAt % 7) +
     Math.abs(Math.floor(endAt / 7) - Math.floor(startAt / 7));
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // The same pacing is shared by local and CPU turns: longer slides stay legible.
   const travelMs = Math.min(380, 230 + 24 * distance);
   tokenEls[player].style.setProperty("--triken-glide-ms", `${travelMs}ms`);
   busy = true;
