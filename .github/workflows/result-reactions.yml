@@ -34,9 +34,12 @@ jobs:
       - name: Install test browser
         run: npx playwright install ${{ matrix.browser }}
         timeout-minutes: 5
-      - name: Verify characters and animation
-        run: npx playwright test tests/browser/result-reactions.spec.js --project=${{ matrix.project }} --workers=1
-        timeout-minutes: 5
-      - name: Verify winner/loser colors in a completed match
-        run: npx playwright test tests/browser/game.spec.js --grep "wall selection, shift, undo, skip, slide, local handoff, victory and rematch" --project=${{ matrix.project }} --workers=1
-        timeout-minutes: 8
+      - name: Verify reactions and completed-match winner colors
+        # Keep one Playwright server for both checks; macOS runners can time out
+        # starting a second webServer process immediately after stopping the first.
+        run: >-
+          npx playwright test tests/browser/result-reactions.spec.js
+          tests/browser/game.spec.js
+          --grep "result portraits|explicit ON|wall selection, shift, undo, skip, slide, local handoff, victory and rematch"
+          --project=${{ matrix.project }} --workers=1
+        timeout-minutes: 10
