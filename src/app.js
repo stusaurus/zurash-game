@@ -345,7 +345,9 @@ async function playSlide(dir) {
     Math.abs(Math.floor(endAt / 7) - Math.floor(startAt / 7));
   const reducedMotion = !shouldAnimate();
   // The same pacing is shared by local and CPU turns: longer slides stay legible.
-  const travelMs = Math.min(380, 230 + 24 * distance);
+  // Slightly slower after iPhone playtesting: about 315–490ms for 1–6 cells.
+  // Extra distance adds glide time, without making a single-cell move sluggish.
+  const travelMs = Math.min(490, 280 + 35 * distance);
   tokenEls[player].style.setProperty("--triken-glide-ms", `${travelMs}ms`);
   busy = true;
   selected = null;
