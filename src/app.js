@@ -59,6 +59,7 @@ function resetMotion() {
     poseTimers[p] = null;
     el.dataset.pose = "idle";
     el.dataset.facing = facing[p];
+    el.style.removeProperty("--triken-glide-ms");
   });
 }
 function restoreFacing() {
@@ -312,16 +313,33 @@ async function playSlide(dir) {
   moveLog.push(lastAction);
   if (dir === 1) facing[player] = "right";
   if (dir === 3) facing[player] = "left";
-  setPose(player, "slide");
-  state = next;
+  // A short anticipation makes the figure feel like it is pushing off the ice.
+  // Only change the actual player position when the travel animation begins.
+  const startAt = state.players[player];
+  const endAt = next.players[player];
+  const distance = Math.abs(endAt % 7 - startAt % 7) +
+    Math.abs(Math.floor(endAt / 7) - Math.floor(startAt / 7));
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const travelMs = Math.min(380, 230 + 24 * distance);
+  tokenEls[player].style.setProperty("--triken-glide-ms", `${travelMs}ms`);
   busy = true;
   selected = null;
+  if (!reducedMotion) {
+    setPose(player, "windup");
+    render();
+    await new Promise((resolve) => setTimeout(resolve, 85));
+    if (myEpoch !== epoch) return;
+  }
+  setPose(player, "slide");
+  state = next;
   render();
-  await new Promise((r) => setTimeout(r, 280));
-  if (myEpoch !== epoch) return;
+  if (!reducedMotion) {
+    await new Promise((resolve) => setTimeout(resolve, travelMs + 12));
+    if (myEpoch !== epoch) return;
+  }
   busy = false;
   const scored = state.scores.reduce((a, b) => a + b, 0) > oldScore;
-  setPose(player, scored ? "collect" : "stop", scored ? 560 : 220);
+  setPose(player, scored ? "collect" : "stop", reducedMotion ? 0 : scored ? 560 : 220);
   if (scored) flash(state.players[player]);
   phase = "wall";
   turnStart = clone(state);
