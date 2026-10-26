@@ -34,7 +34,7 @@ const tokenEls = [0, 1].map((p) => {
   el.className = `token p${p + 1}`;
   el.dataset.facing = facing[p];
   el.dataset.pose = "idle";
-  el.innerHTML = `<div class="coin"></div><b>${p + 1}</b>`;
+  el.innerHTML = `<div class="coin"><span class="pawn-frame"><img class="pawn-image" src="assets/triken-four-colors.webp" alt="" draggable="false" decoding="async"></span></div><b>${p + 1}</b>`;
   $("tokens").append(el);
   return el;
 });
