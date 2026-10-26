@@ -52,7 +52,10 @@ test("wall slides exactly one tile without changing the number of cells or rules
   expect(parts.every(Number.isFinite)).toBe(true);
   expect(Math.abs(parts[0] - dx * before.width)).toBeLessThan(1);
   expect(Math.abs(parts[1] - dy * before.height)).toBeLessThan(1);
-  await expect(page.locator("#skip")).toBeEnabled();
+  // After a wall shift, the game is in slide phase: skip stays disabled,
+  // while undo is available to reverse the uncompleted turn.
+  await expect(page.locator("#skip")).toBeDisabled();
+  await expect(page.locator("#undo")).toBeEnabled();
   await page.locator("#undo").click();
   await expect(page.locator(`.cell.wall[data-cell="${source}"]`)).toHaveCount(1);
   expect(errors).toEqual([]);
