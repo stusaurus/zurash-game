@@ -760,3 +760,48 @@ dialog.result.defeat {
 .token.p2 .coin::before {
   filter: drop-shadow(0 0 2px #237a83);
 }
+
+/* Triken animation: four accepted colors, two currently active players.
+ * The sprite atlas holds orange / sky blue / yellow green / purple in that order.
+ * Keep the 2.5D figure upright; only mirror left-facing moves. */
+.token.p1 { --triken-frame: 0%; }
+.token.p2 { --triken-frame: 33.333333%; }
+.token.p3 { --triken-frame: 66.666667%; }
+.token.p4 { --triken-frame: 100%; }
+.token .coin::before {
+  background-image: url("assets/triken-four-colors.webp");
+  background-size: 400% 100%;
+  background-position: var(--triken-frame) 50%;
+  background-repeat: no-repeat;
+  transform-origin: center center;
+}
+.token[data-facing="left"] .coin::before { transform: scaleX(-1); }
+.token[data-facing="right"] .coin::before { transform: scaleX(1); }
+.token[data-pose="idle"] .coin { animation: triken-breathe 3.1s ease-in-out infinite; }
+.token[data-pose="slide"] .coin { animation: triken-slide 280ms ease-out both; }
+.token[data-pose="stop"] .coin { animation: triken-stop 220ms ease-out both; }
+.token[data-pose="collect"] .coin { animation: triken-celebrate 560ms ease-out both; }
+@keyframes triken-breathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-1px) scale(1.02); }
+}
+@keyframes triken-slide {
+  0% { transform: translateY(0) scale(1); }
+  45% { transform: translateY(1px) scale(1.08, .91); }
+  100% { transform: translateY(0) scale(1); }
+}
+@keyframes triken-stop {
+  0% { transform: translateY(1px) scale(1.05, .94); }
+  60% { transform: translateY(-2px) scale(.97, 1.04); }
+  100% { transform: translateY(0) scale(1); }
+}
+@keyframes triken-celebrate {
+  0%, 100% { transform: translateY(0) scale(1); }
+  35% { transform: translateY(-22%) scale(1.04); }
+  60% { transform: translateY(-24%) scale(1.04); }
+  82% { transform: translateY(0) scale(.96, 1.05); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .token { transition: none !important; }
+  .token[data-pose] .coin { animation: none !important; }
+}
