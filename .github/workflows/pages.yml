@@ -28,7 +28,14 @@ jobs:
           mkdir -p dist/src dist/assets
           cp index.html style.css dist/
           cp src/*.js dist/src/
-          cp assets/triken-reference.jpeg dist/assets/
+          # Publish every committed visual asset, including future sprite frames.
+          cp -a assets/. dist/assets/
+          # Fail the deployment if any approved character color is missing.
+          for color in orange aqua lime purple; do
+            test -s "dist/assets/triken-${color}-80.png"
+          done
+          test -s dist/assets/triken-reference.jpeg
+          test -s dist/assets/triken-four-colors.webp
           touch dist/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
