@@ -805,3 +805,46 @@ dialog.result.defeat {
   .token { transition: none !important; }
   .token[data-pose] .coin { animation: none !important; }
 }
+
+
+/* Ensure the Triken image has a real box on iPhone/WebKit.
+   A percentage-height grid child in an implicit auto row may resolve to zero:
+   the numeric badge remains visible while the character disappears. */
+.token .coin,
+.token.p2 .coin {
+  position: absolute;
+  inset: 3px;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+}
+
+
+/* Use a real image, not a pseudo-element background, for reliable iPhone display.
+   The parent frame clips one 80px tile from the approved four-color atlas. */
+.token .coin::before { display: none; }
+.token .pawn-frame {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  transform-origin: center;
+}
+.token .pawn-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 400%;
+  height: 100%;
+  max-width: none;
+  user-select: none;
+  pointer-events: none;
+}
+.token.p1 .pawn-image { left: 0; }
+.token.p2 .pawn-image { left: -100%; }
+.token.p3 .pawn-image { left: -200%; }
+.token.p4 .pawn-image { left: -300%; }
+.token[data-facing="left"] .pawn-frame { transform: scaleX(-1); }
+.token[data-facing="right"] .pawn-frame { transform: scaleX(1); }
