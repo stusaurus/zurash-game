@@ -26,3 +26,18 @@ jobs:
       - name: Verify actual mid-cell movement
         run: npx playwright test tests/browser/motion-toggle.spec.js --project=chromium --workers=1
         timeout-minutes: 5
+  iphone-webkit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Install WebKit without OS package refresh
+        run: npx playwright install webkit
+        timeout-minutes: 5
+      - name: Verify iPhone-like WebKit movement
+        run: npx playwright test tests/browser/motion-toggle.spec.js --project=iphone-webkit --workers=1
+        timeout-minutes: 5
