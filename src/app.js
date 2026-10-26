@@ -26,13 +26,45 @@ let state = initial(),
   cpuTimer = null,
   activeSettings = { layout: 0, starter: 0, level: "strong" },
   matchSeed = 0;
+// Four approved palettes are stored in a shared atlas; the rules still support two players.
+const facing = ["right", "right"];
+const poseTimers = [null, null];
 const tokenEls = [0, 1].map((p) => {
   const el = document.createElement("div");
   el.className = `token p${p + 1}`;
+  el.dataset.facing = facing[p];
+  el.dataset.pose = "idle";
   el.innerHTML = `<div class="coin"></div><b>${p + 1}</b>`;
   $("tokens").append(el);
   return el;
 });
+function setPose(p, pose, duration = 0) {
+  clearTimeout(poseTimers[p]);
+  tokenEls[p].dataset.pose = pose;
+  poseTimers[p] = duration
+    ? setTimeout(() => {
+        tokenEls[p].dataset.pose = "idle";
+        poseTimers[p] = null;
+      }, duration)
+    : null;
+}
+function resetMotion() {
+  facing.fill("right");
+  tokenEls.forEach((el, p) => {
+    clearTimeout(poseTimers[p]);
+    poseTimers[p] = null;
+    el.dataset.pose = "idle";
+    el.dataset.facing = facing[p];
+  });
+}
+function restoreFacing() {
+  facing.fill("right");
+  for (const action of moveLog) {
+    if (action.dir === 1) facing[action.player] = "right";
+    if (action.dir === 3) facing[action.player] = "left";
+  }
+  tokenEls.forEach((el, p) => { el.dataset.facing = facing[p]; });
+}
 function shiftArrow(from, to) {
   return ({ [-7]: "↑", [1]: "→", [7]: "↓", [-1]: "←" })[to - from] || "";
 }
@@ -98,6 +130,7 @@ function render() {
   tokenEls.forEach((el, p) => {
     const at = state.players[p];
     el.style.transform = `translate(${(at % 7) * 100}%,${Math.floor(at / 7) * 100}%)`;
+    el.dataset.facing = facing[p];
   });
   $("scores").innerHTML = [0, 1]
     .map(
@@ -197,6 +230,9 @@ async function playSlide(dir) {
   };
   history.push(clone(turnStart));
   moveLog.push(lastAction);
+  if (dir === 1) facing[player] = "right";
+  if (dir === 3) facing[player] = "left";
+  setPose(player, "slide");
   state = next;
   busy = true;
   selected = null;
@@ -204,7 +240,9 @@ async function playSlide(dir) {
   await new Promise((r) => setTimeout(r, 280));
   if (myEpoch !== epoch) return;
   busy = false;
-  if (state.scores.reduce((a, b) => a + b, 0) > oldScore) flash();
+  const scored = state.scores.reduce((a, b) => a + b, 0) > oldScore;
+  setPose(player, scored ? "collect" : "stop", scored ? 560 : 220);
+  if (scored) flash();
   phase = "wall";
   turnStart = clone(state);
   remember();
@@ -298,6 +336,7 @@ function reset() {
     ? crypto.getRandomValues(new Uint32Array(1))[0]
     : Math.floor(Math.random() * 4294967296);
   stopCPU();
+  resetMotion();
   if ($("result").open) $("result").close();
   resultSeen = false;
   busy = false;
@@ -320,6 +359,7 @@ $("skip").onclick = () => {
 $("undo").onclick = () => {
   epoch++;
   stopCPU();
+  resetMotion();
   busy = false;
   if (phase === "slide" && !cpuTurn()) {
     state = clone(turnStart);
@@ -334,6 +374,7 @@ $("undo").onclick = () => {
   selected = null;
   resultSeen = false;
   moveLog.length = history.length;
+  restoreFacing();
   turnStart = clone(state);
   seen = new Map();
   history.forEach((s) => seen.set(key(s), (seen.get(key(s)) || 0) + 1));
