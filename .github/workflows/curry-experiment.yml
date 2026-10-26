@@ -1,0 +1,67 @@
+name: Curry one-gimmick experiment
+on:
+  push:
+    branches: [experiment/curry-powerup-two-player]
+    paths:
+      - .github/workflows/curry-experiment.yml
+      - experiments/curry-power.js
+      - scripts/curry-study.js
+      - tests/curry-power.test.js
+      - package.json
+      - experiments/curry-ai.js
+      - experiments/curry-worker.js
+      - experiments/curry-play.html
+      - experiments/curry-play.css
+      - experiments/curry-play.js
+      - tests/curry-ai.test.js
+      - tests/browser/curry.spec.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  curry-lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Validate all original rules and curry symmetry
+        run: npm run check && npm test
+      - name: Study curry +1 and +2 wall extension, with two symmetric placements
+        env:
+          PAIRS: "12"
+          MAX_PLIES: "90"
+          REPORT: reports/curry-study.json
+        run: npm run quality:curry
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: curry-two-player-study
+          path: |
+            reports/curry-study.json
+            reports/curry-study.games.json
+          retention-days: 90
+
+  curry-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Play curry prototype in Chromium, WebKit and iPhone emulation
+        run: npx playwright test tests/browser/curry.spec.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: curry-browser-evidence
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
