@@ -1134,3 +1134,67 @@ html[data-zurash-motion="animate"] .token[data-pose="collect"] .coin {
 }
 html[data-zurash-motion="animate"] .board-wrap > .wall-flight { display: grid !important; }
 html[data-zurash-motion="animate"] .celebration .spark-star { display: block !important; }
+
+
+/* Victory/defeat portraits: reuse the two approved static Triken PNGs.
+   The winning pawn celebrates twice, the other gently lowers its head. */
+.result-characters {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(17px, 7vw, 38px);
+  padding: 5px 0 2px;
+}
+.result-character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 2px;
+  flex: 0 0 auto;
+}
+.result-character img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  pointer-events: none;
+  transform-origin: 50% 88%;
+}
+.result-character span {
+  display: block;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #537378;
+}
+.result-winner { width: min(108px, 28vw); }
+.result-winner span { font-weight: 800; color: #bc7925; }
+.result-loser { width: min(80px, 21vw); }
+@keyframes triken-result-win {
+  0%, 23%, 50%, 100% { transform: translateY(0) scale(1); }
+  12% { transform: translateY(-13px) scale(1.045, 1.06); }
+  35% { transform: translateY(-11px) scale(1.04, 1.05); }
+  42%, 64% { transform: translateY(2px) scale(1.045, .955); }
+  80% { transform: translateY(0) scale(1); }
+}
+@keyframes triken-result-consolation {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  55% { transform: translateY(5px) rotate(-4deg) scale(.98, .97); }
+  100% { transform: translateY(3px) rotate(-3deg) scale(.99, .98); }
+}
+/* An explicit ON wins over iOS reduced-motion settings; automatic OFF
+   and a user's explicit OFF do not animate the result. */
+html[data-zurash-motion="animate"] #result[open] .result-winner img {
+  animation: triken-result-win 1100ms ease-in-out 1 both !important;
+}
+html[data-zurash-motion="animate"] #result[open] .result-loser img {
+  animation: triken-result-consolation 650ms ease-out 1 both !important;
+}
+html[data-zurash-motion="still"] #result .result-character img {
+  animation: none !important;
+  transform: none !important;
+}
+@media (max-width: 450px) {
+  .result-characters { padding-top: 2px; }
+}

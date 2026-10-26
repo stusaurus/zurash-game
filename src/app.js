@@ -282,6 +282,12 @@ function render() {
       `${mode === "cpu" ? (state.winner === 0 ? "あなた" : "CPU") : `プレイヤー${state.winner + 1}`}の勝ち！`;
     $("resultText").textContent =
       `最終スコア ${state.scores[0]}対${state.scores[1]}。${state.ply}手目、${last?.wallDirection ? `壁を${last.wallDirection}へずらし` : "壁を動かさずに"}${DIRS[last?.dir ?? 0].name}へ滑走し、決勝の星をゲット！`;
+    // Only the winner/loser slots change. Both use the exact approved
+    // static PNG pawns already deployed for the two-player game.
+    const winningColor = state.winner === 0 ? "orange" : "aqua";
+    const losingColor = state.winner === 0 ? "aqua" : "orange";
+    $("resultWinnerImage").src = `assets/triken-${winningColor}-80.png`;
+    $("resultLoserImage").src = `assets/triken-${losingColor}-80.png`;
     $("result").classList.toggle("defeat", mode === "cpu" && state.winner === 1);
     if (!busy && !resultSeen) {
       resultSeen = true;

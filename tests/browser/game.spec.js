@@ -116,6 +116,13 @@ test("wall selection, shift, undo, skip, slide, local handoff, victory and remat
   await expect(page.locator("#resultTitle")).toContainText(
     `プレイヤー${state.winner + 1}`,
   );
+  const winningColor = state.winner === 0 ? "orange" : "aqua";
+  const losingColor = state.winner === 0 ? "aqua" : "orange";
+  await expect(page.locator("#resultWinnerImage")).toHaveAttribute("src", `assets/triken-${winningColor}-80.png`);
+  await expect(page.locator("#resultLoserImage")).toHaveAttribute("src", `assets/triken-${losingColor}-80.png`);
+  await expect.poll(() => page.locator(".result-character img").evaluateAll(images =>
+    images.every(image => image.complete && image.naturalWidth === 80 && image.naturalHeight === 80)
+  )).toBe(true);
   await expect(page.locator("#turnCount")).toHaveText(`${state.ply}手目`);
   await expect(page.locator("#result")).toHaveCSS("opacity", "1");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);

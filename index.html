@@ -12,7 +12,7 @@
       content="壁をずらせ！ 勝利へ滑れ！ トリケンと遊ぶ、シンプルで奥深い戦略ボードゲーム。"
     />
     <title>ズラッシュ！ | ZURASH!</title>
-    <link rel="stylesheet" href="style.css?v=20261027-motion2" />
+    <link rel="stylesheet" href="style.css?v=20261027-reaction1" />
   </head>
   <body>
     <main>
@@ -74,6 +74,16 @@
         <dialog id="result" class="result" aria-labelledby="resultTitle">
           <p class="eyebrow">ZURASH! FINISH</p>
           <div class="result-stars" aria-hidden="true">★ ★ ★</div>
+          <div class="result-characters" aria-hidden="true">
+            <div class="result-character result-winner">
+              <img id="resultWinnerImage" src="assets/triken-orange-80.png" alt="" draggable="false" decoding="async" />
+              <span>やった！</span>
+            </div>
+            <div class="result-character result-loser">
+              <img id="resultLoserImage" src="assets/triken-aqua-80.png" alt="" draggable="false" decoding="async" />
+              <span>おつかれさま</span>
+            </div>
+          </div>
           <h2 id="resultTitle"></h2>
           <p id="resultText"></p>
           <button id="rematch" class="primary">もう一度あそぶ</button>
@@ -141,6 +151,6 @@
       <p>開始すると、進行中の対戦はリセットされます。</p>
       <button id="start" class="primary">対戦をはじめる</button>
     </dialog>
-    <script type="module" src="src/app.js?v=20261027-glide-slow1"></script>
+    <script type="module" src="src/app.js?v=20261027-reaction1"></script>
   </body>
 </html>
