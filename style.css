@@ -873,7 +873,7 @@ dialog.result.defeat {
     inset 1px 1px 0 #ffffffaa,
     inset -2px -2px 0 #9bc4cd3d;
 }
-.cell:nth-child(even) {
+.cell:nth-child(even):not(.selected):not(.target):not(.stop) {
   background-color: #ddf0f4;
   background-image:
     radial-gradient(ellipse at 22% 82%, #ffffff70 0%, transparent 46%),
