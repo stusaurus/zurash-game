@@ -14,6 +14,23 @@ test("approved four-color Triken atlas is served and turns follow left/right sli
   const dataUrls = await page.locator(".pawn-image").evaluateAll(nodes => nodes.map(img => img.src));
   expect(dataUrls.every(src => src.startsWith("data:image/png;base64,"))).toBe(true);
   expect(dataUrls[0]).not.toEqual(dataUrls[1]);
+  // Decoding a URL and allocating a box is insufficient: assert actual opaque
+  // character pixels survive cropping in both color slots.
+  const coverage = await page.locator(".pawn-image").evaluateAll(images =>
+    images.map(img => {
+      const canvas = document.createElement("canvas");
+      canvas.width = canvas.height = 80;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0);
+      const pixels = ctx.getImageData(0, 0, 80, 80).data;
+      let visible = 0;
+      for (let k = 3; k < pixels.length; k += 4) {
+        if (pixels[k] > 80) visible++;
+      }
+      return visible / (80 * 80);
+    })
+  );
+  expect(coverage.every(ratio => ratio > 0.2)).toBe(true);
 
   await page.locator("#localMode").click();
   await page.locator("#start").click();
