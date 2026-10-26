@@ -44,3 +44,24 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify published Triken images
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          base="${SITE_URL%/}/assets"
+          for color in orange aqua lime purple; do
+            asset="triken-${color}-80.png"
+            # The Pages CDN may need a short propagation window after deployment.
+            ok=false
+            for attempt in $(seq 1 12); do
+              if curl --fail --silent --show-error --location --max-time 10                 "${base}/${asset}?build=${GITHUB_SHA}" -o "/tmp/${asset}"                 && cmp -s "dist/assets/${asset}" "/tmp/${asset}"; then
+                echo "Confirmed live image: ${asset}"
+                ok=true
+                break
+              fi
+              sleep 5
+            done
+            test "${ok}" = true
+          done
