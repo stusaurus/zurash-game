@@ -845,3 +845,55 @@ dialog.result.defeat {
 }
 .token[data-facing="left"] .pawn-frame { transform: scaleX(-1); }
 .token[data-facing="right"] .pawn-frame { transform: scaleX(1); }
+
+
+/* Icefield visual system: top-down playability with gently beveled,
+   semi-translucent ice tiles. Purely cosmetic; no changes to board geometry. */
+.board-wrap {
+  border-color: #a6cbd2;
+  border-radius: 17px;
+  background: #b3d7dd;
+  box-shadow:
+    0 4px 0 #81aab4,
+    0 11px 22px #294f5b24,
+    inset 0 1px 0 #f8ffff;
+}
+.board {
+  border-radius: 7px;
+  background: #d9eff2;
+}
+.cell {
+  border-right-color: #b8d5db;
+  border-bottom-color: #b3d1d8;
+  background-color: #eaf6f8;
+  background-image:
+    radial-gradient(ellipse at 75% 16%, #ffffff99 0%, transparent 48%),
+    linear-gradient(138deg, #ffffff9c 0%, #ffffff18 36%, #a6ccd21c 100%);
+  box-shadow:
+    inset 1px 1px 0 #ffffffaa,
+    inset -2px -2px 0 #9bc4cd3d;
+}
+.cell:nth-child(even) {
+  background-color: #ddf0f4;
+  background-image:
+    radial-gradient(ellipse at 22% 82%, #ffffff70 0%, transparent 46%),
+    linear-gradient(143deg, #ffffff8a 0%, #ffffff0b 42%, #92bac529 100%);
+}
+.cell:nth-child(7n + 3),
+.cell:nth-child(7n + 6) {
+  background-position: 30% 70%, center;
+}
+/* Interaction states must remain unmistakable against the decorative ice. */
+.cell.selected,
+.cell.target,
+.cell.stop {
+  background-image: none;
+}
+/* A narrower frame preserves playable tile size on small phones. */
+@media (max-width: 450px) {
+  .board-wrap { border-width: 5px; border-radius: 14px; }
+  .board { border-radius: 5px; }
+  .cell {
+    box-shadow: inset 1px 1px 0 #ffffff92, inset -1px -1px 0 #9bc4cd36;
+  }
+}
