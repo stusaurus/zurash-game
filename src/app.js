@@ -70,7 +70,7 @@ function render() {
           : "氷";
     b.setAttribute(
       "aria-label",
-      `${Math.floor(i / 7) + 1}行${(i % 7) + 1}列 ${item}${target ? " 移動先" : ""}${stop ? " 滑走停止位置" : ""}`,
+      `${Math.floor(i / 7) + 1}行${(i % 7) + 1}列 ${item}${target ? " 移動先" : ""}${stop ? " 滑走停止位置" : ""}${stop && state.stars.includes(i) ? " 星を獲得" : ""}`,
     );
     b.disabled =
       locked ||
@@ -102,7 +102,7 @@ function render() {
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === 2 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${activeSettings.level === "strong" ? "つよい" : "ふつう"}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / 3${state.scores[p] === 2 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === 2 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${({random: "やさしい", greedy: "ふつう", search: "つよい", strong: "恐つよ"})[activeSettings.level]}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / 3${state.scores[p] === 2 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
     )
     .join("");
   const last = moveLog.at(-1);
@@ -126,7 +126,13 @@ function render() {
           ? "CPUが考えています…"
           : `${mode === "cpu" ? "あなた" : `プレイヤー${state.turn + 1}`}：${phase === "wall" ? "壁をずらそう" : "方向を選んで滑ろう"}`;
   $("message").textContent =
-    (seen.get(key(state)) || 0) >= 3
+    state.winner !== null
+      ? "対戦終了。最後の盤面を見ながら、結果をもう一度確認できます。"
+      : busy
+        ? "滑走中です。動きが止まったら次の手番です。"
+        : cpuTurn()
+          ? "CPUが考えています。次のあなたの手番まで待ってね。"
+          : (seen.get(key(state)) || 0) >= 3
       ? "同じ配置が続いています。別の壁や方向を試そう。"
       : phase === "wall"
         ? selected === null
@@ -138,6 +144,12 @@ function render() {
   $("skip").textContent =
     phase === "wall" ? "壁を動かさずに滑る →" : "停止マスか矢印を選ぼう";
   $("undo").disabled = busy || (!history.length && phase === "wall");
+  $("undo").textContent = phase === "slide" && !busy && !cpuTurn()
+    ? "↶ 選び直す" : "↶ 戻る";
+  $("undo").setAttribute("aria-label", phase === "slide" && !busy && !cpuTurn()
+    ? "この手番の壁と滑走方向を選び直す" : mode === "cpu" ? "あなたの前の手番まで戻る" : "前の手番に戻る");
+  $("showResult").hidden = state.winner === null;
+  $("showResult").disabled = busy;
   $("directions").replaceChildren();
   DIRS.forEach((d, dir) => {
     const b = document.createElement("button");
@@ -356,6 +368,12 @@ function openSetup(nextMode) {
 $("settings").onclick = () => openSetup(mode);
 $("rematch").onclick = reset;
 $("reviewFinal").onclick = () => $("result").close();
+$("result").addEventListener("close", () => {
+  if (state.winner !== null && !busy) $("showResult").focus();
+});
+$("showResult").onclick = () => {
+  if (state.winner !== null && !busy && !$("result").open) $("result").showModal();
+};
 // Mode changes are staged in the new-match dialog; cancellation leaves the active match intact.
 let pendingMode = null;
 for (const [id, m] of [

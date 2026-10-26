@@ -67,6 +67,7 @@
           <button id="undo">↶ 戻る</button
           ><button id="skip" class="primary">壁を動かさずに滑る →</button>
         </div>
+        <button id="showResult" class="quiet" hidden>対戦結果をもう一度見る</button>
         <p class="hint">★ は止まってゲット。通りすぎたら取れないよ。</p>
         <dialog id="result" class="result" aria-labelledby="resultTitle">
           <p class="eyebrow">ZURASH! FINISH</p>
@@ -131,8 +132,10 @@
       >
       <label id="cpuLevelRow">CPUの強さ
         <select id="cpuLevel">
-          <option value="search">ふつう</option>
-          <option value="strong" selected>つよい（手筋を読む）</option>
+          <option value="random">やさしい</option>
+          <option value="greedy">ふつう</option>
+          <option value="search">つよい</option>
+          <option value="strong" selected>恐つよ</option>
         </select>
       </label>
       <p>開始すると、進行中の対戦はリセットされます。</p>
