@@ -1,0 +1,25 @@
+import { test, expect } from "@playwright/test";
+test("animated Triken is recolored, faces travel direction, and resets", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator(".pawn-art")).toHaveCount(2);
+  await page.waitForFunction(() => document.querySelector(".token.p2 .pawn-art")?.style.backgroundImage.includes("data:image/png"));
+  const asset = await page.request.get("/assets/triken-anime-orange.webp");
+  expect(asset.status()).toBe(200);
+  expect(await page.locator(".token.p1").evaluate(x => x.style.getPropertyValue("--face"))).toBe("1");
+  expect(await page.locator(".token.p2").evaluate(x => x.style.getPropertyValue("--face"))).toBe("-1");
+  await page.locator("#localMode").click();
+  await page.locator("#start").click();
+  await page.locator("#skip").click();
+  await page.locator("#directions button").nth(1).click();
+  await expect(page.locator("#turnCount")).toHaveText("2手目");
+  await page.locator("#skip").click();
+  await page.locator("#directions button").nth(3).click();
+  await expect(page.locator("#turnCount")).toHaveText("3手目");
+  expect(await page.locator(".token.p2").evaluate(x => x.style.getPropertyValue("--face"))).toBe("-1");
+  await page.locator("#undo").click();
+  await expect(page.locator("#turnCount")).toHaveText("2手目");
+  await page.locator("#settings").click();
+  await page.locator("#start").click();
+  expect(await page.locator(".token.p1").evaluate(x => x.style.getPropertyValue("--face"))).toBe("1");
+  expect(await page.locator(".token.p2").evaluate(x => x.style.getPropertyValue("--face"))).toBe("-1");
+});

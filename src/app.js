@@ -10,6 +10,7 @@ import {
   actions,
 } from "./engine.js";
 import { choose } from "./ai.js";
+import { PIECE_COLORS, DEFAULT_FACING, nextFacing, facingFromMoves, loadPieceImages } from "./piece-visuals.js";
 const $ = (id) => document.getElementById(id);
 let state = initial(),
   turnStart = clone(state),
@@ -29,9 +30,18 @@ let state = initial(),
 const tokenEls = [0, 1].map((p) => {
   const el = document.createElement("div");
   el.className = `token p${p + 1}`;
-  el.innerHTML = `<div class="coin"></div><b>${p + 1}</b>`;
+  el.innerHTML = `<span class="pawn-facing"><span class="pawn-art"></span></span><b>${p + 1}</b>`;
   $("tokens").append(el);
   return el;
+});
+let facing = [...DEFAULT_FACING];
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function pieceMotion(player, motion) { tokenEls[player].dataset.motion = motion; }
+function waitForAnimation(ms) { return new Promise((resolve) => setTimeout(resolve, reducedMotion ? 0 : ms)); }
+loadPieceImages().then((images) => {
+  tokenEls.forEach((el, p) => {
+    el.querySelector(".pawn-art").style.backgroundImage = 'url("' + images[p] + '")';
+  });
 });
 function shiftArrow(from, to) {
   return ({ [-7]: "↑", [1]: "→", [7]: "↓", [-1]: "←" })[to - from] || "";
@@ -98,11 +108,12 @@ function render() {
   tokenEls.forEach((el, p) => {
     const at = state.players[p];
     el.style.transform = `translate(${(at % 7) * 100}%,${Math.floor(at / 7) * 100}%)`;
+    el.style.setProperty("--face", String(facing[p]));
   });
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === 2 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${activeSettings.level === "strong" ? "つよい" : "ふつう"}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / 3${state.scores[p] === 2 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === 2 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${activeSettings.level === "strong" ? "つよい" : "ふつう"}）` : "プレイヤー2"}</strong><small>${PIECE_COLORS[p].name} · ${state.scores[p]} / 3${state.scores[p] === 2 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
     )
     .join("");
   const last = moveLog.at(-1);
@@ -197,14 +208,25 @@ async function playSlide(dir) {
   };
   history.push(clone(turnStart));
   moveLog.push(lastAction);
+  facing[player] = nextFacing(facing[player], dir);
+  pieceMotion(player, "slide");
   state = next;
   busy = true;
   selected = null;
   render();
-  await new Promise((r) => setTimeout(r, 280));
+  await waitForAnimation(280);
   if (myEpoch !== epoch) return;
+  pieceMotion(player, "stop");
+  await waitForAnimation(120);
+  if (myEpoch !== epoch) return;
+  if (state.scores.reduce((a, b) => a + b, 0) > oldScore) {
+    flash();
+    pieceMotion(player, "collect");
+    await waitForAnimation(340);
+    if (myEpoch !== epoch) return;
+  }
+  pieceMotion(player, "idle");
   busy = false;
-  if (state.scores.reduce((a, b) => a + b, 0) > oldScore) flash();
   phase = "wall";
   turnStart = clone(state);
   remember();
@@ -301,6 +323,8 @@ function reset() {
   if ($("result").open) $("result").close();
   resultSeen = false;
   busy = false;
+  facing = [...DEFAULT_FACING];
+  tokenEls.forEach((_, p) => pieceMotion(p, "idle"));
   state = initial(activeSettings.layout, activeSettings.starter);
   phase = "wall";
   selected = null;
@@ -334,6 +358,8 @@ $("undo").onclick = () => {
   selected = null;
   resultSeen = false;
   moveLog.length = history.length;
+  facing = facingFromMoves(moveLog);
+  tokenEls.forEach((_, p) => pieceMotion(p, "idle"));
   turnStart = clone(state);
   seen = new Map();
   history.forEach((s) => seen.set(key(s), (seen.get(key(s)) || 0) + 1));

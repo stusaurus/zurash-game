@@ -760,3 +760,51 @@ dialog.result.defeat {
 .token.p2 .coin::before {
   filter: drop-shadow(0 0 2px #237a83);
 }
+
+
+/* Visual-only Triken motion. The board position continues to be controlled by the engine. */
+.token .pawn-facing {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(var(--face, 1));
+  transform-origin: center;
+}
+.token .pawn-art {
+  position: absolute;
+  inset: 0;
+  background: url("assets/triken-anime-orange.webp") center bottom / contain no-repeat;
+  filter: drop-shadow(0 1px 1px #31565c44);
+  transform-origin: 50% 88%;
+  animation: triken-breathe 2.7s ease-in-out infinite;
+}
+.token[data-motion="slide"] .pawn-art {
+  animation: triken-slide 280ms ease-out both;
+}
+.token[data-motion="stop"] .pawn-art {
+  animation: triken-stop 120ms ease-out both;
+}
+.token[data-motion="collect"] .pawn-art {
+  animation: triken-collect 340ms ease-out both;
+}
+@keyframes triken-breathe {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  50% { transform: translateY(-1px) scaleY(1.02); }
+}
+@keyframes triken-slide {
+  from { transform: translateY(1px) scale(0.96, 0.98) rotate(-3deg); }
+  to { transform: translateY(0) scale(1, 1) rotate(0); }
+}
+@keyframes triken-stop {
+  0% { transform: scale(1.06, .93); }
+  100% { transform: scale(1); }
+}
+@keyframes triken-collect {
+  0%, 100% { transform: translateY(0) scale(1); }
+  45% { transform: translateY(-10px) scale(0.94, 1.08); }
+  72% { transform: translateY(-4px) scale(1.02, 1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .token .pawn-art, .token .pawn-facing { animation: none !important; transition: none !important; }
+}
