@@ -22,17 +22,33 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
   await expect(page.locator("#directions button").nth(1)).toBeEnabled();
   const pawn = page.locator(".token.p1");
   const origin = await pawn.boundingBox();
-  await page.locator("#directions button").nth(1).click();
-  await expect(pawn).toHaveAttribute("data-pose", "slide");
-  const midpoint = await pawn.evaluate(async el => {
-    await new Promise(resolve => setTimeout(resolve, 70));
-    return el.getBoundingClientRect().x;
+  // Install a requestAnimationFrame recorder *before* starting travel.
+  // Cross-process Playwright awaits may begin sampling only after arrival on WebKit.
+  await page.evaluate(() => {
+    const token = document.querySelector(".token.p1");
+    window.__trikenFlight = { points: [token.getBoundingClientRect().x], done: false };
+    const observer = new MutationObserver(() => {
+      if (token.dataset.pose !== "slide") return;
+      observer.disconnect();
+      const started = performance.now();
+      const sample = () => {
+        window.__trikenFlight.points.push(token.getBoundingClientRect().x);
+        if (performance.now() - started < 530) requestAnimationFrame(sample);
+        else window.__trikenFlight.done = true;
+      };
+      requestAnimationFrame(sample);
+    });
+    observer.observe(token, { attributes: true, attributeFilter: ["data-pose"] });
   });
+  await page.locator("#directions button").nth(1).click();
   await expect(page.locator("#turnCount")).toHaveText("2手目");
+  await expect.poll(() => page.evaluate(() => window.__trikenFlight.done)).toBe(true);
   const arrival = await pawn.boundingBox();
+  const samples = await page.evaluate(() => window.__trikenFlight.points);
   expect(arrival.x).toBeGreaterThan(origin.x + 30);
-  expect(midpoint).toBeGreaterThan(origin.x + 1);
-  expect(midpoint).toBeLessThan(arrival.x - 1);
+  expect(samples.length).toBeGreaterThan(3);
+  const intermediate = samples.filter(x => x > origin.x + 5 && x < arrival.x - 5);
+  expect(intermediate.length).toBeGreaterThan(0);
   await toggle.click();
   await expect(toggle).toHaveText("動き：OFF");
   expect(await pawn.evaluate(el => getComputedStyle(el).transitionDuration)).toBe("0s");
