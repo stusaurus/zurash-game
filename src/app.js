@@ -339,7 +339,8 @@ async function playSlide(dir) {
   }
   busy = false;
   const scored = state.scores.reduce((a, b) => a + b, 0) > oldScore;
-  setPose(player, scored ? "collect" : "stop", reducedMotion ? 0 : scored ? 560 : 220);
+  setPose(player, reducedMotion ? "idle" : scored ? "collect" : "stop",
+    reducedMotion ? 0 : scored ? 560 : 220);
   if (scored) flash(state.players[player]);
   phase = "wall";
   turnStart = clone(state);
