@@ -44,8 +44,12 @@ test("wall slides exactly one tile without changing the number of cells or rules
   const frames = calls[0].frames;
   const dx = (dest % 7) - (source % 7), dy = Math.floor(dest / 7) - Math.floor(source / 7);
   expect(Math.abs(dx) + Math.abs(dy)).toBe(1);
-  const parts = frames[1].transform.match(/^translate\\((-?[\\d.]+)px, (-?[\\d.]+)px\\)$/);
-  expect(parts).not.toBeNull();
+  // Parse the CSS translate without platform-sensitive regex escaping.
+  const transform = frames[1].transform;
+  expect(transform.startsWith("translate(") && transform.endsWith(")")).toBe(true);
+  const parts = transform.slice(10, -1).replaceAll("px", "").split(",").map(Number);
+  expect(parts).toHaveLength(2);
+  expect(parts.every(Number.isFinite)).toBe(true);
   expect(Math.abs(Number(parts[1]) - dx * before.width)).toBeLessThan(1);
   expect(Math.abs(Number(parts[2]) - dy * before.height)).toBeLessThan(1);
   await expect(page.locator("#skip")).toBeEnabled();
