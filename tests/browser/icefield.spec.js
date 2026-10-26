@@ -34,8 +34,10 @@ test("icefield is square, readable and preserves existing objects on small scree
   expect(await page.locator(".cell.selected").evaluate(el => getComputedStyle(el).backgroundImage)).toBe("none");
   await expect(page.locator(".cell.target")).not.toHaveCount(0);
   expect(await page.locator(".cell.target").first().evaluate(el => getComputedStyle(el).backgroundImage)).toBe("none");
+  expect(await page.locator(".cell.target").first().evaluate(el => getComputedStyle(el).backgroundColor)).toBe("rgb(197, 231, 214)");
   await page.locator("#skip").click();
   await expect(page.locator(".cell.stop")).not.toHaveCount(0);
   expect(await page.locator(".cell.stop").first().evaluate(el => getComputedStyle(el).backgroundImage)).toBe("none");
+  expect(await page.locator(".cell.stop").first().evaluate(el => getComputedStyle(el).backgroundColor)).toBe("rgb(210, 234, 223)");
   expect(errors).toEqual([]);
 });
