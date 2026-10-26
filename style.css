@@ -1050,3 +1050,42 @@ dialog.result.defeat {
 @media (prefers-reduced-motion: reduce) {
   .board-wrap > .wall-flight { display: none; }
 }
+
+
+/* Triken glide polish: preserve the approved PNG and direction mirroring.
+   Only the outer coin's pose changes; board coordinates stay engine-owned. */
+.token {
+  transition-duration: var(--triken-glide-ms, 260ms);
+  transition-timing-function: cubic-bezier(.19, .72, .26, 1);
+}
+.token .coin { transform-origin: 50% 84%; }
+.token[data-pose="windup"] .coin {
+  animation: triken-windup 85ms ease-out both;
+}
+.token[data-pose="slide"] .coin {
+  animation: triken-glide var(--triken-glide-ms, 260ms) ease-in-out both;
+}
+.token[data-pose="stop"] .coin {
+  animation: triken-land 220ms ease-out both;
+}
+@keyframes triken-windup {
+  0% { transform: translateY(0) scale(1) rotate(0); }
+  70% { transform: translateY(2px) scale(1.045, .955) rotate(-2deg); }
+  100% { transform: translateY(2px) scale(1.05, .95) rotate(-3deg); }
+}
+@keyframes triken-glide {
+  0% { transform: translateY(2px) scale(1.05, .95) rotate(-3deg); }
+  20% { transform: translateY(-1px) scale(.985, 1.015) rotate(-4deg); }
+  75% { transform: translateY(-2px) scale(1, 1) rotate(-3deg); }
+  100% { transform: translateY(0) scale(1.025, .975) rotate(-2deg); }
+}
+@keyframes triken-land {
+  0% { transform: translateY(0) scale(1.025, .975) rotate(-2deg); }
+  34% { transform: translateY(2px) scale(1.08, .93) rotate(2deg); }
+  68% { transform: translateY(-1px) scale(.985, 1.02) rotate(-1deg); }
+  100% { transform: translateY(0) scale(1) rotate(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .token { transition: none !important; }
+  .token[data-pose] .coin { animation: none !important; }
+}
