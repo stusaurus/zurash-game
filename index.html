@@ -12,7 +12,7 @@
       content="壁をずらせ！ 勝利へ滑れ！ トリケンと遊ぶ、シンプルで奥深い戦略ボードゲーム。"
     />
     <title>ズラッシュ！ | ZURASH!</title>
-    <link rel="stylesheet" href="style.css?v=20261026-triken-glide1" />
+    <link rel="stylesheet" href="style.css?v=20261027-motion2" />
   </head>
   <body>
     <main>
@@ -68,6 +68,9 @@
           ><button id="skip" class="primary">壁を動かさずに滑る →</button>
         </div>
         <p class="hint">★ は止まってゲット。通りすぎたら取れないよ。</p>
+        <div class="motion-control"><button id="motionToggle" type="button"
+          class="quiet" aria-label="トリケンと壁の動きを切り替える"
+          aria-pressed="false">動き：自動</button></div>
         <dialog id="result" class="result" aria-labelledby="resultTitle">
           <p class="eyebrow">ZURASH! FINISH</p>
           <div class="result-stars" aria-hidden="true">★ ★ ★</div>
@@ -138,6 +141,6 @@
       <p>開始すると、進行中の対戦はリセットされます。</p>
       <button id="start" class="primary">対戦をはじめる</button>
     </dialog>
-    <script type="module" src="src/app.js?v=20261026-triken-glide1"></script>
+    <script type="module" src="src/app.js?v=20261027-motion2"></script>
   </body>
 </html>
