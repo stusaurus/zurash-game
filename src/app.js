@@ -25,6 +25,7 @@ let state = initial(),
   epoch = 0,
   worker = null,
   cpuTimer = null,
+  movingWall = null,
   activeSettings = { layout: 0, starter: 0, level: "strong" },
   matchSeed = 0;
 // Four approved palettes are stored in a shared atlas; the rules still support two players.
@@ -70,6 +71,72 @@ function restoreFacing() {
 }
 function shiftArrow(from, to) {
   return ({ [-7]: "↑", [1]: "→", [7]: "↓", [-1]: "←" })[to - from] || "";
+}
+function cancelMovingWall() {
+  const flight = movingWall;
+  movingWall = null;
+  if (!flight) return;
+  flight.animation?.cancel();
+  flight.element.remove();
+}
+// Animate a validated one-cell wall move, then commit the original engine state.
+// The floating piece uses the exact same CSS visual as every static wall.
+async function shiftWallAnimated(move, expectedEpoch = epoch) {
+  if (busy || phase !== "wall" || state.winner !== null) return false;
+  let next;
+  try { next = moveWall(state, move); } catch { return false; }
+  const from = state.walls[move.wall];
+  const board = $("board");
+  const origin = board.querySelector(`[data-cell="${from}"]`);
+  const target = board.querySelector(`[data-cell="${move.to}"]`);
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!origin || !target || reduce || typeof origin.animate !== "function") {
+    if (expectedEpoch !== epoch) return false;
+    state = next;
+    selected = null;
+    phase = "slide";
+    render();
+    return true;
+  }
+  const start = origin.getBoundingClientRect();
+  const destination = target.getBoundingClientRect();
+  const wrapper = board.parentElement;
+  const frame = wrapper.getBoundingClientRect();
+  busy = true;
+  selected = null;
+  render(); // Disable input while preserving the old wall position.
+  board.querySelector(`[data-cell="${from}"]`)?.classList.add("wall-in-flight");
+  const ghost = document.createElement("div");
+  ghost.className = "cell wall wall-flight";
+  ghost.setAttribute("aria-hidden", "true");
+  ghost.style.left = `${start.left - frame.left - wrapper.clientLeft}px`;
+  ghost.style.top = `${start.top - frame.top - wrapper.clientTop}px`;
+  ghost.style.width = `${start.width}px`;
+  ghost.style.height = `${start.height}px`;
+  wrapper.append(ghost);
+  const dx = destination.left - start.left;
+  const dy = destination.top - start.top;
+  try {
+    const animation = ghost.animate(
+      [{ transform: "translate(0px, 0px)" },
+       { transform: `translate(${dx}px, ${dy}px)` }],
+      { duration: 260, easing: "cubic-bezier(.23,.72,.22,1)", fill: "forwards" }
+    );
+    movingWall = { element: ghost, animation };
+    await animation.finished;
+  } catch {
+    // Web Animations may be cancelled by a new game, or unsupported by a browser.
+    // If still the same game, finish the already-validated move without animation.
+  } finally {
+    if (movingWall?.element === ghost) cancelMovingWall();
+    else ghost.remove();
+  }
+  if (expectedEpoch !== epoch) return false;
+  state = next;
+  busy = false;
+  phase = "slide";
+  render();
+  return true;
 }
 function cpuTurn() {
   return mode === "cpu" && state.turn === 1 && state.winner === null;
@@ -118,10 +185,7 @@ function render() {
     if (target) b.textContent = shiftArrow(state.walls[target.wall], target.to);
     b.onclick = () => {
       if (target) {
-        state = moveWall(state, target);
-        phase = "slide";
-        selected = null;
-        render();
+        void shiftWallAnimated(target);
       } else if (stop) playSlide(stop.dir);
       else {
         selected = wall;
@@ -157,7 +221,7 @@ function render() {
     state.winner !== null
       ? "勝負あり！"
       : busy
-        ? "トリケンが滑走中！"
+        ? (phase === "wall" ? "壁をずらしています…" : "トリケンが滑走中！")
         : cpuTurn()
           ? "CPUが考えています…"
           : `${mode === "cpu" ? "あなた" : `プレイヤー${state.turn + 1}`}：${phase === "wall" ? "壁をずらそう" : "方向を選んで滑ろう"}`;
@@ -322,8 +386,8 @@ function fallback(id) {
     acceptCPU(choose(state, { level: "greedy", seen }), id);
   }, 30);
 }
-function acceptCPU(action, id) {
-  if (id !== epoch || !cpuTurn() || phase !== "wall") return;
+async function acceptCPU(action, id) {
+  if (id !== epoch || !cpuTurn() || phase !== "wall" || busy) return;
   clearTimeout(cpuTimer);
   const valid = action && actions(state).some((a) =>
     a.dir === action.dir && (a.wall === null ? action.wall === null :
@@ -339,11 +403,14 @@ function acceptCPU(action, id) {
       "合法手がありません。戻るか、新しい対戦を選んでください。";
     return;
   }
-  if (action.wall) state = moveWall(state, action.wall);
-  phase = "slide";
-  render();
+  if (action.wall) {
+    if (!(await shiftWallAnimated(action.wall, id)) || id !== epoch) return;
+  } else {
+    phase = "slide";
+    render();
+  }
   setTimeout(() => {
-    if (id === epoch) playSlide(action.dir);
+    if (id === epoch && phase === "slide") playSlide(action.dir);
   }, 200);
 }
 function reset() {
@@ -352,6 +419,7 @@ function reset() {
     ? crypto.getRandomValues(new Uint32Array(1))[0]
     : Math.floor(Math.random() * 4294967296);
   stopCPU();
+  cancelMovingWall();
   resetMotion();
   clearStarFlash();
   if ($("result").open) $("result").close();
@@ -376,6 +444,7 @@ $("skip").onclick = () => {
 $("undo").onclick = () => {
   epoch++;
   stopCPU();
+  cancelMovingWall();
   resetMotion();
   clearStarFlash();
   busy = false;
