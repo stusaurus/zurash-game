@@ -897,3 +897,61 @@ dialog.result.defeat {
     box-shadow: inset 1px 1px 0 #ffffff92, inset -1px -1px 0 #9bc4cd36;
   }
 }
+
+
+/* Ice-block wall: a raised translucent toy piece on the top-down icefield.
+   Pure CSS, so the underlying wall positions and move rules stay untouched. */
+.cell.wall::before {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 77%;
+  height: 73%;
+  border: 2px solid #679eaf;
+  border-radius: clamp(7px, 1.5vw, 11px);
+  background:
+    radial-gradient(ellipse at 26% 19%, #ffffffed 0%, #ffffff6b 13%, transparent 37%),
+    radial-gradient(circle at 73% 65%, #f2ffffa8 0 2px, transparent 4px),
+    radial-gradient(circle at 43% 59%, #f9ffffb5 0 1px, transparent 3px),
+    linear-gradient(142deg, #d0f2f6 0%, #aedce5 28%, #86bccb 60%, #679db0 100%);
+  box-shadow:
+    0 4px 0 #5f91a2,
+    0 6px 5px #365b6c50,
+    inset 2px 2px 0 #f8ffffdc,
+    inset -3px -3px 0 #477e9252;
+}
+.cell.wall.available::after {
+  position: absolute;
+  inset: 9%;
+  z-index: 0;
+  border: 2px solid #f4ffffb8;
+  border-radius: clamp(8px, 1.7vw, 13px);
+  box-shadow: 0 0 0 1px #4e9ebc6b, 0 0 6px #e0feffa8;
+  pointer-events: none;
+}
+/* Keep selection feedback unmistakable: amber selection, but no wall recolor. */
+.cell.wall.selected::before {
+  border-color: #cd8137;
+  box-shadow:
+    0 4px 0 #9b643c,
+    0 6px 5px #553d3059,
+    inset 2px 2px 0 #ffffffd9,
+    inset -3px -3px 0 #477e9252;
+}
+.cell.wall.selected::after {
+  border-color: #ffe8ae;
+  box-shadow: 0 0 0 2px #e6a148aa, 0 0 7px #ffeacbb8;
+}
+.cell.wall.available:focus-visible {
+  outline: 3px solid #d78c32;
+  outline-offset: -3px;
+}
+/* The interaction ring and block must not cover target arrows. */
+.cell.target,
+.cell.stop {
+  isolation: isolate;
+}
+@media (max-width: 450px) {
+  .cell.wall::before { border-width: 1.5px; border-radius: 8px; }
+  .cell.wall.available::after { border-width: 1px; border-radius: 9px; }
+}
