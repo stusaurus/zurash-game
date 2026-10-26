@@ -1,0 +1,42 @@
+name: Triken result reactions
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "src/app.js"
+      - "style.css"
+      - "tests/browser/result-reactions.spec.js"
+      - "tests/browser/game.spec.js"
+      - ".github/workflows/result-reactions.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  portraits:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            browser: chromium
+            project: chromium
+          - os: macos-latest
+            browser: webkit
+            project: iphone-webkit
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Install test browser
+        run: npx playwright install ${{ matrix.browser }}
+        timeout-minutes: 5
+      - name: Verify characters and animation
+        run: npx playwright test tests/browser/result-reactions.spec.js --project=${{ matrix.project }} --workers=1
+        timeout-minutes: 5
+      - name: Verify winner/loser colors in a completed match
+        run: npx playwright test tests/browser/game.spec.js --grep "wall selection, shift, undo, skip, slide, local handoff, victory and rematch" --project=${{ matrix.project }} --workers=1
+        timeout-minutes: 8
