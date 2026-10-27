@@ -1,0 +1,419 @@
+[
+  {
+    "mode": "A",
+    "layoutIndex": 4,
+    "starter": 1,
+    "actions": [
+      {
+        "wall": {
+          "wall": 5,
+          "to": 0
+        },
+        "dir": 3
+      },
+      {
+        "wall": {
+          "wall": 0,
+          "to": 10
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 3,
+          "to": 17
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 3,
+          "to": 18
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 5,
+          "to": 1
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 0,
+          "to": 2
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 4,
+          "to": 25
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 6,
+          "to": 26
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 4,
+          "to": 17
+        },
+        "dir": 3
+      },
+      {
+        "wall": {
+          "wall": 1,
+          "to": 44
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 4,
+          "to": 16
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 6,
+          "to": 25
+        },
+        "dir": 1
+      },
+      {
+        "wall": {
+          "wall": 1,
+          "to": 52
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 1,
+          "to": 51
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 1,
+          "to": 52
+        },
+        "dir": 1
+      },
+      {
+        "wall": {
+          "wall": 2,
+          "to": 37
+        },
+        "dir": 1
+      },
+      {
+        "wall": {
+          "wall": 1,
+          "to": 60
+        },
+        "dir": 3
+      }
+    ],
+    "winner": 1,
+    "scores": [
+      1,
+      4
+    ]
+  },
+  {
+    "mode": "B",
+    "layoutIndex": 5,
+    "starter": 0,
+    "actions": [
+      {
+        "wall": {
+          "wall": 3,
+          "to": 54
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 7,
+          "to": 2
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 6,
+          "to": 8
+        },
+        "dir": 1
+      },
+      {
+        "wall": {
+          "wall": 2,
+          "to": 52
+        },
+        "dir": 3
+      },
+      {
+        "wall": {
+          "wall": 7,
+          "to": 11
+        },
+        "dir": 0
+      }
+    ],
+    "winner": 0,
+    "scores": [
+      3,
+      0
+    ]
+  },
+  {
+    "mode": "C",
+    "layoutIndex": 6,
+    "starter": 0,
+    "actions": [
+      {
+        "wall": {
+          "wall": 0,
+          "to": 64
+        },
+        "dir": 1
+      },
+      {
+        "wall": {
+          "wall": 1,
+          "to": 31
+        },
+        "dir": 3
+      },
+      {
+        "wall": {
+          "wall": 1,
+          "to": 32
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 3,
+          "to": 57
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 6,
+          "to": 62
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 3,
+          "to": 67
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 0,
+          "to": 54
+        },
+        "dir": 1
+      }
+    ],
+    "winner": 0,
+    "scores": [
+      3,
+      0
+    ]
+  },
+  {
+    "mode": "D",
+    "layoutIndex": 7,
+    "starter": 1,
+    "actions": [
+      {
+        "wall": {
+          "wall": 6,
+          "to": 17
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 4,
+          "to": 3
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 4,
+          "to": 9
+        },
+        "dir": 3
+      },
+      {
+        "wall": {
+          "wall": 1,
+          "to": 30
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 5,
+          "to": 27
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 5,
+          "to": 26
+        },
+        "dir": 1
+      },
+      {
+        "wall": {
+          "wall": 3,
+          "to": 32
+        },
+        "dir": 1
+      },
+      {
+        "wall": {
+          "wall": 2,
+          "to": 1
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 5,
+          "to": 25
+        },
+        "dir": 3
+      },
+      {
+        "wall": {
+          "wall": 4,
+          "to": 3
+        },
+        "dir": 1
+      },
+      {
+        "wall": {
+          "wall": 4,
+          "to": 9
+        },
+        "dir": 0
+      }
+    ],
+    "winner": 1,
+    "scores": [
+      2,
+      4
+    ]
+  },
+  {
+    "mode": "E",
+    "layoutIndex": 8,
+    "starter": 0,
+    "actions": [
+      {
+        "wall": {
+          "wall": 5,
+          "to": 100
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 5,
+          "to": 89
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 1,
+          "to": 52
+        },
+        "dir": 1
+      },
+      {
+        "wall": {
+          "wall": 6,
+          "to": 24
+        },
+        "dir": 3
+      },
+      {
+        "wall": {
+          "wall": 8,
+          "to": 18
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 1,
+          "to": 41
+        },
+        "dir": 2
+      },
+      {
+        "wall": {
+          "wall": 0,
+          "to": 42
+        },
+        "dir": 1
+      },
+      {
+        "wall": {
+          "wall": 14,
+          "to": 22
+        },
+        "dir": 1
+      },
+      {
+        "wall": {
+          "wall": 9,
+          "to": 102
+        },
+        "dir": 3
+      },
+      {
+        "wall": {
+          "wall": 9,
+          "to": 113
+        },
+        "dir": 0
+      },
+      {
+        "wall": {
+          "wall": 9,
+          "to": 102
+        },
+        "dir": 2
+      }
+    ],
+    "winner": 0,
+    "scores": [
+      3,
+      0
+    ]
+  }
+]
