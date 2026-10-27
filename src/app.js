@@ -448,9 +448,26 @@ function runCPU() {
   }
 }
 function fallback(id) {
+  if (id !== epoch) return;
+  stopCPU();
+  id = ++epoch; // Reject even an already-queued reply from the failed Worker.
+  $("cpuRecovery").hidden = false;
   setTimeout(() => {
     if (id !== epoch || !cpuTurn()) return;
-    acceptCPU(choose(state, { level: "greedy", seen }), id);
+    if (activeSettings.layout < LAYOUTS.length) {
+      acceptCPU(choose(state, { level: "greedy", seen }), id);
+      return;
+    }
+    // Bounded recovery: first try a wall-free legal slide; do not run the
+    // evaluation/search on the UI thread after a Worker failure.
+    const direct = slideOptions(state)[0];
+    if (direct) { acceptCPU({ wall: null, dir: direct.dir }, id); return; }
+    const wall = movableWalls(state)[0];
+    if (wall) {
+      const next = moveWall(state, wall), slide = slideOptions(next)[0];
+      if (slide) { acceptCPU({ wall, dir: slide.dir }, id); return; }
+    }
+    $("message").textContent = "CPUが手を選べませんでした。戻るか新しい対戦を選んでください。";
   }, 30);
 }
 async function acceptCPU(action, id) {
@@ -482,6 +499,7 @@ async function acceptCPU(action, id) {
 }
 function reset() {
   epoch++;
+  $("cpuRecovery").hidden = true;
   matchSeed = globalThis.crypto?.getRandomValues
     ? crypto.getRandomValues(new Uint32Array(1))[0]
     : Math.floor(Math.random() * 4294967296);
@@ -540,10 +558,9 @@ $("undo").onclick = () => {
 $("help").onclick = () => $("helpDialog").showModal();
 function openSetup(nextMode) {
   $("layout").value = String(activeSettings.layout);
-  for (const option of $("layout").options) option.disabled = nextMode === "cpu" && Number(option.value) >= LAYOUTS.length;
-  if (nextMode === "cpu" && Number($("layout").value) >= LAYOUTS.length) $("layout").value = "0";
   $("starter").value = String(activeSettings.starter);
   $("cpuLevel").value = activeSettings.level;
+  syncCpuOptions(nextMode);
   $("cpuLevelRow").hidden = nextMode !== "cpu";
   $("starter").options[0].textContent =
     nextMode === "cpu" ? "プレイヤー1（あなた）" : "プレイヤー1";
@@ -566,6 +583,16 @@ $("rematch").onclick = reset;
 $("reviewFinal").onclick = () => $("result").close();
 // Mode changes are staged in the new-match dialog; cancellation leaves the active match intact.
 let pendingMode = null;
+function syncCpuOptions(nextMode = pendingMode || mode) {
+  const research = Number($("layout").value) >= LAYOUTS.length;
+  const strong = $("cpuLevel").querySelector('option[value="strong"]');
+  strong.disabled = nextMode === "cpu" && research;
+  if (strong.disabled && $("cpuLevel").value === "strong") $("cpuLevel").value = "search";
+  $("researchModeNotice").textContent = research && nextMode === "cpu"
+    ? "検証用A〜EのCPUは「ふつう」のみ対応しています。「つよい」は準備中です。"
+    : "検証用A〜Eはふたり対戦、またはCPU「ふつう」で遊べます。";
+}
+$("layout").addEventListener("change", () => syncCpuOptions());
 for (const [id, m] of [
   ["cpuMode", "cpu"],
   ["localMode", "local"],
@@ -580,8 +607,9 @@ $("setupDialog").addEventListener("close", () => {
 });
 $("start").onclick = () => {
   const selectedLayout = Number($("layout").value), nextMode = pendingMode || mode;
-  if (!Number.isInteger(selectedLayout) || selectedLayout < 0 || selectedLayout >= LAYOUTS.length + RESEARCH_LAYOUTS.length || (nextMode === "cpu" && selectedLayout >= LAYOUTS.length)) {
-    $("researchModeNotice").textContent = "検証用A〜Eはふたりで対戦のみ選べます。CPUは7×7の盤面を選んでください。";
+  const selectedLevel = $("cpuLevel").value;
+  if (!Number.isInteger(selectedLayout) || selectedLayout < 0 || selectedLayout >= LAYOUTS.length + RESEARCH_LAYOUTS.length || !["search", "strong"].includes(selectedLevel) || (nextMode === "cpu" && selectedLayout >= LAYOUTS.length && selectedLevel !== "search")) {
+    $("researchModeNotice").textContent = "検証用A〜EのCPUは「ふつう」を選んでください。";
     return;
   }
   activeSettings = { layout: Number($("layout").value), starter: Number($("starter").value), level: $("cpuLevel").value };

@@ -51,6 +51,7 @@
           </div>
           <span id="turnCount"></span>
         </div>
+        <p id="cpuRecovery" role="status" hidden>CPUの思考が中断したため、合法手で対戦を続けました。</p>
         <div class="board-scroll" tabindex="0" aria-label="ゲーム盤を横にスクロール">
         <div class="board-wrap">
           <div
@@ -155,7 +156,7 @@
           <option value="strong" selected>つよい（手筋を読む）</option>
         </select>
       </label>
-      <p id="researchModeNotice" role="status">検証用A〜Eはふたりで対戦のみ選べます。CPUは7×7の盤面で遊べます。</p>
+      <p id="researchModeNotice" role="status">検証用A〜Eはふたり対戦、またはCPU「ふつう」で遊べます。</p>
       <p>開始すると、進行中の対戦はリセットされます。</p>
       <button id="start" class="primary">対戦をはじめる</button>
     </dialog>
