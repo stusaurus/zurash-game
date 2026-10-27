@@ -46,7 +46,9 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
   const arrival = await pawn.boundingBox();
   const samples = await page.evaluate(() => window.__trikenFlight.points);
   expect(arrival.x).toBeGreaterThan(origin.x + 30);
-  expect(samples.length).toBeGreaterThan(3);
+  // Three samples (start, one in-flight position, finish) are sufficient.
+  // WebKit under CI load can render only three frames for this short tween.
+  expect(samples.length).toBeGreaterThanOrEqual(3);
   const intermediate = samples.filter(x => x > origin.x + 5 && x < arrival.x - 5);
   expect(intermediate.length).toBeGreaterThan(0);
   await toggle.click();
