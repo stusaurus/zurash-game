@@ -71,6 +71,13 @@
           <button id="undo">↶ 戻る</button
           ><button id="skip" class="primary">壁を動かさずに滑る →</button>
         </div>
+        <section id="learningPanel" hidden aria-label="学習CPUの記録">
+          <p id="learningStats" aria-live="polite"></p>
+          <p id="learningWarning" role="status" hidden></p>
+          <p>学習対戦では「戻る」は使えません。</p>
+          <button id="recordUnresolved" type="button">未決着として記録して終了</button>
+          <button id="resetLearning" type="button">学習データをリセット</button>
+        </section>
         <p class="hint">★ は止まってゲット。通りすぎたら取れないよ。</p>
         <div class="motion-control"><button id="motionToggle" type="button"
           class="quiet" aria-label="トリケンと壁の動きを切り替える"
@@ -126,7 +133,7 @@
         壁は、星・コマ・他の壁がある場所や盤外へは動かせません。どちらかが滑れなくなる壁移動・滑走もできません。
       </p>
       <p>
-        光る壁を選び、矢印のマスへ移動。その後、光る停止マスか方向ボタンをタップします。「戻る」はCPU対戦ではあなたの前の手番まで戻します。
+        光る壁を選び、矢印のマスへ移動。その後、光る停止マスか方向ボタンをタップします。「戻る」はCPU対戦ではあなたの前の手番まで戻します。学習対戦では使えません。
       </p>
       <p>同じ配置が続いたときはお知らせします。自動で引き分けにはしません。</p>
       <button data-close="helpDialog" class="primary">さあ、ずらそう！</button>
@@ -156,9 +163,10 @@
           <option value="greedy" selected>ふつう</option>
           <option value="search">つよい</option>
           <option value="strong">恐つよ</option>
+          <option value="learning">学習</option>
         </select>
       </label>
-      <p id="researchModeNotice" role="status">検証用A〜Eはふたり対戦、または4段階のCPUで遊べます。</p>
+      <p id="researchModeNotice" role="status">検証用A〜Eはふたり対戦、または5段階のCPUで遊べます。</p>
       <p>開始すると、進行中の対戦はリセットされます。</p>
       <button id="start" class="primary">対戦をはじめる</button>
     </dialog>

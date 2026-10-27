@@ -53,10 +53,10 @@ for (const [layout, name] of [[0,'7×7'],[4,'A'],[5,'B'],[6,'C'],[7,'D'],[8,'E']
   });
 }
 
-test('初期値と難易度名は指定の4段階', async ({page}) => {
+test('初期値と難易度名は指定の5段階', async ({page}) => {
   await page.goto('/');
   await expect(page.locator('#scores')).toContainText('CPU（ふつう）');
   await page.locator('#settings').click();
   await expect(page.locator('#cpuLevel')).toHaveValue('greedy');
-  expect(await page.locator('#cpuLevel option').evaluateAll(options => options.map(o => [o.value,o.textContent]))).toEqual(levels);
+  expect(await page.locator('#cpuLevel option').evaluateAll(options => options.map(o => [o.value,o.textContent]))).toEqual([...levels,['learning','学習']]);
 });
