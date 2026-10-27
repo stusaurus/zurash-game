@@ -40,8 +40,8 @@ for (const [index, size, target] of [[4,8,4],[5,9,3],[6,10,3],[7,6,4],[8,11,3]])
     await expect(page.locator('#turnCount')).toHaveText('1手目');
     await page.locator('#cpuMode').click();
     await expect(page.locator('#layout')).toHaveValue(String(index));
-    await expect(page.locator('#cpuLevel')).toHaveValue('search');
-    await expect(page.locator('#cpuLevel option[value="strong"]')).toHaveAttribute('disabled', '');
+    await expect(page.locator('#cpuLevel')).toHaveValue('strong');
+    await expect(page.locator('#cpuLevel option[value="strong"]')).not.toHaveAttribute('disabled', '');
     await expect(page.locator('#researchModeNotice')).toContainText('ふつう');
     await page.locator('#layout').selectOption('0');
     await page.locator('#start').click();
@@ -49,14 +49,14 @@ for (const [index, size, target] of [[4,8,4],[5,9,3],[6,10,3],[7,6,4],[8,11,3]])
   });
 }
 
-test('CPU dialog rejects strong research settings even if enabled by script', async ({page}) => {
+test('CPU dialog rejects invalid difficulty supplied by script', async ({page}) => {
   await page.goto('/');
   await page.locator('#settings').click();
   await page.locator('#layout').selectOption('4');
-  await page.locator('#cpuLevel').evaluate(el => { el.options[1].disabled=false; el.value='strong'; });
+  await page.locator('#cpuLevel').evaluate(el => { el.add(new Option('invalid', 'invalid')); el.value='invalid'; });
   await page.locator('#start').click();
   await expect(page.locator('#setupDialog')).toBeVisible();
-  await expect(page.locator('#researchModeNotice')).toContainText('ふつう');
+  await expect(page.locator('#researchModeNotice')).toContainText('選び直してください');
   await expect(page.locator('.cell')).toHaveCount(49);
 });
 
