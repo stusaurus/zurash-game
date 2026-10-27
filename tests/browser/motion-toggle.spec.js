@@ -24,13 +24,31 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
   const origin = await pawn.boundingBox();
   // Install a requestAnimationFrame recorder *before* starting travel.
   // Cross-process Playwright awaits may begin sampling only after arrival on WebKit.
-  await page.evaluate(() => {
+  await page.evaluate(videoClock => {
     const token = document.querySelector(".token.p1");
     const evidence = window.__flightEvidence = { frames: [], events: [], mutations: [], click: null, stopped: false };
     const position = () => token.getBoundingClientRect().x;
+    // Diagnostic-only visual clock. Binary pixels encode performance.now() in
+    // milliseconds; it shares the existing rAF and is captured in video.
+    const clock = videoClock ? document.createElement("canvas") : null;
+    if (clock) {
+      clock.width = 160; clock.height = 16;
+      Object.assign(clock.style, {position:"fixed", left:"0", top:"0", width:"160px", height:"16px", zIndex:"2147483647", pointerEvents:"none"});
+      document.body.append(clock);
+    }
+    const ctx = clock?.getContext("2d");
+    const paintClock = time => {
+      const value = Math.floor(time) & 0xfffff;
+      for (let bit = 0; bit < 20; bit++) {
+        ctx.fillStyle = (value & (1 << bit)) ? "#ffffff" : "#000000";
+        ctx.fillRect(bit * 8, 0, 8, 16);
+      }
+    };
     const recordFrame = timestamp => {
       if (evidence.stopped) return;
-      evidence.frames.push({ time: performance.now(), timestamp, x: position(), pose: token.dataset.pose });
+      const time = performance.now();
+      evidence.frames.push({ time, timestamp, x: position(), pose: token.dataset.pose });
+      if (videoClock) paintClock(time);
       requestAnimationFrame(recordFrame);
     };
     requestAnimationFrame(recordFrame);
@@ -58,7 +76,7 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
       requestAnimationFrame(sample);
     });
     observer.observe(token, { attributes: true, attributeFilter: ["data-pose"] });
-  });
+  }, process.env.MOTION_VIDEO_CLOCK === "1");
   await page.locator("#directions button").nth(1).click();
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect.poll(() => page.evaluate(() => window.__trikenFlight.done)).toBe(true);
@@ -67,7 +85,7 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
     window.__flightEvidence.stopped = true;
     return {samples: window.__trikenFlight.points, evidence: window.__flightEvidence};
   });
-  const record = { origin: origin.x, arrival: arrival.x, samples, ...evidence };
+  const record = { origin: origin.x, arrival: arrival.x, originRect: origin, arrivalRect: arrival, samples, ...evidence };
   await testInfo.attach("glide-timing.json", { body: JSON.stringify(record, null, 2), contentType: "application/json" });
   console.log("GLIDE_TIMING " + JSON.stringify(record));
   expect(arrival.x).toBeGreaterThan(origin.x + 30);
