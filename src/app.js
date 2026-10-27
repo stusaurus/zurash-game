@@ -13,6 +13,7 @@ import {
 import { widthOf, heightOf } from "./geometry.js";
 import { RESEARCH_LAYOUTS } from "./research-layouts.js";
 import { choose } from "./ai.js";
+import { openLearning } from "./learning.js";
 const $ = (id) => document.getElementById(id);
 const MOTION_STORAGE_KEY = "zurash-motion-override";
 function readMotionPreference() {
@@ -38,7 +39,7 @@ function syncMotionToggle() {
     : "トリケンと壁の移動アニメーションを切り替え";
 }
 
-const CPU_LEVEL_NAMES = { random: "やさしい", greedy: "ふつう", search: "つよい", strong: "恐つよ" };
+const CPU_LEVEL_NAMES = { random: "やさしい", greedy: "ふつう", search: "つよい", strong: "恐つよ", learning: "学習" };
 
 const STAR_HTML = '<span class="star" aria-hidden="true"><span class="star-depth"></span><span class="star-face"></span><span class="star-facet"></span></span>';
 let state = initial(),
@@ -56,7 +57,28 @@ let state = initial(),
   cpuTimer = null,
   movingWall = null,
   activeSettings = { layout: 0, starter: 0, level: "greedy" },
-  matchSeed = 0;
+  matchSeed = 0,
+  learningSession = null;
+// Accessing localStorage itself can throw in restricted browser contexts.
+const learningStore = openLearning({
+  getItem: key => window.localStorage.getItem(key),
+  setItem: (key, value) => window.localStorage.setItem(key, value),
+  removeItem: key => window.localStorage.removeItem(key),
+});
+let matchSerial = 0;
+function learningMatchId() {
+  if (globalThis.crypto?.randomUUID) return crypto.randomUUID();
+  return `match_${Date.now().toString(36)}_${Math.random().toString(36).slice(2)}_${++matchSerial}`;
+}
+function learningActive() { return mode === "cpu" && activeSettings.level === "learning"; }
+function renderLearning() {
+  const active = learningActive(), model = learningStore.model;
+  $("learningPanel").hidden = !active;
+  $("learningStats").textContent = `学習記録：${model.total}局・${model.wins}勝・${model.losses}敗・未決着${model.draws}局・学習${model.samples}手`;
+  $("learningWarning").hidden = !learningStore.warning;
+  $("learningWarning").textContent = learningStore.warning;
+  $("recordUnresolved").disabled = busy || state.winner !== null || !learningSession;
+}
 // Four approved palettes are stored in a shared atlas; the rules still support two players.
 const facing = ["right", "right"];
 const poseTimers = [null, null];
@@ -276,7 +298,8 @@ function render() {
   $("skip").disabled = locked || phase !== "wall";
   $("skip").textContent =
     phase === "wall" ? "壁を動かさずに滑る →" : "停止マスか矢印を選ぼう";
-  $("undo").disabled = busy || (!history.length && phase === "wall");
+  $("undo").disabled = learningActive() || busy || (!history.length && phase === "wall");
+  renderLearning();
   $("directions").replaceChildren();
   DIRS.forEach((d, dir) => {
     const b = document.createElement("button");
@@ -392,6 +415,10 @@ async function playSlide(dir) {
   setPose(player, reducedMotion ? "idle" : scored ? "collect" : "stop",
     reducedMotion ? 0 : scored ? 560 : 220);
   if (scored) flash(state.players[player]);
+  if (learningSession && player === 0) {
+    learningSession.observe(turnStart, {wall: wallIndex === -1 ? null : {wall: wallIndex, to: state.walls[wallIndex]}, dir});
+  }
+  if (learningSession && state.winner !== null) learningSession.finish(state);
   phase = "wall";
   turnStart = clone(state);
   remember();
@@ -443,7 +470,7 @@ function runCPU() {
     }
   }
   try {
-    worker.postMessage({ id, state: clone(state), history: [...seen], seed: matchSeed, level: activeSettings.level });
+    worker.postMessage({ id, state: clone(state), history: [...seen], seed: matchSeed, level: activeSettings.level, ...(learningActive() ? {opponentModel: learningStore.model} : {}) });
   } catch {
     stopCPU();
     fallback(id);
@@ -500,6 +527,8 @@ async function acceptCPU(action, id) {
   }, 200);
 }
 function reset() {
+  learningSession?.discard();
+  learningSession = learningActive() ? learningStore.beginMatch({id: learningMatchId(), mode: "cpu"}) : null;
   epoch++;
   $("cpuRecovery").hidden = true;
   matchSeed = globalThis.crypto?.getRandomValues
@@ -530,6 +559,7 @@ $("skip").onclick = () => {
   render();
 };
 $("undo").onclick = () => {
+  if (learningActive()) return;
   epoch++;
   stopCPU();
   cancelMovingWall();
@@ -581,6 +611,17 @@ motionQuery.addEventListener?.("change", () => {
 syncMotionToggle();
 $("settings").onclick = () => openSetup(mode);
 $("rematch").onclick = reset;
+$("recordUnresolved").onclick = () => {
+  if (!learningActive() || !learningSession || busy || state.winner !== null) return;
+  if (!window.confirm("この対戦を未決着として記録して終了しますか？")) return;
+  if (learningSession.finish(state, {unresolved: true})) reset();
+  else render();
+};
+$("resetLearning").onclick = () => {
+  if (!learningActive() || !window.confirm("学習データを削除しますか？進行中の対戦も新しく始まります。")) return;
+  learningStore.reset();
+  reset();
+};
 $("reviewFinal").onclick = () => $("result").close();
 // Mode changes are staged in the new-match dialog; cancellation leaves the active match intact.
 let pendingMode = null;
