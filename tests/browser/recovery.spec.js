@@ -46,9 +46,9 @@ test('cancelled setup does not change active difficulty or rematch configuration
  await page.goto('/');await page.locator('#settings').click();
  await page.locator('#cpuLevel').selectOption('search');await page.locator('#layout').selectOption('1');await page.locator('#starter').selectOption('1');
  await page.locator('#setupDialog .close').click();
- await expect(page.locator('#scores')).toContainText('CPU（つよい）');
+ await expect(page.locator('#scores')).toContainText('CPU（ふつう）');
  await page.locator('#settings').click();
- await expect(page.locator('#cpuLevel')).toHaveValue('strong');await expect(page.locator('#layout')).toHaveValue('0');await expect(page.locator('#starter')).toHaveValue('0');
+ await expect(page.locator('#cpuLevel')).toHaveValue('greedy');await expect(page.locator('#layout')).toHaveValue('0');await expect(page.locator('#starter')).toHaveValue('0');
 });
 
 test('undo keeps match seed; confirmed new match replaces it',async({page})=>{

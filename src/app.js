@@ -38,6 +38,8 @@ function syncMotionToggle() {
     : "トリケンと壁の移動アニメーションを切り替え";
 }
 
+const CPU_LEVEL_NAMES = { random: "やさしい", greedy: "ふつう", search: "つよい", strong: "恐つよ" };
+
 const STAR_HTML = '<span class="star" aria-hidden="true"><span class="star-depth"></span><span class="star-face"></span><span class="star-facet"></span></span>';
 let state = initial(),
   turnStart = clone(state),
@@ -53,7 +55,7 @@ let state = initial(),
   worker = null,
   cpuTimer = null,
   movingWall = null,
-  activeSettings = { layout: 0, starter: 0, level: "strong" },
+  activeSettings = { layout: 0, starter: 0, level: "greedy" },
   matchSeed = 0;
 // Four approved palettes are stored in a shared atlas; the rules still support two players.
 const facing = ["right", "right"];
@@ -239,7 +241,7 @@ function render() {
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === targetScore - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(targetScore - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${activeSettings.level === "strong" ? "つよい" : "ふつう"}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${targetScore}${state.scores[p] === targetScore - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === targetScore - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(targetScore - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${CPU_LEVEL_NAMES[activeSettings.level]}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${targetScore}${state.scores[p] === targetScore - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
     )
     .join("");
   const last = moveLog.at(-1);
@@ -597,7 +599,7 @@ $("setupDialog").addEventListener("close", () => {
 $("start").onclick = () => {
   const selectedLayout = Number($("layout").value);
   const selectedLevel = $("cpuLevel").value;
-  if (!Number.isInteger(selectedLayout) || selectedLayout < 0 || selectedLayout >= LAYOUTS.length + RESEARCH_LAYOUTS.length || !["search", "strong"].includes(selectedLevel)) {
+  if (!Number.isInteger(selectedLayout) || selectedLayout < 0 || selectedLayout >= LAYOUTS.length + RESEARCH_LAYOUTS.length || !Object.prototype.hasOwnProperty.call(CPU_LEVEL_NAMES, selectedLevel)) {
     $("researchModeNotice").textContent = "盤面とCPUの強さを選び直してください。";
     return;
   }
