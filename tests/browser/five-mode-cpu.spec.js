@@ -20,7 +20,7 @@ test('A〜Eの実Workerは両先手で合法手を返し、UIから対戦でき�
     console.log('WORKER_MEASURE', JSON.stringify({mode:'ABCDE'[layout-4],starter,legal:legal.length,ms:Math.round(response.ms)}));
     await page.locator('#settings').click();
     await page.locator('#layout').selectOption(String(layout));
-    await expect(page.locator('#cpuLevel')).toHaveValue('search');
+    await page.locator('#cpuLevel').selectOption('search');
     await page.locator('#starter').selectOption(String(starter));
     await page.locator('#start').click();
     if(starter===0){await page.locator('#skip').click();await page.locator('#directions button:not([disabled])').first().click();}

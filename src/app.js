@@ -560,7 +560,6 @@ function openSetup(nextMode) {
   $("layout").value = String(activeSettings.layout);
   $("starter").value = String(activeSettings.starter);
   $("cpuLevel").value = activeSettings.level;
-  syncCpuOptions(nextMode);
   $("cpuLevelRow").hidden = nextMode !== "cpu";
   $("starter").options[0].textContent =
     nextMode === "cpu" ? "プレイヤー1（あなた）" : "プレイヤー1";
@@ -583,16 +582,6 @@ $("rematch").onclick = reset;
 $("reviewFinal").onclick = () => $("result").close();
 // Mode changes are staged in the new-match dialog; cancellation leaves the active match intact.
 let pendingMode = null;
-function syncCpuOptions(nextMode = pendingMode || mode) {
-  const research = Number($("layout").value) >= LAYOUTS.length;
-  const strong = $("cpuLevel").querySelector('option[value="strong"]');
-  strong.disabled = nextMode === "cpu" && research;
-  if (strong.disabled && $("cpuLevel").value === "strong") $("cpuLevel").value = "search";
-  $("researchModeNotice").textContent = research && nextMode === "cpu"
-    ? "検証用A〜EのCPUは「ふつう」のみ対応しています。「つよい」は準備中です。"
-    : "検証用A〜Eはふたり対戦、またはCPU「ふつう」で遊べます。";
-}
-$("layout").addEventListener("change", () => syncCpuOptions());
 for (const [id, m] of [
   ["cpuMode", "cpu"],
   ["localMode", "local"],
@@ -606,10 +595,10 @@ $("setupDialog").addEventListener("close", () => {
   pendingMode = null;
 });
 $("start").onclick = () => {
-  const selectedLayout = Number($("layout").value), nextMode = pendingMode || mode;
+  const selectedLayout = Number($("layout").value);
   const selectedLevel = $("cpuLevel").value;
-  if (!Number.isInteger(selectedLayout) || selectedLayout < 0 || selectedLayout >= LAYOUTS.length + RESEARCH_LAYOUTS.length || !["search", "strong"].includes(selectedLevel) || (nextMode === "cpu" && selectedLayout >= LAYOUTS.length && selectedLevel !== "search")) {
-    $("researchModeNotice").textContent = "検証用A〜EのCPUは「ふつう」を選んでください。";
+  if (!Number.isInteger(selectedLayout) || selectedLayout < 0 || selectedLayout >= LAYOUTS.length + RESEARCH_LAYOUTS.length || !["search", "strong"].includes(selectedLevel)) {
+    $("researchModeNotice").textContent = "盤面とCPUの強さを選び直してください。";
     return;
   }
   activeSettings = { layout: Number($("layout").value), starter: Number($("starter").value), level: $("cpuLevel").value };
