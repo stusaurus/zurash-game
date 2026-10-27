@@ -286,6 +286,7 @@ function render() {
     // static PNG pawns already deployed for the two-player game.
     const winningColor = state.winner === 0 ? "orange" : "aqua";
     const losingColor = state.winner === 0 ? "aqua" : "orange";
+    $("result").dataset.winner = String(state.winner);
     $("resultWinnerImage").src = `assets/triken-${winningColor}-80.png`;
     $("resultLoserImage").src = `assets/triken-${losingColor}-80.png`;
     $("result").classList.toggle("defeat", mode === "cpu" && state.winner === 1);
@@ -475,6 +476,7 @@ function reset() {
   resetMotion();
   clearStarFlash();
   if ($("result").open) $("result").close();
+  delete $("result").dataset.winner;
   resultSeen = false;
   busy = false;
   state = initial(activeSettings.layout, activeSettings.starter);
