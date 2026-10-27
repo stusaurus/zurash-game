@@ -1,0 +1,117 @@
+{
+  "origin": 28,
+  "arrival": 314,
+  "samples": [
+    28,
+    314
+  ],
+  "frames": [
+    {
+      "time": 6784,
+      "timestamp": 6784,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 6798,
+      "timestamp": 6798,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 6814,
+      "timestamp": 6814,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 6831,
+      "timestamp": 6831,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 6832,
+      "timestamp": 6832,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 6833,
+      "timestamp": 6833,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 6849,
+      "timestamp": 6849,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 6900,
+      "timestamp": 6900,
+      "x": 28,
+      "pose": "windup"
+    },
+    {
+      "time": 7725.000000000001,
+      "timestamp": 7724,
+      "x": 314,
+      "pose": "stop"
+    },
+    {
+      "time": 8168.000000000001,
+      "timestamp": 8168,
+      "x": 314,
+      "pose": "idle"
+    }
+  ],
+  "events": [
+    {
+      "type": "transitionrun",
+      "time": 7724,
+      "x": 314,
+      "elapsed": 0
+    },
+    {
+      "type": "transitionstart",
+      "time": 7725.000000000001,
+      "x": 314,
+      "elapsed": 0
+    },
+    {
+      "type": "transitionend",
+      "time": 7725.000000000001,
+      "x": 314,
+      "elapsed": 0.49
+    }
+  ],
+  "mutations": [
+    {
+      "time": 6870,
+      "pose": "windup",
+      "x": 28
+    },
+    {
+      "time": 7180,
+      "pose": "slide",
+      "x": 28
+    },
+    {
+      "time": 7686,
+      "pose": "stop",
+      "x": 28
+    },
+    {
+      "time": 7904,
+      "pose": "idle",
+      "x": 314
+    }
+  ],
+  "click": {
+    "time": 6866.000000000001,
+    "x": 28
+  },
+  "stopped": true
+}

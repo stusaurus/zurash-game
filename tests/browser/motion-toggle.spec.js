@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("iPhone reduced-motion fallback explains apparent teleport; explicit ON restores travel", async ({ page }) => {
+test("iPhone reduced-motion fallback explains apparent teleport; explicit ON restores travel", async ({ page }, testInfo) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
   const toggle = page.locator("#motionToggle");
@@ -26,6 +26,25 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
   // Cross-process Playwright awaits may begin sampling only after arrival on WebKit.
   await page.evaluate(() => {
     const token = document.querySelector(".token.p1");
+    const evidence = window.__flightEvidence = { frames: [], events: [], mutations: [], click: null, stopped: false };
+    const position = () => token.getBoundingClientRect().x;
+    const recordFrame = timestamp => {
+      if (evidence.stopped) return;
+      evidence.frames.push({ time: performance.now(), timestamp, x: position(), pose: token.dataset.pose });
+      requestAnimationFrame(recordFrame);
+    };
+    requestAnimationFrame(recordFrame);
+    for (const type of ["transitionrun", "transitionstart", "transitionend", "transitioncancel"]) {
+      token.addEventListener(type, event => {
+        if (event.target === token && event.propertyName === "transform")
+          evidence.events.push({ type, time: performance.now(), x: position(), elapsed: event.elapsedTime });
+      });
+    }
+    document.querySelector("#directions button:nth-child(2)").addEventListener("click", () => {
+      evidence.click = { time: performance.now(), x: position() };
+    }, { once: true, capture: true });
+    const poseObserver = new MutationObserver(() => evidence.mutations.push({time:performance.now(), pose:token.dataset.pose, x:position()}));
+    poseObserver.observe(token, { attributes:true, attributeFilter:["data-pose", "style"] });
     window.__trikenFlight = { points: [token.getBoundingClientRect().x], done: false };
     const observer = new MutationObserver(() => {
       if (token.dataset.pose !== "slide") return;
@@ -44,7 +63,13 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect.poll(() => page.evaluate(() => window.__trikenFlight.done)).toBe(true);
   const arrival = await pawn.boundingBox();
-  const samples = await page.evaluate(() => window.__trikenFlight.points);
+  const { samples, evidence } = await page.evaluate(() => {
+    window.__flightEvidence.stopped = true;
+    return {samples: window.__trikenFlight.points, evidence: window.__flightEvidence};
+  });
+  const record = { origin: origin.x, arrival: arrival.x, samples, ...evidence };
+  await testInfo.attach("glide-timing.json", { body: JSON.stringify(record, null, 2), contentType: "application/json" });
+  console.log("GLIDE_TIMING " + JSON.stringify(record));
   expect(arrival.x).toBeGreaterThan(origin.x + 30);
   // Three samples (start, one in-flight position, finish) are sufficient.
   // WebKit under CI load can render only three frames for this short tween.
