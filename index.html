@@ -152,11 +152,13 @@
       >
       <label id="cpuLevelRow">CPUの強さ
         <select id="cpuLevel">
-          <option value="search">ふつう</option>
-          <option value="strong" selected>つよい（手筋を読む）</option>
+          <option value="random">やさしい</option>
+          <option value="greedy" selected>ふつう</option>
+          <option value="search">つよい</option>
+          <option value="strong">恐つよ</option>
         </select>
       </label>
-      <p id="researchModeNotice" role="status">検証用A〜Eはふたり対戦、またはCPU「ふつう」「つよい」で遊べます。</p>
+      <p id="researchModeNotice" role="status">検証用A〜Eはふたり対戦、または4段階のCPUで遊べます。</p>
       <p>開始すると、進行中の対戦はリセットされます。</p>
       <button id="start" class="primary">対戦をはじめる</button>
     </dialog>

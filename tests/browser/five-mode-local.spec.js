@@ -40,9 +40,9 @@ for (const [index, size, target] of [[4,8,4],[5,9,3],[6,10,3],[7,6,4],[8,11,3]])
     await expect(page.locator('#turnCount')).toHaveText('1手目');
     await page.locator('#cpuMode').click();
     await expect(page.locator('#layout')).toHaveValue(String(index));
-    await expect(page.locator('#cpuLevel')).toHaveValue('strong');
+    await expect(page.locator('#cpuLevel')).toHaveValue('greedy');
     await expect(page.locator('#cpuLevel option[value="strong"]')).not.toHaveAttribute('disabled', '');
-    await expect(page.locator('#researchModeNotice')).toContainText('ふつう');
+    await expect(page.locator('#researchModeNotice')).toContainText('4段階');
     await page.locator('#layout').selectOption('0');
     await page.locator('#start').click();
     await expect(page.locator('.cell')).toHaveCount(49);
