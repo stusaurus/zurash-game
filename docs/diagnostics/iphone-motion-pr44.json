@@ -1,0 +1,8 @@
+{
+  "source": "https://github.com/stusaurus/zurash-game/actions/runs/40492907655/job/122151021375",
+  "artifact": "browser-qa/test-results/motion-toggle-iPhone-reduc-6a54c-explicit-ON-restores-travel-iphone-webkit/trace.zip",
+  "trace_call_id": "call@2640",
+  "samples_px": [28, 313.5307922363281, 314],
+  "screencast_trace_timestamps_ms": [945377.956, 945914.629, 946320.235],
+  "note": "The trace does not include transition events; screencast timestamps do not prove the set of frames physically presented."
+}

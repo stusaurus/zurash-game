@@ -1,0 +1,130 @@
+{
+  "origin": 28,
+  "arrival": 314,
+  "samples": [
+    28,
+    307.80364990234375,
+    314
+  ],
+  "frames": [
+    {
+      "time": 7146,
+      "timestamp": 7146,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 7154,
+      "timestamp": 7153,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 7166,
+      "timestamp": 7166,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 7169.000000000001,
+      "timestamp": 7169,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 7190,
+      "timestamp": 7189,
+      "x": 28,
+      "pose": "idle"
+    },
+    {
+      "time": 7218,
+      "timestamp": 7218,
+      "x": 28,
+      "pose": "windup"
+    },
+    {
+      "time": 7645.000000000001,
+      "timestamp": 7644,
+      "x": 307.70440673828125,
+      "pose": "slide"
+    },
+    {
+      "time": 7916,
+      "timestamp": 7916,
+      "x": 314,
+      "pose": "stop"
+    },
+    {
+      "time": 8246,
+      "timestamp": 8246,
+      "x": 314,
+      "pose": "idle"
+    },
+    {
+      "time": 8318,
+      "timestamp": 8318,
+      "x": 314,
+      "pose": "idle"
+    },
+    {
+      "time": 8320,
+      "timestamp": 8320,
+      "x": 314,
+      "pose": "idle"
+    },
+    {
+      "time": 8351,
+      "timestamp": 8351,
+      "x": 314,
+      "pose": "idle"
+    }
+  ],
+  "events": [
+    {
+      "type": "transitionrun",
+      "time": 7644,
+      "x": 307.6041259765625,
+      "elapsed": 0
+    },
+    {
+      "type": "transitionstart",
+      "time": 7645.000000000001,
+      "x": 307.6041259765625,
+      "elapsed": 0
+    },
+    {
+      "type": "transitionend",
+      "time": 7916,
+      "x": 314,
+      "elapsed": 0.49
+    }
+  ],
+  "mutations": [
+    {
+      "time": 7199,
+      "pose": "windup",
+      "x": 28
+    },
+    {
+      "time": 7301,
+      "pose": "slide",
+      "x": 28
+    },
+    {
+      "time": 7809,
+      "pose": "stop",
+      "x": 307.6041259765625
+    },
+    {
+      "time": 8037.000000000001,
+      "pose": "idle",
+      "x": 314
+    }
+  ],
+  "click": {
+    "time": 7195,
+    "x": 28
+  },
+  "stopped": true
+}
