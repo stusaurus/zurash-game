@@ -18,6 +18,9 @@ test("result portraits use the approved PNGs without overflow on narrow screens"
     elements.map(el => el.getBoundingClientRect().width)
   );
   expect(boxes[0]).toBeGreaterThan(boxes[1]);
+  await expect(result.locator(".result-stars span")).toHaveCount(3);
+  const accessibleTitle = await page.locator("#resultTitle").count();
+  expect(accessibleTitle).toBe(1);
   const fit = await result.evaluate(el => {
     const root = el.getBoundingClientRect();
     return [...el.querySelectorAll(".result-character")].every(node => {
@@ -45,6 +48,7 @@ test("explicit ON allows result reactions on iPhone even with reduced motion ena
     .toBe("triken-result-win");
   await expect.poll(() => loser.evaluate(img => getComputedStyle(img).animationName))
     .toBe("triken-result-consolation");
+  await expect.poll(() => page.locator("#result .result-stars span").first().evaluate(el => getComputedStyle(el).animationName)).toBe("triken-result-star");
   const duration = await winner.evaluate(img => getComputedStyle(img).animationDuration);
   expect(parseFloat(duration)).toBeGreaterThanOrEqual(1);
 });
