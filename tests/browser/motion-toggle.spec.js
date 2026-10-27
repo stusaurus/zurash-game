@@ -26,13 +26,20 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
   // Cross-process Playwright awaits may begin sampling only after arrival on WebKit.
   await page.evaluate(() => {
     const token = document.querySelector(".token.p1");
-    window.__trikenFlight = { points: [token.getBoundingClientRect().x], done: false };
+    const record = kind => ({ kind, time: performance.now(), x: token.getBoundingClientRect().x });
+    window.__trikenFlight = { points: [record('initial')], events: [], done: false };
+    for (const type of ['transitionrun', 'transitionstart', 'transitionend', 'transitioncancel']) {
+      token.addEventListener(type, event => {
+        if (event.target === token && event.propertyName === 'transform')
+          window.__trikenFlight.events.push({ ...record(type), elapsed: event.elapsedTime });
+      });
+    }
     const observer = new MutationObserver(() => {
       if (token.dataset.pose !== "slide") return;
       observer.disconnect();
       const started = performance.now();
       const sample = () => {
-        window.__trikenFlight.points.push(token.getBoundingClientRect().x);
+        window.__trikenFlight.points.push(record('frame'));
         if (performance.now() - started < 530) requestAnimationFrame(sample);
         else window.__trikenFlight.done = true;
       };
@@ -44,7 +51,9 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect.poll(() => page.evaluate(() => window.__trikenFlight.done)).toBe(true);
   const arrival = await pawn.boundingBox();
-  const samples = await page.evaluate(() => window.__trikenFlight.points);
+  const flight = await page.evaluate(() => window.__trikenFlight);
+  console.log('TRIKEN_FLIGHT', JSON.stringify({ origin: origin.x, arrival: arrival.x, ...flight }));
+  const samples = flight.points.map(point => point.x);
   expect(arrival.x).toBeGreaterThan(origin.x + 30);
   // Three samples (start, one in-flight position, finish) are sufficient.
   // WebKit under CI load can render only three frames for this short tween.
