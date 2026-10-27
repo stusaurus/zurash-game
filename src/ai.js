@@ -1,3 +1,4 @@
+import {learnWeight,learningContext,validateLearning} from './learning.js';
 import { chooseRoute } from './route-ai.js';
 import { actions, distances, key, successors } from "./engine.js";
 export function seeded(seed = 1) {
@@ -25,8 +26,9 @@ export function evaluate(s, p) {
 // evaluates exact scoring routes available after one legal wall shift.
 export function choose(
   s,
-  { level = "search", rng = Math.random, seen = new Map(), beam = 8 } = {},
+  { level = "search", rng = Math.random, seen = new Map(), beam = 8, opponentModel = null } = {},
 ) {
+  if (level === "learning") return chooseLearning(s, {rng,seen,opponentModel});
   if (level === "strong") return chooseRoute(s, { rng, seen });
   const all = actions(s);
   if (!all.length) return null;
@@ -58,5 +60,21 @@ export function choose(
       pick = c.a;
     }
   }
+  return pick;
+}
+
+// PR #18: cold starts are exactly greedy; learning only breaks equal-score ties.
+function chooseLearning(s,{rng,seen,opponentModel}) {
+  let model;
+  try { model = validateLearning(opponentModel); } catch { return choose(s,{level:'greedy',rng,seen}); }
+  const counts = model.contexts[learningContext(s)];
+  // Samples from a different board size/target must not activate this context.
+  if (!counts || counts.reduce((sum,n)=>sum+n,0)<8) return choose(s,{level:'greedy',rng,seen});
+  const p=s.turn, ranked=successors(s).map(c=>({...c,score:evaluate(c.n,p)-(seen.get(key(c.n))||0)*130,tie:rng()})).sort((a,b)=>b.score-a.score||a.tie-b.tie);
+  if (!ranked.length) return null;
+  if (ranked[0].n.winner===p) return ranked[0].a;
+  const tied=ranked.filter(c=>c.score===ranked[0].score).slice(0,8);
+  let pick=tied[0].a,best=-Infinity;
+  for(const c of tied){let sum=0,total=0;for(const r of successors(c.n)){const weight=learnWeight(model,c.n,r.a,r.n);sum+=weight*evaluate(r.n,p);total+=weight;}const expected=total?sum/total:c.score;if(expected>best){best=expected;pick=c.a;}}
   return pick;
 }
