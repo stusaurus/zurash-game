@@ -239,7 +239,7 @@ h1 span {
 }
 .board {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(var(--board-cols, 7), 1fr);
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 5px;
@@ -315,8 +315,8 @@ h1 span {
 }
 .token {
   position: absolute;
-  width: 14.285714%;
-  height: 14.285714%;
+  width: calc(100% / var(--board-cols, 7));
+  height: calc(100% / var(--board-rows, 7));
   left: 0;
   top: 0;
   display: grid;
@@ -586,8 +586,10 @@ select {
 }
 /* Keep every ice tile square, including rows containing different content. */
 .board {
-  grid-template-rows: repeat(7, minmax(0, 1fr));
+  grid-template-rows: repeat(var(--board-rows, 7), minmax(0, 1fr));
 }
+.board-scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+.board-wrap.research-board { min-width: calc(var(--board-cols) * 36px + 14px); }
 h1 {
   white-space: nowrap;
 }

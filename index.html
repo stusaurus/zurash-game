@@ -51,6 +51,7 @@
           </div>
           <span id="turnCount"></span>
         </div>
+        <div class="board-scroll" tabindex="0" aria-label="ゲーム盤を横にスクロール">
         <div class="board-wrap">
           <div
             id="board"
@@ -61,6 +62,8 @@
           <div id="tokens" class="tokens" aria-hidden="true"></div>
           <div id="celebration" class="celebration" aria-hidden="true"></div>
         </div>
+        </div>
+        <p id="boardScrollHint" class="hint" hidden>盤面を横にスライドして全体を見られます。</p>
         <p id="lastMove" class="last-move" aria-live="polite" hidden></p>
         <div id="directions" class="directions" aria-label="滑る方向"></div>
         <div class="actions">
@@ -115,7 +118,7 @@
         </li>
         <li>
           <b>星の上で止まったらゲット。</b
-          ><br />5個のうち、先に3個取った人の勝ち。
+          ><br /><span id="helpVictory">5個のうち、先に3個取った人の勝ち。</span>
         </li>
       </ol>
       <p>
@@ -152,6 +155,7 @@
           <option value="strong" selected>つよい（手筋を読む）</option>
         </select>
       </label>
+      <p id="researchModeNotice" role="status">検証用A〜Eはふたりで対戦のみ選べます。CPUは7×7の盤面で遊べます。</p>
       <p>開始すると、進行中の対戦はリセットされます。</p>
       <button id="start" class="primary">対戦をはじめる</button>
     </dialog>

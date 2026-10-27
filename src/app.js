@@ -8,7 +8,10 @@ import {
   finishSlide,
   key,
   actions,
+  LAYOUTS,
 } from "./engine.js";
+import { widthOf, heightOf } from "./geometry.js";
+import { RESEARCH_LAYOUTS } from "./research-layouts.js";
 import { choose } from "./ai.js";
 const $ = (id) => document.getElementById(id);
 const MOTION_STORAGE_KEY = "zurash-motion-override";
@@ -95,7 +98,8 @@ function restoreFacing() {
   tokenEls.forEach((el, p) => { el.dataset.facing = facing[p]; });
 }
 function shiftArrow(from, to) {
-  return ({ [-7]: "↑", [1]: "→", [7]: "↓", [-1]: "←" })[to - from] || "";
+  const width = widthOf(state);
+  return ({ [-width]: "↑", [1]: "→", [width]: "↓", [-1]: "←" })[to - from] || "";
 }
 function cancelMovingWall() {
   const flight = movingWall;
@@ -171,11 +175,19 @@ function remember() {
   seen.set(k, (seen.get(k) || 0) + 1);
 }
 function render() {
+  const width = widthOf(state), height = heightOf(state), targetScore = state.target ?? 3;
+  const wrap = $("board").parentElement;
+  wrap.style.setProperty("--board-cols", width);
+  wrap.style.setProperty("--board-rows", height);
+  wrap.classList.toggle("research-board", activeSettings.layout >= LAYOUTS.length);
+  $("boardScrollHint").hidden = activeSettings.layout < LAYOUTS.length;
+  $("board").setAttribute("aria-label", `${width}×${height}のゲーム盤`);
+  $("helpVictory").textContent = `${state.stars.length + state.scores[0] + state.scores[1]}個のうち、先に${targetScore}個取った人の勝ち。`;
   const locked = busy || cpuTurn() || state.winner !== null,
     moves = phase === "wall" ? movableWalls(state) : [],
     stops = phase === "slide" ? slideOptions(state) : [];
   $("board").replaceChildren();
-  for (let i = 0; i < 49; i++) {
+  for (let i = 0; i < width * height; i++) {
     const wall = state.walls.indexOf(i),
       target = moves.find((m) => m.wall === selected && m.to === i),
       stop = stops.find((m) => m.to === i);
@@ -197,7 +209,7 @@ function render() {
           : "氷";
     b.setAttribute(
       "aria-label",
-      `${Math.floor(i / 7) + 1}行${(i % 7) + 1}列 ${item}${target ? " 移動先" : ""}${stop ? " 滑走停止位置" : ""}`,
+      `${Math.floor(i / width) + 1}行${(i % width) + 1}列 ${item}${target ? " 移動先" : ""}${stop ? " 滑走停止位置" : ""}`,
     );
     b.disabled =
       locked ||
@@ -221,13 +233,13 @@ function render() {
   }
   tokenEls.forEach((el, p) => {
     const at = state.players[p];
-    el.style.transform = `translate(${(at % 7) * 100}%,${Math.floor(at / 7) * 100}%)`;
+    el.style.transform = `translate(${(at % width) * 100}%,${Math.floor(at / width) * 100}%)`;
     el.dataset.facing = facing[p];
   });
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === 2 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(3 - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${activeSettings.level === "strong" ? "つよい" : "ふつう"}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / 3${state.scores[p] === 2 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === targetScore - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(targetScore - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${activeSettings.level === "strong" ? "つよい" : "ふつう"}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${targetScore}${state.scores[p] === targetScore - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
     )
     .join("");
   const last = moveLog.at(-1);
@@ -316,8 +328,9 @@ function flash(at) {
   spark.className = "spark-star";
   spark.setAttribute("aria-hidden", "true");
   spark.textContent = "★";
-  spark.style.left = `${((at % 7) + 0.5) / 7 * 100}%`;
-  spark.style.top = `${(Math.floor(at / 7) + 0.5) / 7 * 100}%`;
+  const width = widthOf(state), height = heightOf(state);
+  spark.style.left = `${((at % width) + 0.5) / width * 100}%`;
+  spark.style.top = `${(Math.floor(at / width) + 0.5) / height * 100}%`;
   el.replaceChildren(spark);
   void el.offsetWidth;
   el.classList.add("pop");
@@ -348,8 +361,9 @@ async function playSlide(dir) {
   // Only change the actual player position when the travel animation begins.
   const startAt = state.players[player];
   const endAt = next.players[player];
-  const distance = Math.abs(endAt % 7 - startAt % 7) +
-    Math.abs(Math.floor(endAt / 7) - Math.floor(startAt / 7));
+  const width = widthOf(state);
+  const distance = Math.abs(endAt % width - startAt % width) +
+    Math.abs(Math.floor(endAt / width) - Math.floor(startAt / width));
   const reducedMotion = !shouldAnimate();
   // The same pacing is shared by local and CPU turns: longer slides stay legible.
   // Slightly slower after iPhone playtesting: about 315–490ms for 1–6 cells.
@@ -526,6 +540,8 @@ $("undo").onclick = () => {
 $("help").onclick = () => $("helpDialog").showModal();
 function openSetup(nextMode) {
   $("layout").value = String(activeSettings.layout);
+  for (const option of $("layout").options) option.disabled = nextMode === "cpu" && Number(option.value) >= LAYOUTS.length;
+  if (nextMode === "cpu" && Number($("layout").value) >= LAYOUTS.length) $("layout").value = "0";
   $("starter").value = String(activeSettings.starter);
   $("cpuLevel").value = activeSettings.level;
   $("cpuLevelRow").hidden = nextMode !== "cpu";
@@ -563,6 +579,11 @@ $("setupDialog").addEventListener("close", () => {
   pendingMode = null;
 });
 $("start").onclick = () => {
+  const selectedLayout = Number($("layout").value), nextMode = pendingMode || mode;
+  if (!Number.isInteger(selectedLayout) || selectedLayout < 0 || selectedLayout >= LAYOUTS.length + RESEARCH_LAYOUTS.length || (nextMode === "cpu" && selectedLayout >= LAYOUTS.length)) {
+    $("researchModeNotice").textContent = "検証用A〜Eはふたりで対戦のみ選べます。CPUは7×7の盤面を選んでください。";
+    return;
+  }
   activeSettings = { layout: Number($("layout").value), starter: Number($("starter").value), level: $("cpuLevel").value };
   if (pendingMode) mode = pendingMode;
   pendingMode = null;
@@ -572,4 +593,10 @@ $("start").onclick = () => {
 document
   .querySelectorAll("[data-close]")
   .forEach((b) => (b.onclick = () => $(b.dataset.close).close()));
+for (const [i, layout] of RESEARCH_LAYOUTS.entries()) {
+  const option = document.createElement("option");
+  option.value = String(LAYOUTS.length + i);
+  option.textContent = layout.name;
+  $("layout").append(option);
+}
 reset();
