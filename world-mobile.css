@@ -140,3 +140,137 @@
   .directions button { min-height:44px; }
   .actions #undo { flex-basis:69px; }
 }
+
+/* ICE WORLD / SEAMLESS PASS (mobile only)
+ * The established logo, background, board geometry, pawns and game state stay intact.
+ * The art itself is not retouched; only the surrounding interface layering changes.
+ */
+@media (max-width: 600px) {
+  body {
+    background-image:
+      linear-gradient(180deg,#2586db17 0%,#1a7aca0b 36%,#d7f8ff17 74%,#156bb51d 100%),
+      url("assets/ice-world-mobile.webp");
+  }
+  main { padding:4px 6px 16px; }
+  header { position:relative; z-index:2; padding:0 7px; }
+  /* Feather the logo background into the same panoramic landscape rather
+     than placing a second hard-edged picture on top of it. */
+  .mast {
+    margin:-8px -7px -7px; border:0; border-radius:0;
+    background-size:100% auto;
+    background-position:50% 50%;
+    -webkit-mask-image:radial-gradient(ellipse 88% 94% at 50% 47%, #000 64%, transparent 100%);
+    mask-image:radial-gradient(ellipse 88% 94% at 50% 47%, #000 64%, transparent 100%);
+  }
+  /* A soft halo instead of a separate giant white/blue card. */
+  .game {
+    isolation:isolate;
+    background:
+      radial-gradient(ellipse 115% 70% at 50% 53%, #ebfaffbc 0%,#d1f2ffc0 49%,#91cde88e 78%,#b3defa00 100%);
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    backdrop-filter:none;
+    padding:7px 7px 10px;
+  }
+  .game::before {
+    content:""; position:absolute; z-index:-1; pointer-events:none;
+    inset:12% -2% 4%;
+    background:linear-gradient(180deg,#f6fdff28,transparent 22%,#e6faff1c 79%,transparent 100%);
+    border-radius:30px;
+  }
+  .game-top { margin:0 0 7px; }
+  .mode-switch { background:#cfedffb2; border:1px solid #e5faffb5; box-shadow:inset 0 1px #fff7; }
+  .mode-switch button.active {
+    background:linear-gradient(180deg,#339ff7,#086abf);
+    box-shadow:inset 0 1px #d6f4ff91,0 2px 3px #1d6eae5e;
+  }
+  #settings { background:linear-gradient(#f7fdffeb,#e3f4ffcc); box-shadow:0 1px 3px #327cad3f; }
+  /* One score bar, differentiated by side/color, replaces floating score cards. */
+  .scores {
+    gap:0; margin:5px 0 6px; padding:1px;
+    border:1px solid #f1ffffcb; border-radius:14px;
+    background:#edfaffc4; box-shadow:0 2px 7px #3279a94f;
+    overflow:hidden;
+  }
+  .score,.score.p2 {
+    border:0; border-radius:0; padding:7px 9px;
+    box-shadow:none;
+  }
+  .score { background:linear-gradient(110deg,#ffe6bead,#fff1df74); }
+  .score.p2 { border-left:1px solid #9ed2f2; background:linear-gradient(110deg,#def7ffad,#b4e9ff77); }
+  .score.current {
+    box-shadow:inset 0 -3px #f58a29;
+    background:linear-gradient(110deg,#fff0d6e8,#ffe1b5ab);
+  }
+  .score.current.p2 {
+    box-shadow:inset 0 -3px #278fe0;
+    background:linear-gradient(110deg,#e5f9ffef,#c2ecffbe);
+  }
+  /* Instruction floats directly above the ice board, no separate paper box. */
+  .instruction {
+    margin:2px 3px 0; padding:7px 8px 5px;
+    border:1px solid #b9e8ffa8; border-bottom:0;
+    border-radius:13px 13px 0 0;
+    background:linear-gradient(180deg,#f3fdffdc,#dbf5ffbb);
+    box-shadow:none;
+  }
+  #phaseTitle { font-weight:900; }
+  #phaseBadge { box-shadow:0 1px 0 #fff8,0 2px 3px #a3622285; }
+  .board-scroll {
+    margin:0 2px; padding:3px 2px 10px;
+    border:1px solid #b9e8ffa8; border-top:0; border-bottom:0;
+    border-radius:0;
+    background:linear-gradient(180deg,#dbf5ffb9,#b7e4f7ad 62%,#b4e4f87d);
+  }
+  .board-wrap {
+    border-color:#a3e0ff;
+    border-radius:14px;
+    box-shadow:inset 0 1px #fff,0 3px 0 #3f95c8,0 7px 0 #216eaa,0 11px 17px #03518f83;
+  }
+  /* Slide arrows and actions share one translucent ice shelf. */
+  .directions {
+    margin:0 4px; padding:8px 5px 5px; gap:6px;
+    border:1px solid #b9e8ffb8; border-bottom:0;
+    border-radius:0;
+    background:linear-gradient(180deg,#b7e4f7a8,#d4f1ffd4);
+  }
+  .directions button {
+    min-height:47px;
+    border:1px solid #9cd2f0d1;
+    border-radius:11px;
+    background:linear-gradient(180deg,#f2fcffe0,#b1e0fdde);
+    box-shadow:inset 0 1px #fff8,0 2px 0 #78b4dcaa;
+  }
+  .actions {
+    margin:0 4px; padding:5px 5px 9px; gap:8px;
+    border:1px solid #b9e8ffb8; border-top:0;
+    border-radius:0 0 14px 14px;
+    background:linear-gradient(180deg,#d4f1ffd4,#e9f9ffde);
+  }
+  .actions #undo { box-shadow:inset 0 1px #fff8,0 2px 0 #88bbdd; }
+  .actions .primary {
+    box-shadow:inset 0 1px #fff8,0 3px 0 #c76c1b;
+    background:linear-gradient(#ffb448,#f98b0b);
+  }
+  /* During step 2, a disabled "skip wall" is explanatory text, not
+     a giant unusable orange button competing with the slide arrows. */
+  .actions #skip:disabled {
+    background:transparent; border:1px solid transparent;
+    color:#265d8b; box-shadow:none; opacity:.8;
+    font-size:11px; font-weight:800;
+  }
+  .game > .hint { margin-top:7px; }
+  .motion-control { margin-top:2px; }
+  .motion-control .quiet {
+    background:#e7f8ffbf; border:1px solid #c5edffb2;
+    border-radius:20px; padding:6px 11px;
+  }
+  footer { margin-top:-2px; padding:7px 0 13px; }
+}
+@media (max-width: 355px) {
+  .game { padding-inline:4px; }
+  .scores .score,.scores .score.p2 { padding-inline:6px; }
+  .directions { gap:4px; padding-inline:3px; }
+  .actions { gap:5px; padding-inline:3px; }
+}
