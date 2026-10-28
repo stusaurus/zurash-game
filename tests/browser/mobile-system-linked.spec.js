@@ -57,6 +57,13 @@ test("320/390 mobile view fits and approved art never hides an image-less game",
       await expect(page.locator('link[href*="world-mobile.css"]')).toHaveCount(1);
       const logo = await page.request.get("/assets/zurash-approved-logo.webp");
       expect(logo.status()).toBe(200);
+      // The actual accepted images must be active, not merely return HTTP 200.
+      await expect.poll(() => page.locator(".mast").evaluate(el =>
+        getComputedStyle(el).backgroundImage.includes("zurash-approved-logo.webp")
+      )).toBe(true);
+      await expect.poll(() => page.locator("body").evaluate(el =>
+        getComputedStyle(el).backgroundImage.includes("ice-world-mobile.webp")
+      )).toBe(true);
     } else {
       await expect(page.locator('link[href*="world-mobile.css"]')).toHaveCount(0);
       await expect(page.locator(".mast h1")).toBeAttached();
