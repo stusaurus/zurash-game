@@ -133,3 +133,65 @@ test("seamless HUD uses real phase controls and keeps every tap target clear", a
     await expect(page.locator("#turnCount")).toHaveText("2手目");
   }
 });
+
+
+test("right-hand crosspad maps actual engine directions and preserves gameplay", async ({page},testInfo) => {
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for (const width of [320,390,430]) {
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    await expect(page.locator(".cell")).toHaveCount(49);
+    await expect(page.locator("#directions button")).toHaveCount(4);
+    await expect(page.locator(".control-deck .actions #skip")).toBeEnabled();
+    await expect(page.locator(".score.current")).toHaveCount(1);
+
+    const layout = await page.evaluate(() => {
+      const rect = (selector) => {
+        const r=document.querySelector(selector).getBoundingClientRect();
+        return {x:r.x,y:r.y,w:r.width,h:r.height,cx:r.x+r.width/2,cy:r.y+r.height/2};
+      };
+      return {
+        pageWidth:document.documentElement.scrollWidth,
+        viewport:innerWidth,
+        board:rect("#board"),
+        pad:rect("#directions"),
+        actions:rect(".control-deck .actions"),
+        arrows:[...document.querySelectorAll("#directions button")].map(el=>{
+          const r=el.getBoundingClientRect();return {txt:el.textContent,aria:el.getAttribute("aria-label"),cx:r.x+r.width/2,cy:r.y+r.height/2,w:r.width,h:r.height};
+        }),
+        controlRects:[...document.querySelectorAll("#skip,#undo")].map(el=>{
+          const r=el.getBoundingClientRect();return {width:r.width,height:r.height};
+        })
+      };
+    });
+    expect(layout.pageWidth).toBeLessThanOrEqual(layout.viewport);
+    expect(layout.pad.cx).toBeGreaterThan(layout.actions.cx);
+    expect(layout.pad.y).toBeGreaterThanOrEqual(layout.board.y + layout.board.h - 2);
+    const [up,right,down,left] = layout.arrows;
+    expect(layout.arrows.map(x=>x.txt)).toEqual(["↑","→","↓","←"]);
+    expect(layout.arrows.map(x=>x.aria)).toEqual(["上へ滑る","右へ滑る","下へ滑る","左へ滑る"]);
+    expect(up.cy).toBeLessThan(right.cy);
+    expect(down.cy).toBeGreaterThan(right.cy);
+    expect(left.cx).toBeLessThan(up.cx);
+    expect(right.cx).toBeGreaterThan(up.cx);
+    expect(Math.abs(up.cx-down.cx)).toBeLessThan(2);
+    expect(Math.abs(left.cy-right.cy)).toBeLessThan(2);
+    expect(layout.arrows.every(x=>x.w>=44 && x.h>=44)).toBe(true);
+    expect(layout.controlRects.every(x=>x.width>=44 && x.height>=44)).toBe(true);
+    await page.screenshot({path:testInfo.outputPath("crosspad-"+width+"-wall.png"),fullPage:true});
+
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    await page.locator("#skip").click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    await expect(page.locator("#skip")).toBeDisabled();
+    const active = page.locator("#directions button:enabled");
+    expect(await active.count()).toBeGreaterThan(0);
+    await page.screenshot({path:testInfo.outputPath("crosspad-"+width+"-glide.png"),fullPage:true});
+    await active.first().click();
+    await expect(page.locator("#phaseBadge")).toHaveText("1");
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+    await page.locator("#undo").click();
+    await expect(page.locator("#turnCount")).toHaveText("1手目");
+  }
+});
