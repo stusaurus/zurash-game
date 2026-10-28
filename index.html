@@ -69,10 +69,12 @@
         </div>
         <p id="boardScrollHint" class="hint" hidden>盤面を横にスライドして全体を見られます。</p>
         <p id="lastMove" class="last-move" aria-live="polite" hidden></p>
-        <div id="directions" class="directions" aria-label="滑る方向"></div>
-        <div class="actions">
-          <button id="undo">↶ 戻る</button
-          ><button id="skip" class="primary">壁を動かさずに滑る →</button>
+        <div class="control-deck" aria-label="ゲーム操作">
+          <div id="directions" class="directions" role="group" aria-label="滑る方向"></div>
+          <div class="actions">
+            <button id="undo">↶ 戻る</button
+            ><button id="skip" class="primary">壁を動かさずに滑る →</button>
+          </div>
         </div>
         <section id="learningPanel" hidden aria-label="学習CPUの記録">
           <p id="learningStats" aria-live="polite"></p>
