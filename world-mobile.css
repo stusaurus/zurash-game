@@ -1479,3 +1479,82 @@
     box-shadow:0 0 0 3px #fff2a2;
   }
 }
+
+
+/* TURN HANDOFF / Phase is mirrored from the real #phaseBadge by
+ * mobile-command-feedback.js. Never invent a fifth control or change rules.
+ */
+@media (max-width:600px) {
+  .control-deck {
+    transition:border-color 180ms ease,box-shadow 180ms ease;
+  }
+  .control-deck[data-command-phase="wall"] {
+    border-color:#d9f7ff;
+  }
+  .control-deck[data-command-phase="slide"][data-command-ready="true"] {
+    border-color:#b1f0ff;
+    box-shadow:inset 0 2px #f1ffffa5,inset 0 -4px #062f5d,
+      0 5px 0 #06466e,0 9px 15px #073e687a,0 0 12px #a7f5ff70;
+  }
+  .control-deck[data-command-phase="wall"]::before {
+    background:linear-gradient(180deg,transparent,#ffda7e75 28%,#fcecbfa0 60%,transparent);
+  }
+  .control-deck[data-command-phase="slide"]::before {
+    background:linear-gradient(180deg,transparent,#71e1ff75 28%,#c7faff9c 60%,transparent);
+  }
+  /* The selected existing direction flashes briefly when the legal move
+     list first appears. Not a permanent pulsing target or a new action. */
+  .control-deck[data-command-handoff="slide"] #directions.directions button:enabled {
+    animation:zurash-glide-ready 360ms ease-out 1;
+  }
+  .control-deck[data-command-handoff="slide"]:not([data-command-direction])::after {
+    opacity:1;
+    background:radial-gradient(ellipse,#d0faff 12%,#77e2ffb3 52%,transparent 77%);
+    animation:zurash-arcade-handoff 420ms ease-out 1 both;
+  }
+  .control-deck[data-command-handoff="wall"] .actions #skip:enabled {
+    animation:zurash-action-ready 360ms ease-out 1;
+  }
+  .game:has(.control-deck[data-command-handoff]) #phaseBadge {
+    animation:zurash-phase-badge 360ms ease-out 1;
+  }
+  @keyframes zurash-glide-ready {
+    0% {filter:brightness(1.22) saturate(1.2);transform:translateY(2px) scale(.96);}
+    100% {filter:brightness(1.06) saturate(1.1);transform:none;}
+  }
+  @keyframes zurash-action-ready {
+    0% {filter:brightness(1.25);transform:translateY(2px) scale(.97);}
+    100% {filter:brightness(1);transform:none;}
+  }
+  @keyframes zurash-arcade-handoff {
+    0% {opacity:0;transform:scale(.7);}
+    40% {opacity:.9;transform:scale(1);}
+    100% {opacity:0;transform:scale(1.3);}
+  }
+  @keyframes zurash-phase-badge {
+    0% {filter:brightness(1.32);}
+    100% {filter:brightness(1);}
+  }
+}
+/* Respect BOTH the OS reduced-motion preference and the in-game motion OFF
+ * toggle. A static active-state contrast remains without animated flashing.
+ */
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  .control-deck,
+  .control-deck[data-command-handoff="slide"] #directions.directions button:enabled,
+  .control-deck[data-command-handoff="wall"] .actions #skip:enabled,
+  .game:has(.control-deck[data-command-handoff]) #phaseBadge {
+    animation:none;transition:none;
+  }
+  .control-deck[data-command-handoff="slide"]::after {animation:none;opacity:0;}
+}
+@media (max-width:600px) {
+  html[data-zurash-motion="still"] .control-deck,
+  html[data-zurash-motion="still"] .control-deck::after,
+  html[data-zurash-motion="still"] .control-deck[data-command-handoff="slide"] #directions.directions button:enabled,
+  html[data-zurash-motion="still"] .control-deck[data-command-handoff="wall"] .actions #skip:enabled,
+  html[data-zurash-motion="still"] .game:has(.control-deck[data-command-handoff]) #phaseBadge {
+    animation:none;transition:none;
+  }
+  html[data-zurash-motion="still"] .control-deck::after {opacity:0;}
+}
