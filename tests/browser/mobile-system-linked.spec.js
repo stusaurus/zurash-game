@@ -331,3 +331,65 @@ test("in-game motion OFF prevents phase sweep while preserving skip-and-glide",a
   await expect(page.locator("#phaseBadge")).toHaveText("1");
   await expect(page.locator("#turnCount")).toHaveText("2手目");
 });
+
+
+
+test("live Triken scoreboard HUD fits smartphones and tracks real score/phase",async ({page},testInfo) => {
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for (const width of [320,390,430]) {
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    await expect(page.locator('link[href*="mobile-hud.css"]')).toHaveCount(1);
+    await expect(page.locator("#scores .score")).toHaveCount(2);
+    await expect(page.locator("#scores .score.p1")).toContainText("0 / 3");
+    await expect(page.locator("#scores .score.p2")).toContainText("0 / 3");
+    await expect(page.locator("#phaseBadge")).toHaveText("1");
+
+    const hud=await page.evaluate(() => {
+      const rc=s=>document.querySelector(s).getBoundingClientRect();
+      const orange=document.querySelector("#scores .score.p1");
+      const aqua=document.querySelector("#scores .score.p2");
+      return {
+        viewport:innerWidth,
+        documentWidth:document.documentElement.scrollWidth,
+        actualBoardCells:document.querySelectorAll("#board .cell").length,
+        icon1:getComputedStyle(orange,"::before").backgroundImage,
+        icon2:getComputedStyle(aqua,"::before").backgroundImage,
+        score:rc("#scores").toJSON(),
+        instruction:rc(".instruction").toJSON(),
+        board:rc("#board").toJSON(),
+        clipped:[...document.querySelectorAll("#scores strong,#scores .stars")].some(el=>
+          el.scrollWidth>el.clientWidth+2
+        ),
+      };
+    });
+    expect(hud.documentWidth).toBeLessThanOrEqual(hud.viewport);
+    expect(hud.actualBoardCells).toBe(49);
+    expect(hud.icon1).toContain("triken-orange-80.png");
+    expect(hud.icon2).toContain("triken-aqua-80.png");
+    expect(hud.score.width).toBeLessThanOrEqual(hud.viewport);
+    expect(hud.instruction.width).toBeLessThanOrEqual(hud.viewport);
+    expect(hud.instruction.bottom).toBeLessThanOrEqual(hud.board.top+12);
+    expect(hud.clipped).toBe(false);
+    await page.screenshot({path:testInfo.outputPath("hud-score-"+width+"-wall.png"),fullPage:true});
+
+    // Change only through real app controls: never write state directly.
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    await page.locator("#skip").click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    await expect(page.locator(".control-deck")).toHaveAttribute("data-command-phase","slide");
+    await page.screenshot({path:testInfo.outputPath("hud-score-"+width+"-slide.png"),fullPage:true});
+    await page.locator("#directions button:enabled").first().click();
+    await expect(page.locator("#phaseBadge")).toHaveText("1");
+  }
+});
+
+test("desktop stays on PR48 world theme without mobile-only HUD injection",async ({page}) => {
+  await page.setViewportSize({width:960,height:720});
+  await page.goto("/");
+  await expect(page.locator("#scores .score")).toHaveCount(2);
+  await expect(page.locator('link[href*="mobile-hud.css"]')).toHaveCount(0);
+  await expect(page.locator(".cell")).toHaveCount(49);
+  await expect(page.locator("#directions button")).toHaveCount(4);
+});
