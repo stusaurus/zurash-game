@@ -3,6 +3,7 @@
  * Never prevents clicks, changes legal moves, or controls pawn animation.
  */
 const mobile = window.matchMedia("(max-width: 600px)");
+document.documentElement.dataset.zurashCommandFeedback = "ready";
 let clearFeedback = null;
 const directions = ["up", "right", "down", "left"];
 function resetFeedback(deck) {
