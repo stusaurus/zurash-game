@@ -1398,3 +1398,84 @@
   #directions.directions {padding:4px 0 8px;gap:3px;}
   .control-deck .actions #skip:disabled {font-size:10px;}
 }
+
+
+/* LIVE ARCADE FEEDBACK: optical press follows real gameplay phases.
+ * This animation is presentation-only and remains on the stable wrapper
+ * while src/app.js replaces the real directional button elements.
+ */
+@media (max-width:600px) {
+  .control-deck::after {
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:0;
+    pointer-events:none;
+    top:-9px;
+    right:5%;
+    width:48%;
+    height:22px;
+    border-radius:50%;
+    background:radial-gradient(ellipse,#c7f9ff,transparent 76%);
+    opacity:0;
+    transform:scale(.65);
+  }
+  .control-deck:has(#directions button:enabled)::after {
+    opacity:.45;
+    transform:scale(1);
+    transition:opacity 180ms ease,transform 180ms ease;
+  }
+  .control-deck[data-command-direction]::after {
+    opacity:1;
+    transform:scale(1.28);
+    background:radial-gradient(ellipse,#fff0a8 0%,#a6ecffb5 48%,transparent 75%);
+    animation:zurash-arcade-signal 530ms ease-out both;
+  }
+  .control-deck[data-command-direction] #directions.directions {
+    filter:drop-shadow(0 -2px 6px #fdfad28a);
+  }
+  .control-deck[data-command-direction="up"] #directions.directions button:nth-child(1),
+  .control-deck[data-command-direction="right"] #directions.directions button:nth-child(2),
+  .control-deck[data-command-direction="down"] #directions.directions button:nth-child(3),
+  .control-deck[data-command-direction="left"] #directions.directions button:nth-child(4) {
+    opacity:1;
+    filter:brightness(1.2) saturate(1.23);
+    transform:translateY(3px) scale(.97);
+    box-shadow:inset 0 1px 2px #ffffffcf,inset 0 -3px #22508480,
+      0 2px 0 var(--arcade-base),0 4px 4px #032547ad,0 0 15px #fff3a7d9;
+    transition:transform 90ms ease,box-shadow 90ms ease;
+  }
+  .control-deck[data-command-action="skip"] .actions #skip {
+    filter:brightness(1.15);
+    box-shadow:inset 0 1px #fff8,0 1px 0 #6b2d0f,0 0 16px #ffeb9db3;
+  }
+  .control-deck[data-command-action="skip"]::after {
+    opacity:1;
+    transform:scale(1.06);
+    background:radial-gradient(ellipse,#ffdb8acc,transparent 78%);
+    animation:zurash-arcade-signal 300ms ease-out both;
+  }
+  @keyframes zurash-arcade-signal {
+    0% {opacity:.9;transform:scale(.6);}
+    55% {opacity:1;transform:scale(1.2);}
+    100% {opacity:0;transform:scale(1.45);}
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  .control-deck::after,
+  .control-deck[data-command-direction]::after,
+  .control-deck[data-command-action="skip"]::after {
+    animation:none;
+    transition:none;
+    transform:none;
+    opacity:0;
+  }
+  .control-deck[data-command-direction="up"] #directions.directions button:nth-child(1),
+  .control-deck[data-command-direction="right"] #directions.directions button:nth-child(2),
+  .control-deck[data-command-direction="down"] #directions.directions button:nth-child(3),
+  .control-deck[data-command-direction="left"] #directions.directions button:nth-child(4) {
+    transition:none;
+    transform:none;
+    box-shadow:0 0 0 3px #fff2a2;
+  }
+}
