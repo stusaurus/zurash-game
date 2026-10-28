@@ -869,3 +869,232 @@
   .directions button:enabled, .directions button,
   .mode-switch button.active, #settings { animation:none; transition:none; }
 }
+
+
+/* ARCADE COMMAND DECK / Retrospective physical pushbuttons on an ice console.
+ * This replaces only the visual skin of real #directions, #undo and #skip.
+ * All arrow order, legal-state disabling and click handlers come from app.js.
+ */
+@media (max-width:600px) {
+  /* The steel-blue cabinet makes the four saturated pushbuttons pop while
+     continuing the already-approved frozen adventure palette. */
+  .directions {
+    position:relative;
+    isolation:isolate;
+    gap:clamp(7px,2.1vw,11px);
+    margin:6px 4px 0;
+    padding:15px 8px 16px;
+    border:3px solid #e2faff;
+    border-bottom:0;
+    border-radius:25px 25px 0 0;
+    background:
+      linear-gradient(100deg,#ffffff18 0%,transparent 20%,#ffffff20 52%,transparent 80%),
+      linear-gradient(170deg,#163d74 0%,#1467a8 52%,#073b75 100%);
+    box-shadow:
+      inset 0 3px #a9e5ffb3, inset 0 -4px #052b5d,
+      0 3px 0 #084a7d,0 7px 11px #06395e73;
+  }
+  .directions::before {
+    top:5px;
+    left:16px;
+    right:16px;
+    height:3px;
+    border:0;
+    border-radius:12px;
+    background:linear-gradient(90deg,transparent,#c1ecff99,#ffffffd4,#c1ecff99,transparent);
+    box-shadow:none;
+  }
+  .directions button,
+  .directions button:nth-child(even) {
+    --arcade-light:#ff9197;
+    --arcade-face:#fb526b;
+    --arcade-rim:#c4274c;
+    --arcade-base:#781938;
+    position:relative;
+    isolation:isolate;
+    display:grid;
+    flex:1 1 0;
+    place-items:center;
+    min-width:0;
+    min-height:60px;
+    height:clamp(60px,16.5vw,74px);
+    max-height:74px;
+    margin:0;
+    padding:0 0 5px;
+    border:5px solid #163457;
+    border-radius:50%;
+    outline:2px solid #8cd4fcaf;
+    outline-offset:-1px;
+    background:
+      radial-gradient(ellipse 45% 23% at 36% 24%,#ffffffe5,transparent 92%),
+      radial-gradient(ellipse 100% 96% at 50% 20%,var(--arcade-light) 5%,var(--arcade-face) 58%,var(--arcade-rim) 90%);
+    box-shadow:
+      inset 0 2px 2px #ffffff9c,
+      inset 0 -5px 3px #410e237a,
+      0 5px 0 var(--arcade-base),
+      0 8px 0 #032c59,
+      0 11px 9px #021e428a;
+    color:#fff;
+    font-size:clamp(26px,8vw,34px);
+    font-weight:1000;
+    line-height:1;
+    text-shadow:0 2px 1px #062d4b9e,0 0 3px #fff8;
+    transform:none;
+    filter:none;
+    transition:transform 100ms ease,box-shadow 100ms ease,filter 100ms ease;
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
+  }
+  /* Distinctive arcade candy buttons, not irregular jewels.
+     Color is decorative: the arrow remains the sole direction signifier. */
+  .directions button:nth-child(2) {
+    --arcade-light:#fff7a3;
+    --arcade-face:#ffc740;
+    --arcade-rim:#df8c18;
+    --arcade-base:#91550f;
+  }
+  .directions button:nth-child(3) {
+    --arcade-light:#c6ffb9;
+    --arcade-face:#49cf9a;
+    --arcade-rim:#138e72;
+    --arcade-base:#0b6156;
+  }
+  .directions button:nth-child(4) {
+    --arcade-light:#a4eaff;
+    --arcade-face:#37aff8;
+    --arcade-rim:#086ab7;
+    --arcade-base:#064274;
+  }
+  .directions button::before {
+    content:"";
+    position:absolute;
+    pointer-events:none;
+    inset:8% 16% auto 16%;
+    height:26%;
+    border-radius:50%;
+    background:radial-gradient(ellipse at center,#ffffffbb,#ffffff3b 68%,transparent 78%);
+    transform:rotate(-17deg);
+  }
+  .directions button::after { content:none; }
+  .directions button:enabled {
+    filter:saturate(1.17);
+    box-shadow:
+      inset 0 2px 2px #ffffff9c,
+      inset 0 -5px 3px #410e237a,
+      0 5px 0 var(--arcade-base),
+      0 8px 0 #032c59,
+      0 11px 9px #021e428a,
+      0 0 13px #e4ffff8c;
+  }
+  .directions button:disabled {
+    --arcade-light:#e0eef5;
+    --arcade-face:#a1b8c8;
+    --arcade-rim:#647e96;
+    --arcade-base:#38536a;
+    background:
+      radial-gradient(ellipse 45% 23% at 36% 24%,#ffffffe0,transparent 92%),
+      radial-gradient(ellipse at 50% 20%,var(--arcade-light),var(--arcade-face) 60%,var(--arcade-rim));
+    border-color:#345572;
+    outline-color:#7e9bad;
+    color:#f3f7f9;
+    opacity:.65;
+    filter:saturate(.55);
+    transform:none;
+    box-shadow:inset 0 2px #fff6,inset 0 -4px #3b516b,0 3px 0 #344a65,0 5px 5px #021e4238;
+  }
+  .directions button:active:enabled {
+    transform:translateY(5px) scale(.97);
+    box-shadow:inset 0 2px 1px #fff9,inset 0 -2px #380d2466,0 1px 0 var(--arcade-base),0 3px 3px #021e4280;
+  }
+  .directions:has(button:enabled)::before {
+    background:linear-gradient(90deg,transparent,#ffffffad,#fff8b4,#ffffffad,transparent);
+    box-shadow:0 0 9px #ffef9685;
+  }
+  .directions:has(button:enabled) button:enabled { animation:none; }
+
+  /* Two physical command keys: an inset NAV key and an amber action key.
+     Preserve the existing Japanese labels, validity and press behavior. */
+  .actions {
+    align-items:stretch;
+    gap:9px;
+    margin:0 4px;
+    padding:7px 10px 12px;
+    border:3px solid #e2faff;
+    border-top:0;
+    border-radius:0 0 24px 24px;
+    background:linear-gradient(165deg,#163d74,#135e9a 65%,#063469);
+    box-shadow:inset 0 -4px #032954,0 5px 0 #074874,0 9px 12px #032b537d;
+  }
+  .actions #undo {
+    flex:0 0 clamp(71px,22vw,91px);
+    min-height:54px;
+    border:4px solid #17385b;
+    border-radius:35px;
+    background:
+      radial-gradient(ellipse 45% 24% at 34% 19%,#fff9,transparent 98%),
+      linear-gradient(165deg,#e9f9ff,#72bfe8 60%,#2578b6);
+    color:#11456f;
+    font-size:12px;
+    font-weight:1000;
+    text-shadow:0 1px #fff8;
+    box-shadow:inset 0 2px #fff9,inset 0 -4px #155f9f,0 4px 0 #071f43,0 6px 5px #041c3f9a;
+    transform:none;
+    touch-action:manipulation;
+  }
+  .actions #skip:enabled {
+    min-width:0;
+    min-height:54px;
+    padding:8px 9px;
+    border:4px solid #603922;
+    border-radius:35px;
+    background:
+      radial-gradient(ellipse 43% 27% at 32% 18%,#fffffff0,transparent 96%),
+      linear-gradient(165deg,#ffe99a,#ffb839 42%,#fa7e18 92%);
+    box-shadow:inset 0 2px #fff6bd,inset 0 -5px #b95012,0 5px 0 #633114,0 8px 7px #041b3d9c;
+    color:#fff;
+    font-size:clamp(11px,3vw,13px);
+    font-weight:1000;
+    text-shadow:0 2px 1px #70340d;
+    transform:none;
+    touch-action:manipulation;
+  }
+  .actions #skip:disabled {
+    min-height:54px;
+    border:3px solid #315578;
+    border-radius:35px;
+    background:linear-gradient(#b3ccdc,#789eb8);
+    color:#224b6b;
+    box-shadow:inset 0 2px #e4f5ff8c,inset 0 -3px #4e718e,0 2px #0c345d;
+    opacity:.68;
+    font-weight:900;
+    text-shadow:none;
+  }
+  .actions #undo:active:enabled,
+  .actions #skip:active:enabled {
+    transform:translateY(4px) scale(.99);
+    box-shadow:inset 0 2px #ffffffb2,inset 0 -1px #225c86,0 1px 0 #052c54;
+  }
+  .directions button:focus-visible,
+  .actions button:focus-visible {
+    outline:3px solid #ffeb66;
+    outline-offset:3px;
+  }
+}
+@media (max-width:355px) {
+  .directions { gap:5px; padding:15px 5px 14px; }
+  .directions button,
+  .directions button:nth-child(even) {
+    min-height:55px;
+    height:55px;
+    border-width:4px;
+    font-size:27px;
+  }
+  .actions { padding:7px 5px 11px; gap:6px; }
+  .actions #undo { flex-basis:68px; font-size:11px; }
+  .actions #skip:enabled { font-size:11px; }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  .directions button,
+  .actions #undo,
+  .actions #skip { transition:none; animation:none; }
+}
