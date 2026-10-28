@@ -24,6 +24,12 @@ function installApprovedMobileArt() {
     css.href = "world-mobile.css?v=20261028-system-linked";
     css.media = "(max-width: 600px)";
     document.head.append(css);
+    // A separate, reversible HUD skin for the existing live score/phase markup.
+    const hud = document.createElement("link");
+    hud.rel = "stylesheet";
+    hud.href = "mobile-hud.css?v=20261028-live-hud1";
+    hud.media = "(max-width: 600px)";
+    document.head.append(hud);
     // Only cosmetic event feedback; board, engine and CPU remain authoritative.
     void import("./mobile-command-feedback.js").catch(() => {});
     applied = true;
