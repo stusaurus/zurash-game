@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { initial, movableWalls, moveWall, slideOptions, finishSlide } from "../../src/engine.js";
 
-test("mobile screen remains bound to the real 7×7 engine and all legal interactions", async ({ page }) => {
+test("mobile screen remains bound to the real 7×7 engine and all legal interactions", async ({ page }, testInfo) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
@@ -21,8 +21,10 @@ test("mobile screen remains bound to the real 7×7 engine and all legal interact
   const move = movableWalls(initialState)[0];
   await page.locator(`[data-cell="${initialState.walls[move.wall]}"]`).click();
   await expect(page.locator(`[data-cell="${move.to}"]`)).toHaveClass(/target/);
+  await page.screenshot({path: testInfo.outputPath("ice-wall-selected.png"), fullPage: true});
   await page.locator(`[data-cell="${move.to}"]`).click();
   await expect(page.locator("#phaseBadge")).toHaveText("2");
+  await page.screenshot({path: testInfo.outputPath("ice-slide-direction.png"), fullPage: true});
 
   const nextWallState = moveWall(initialState, move);
   const legal = slideOptions(nextWallState);
@@ -42,7 +44,7 @@ test("mobile screen remains bound to the real 7×7 engine and all legal interact
   await expect(page.locator("#turnCount")).toHaveText("1手目");
 });
 
-test("320/390 mobile view fits and approved art never hides an image-less game", async ({ page }) => {
+test("320/390 mobile view fits and approved art never hides an image-less game", async ({ page }, testInfo) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   for (const width of [320, 390]) {
     await page.setViewportSize({ width, height: 844 });
