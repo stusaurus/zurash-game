@@ -987,20 +987,20 @@
       0 0 13px #e4ffff8c;
   }
   .directions button:disabled {
-    --arcade-light:#e0eef5;
-    --arcade-face:#a1b8c8;
-    --arcade-rim:#647e96;
-    --arcade-base:#38536a;
+    /* Arcade cabinets keep the physical buttons colorful even while idle.
+       Muted saturation and lower travel communicate a disabled command. */
     background:
-      radial-gradient(ellipse 45% 23% at 36% 24%,#ffffffe0,transparent 92%),
+      radial-gradient(ellipse 45% 23% at 36% 24%,#ffffffcf,transparent 92%),
       radial-gradient(ellipse at 50% 20%,var(--arcade-light),var(--arcade-face) 60%,var(--arcade-rim));
-    border-color:#345572;
-    outline-color:#7e9bad;
-    color:#f3f7f9;
-    opacity:.65;
-    filter:saturate(.55);
+    border-color:#173657;
+    outline-color:#86b8d3;
+    color:#ffffffd9;
+    opacity:.82;
+    filter:saturate(.68) brightness(.82);
     transform:none;
-    box-shadow:inset 0 2px #fff6,inset 0 -4px #3b516b,0 3px 0 #344a65,0 5px 5px #021e4238;
+    box-shadow:
+      inset 0 2px #ffffff9c,inset 0 -4px #062b5170,
+      0 2px 0 var(--arcade-base),0 4px 4px #021e4266;
   }
   .directions button:active:enabled {
     transform:translateY(5px) scale(.97);
