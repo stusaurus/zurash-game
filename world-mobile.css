@@ -1318,3 +1318,83 @@
   .control-deck .actions{padding:7px 3px 8px;}
   #directions.directions{padding:8px 3px 11px;}
 }
+
+
+/* RIGHT-HAND CROSSPAD / ONE-PIECE CABINET REFINEMENT
+ * Cosmetic only: four actual legal slide commands, Undo and Skip are untouched.
+ * Remove a decorative centre "button" which could imply a fifth direction.
+ */
+@media (max-width:600px) {
+  .control-deck {
+    gap:5px;
+    padding:8px 7px 10px;
+    border:2px solid #defaff;
+    border-radius:25px 25px 29px 29px;
+    background:
+      radial-gradient(ellipse at 54% 0%,#85c6ed78,transparent 68%),
+      linear-gradient(155deg,#184f8c,#126caa 55%,#07386f);
+    box-shadow:
+      inset 0 2px 0 #e7ffff92,
+      inset 0 -4px 0 #062c5f,
+      0 5px 0 #06466e,
+      0 9px 15px #073e687a;
+  }
+  #directions.directions,
+  .control-deck .actions {
+    border:0;
+    border-radius:0;
+    background:transparent;
+    box-shadow:none;
+    margin:0;
+  }
+  .control-deck .actions {
+    padding:8px 5px;
+    gap:13px;
+    justify-content:center;
+  }
+  #directions.directions {
+    padding:3px 1px 7px;
+    gap:4px;
+  }
+  #directions.directions::before {
+    content:none;
+  }
+  #directions.directions button:nth-child(n):disabled {
+    color:#ffffffef;
+    text-shadow:0 1px 2px #17395cae;
+    filter:saturate(.74) brightness(.87);
+    opacity:.87;
+  }
+  #directions.directions button:nth-child(n):enabled {
+    filter:saturate(1.19);
+    box-shadow:
+      inset 0 2px 2px #ffffffb5,
+      inset 0 -5px 3px #410e237a,
+      0 5px 0 var(--arcade-base),
+      0 8px 0 #032c59,
+      0 11px 9px #021e428a,
+      0 0 13px #e4ffffa6;
+  }
+  .control-deck .actions #skip:disabled {
+    border:0;
+    border-radius:12px;
+    background:transparent;
+    box-shadow:none;
+    color:#e3f6ff;
+    font-size:clamp(10px,2.65vw,12px);
+    font-weight:900;
+    text-shadow:0 1px 2px #083567;
+    opacity:1;
+  }
+  #directions.directions button:nth-child(n):focus-visible,
+  .control-deck .actions button:focus-visible {
+    outline:3px solid #ffdf58;
+    outline-offset:2px;
+  }
+}
+@media (max-width:355px) {
+  .control-deck {padding:7px 5px 9px;gap:3px;}
+  .control-deck .actions {padding:6px 2px;gap:10px;}
+  #directions.directions {padding:4px 0 8px;gap:3px;}
+  .control-deck .actions #skip:disabled {font-size:10px;}
+}
