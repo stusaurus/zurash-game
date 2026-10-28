@@ -1,0 +1,135 @@
+/* Approved ZURASH! mobile art. Applies to the CURRENT #48 DOM/engine.
+ * Loaded only after both approved images are available.
+ * src/app.js, src/engine.js, CPU and all interaction states are unchanged.
+ */
+@media (max-width: 600px) {
+  :root { --world-ui-blue:#147cd6; --world-ui-deep:#134c8b; }
+  body {
+    background-color:#80c7f0;
+    background-image:
+      linear-gradient(to bottom,#0062ba17 0%,#ffffff08 47%,#cceeff36 100%),
+      url("assets/ice-world-mobile.webp");
+    background-position:center top;
+    background-size:cover;
+    background-attachment:scroll;
+  }
+  main { width:100%; max-width:480px; padding:7px 8px 18px; }
+  header { min-height:32px; padding:0 5px; }
+  .brand { color:#fff; text-shadow:0 2px 3px #09549a; font-size:11px; }
+  header .quiet {
+    min-height:32px; padding:5px 11px; color:#fff;
+    border:1px solid #c6edff; border-radius:12px;
+    background:linear-gradient(#2291f6,#075fbd);
+    box-shadow:0 2px 0 #00498b,0 2px 7px #06457a9c;
+    font-size:12px;
+  }
+  /* The exact approved logo includes the mascot; hide ONLY duplicate heading
+     visually, retaining the existing h1/description for screen readers. */
+  .mast {
+    display:block; position:relative; overflow:hidden; min-height:0;
+    height:clamp(103px,32vw,147px); margin:2px -5px 7px; padding:0;
+    border:0; border-radius:12px; box-shadow:none; transform:none;
+    background:url("assets/zurash-approved-logo.webp") center/contain no-repeat;
+    isolation:isolate;
+  }
+  .mast::before { display:none; }
+  .mast > div:first-child, .mast .mascot {
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+  .game {
+    padding:9px 8px 10px; border-radius:20px;
+    border:2px solid #e4faff;
+    background:linear-gradient(180deg,#e3f7ffca 0%,#c4e8fbcb 42%,#d2efffda 100%);
+    box-shadow:inset 0 2px #fff8,0 5px 0 #579dc2aa,0 10px 24px #00569d73;
+    backdrop-filter:blur(2px);
+  }
+  .game-top { gap:7px; }
+  .mode-switch { padding:3px; flex:1; background:#b7e0f8; border-radius:12px; }
+  .mode-switch button { flex:1; min-height:36px; padding:5px 6px; font-size:12px; color:#174f86; }
+  .mode-switch button.active {
+    background:linear-gradient(#2192f4,#0868c9); color:white;
+    box-shadow:0 2px 0 #05549a; border-radius:9px;
+  }
+  #settings {
+    flex:0 0 auto; min-height:40px; font-size:11px; white-space:nowrap;
+    background:linear-gradient(#fff,#d4ecff); color:#125093;
+    border:1px solid #90c8f2; box-shadow:0 2px 0 #4c9cd5;
+    border-radius:11px;
+  }
+  .scores { margin:9px 0 8px; gap:7px; }
+  .score,.score.p2 {
+    min-width:0; padding:7px 8px 8px; border-radius:13px;
+    box-shadow:inset 0 1px #fff,0 3px 0 #9cc9e7;
+  }
+  .score { background:linear-gradient(#fff7e9,#ffe2c1); border-color:#ffba7c; }
+  .score.p2 { background:linear-gradient(#f1fcff,#b9e7ff); border-color:#79c7ee; }
+  .score.current { box-shadow:inset 0 0 0 2px #f68a2c,0 3px 0 #dd9b62; }
+  .score.current.p2 { box-shadow:inset 0 0 0 2px #1684e0,0 3px 0 #6cadd4; }
+  .score strong { display:block; font-size:12px; font-weight:900; color:#134d87; }
+  .score .stars { color:#ffb51e; letter-spacing:0; font-size:16px; text-shadow:0 1px #fff; }
+  .score small { display:block; font-size:10px; margin-top:4px; color:#2e6086; }
+  .instruction {
+    margin:3px 0 7px; padding:6px 8px; min-height:48px; gap:8px;
+    background:linear-gradient(#fffefef2,#ecf8ffee); border:1px solid #9bd1f1;
+    border-radius:13px; box-shadow:0 2px 0 #73b2da;
+  }
+  #phaseBadge { width:27px; height:27px; background:#f18b30; box-shadow:0 2px 0 #c46715; }
+  #phaseTitle { font-size:12px; color:#12518d; }
+  #message { font-size:10px; margin:2px 0 0; color:#326891; }
+  #turnCount { font-size:10px; color:#275b89; }
+  .board-scroll { padding-bottom:9px; border-radius:12px; }
+  .board-wrap {
+    border-width:5px; border-radius:16px; border-color:#a8e7ff; background:#b7eaff;
+    box-shadow:inset 0 2px 0 #fff,0 4px 0 #3794c5,0 8px 0 #1d70a9,0 13px 23px #034b8290;
+  }
+  .board-wrap.research-board { min-width:calc(var(--board-cols) * 36px + 14px); }
+  .board { background:#d7f4ff; }
+  .cell { border-right-color:#9acde6; border-bottom-color:#94c9df; }
+  .cell.wall::before {
+    background:radial-gradient(ellipse at 25% 16%,#fff,#fff8 16%,transparent 43%),
+      linear-gradient(135deg,#eaffff,#90d7f8 58%,#348abf);
+    border-color:#529fc9;
+    box-shadow:0 3px #4089b6,inset 2px 2px #fff9,0 5px 5px #1a648766;
+  }
+  /* Keep engine-generated wall targets and landing cells visually distinct. */
+  .cell.selected { background-color:#ffdf96; }
+  .cell.target { background-color:#b2ffe2; }
+  .cell.stop { background-color:#c6f3df; }
+  .directions { margin:12px 0 10px; gap:7px; }
+  .directions button {
+    flex:1; min-width:0; min-height:47px; padding:7px;
+    border:1px solid #8bcef6; border-radius:13px; color:#0f60b1;
+    background:linear-gradient(#f5fdff,#b2deff);
+    box-shadow:0 3px 0 #5a99d2; font-size:24px;
+  }
+  .directions button:disabled { opacity:.44; box-shadow:none; }
+  .actions { gap:8px; }
+  .actions #undo {
+    flex:0 0 75px; min-height:45px; font-size:12px; border-radius:12px;
+    color:#13599e; background:linear-gradient(#fff,#b9e1ff);
+    border:1px solid #80bce7; box-shadow:0 3px 0 #5599cb;
+  }
+  .actions .primary {
+    min-height:45px; font-size:12px; border-radius:12px; color:#fff;
+    border:1px solid #e48b2a; background:linear-gradient(#ffb247,#ff8705);
+    box-shadow:0 4px 0 #b96107,0 4px 10px #8c4b1f55;
+  }
+  .last-move { margin-top:10px; background:#e7f7ffef; }
+  .hint { color:#174f87; text-shadow:0 1px #fff9; }
+  .motion-control { text-align:center; }
+  footer { color:#eaf9ff; text-shadow:0 2px #0863a5; padding:10px 0; }
+  #learningPanel { background:#effbffdd; }
+  dialog:not(.result) { background:linear-gradient(#f8ffff,#dcf2ff); border:2px solid #bbebff; }
+  dialog.result { background:linear-gradient(#fffbe7,#ffe4a7); }
+}
+@media (max-width:355px) {
+  .mast { height:99px; }
+  .game { padding:8px 6px; }
+  .mode-switch button { font-size:10px; padding-inline:3px; }
+  .scores { gap:5px; }
+  .score strong { font-size:11px; }
+  .score .stars { font-size:12px; }
+  .directions button { min-height:44px; }
+  .actions #undo { flex-basis:69px; }
+}
