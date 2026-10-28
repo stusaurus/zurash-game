@@ -1,0 +1,33 @@
+/* Cosmetic-only loader: the approved art is optional until committed to /assets.
+ * Never alter game state, inputs, AI, score or board geometry.
+ * On missing artwork, preserve the playable existing PR #48 theme.
+ */
+const mobile = window.matchMedia("(max-width: 600px)");
+let loading = false;
+let applied = false;
+function installApprovedMobileArt() {
+  if (!mobile.matches || loading || applied) return;
+  loading = true;
+  const sources = [
+    "assets/zurash-approved-logo.webp",
+    "assets/ice-world-mobile.webp",
+  ];
+  Promise.all(sources.map(src => new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => img.naturalWidth > 0 ? resolve() : reject(new Error("empty image"));
+    img.onerror = () => reject(new Error("missing artwork"));
+    img.src = new URL(src, document.baseURI).href;
+  }))).then(() => {
+    if (applied) return;
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = "world-mobile.css?v=20261028-system-linked";
+    css.media = "(max-width: 600px)";
+    document.head.append(css);
+    applied = true;
+  }).catch(() => {
+    /* Assets not yet installed: the existing world.css remains fully functional. */
+  }).finally(() => { loading = false; });
+}
+installApprovedMobileArt();
+mobile.addEventListener?.("change", installApprovedMobileArt);
