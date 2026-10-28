@@ -634,3 +634,238 @@
   .actions { gap:5px; padding-inline:5px; }
   .actions #undo { flex-basis:70px; }
 }
+
+/* PLAYFUL COMMAND STONES / 2026-10-28: cosmetic-only mobile iteration.
+ * Controls remain the real existing #skip, #undo, #directions button and #settings.
+ * Board geometry, positions, input handlers, rule engine and accepted artwork are untouched.
+ */
+@media (max-width: 600px) {
+  /* These controls should feel like a handful of colorful adventure tools,
+     not a line of identical translucent website buttons. */
+  .directions {
+    isolation: isolate;
+    gap: clamp(5px, 1.7vw, 9px);
+    margin: 0 3px;
+    padding: 16px 6px 8px;
+    border: 0;
+    border-radius: 0;
+    background: radial-gradient(ellipse 75% 54% at 50% 6%, #dbffffc9, #9cdaf69a 55%, transparent 100%);
+    box-shadow: none;
+  }
+  .directions::before {
+    top: 6px;
+    left: 12%;
+    right: 12%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ffffffa8 20%, #83e8ff 50%, #ffffffa8 80%, transparent);
+    box-shadow: 0 0 11px #d8ffff8a;
+  }
+  .directions button,
+  .directions button:nth-child(even) {
+    --jewel-top: #6ae9ff;
+    --jewel-mid: #159de9;
+    --jewel-bottom: #0865ba;
+    --jewel-foot: #053e8a;
+    position: relative;
+    isolation: isolate;
+    flex: 1 1 0;
+    min-width: 0;
+    height: 60px;
+    min-height: 60px;
+    margin: 0;
+    padding: 4px 3px 8px;
+    border: 2px solid #ffffffee;
+    border-radius: 24px 17px 23px 16px / 22px 22px 21px 20px;
+    background:
+      radial-gradient(ellipse 60% 34% at 24% 15%, #ffffffb4, transparent 100%),
+      linear-gradient(155deg, var(--jewel-top), var(--jewel-mid) 48%, var(--jewel-bottom) 92%);
+    box-shadow:
+      inset 0 3px 0 #ffffffb5,
+      inset -3px -4px 0 #053c8080,
+      0 5px 0 var(--jewel-foot),
+      0 9px 8px #0139638a;
+    color: #fff;
+    font-size: 31px;
+    font-weight: 1000;
+    line-height: 1;
+    text-shadow: 0 2px 1px #07448c, 0 0 7px #ffffff8c;
+    transform: rotate(-1deg);
+    transition: transform 140ms cubic-bezier(.2,.9,.3,1.2), filter 140ms ease, box-shadow 140ms ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .directions button:nth-child(2) {
+    --jewel-top: #cfabff;
+    --jewel-mid: #8f61ed;
+    --jewel-bottom: #5839ba;
+    --jewel-foot: #493087;
+    border-radius: 17px 25px 18px 23px / 21px 25px 18px 21px;
+    transform: rotate(1deg);
+    text-shadow: 0 2px 1px #402285, 0 0 7px #ffffff88;
+  }
+  .directions button:nth-child(3) {
+    --jewel-top: #b9f985;
+    --jewel-mid: #51c78a;
+    --jewel-bottom: #189c83;
+    --jewel-foot: #137466;
+    border-radius: 22px 18px 22px 16px / 26px 18px 22px 16px;
+    text-shadow: 0 2px 1px #096e6a, 0 0 7px #ffffff88;
+  }
+  .directions button:nth-child(4) {
+    --jewel-top: #ffe395;
+    --jewel-mid: #f9a646;
+    --jewel-bottom: #eb7442;
+    --jewel-foot: #9f5233;
+    border-radius: 17px 23px 18px 25px / 21px 24px 18px 24px;
+    transform: rotate(1deg);
+    text-shadow: 0 2px 1px #94452b, 0 0 7px #ffffff88;
+  }
+  /* Shine facets live inside the button's box and are noninteractive. */
+  .directions button::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 4px 7px auto 9px;
+    height: 17px;
+    border-radius: 70% 30% 66% 35%;
+    background: linear-gradient(155deg, #ffffffe5, #ffffff66 70%, transparent);
+    transform: rotate(-9deg);
+  }
+  .directions button::after {
+    content: "✦";
+    pointer-events: none;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    color: #fff;
+    text-shadow: 0 0 6px #fff;
+    font-size: 11px;
+    opacity: .82;
+  }
+  .directions button:enabled {
+    box-shadow:
+      inset 0 3px 0 #ffffffcd,
+      inset -3px -4px 0 #043c8073,
+      0 5px 0 var(--jewel-foot),
+      0 9px 8px #01396380,
+      0 0 11px #e4ffffb5;
+    filter: saturate(1.12);
+  }
+  .directions button:disabled {
+    --jewel-top: #e4f8ff;
+    --jewel-mid: #b5d9ee;
+    --jewel-bottom: #83b3cd;
+    --jewel-foot: #79a3b8;
+    background: linear-gradient(155deg, #e8f8ffdd, #a7cfe4c9 68%, #90b9d2bb);
+    border-color: #e0f2f8db;
+    box-shadow: inset 0 2px #fff8, inset 0 -3px #71a7c9, 0 3px 0 #7eaac1, 0 5px 6px #0650803a;
+    color: #6c97b7;
+    text-shadow: 0 1px 1px #ffffff9b;
+    opacity: .61;
+    filter: saturate(.45);
+    transform: none;
+  }
+  .directions button:disabled::after { opacity: 0; }
+  .directions button:active:enabled {
+    transform: translateY(4px) scale(.96);
+    box-shadow: inset 0 1px #fff8, inset 0 -1px #044f91, 0 1px 0 var(--jewel-foot), 0 2px 4px #033e6380;
+  }
+  /* When slide becomes possible, the physical stones react as one game deck. */
+  .directions:has(button:enabled)::before {
+    background: linear-gradient(90deg, transparent, #fff9c4, #f7fffb, #fff9c4, transparent);
+    box-shadow: 0 0 10px #fff9be;
+  }
+  .directions:has(button:enabled) button:enabled {
+    animation: zurash-command-ready 220ms ease-out both;
+  }
+  @keyframes zurash-command-ready {
+    from { filter: brightness(1.32) saturate(1.25); scale: .93; }
+    to { filter: brightness(1) saturate(1.12); scale: 1; }
+  }
+  /* Under the jewels, Undo is a clear blue stone and the useful wall-skip
+     is the large warm action toy. Neither button nor label is replaced. */
+  .actions {
+    margin: 0 3px;
+    padding: 7px 7px 10px;
+    border: 0;
+    border-radius: 22px;
+    background: linear-gradient(155deg, #edfdffe3 0%, #b1e4f6c9 60%, #9ad4e9bd);
+    box-shadow: inset 0 2px #ffffffa9, inset 0 -3px #4799bc5f, 0 5px 9px #165b8075;
+  }
+  .actions #undo {
+    flex: 0 0 82px;
+    min-height: 58px;
+    border: 2px solid #fff;
+    border-radius: 19px 12px 18px 17px;
+    background: radial-gradient(ellipse at 25% 18%, #ffffffbd, transparent 61%),
+      linear-gradient(160deg, #d9fbff, #65c9ef 62%, #1e8fc3);
+    box-shadow: inset 0 3px #ffffffc9, inset 0 -3px #167ead, 0 5px 0 #156494, 0 8px 7px #145b8585;
+    color: #064f85;
+    font-size: 13px;
+    font-weight: 900;
+    text-shadow: 0 1px #fff8;
+  }
+  .actions #skip:enabled {
+    min-height: 58px;
+    padding: 7px 9px;
+    border: 2px solid #fff3cc;
+    border-radius: 15px 22px 18px 16px;
+    background:
+      radial-gradient(ellipse at 24% 13%, #ffffffcf, transparent 60%),
+      linear-gradient(155deg, #ffe98b, #ffb33d 48%, #ff7b16 90%);
+    box-shadow: inset 0 3px #ffffffcf, inset 0 -3px #d65d0d, 0 5px 0 #a84809, 0 9px 8px #863d137d;
+    color: #fff;
+    font-size: clamp(11px, 3.2vw, 14px);
+    font-weight: 1000;
+    text-shadow: 0 2px 1px #9e5004cc;
+    transform: rotate(-.4deg);
+  }
+  .actions #skip:enabled:active,
+  .actions #undo:enabled:active {
+    transform: translateY(4px) scale(.98);
+    box-shadow: inset 0 2px #fff7, 0 1px 0 #23577c, 0 2px 3px #1d577c5e;
+  }
+  .actions #skip:disabled {
+    min-height: 58px;
+    background: linear-gradient(170deg, #d9edf6ab, #badbeb8c);
+    border: 1px dashed #90c6d8a3;
+    border-radius: 17px;
+    color: #285984;
+    box-shadow: none;
+    font-weight: 800;
+    line-height: 1.4;
+    opacity: .9;
+    text-shadow: none;
+  }
+  .mode-switch button.active,
+  #settings {
+    transition: transform 150ms ease, filter 150ms ease;
+  }
+  #settings {
+    border: 2px solid #e5faff;
+    border-radius: 16px 22px 18px 15px;
+    background: linear-gradient(150deg, #ffffff, #a7e8ff 45%, #40b0e4 100%);
+    box-shadow: inset 0 2px #fff9, inset 0 -2px #2289c0, 0 4px 0 #1d6b9d, 0 6px 7px #164e7a78;
+    color: #12538c;
+    font-weight: 900;
+  }
+  /* Keyboard focus remains unambiguous; motion preferences are respected. */
+  .directions button:focus-visible,
+  #skip:focus-visible,
+  #undo:focus-visible,
+  #settings:focus-visible {
+    outline: 3px solid #ffed83;
+    outline-offset: 3px;
+  }
+}
+@media (max-width:355px) {
+  .directions { gap:5px; padding-inline:3px; }
+  .directions button,
+  .directions button:nth-child(even) { height:53px; min-height:53px; font-size:27px; }
+  .actions { gap:5px; padding:6px; }
+  .actions #undo { flex-basis:73px; }
+  .actions #skip:enabled { font-size:11px; }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  .directions button:enabled, .directions button,
+  .mode-switch button.active, #settings { animation:none; transition:none; }
+}
