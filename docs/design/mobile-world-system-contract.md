@@ -18,16 +18,16 @@
 `src/engine.js`、`src/app.js`、探索AI、CPU Workerは変更しない。
 盤面はアート画像内に描かれた格子ではなく、実エンジンのデータを使う。
 
-## 正式採用画像の導入条件
+## 正式採用画像の登録状態（2026-10-28）
 
-このブランチではテキストのみを安全に実装し、次のWebPを追加するまでは
-`src/mobile-world.js` がモバイルCSSを**読み込まない**ため、元のPR #48が動作する。
+次の画像を既存の採用済みZIPから**バイナリを変更せず**GitHubへ登録した。
 
-- `assets/ice-world-mobile.webp`（正式採用した縦長背景の右側）
-- `assets/zurash-approved-logo.webp`（正式採用ロゴ、トリケン含む）
+- `assets/ice-world-mobile.webp`：191,468 bytes / git blob SHA `1a8b157811b17c6bd509216cfc5c19e427044564`
+- `assets/zurash-approved-logo.webp`：198,462 bytes / git blob SHA `40f4ee15620d1bc9affc6f7120cbf1469365e554`
 
-両ファイルは会話内で出力済みの `zurash-mobile-ui-integration.zip` にある。
-**GitHubへ画像ファイルを反映するまでは見た目の完成・公開と判定しない。**
+`src/mobile-world.js` は両方の画像読み込みが成功した場合にのみ `world-mobile.css` を追加する。画像が未ロードの環境で元のPR #48を維持する安全策は継続する。
+
+正式採用画像がGitHubに入ったが、**表示テストと実機試遊を終えるまで完成・公開と判定しない**。
 `assets/ice-world-desktop.webp` は別工程で、今回のPC版表示はそのまま。
 
 ## 品質ゲート
@@ -39,4 +39,4 @@
 - 5段階CPU、学習CPUの戻る禁止を維持。
 - 実機iPhoneの滑走中間フレーム問題はPR #45/#46で未解決。今回のCSS統合で改善したと主張しない。
 
-画像が揃った後、390/320pxのスクリーンショットを撮り、ユーザー承認後に親PRへ統合する。
+画像2枚を登録済み。390/320pxのスクリーンショット・実際の操作検証を完了させ、ユーザー承認後に親PRへ統合する。
