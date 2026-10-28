@@ -227,6 +227,8 @@ test("arcade presses glow across real rerenders without changing legal moves", a
   );
   const names=["up","right","down","left"];
   await enabled.first().click();
+  // A genuine press screenshot while the real pawn begins its glide.
+  await page.screenshot({path:testInfo.outputPath("arcade-feedback-during-glide.png"),fullPage:true,animations:"allow"});
   await expect.poll(() => page.evaluate(() =>
     window.__crosspadFeedback.some(x => x.dir)
   )).toBe(true);
