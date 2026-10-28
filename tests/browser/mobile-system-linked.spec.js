@@ -70,6 +70,8 @@ test("320/390 mobile view fits and approved art never hides an image-less game",
       await expect(page.locator('link[href*="world-mobile.css"]')).toHaveCount(0);
       await expect(page.locator(".mast h1")).toBeAttached();
     }
+    if (art.status() === 200)
+      await page.screenshot({path: testInfo.outputPath(`ice-mobile-${width}.png`), fullPage: true});
   }
 
   await page.locator("#localMode").click();
