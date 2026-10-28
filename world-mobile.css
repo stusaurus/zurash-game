@@ -1264,3 +1264,57 @@
 @media (max-width:600px) and (prefers-reduced-motion:reduce) {
   #directions.directions button:nth-child(n) {animation:none;transition:none;}
 }
+
+
+/* ONE CONTROLLER SHELL: no detached command cards outside the ice board. */
+@media (max-width:600px) {
+  .control-deck {
+    position:relative;
+    isolation:isolate;
+    gap:2px;
+    padding:4px 3px 8px;
+    border:3px solid #c9f4ff;
+    border-radius:27px;
+    background:
+      radial-gradient(ellipse at 76% 45%,#2f83c883,transparent 52%),
+      linear-gradient(155deg,#17518e,#146ab1 51%,#09396f 100%);
+    box-shadow:inset 0 3px #e6ffff9a,inset 0 -4px #062f5d,0 5px 0 #074677,0 9px 13px #063e6782;
+  }
+  .control-deck::before {
+    content:"";
+    pointer-events:none;
+    position:absolute;
+    top:17px; bottom:17px;
+    left:calc(100% - clamp(157px,52%,188px) - 6px);
+    width:2px;
+    border-radius:3px;
+    background:linear-gradient(180deg,transparent,#83d7ff75 28%,#c4efff9c 60%,transparent);
+  }
+  .control-deck .actions,
+  #directions.directions {
+    border:0;
+    border-radius:0;
+    background:transparent;
+    box-shadow:none;
+  }
+  .control-deck .actions {
+    padding:10px 6px 10px 5px;
+    gap:10px;
+    justify-content:center;
+  }
+  #directions.directions {padding:8px 5px 11px;}
+  .control-deck .actions #skip:disabled {
+    border:1px solid #a0c6dd68;
+    background:linear-gradient(#b3d8ec48,#80b9d76b);
+    box-shadow:inset 0 1px #ffffff24;
+    color:#e1f6ffd9;
+    text-shadow:0 1px #123f69;
+    opacity:1;
+    font-weight:800;
+  }
+}
+@media (max-width:355px) {
+  .control-deck{padding:3px 2px 7px;}
+  .control-deck .actions{padding:7px 3px 8px;}
+  #directions.directions{padding:8px 3px 11px;}
+}
