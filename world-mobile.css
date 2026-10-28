@@ -905,7 +905,7 @@
     box-shadow:none;
   }
   .directions button,
-  .directions button:nth-child(even) {
+  .directions button:nth-child(n) {
     --arcade-light:#ff9197;
     --arcade-face:#fb526b;
     --arcade-rim:#c4274c;
