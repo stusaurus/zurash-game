@@ -1098,3 +1098,169 @@
   .actions #undo,
   .actions #skip { transition:none; animation:none; }
 }
+
+
+/* RIGHT-HAND CROSSPAD | Actual engine controls, never a decorative fake UI.
+ * DOM arrows: 1=UP 2=RIGHT 3=DOWN 4=LEFT, from engine.DIRS.
+ * Approved board, logo, background, pawns and movement logic stay unchanged.
+ */
+@media (max-width:600px) {
+  .control-deck {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) clamp(157px,52%,188px);
+    align-items:stretch;
+    gap:7px;
+    margin:8px 3px 4px;
+    min-width:0;
+  }
+  /* The right-mounted three-by-three pad belongs to one compact arcade bezel. */
+  #directions.directions {
+    grid-column:2;
+    grid-row:1;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-template-rows:repeat(3,minmax(0,1fr));
+    gap:3px;
+    place-items:center;
+    min-width:0;
+    width:100%;
+    margin:0;
+    padding:9px 6px 13px;
+    border:2px solid #dbf7ff;
+    border-radius:26px;
+    background:
+      radial-gradient(ellipse 65% 55% at 50% 41%,#3e91ce66,transparent 95%),
+      linear-gradient(155deg,#154a88,#1166aa 64%,#083c79);
+    box-shadow:inset 0 3px #dbfaff8a,inset 0 -4px #052d60,0 5px 0 #064271,0 8px 12px #03406c72;
+  }
+  #directions.directions::before {
+    content:"";
+    position:relative;
+    display:block;
+    grid-column:2;
+    grid-row:2;
+    top:auto;right:auto;bottom:auto;left:auto;
+    width:58%;
+    height:58%;
+    border:1px solid #9ac8e4aa;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#9bdcff,#174e82 74%);
+    box-shadow:inset 0 1px #e2faff84,0 1px 3px #06376899;
+    pointer-events:none;
+  }
+  /* Keep the physical-button shape while making the layout a true +.
+     Specific selectors prevent legacy 4-across jewel rules from leaking in. */
+  #directions.directions button:nth-child(n) {
+    display:grid;
+    position:relative;
+    place-items:center;
+    justify-self:stretch;
+    align-self:stretch;
+    flex:none;
+    width:100%;
+    height:auto;
+    min-width:0;
+    min-height:44px;
+    max-height:none;
+    aspect-ratio:1 / 1;
+    margin:0;
+    padding:0 0 3px;
+    border:3px solid #193e66;
+    border-radius:50%;
+    outline:1px solid #a3e8ffae;
+    outline-offset:-1px;
+    font-size:clamp(23px,6.5vw,30px);
+    transform:none;
+    touch-action:manipulation;
+    -webkit-tap-highlight-color:transparent;
+  }
+  #directions.directions button:nth-child(1) {grid-column:2;grid-row:1;}
+  #directions.directions button:nth-child(2) {grid-column:3;grid-row:2;}
+  #directions.directions button:nth-child(3) {grid-column:2;grid-row:3;}
+  #directions.directions button:nth-child(4) {grid-column:1;grid-row:2;}
+  #directions.directions button:nth-child(n):active:enabled {
+    transform:translateY(3px) scale(.97);
+    box-shadow:inset 0 1px 1px #fff8,0 1px 0 var(--arcade-base),0 2px 4px #05294b80;
+  }
+  #directions.directions button:nth-child(n):disabled {
+    transform:none;
+    filter:saturate(.68) brightness(.82);
+    opacity:.82;
+  }
+  #directions.directions:has(button:enabled)::before {
+    background:radial-gradient(circle at 35% 30%,#d9f6ff,#207fc1 74%);
+    box-shadow:inset 0 1px #fff9,0 0 12px #d4f7ff93;
+  }
+  /* One cohesive controller: on the left are the existing two commands.
+     No added actions and no altered phase-dependent button labels. */
+  .control-deck .actions {
+    grid-column:1;
+    grid-row:1;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:center;
+    min-width:0;
+    gap:11px;
+    margin:0;
+    padding:9px 8px 13px;
+    border:2px solid #d9f7ff;
+    border-radius:24px;
+    background:linear-gradient(145deg,#144983,#1268a8 61%,#073b74);
+    box-shadow:inset 0 3px #b3edff83,inset 0 -4px #062e59,0 5px 0 #064271,0 8px 12px #03406c72;
+  }
+  .control-deck .actions #undo,
+  .control-deck .actions #skip {
+    box-sizing:border-box;
+    flex:0 0 auto;
+    width:100%;
+    min-width:0;
+    min-height:49px;
+    margin:0;
+    text-align:center;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    line-height:1.25;
+  }
+  .control-deck .actions #undo {
+    padding:7px 4px;
+    border-radius:26px;
+    font-size:12px;
+  }
+  .control-deck .actions #skip {
+    min-height:72px;
+    padding:9px 7px;
+    border-radius:25px;
+    font-size:clamp(11px,2.8vw,13px);
+  }
+  .control-deck .actions #skip:disabled {
+    min-height:72px;
+    font-size:11px;
+    line-height:1.35;
+    overflow-wrap:anywhere;
+  }
+  #directions.directions button:nth-child(n):focus-visible,
+  .control-deck .actions button:focus-visible {
+    outline:3px solid #ffea67;
+    outline-offset:2px;
+  }
+}
+@media (max-width:355px) {
+  .control-deck {
+    grid-template-columns:minmax(0,1fr) 157px;
+    gap:5px;
+    margin-inline:1px;
+  }
+  #directions.directions {gap:2px;padding:8px 5px 12px;}
+  #directions.directions button:nth-child(n) {font-size:24px;min-height:44px;border-width:3px;}
+  .control-deck .actions {gap:9px;padding:7px 5px 11px;}
+  .control-deck .actions #undo {font-size:11px;min-height:45px;}
+  .control-deck .actions #skip {font-size:11px;min-height:73px;padding:6px 3px;}
+}
+@media (min-width:601px) {
+  /* Wrapper should not affect established desktop layout or control order. */
+  .control-deck {display:contents;}
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  #directions.directions button:nth-child(n) {animation:none;transition:none;}
+}
