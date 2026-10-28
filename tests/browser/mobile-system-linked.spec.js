@@ -94,3 +94,42 @@ test("current CPU levels and learning-mode Undo restriction survive visual chang
   await expect(page.locator("#undo")).toBeDisabled();
   await expect(page.locator(".cell")).toHaveCount(49);
 });
+
+
+test("seamless HUD uses real phase controls and keeps every tap target clear", async ({page}, testInfo) => {
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for (const width of [320,390,430]) {
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    await expect(page.locator('link[href*="world-mobile.css"]')).toHaveCount(1);
+    await expect(page.locator(".score")).toHaveCount(2);
+    await expect(page.locator(".score.current")).toHaveCount(1);
+    await expect(page.locator("#phaseBadge")).toHaveText("1");
+    await expect(page.locator("#directions button")).toHaveCount(4);
+    await expect(page.locator("#skip")).toBeEnabled();
+    // Decorative HUD must not cause horizontal overflow; buttons stay touchable.
+    const layout = await page.evaluate(() => ({
+      documentWidth:document.documentElement.scrollWidth,
+      viewportWidth:innerWidth,
+      scoreWidth:document.querySelector("#scores").getBoundingClientRect().width,
+      gameWidth:document.querySelector(".game").getBoundingClientRect().width,
+      controls:[...document.querySelectorAll("#directions button, #undo, #skip, #settings")]
+        .map(e=>({id:e.id||"direction",w:e.getBoundingClientRect().width,h:e.getBoundingClientRect().height})),
+    }));
+    expect(layout.documentWidth).toBeLessThanOrEqual(layout.viewportWidth);
+    expect(layout.scoreWidth).toBeLessThan(layout.gameWidth);
+    expect(layout.controls.every(c=>c.w>=40 && c.h>=44)).toBe(true);
+    await page.screenshot({path:testInfo.outputPath("seamless-hud-"+width+".png"),fullPage:true});
+
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    await page.locator("#skip").click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    await expect(page.locator("#skip")).toBeDisabled();
+    expect(await page.locator("#directions button:enabled").count()).toBeGreaterThan(0);
+    await page.screenshot({path:testInfo.outputPath("seamless-glide-"+width+".png"),fullPage:true});
+    await page.locator("#directions button:enabled").first().click();
+    await expect(page.locator("#phaseBadge")).toHaveText("1");
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+  }
+});
