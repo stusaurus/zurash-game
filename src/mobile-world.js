@@ -24,6 +24,8 @@ function installApprovedMobileArt() {
     css.href = "world-mobile.css?v=20261028-system-linked";
     css.media = "(max-width: 600px)";
     document.head.append(css);
+    // Only cosmetic event feedback; board, engine and CPU remain authoritative.
+    void import("./mobile-command-feedback.js").catch(() => {});
     applied = true;
   }).catch(() => {
     /* Assets not yet installed: the existing world.css remains fully functional. */
