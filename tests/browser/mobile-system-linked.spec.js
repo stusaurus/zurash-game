@@ -261,3 +261,73 @@ test("reduced motion keeps real crosspad controls usable without overlay animati
   );
   expect(css).toBe("none");
 });
+
+
+test("real wall move hands focus to legal crosspad and back after sliding", async ({page},testInfo) => {
+  await page.setViewportSize({width:390,height:844});
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/");
+  await expect(page.locator("html")).toHaveAttribute("data-zurash-command-feedback","ready");
+  await page.locator("#localMode").click();
+  await page.locator("#start").click();
+  const deck = page.locator(".control-deck");
+  await expect(deck).toHaveAttribute("data-command-phase","wall");
+  await expect(deck).toHaveAttribute("data-command-ready","false");
+  await page.evaluate(() => {
+    window.__commandPhases=[];
+    const el=document.querySelector(".control-deck");
+    new MutationObserver(() => window.__commandPhases.push({
+      phase:el.dataset.commandPhase,
+      ready:el.dataset.commandReady,
+      handoff:el.dataset.commandHandoff || "",
+    })).observe(el,{attributes:true,attributeFilter:[
+      "data-command-phase","data-command-ready","data-command-handoff"
+    ]});
+  });
+  const original=initial(0,0);
+  const legalWallMove=movableWalls(original)[0];
+  expect(legalWallMove).toBeTruthy();
+  await page.locator('[data-cell="'+original.walls[legalWallMove.wall]+'"]').click();
+  await page.locator('[data-cell="'+legalWallMove.to+'"]').click();
+  await expect(page.locator("#phaseBadge")).toHaveText("2");
+  await expect(deck).toHaveAttribute("data-command-phase","slide");
+  await expect(deck).toHaveAttribute("data-command-ready","true");
+  await expect.poll(() => page.evaluate(() =>
+    window.__commandPhases.some(x=>x.handoff==="slide")
+  )).toBe(true);
+  await page.screenshot({path:testInfo.outputPath("handoff-real-wall-to-slide.png"),fullPage:true,animations:"allow"});
+  await page.locator("#directions button:enabled").first().click();
+  await expect(page.locator("#phaseBadge")).toHaveText("1");
+  await expect(deck).toHaveAttribute("data-command-phase","wall");
+  await expect(deck).toHaveAttribute("data-command-ready","false");
+  await expect.poll(() => page.evaluate(() =>
+    window.__commandPhases.some(x=>x.handoff==="wall")
+  )).toBe(true);
+  await expect(page.locator("#turnCount")).toHaveText("2手目");
+  await page.locator("#undo").click();
+  await expect(page.locator("#turnCount")).toHaveText("1手目");
+  await expect(deck).toHaveAttribute("data-command-phase","wall");
+  await expect(deck).not.toHaveAttribute("data-command-handoff",/./);
+});
+
+test("in-game motion OFF prevents phase sweep while preserving skip-and-glide",async ({page}) => {
+  await page.setViewportSize({width:390,height:844});
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/");
+  await expect(page.locator("html")).toHaveAttribute("data-zurash-command-feedback","ready");
+  await page.locator("#localMode").click();
+  await page.locator("#start").click();
+  await page.locator("#motionToggle").click();
+  await expect(page.locator("html")).toHaveAttribute("data-zurash-motion","still");
+  await page.locator("#skip").click();
+  const deck=page.locator(".control-deck");
+  await expect(page.locator("#phaseBadge")).toHaveText("2");
+  await expect(deck).toHaveAttribute("data-command-phase","slide");
+  await expect(deck).toHaveAttribute("data-command-ready","true");
+  await expect(deck).not.toHaveAttribute("data-command-handoff",/./);
+  const animation=await deck.evaluate(el => getComputedStyle(el,"::after").animationName);
+  expect(animation).toBe("none");
+  await page.locator("#directions button:enabled").first().click();
+  await expect(page.locator("#phaseBadge")).toHaveText("1");
+  await expect(page.locator("#turnCount")).toHaveText("2手目");
+});
