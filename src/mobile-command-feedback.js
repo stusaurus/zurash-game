@@ -32,13 +32,16 @@ function syncPhase() {
   // The label is owned by the real engine-driven src/app.js render().
   const phase = phaseBadge.textContent.trim() === "2" ? "slide" : "wall";
   const canGlide = phase === "slide" && !!arrowGroup.querySelector("button:enabled");
+  const canWallAction = phase === "wall" && !document.querySelector("#skip")?.disabled;
   deck.dataset.commandPhase = phase;
   deck.dataset.commandReady = canGlide ? "true" : "false";
 
   if (lastPhase !== null && lastPhase !== phase) {
     clearTransition();
-    // Do not create a decorative sweep when motion was disabled in game settings.
-    if (mobile.matches && document.documentElement.dataset.zurashMotion !== "still") {
+    // Do not suggest a playable action during CPU turns, victory, or busy frames.
+    // Likewise honor the game's own animation preference.
+    const playerCanAct = phase === "slide" ? canGlide : canWallAction;
+    if (playerCanAct && mobile.matches && document.documentElement.dataset.zurashMotion !== "still") {
       deck.dataset.commandHandoff = phase;
       clearHandoff = setTimeout(clearTransition, 420);
     }
