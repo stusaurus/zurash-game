@@ -160,8 +160,8 @@
     margin:-5px -5px -9px; border:0; border-radius:0;
     background-size:contain;
     background-position:50% 50%;
-    -webkit-mask-image:radial-gradient(ellipse 88% 94% at 50% 47%, #000 64%, transparent 100%);
-    mask-image:radial-gradient(ellipse 88% 94% at 50% 47%, #000 64%, transparent 100%);
+    -webkit-mask-image:radial-gradient(ellipse 80% 78% at 50% 24%, #000 70%, transparent 100%);
+    mask-image:radial-gradient(ellipse 80% 78% at 50% 24%, #000 70%, transparent 100%);
   }
   /* A soft halo instead of a separate giant white/blue card. */
   .game {
