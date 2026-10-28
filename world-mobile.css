@@ -92,6 +92,13 @@
     border-color:#529fc9;
     box-shadow:0 3px #4089b6,inset 2px 2px #fff9,0 5px 5px #1a648766;
   }
+  /* The approved 80px Triken artwork has transparent margins.
+     Enlarge only its visual box, never the token cell or game coordinates. */
+  .token .coin,
+  .token.p2 .coin { inset:-2px; }
+  .token .pawn-image {
+    filter:drop-shadow(0 2px 2px #174a6a66);
+  }
   /* Keep engine-generated wall targets and landing cells visually distinct. */
   .cell.selected { background-color:#ffdf96; }
   .cell.target { background-color:#b2ffe2; }
