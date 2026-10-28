@@ -156,8 +156,9 @@
   /* Feather the logo background into the same panoramic landscape rather
      than placing a second hard-edged picture on top of it. */
   .mast {
-    margin:-8px -5px -7px; border:0; border-radius:0;
-    background-size:100% auto;
+    height:clamp(132px,41vw,176px);
+    margin:-5px -5px -9px; border:0; border-radius:0;
+    background-size:contain;
     background-position:50% 50%;
     -webkit-mask-image:radial-gradient(ellipse 88% 94% at 50% 47%, #000 64%, transparent 100%);
     mask-image:radial-gradient(ellipse 88% 94% at 50% 47%, #000 64%, transparent 100%);
@@ -175,7 +176,7 @@
   }
   .game::before {
     content:""; position:absolute; z-index:-1; pointer-events:none;
-    inset:12% -2% 4%;
+    inset:12% -1% 4%;
     background:linear-gradient(180deg,#f6fdff28,transparent 22%,#e6faff1c 79%,transparent 100%);
     border-radius:30px;
   }
