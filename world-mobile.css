@@ -275,3 +275,362 @@
   .directions { gap:4px; padding-inline:3px; }
   .actions { gap:5px; padding-inline:3px; }
 }
+
+
+/* HUD REFINEMENT / The surrounding game console is sculpted out of the ice.
+ * Visuals only. No changes to the board, engine, hit targets or approved art.
+ * Keep the layout flat enough for 320px; no canvas-like image overlays.
+ */
+@media (max-width:600px) {
+  :root {
+    --zurash-ice-edge:#b5edff;
+    --zurash-ice-deep:#115fa0;
+    --zurash-ice-shadow:#063e72;
+    --zurash-ice-glow:#dcfaff;
+    --zurash-gold:#ffc345;
+  }
+
+  /* Top switches are one instrument cluster, not independent settings cards. */
+  .game-top {
+    align-items:stretch;
+    gap:5px;
+    padding:1px 3px 4px;
+  }
+  .mode-switch {
+    min-width:0;
+    min-height:42px;
+    gap:2px;
+    padding:3px;
+    border:1px solid #b7ecffad;
+    border-radius:18px 12px 12px 18px;
+    background:linear-gradient(170deg,#0c568bba,#158bd1a8);
+    box-shadow:inset 0 2px 2px #e9ffff78,0 2px 7px #075b8a6b;
+  }
+  .mode-switch button {
+    position:relative;
+    min-width:0;
+    min-height:42px;
+    padding:5px 7px;
+    border-radius:13px 9px 9px 13px;
+    color:#e8faff;
+    font-size:clamp(10px,2.9vw,12px);
+    font-weight:900;
+    text-shadow:0 1px 2px #00345f7a;
+  }
+  .mode-switch button + button { border-radius:9px 12px 12px 9px; }
+  .mode-switch button.active {
+    border:1px solid #edffffca;
+    background:linear-gradient(155deg,#6dd4ff,#188bde 54%,#0864b2);
+    color:#fff;
+    box-shadow:inset 0 2px #e2ffffab,inset 0 -2px #074b8a98,0 1px 5px #032b6688;
+  }
+  #settings {
+    flex:0 0 auto;
+    min-height:47px;
+    padding:6px 9px;
+    border:1px solid #d0f5ffdb;
+    border-radius:11px 18px 18px 11px;
+    background:linear-gradient(160deg,#f3fdfff0,#aee2ffec 56%,#62b8e6e8);
+    color:#15518b;
+    font-size:clamp(10px,2.8vw,12px);
+    text-shadow:0 1px #fff9;
+    box-shadow:inset 0 2px 1px #fff8,inset 0 -2px #368ac08a,0 3px 5px #14567b55;
+  }
+
+  /* Single crystalline score HUD: orange and aqua are two halves of one rail.
+     The central join is decorative only; players and targets remain engine-fed. */
+  .scores {
+    position:relative;
+    display:flex;
+    align-items:stretch;
+    padding:3px;
+    margin:5px 2px 7px;
+    overflow:hidden;
+    border:1px solid #d6f8ffcb;
+    border-radius:18px 18px 13px 13px;
+    background:linear-gradient(180deg,#f4ffffb8,#78bfe5c0 60%,#338aca9a);
+    box-shadow:inset 0 2px #fff8,inset 0 -3px #1768a79c,0 3px 8px #04517c62;
+  }
+  .scores::before {
+    content:"";
+    position:absolute;
+    z-index:2;
+    top:9px;
+    bottom:9px;
+    left:calc(50% - 1px);
+    width:2px;
+    border-radius:4px;
+    background:linear-gradient(#d9fbff55,#ffffffec,#7cc8ef5c);
+    box-shadow:0 0 5px #f2ffffb7;
+    pointer-events:none;
+  }
+  .score,.score.p2 {
+    position:relative;
+    flex:1 1 0;
+    min-width:0;
+    padding:9px 9px 8px;
+    border:0;
+    border-radius:15px 8px 7px 10px;
+    box-shadow:inset 0 2px #fff9,inset 0 -2px #d9996a4a;
+    transition:filter 140ms ease;
+  }
+  .score.p2 {
+    border-left:0;
+    border-radius:8px 15px 10px 7px;
+    box-shadow:inset 0 2px #fff9,inset 0 -2px #5dadd769;
+  }
+  .score {
+    background:linear-gradient(155deg,#fff2dbf5,#ffd9a4dd 60%,#f3a77cc9);
+  }
+  .score.p2 {
+    background:linear-gradient(155deg,#f1fefff5,#bcecffec 57%,#7dc6f4cd);
+  }
+  .score.current {
+    background:linear-gradient(150deg,#fff7e7,#ffd6a1 63%,#ee994a);
+    box-shadow:inset 0 2px #fff8,inset 0 -4px #e86f23,0 0 8px #ffb34c8e;
+  }
+  .score.current.p2 {
+    background:linear-gradient(150deg,#f5ffff,#b6e8ff 63%,#68b7ef);
+    box-shadow:inset 0 2px #fff8,inset 0 -4px #147cd0,0 0 8px #71d9ff9e;
+  }
+  .score strong {
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    color:#184877;
+    font-size:clamp(11px,3vw,13px);
+    line-height:1.4;
+  }
+  .score .stars {
+    font-size:clamp(13px,4.1vw,17px);
+    letter-spacing:0;
+    color:#ffb014;
+    text-shadow:0 1px #fff,0 0 3px #ffe891;
+  }
+  .score small {
+    font-size:clamp(9px,2.5vw,11px);
+    color:#285779;
+    line-height:1.35;
+  }
+  .score.match-point,.score.match-point.p2 {
+    outline:2px solid #ffdc67;
+    outline-offset:-3px;
+  }
+
+  /* Phase/status strip continues the arena but uses a distinctly legible ink. */
+  .instruction {
+    position:relative;
+    align-items:center;
+    min-height:54px;
+    margin:3px 3px 0;
+    padding:8px 10px 6px;
+    border-left:1px solid #c9f6ffba;
+    border-right:1px solid #c9f6ffba;
+    border-top:1px solid #e7ffffd1;
+    border-radius:17px 17px 0 0;
+    background:linear-gradient(180deg,#eafaffec,#b1e3fbc8);
+    box-shadow:inset 0 2px #fff8;
+  }
+  #phaseBadge {
+    flex:0 0 34px;
+    width:34px;
+    height:34px;
+    border:1px solid #fff4c5;
+    border-radius:11px 8px 11px 8px;
+    background:linear-gradient(135deg,#ffcb64,#ff9e35 60%,#df671a);
+    box-shadow:inset 0 1px #fffae0,0 3px 0 #a95018,0 0 8px #ffca5991;
+    font-size:16px;
+  }
+  #phaseTitle { font-size:clamp(12px,3.2vw,14px); color:#073d70; }
+  #message { font-size:clamp(10px,2.55vw,11px); line-height:1.35; color:#285e84; }
+  #turnCount {
+    align-self:flex-start;
+    margin-left:auto;
+    padding:3px 6px;
+    border:1px solid #acddf4;
+    border-radius:999px;
+    background:#e1f6ffb8;
+    color:#215984;
+    font-size:10px;
+  }
+
+  /* Non-board controller: four sculpted ice keys resting on the same shelf.
+     Enabled keys glow; disabled keys remain visible but visually quiet.
+     Hit areas stay >=44px and DOM/direction mapping never changes. */
+  .directions {
+    position:relative;
+    gap:5px;
+    margin:0 4px;
+    padding:11px 7px 6px;
+    border-left:1px solid #caefffd6;
+    border-right:1px solid #caefffd6;
+    border-radius:0;
+    background:linear-gradient(#b9e6f7d0,#bfe9f9df);
+  }
+  .directions::before {
+    content:"";
+    position:absolute;
+    top:3px;
+    left:16px;
+    right:16px;
+    height:3px;
+    border-radius:999px;
+    background:linear-gradient(90deg,transparent,#e4ffffba,transparent);
+    pointer-events:none;
+  }
+  .directions button {
+    position:relative;
+    display:grid;
+    place-items:center;
+    min-width:0;
+    min-height:50px;
+    padding:5px 3px;
+    border:1px solid #e1f9ffdf;
+    border-radius:15px 9px 13px 9px;
+    background:linear-gradient(155deg,#f2feff,#bfeaff 50%,#74bde5);
+    box-shadow:inset 0 2px #ffffffdb,inset 0 -3px #408cbfa3,0 3px 5px #06518277;
+    color:#0867b4;
+    font-size:24px;
+    font-weight:900;
+    text-shadow:0 1px #fff;
+    transition:background 140ms ease,box-shadow 140ms ease,opacity 140ms ease;
+  }
+  .directions button:nth-child(even) { border-radius:9px 15px 9px 13px; }
+  .directions button:enabled {
+    background:linear-gradient(155deg,#ffffff,#d3f8ff 45%,#57bbea);
+    box-shadow:inset 0 2px #fff,inset 0 -3px #278fc8,0 0 8px #a1f2ffb8,0 4px 5px #07517d72;
+  }
+  .directions button:active:enabled {
+    transform:translateY(2px);
+    box-shadow:inset 0 1px #fff9,0 1px #237cad;
+  }
+  .directions button:disabled {
+    opacity:.55;
+    background:linear-gradient(#e8f8ffbc,#a4cde2aa);
+    color:#5287aa;
+    box-shadow:inset 0 1px #fff9;
+  }
+
+  .actions {
+    align-items:stretch;
+    gap:6px;
+    margin:0 4px;
+    padding:5px 7px 9px;
+    border:1px solid #caefffd6;
+    border-top:0;
+    border-radius:0 0 17px 17px;
+    background:linear-gradient(180deg,#bfe9f9df,#e4f8ffe8);
+    box-shadow:inset 0 -2px #fff9,0 4px 7px #0754805c;
+  }
+  .actions #undo {
+    flex:0 0 76px;
+    min-height:48px;
+    border:1px solid #f0ffffee;
+    border-radius:12px 8px 8px 14px;
+    color:#12548b;
+    background:linear-gradient(160deg,#ffffffeb,#d1f0ffeb 55%,#85c2e8e6);
+    box-shadow:inset 0 2px #fff,0 3px 0 #5297c4,0 4px 6px #17527a66;
+    font-size:12px;
+  }
+  .actions .primary {
+    min-width:0;
+    min-height:48px;
+    border:1px solid #ffde89;
+    border-radius:8px 14px 14px 8px;
+    background:linear-gradient(165deg,#ffdf80,#ffae32 49%,#ea7711);
+    box-shadow:inset 0 2px #fff2be,0 3px 0 #a95716,0 4px 7px #a45b2777;
+    color:#fff;
+    font-size:clamp(11px,2.85vw,13px);
+    text-shadow:0 1px 1px #923f03c8;
+  }
+  .actions #skip:disabled {
+    opacity:1;
+    border-color:transparent;
+    background:transparent;
+    box-shadow:none;
+    color:#32648a;
+    text-shadow:none;
+    font-weight:800;
+    font-size:clamp(10px,2.5vw,11px);
+  }
+  .actions button:active:enabled { transform:translateY(2px); }
+  /* Keep selection states distinct for keyboard and accessibility navigation. */
+  .mode-switch button:focus-visible,
+  #settings:focus-visible,
+  .directions button:focus-visible,
+  .actions button:focus-visible {
+    outline:3px solid #ffb635;
+    outline-offset:2px;
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .score,.directions button { transition:none; }
+  }
+
+  /* Recorded moves and learning stats are quiet HUD readouts, not page cards. */
+  .last-move,.last-move.scored {
+    margin:8px 5px 0;
+    border:1px solid #cfedffab;
+    border-radius:13px;
+    background:linear-gradient(155deg,#e6f8fff0,#b7dff2d9);
+    color:#1a527e;
+    box-shadow:inset 0 1px #fff7;
+  }
+  .last-move.scored {
+    border-color:#ffe09d;
+    background:linear-gradient(140deg,#fff5d9ed,#ffe4aada);
+    color:#795018;
+  }
+  #learningPanel {
+    margin:10px 4px 0;
+    border:1px solid #bbebff;
+    border-radius:17px;
+    background:linear-gradient(160deg,#f2ffffed,#bce6fbe6);
+    color:#174d77;
+    box-shadow:inset 0 2px #fff8,0 3px 7px #155a8363;
+  }
+  .motion-control .quiet {
+    min-height:40px;
+    border:1px solid #c5edffb7;
+    border-radius:16px;
+    background:linear-gradient(180deg,#eafaffd6,#b8e2f6c4);
+    color:#17537f;
+    box-shadow:inset 0 1px #fff8;
+  }
+
+  /* Menus are the same floating ice instruments as the gameplay controls. */
+  dialog:not(.result) {
+    border:2px solid #d8fbff;
+    border-radius:24px 18px 24px 18px;
+    background:linear-gradient(155deg,#f9ffff,#d4f0ff 65%,#9ccff2);
+    box-shadow:inset 0 2px #fff,0 8px 0 #368db8,0 20px 50px #06395c88;
+  }
+  dialog:not(.result) h2 { color:#124c80; }
+  dialog:not(.result) .primary,
+  dialog.result .primary {
+    min-height:48px;
+    border:1px solid #ffe39a;
+    border-radius:14px;
+    background:linear-gradient(150deg,#ffcc67,#ff921f 75%,#d8690c);
+    box-shadow:inset 0 2px #fff3c8,0 3px 0 #a75a1b;
+  }
+  dialog.result {
+    border:3px solid #fff1b9;
+    border-radius:24px 16px 24px 16px;
+    background:linear-gradient(160deg,#fffce9,#ffdfa5 78%,#ffc365);
+    box-shadow:inset 0 2px #fff9,0 9px 0 #b97534,0 18px 45px #062c5080;
+  }
+}
+@media (max-width:355px) {
+  .game-top { gap:3px; }
+  .mode-switch button { min-height:42px; padding-inline:4px; font-size:10px; }
+  #settings { padding-inline:7px; font-size:10px; }
+  .scores { margin-inline:1px; }
+  .score,.score.p2 { padding-inline:6px; }
+  .score strong { font-size:11px; }
+  .score .stars { font-size:13px; }
+  .directions { gap:4px; padding-inline:5px; }
+  .directions button { min-height:48px; }
+  .actions { gap:5px; padding-inline:5px; }
+  .actions #undo { flex-basis:70px; }
+}
