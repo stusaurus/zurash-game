@@ -840,7 +840,10 @@ test("short-height iPhones keep crosspad scroll-reachable and reserve safe-area 
         scrollPadding:parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom),
         boardWidth:document.querySelector("#board").getBoundingClientRect().width,
         touch:controls.map(b=>getComputedStyle(b).touchAction),
-        noSelect:controls.map(b=>getComputedStyle(b).userSelect),
+        noSelect:controls.map(b=>({
+          standard:getComputedStyle(b).userSelect,
+          webkit:getComputedStyle(b).getPropertyValue("-webkit-user-select"),
+        })),
         boardScroll:getComputedStyle(scroll).overflowX
       };
     });
@@ -848,7 +851,8 @@ test("short-height iPhones keep crosspad scroll-reachable and reserve safe-area 
     expect(metrics.boardWidth).toBeGreaterThan(275);
     expect(metrics.safePadding).toBeGreaterThanOrEqual(18);
     expect(metrics.scrollPadding).toBeGreaterThanOrEqual(18);
-    expect(metrics.noSelect.every(s=>s==="none")).toBe(true);
+    // WebKit may expose the effective value only under the prefixed name.
+    expect(metrics.noSelect.every(s=>s.standard==="none" || s.webkit==="none")).toBe(true);
     expect(metrics.touch.every(s=>s==="manipulation")).toBe(true);
     expect(metrics.boardScroll).toBe("auto");
     await page.locator("#skip").click();
