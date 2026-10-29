@@ -731,6 +731,10 @@ test("touch preview responds before click and never moves the actual pawn by its
   for(const width of [320,390]){
     await page.setViewportSize({width,height:844});
     await page.goto("/");
+    // The cosmetic module now signals readiness only after every mobile skin
+    // stylesheet finishes loading. Verify the contract before instant presses.
+    await expect(page.locator("html")).toHaveAttribute("data-zurash-command-feedback","ready");
+    await expect.poll(() => page.locator('link[href^="mobile-focus.css"]').evaluate(el => Boolean(el.sheet))).toBe(true);
     await page.locator("#localMode").click();
     await page.locator("#start").click();
     const deck=page.locator(".control-deck");
