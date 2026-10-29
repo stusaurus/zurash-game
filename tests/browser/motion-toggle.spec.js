@@ -26,7 +26,18 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
   // Cross-process Playwright awaits may begin sampling only after arrival on WebKit.
   await page.evaluate(() => {
     const token = document.querySelector(".token.p1");
-    window.__trikenFlight = { points: [token.getBoundingClientRect().x], done: false };
+    window.__trikenFlight = { points: [token.getBoundingClientRect().x], events: [], done: false };
+    // Transition lifecycle is recorded by WebKit even when CI suppresses
+    // intermediate animation frames. This observes the actual token.
+    for (const name of ["transitionrun","transitionstart","transitionend","transitioncancel"]) {
+      token.addEventListener(name,event=>{
+        if (event.propertyName === "transform") {
+          window.__trikenFlight.events.push({
+            name,elapsed:event.elapsedTime,at:performance.now()
+          });
+        }
+      });
+    }
     const observer = new MutationObserver(() => {
       if (token.dataset.pose !== "slide") return;
       observer.disconnect();
@@ -44,13 +55,21 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect.poll(() => page.evaluate(() => window.__trikenFlight.done)).toBe(true);
   const arrival = await pawn.boundingBox();
-  const samples = await page.evaluate(() => window.__trikenFlight.points);
+  const flight = await page.evaluate(() => window.__trikenFlight);
   expect(arrival.x).toBeGreaterThan(origin.x + 30);
-  // Three samples (start, one in-flight position, finish) are sufficient.
-  // WebKit under CI load can render only three frames for this short tween.
-  expect(samples.length).toBeGreaterThanOrEqual(3);
-  const intermediate = samples.filter(x => x > origin.x + 5 && x < arrival.x - 5);
-  expect(intermediate.length).toBeGreaterThan(0);
+  // Under load, headless iPhone WebKit can skip every intermediate rAF
+  // callback. A CSS transform transition must nonetheless dispatch its
+  // actual lifecycle events; unlike rAF counts these prove the transition
+  // was started and reached completion instead of teleporting via no tween.
+  const starts = flight.events.filter(x=>x.name==="transitionrun" || x.name==="transitionstart");
+  const ends = flight.events.filter(x=>x.name==="transitionend");
+  expect(starts.length,JSON.stringify(flight)).toBeGreaterThan(0);
+  expect(ends.length,JSON.stringify(flight)).toBeGreaterThan(0);
+  expect(ends.at(-1).elapsed,JSON.stringify(flight)).toBeGreaterThan(0.2);
+  // Keep the geometric samples for diagnostics, but never use the number
+  // of CI-rendered frames to decide whether a CSS transition existed.
+  const intermediate = flight.points.filter(x => x > origin.x + 5 && x < arrival.x - 5);
+  expect(flight.points.length).toBeGreaterThanOrEqual(2);
   await toggle.click();
   await expect(toggle).toHaveText("動き：OFF");
   expect(await pawn.evaluate(el => getComputedStyle(el).transitionDuration)).toBe("0s");
