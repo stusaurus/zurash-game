@@ -503,3 +503,57 @@ test("gameplay focus compacts only mobile chrome after a real game start",async 
     await expect(page.locator("html")).toHaveAttribute("data-zurash-match-view","play");
   }
 });
+
+
+test("live match menu and score become one connected frosted visor", async ({page},testInfo) => {
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const width of [320,390,430]) {
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    await expect(page.locator("#board .cell")).toHaveCount(49);
+    await expect(page.locator("html")).not.toHaveAttribute("data-zurash-match-view","play");
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    await expect(page.locator("html")).toHaveAttribute("data-zurash-match-view","play");
+    const metrics=await page.evaluate(()=>{
+      const rect=selector=>document.querySelector(selector).getBoundingClientRect();
+      const top=rect(".game-top"),score=rect("#scores"),board=rect("#board"),pad=rect(".control-deck");
+      const buttons=[...document.querySelectorAll(".game-top button")].map(el=>{
+        const r=el.getBoundingClientRect(); return {w:r.width,h:r.height,visible:r.width>0};
+      });
+      const mode=getComputedStyle(document.querySelector(".game-top .mode-switch"));
+      const style=getComputedStyle(document.querySelector("#scores"));
+      return {
+        width:innerWidth,
+        pageWidth:document.documentElement.scrollWidth,
+        gap:score.top-top.bottom,
+        leftDiff:Math.abs(score.left-top.left),
+        rightDiff:Math.abs(score.right-top.right),
+        menuBackground:mode.backgroundImage,
+        scoreCorner:style.borderTopLeftRadius,
+        boardWidth:board.width,
+        boardCells:document.querySelectorAll("#board .cell").length,
+        padBottom:pad.bottom,
+        buttons
+      };
+    });
+    expect(metrics.pageWidth).toBeLessThanOrEqual(metrics.width);
+    expect(Math.abs(metrics.gap)).toBeLessThanOrEqual(1);
+    expect(metrics.leftDiff).toBeLessThanOrEqual(1);
+    expect(metrics.rightDiff).toBeLessThanOrEqual(1);
+    expect(metrics.menuBackground).toBe("none");
+    expect(metrics.scoreCorner).toBe("0px");
+    expect(metrics.boardCells).toBe(49);
+    expect(metrics.buttons.every(b=>b.visible && b.w>=40 && b.h>=42)).toBe(true);
+    if(width<=390) expect(metrics.padBottom).toBeLessThanOrEqual(844);
+    await expect(page.locator("#scores .score-count")).toHaveCount(2);
+    await page.screenshot({path:testInfo.outputPath("seamless-visor-"+width+".png"),fullPage:true});
+    await page.locator("#settings").click();
+    await expect(page.locator("#setupDialog")).toBeVisible();
+    await page.locator('#setupDialog [data-close="setupDialog"]').first().click();
+    await page.locator("#skip").click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    await page.locator("#directions button:enabled").first().click();
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+  }
+});
