@@ -11,7 +11,9 @@ const directions = ["up", "right", "down", "left"];
  * observed state only: a press without a click never sends a game move.
  * The existing click handler still validates and executes every command. */
 let previewTimer = null;
+let activePointer = null;
 function clearPreview() {
+  activePointer = null;
   if (previewTimer !== null) clearTimeout(previewTimer);
   previewTimer = null;
   const shell = document.querySelector(".control-deck");
@@ -41,10 +43,24 @@ function releasePreview() {
   previewTimer = setTimeout(clearPreview, 65);
 }
 document.addEventListener("pointerdown", event => {
-  if (event.isPrimary === false) return;
+  if (event.isPrimary === false || event.button > 0) return;
   previewButton(event.target);
+  if (deck?.dataset.commandPress) {
+    activePointer = { id:event.pointerId, x:event.clientX, y:event.clientY };
+  }
 }, true);
-document.addEventListener("pointerup", releasePreview, true);
+// A thumb can start on a button and then swipe to scroll. Once its contact
+// travels >12px, remove the illusion of a held button; do not block scrolling.
+document.addEventListener("pointermove", event => {
+  if (!activePointer || event.pointerId !== activePointer.id) return;
+  if (Math.hypot(event.clientX-activePointer.x,event.clientY-activePointer.y)>12)
+    clearPreview();
+}, true);
+document.addEventListener("pointerup", event => {
+  if (activePointer && event.pointerId !== activePointer.id) return;
+  activePointer=null;
+  releasePreview();
+}, true);
 document.addEventListener("pointercancel", clearPreview, true);
 document.addEventListener("keydown", event => {
   if ((event.key === "Enter" || event.key === " ") && !event.repeat)
