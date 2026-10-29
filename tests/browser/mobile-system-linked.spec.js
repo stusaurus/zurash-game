@@ -557,3 +557,61 @@ test("live match menu and score become one connected frosted visor", async ({pag
     await expect(page.locator("#turnCount")).toHaveText("2手目");
   }
 });
+
+
+test("mobile play help and auxiliary chrome stay reachable without competing with crosspad",async ({page},testInfo)=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const width of [320,390,430]){
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    // The original complete help label is kept on the opening screen.
+    await expect(page.locator("html")).not.toHaveAttribute("data-zurash-match-view","play");
+    await expect(page.locator("#help")).toHaveAccessibleName("遊び方を開く");
+    const openingHelpSize=await page.locator("#help").evaluate(el=>parseFloat(getComputedStyle(el).fontSize));
+    expect(openingHelpSize).toBeGreaterThan(0);
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    await expect(page.locator("html")).toHaveAttribute("data-zurash-match-view","play");
+    const chrome=await page.evaluate(()=>{
+      const help=document.querySelector("#help");
+      const motion=document.querySelector("#motionToggle");
+      const footer=document.querySelector("footer");
+      const hint=document.querySelector(".game > p.hint:not(#boardScrollHint)");
+      const board=document.querySelector("#board");
+      const deck=document.querySelector(".control-deck");
+      const box=el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height,b:r.bottom};};
+      return {
+        help:box(help),motion:box(motion),deck:box(deck),board:box(board),
+        icon:getComputedStyle(help,"::before").content,
+        helpFont:parseFloat(getComputedStyle(help).fontSize),
+        footerDisplay:getComputedStyle(footer).display,
+        hintFont:parseFloat(getComputedStyle(hint).fontSize),
+        hintVisible:box(hint).height>0,
+        overflow:document.documentElement.scrollWidth>innerWidth
+      };
+    });
+    expect(chrome.overflow).toBe(false);
+    expect(chrome.icon).toBe('"?"');
+    expect(chrome.helpFont).toBe(0);
+    expect(chrome.help.w).toBeGreaterThanOrEqual(44);
+    expect(chrome.help.h).toBeGreaterThanOrEqual(44);
+    expect(chrome.motion.w).toBeGreaterThanOrEqual(44);
+    expect(chrome.motion.h).toBeGreaterThanOrEqual(44);
+    expect(chrome.footerDisplay).toBe("none");
+    expect(chrome.hintVisible).toBe(true);
+    expect(chrome.hintFont).toBeGreaterThanOrEqual(10);
+    expect(chrome.board.w).toBeGreaterThan(275);
+    if(width<=390)expect(chrome.deck.b).toBeLessThanOrEqual(844);
+    await page.screenshot({path:testInfo.outputPath("polished-aux-"+width+".png"),fullPage:true});
+    await page.locator("#help").click();
+    await expect(page.locator("#helpDialog")).toBeVisible();
+    await page.locator('#helpDialog [data-close="helpDialog"]').first().click();
+    const before=await page.locator("#motionToggle").getAttribute("aria-pressed");
+    await page.locator("#motionToggle").click();
+    await expect(page.locator("#motionToggle")).not.toHaveAttribute("aria-pressed",before);
+    await page.locator("#skip").click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    await page.locator("#directions button:enabled").first().click();
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+  }
+});
