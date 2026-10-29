@@ -17,6 +17,11 @@
     padding-top:5px;
     padding-bottom:7px;
   }
+  /* The help entry remains reachable and meets a 44px touch height. */
+  html[data-zurash-match-view="play"] header #help {
+    min-height:44px;
+    padding:8px 11px;
+  }
   html[data-zurash-match-view="play"] .game-top {
     padding-inline:2px;
     margin-bottom:4px;
