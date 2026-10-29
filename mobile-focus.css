@@ -353,3 +353,137 @@
     font-size:10px;
   }
 }
+
+
+
+/* FINAL CHROME PASS — quiet navigation with a real arcade hierarchy.
+ * Start screen stays unchanged. Only presentation on active mobile matches.
+ * The approved art, board geometry and existing button handlers stay intact.
+ */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:47px;
+    padding:1px 5px;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+  }
+  html[data-zurash-match-view="play"] header .brand {
+    display:inline-flex;
+    align-items:center;
+    min-height:44px;
+    padding:0 4px;
+    border:0;
+    background:transparent;
+  }
+  html[data-zurash-match-view="play"] header .brand::after {
+    font-size:clamp(16px,4.4vw,19px);
+    color:#faffff;
+    text-shadow:0 2px 2px #063a77,1px 0 #0965b1,-1px 0 #0965b1,
+      0 0 7px #a6eaff9a;
+  }
+
+  /* Recast the tall blue "遊び方" card as a compact physical help key.
+     The button retains its text + explicit accessible name in the DOM. */
+  html[data-zurash-match-view="play"] header #help {
+    display:grid;
+    place-items:center;
+    box-sizing:border-box;
+    flex:0 0 44px;
+    width:44px;
+    height:44px;
+    min-height:44px;
+    min-width:44px;
+    margin:0;
+    padding:0;
+    border:2px solid #d6f9ff;
+    border-radius:50%;
+    background:
+      radial-gradient(ellipse at 35% 20%,#ffffffec,transparent 49%),
+      linear-gradient(160deg,#e2faff,#81cdeb 56%,#348bc4);
+    color:transparent;
+    font-size:0;
+    line-height:1;
+    text-shadow:none;
+    box-shadow:inset 0 2px #fff9,inset 0 -3px #236a9f,
+      0 3px 0 #104e7c,0 4px 7px #07376465;
+    touch-action:manipulation;
+    -webkit-tap-highlight-color:transparent;
+  }
+  html[data-zurash-match-view="play"] header #help::before {
+    content:"?";
+    display:block;
+    font-size:23px;
+    font-weight:1000;
+    line-height:1;
+    color:#155b91;
+    text-shadow:0 1px #fff;
+  }
+  html[data-zurash-match-view="play"] header #help:active {
+    transform:translateY(2px);
+    box-shadow:inset 0 1px #fff8,inset 0 -1px #1d6f9e,0 1px 0 #104e7c;
+  }
+  html[data-zurash-match-view="play"] header #help:focus-visible,
+  html[data-zurash-match-view="play"] header .brand:focus-visible,
+  html[data-zurash-match-view="play"] #motionToggle:focus-visible {
+    outline:3px solid #ffe166;
+    outline-offset:2px;
+  }
+
+  /* Keep the rules reminder legible, but not a second menu.
+     It lives directly below the physical command deck. */
+  html[data-zurash-match-view="play"] .game > p.hint:not(#boardScrollHint) {
+    margin:7px 7px 0;
+    padding:4px 3px;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+    font-size:11px;
+    font-weight:700;
+    line-height:1.45;
+    color:#15517e;
+    text-shadow:0 1px #f6ffffcc;
+  }
+  /* "Motion" is a small hardware switch, not another competing action key. */
+  html[data-zurash-match-view="play"] .game .motion-control {
+    display:flex;
+    justify-content:flex-end;
+    margin:2px 6px 0;
+  }
+  html[data-zurash-match-view="play"] .game #motionToggle {
+    box-sizing:border-box;
+    min-height:44px;
+    min-width:86px;
+    margin:0;
+    padding:8px 11px;
+    border:1px solid #e1faffdf;
+    border-radius:22px;
+    background:linear-gradient(155deg,#e5f9ffe8,#a2ddf9de 70%,#6ab4e0d6);
+    color:#115582;
+    font-size:11px;
+    font-weight:900;
+    text-shadow:0 1px #fff9;
+    box-shadow:inset 0 1px #fff9,inset 0 -2px #479bc8,0 2px 3px #0b4e7b54;
+  }
+  html[data-zurash-match-view="play"] .game #motionToggle[aria-pressed="true"] {
+    background:linear-gradient(155deg,#f6fdff,#bceeff 68%,#61b8e9);
+    color:#075080;
+    border-color:#fff;
+  }
+  /* Branding is already supplied by the small top wordmark during play.
+     Remove decorative footer repetition only, never status or controls. */
+  html[data-zurash-match-view="play"] footer {display:none;}
+}
+@media (max-width:355px) {
+  html[data-zurash-match-view="play"] header {padding-inline:2px;}
+  html[data-zurash-match-view="play"] .game > p.hint:not(#boardScrollHint) {
+    font-size:10.5px;
+    margin-inline:3px;
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  html[data-zurash-match-view="play"] header #help {transition:none;}
+}
