@@ -474,9 +474,19 @@ test("gameplay focus compacts only mobile chrome after a real game start",async 
       };
       function boxSelector(el){return el.getBoundingClientRect();}
     });
-    expect(after.mast).toBeLessThan(before.mast - 13);
-    expect(after.boardTop).toBeLessThan(before.boardTop - 13);
+    expect(after.mast).toBe(0);
+    await expect(page.locator(".mast")).toBeHidden();
+    await expect(page.locator("header .brand")).toBeVisible();
+    expect(after.boardTop).toBeLessThan(before.boardTop - 70);
     expect(after.boardW).toBe(before.boardW);
+    // On everyday phone widths the full physical crosspad should be reachable
+    // without scrolling below the visible 844px gameplay viewport.
+    if (width <= 390) {
+      const deckBottom=await page.locator(".control-deck").evaluate(el=>
+        el.getBoundingClientRect().bottom
+      );
+      expect(deckBottom).toBeLessThanOrEqual(844);
+    }
     expect(after.overflow).toBe(false);
     expect(after.allControls.every(c=>c.w>=40 && c.h>=40)).toBe(true);
     await page.screenshot({path:testInfo.outputPath("focused-match-"+width+".png"),fullPage:true});
