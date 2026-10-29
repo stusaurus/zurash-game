@@ -1,0 +1,87 @@
+/* ZURASH! focused mobile play — second visual state, NOT a new game mode.
+ * The accepted background/logo/Triken are never changed.
+ * The live 7×7/A–E board and its geometry, scores, controls and AI stay native.
+ * Applied only after src/app.js confirms a valid #start action.
+ */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] main {
+    padding-top:2px;
+  }
+  html[data-zurash-match-view="play"] .mast {
+    height:clamp(95px,28vw,122px);
+    margin-top:-4px;
+    margin-bottom:-10px;
+    background-size:contain;
+  }
+  html[data-zurash-match-view="play"] .game {
+    padding-top:5px;
+    padding-bottom:7px;
+  }
+  html[data-zurash-match-view="play"] .game-top {
+    padding-inline:2px;
+    margin-bottom:4px;
+  }
+  html[data-zurash-match-view="play"] #scores.scores {
+    margin-bottom:4px;
+  }
+  /* Keep the complete turn instruction legible; visually attach it to
+     the arena rim, so neither its card nor an extra border competes. */
+  html[data-zurash-match-view="play"] .game .instruction {
+    min-height:45px;
+    border-color:#ccf3ffd6;
+    background:linear-gradient(180deg,#f0fbffe8 0%,#c6ecffda 66%,#a9def5d1 100%);
+    border-bottom:0;
+    box-shadow:inset 0 1px #fff9;
+  }
+  html[data-zurash-match-view="play"] .board-scroll {
+    border-color:#c8efffd6;
+    background:linear-gradient(#c4efffca,#b8e8f9d5 60%,#caefffc6);
+  }
+  html[data-zurash-match-view="play"] #scores.scores {
+    box-shadow:inset 0 1px #fffa,inset 0 -2px #2479b5,0 2px 5px #0e558462;
+  }
+  /* The controller is still a physical arcade unit, but is connected by
+     colour/light to the same ice as the arena, not by another blue card. */
+  html[data-zurash-match-view="play"] .game .control-deck {
+    margin-top:6px;
+    border-color:#d7f7ff;
+    background:
+      radial-gradient(ellipse 70% 95% at 50% -20%,#bfeeff6b,transparent 90%),
+      linear-gradient(165deg,#17548e,#1267a7 58%,#06396f);
+  }
+  html[data-zurash-match-view="play"] .game > .hint {
+    margin:7px 7px 0;
+    padding:0;
+    font-size:10px;
+    line-height:1.25;
+    color:#285b86;
+    text-shadow:0 1px #fff9;
+  }
+  html[data-zurash-match-view="play"] .game .last-move {
+    margin:6px 6px 0;
+    padding:5px 8px;
+    font-size:10px;
+    line-height:1.35;
+    background:#e5f6ffbf;
+    border:1px solid #a8daf3aa;
+    border-radius:11px;
+    box-shadow:none;
+  }
+  html[data-zurash-match-view="play"] .game .motion-control {
+    margin:4px auto 0;
+  }
+  html[data-zurash-match-view="play"] footer {
+    padding-top:5px;
+  }
+}
+@media (max-width:355px) {
+  html[data-zurash-match-view="play"] .mast {
+    height:94px;
+    margin-bottom:-9px;
+  }
+  html[data-zurash-match-view="play"] .game {
+    padding-inline:4px;
+  }
+}
+/* All essential accessibility settings and tap sizes remain unchanged.
+ * The focus style does not animate, so no motion override is necessary. */
