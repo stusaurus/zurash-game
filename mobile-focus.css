@@ -493,7 +493,7 @@
  * The live game remains the source of truth for stars and possible moves.
  * The text stays outside the interactive board and crosspad hit regions. */
 @media (max-width:600px) {
-  html[data-zurash-match-view="play"] .game > p.star-tip.hint {
+  html[data-zurash-match-view="play"] .game > p.star-tip.hint:not(#boardScrollHint) {
     display:flex;
     align-items:center;
     justify-content:center;
@@ -540,7 +540,7 @@
   }
 }
 @media (max-width:355px) {
-  html[data-zurash-match-view="play"] .game > p.star-tip.hint {
+  html[data-zurash-match-view="play"] .game > p.star-tip.hint:not(#boardScrollHint) {
     gap:5px;
     margin:5px 2px 0;
     padding:4px 5px;
