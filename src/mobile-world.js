@@ -35,9 +35,18 @@ function installApprovedMobileArt() {
     focus.rel = "stylesheet";
     focus.href = "mobile-focus.css?v=20261029-ergonomics-v15";
     focus.media = "(max-width: 600px)";
+    // Stylesheets added at runtime load asynchronously, especially in WebKit.
+    // Install tactile listeners only after every skin layer settles, so an
+    // immediate pointerdown never sets a press state before its CSS exists.
+    const skinReady = [css, hud, focus].map(link => new Promise(resolve => {
+      link.addEventListener("load", resolve, {once: true});
+      link.addEventListener("error", resolve, {once: true});
+    }));
     document.head.append(focus);
     // Only cosmetic event feedback; board, engine and CPU remain authoritative.
-    void import("./mobile-command-feedback.js?v=20261029-thumb-v15").catch(() => {});
+    void Promise.all(skinReady)
+      .then(() => import("./mobile-command-feedback.js?v=20261029-thumb-v15"))
+      .catch(() => {});
     applied = true;
   }).catch(() => {
     /* Assets not yet installed: the existing world.css remains fully functional. */
