@@ -553,3 +553,55 @@
     font-size:16px;
   }
 }
+
+
+/* ICE MATERIAL MATCH — unify light direction and bevel depth of the raised
+   arena and physical controller. Surface paint only: no grid, sizing,
+   hit testing, character art, movement, or shadow overlay on game cells. */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] .game {
+    --arena-edge-glow:#d8faff;
+    --arena-edge-mid:#69bce6;
+    --arena-edge-dark:#176d9e;
+    --arena-ground-shadow:#043c6b78;
+  }
+  html[data-zurash-match-view="play"] .board-wrap {
+    border-color:var(--arena-edge-glow);
+    /* Bevel goes outward from the existing board border: no box sizing change. */
+    box-shadow:
+      inset 0 2px 0 #ffffffd9,
+      inset 0 -2px 0 #5db9e252,
+      0 3px 0 var(--arena-edge-mid),
+      0 7px 0 var(--arena-edge-dark),
+      0 11px 16px var(--arena-ground-shadow);
+  }
+  html[data-zurash-match-view="play"] .game .control-deck {
+    border-color:var(--arena-edge-glow);
+    background:
+      linear-gradient(150deg,#ffffff26 0%,transparent 28%,#d2f9ff0a 73%),
+      radial-gradient(ellipse at 53% -15%,#a7efffaa,transparent 69%),
+      linear-gradient(158deg,#236caa 0%,#1766a2 52%,#073a73 100%);
+    box-shadow:
+      inset 0 2px 0 #ffffffc7,
+      inset 0 -3px 0 #0e5183,
+      0 3px 0 var(--arena-edge-mid),
+      0 7px 0 var(--arena-edge-dark),
+      0 11px 16px var(--arena-ground-shadow);
+  }
+  /* A soft ice reflection shared between the board's upper lip and the
+     controller casing. Use backgrounds only, never interactive overlays. */
+  html[data-zurash-match-view="play"] .game .instruction {
+    border-color:var(--arena-edge-glow);
+    background:
+      linear-gradient(104deg,#ffffff47 0%,transparent 26%,#ffffff20 67%,transparent 95%),
+      linear-gradient(180deg,#ecfcfff2,#c6efffe2 74%,#a0dcf2d8);
+  }
+  html[data-zurash-match-view="play"] .game #phaseBadge {
+    box-shadow:inset 0 2px #ffffffc2,0 2px 0 #bc6928,0 3px 5px #093c5b49;
+  }
+  /* Decorative command-divider is stationary; all four real arrow buttons
+     keep their independently illuminated legal/disabled states. */
+  html[data-zurash-match-view="play"] .control-deck::before {
+    background:linear-gradient(180deg,transparent,#d7faff8c 30%,#8edcf8a3 58%,transparent);
+  }
+}
