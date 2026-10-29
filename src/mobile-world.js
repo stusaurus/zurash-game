@@ -30,6 +30,12 @@ function installApprovedMobileArt() {
     hud.href = "mobile-hud.css?v=20261028-live-hud1";
     hud.media = "(max-width: 600px)";
     document.head.append(hud);
+    // Optional compact chrome after a valid match starts; never affects desktop.
+    const focus = document.createElement("link");
+    focus.rel = "stylesheet";
+    focus.href = "mobile-focus.css?v=20261029-gameplay-focus";
+    focus.media = "(max-width: 600px)";
+    document.head.append(focus);
     // Only cosmetic event feedback; board, engine and CPU remain authoritative.
     void import("./mobile-command-feedback.js").catch(() => {});
     applied = true;
