@@ -7,11 +7,29 @@
   html[data-zurash-match-view="play"] main {
     padding-top:2px;
   }
+  /* Keep the full approved logo on the opening view; during the match
+     a compact wordmark replaces the large billboard, freeing the arena. */
   html[data-zurash-match-view="play"] .mast {
-    height:clamp(95px,28vw,122px);
-    margin-top:-4px;
-    margin-bottom:-10px;
-    background-size:contain;
+    display:none;
+  }
+  html[data-zurash-match-view="play"] header .brand {
+    font-size:0;
+    letter-spacing:normal;
+    text-decoration:none;
+  }
+  html[data-zurash-match-view="play"] header .brand span {
+    display:none;
+  }
+  html[data-zurash-match-view="play"] header .brand::after {
+    content:"ズラッシュ！";
+    display:inline-block;
+    font-size:clamp(16px,4.4vw,19px);
+    font-weight:1000;
+    letter-spacing:-.8px;
+    color:#f7feff;
+    text-shadow:0 2px 2px #073b7d,1px 0 #136dc3,-1px 0 #136dc3,
+      0 0 7px #a6eaff8a;
+    white-space:nowrap;
   }
   html[data-zurash-match-view="play"] .game {
     padding-top:5px;
@@ -80,9 +98,8 @@
   }
 }
 @media (max-width:355px) {
-  html[data-zurash-match-view="play"] .mast {
-    height:94px;
-    margin-bottom:-9px;
+  html[data-zurash-match-view="play"] header .brand::after {
+    font-size:16px;
   }
   html[data-zurash-match-view="play"] .game {
     padding-inline:4px;
