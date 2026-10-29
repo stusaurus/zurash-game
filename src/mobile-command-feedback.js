@@ -6,6 +6,58 @@ const mobile = window.matchMedia("(max-width: 600px)");
 document.documentElement.dataset.zurashCommandFeedback = "ready";
 
 const directions = ["up", "right", "down", "left"];
+
+/* Instant tactile preview on physical touch/pointer down. This is an
+ * observed state only: a press without a click never sends a game move.
+ * The existing click handler still validates and executes every command. */
+let previewTimer = null;
+function clearPreview() {
+  if (previewTimer !== null) clearTimeout(previewTimer);
+  previewTimer = null;
+  const shell = document.querySelector(".control-deck");
+  if (shell) delete shell.dataset.commandPress;
+}
+function previewButton(target) {
+  const shell = document.querySelector(".control-deck");
+  if (!shell || !mobile.matches || !(target instanceof Element)) return;
+  const button = target.closest("button");
+  if (!button || button.disabled || !shell.contains(button)) return;
+  const pad = button.closest("#directions");
+  let key = "";
+  if (pad) {
+    const index = Array.prototype.indexOf.call(pad.children, button);
+    if (index < 0 || index > 3) return;
+    key = directions[index];
+  } else if (button.id === "skip" || button.id === "undo") {
+    key = button.id;
+  }
+  if (!key) return;
+  clearPreview();
+  shell.dataset.commandPress = key;
+}
+function releasePreview() {
+  if (previewTimer !== null) clearTimeout(previewTimer);
+  // Short release dwell makes fast taps perceivable but does not delay a move.
+  previewTimer = setTimeout(clearPreview, 65);
+}
+document.addEventListener("pointerdown", event => {
+  if (event.isPrimary === false) return;
+  previewButton(event.target);
+}, true);
+document.addEventListener("pointerup", releasePreview, true);
+document.addEventListener("pointercancel", clearPreview, true);
+document.addEventListener("keydown", event => {
+  if ((event.key === "Enter" || event.key === " ") && !event.repeat)
+    previewButton(event.target);
+}, true);
+document.addEventListener("keyup", event => {
+  if (event.key === "Enter" || event.key === " ") releasePreview();
+}, true);
+window.addEventListener("blur", clearPreview);
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) clearPreview();
+});
+
 const deck = document.querySelector(".control-deck");
 const phaseBadge = document.querySelector("#phaseBadge");
 const arrowGroup = document.querySelector("#directions");
@@ -14,6 +66,7 @@ let clearHandoff = null;
 let lastPhase = null;
 
 function clearPress() {
+  clearPreview();
   if (clearFeedback !== null) clearTimeout(clearFeedback);
   clearFeedback = null;
   if (!deck) return;
@@ -45,6 +98,12 @@ function syncPhase() {
       deck.dataset.commandHandoff = phase;
       clearHandoff = setTimeout(clearTransition, 420);
     }
+  }
+  // A completed glide should release the directional light in step with the
+  // real turn; the existing 750ms timer remains a safety fallback.
+  if (lastPhase === "slide" && phase === "wall" && deck.dataset.commandDirection) {
+    if (clearFeedback !== null) clearTimeout(clearFeedback);
+    clearFeedback = setTimeout(clearPress, 110);
   }
   lastPhase = phase;
 }
