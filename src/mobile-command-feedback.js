@@ -94,3 +94,15 @@ document.getElementById("motionToggle")?.addEventListener("click", () => {
     if (document.documentElement.dataset.zurashMotion === "still") clearTransition();
   });
 });
+
+/* Opening the valid match switches to a compact scenic HUD; no game state is
+ * read or changed here. The actual #start handler validates/sets up the match,
+ * closes #setupDialog and renders the board before this bubble listener runs.
+ */
+document.addEventListener("click", (event) => {
+  const element = event.target instanceof Element ? event.target : null;
+  if (!element?.closest("#start")) return;
+  const setup = document.querySelector("#setupDialog");
+  if (setup?.open) return; // Invalid setup: do not suggest a match started.
+  document.documentElement.dataset.zurashMatchView = "play";
+}, false);
