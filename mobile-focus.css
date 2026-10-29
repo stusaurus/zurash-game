@@ -107,3 +107,140 @@
 }
 /* All essential accessibility settings and tap sizes remain unchanged.
  * The focus style does not animate, so no motion override is necessary. */
+
+
+/* ONE-WORLD FINISH / match-only visual harmonization, Oct 2026
+ * Top HUD, arena rail and arcade controller use the same frosted ice hardware.
+ * The approved board itself, playable positions, controls, and button hitboxes
+ * are deliberately not restyled, resized, moved or covered in this section.
+ */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] {
+    --zurash-frost-highlight:#eefcff;
+    --zurash-frost-edge:#aee8fc;
+    --zurash-frost-shadow:#0f689c;
+    --zurash-frost-ink:#0d4777;
+  }
+
+  /* The upper switch and score act as one compact HUD, not stacked cards. */
+  html[data-zurash-match-view="play"] .game-top {
+    margin:0 3px 4px;
+    gap:5px;
+  }
+  html[data-zurash-match-view="play"] .game-top .mode-switch {
+    background:linear-gradient(170deg,#134b86e3,#126badc9 58%,#10568ed7);
+    border:1px solid #c9f5ffc7;
+    border-radius:17px;
+    box-shadow:inset 0 1px #ecffff8c,0 1px 3px #0e57814e;
+  }
+  html[data-zurash-match-view="play"] .game-top #settings {
+    border-radius:15px;
+    background:linear-gradient(165deg,#f6ffffed,#c8effdec 52%,#8ed0f4e8);
+    border:1px solid #ecffffd4;
+    box-shadow:inset 0 2px #fff9,0 2px 3px #0b5b8947;
+  }
+
+  /* A continuous score strip: avatar and numerical score remain fully live. */
+  html[data-zurash-match-view="play"] #scores.scores {
+    margin:0 3px 5px;
+    gap:2px;
+    padding:3px;
+    min-height:66px;
+    border:1px solid #dcfaffdf;
+    border-radius:18px;
+    background:
+      linear-gradient(180deg,#ddf7ffb3 0%,#91d3efab 55%,#438dc4b9 100%);
+    box-shadow:inset 0 2px #ffffffad,inset 0 -2px #1b73ad8c,0 2px 4px #07537d59;
+  }
+  html[data-zurash-match-view="play"] #scores .score,
+  html[data-zurash-match-view="play"] #scores .score.p2 {
+    border:0;
+    min-width:0;
+    border-radius:14px;
+    box-shadow:inset 0 1px #ffffffad;
+    transition:filter 120ms ease;
+  }
+  html[data-zurash-match-view="play"] #scores .score.p1 {
+    background:linear-gradient(110deg,#fff3e4e6,#ffdcbaeb 70%,#f5b87ec9);
+  }
+  html[data-zurash-match-view="play"] #scores .score.p2 {
+    background:linear-gradient(105deg,#ecfcffeb,#c4eeffed 70%,#91ccefe0);
+  }
+  html[data-zurash-match-view="play"] #scores .score.current {
+    box-shadow:inset 0 1px #fff, inset 0 -3px #f1882d,0 0 6px #ffb54e73;
+  }
+  html[data-zurash-match-view="play"] #scores .score.current.p2 {
+    box-shadow:inset 0 1px #fff, inset 0 -3px #148be0,0 0 6px #6cd4ff78;
+  }
+  html[data-zurash-match-view="play"] #scores .score-count {
+    font-weight:1000;
+    text-shadow:0 1px #fffefa;
+  }
+  html[data-zurash-match-view="play"] #scores .score strong {
+    color:#124778;
+    font-weight:1000;
+  }
+
+  /* The top instruction is the actual arena lip: use a shared white-cyan rim
+     so the world isn't divided into another floating instruction card. */
+  html[data-zurash-match-view="play"] .game .instruction {
+    position:relative;
+    margin:3px 3px 0;
+    border:1px solid #d8faffdf;
+    border-bottom:0;
+    border-radius:15px 15px 0 0;
+    background:linear-gradient(180deg,#eafaffeb 0%,#bcebfbe8 78%,#a5daefdd 100%);
+    box-shadow:inset 0 2px #fff8;
+  }
+  html[data-zurash-match-view="play"] .board-scroll {
+    margin:0 3px;
+    border:1px solid #d8faffdf;
+    border-top:0;
+    border-bottom:0;
+    border-radius:0;
+    background:linear-gradient(180deg,#a7ddf2d6,#a4dbf2c5 52%,#d2f6ffd9);
+    box-shadow:inset 1px 0 #fff6,inset -1px 0 #fff6;
+  }
+  html[data-zurash-match-view="play"] .game #phaseTitle {color:#0a4479;}
+  html[data-zurash-match-view="play"] .game #message {color:#205d85;}
+  html[data-zurash-match-view="play"] .game #phaseBadge {
+    border-color:#fff0c0;
+    box-shadow:inset 0 1px #fff8,0 2px 0 #b66524,0 0 6px #ffbb5480;
+  }
+
+  /* The controller remains physically arcade-inspired. A carved ice bezel,
+     not a flat dark page card: direction caps keep their distinct colors. */
+  html[data-zurash-match-view="play"] .game .control-deck {
+    margin:6px 3px 3px;
+    border:2px solid #dbfaff;
+    border-radius:27px 27px 29px 29px;
+    background:
+      linear-gradient(135deg,#ffffff18 0%,transparent 30%,#d3f8ff0b 66%,transparent 84%),
+      radial-gradient(ellipse at 45% -10%,#91d8f67d,transparent 70%),
+      linear-gradient(160deg,#115e9b,#136ca6 55%,#063a74 100%);
+    box-shadow:inset 0 3px #fff7,inset 0 -4px #064d82,0 4px 0 #08608e,
+      0 7px 12px #064b7870;
+  }
+  html[data-zurash-match-view="play"] #directions.directions button:nth-child(n):focus-visible,
+  html[data-zurash-match-view="play"] .control-deck button:focus-visible,
+  html[data-zurash-match-view="play"] .game-top button:focus-visible {
+    outline:3px solid #ffe26b;
+    outline-offset:2px;
+  }
+  html[data-zurash-match-view="play"] .game .last-move {
+    background:#d8f2ffb9;
+    border-color:#c0e8ffad;
+    color:#195782;
+  }
+}
+@media (max-width:355px) {
+  html[data-zurash-match-view="play"] #scores.scores { min-height:64px; }
+  html[data-zurash-match-view="play"] #scores .score,
+  html[data-zurash-match-view="play"] #scores .score.p2 {
+    padding-top:4px; padding-bottom:4px;
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  html[data-zurash-match-view="play"] #scores .score,
+  html[data-zurash-match-view="play"] #scores .score.p2 {transition:none;}
+}
