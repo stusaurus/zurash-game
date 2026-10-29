@@ -615,3 +615,58 @@ test("mobile play help and auxiliary chrome stay reachable without competing wit
     await expect(page.locator("#turnCount")).toHaveText("2手目");
   }
 });
+
+
+test("star stop tip reads clearly below the live crosspad without adding a card",async ({page},testInfo)=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const width of [320,390,430]){
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    const tip=page.locator(".game > p.star-tip");
+    await expect(tip).toContainText("星は止まったらゲット！");
+    await expect(tip).toContainText("通りすぎても取れないよ。");
+    await expect(tip.locator(".star-tip-icon")).toHaveText("★");
+    await expect(tip.locator(".star-tip-icon")).toHaveAttribute("aria-hidden","true");
+    const m=await page.evaluate(()=>{
+      const tip=document.querySelector(".game > p.star-tip");
+      const label=tip.querySelector("span:last-child");
+      const icon=tip.querySelector(".star-tip-icon");
+      const deck=document.querySelector(".control-deck");
+      const board=document.querySelector("#board");
+      const r=el=>el.getBoundingClientRect();
+      const style=getComputedStyle(tip);
+      const textStyle=getComputedStyle(label);
+      const iconStyle=getComputedStyle(icon);
+      const deckRect=r(deck),tipRect=r(tip),boardRect=r(board);
+      return {
+        width:innerWidth,scrollWidth:document.documentElement.scrollWidth,
+        display:style.display,fontSize:parseFloat(style.fontSize),
+        textColor:textStyle.color,background:style.backgroundImage,
+        iconColor:iconStyle.color,tipWidth:tipRect.width,
+        tipHeight:tipRect.height,tipTop:tipRect.top,
+        boardWidth:boardRect.width,deckBottom:deckRect.bottom,
+        labelScroll:label.scrollWidth,labelClient:label.clientWidth,
+        iconWidth:r(icon).width,motionHeight:r(document.querySelector("#motionToggle")).height
+      };
+    });
+    expect(m.scrollWidth).toBeLessThanOrEqual(m.width);
+    expect(m.display).toBe("flex");
+    expect(m.fontSize).toBeGreaterThanOrEqual(10.5);
+    expect(m.background).toContain("linear-gradient");
+    expect(m.iconColor).not.toBe(m.textColor);
+    expect(m.iconWidth).toBeGreaterThanOrEqual(23);
+    expect(m.tipHeight).toBeGreaterThanOrEqual(30);
+    expect(m.labelScroll).toBeLessThanOrEqual(m.labelClient+1);
+    expect(m.tipTop).toBeGreaterThanOrEqual(m.deckBottom);
+    expect(m.boardWidth).toBeGreaterThan(275);
+    expect(m.motionHeight).toBeGreaterThanOrEqual(44);
+    if(width<=390)expect(m.deckBottom).toBeLessThanOrEqual(844);
+    await page.screenshot({path:testInfo.outputPath("ice-star-rule-"+width+".png"),fullPage:true});
+    await page.locator("#skip").click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    await page.locator("#directions button:enabled").first().click();
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+  }
+});
