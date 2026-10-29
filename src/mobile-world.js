@@ -33,11 +33,11 @@ function installApprovedMobileArt() {
     // Optional compact chrome after a valid match starts; never affects desktop.
     const focus = document.createElement("link");
     focus.rel = "stylesheet";
-    focus.href = "mobile-focus.css?v=20261029-ice-material-v13";
+    focus.href = "mobile-focus.css?v=20261029-ergonomics-v15";
     focus.media = "(max-width: 600px)";
     document.head.append(focus);
     // Only cosmetic event feedback; board, engine and CPU remain authoritative.
-    void import("./mobile-command-feedback.js?v=20261029-touch-v14").catch(() => {});
+    void import("./mobile-command-feedback.js?v=20261029-thumb-v15").catch(() => {});
     applied = true;
   }).catch(() => {
     /* Assets not yet installed: the existing world.css remains fully functional. */
