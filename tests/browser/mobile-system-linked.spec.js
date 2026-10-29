@@ -670,3 +670,57 @@ test("star stop tip reads clearly below the live crosspad without adding a card"
     await expect(page.locator("#turnCount")).toHaveText("2手目");
   }
 });
+
+
+test("board rim and real arcade controller share ice material without grid resizing",async ({page},testInfo)=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const width of [320,390,430]){
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    await expect(page.locator("#board .cell")).toHaveCount(49);
+    const before=await page.evaluate(()=>{
+      const rect=sel=>document.querySelector(sel).getBoundingClientRect();
+      const board=rect("#board"),frame=rect(".board-wrap");
+      return {boardW:board.width,boardH:board.height,frameW:frame.width,frameH:frame.height};
+    });
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    await expect(page.locator("html")).toHaveAttribute("data-zurash-match-view","play");
+    const after=await page.evaluate(()=>{
+      const q=sel=>document.querySelector(sel);
+      const rect=sel=>q(sel).getBoundingClientRect();
+      const board=rect("#board"),frame=rect(".board-wrap"),deck=rect(".control-deck");
+      const frameCss=getComputedStyle(q(".board-wrap"));
+      const deckCss=getComputedStyle(q(".control-deck"));
+      const dividerCss=getComputedStyle(q(".control-deck"),"::before");
+      return {
+        boardW:board.width,boardH:board.height,frameW:frame.width,frameH:frame.height,
+        edgeFrame:frameCss.borderTopColor,edgeDeck:deckCss.borderTopColor,
+        shadowFrame:frameCss.boxShadow,shadowDeck:deckCss.boxShadow,
+        dividerPointer:dividerCss.pointerEvents,
+        deckWidth:deck.width,deckBottom:deck.bottom,
+        horizontalOverflow:document.documentElement.scrollWidth>innerWidth,
+        buttons:[...document.querySelectorAll("#directions button")].map(el=>{
+          const r=el.getBoundingClientRect();
+          return {width:r.width,height:r.height};
+        })
+      };
+    });
+    for(const k of ["boardW","boardH","frameW","frameH"]){
+      expect(Math.abs(after[k]-before[k]),k+" board geometry").toBeLessThan(.5);
+    }
+    expect(after.edgeFrame).toBe(after.edgeDeck);
+    expect(after.shadowFrame).toContain("rgb");
+    expect(after.shadowDeck).toContain("rgb");
+    expect(after.dividerPointer).toBe("none");
+    expect(after.horizontalOverflow).toBe(false);
+    expect(after.buttons).toHaveLength(4);
+    expect(after.buttons.every(b=>b.width>=44 && b.height>=44)).toBe(true);
+    if(width<=390)expect(after.deckBottom).toBeLessThanOrEqual(844);
+    await page.screenshot({path:testInfo.outputPath("matched-ice-material-"+width+".png"),fullPage:true});
+    await page.locator("#skip").click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    await page.locator("#directions button:enabled").first().click();
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+  }
+});
