@@ -263,7 +263,7 @@ function render() {
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === targetScore - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(targetScore - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${CPU_LEVEL_NAMES[activeSettings.level]}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${targetScore}${state.scores[p] === targetScore - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === targetScore - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(targetScore - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${CPU_LEVEL_NAMES[activeSettings.level]}）` : "プレイヤー2"}</strong><small><span class="score-color">${p === 0 ? "オレンジ" : "みずいろ"} · </span><span class="score-count">${state.scores[p]} / ${targetScore}</span>${state.scores[p] === targetScore - 1 && state.winner === null ? '<span class="score-match"> · あと1個で勝ち！</span>' : ""}</small></div>`,
     )
     .join("");
   const last = moveLog.at(-1);
