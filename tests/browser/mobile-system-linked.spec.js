@@ -586,7 +586,7 @@ test("mobile play help and auxiliary chrome stay reachable without competing wit
         helpFont:parseFloat(getComputedStyle(help).fontSize),
         footerDisplay:getComputedStyle(footer).display,
         hintFont:parseFloat(getComputedStyle(hint).fontSize),
-        hintVisible:box(hint).height>0,
+        hintVisible:box(hint).h>0,
         overflow:document.documentElement.scrollWidth>innerWidth
       };
     });
