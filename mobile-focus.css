@@ -605,3 +605,41 @@
     background:linear-gradient(180deg,transparent,#d7faff8c 30%,#8edcf8a3 58%,transparent);
   }
 }
+
+
+/* FAST INPUT RESPONSE — tactile press begins at pointerdown, not click.
+ * All selectors target existing buttons; never intercept or invent a move. */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"]
+  .control-deck[data-command-press="up"] #directions.directions button:nth-child(1):enabled,
+  html[data-zurash-match-view="play"]
+  .control-deck[data-command-press="right"] #directions.directions button:nth-child(2):enabled,
+  html[data-zurash-match-view="play"]
+  .control-deck[data-command-press="down"] #directions.directions button:nth-child(3):enabled,
+  html[data-zurash-match-view="play"]
+  .control-deck[data-command-press="left"] #directions.directions button:nth-child(4):enabled {
+    transform:translateY(4px) scale(.96);
+    filter:brightness(1.22) saturate(1.19);
+    box-shadow:inset 0 2px 2px #fff9, inset 0 -1px #22508480,
+      0 1px 0 var(--arcade-base),0 3px 4px #022846c9,
+      0 0 12px #d5f6ffb5;
+    transition:transform 50ms ease-out,box-shadow 50ms ease-out,filter 50ms ease-out;
+  }
+  html[data-zurash-match-view="play"] .control-deck[data-command-press="skip"] #skip:enabled,
+  html[data-zurash-match-view="play"] .control-deck[data-command-press="undo"] #undo:enabled {
+    transform:translateY(3px) scale(.985);
+    filter:brightness(1.08);
+    box-shadow:inset 0 2px #fff6,0 1px 0 #133856,0 2px 3px #04213a94;
+    transition:transform 50ms ease-out,box-shadow 50ms ease-out;
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  html[data-zurash-match-view="play"] .control-deck[data-command-press] button {
+    transition:none !important;
+  }
+}
+@media (max-width:600px) {
+  html[data-zurash-motion="still"] .control-deck[data-command-press] button {
+    transition:none !important;
+  }
+}
