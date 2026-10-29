@@ -791,3 +791,80 @@ test("keyboard input previews a valid command and clears on cancellation",async 
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect(deck).not.toHaveAttribute("data-command-press",/./);
 });
+
+
+test("thumb drag cancels only decorative press and never commits a move",async ({page})=>{
+  await page.setViewportSize({width:390,height:667});
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("/");
+  await page.locator("#localMode").click();
+  await page.locator("#start").click();
+  await page.locator("#skip").click();
+  const key=page.locator("#directions button:enabled").first();
+  const idx=await key.evaluate(el=>Array.from(el.parentElement.children).indexOf(el));
+  const deck=page.locator(".control-deck");
+  const coords={pointerId:7,isPrimary:true,button:0,clientX:70,clientY:70};
+  await key.dispatchEvent("pointerdown",coords);
+  await expect(deck).toHaveAttribute("data-command-press",["up","right","down","left"][idx]);
+  // A swipe away must clear visual state, while phase and turn remain unchanged.
+  await page.locator("body").dispatchEvent("pointermove",{...coords,clientX:90,clientY:91});
+  await expect(deck).not.toHaveAttribute("data-command-press",/./);
+  await expect(page.locator("#phaseBadge")).toHaveText("2");
+  await expect(page.locator("#turnCount")).toHaveText("1手目");
+  await page.locator("body").dispatchEvent("pointerup",{...coords,clientX:90,clientY:91});
+  await expect(page.locator("#phaseBadge")).toHaveText("2");
+  // Only a real click, still validated by engine, moves the pawn.
+  await key.click();
+  await expect(page.locator("#turnCount")).toHaveText("2手目");
+});
+
+test("short-height iPhones keep crosspad scroll-reachable and reserve safe-area space",async ({page},testInfo)=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const viewport of [
+    {width:320,height:568},
+    {width:375,height:667},
+    {width:390,height:667},
+    {width:430,height:740},
+  ]){
+    await page.setViewportSize(viewport);
+    await page.goto("/");
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    const metrics=await page.evaluate(()=>{
+      const main=document.querySelector("main");
+      const scroll=document.querySelector(".board-scroll");
+      const controls=[...document.querySelectorAll("#directions button")];
+      return {
+        width:innerWidth,pageWidth:document.documentElement.scrollWidth,
+        safePadding:parseFloat(getComputedStyle(main).paddingBottom),
+        scrollPadding:parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom),
+        boardWidth:document.querySelector("#board").getBoundingClientRect().width,
+        touch:controls.map(b=>getComputedStyle(b).touchAction),
+        noSelect:controls.map(b=>getComputedStyle(b).userSelect),
+        boardScroll:getComputedStyle(scroll).overflowX
+      };
+    });
+    expect(metrics.pageWidth).toBeLessThanOrEqual(metrics.width);
+    expect(metrics.boardWidth).toBeGreaterThan(275);
+    expect(metrics.safePadding).toBeGreaterThanOrEqual(18);
+    expect(metrics.scrollPadding).toBeGreaterThanOrEqual(18);
+    expect(metrics.noSelect.every(s=>s==="none")).toBe(true);
+    expect(metrics.touch.every(s=>s==="manipulation")).toBe(true);
+    expect(metrics.boardScroll).toBe("auto");
+    await page.locator("#skip").click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    const key=page.locator("#directions button:enabled").first();
+    await key.scrollIntoViewIfNeeded();
+    const reach=await key.evaluate(el=>{
+      const r=el.getBoundingClientRect();
+      return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,viewportW:innerWidth,viewportH:innerHeight};
+    });
+    expect(reach.left).toBeGreaterThanOrEqual(0);
+    expect(reach.right).toBeLessThanOrEqual(reach.viewportW+1);
+    expect(reach.top).toBeGreaterThanOrEqual(0);
+    expect(reach.bottom).toBeLessThanOrEqual(reach.viewportH+1);
+    await page.screenshot({path:testInfo.outputPath("short-iphone-"+viewport.width+"x"+viewport.height+".png"),fullPage:true});
+    await key.click();
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+  }
+});
