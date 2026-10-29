@@ -21,23 +21,23 @@ function installApprovedMobileArt() {
     if (applied) return;
     const css = document.createElement("link");
     css.rel = "stylesheet";
-    css.href = "world-mobile.css?v=20261028-system-linked";
+    css.href = "world-mobile.css?v=20261029-arcade-v13";
     css.media = "(max-width: 600px)";
     document.head.append(css);
     // A separate, reversible HUD skin for the existing live score/phase markup.
     const hud = document.createElement("link");
     hud.rel = "stylesheet";
-    hud.href = "mobile-hud.css?v=20261028-live-hud1";
+    hud.href = "mobile-hud.css?v=20261029-score-v13";
     hud.media = "(max-width: 600px)";
     document.head.append(hud);
     // Optional compact chrome after a valid match starts; never affects desktop.
     const focus = document.createElement("link");
     focus.rel = "stylesheet";
-    focus.href = "mobile-focus.css?v=20261029-gameplay-focus";
+    focus.href = "mobile-focus.css?v=20261029-ice-material-v13";
     focus.media = "(max-width: 600px)";
     document.head.append(focus);
     // Only cosmetic event feedback; board, engine and CPU remain authoritative.
-    void import("./mobile-command-feedback.js").catch(() => {});
+    void import("./mobile-command-feedback.js?v=20261029-phase-v13").catch(() => {});
     applied = true;
   }).catch(() => {
     /* Assets not yet installed: the existing world.css remains fully functional. */
