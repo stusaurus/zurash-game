@@ -37,7 +37,7 @@ function installApprovedMobileArt() {
     focus.media = "(max-width: 600px)";
     document.head.append(focus);
     // Only cosmetic event feedback; board, engine and CPU remain authoritative.
-    void import("./mobile-command-feedback.js?v=20261029-phase-v13").catch(() => {});
+    void import("./mobile-command-feedback.js?v=20261029-touch-v14").catch(() => {});
     applied = true;
   }).catch(() => {
     /* Assets not yet installed: the existing world.css remains fully functional. */
