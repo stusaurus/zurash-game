@@ -6,7 +6,12 @@ on:
       - "assets/ice-world-mobile.webp"
       - "assets/zurash-approved-logo.webp"
       - "src/mobile-world.js"
+      - "src/mobile-command-feedback.js"
+      - "src/app.js"
+      - "index.html"
       - "world-mobile.css"
+      - "mobile-hud.css"
+      - "mobile-focus.css"
       - "tests/browser/mobile-system-linked.spec.js"
       - ".github/workflows/mobile-ice-ui-smoke.yml"
   workflow_dispatch:
