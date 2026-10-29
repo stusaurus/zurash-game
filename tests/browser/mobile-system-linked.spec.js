@@ -393,3 +393,54 @@ test("desktop stays on PR48 world theme without mobile-only HUD injection",async
   await expect(page.locator(".cell")).toHaveCount(49);
   await expect(page.locator("#directions button")).toHaveCount(4);
 });
+
+
+
+test("320px score numbers remain large and board stays prominent",async ({page},testInfo)=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const width of [320,390]){
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    await expect(page.locator("#scores .score-count")).toHaveCount(2);
+    await expect(page.locator("#scores .score-count").first()).toHaveText("0 / 3");
+    await expect(page.locator("#scores .score-count").last()).toHaveText("0 / 3");
+    await expect(page.locator("#scores .score-color").first()).toContainText("オレンジ");
+    await expect(page.locator("#scores .score-color").last()).toContainText("みずいろ");
+    const metrics=await page.evaluate(()=>{
+      const rect=el=>el.getBoundingClientRect();
+      const cards=[...document.querySelectorAll("#scores .score")];
+      const counts=[...document.querySelectorAll("#scores .score-count")];
+      const message=document.querySelector("#message");
+      const board=document.querySelector("#board");
+      return {
+        bodyWidth:document.documentElement.scrollWidth,
+        viewport:innerWidth,
+        boardTop:rect(board).top,
+        boardWidth:rect(board).width,
+        fontSizes:counts.map(el=>parseFloat(getComputedStyle(el).fontSize)),
+        countInside:counts.every((el,i)=>{
+          const c=rect(el),p=rect(cards[i]);
+          return c.left>=p.left && c.right<=p.right+1;
+        }),
+        messageFont:parseFloat(getComputedStyle(message).fontSize),
+        titleUnclipped:[...document.querySelectorAll("#scores .score strong")].every(el=>el.scrollWidth<=el.clientWidth+1)
+      };
+    });
+    expect(metrics.bodyWidth).toBeLessThanOrEqual(metrics.viewport);
+    expect(metrics.countInside).toBe(true);
+    expect(metrics.fontSizes.every(n=>n>=13)).toBe(true);
+    expect(metrics.messageFont).toBeGreaterThanOrEqual(10);
+    expect(metrics.titleUnclipped).toBe(true);
+    if(width===320){
+      expect(metrics.boardTop).toBeLessThan(360);
+      expect(metrics.boardWidth).toBeGreaterThan(275);
+    }
+    await page.screenshot({path:testInfo.outputPath("readable-hud-"+width+".png"),fullPage:true});
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    await page.locator("#skip").click();
+    await page.locator("#directions button:enabled").first().click();
+    await expect(page.locator("#scores .score-count")).toHaveCount(2);
+    await expect(page.locator("#phaseBadge")).toHaveText("1");
+  }
+});
