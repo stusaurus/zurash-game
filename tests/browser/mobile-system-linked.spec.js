@@ -444,3 +444,52 @@ test("320px score numbers remain large and board stays prominent",async ({page},
     await expect(page.locator("#phaseBadge")).toHaveText("1");
   }
 });
+
+
+test("gameplay focus compacts only mobile chrome after a real game start",async ({page},testInfo)=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const width of [320,390,430]){
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    await expect(page.locator('link[href*="mobile-focus.css"]')).toHaveCount(1);
+    await expect(page.locator("html")).not.toHaveAttribute("data-zurash-match-view","play");
+    await expect(page.locator("#board .cell")).toHaveCount(49);
+    const before=await page.evaluate(()=>{
+      const box=x=>document.querySelector(x).getBoundingClientRect();
+      return {mast:box(".mast").height,boardTop:box("#board").top,boardW:box("#board").width};
+    });
+    await page.screenshot({path:testInfo.outputPath("scenic-before-start-"+width+".png"),fullPage:true});
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    await expect(page.locator("html")).toHaveAttribute("data-zurash-match-view","play");
+    await expect(page.locator("#board .cell")).toHaveCount(49);
+    await expect(page.locator("#scores .score")).toHaveCount(2);
+    const after=await page.evaluate(()=>{
+      const box=x=>document.querySelector(x).getBoundingClientRect();
+      return {
+        mast:box(".mast").height,boardTop:box("#board").top,boardW:box("#board").width,
+        overflow:document.documentElement.scrollWidth>innerWidth,
+        allControls:[...document.querySelectorAll("#directions button,#skip,#undo,#settings,#help")]
+           .map(el=>({w:boxSelector(el).width,h:boxSelector(el).height})),
+      };
+      function boxSelector(el){return el.getBoundingClientRect();}
+    });
+    expect(after.mast).toBeLessThan(before.mast - 13);
+    expect(after.boardTop).toBeLessThan(before.boardTop - 13);
+    expect(after.boardW).toBe(before.boardW);
+    expect(after.overflow).toBe(false);
+    expect(after.allControls.every(c=>c.w>=40 && c.h>=40)).toBe(true);
+    await page.screenshot({path:testInfo.outputPath("focused-match-"+width+".png"),fullPage:true});
+    await page.locator("#skip").click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    await page.locator("#directions button:enabled").first().click();
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+    await page.locator("#help").click();
+    await expect(page.locator("#helpDialog")).toBeVisible();
+    await page.locator('#helpDialog [data-close="helpDialog"]').first().click();
+    await page.locator("#settings").click();
+    await expect(page.locator("#setupDialog")).toBeVisible();
+    await page.locator('#setupDialog [data-close="setupDialog"]').first().click();
+    await expect(page.locator("html")).toHaveAttribute("data-zurash-match-view","play");
+  }
+});
