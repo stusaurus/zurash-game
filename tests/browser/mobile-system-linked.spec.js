@@ -724,3 +724,70 @@ test("board rim and real arcade controller share ice material without grid resiz
     await expect(page.locator("#turnCount")).toHaveText("2手目");
   }
 });
+
+
+test("touch preview responds before click and never moves the actual pawn by itself",async ({page},testInfo)=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const width of [320,390]){
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    const deck=page.locator(".control-deck");
+    // Disabled arrows cannot produce a false tactile indicator during wall turn.
+    await page.locator("#directions button").first().dispatchEvent("pointerdown",{isPrimary:true});
+    await expect(deck).not.toHaveAttribute("data-command-press",/./);
+    await page.locator("#skip").dispatchEvent("pointerdown",{isPrimary:true});
+    await expect(deck).toHaveAttribute("data-command-press","skip");
+    await expect(page.locator("#phaseBadge")).toHaveText("1");
+    await page.locator("#skip").dispatchEvent("pointercancel",{isPrimary:true});
+    await expect(deck).not.toHaveAttribute("data-command-press",/./);
+    await page.locator("#skip").click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+
+    const active=page.locator("#directions button:enabled").first();
+    const index=await active.evaluate(el=>Array.from(el.parentElement.children).indexOf(el));
+    const keys=["up","right","down","left"];
+    await active.dispatchEvent("pointerdown",{isPrimary:true});
+    await expect(deck).toHaveAttribute("data-command-press",keys[index]);
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    await expect(page.locator("#turnCount")).toHaveText("1手目");
+    const pressed=await active.evaluate(el=>({
+      transform:getComputedStyle(el).transform,
+      noTransition:getComputedStyle(el).transitionDuration
+    }));
+    expect(pressed.transform).not.toBe("none");
+    expect(pressed.noTransition).toBe("0s");
+    await page.screenshot({path:testInfo.outputPath("instant-touch-preview-"+width+".png"),fullPage:true});
+    await active.dispatchEvent("pointercancel",{isPrimary:true});
+    await expect(deck).not.toHaveAttribute("data-command-press",/./);
+    await expect(page.locator("#turnCount")).toHaveText("1手目");
+
+    // The real app click triggers movement; preview is never a substitute.
+    await active.click();
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+    await expect(page.locator("#phaseBadge")).toHaveText("1");
+    await expect(deck).not.toHaveAttribute("data-command-direction",/./,{timeout:1400});
+    await page.locator("#undo").click();
+    await expect(page.locator("#turnCount")).toHaveText("1手目");
+  }
+});
+
+test("keyboard input previews a valid command and clears on cancellation",async ({page})=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.setViewportSize({width:390,height:844});
+  await page.goto("/");
+  await page.locator("#localMode").click();
+  await page.locator("#start").click();
+  await page.locator("#skip").click();
+  const deck=page.locator(".control-deck");
+  const active=page.locator("#directions button:enabled").first();
+  const idx=await active.evaluate(el=>Array.from(el.parentElement.children).indexOf(el));
+  await active.focus();
+  await page.keyboard.down("Space");
+  await expect(deck).toHaveAttribute("data-command-press",["up","right","down","left"][idx]);
+  await expect(page.locator("#turnCount")).toHaveText("1手目");
+  await page.keyboard.up("Space");
+  await expect(page.locator("#turnCount")).toHaveText("2手目");
+  await expect(deck).not.toHaveAttribute("data-command-press",/./);
+});
