@@ -102,6 +102,8 @@ function syncGlance() {
     }
     output.textContent = value;
     player.classList.toggle("current", card.classList.contains("current"));
+    // Mirror the authoritative star pickup flash; no parallel score data.
+    player.classList.toggle("just-scored", card.classList.contains("just-scored"));
   });
   const turn = liveTurn.textContent.trim();
   if (!turn) valid = false;
