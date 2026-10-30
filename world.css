@@ -1,0 +1,145 @@
+/* ZURASH! world layer. Board geometry, token art and motion stay in style.css. */
+:root {
+  --world-ink: #123c50;
+  --world-deep: #103e52;
+  --world-ice: #d7f2f5;
+  --world-gold: #ffcc57;
+  --teal: #147786;
+  --orange: #ec7b37;
+  color: var(--world-ink);
+  background: #0d3c51;
+}
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% -8%, #b2eced 0%, #63b7c7 27%, transparent 57%),
+    radial-gradient(ellipse at 4% 43%, #327e91 0%, transparent 39%),
+    radial-gradient(ellipse at 95% 70%, #175c70 0%, transparent 45%),
+    linear-gradient(165deg, #285e71, #0a354a 70%, #092d40);
+}
+main { max-width: 900px; padding: 22px 28px 36px; }
+header { color: #e7fcfa; }
+.brand { color: #e7fcfa; font-size: 12px; letter-spacing: 2.3px; }
+.brand span { color: #9ddce1; }
+header .quiet {
+  color: #eafcfa; border: 1px solid #b8f2ef70; border-radius: 999px;
+  background: #093a4b90; padding: 8px 16px; font-size: 12px;
+}
+.mast {
+  position: relative; overflow: hidden; isolation: isolate;
+  min-height: 208px; margin: 15px 0 14px; padding: 25px 32px;
+  border: 1px solid #defdfb88; border-radius: 28px;
+  background: linear-gradient(115deg, #0a566d 0%, #18899b 53%, #7ed5d7 100%);
+  box-shadow: inset 0 1px 0 #f1ffff8c, 0 12px 0 #0a344a80, 0 20px 35px #06293855;
+}
+.mast::before {
+  content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 78% 38%, #e7ffff99, transparent 38%),
+    linear-gradient(152deg, transparent 58%, #d8ffff30 58.2%, transparent 59%),
+    linear-gradient(30deg, transparent 69%, #efffff35 69.2%, transparent 70%);
+}
+.mast .eyebrow { color: #b6f6ef; font-size: 10px; letter-spacing: 2.4px; margin: 0 0 6px; }
+h1 {
+  position: relative; color: #fffdf0; font-weight: 1000; letter-spacing: -3px;
+  font-size: clamp(42px, 7.5vw, 74px); line-height: 1.1; margin: 3px 0 12px;
+  -webkit-text-stroke: 1px #fffdf0;
+  text-shadow: 0 3px 0 #257589, 0 6px 0 #0c4f69, 0 9px 14px #06394a99;
+  transform: rotate(-3deg);
+}
+h1 span { color: #ffce57; -webkit-text-stroke: 1px #fff0a9; }
+.tagline { color: #fffdf0; font-size: 14px; letter-spacing: .03em; text-shadow: 0 2px 3px #0b4b5f; }
+.mascot { width: 155px; flex: 0 0 155px; transform: rotate(4deg); }
+.mascot::before {
+  width: 145px; height: 145px; margin: auto; border-radius: 45%;
+  background-size: 750px 562px; background-position: -402px -37px;
+  box-shadow: 0 10px 20px #14526655, 0 0 0 5px #e6ffff55;
+}
+.mascot span { display: inline-block; background: #14576c; color: #edfffd; padding: 3px 11px; border-radius: 20px; font-weight: 800; }
+.game {
+  position: relative; padding: 24px; border: 2px solid #d7f9f5; border-radius: 27px;
+  background: linear-gradient(155deg, #eafffa, #c9edf0 55%, #b6dfe5);
+  box-shadow: inset 0 2px 0 #fff, 0 8px 0 #337a89, 0 19px 30px #062c405c;
+}
+.game-top { gap: 10px; }
+.mode-switch { background: #8cc8d0; border: 1px solid #72b5bf; box-shadow: inset 0 2px 4px #16556835; border-radius: 14px; }
+.mode-switch button { color: #164f5d; font-weight: 800; }
+.mode-switch button.active { color: #fff; background: #155b70; box-shadow: 0 3px 0 #0b4053; }
+#settings { background: #f7fffb; color: #125469; border: 1px solid #9bcbd0; border-radius: 12px; padding: 9px 12px; box-shadow: 0 3px 0 #8cbec6; }
+.scores { gap: 10px; margin: 18px 0 12px; }
+.score, .score.p2 {
+  border: 1px solid #ebbf8b; border-radius: 15px; padding: 11px 13px;
+  background: linear-gradient(145deg, #fff8e4, #ffe7c6); box-shadow: 0 3px 0 #d8b596;
+}
+.score.p2 { border-color: #87c5d1; background: linear-gradient(145deg, #f3ffff, #c4ebf1); box-shadow: 0 3px 0 #83bdc9; }
+.score.current { box-shadow: inset 0 0 0 2px #ed7a35, 0 3px 0 #d8a470; }
+.score.current.p2 { box-shadow: inset 0 0 0 2px #19859a, 0 3px 0 #72aebb; }
+.score strong { color: #174b59; font-size: 13px; }
+.score small { color: #56757a; }
+.score .stars { color: #ae6600; text-shadow: 0 1px #fff1af; letter-spacing: 1px; }
+.instruction { padding: 5px 7px 12px; min-height: 61px; }
+#phaseBadge { background: #ed7b36; box-shadow: 0 3px 0 #b95022; font-weight: 900; }
+#phaseTitle { color: #123f50; }
+#message, #turnCount { color: #416d75; }
+.board-scroll { padding-bottom: 12px; }
+.board-wrap {
+  border-color: #79b7c7; background: #b5e0e6;
+  box-shadow: inset 0 2px 0 #f7ffff, 0 5px 0 #4c8da0, 0 11px 0 #2d7186, 0 18px 25px #18546a48;
+}
+.board { background: #bde4eb; }
+.cell:not(.selected):not(.target):not(.stop) { border-right-color: #abd2da; border-bottom-color: #a7ccd5; }
+.directions { margin-top: 24px; }
+.directions button {
+  color: #185465; background: linear-gradient(#f8ffff, #c2e7ea); border: 1px solid #9cc9d0;
+  box-shadow: 0 3px 0 #80b2bd; font-size: 20px; font-weight: 900;
+}
+.directions button:disabled { opacity: .48; box-shadow: none; }
+.actions #undo { background: #edfafa; border-color: #a0cbd0; color: #285b69; box-shadow: 0 3px 0 #8ab9c0; }
+.actions .primary, dialog .primary {
+  background: linear-gradient(#f69b49, #e4702c); border-color: #d76426;
+  color: #fff; box-shadow: 0 4px 0 #b94d1c; font-weight: 900;
+}
+.hint { color: #376b73; }
+#lastMove { color: #275b66; }
+#learningPanel { margin-top: 18px; padding: 12px; border: 1px solid #94c9d2; border-radius: 15px; background: #e8fbfa; font-size: 12px; }
+#learningPanel button { margin: 3px; font-size: 11px; }
+.motion-control button { color: #235c69; }
+footer { color: #c0ebeb; font-weight: 700; }
+footer span { color: #8ac5cd; }
+dialog:not(.result) {
+  background: linear-gradient(150deg, #f4fffc, #d0eff0); border: 3px solid #ace2e3;
+  color: #123f50; box-shadow: 0 9px 0 #307b8a, 0 20px 55px #062c4070;
+}
+dialog::backdrop { background: #062b40b8; }
+dialog:not(.result) h2 { color: #10485b; }
+dialog select { background-color: #fff; color: #164d5b; border: 1px solid #93c7d0; border-radius: 10px; }
+dialog.result {
+  border: 3px solid #ffe1a0; background: linear-gradient(160deg, #fff8dc, #ffe6b5 65%, #ffd594);
+  box-shadow: 0 10px 0 #c37a3f, 0 24px 65px #0b344b99;
+}
+dialog.result.defeat { border-color: #b9edf1; background: linear-gradient(160deg, #eaffff, #c9eaf2 65%, #9fd0de); box-shadow: 0 10px 0 #558fa6, 0 24px 65px #0b344b99; }
+dialog.result h2 { color: #154c5c; }
+@media (max-width: 600px) {
+  main { padding: 10px 10px 30px; }
+  .mast { min-height: 122px; margin: 8px 0 12px; padding: 14px 14px; border-radius: 20px; }
+  .mast .eyebrow { font-size: 8px; letter-spacing: 1.2px; }
+  h1 { font-size: clamp(32px, 10vw, 45px); margin: 3px 0 8px; letter-spacing: -2px; }
+  .tagline { font-size: 10px; }
+  .mascot { width: 82px; flex-basis: 82px; }
+  .mascot::before { width: 76px; height: 78px; background-size: 410px 307px; background-position: -220px -20px; }
+  .mascot span { font-size: 9px; padding: 2px 8px; }
+  .game { padding: 12px; border-radius: 21px; }
+  .mode-switch button { padding: 8px 9px; font-size: 11px; }
+  #settings { font-size: 11px; padding: 8px; }
+  .scores { margin: 12px 0 8px; gap: 7px; }
+  .score, .score.p2 { padding: 8px; }
+  .instruction { min-height: 54px; padding: 4px 3px 10px; }
+  .directions { margin-top: 20px; }
+}
+@media (max-width: 340px) {
+  .mast { padding: 12px 10px; }
+  .mast .eyebrow { font-size: 7px; }
+  .mascot { width: 66px; flex-basis: 66px; }
+  .mascot::before { width: 62px; height: 66px; background-size: 340px 255px; background-position: -182px -17px; }
+  .game { padding: 9px; }
+  .mode-switch button { padding-inline: 6px; font-size: 10px; }
+}

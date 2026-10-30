@@ -26,7 +26,9 @@ jobs:
       - name: Prepare static files only
         run: |
           mkdir -p dist/src dist/assets
-          cp index.html style.css dist/
+          # Include every root stylesheet; the ice-world skin is not part
+          # of style.css and must survive the Pages static export.
+          cp index.html *.css dist/
           cp src/*.js dist/src/
           # Publish every committed visual asset, including future sprite frames.
           cp -a assets/. dist/assets/
