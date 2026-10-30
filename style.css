@@ -1262,3 +1262,6 @@ html[data-zurash-motion="still"] #result .result-stars > span {
   .result-characters { gap: 14px; }
   dialog.result .result-stars { gap: 12px; }
 }
+
+/* Optional mobile match glance is never part of desktop gameplay. */
+.mobile-score-glance { display:none; }
