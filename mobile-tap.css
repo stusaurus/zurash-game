@@ -96,6 +96,39 @@
   html[data-zurash-match-view="play"] .mobile-score-glance .glance-player::before {
     width:9px;height:9px;flex-basis:9px;
   }
+  /* Previous focus skin had a taller two-row arcade layout with a
+     69px skip key. Override it at matching specificity: the compact dock
+     needs only two >=44px actions and the 28px live-score strip.
+     Keep the size reduction structural rather than weakening QA limits. */
+  html[data-zurash-match-view="play"] .game .control-deck {
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:28px auto;
+    row-gap:3px;
+    column-gap:0;
+    padding:5px 8px 7px;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions {
+    grid-column:1;
+    grid-row:2;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:1px 2px 2px;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions #undo,
+  html[data-zurash-match-view="play"] .game .control-deck .actions #skip,
+  html[data-zurash-match-view="play"] .game .control-deck .actions #skip:disabled {
+    min-height:44px;
+    padding:7px 10px;
+    line-height:1.2;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .mobile-score-glance {
+    min-height:28px;
+    height:28px;
+    padding-block:2px;
+  }
   /* The board owns sliding. Each destination really invokes the existing
      legal slideOptions() click handler, including CPU and undo semantics. */
   #board .cell.stop:not(:disabled) {
