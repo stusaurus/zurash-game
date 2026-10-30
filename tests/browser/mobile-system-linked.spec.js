@@ -884,3 +884,53 @@ test("turning motion OFF hides active ice fragments without affecting slides",as
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect(page.locator(".ice-glide-vfx .ice-shard")).toHaveCount(0);
 });
+
+
+test("directional ice streak grows from the real start toward right and left",async ({page},testInfo)=>{
+  await page.setViewportSize({width:390,height:844});
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/");
+  await expect(page.locator("html")).toHaveAttribute("data-zurash-command-feedback","ready");
+  await page.locator("#localMode").click();
+  await page.locator("#start").click();
+  await page.evaluate(()=>{
+    window.__iceTrailHistory=[];
+    const seen=new WeakSet();
+    const host=document.querySelector(".board-wrap");
+    new MutationObserver(()=>{
+      const streak=host.querySelector(".ice-glide-vfx .ice-streak");
+      if(!streak||seen.has(streak))return;
+      seen.add(streak);
+      const css=getComputedStyle(streak);
+      window.__iceTrailHistory.push({
+        vertical:streak.classList.contains("vertical"),
+        reverse:streak.classList.contains("reverse"),
+        name:css.animationName,
+        origin:css.transformOrigin,
+        time:streak.style.getPropertyValue("--ice-travel-ms"),
+        pointer:css.pointerEvents,
+      });
+    }).observe(host,{subtree:true,childList:true});
+  });
+  // Player 1 starts at the left edge: a legal rightward glide.
+  await page.locator("#skip").click();
+  await expect(page.locator('#board .cell.stop[data-slide-dir="1"]')).toBeEnabled();
+  await page.locator('#board .cell.stop[data-slide-dir="1"]').click();
+  await expect(page.locator("#turnCount")).toHaveText("2手目");
+  await expect.poll(()=>page.evaluate(()=>window.__iceTrailHistory.length)).toBe(1);
+  // Player 2 starts at the right edge: the very same rule engine slides left.
+  await page.locator("#skip").click();
+  await expect(page.locator('#board .cell.stop[data-slide-dir="3"]')).toBeEnabled();
+  await page.locator('#board .cell.stop[data-slide-dir="3"]').click();
+  await expect(page.locator("#turnCount")).toHaveText("3手目");
+  const tracks=await page.evaluate(()=>window.__iceTrailHistory);
+  expect(tracks).toHaveLength(2);
+  expect(tracks.map(t=>t.reverse)).toEqual([false,true]);
+  expect(tracks.every(t=>!t.vertical)).toBe(true);
+  expect(tracks.every(t=>t.name==="ice-swish-horizontal")).toBe(true);
+  expect(tracks.every(t=>t.pointer==="none")).toBe(true);
+  expect(tracks.every(t=>parseFloat(t.time)>=300)).toBe(true);
+  expect(parseFloat(tracks[1].origin)).toBeGreaterThan(parseFloat(tracks[0].origin));
+  await expect(page.locator("#board .cell")).toHaveCount(49);
+  await page.screenshot({path:testInfo.outputPath("touch-directional-ice-trail.png"),fullPage:true});
+});
