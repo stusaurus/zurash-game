@@ -1,3 +1,4 @@
+import { slideByBoard } from "./tap-target.js";
 import {test,expect} from '@playwright/test';
 
 test('narrow screens keep the first board visible and controls operable',async({page})=>{
@@ -10,7 +11,7 @@ test('narrow screens keep the first board visible and controls operable',async({
     await expect(page.locator('.cell')).toHaveCount(121);
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
     const cellWidth=await page.locator('.cell').first().evaluate(el=>el.getBoundingClientRect().width);expect(cellWidth).toBeGreaterThanOrEqual(35);
-    await page.locator('#skip').click();await expect(page.locator('#directions button:not([disabled])').first()).toBeVisible();
-    await page.locator('#directions button:not([disabled])').first().click();await expect(page.locator('#turnCount')).toHaveText('2手目');
+    await page.locator('#skip').click();await expect(page.locator('#board .cell.stop:not([disabled])').first()).toBeVisible();
+    await slideByBoard(page);await expect(page.locator('#turnCount')).toHaveText('2手目');
   }
 });
