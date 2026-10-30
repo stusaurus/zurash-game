@@ -406,6 +406,9 @@ function showIceVisual(from, to, travelMs, landing = false, scored = false) {
     const by = (Math.floor(to / width) + 0.5) / height * 100;
     const vertical = Math.abs(by - ay) > .01;
     fx.className = vertical ? "ice-streak vertical" : "ice-streak";
+    // The streak grows FROM the actual starting tile, so each direction
+    // has the correct orientation; no new state or move computation.
+    fx.classList.toggle("reverse", vertical ? by < ay : bx < ax);
     fx.style.left = `${vertical ? ax : Math.min(ax, bx)}%`;
     fx.style.top = `${vertical ? Math.min(ay, by) : ay}%`;
     fx.style.width = vertical ? "4px" : `${Math.abs(bx - ax)}%`;
