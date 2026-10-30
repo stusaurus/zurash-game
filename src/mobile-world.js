@@ -42,7 +42,7 @@ function installApprovedMobileArt() {
     // established ice skins. Desktop direction buttons remain unchanged.
     const tap = document.createElement("link");
     tap.rel = "stylesheet";
-    tap.href = "mobile-tap.css?v=20261030-score-glow-v6";
+    tap.href = "mobile-tap.css?v=20261031-board-press-v7";
     tap.media = "(max-width: 600px)";
     const skinReady = [css, hud, focus, tap].map(link => new Promise(resolve => {
       link.addEventListener("load", resolve, {once: true});
@@ -52,7 +52,7 @@ function installApprovedMobileArt() {
     document.head.append(tap);
     // Only cosmetic event feedback; board, engine and CPU remain authoritative.
     void Promise.all(skinReady)
-      .then(() => import("./mobile-command-feedback.js?v=20261030-score-glow-v30"))
+      .then(() => import("./mobile-command-feedback.js?v=20261031-board-press-v31"))
       .catch(() => {});
     applied = true;
   }).catch(() => {
