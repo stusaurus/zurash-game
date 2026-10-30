@@ -104,6 +104,7 @@ function setPose(p, pose, duration = 0) {
     : null;
 }
 function resetMotion() {
+  clearIceVisual();
   facing.fill("right");
   tokenEls.forEach((el, p) => {
     clearTimeout(poseTimers[p]);
@@ -367,6 +368,44 @@ function flash(at) {
   void el.offsetWidth;
   el.classList.add("pop");
 }
+function showIceVisual(from, to, travelMs, landing = false) {
+  // Visual-only, never a board cell or an input. Works for human and CPU.
+  if (!window.matchMedia("(max-width:600px)").matches || !shouldAnimate()) return;
+  const board = $("board"), wrap = board.parentElement;
+  let layer = wrap.querySelector(".ice-glide-vfx");
+  if (!layer) {
+    layer = document.createElement("div");
+    layer.className = "ice-glide-vfx";
+    layer.setAttribute("aria-hidden", "true");
+    wrap.append(layer);
+  }
+  layer.replaceChildren();
+  const width = widthOf(state), height = heightOf(state);
+  const fx = document.createElement("span");
+  if (landing) {
+    fx.className = "ice-landing";
+    fx.style.left = `${((to % width) + 0.5) / width * 100}%`;
+    fx.style.top = `${(Math.floor(to / width) + 0.5) / height * 100}%`;
+    fx.style.setProperty("--ice-cell-size", `${board.clientWidth / width}px`);
+  } else {
+    const ax = ((from % width) + 0.5) / width * 100;
+    const ay = (Math.floor(from / width) + 0.5) / height * 100;
+    const bx = ((to % width) + 0.5) / width * 100;
+    const by = (Math.floor(to / width) + 0.5) / height * 100;
+    const vertical = Math.abs(by - ay) > .01;
+    fx.className = vertical ? "ice-streak vertical" : "ice-streak";
+    fx.style.left = `${vertical ? ax : Math.min(ax, bx)}%`;
+    fx.style.top = `${vertical ? Math.min(ay, by) : ay}%`;
+    fx.style.width = vertical ? "4px" : `${Math.abs(bx - ax)}%`;
+    fx.style.height = vertical ? `${Math.abs(by - ay)}%` : "4px";
+    fx.style.transform = "translate(-50%,-50%)";
+    fx.style.setProperty("--ice-travel-ms", `${travelMs}ms`);
+  }
+  layer.append(fx);
+}
+function clearIceVisual() {
+  $("board").parentElement.querySelector(".ice-glide-vfx")?.replaceChildren();
+}
 async function playSlide(dir) {
   if (busy || state.winner !== null) return;
   const myEpoch = epoch,
@@ -411,6 +450,7 @@ async function playSlide(dir) {
     if (myEpoch !== epoch) return;
   }
   setPose(player, "slide");
+  showIceVisual(startAt, endAt, travelMs);
   state = next;
   render();
   if (!reducedMotion) {
@@ -422,6 +462,7 @@ async function playSlide(dir) {
   setPose(player, reducedMotion ? "idle" : scored ? "collect" : "stop",
     reducedMotion ? 0 : scored ? 560 : 220);
   if (scored) flash(state.players[player]);
+  showIceVisual(startAt, endAt, travelMs, true);
   if (learningSession && player === 0) {
     learningSession.observe(turnStart, {wall: wallIndex === -1 ? null : {wall: wallIndex, to: state.walls[wallIndex]}, dir});
   }
@@ -430,6 +471,9 @@ async function playSlide(dir) {
   turnStart = clone(state);
   remember();
   render();
+  if (scored && shouldAnimate()) {
+    $("scores").querySelector(`.score.p${player + 1}`)?.classList.add("just-scored");
+  }
   if (cpuTurn()) runCPU();
 }
 function stopCPU() {
