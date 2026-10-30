@@ -3,6 +3,8 @@
  * Desktop arrows stay in the DOM and work unchanged; on phones their
  * redundant controller is visually removed, never replaced by fake UI. */
 @media (max-width:600px) {
+  .help-on-phone {display:inline;}
+  .help-on-desktop {display:none;}
   #directions.directions { display:none !important; }
   .game .control-deck {
     display:grid;
