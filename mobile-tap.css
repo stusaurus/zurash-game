@@ -292,8 +292,16 @@
     100% {opacity:0;transform:translate(-50%,-50%) scale(1.4);}
   }
   #scores .score.just-scored .stars,
-  #scores .score.just-scored .score-count {
+  #scores .score.just-scored .score-count,
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player.just-scored b {
     animation:ice-score-twinkle 570ms ease-out 1;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player.just-scored {
+    opacity:1;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player.just-scored b {
+    color:#fff7b5;
+    text-shadow:0 0 7px #ffe687,0 0 12px #ffc96d;
   }
   @keyframes ice-score-twinkle {
     0% {filter:brightness(1.5);text-shadow:0 0 7px #fff6b2;}
