@@ -289,7 +289,7 @@ function render() {
         ? (phase === "wall" ? "壁をずらしています…" : "トリケンが滑走中！")
         : cpuTurn()
           ? "CPUが考えています…"
-          : `${mode === "cpu" ? "あなた" : `プレイヤー${state.turn + 1}`}：${phase === "wall" ? "壁をずらそう" : "方向を選んで滑ろう"}`;
+          : `${mode === "cpu" ? "あなた" : `プレイヤー${state.turn + 1}`}：${phase === "wall" ? "壁をずらそう" : (window.matchMedia("(max-width:600px)").matches ? "光るマスに滑ろう" : "方向を選んで滑ろう")}`;
   $("message").textContent =
     (seen.get(key(state)) || 0) >= 3
       ? "同じ配置が続いています。別の壁や方向を試そう。"
