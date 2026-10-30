@@ -486,10 +486,13 @@ async function playSlide(dir) {
   turnStart = clone(state);
   remember();
   render();
+  // runCPU() also renders the live scores immediately. Apply the real
+  // pickup highlight AFTER that draw, or CPU games erase it in the same
+  // JavaScript turn before the mobile glance can mirror it.
+  if (cpuTurn()) runCPU();
   if (scored && shouldAnimate()) {
     $("scores").querySelector(`.score.p${player + 1}`)?.classList.add("just-scored");
   }
-  if (cpuTurn()) runCPU();
 }
 function stopCPU() {
   clearTimeout(cpuTimer);
