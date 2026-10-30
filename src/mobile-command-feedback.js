@@ -93,10 +93,10 @@ function syncGlance() {
   }
   let valid = true;
   cards.forEach((card, index) => {
-    const value = card.querySelector(".score-count")?.textContent.trim().match(/^\\d+/)?.[0];
+    const value = card.querySelector(".score-count")?.textContent.trim().split("/")[0].trim();
     const output = glance.querySelector(`[data-glance-score="${index + 1}"]`);
     const player = glance.querySelector(`.glance-p${index + 1}`);
-    if (value === undefined || !output || !player) {
+    if (!value || !/^[0-9]+$/.test(value) || !output || !player) {
       valid = false;
       return;
     }
