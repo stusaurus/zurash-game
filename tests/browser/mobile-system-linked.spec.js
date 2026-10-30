@@ -972,3 +972,41 @@ test("real star pickup briefly lights the mirrored thumb score without changing 
   await expect(glance.locator("[data-glance-score='1']")).toHaveText("0");
   await expect(glance.locator(".glance-p1")).not.toHaveClass(/just-scored/);
 });
+
+
+test("CPU score sparkle survives the thinking redraw and reaches the thumb HUD",async ({page})=>{
+  await page.setViewportSize({width:390,height:844});
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/");
+  await page.locator("#settings").click();
+  await page.locator("#layout").selectOption("1");
+  await page.locator("#start").click();
+  await expect(page.locator("#mobileScoreGlance")).toBeVisible();
+  const state=initial(1,0);
+  const action=actions(state).find(a=>apply(state,a).scores[0]===1);
+  expect(action).toBeTruthy();
+  // Record the actual DOM, not a fabricated move or score. The CPU's
+  // subsequent render may be fast, so keep the event history for verification.
+  await page.evaluate(()=>{
+    window.__cpuStarPulse={source:false,glance:false};
+    const source=document.querySelector("#scores");
+    const thumb=document.querySelector("#mobileScoreGlance");
+    const update=()=>{
+      if(source.querySelector(".score.p1.just-scored"))
+        window.__cpuStarPulse.source=true;
+      if(thumb.querySelector(".glance-p1.just-scored"))
+        window.__cpuStarPulse.glance=true;
+    };
+    new MutationObserver(update).observe(source,{childList:true,subtree:true,attributes:true});
+    new MutationObserver(update).observe(thumb,{childList:true,subtree:true,attributes:true});
+    update();
+  });
+  await page.locator(`[data-cell="${state.walls[action.wall.wall]}"]`).click();
+  await page.locator(`[data-cell="${action.wall.to}"]`).click();
+  await expect(page.locator("#phaseBadge")).toHaveText("2");
+  await slideByBoard(page,action.dir);
+  await expect.poll(()=>page.evaluate(()=>window.__cpuStarPulse.source)).toBe(true);
+  await expect.poll(()=>page.evaluate(()=>window.__cpuStarPulse.glance)).toBe(true);
+  await expect(page.locator("#scores .score-count").first()).toContainText("1 / 3");
+  await expect(page.locator("[data-glance-score='1']")).toHaveText("1");
+});
