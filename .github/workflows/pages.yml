@@ -29,7 +29,7 @@ jobs:
           # Publish all root-level stylesheets. The ice-world and mobile
           # HUD are loaded dynamically, so omitting them silently breaks the UI.
           cp index.html *.css dist/
-          for stylesheet in style.css world.css world-mobile.css mobile-hud.css mobile-focus.css; do
+          for stylesheet in style.css world.css world-mobile.css mobile-hud.css mobile-focus.css mobile-tap.css; do
             test -s "dist/${stylesheet}"
           done
           cp src/*.js dist/src/
