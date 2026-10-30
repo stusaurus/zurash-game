@@ -1265,3 +1265,6 @@ html[data-zurash-motion="still"] #result .result-stars > span {
 
 /* Optional mobile match glance is never part of desktop gameplay. */
 .mobile-score-glance { display:none; }
+
+/* The full rules remain readable on desktop; mobile uses a tap-first variant. */
+.help-on-phone {display:none;}
