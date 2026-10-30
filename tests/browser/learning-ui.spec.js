@@ -1,3 +1,4 @@
+import { slideByBoard } from "./tap-target.js";
 import {test,expect} from '@playwright/test';
 import {readFileSync} from 'node:fs';
 import {initial,actions,apply} from '../../src/engine.js';
@@ -27,7 +28,7 @@ test('設定取消・途中破棄・未決着確認・学習リセット',async(
   await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');
   await page.locator('#settings').click();await page.locator('#cpuLevel').selectOption('learning');await page.locator('#start').click();
   await expect(page.locator('#learningStats')).toContainText('0局');await expect(page.locator('#undo')).toBeDisabled();
-  await page.locator('#skip').click();await page.locator('#directions button:not([disabled])').first().click();
+  await page.locator('#skip').click();await slideByBoard(page);
   await expect(page.locator('#turnCount')).toHaveText('3手目',{timeout:15000});
   expect(await page.evaluate(k=>localStorage.getItem(k),key)).toBeNull();
   await page.locator('#settings').click();await page.locator('#cpuLevel').selectOption('strong');await page.locator('#setupDialog .close').click();
@@ -55,7 +56,7 @@ test('終局は一度だけ記録され再戦は新しい対局になる',async(
   state=initial(fixture.layoutIndex,fixture.starter);let humanMoves=0;
   for(const action of fixture.actions){
     const next=apply(state,action);
-    if(state.turn===0){humanMoves++;if(action.wall){await page.locator(`[data-cell="${state.walls[action.wall.wall]}"]`).click();await page.locator(`[data-cell="${action.wall.to}"]`).click();}else await page.locator('#skip').click();await page.locator('#directions button').nth(action.dir).click();}
+    if(state.turn===0){humanMoves++;if(action.wall){await page.locator(`[data-cell="${state.walls[action.wall.wall]}"]`).click();await page.locator(`[data-cell="${action.wall.to}"]`).click();}else await page.locator('#skip').click();await slideByBoard(page,action.dir);}
     if(next.winner===null&&next.turn===0)await expect(page.locator('#turnCount')).toHaveText(`${next.ply+1}手目`,{timeout:15000});
     state=next;
   }
