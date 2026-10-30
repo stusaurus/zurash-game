@@ -204,10 +204,21 @@
     border-radius:20px;
     box-shadow:0 0 8px #d4ffff,0 0 14px #71ddffb0;
     opacity:0;
-    animation:ice-swish var(--ice-travel-ms,350ms) ease-out both;
+    /* The glow sweeps across the real route instead of appearing fully
+       drawn at the first frame. The move itself still belongs to app.js. */
+    transform-origin:left center;
+    animation:ice-swish-horizontal var(--ice-travel-ms,350ms) cubic-bezier(.22,.66,.28,1) both;
+  }
+  .ice-glide-vfx .ice-streak.reverse {
+    transform-origin:right center;
   }
   .ice-glide-vfx .ice-streak.vertical {
     background:linear-gradient(180deg,transparent,#f4ffff,#8eeeffa6,#e8ffff);
+    transform-origin:center top;
+    animation-name:ice-swish-vertical;
+  }
+  .ice-glide-vfx .ice-streak.vertical.reverse {
+    transform-origin:center bottom;
   }
   .ice-glide-vfx .ice-landing {
     position:absolute;
@@ -259,11 +270,19 @@
         translateY(calc(var(--ice-cell-size,42px) * -.63)) scale(.72);
     }
   }
-  @keyframes ice-swish {
-    0% {opacity:0;filter:brightness(1.4);}
-    25% {opacity:.88;}
-    75% {opacity:.65;}
-    100% {opacity:0;}
+  /* Direction-aware growth: the translucent streak follows Triken's
+     position before fading away at the exact stop tile. */
+  @keyframes ice-swish-horizontal {
+    0% {opacity:0;transform:translateY(-50%) scaleX(.04);filter:brightness(1.45);}
+    24% {opacity:.84;transform:translateY(-50%) scaleX(.32);}
+    75% {opacity:.78;transform:translateY(-50%) scaleX(1);}
+    100% {opacity:0;transform:translateY(-50%) scaleX(1);}
+  }
+  @keyframes ice-swish-vertical {
+    0% {opacity:0;transform:translateX(-50%) scaleY(.04);filter:brightness(1.45);}
+    24% {opacity:.84;transform:translateX(-50%) scaleY(.32);}
+    75% {opacity:.78;transform:translateX(-50%) scaleY(1);}
+    100% {opacity:0;transform:translateX(-50%) scaleY(1);}
   }
   @keyframes ice-landing-splash {
     0% {opacity:0;transform:translate(-50%,-50%) scale(.25);}
