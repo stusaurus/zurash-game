@@ -1,3 +1,4 @@
+import { slideByBoard } from "./tap-target.js";
 import {test,expect} from '@playwright/test';
 import {initial,actions,apply,key} from '../../src/engine.js';
 import {seeded} from '../../src/ai.js';
@@ -38,7 +39,7 @@ for(const [layout,label] of [[4,'A'],[5,'B'],[6,'C'],[7,'D'],[8,'E']]) test(`str
   for(const starter of [0,1]){
     await page.locator('#settings').click();await page.locator('#layout').selectOption(String(layout));
     await page.locator('#cpuLevel').selectOption('strong');await page.locator('#starter').selectOption(String(starter));await page.locator('#start').click();
-    if(starter===0){await page.locator('#skip').click();await page.locator('#directions button:not([disabled])').first().click();}
+    if(starter===0){await page.locator('#skip').click();await slideByBoard(page);}
     await expect(page.locator('#turnCount')).toHaveText(starter===0?'3手目':'2手目',{timeout:15000});
     await expect(page.locator('#cpuRecovery')).toBeHidden();
     await expect(page.locator('#scores')).toContainText('CPU（恐つよ）');
@@ -83,7 +84,7 @@ for (const level of ['random','greedy','search','strong']) test(`${level} mode B
   s=initial(fixture.layoutIndex,fixture.starter);
   for(const action of fixture.actions){
     const next=apply(s,action);
-    if(s.turn===0){if(action.wall){await page.locator(`[data-cell="${s.walls[action.wall.wall]}"]`).click();await page.locator(`[data-cell="${action.wall.to}"]`).click();}else await page.locator('#skip').click();await page.locator('#directions button').nth(action.dir).click();}
+    if(s.turn===0){if(action.wall){await page.locator(`[data-cell="${s.walls[action.wall.wall]}"]`).click();await page.locator(`[data-cell="${action.wall.to}"]`).click();}else await page.locator('#skip').click();await slideByBoard(page,action.dir);}
     if(next.winner===null&&next.turn===0)await expect(page.locator('#turnCount')).toHaveText(`${next.ply+1}手目`,{timeout:15000});
     s=next;
   }
