@@ -211,6 +211,7 @@
   }
   .ice-glide-vfx .ice-streak.reverse {
     transform-origin:right center;
+    background:linear-gradient(270deg,transparent,#f4ffff,#8eeeffa6,#e8ffff);
   }
   .ice-glide-vfx .ice-streak.vertical {
     background:linear-gradient(180deg,transparent,#f4ffff,#8eeeffa6,#e8ffff);
@@ -219,6 +220,7 @@
   }
   .ice-glide-vfx .ice-streak.vertical.reverse {
     transform-origin:center bottom;
+    background:linear-gradient(0deg,transparent,#f4ffff,#8eeeffa6,#e8ffff);
   }
   .ice-glide-vfx .ice-landing {
     position:absolute;
