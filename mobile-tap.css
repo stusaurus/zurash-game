@@ -222,6 +222,43 @@
     box-shadow:0 0 9px #b6ffff,0 0 17px #7ddfff6e;
     animation:ice-landing-splash 380ms ease-out both;
   }
+  /* Momentary crystalline flecks fan out from the real landing tile.
+     No new game objects: fragments are aria-hidden and pointer-transparent. */
+  .ice-glide-vfx .ice-shard {
+    position:absolute;
+    display:block;
+    width:clamp(3px,1vw,5px);
+    height:clamp(8px,2.1vw,13px);
+    margin:0;
+    border-radius:60% 60% 50% 50%;
+    pointer-events:none;
+    background:linear-gradient(160deg,#ffffff,#d3fdff 46%,#68d0fa);
+    box-shadow:0 0 6px #e5ffffd9,0 0 9px #70daff75;
+    opacity:0;
+    transform:translate(-50%,-50%) rotate(var(--ice-shard-angle,45deg));
+    transform-origin:center;
+    animation:ice-shard-splash 430ms cubic-bezier(.15,.68,.22,1) both;
+  }
+  .ice-glide-vfx .ice-landing.scored {
+    border-color:#fff4b3;
+    box-shadow:0 0 11px #fff2b3,0 0 18px #f9d26983;
+  }
+  .ice-glide-vfx .ice-shard.scored {
+    background:linear-gradient(160deg,#ffffff,#fff5bf 48%,#f2c25b);
+    box-shadow:0 0 6px #fff8dc,0 0 9px #ffc25789;
+  }
+  @keyframes ice-shard-splash {
+    0% {
+      opacity:0;
+      transform:translate(-50%,-50%) rotate(var(--ice-shard-angle,45deg)) translateY(0) scale(.45);
+    }
+    27% {opacity:.9;}
+    100% {
+      opacity:0;
+      transform:translate(-50%,-50%) rotate(var(--ice-shard-angle,45deg))
+        translateY(calc(var(--ice-cell-size,42px) * -.63)) scale(.72);
+    }
+  }
   @keyframes ice-swish {
     0% {opacity:0;filter:brightness(1.4);}
     25% {opacity:.88;}
@@ -257,5 +294,18 @@
   html[data-zurash-motion="still"] #scores .score.just-scored .stars,
   html[data-zurash-motion="still"] #scores .score.just-scored .score-count {
     animation:none !important;
+  }
+}
+
+/* An explicit motion OFF must suppress ongoing decoration immediately,
+ * including the case where the setting is toggled during a slide. */
+@media (max-width:600px) {
+  html[data-zurash-motion="still"] .ice-glide-vfx {
+    display:none !important;
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  html:not([data-zurash-motion="animate"]) .ice-glide-vfx {
+    display:none !important;
   }
 }
