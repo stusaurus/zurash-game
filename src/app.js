@@ -368,7 +368,7 @@ function flash(at) {
   void el.offsetWidth;
   el.classList.add("pop");
 }
-function showIceVisual(from, to, travelMs, landing = false) {
+function showIceVisual(from, to, travelMs, landing = false, scored = false) {
   // Visual-only, never a board cell or an input. Works for human and CPU.
   if (!window.matchMedia("(max-width:600px)").matches || !shouldAnimate()) return;
   const board = $("board"), wrap = board.parentElement;
@@ -383,10 +383,22 @@ function showIceVisual(from, to, travelMs, landing = false) {
   const width = widthOf(state), height = heightOf(state);
   const fx = document.createElement("span");
   if (landing) {
-    fx.className = "ice-landing";
-    fx.style.left = `${((to % width) + 0.5) / width * 100}%`;
-    fx.style.top = `${(Math.floor(to / width) + 0.5) / height * 100}%`;
-    fx.style.setProperty("--ice-cell-size", `${board.clientWidth / width}px`);
+    // Four short crystalline glints give a tactile "landing" sensation.
+    // They live outside #board, never create a tile or receive input.
+    const x = `${((to % width) + 0.5) / width * 100}%`;
+    const y = `${(Math.floor(to / width) + 0.5) / height * 100}%`;
+    layer.style.setProperty("--ice-cell-size", `${board.clientWidth / width}px`);
+    fx.className = scored ? "ice-landing scored" : "ice-landing";
+    fx.style.left = x;
+    fx.style.top = y;
+    for (const angle of [45, 135, 225, 315]) {
+      const shard = document.createElement("span");
+      shard.className = scored ? "ice-shard scored" : "ice-shard";
+      shard.style.left = x;
+      shard.style.top = y;
+      shard.style.setProperty("--ice-shard-angle", `${angle}deg`);
+      layer.append(shard);
+    }
   } else {
     const ax = ((from % width) + 0.5) / width * 100;
     const ay = (Math.floor(from / width) + 0.5) / height * 100;
@@ -462,7 +474,7 @@ async function playSlide(dir) {
   setPose(player, reducedMotion ? "idle" : scored ? "collect" : "stop",
     reducedMotion ? 0 : scored ? 560 : 220);
   if (scored) flash(state.players[player]);
-  showIceVisual(startAt, endAt, travelMs, true);
+  showIceVisual(startAt, endAt, travelMs, true, scored);
   if (learningSession && player === 0) {
     learningSession.observe(turnStart, {wall: wallIndex === -1 ? null : {wall: wallIndex, to: state.walls[wallIndex]}, dir});
   }
