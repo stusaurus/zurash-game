@@ -42,7 +42,7 @@ function installApprovedMobileArt() {
     // established ice skins. Desktop direction buttons remain unchanged.
     const tap = document.createElement("link");
     tap.rel = "stylesheet";
-    tap.href = "mobile-tap.css?v=20261030-tap-first-v2";
+    tap.href = "mobile-tap.css?v=20261030-compact-dock-v3";
     tap.media = "(max-width: 600px)";
     const skinReady = [css, hud, focus, tap].map(link => new Promise(resolve => {
       link.addEventListener("load", resolve, {once: true});
