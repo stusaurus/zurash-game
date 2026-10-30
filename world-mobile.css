@@ -1,0 +1,1560 @@
+/* Approved ZURASH! mobile art. Applies to the CURRENT #48 DOM/engine.
+ * Loaded only after both approved images are available.
+ * src/app.js, src/engine.js, CPU and all interaction states are unchanged.
+ */
+@media (max-width: 600px) {
+  :root { --world-ui-blue:#147cd6; --world-ui-deep:#134c8b; }
+  body {
+    background-color:#80c7f0;
+    background-image:
+      linear-gradient(to bottom,#0062ba17 0%,#ffffff08 47%,#cceeff36 100%),
+      url("assets/ice-world-mobile.webp");
+    background-position:center top;
+    background-size:cover;
+    background-attachment:scroll;
+  }
+  main { width:100%; max-width:480px; padding:7px 8px 18px; }
+  header { min-height:32px; padding:0 5px; }
+  .brand { color:#fff; text-shadow:0 2px 3px #09549a; font-size:11px; }
+  header .quiet {
+    min-height:32px; padding:5px 11px; color:#fff;
+    border:1px solid #c6edff; border-radius:12px;
+    background:linear-gradient(#2291f6,#075fbd);
+    box-shadow:0 2px 0 #00498b,0 2px 7px #06457a9c;
+    font-size:12px;
+  }
+  /* The exact approved logo includes the mascot; hide ONLY duplicate heading
+     visually, retaining the existing h1/description for screen readers. */
+  .mast {
+    display:block; position:relative; overflow:hidden; min-height:0;
+    height:clamp(103px,32vw,147px); margin:2px -5px 7px; padding:0;
+    border:0; border-radius:12px; box-shadow:none; transform:none;
+    background:url("assets/zurash-approved-logo.webp") center/contain no-repeat;
+    isolation:isolate;
+  }
+  .mast::before { display:none; }
+  .mast > div:first-child, .mast .mascot {
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+  .game {
+    padding:9px 8px 10px; border-radius:20px;
+    border:2px solid #e4faff;
+    background:linear-gradient(180deg,#e3f7ffca 0%,#c4e8fbcb 42%,#d2efffda 100%);
+    box-shadow:inset 0 2px #fff8,0 5px 0 #579dc2aa,0 10px 24px #00569d73;
+    backdrop-filter:blur(2px);
+  }
+  .game-top { gap:7px; }
+  .mode-switch { padding:3px; flex:1; background:#b7e0f8; border-radius:12px; }
+  .mode-switch button { flex:1; min-height:36px; padding:5px 6px; font-size:12px; color:#174f86; }
+  .mode-switch button.active {
+    background:linear-gradient(#2192f4,#0868c9); color:white;
+    box-shadow:0 2px 0 #05549a; border-radius:9px;
+  }
+  #settings {
+    flex:0 0 auto; min-height:40px; font-size:11px; white-space:nowrap;
+    background:linear-gradient(#fff,#d4ecff); color:#125093;
+    border:1px solid #90c8f2; box-shadow:0 2px 0 #4c9cd5;
+    border-radius:11px;
+  }
+  .scores { margin:9px 0 8px; gap:7px; }
+  .score,.score.p2 {
+    min-width:0; padding:7px 8px 8px; border-radius:13px;
+    box-shadow:inset 0 1px #fff,0 3px 0 #9cc9e7;
+  }
+  .score { background:linear-gradient(#fff7e9,#ffe2c1); border-color:#ffba7c; }
+  .score.p2 { background:linear-gradient(#f1fcff,#b9e7ff); border-color:#79c7ee; }
+  .score.current { box-shadow:inset 0 0 0 2px #f68a2c,0 3px 0 #dd9b62; }
+  .score.current.p2 { box-shadow:inset 0 0 0 2px #1684e0,0 3px 0 #6cadd4; }
+  .score strong { display:block; font-size:12px; font-weight:900; color:#134d87; }
+  .score .stars { color:#ffb51e; letter-spacing:0; font-size:16px; text-shadow:0 1px #fff; }
+  .score small { display:block; font-size:10px; margin-top:4px; color:#2e6086; }
+  .instruction {
+    margin:3px 0 7px; padding:6px 8px; min-height:48px; gap:8px;
+    background:linear-gradient(#fffefef2,#ecf8ffee); border:1px solid #9bd1f1;
+    border-radius:13px; box-shadow:0 2px 0 #73b2da;
+  }
+  #phaseBadge { width:27px; height:27px; background:#f18b30; box-shadow:0 2px 0 #c46715; }
+  #phaseTitle { font-size:12px; color:#12518d; }
+  #message { font-size:10px; margin:2px 0 0; color:#326891; }
+  #turnCount { font-size:10px; color:#275b89; }
+  .board-scroll { padding-bottom:9px; border-radius:12px; }
+  .board-wrap {
+    border-width:5px; border-radius:16px; border-color:#a8e7ff; background:#b7eaff;
+    box-shadow:inset 0 2px 0 #fff,0 4px 0 #3794c5,0 8px 0 #1d70a9,0 13px 23px #034b8290;
+  }
+  .board-wrap.research-board { min-width:calc(var(--board-cols) * 36px + 14px); }
+  .board { background:#d7f4ff; }
+  .cell { border-right-color:#9acde6; border-bottom-color:#94c9df; }
+  .cell.wall::before {
+    background:radial-gradient(ellipse at 25% 16%,#fff,#fff8 16%,transparent 43%),
+      linear-gradient(135deg,#eaffff,#90d7f8 58%,#348abf);
+    border-color:#529fc9;
+    box-shadow:0 3px #4089b6,inset 2px 2px #fff9,0 5px 5px #1a648766;
+  }
+  /* The approved 80px Triken artwork has transparent margins.
+     Enlarge only its visual box, never the token cell or game coordinates. */
+  .token .coin,
+  .token.p2 .coin { inset:-2px; }
+  .token .pawn-image {
+    filter:drop-shadow(0 2px 2px #174a6a66);
+  }
+  /* Keep engine-generated wall targets and landing cells visually distinct. */
+  .cell.selected { background-color:#ffdf96; }
+  .cell.target { background-color:#b2ffe2; }
+  .cell.stop { background-color:#c6f3df; }
+  .directions { margin:12px 0 10px; gap:7px; }
+  .directions button {
+    flex:1; min-width:0; min-height:47px; padding:7px;
+    border:1px solid #8bcef6; border-radius:13px; color:#0f60b1;
+    background:linear-gradient(#f5fdff,#b2deff);
+    box-shadow:0 3px 0 #5a99d2; font-size:24px;
+  }
+  .directions button:disabled { opacity:.44; box-shadow:none; }
+  .actions { gap:8px; }
+  .actions #undo {
+    flex:0 0 75px; min-height:45px; font-size:12px; border-radius:12px;
+    color:#13599e; background:linear-gradient(#fff,#b9e1ff);
+    border:1px solid #80bce7; box-shadow:0 3px 0 #5599cb;
+  }
+  .actions .primary {
+    min-height:45px; font-size:12px; border-radius:12px; color:#fff;
+    border:1px solid #e48b2a; background:linear-gradient(#ffb247,#ff8705);
+    box-shadow:0 4px 0 #b96107,0 4px 10px #8c4b1f55;
+  }
+  .last-move { margin-top:10px; background:#e7f7ffef; }
+  .hint { color:#174f87; text-shadow:0 1px #fff9; }
+  .motion-control { text-align:center; }
+  footer { color:#eaf9ff; text-shadow:0 2px #0863a5; padding:10px 0; }
+  #learningPanel { background:#effbffdd; }
+  dialog:not(.result) { background:linear-gradient(#f8ffff,#dcf2ff); border:2px solid #bbebff; }
+  dialog.result { background:linear-gradient(#fffbe7,#ffe4a7); }
+}
+@media (max-width:355px) {
+  .mast { height:99px; }
+  .game { padding:8px 6px; }
+  .mode-switch button { font-size:10px; padding-inline:3px; }
+  .scores { gap:5px; }
+  .score strong { font-size:11px; }
+  .score .stars { font-size:12px; }
+  .directions button { min-height:44px; }
+  .actions #undo { flex-basis:69px; }
+}
+
+/* ICE WORLD / SEAMLESS PASS (mobile only)
+ * The established logo, background, board geometry, pawns and game state stay intact.
+ * The art itself is not retouched; only the surrounding interface layering changes.
+ */
+@media (max-width: 600px) {
+  body {
+    background-image:
+      linear-gradient(180deg,#2586db17 0%,#1a7aca0b 36%,#d7f8ff17 74%,#156bb51d 100%),
+      url("assets/ice-world-mobile.webp");
+  }
+  main { padding:4px 6px 16px; }
+  header { position:relative; z-index:2; padding:0 7px; }
+  /* Feather the logo background into the same panoramic landscape rather
+     than placing a second hard-edged picture on top of it. */
+  .mast {
+    height:clamp(132px,41vw,176px);
+    margin:-5px -5px -9px; border:0; border-radius:0;
+    background-size:contain;
+    background-position:50% 50%;
+    -webkit-mask-image:radial-gradient(ellipse 80% 78% at 50% 24%, #000 70%, transparent 100%);
+    mask-image:radial-gradient(ellipse 80% 78% at 50% 24%, #000 70%, transparent 100%);
+  }
+  /* A soft halo instead of a separate giant white/blue card. */
+  .game {
+    isolation:isolate;
+    background:
+      radial-gradient(ellipse 115% 70% at 50% 53%, #ebfaffbc 0%,#d1f2ffc0 49%,#91cde88e 78%,#b3defa00 100%);
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    backdrop-filter:none;
+    padding:7px 7px 10px;
+  }
+  .game::before {
+    content:""; position:absolute; z-index:-1; pointer-events:none;
+    inset:12% -1% 4%;
+    background:linear-gradient(180deg,#f6fdff28,transparent 22%,#e6faff1c 79%,transparent 100%);
+    border-radius:30px;
+  }
+  .game-top { margin:0 0 7px; }
+  .mode-switch { background:#cfedffb2; border:1px solid #e5faffb5; box-shadow:inset 0 1px #fff7; }
+  .mode-switch button.active {
+    background:linear-gradient(180deg,#339ff7,#086abf);
+    box-shadow:inset 0 1px #d6f4ff91,0 2px 3px #1d6eae5e;
+  }
+  #settings { background:linear-gradient(#f7fdffeb,#e3f4ffcc); box-shadow:0 1px 3px #327cad3f; }
+  /* One score bar, differentiated by side/color, replaces floating score cards. */
+  .scores {
+    gap:0; margin:5px 0 6px; padding:1px;
+    border:1px solid #f1ffffcb; border-radius:14px;
+    background:#edfaffc4; box-shadow:0 2px 7px #3279a94f;
+    overflow:hidden;
+  }
+  .score,.score.p2 {
+    border:0; border-radius:0; padding:7px 9px;
+    box-shadow:none;
+  }
+  .score { background:linear-gradient(110deg,#ffe6bead,#fff1df74); }
+  .score.p2 { border-left:1px solid #9ed2f2; background:linear-gradient(110deg,#def7ffad,#b4e9ff77); }
+  .score.current {
+    box-shadow:inset 0 -3px #f58a29;
+    background:linear-gradient(110deg,#fff0d6e8,#ffe1b5ab);
+  }
+  .score.current.p2 {
+    box-shadow:inset 0 -3px #278fe0;
+    background:linear-gradient(110deg,#e5f9ffef,#c2ecffbe);
+  }
+  /* Instruction floats directly above the ice board, no separate paper box. */
+  .instruction {
+    margin:2px 3px 0; padding:7px 8px 5px;
+    border:1px solid #b9e8ffa8; border-bottom:0;
+    border-radius:13px 13px 0 0;
+    background:linear-gradient(180deg,#f3fdffdc,#dbf5ffbb);
+    box-shadow:none;
+  }
+  #phaseTitle { font-weight:900; }
+  #phaseBadge { box-shadow:0 1px 0 #fff8,0 2px 3px #a3622285; }
+  .board-scroll {
+    margin:0 2px; padding:3px 2px 10px;
+    border:1px solid #b9e8ffa8; border-top:0; border-bottom:0;
+    border-radius:0;
+    background:linear-gradient(180deg,#dbf5ffb9,#b7e4f7ad 62%,#b4e4f87d);
+  }
+  .board-wrap {
+    border-color:#a3e0ff;
+    border-radius:14px;
+    box-shadow:inset 0 1px #fff,0 3px 0 #3f95c8,0 7px 0 #216eaa,0 11px 17px #03518f83;
+  }
+  /* Slide arrows and actions share one translucent ice shelf. */
+  .directions {
+    margin:0 4px; padding:8px 5px 5px; gap:6px;
+    border:1px solid #b9e8ffb8; border-bottom:0;
+    border-radius:0;
+    background:linear-gradient(180deg,#b7e4f7a8,#d4f1ffd4);
+  }
+  .directions button {
+    min-height:47px;
+    border:1px solid #9cd2f0d1;
+    border-radius:11px;
+    background:linear-gradient(180deg,#f2fcffe0,#b1e0fdde);
+    box-shadow:inset 0 1px #fff8,0 2px 0 #78b4dcaa;
+  }
+  .actions {
+    margin:0 4px; padding:5px 5px 9px; gap:8px;
+    border:1px solid #b9e8ffb8; border-top:0;
+    border-radius:0 0 14px 14px;
+    background:linear-gradient(180deg,#d4f1ffd4,#e9f9ffde);
+  }
+  .actions #undo { box-shadow:inset 0 1px #fff8,0 2px 0 #88bbdd; }
+  .actions .primary {
+    box-shadow:inset 0 1px #fff8,0 3px 0 #c76c1b;
+    background:linear-gradient(#ffb448,#f98b0b);
+  }
+  /* During step 2, a disabled "skip wall" is explanatory text, not
+     a giant unusable orange button competing with the slide arrows. */
+  .actions #skip:disabled {
+    background:transparent; border:1px solid transparent;
+    color:#265d8b; box-shadow:none; opacity:.8;
+    font-size:11px; font-weight:800;
+  }
+  .game > .hint { margin-top:7px; }
+  .motion-control { margin-top:2px; }
+  .motion-control .quiet {
+    background:#e7f8ffbf; border:1px solid #c5edffb2;
+    border-radius:20px; padding:6px 11px;
+  }
+  footer { margin-top:-2px; padding:7px 0 13px; }
+}
+@media (max-width: 355px) {
+  .game { padding-inline:4px; }
+  .scores .score,.scores .score.p2 { padding-inline:6px; }
+  .directions { gap:4px; padding-inline:3px; }
+  .actions { gap:5px; padding-inline:3px; }
+}
+
+
+/* HUD REFINEMENT / The surrounding game console is sculpted out of the ice.
+ * Visuals only. No changes to the board, engine, hit targets or approved art.
+ * Keep the layout flat enough for 320px; no canvas-like image overlays.
+ */
+@media (max-width:600px) {
+  :root {
+    --zurash-ice-edge:#b5edff;
+    --zurash-ice-deep:#115fa0;
+    --zurash-ice-shadow:#063e72;
+    --zurash-ice-glow:#dcfaff;
+    --zurash-gold:#ffc345;
+  }
+
+  /* Top switches are one instrument cluster, not independent settings cards. */
+  .game-top {
+    align-items:stretch;
+    gap:5px;
+    padding:1px 3px 4px;
+  }
+  .mode-switch {
+    min-width:0;
+    min-height:42px;
+    gap:2px;
+    padding:3px;
+    border:1px solid #b7ecffad;
+    border-radius:18px 12px 12px 18px;
+    background:linear-gradient(170deg,#0c568bba,#158bd1a8);
+    box-shadow:inset 0 2px 2px #e9ffff78,0 2px 7px #075b8a6b;
+  }
+  .mode-switch button {
+    position:relative;
+    min-width:0;
+    min-height:42px;
+    padding:5px 7px;
+    border-radius:13px 9px 9px 13px;
+    color:#e8faff;
+    font-size:clamp(10px,2.9vw,12px);
+    font-weight:900;
+    text-shadow:0 1px 2px #00345f7a;
+  }
+  .mode-switch button + button { border-radius:9px 12px 12px 9px; }
+  .mode-switch button.active {
+    border:1px solid #edffffca;
+    background:linear-gradient(155deg,#6dd4ff,#188bde 54%,#0864b2);
+    color:#fff;
+    box-shadow:inset 0 2px #e2ffffab,inset 0 -2px #074b8a98,0 1px 5px #032b6688;
+  }
+  #settings {
+    flex:0 0 auto;
+    min-height:47px;
+    padding:6px 9px;
+    border:1px solid #d0f5ffdb;
+    border-radius:11px 18px 18px 11px;
+    background:linear-gradient(160deg,#f3fdfff0,#aee2ffec 56%,#62b8e6e8);
+    color:#15518b;
+    font-size:clamp(10px,2.8vw,12px);
+    text-shadow:0 1px #fff9;
+    box-shadow:inset 0 2px 1px #fff8,inset 0 -2px #368ac08a,0 3px 5px #14567b55;
+  }
+
+  /* Single crystalline score HUD: orange and aqua are two halves of one rail.
+     The central join is decorative only; players and targets remain engine-fed. */
+  .scores {
+    position:relative;
+    display:flex;
+    align-items:stretch;
+    padding:3px;
+    margin:5px 2px 7px;
+    overflow:hidden;
+    border:1px solid #d6f8ffcb;
+    border-radius:18px 18px 13px 13px;
+    background:linear-gradient(180deg,#f4ffffb8,#78bfe5c0 60%,#338aca9a);
+    box-shadow:inset 0 2px #fff8,inset 0 -3px #1768a79c,0 3px 8px #04517c62;
+  }
+  .scores::before {
+    content:"";
+    position:absolute;
+    z-index:2;
+    top:9px;
+    bottom:9px;
+    left:calc(50% - 1px);
+    width:2px;
+    border-radius:4px;
+    background:linear-gradient(#d9fbff55,#ffffffec,#7cc8ef5c);
+    box-shadow:0 0 5px #f2ffffb7;
+    pointer-events:none;
+  }
+  .score,.score.p2 {
+    position:relative;
+    flex:1 1 0;
+    min-width:0;
+    padding:9px 9px 8px;
+    border:0;
+    border-radius:15px 8px 7px 10px;
+    box-shadow:inset 0 2px #fff9,inset 0 -2px #d9996a4a;
+    transition:filter 140ms ease;
+  }
+  .score.p2 {
+    border-left:0;
+    border-radius:8px 15px 10px 7px;
+    box-shadow:inset 0 2px #fff9,inset 0 -2px #5dadd769;
+  }
+  .score {
+    background:linear-gradient(155deg,#fff2dbf5,#ffd9a4dd 60%,#f3a77cc9);
+  }
+  .score.p2 {
+    background:linear-gradient(155deg,#f1fefff5,#bcecffec 57%,#7dc6f4cd);
+  }
+  .score.current {
+    background:linear-gradient(150deg,#fff7e7,#ffd6a1 63%,#ee994a);
+    box-shadow:inset 0 2px #fff8,inset 0 -4px #e86f23,0 0 8px #ffb34c8e;
+  }
+  .score.current.p2 {
+    background:linear-gradient(150deg,#f5ffff,#b6e8ff 63%,#68b7ef);
+    box-shadow:inset 0 2px #fff8,inset 0 -4px #147cd0,0 0 8px #71d9ff9e;
+  }
+  .score strong {
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    color:#184877;
+    font-size:clamp(11px,3vw,13px);
+    line-height:1.4;
+  }
+  .score .stars {
+    font-size:clamp(13px,4.1vw,17px);
+    letter-spacing:0;
+    color:#ffb014;
+    text-shadow:0 1px #fff,0 0 3px #ffe891;
+  }
+  .score small {
+    font-size:clamp(9px,2.5vw,11px);
+    color:#285779;
+    line-height:1.35;
+  }
+  .score.match-point,.score.match-point.p2 {
+    outline:2px solid #ffdc67;
+    outline-offset:-3px;
+  }
+
+  /* Phase/status strip continues the arena but uses a distinctly legible ink. */
+  .instruction {
+    position:relative;
+    align-items:center;
+    min-height:54px;
+    margin:3px 3px 0;
+    padding:8px 10px 6px;
+    border-left:1px solid #c9f6ffba;
+    border-right:1px solid #c9f6ffba;
+    border-top:1px solid #e7ffffd1;
+    border-radius:17px 17px 0 0;
+    background:linear-gradient(180deg,#eafaffec,#b1e3fbc8);
+    box-shadow:inset 0 2px #fff8;
+  }
+  #phaseBadge {
+    flex:0 0 34px;
+    width:34px;
+    height:34px;
+    border:1px solid #fff4c5;
+    border-radius:11px 8px 11px 8px;
+    background:linear-gradient(135deg,#ffcb64,#ff9e35 60%,#df671a);
+    box-shadow:inset 0 1px #fffae0,0 3px 0 #a95018,0 0 8px #ffca5991;
+    font-size:16px;
+  }
+  #phaseTitle { font-size:clamp(12px,3.2vw,14px); color:#073d70; }
+  #message { font-size:clamp(10px,2.55vw,11px); line-height:1.35; color:#285e84; }
+  #turnCount {
+    align-self:flex-start;
+    margin-left:auto;
+    padding:3px 6px;
+    border:1px solid #acddf4;
+    border-radius:999px;
+    background:#e1f6ffb8;
+    color:#215984;
+    font-size:10px;
+  }
+
+  /* Non-board controller: four sculpted ice keys resting on the same shelf.
+     Enabled keys glow; disabled keys remain visible but visually quiet.
+     Hit areas stay >=44px and DOM/direction mapping never changes. */
+  .directions {
+    position:relative;
+    gap:5px;
+    margin:0 4px;
+    padding:11px 7px 6px;
+    border-left:1px solid #caefffd6;
+    border-right:1px solid #caefffd6;
+    border-radius:0;
+    background:linear-gradient(#b9e6f7d0,#bfe9f9df);
+  }
+  .directions::before {
+    content:"";
+    position:absolute;
+    top:3px;
+    left:16px;
+    right:16px;
+    height:3px;
+    border-radius:999px;
+    background:linear-gradient(90deg,transparent,#e4ffffba,transparent);
+    pointer-events:none;
+  }
+  .directions button {
+    position:relative;
+    display:grid;
+    place-items:center;
+    min-width:0;
+    min-height:50px;
+    padding:5px 3px;
+    border:1px solid #e1f9ffdf;
+    border-radius:15px 9px 13px 9px;
+    background:linear-gradient(155deg,#f2feff,#bfeaff 50%,#74bde5);
+    box-shadow:inset 0 2px #ffffffdb,inset 0 -3px #408cbfa3,0 3px 5px #06518277;
+    color:#0867b4;
+    font-size:24px;
+    font-weight:900;
+    text-shadow:0 1px #fff;
+    transition:background 140ms ease,box-shadow 140ms ease,opacity 140ms ease;
+  }
+  .directions button:nth-child(even) { border-radius:9px 15px 9px 13px; }
+  .directions button:enabled {
+    background:linear-gradient(155deg,#ffffff,#d3f8ff 45%,#57bbea);
+    box-shadow:inset 0 2px #fff,inset 0 -3px #278fc8,0 0 8px #a1f2ffb8,0 4px 5px #07517d72;
+  }
+  .directions button:active:enabled {
+    transform:translateY(2px);
+    box-shadow:inset 0 1px #fff9,0 1px #237cad;
+  }
+  .directions button:disabled {
+    opacity:.55;
+    background:linear-gradient(#e8f8ffbc,#a4cde2aa);
+    color:#5287aa;
+    box-shadow:inset 0 1px #fff9;
+  }
+
+  .actions {
+    align-items:stretch;
+    gap:6px;
+    margin:0 4px;
+    padding:5px 7px 9px;
+    border:1px solid #caefffd6;
+    border-top:0;
+    border-radius:0 0 17px 17px;
+    background:linear-gradient(180deg,#bfe9f9df,#e4f8ffe8);
+    box-shadow:inset 0 -2px #fff9,0 4px 7px #0754805c;
+  }
+  .actions #undo {
+    flex:0 0 76px;
+    min-height:48px;
+    border:1px solid #f0ffffee;
+    border-radius:12px 8px 8px 14px;
+    color:#12548b;
+    background:linear-gradient(160deg,#ffffffeb,#d1f0ffeb 55%,#85c2e8e6);
+    box-shadow:inset 0 2px #fff,0 3px 0 #5297c4,0 4px 6px #17527a66;
+    font-size:12px;
+  }
+  .actions .primary {
+    min-width:0;
+    min-height:48px;
+    border:1px solid #ffde89;
+    border-radius:8px 14px 14px 8px;
+    background:linear-gradient(165deg,#ffdf80,#ffae32 49%,#ea7711);
+    box-shadow:inset 0 2px #fff2be,0 3px 0 #a95716,0 4px 7px #a45b2777;
+    color:#fff;
+    font-size:clamp(11px,2.85vw,13px);
+    text-shadow:0 1px 1px #923f03c8;
+  }
+  .actions #skip:disabled {
+    opacity:1;
+    border-color:transparent;
+    background:transparent;
+    box-shadow:none;
+    color:#32648a;
+    text-shadow:none;
+    font-weight:800;
+    font-size:clamp(10px,2.5vw,11px);
+  }
+  .actions button:active:enabled { transform:translateY(2px); }
+  /* Keep selection states distinct for keyboard and accessibility navigation. */
+  .mode-switch button:focus-visible,
+  #settings:focus-visible,
+  .directions button:focus-visible,
+  .actions button:focus-visible {
+    outline:3px solid #ffb635;
+    outline-offset:2px;
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .score,.directions button { transition:none; }
+  }
+
+  /* Recorded moves and learning stats are quiet HUD readouts, not page cards. */
+  .last-move,.last-move.scored {
+    margin:8px 5px 0;
+    border:1px solid #cfedffab;
+    border-radius:13px;
+    background:linear-gradient(155deg,#e6f8fff0,#b7dff2d9);
+    color:#1a527e;
+    box-shadow:inset 0 1px #fff7;
+  }
+  .last-move.scored {
+    border-color:#ffe09d;
+    background:linear-gradient(140deg,#fff5d9ed,#ffe4aada);
+    color:#795018;
+  }
+  #learningPanel {
+    margin:10px 4px 0;
+    border:1px solid #bbebff;
+    border-radius:17px;
+    background:linear-gradient(160deg,#f2ffffed,#bce6fbe6);
+    color:#174d77;
+    box-shadow:inset 0 2px #fff8,0 3px 7px #155a8363;
+  }
+  .motion-control .quiet {
+    min-height:40px;
+    border:1px solid #c5edffb7;
+    border-radius:16px;
+    background:linear-gradient(180deg,#eafaffd6,#b8e2f6c4);
+    color:#17537f;
+    box-shadow:inset 0 1px #fff8;
+  }
+
+  /* Menus are the same floating ice instruments as the gameplay controls. */
+  dialog:not(.result) {
+    border:2px solid #d8fbff;
+    border-radius:24px 18px 24px 18px;
+    background:linear-gradient(155deg,#f9ffff,#d4f0ff 65%,#9ccff2);
+    box-shadow:inset 0 2px #fff,0 8px 0 #368db8,0 20px 50px #06395c88;
+  }
+  dialog:not(.result) h2 { color:#124c80; }
+  dialog:not(.result) .primary,
+  dialog.result .primary {
+    min-height:48px;
+    border:1px solid #ffe39a;
+    border-radius:14px;
+    background:linear-gradient(150deg,#ffcc67,#ff921f 75%,#d8690c);
+    box-shadow:inset 0 2px #fff3c8,0 3px 0 #a75a1b;
+  }
+  dialog.result {
+    border:3px solid #fff1b9;
+    border-radius:24px 16px 24px 16px;
+    background:linear-gradient(160deg,#fffce9,#ffdfa5 78%,#ffc365);
+    box-shadow:inset 0 2px #fff9,0 9px 0 #b97534,0 18px 45px #062c5080;
+  }
+}
+@media (max-width:355px) {
+  .game-top { gap:3px; }
+  .mode-switch button { min-height:42px; padding-inline:4px; font-size:10px; }
+  #settings { padding-inline:7px; font-size:10px; }
+  .scores { margin-inline:1px; }
+  .score,.score.p2 { padding-inline:6px; }
+  .score strong { font-size:11px; }
+  .score .stars { font-size:13px; }
+  .directions { gap:4px; padding-inline:5px; }
+  .directions button { min-height:48px; }
+  .actions { gap:5px; padding-inline:5px; }
+  .actions #undo { flex-basis:70px; }
+}
+
+/* PLAYFUL COMMAND STONES / 2026-10-28: cosmetic-only mobile iteration.
+ * Controls remain the real existing #skip, #undo, #directions button and #settings.
+ * Board geometry, positions, input handlers, rule engine and accepted artwork are untouched.
+ */
+@media (max-width: 600px) {
+  /* These controls should feel like a handful of colorful adventure tools,
+     not a line of identical translucent website buttons. */
+  .directions {
+    isolation: isolate;
+    gap: clamp(5px, 1.7vw, 9px);
+    margin: 0 3px;
+    padding: 16px 6px 8px;
+    border: 0;
+    border-radius: 0;
+    background: radial-gradient(ellipse 75% 54% at 50% 6%, #dbffffc9, #9cdaf69a 55%, transparent 100%);
+    box-shadow: none;
+  }
+  .directions::before {
+    top: 6px;
+    left: 12%;
+    right: 12%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ffffffa8 20%, #83e8ff 50%, #ffffffa8 80%, transparent);
+    box-shadow: 0 0 11px #d8ffff8a;
+  }
+  .directions button,
+  .directions button:nth-child(even) {
+    --jewel-top: #6ae9ff;
+    --jewel-mid: #159de9;
+    --jewel-bottom: #0865ba;
+    --jewel-foot: #053e8a;
+    position: relative;
+    isolation: isolate;
+    flex: 1 1 0;
+    min-width: 0;
+    height: 60px;
+    min-height: 60px;
+    margin: 0;
+    padding: 4px 3px 8px;
+    border: 2px solid #ffffffee;
+    border-radius: 24px 17px 23px 16px / 22px 22px 21px 20px;
+    background:
+      radial-gradient(ellipse 60% 34% at 24% 15%, #ffffffb4, transparent 100%),
+      linear-gradient(155deg, var(--jewel-top), var(--jewel-mid) 48%, var(--jewel-bottom) 92%);
+    box-shadow:
+      inset 0 3px 0 #ffffffb5,
+      inset -3px -4px 0 #053c8080,
+      0 5px 0 var(--jewel-foot),
+      0 9px 8px #0139638a;
+    color: #fff;
+    font-size: 31px;
+    font-weight: 1000;
+    line-height: 1;
+    text-shadow: 0 2px 1px #07448c, 0 0 7px #ffffff8c;
+    transform: rotate(-1deg);
+    transition: transform 140ms cubic-bezier(.2,.9,.3,1.2), filter 140ms ease, box-shadow 140ms ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .directions button:nth-child(2) {
+    --jewel-top: #cfabff;
+    --jewel-mid: #8f61ed;
+    --jewel-bottom: #5839ba;
+    --jewel-foot: #493087;
+    border-radius: 17px 25px 18px 23px / 21px 25px 18px 21px;
+    transform: rotate(1deg);
+    text-shadow: 0 2px 1px #402285, 0 0 7px #ffffff88;
+  }
+  .directions button:nth-child(3) {
+    --jewel-top: #b9f985;
+    --jewel-mid: #51c78a;
+    --jewel-bottom: #189c83;
+    --jewel-foot: #137466;
+    border-radius: 22px 18px 22px 16px / 26px 18px 22px 16px;
+    text-shadow: 0 2px 1px #096e6a, 0 0 7px #ffffff88;
+  }
+  .directions button:nth-child(4) {
+    --jewel-top: #ffe395;
+    --jewel-mid: #f9a646;
+    --jewel-bottom: #eb7442;
+    --jewel-foot: #9f5233;
+    border-radius: 17px 23px 18px 25px / 21px 24px 18px 24px;
+    transform: rotate(1deg);
+    text-shadow: 0 2px 1px #94452b, 0 0 7px #ffffff88;
+  }
+  /* Shine facets live inside the button's box and are noninteractive. */
+  .directions button::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 4px 7px auto 9px;
+    height: 17px;
+    border-radius: 70% 30% 66% 35%;
+    background: linear-gradient(155deg, #ffffffe5, #ffffff66 70%, transparent);
+    transform: rotate(-9deg);
+  }
+  .directions button::after {
+    content: "✦";
+    pointer-events: none;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    color: #fff;
+    text-shadow: 0 0 6px #fff;
+    font-size: 11px;
+    opacity: .82;
+  }
+  .directions button:enabled {
+    box-shadow:
+      inset 0 3px 0 #ffffffcd,
+      inset -3px -4px 0 #043c8073,
+      0 5px 0 var(--jewel-foot),
+      0 9px 8px #01396380,
+      0 0 11px #e4ffffb5;
+    filter: saturate(1.12);
+  }
+  .directions button:disabled {
+    --jewel-top: #e4f8ff;
+    --jewel-mid: #b5d9ee;
+    --jewel-bottom: #83b3cd;
+    --jewel-foot: #79a3b8;
+    background: linear-gradient(155deg, #e8f8ffdd, #a7cfe4c9 68%, #90b9d2bb);
+    border-color: #e0f2f8db;
+    box-shadow: inset 0 2px #fff8, inset 0 -3px #71a7c9, 0 3px 0 #7eaac1, 0 5px 6px #0650803a;
+    color: #6c97b7;
+    text-shadow: 0 1px 1px #ffffff9b;
+    opacity: .61;
+    filter: saturate(.45);
+    transform: none;
+  }
+  .directions button:disabled::after { opacity: 0; }
+  .directions button:active:enabled {
+    transform: translateY(4px) scale(.96);
+    box-shadow: inset 0 1px #fff8, inset 0 -1px #044f91, 0 1px 0 var(--jewel-foot), 0 2px 4px #033e6380;
+  }
+  /* When slide becomes possible, the physical stones react as one game deck. */
+  .directions:has(button:enabled)::before {
+    background: linear-gradient(90deg, transparent, #fff9c4, #f7fffb, #fff9c4, transparent);
+    box-shadow: 0 0 10px #fff9be;
+  }
+  .directions:has(button:enabled) button:enabled {
+    animation: zurash-command-ready 220ms ease-out both;
+  }
+  @keyframes zurash-command-ready {
+    from { filter: brightness(1.32) saturate(1.25); scale: .93; }
+    to { filter: brightness(1) saturate(1.12); scale: 1; }
+  }
+  /* Under the jewels, Undo is a clear blue stone and the useful wall-skip
+     is the large warm action toy. Neither button nor label is replaced. */
+  .actions {
+    margin: 0 3px;
+    padding: 7px 7px 10px;
+    border: 0;
+    border-radius: 22px;
+    background: linear-gradient(155deg, #edfdffe3 0%, #b1e4f6c9 60%, #9ad4e9bd);
+    box-shadow: inset 0 2px #ffffffa9, inset 0 -3px #4799bc5f, 0 5px 9px #165b8075;
+  }
+  .actions #undo {
+    flex: 0 0 82px;
+    min-height: 58px;
+    border: 2px solid #fff;
+    border-radius: 19px 12px 18px 17px;
+    background: radial-gradient(ellipse at 25% 18%, #ffffffbd, transparent 61%),
+      linear-gradient(160deg, #d9fbff, #65c9ef 62%, #1e8fc3);
+    box-shadow: inset 0 3px #ffffffc9, inset 0 -3px #167ead, 0 5px 0 #156494, 0 8px 7px #145b8585;
+    color: #064f85;
+    font-size: 13px;
+    font-weight: 900;
+    text-shadow: 0 1px #fff8;
+  }
+  .actions #skip:enabled {
+    min-height: 58px;
+    padding: 7px 9px;
+    border: 2px solid #fff3cc;
+    border-radius: 15px 22px 18px 16px;
+    background:
+      radial-gradient(ellipse at 24% 13%, #ffffffcf, transparent 60%),
+      linear-gradient(155deg, #ffe98b, #ffb33d 48%, #ff7b16 90%);
+    box-shadow: inset 0 3px #ffffffcf, inset 0 -3px #d65d0d, 0 5px 0 #a84809, 0 9px 8px #863d137d;
+    color: #fff;
+    font-size: clamp(11px, 3.2vw, 14px);
+    font-weight: 1000;
+    text-shadow: 0 2px 1px #9e5004cc;
+    transform: rotate(-.4deg);
+  }
+  .actions #skip:enabled:active,
+  .actions #undo:enabled:active {
+    transform: translateY(4px) scale(.98);
+    box-shadow: inset 0 2px #fff7, 0 1px 0 #23577c, 0 2px 3px #1d577c5e;
+  }
+  .actions #skip:disabled {
+    min-height: 58px;
+    background: linear-gradient(170deg, #d9edf6ab, #badbeb8c);
+    border: 1px dashed #90c6d8a3;
+    border-radius: 17px;
+    color: #285984;
+    box-shadow: none;
+    font-weight: 800;
+    line-height: 1.4;
+    opacity: .9;
+    text-shadow: none;
+  }
+  .mode-switch button.active,
+  #settings {
+    transition: transform 150ms ease, filter 150ms ease;
+  }
+  #settings {
+    border: 2px solid #e5faff;
+    border-radius: 16px 22px 18px 15px;
+    background: linear-gradient(150deg, #ffffff, #a7e8ff 45%, #40b0e4 100%);
+    box-shadow: inset 0 2px #fff9, inset 0 -2px #2289c0, 0 4px 0 #1d6b9d, 0 6px 7px #164e7a78;
+    color: #12538c;
+    font-weight: 900;
+  }
+  /* Keyboard focus remains unambiguous; motion preferences are respected. */
+  .directions button:focus-visible,
+  #skip:focus-visible,
+  #undo:focus-visible,
+  #settings:focus-visible {
+    outline: 3px solid #ffed83;
+    outline-offset: 3px;
+  }
+}
+@media (max-width:355px) {
+  .directions { gap:5px; padding-inline:3px; }
+  .directions button,
+  .directions button:nth-child(even) { height:53px; min-height:53px; font-size:27px; }
+  .actions { gap:5px; padding:6px; }
+  .actions #undo { flex-basis:73px; }
+  .actions #skip:enabled { font-size:11px; }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  .directions button:enabled, .directions button,
+  .mode-switch button.active, #settings { animation:none; transition:none; }
+}
+
+
+/* ARCADE COMMAND DECK / Retrospective physical pushbuttons on an ice console.
+ * This replaces only the visual skin of real #directions, #undo and #skip.
+ * All arrow order, legal-state disabling and click handlers come from app.js.
+ */
+@media (max-width:600px) {
+  /* The steel-blue cabinet makes the four saturated pushbuttons pop while
+     continuing the already-approved frozen adventure palette. */
+  .directions {
+    position:relative;
+    isolation:isolate;
+    gap:clamp(7px,2.1vw,11px);
+    margin:6px 4px 0;
+    padding:15px 8px 16px;
+    border:3px solid #e2faff;
+    border-bottom:0;
+    border-radius:25px 25px 0 0;
+    background:
+      linear-gradient(100deg,#ffffff18 0%,transparent 20%,#ffffff20 52%,transparent 80%),
+      linear-gradient(170deg,#163d74 0%,#1467a8 52%,#073b75 100%);
+    box-shadow:
+      inset 0 3px #a9e5ffb3, inset 0 -4px #052b5d,
+      0 3px 0 #084a7d,0 7px 11px #06395e73;
+  }
+  .directions::before {
+    top:5px;
+    left:16px;
+    right:16px;
+    height:3px;
+    border:0;
+    border-radius:12px;
+    background:linear-gradient(90deg,transparent,#c1ecff99,#ffffffd4,#c1ecff99,transparent);
+    box-shadow:none;
+  }
+  .directions button,
+  .directions button:nth-child(n) {
+    --arcade-light:#ff9197;
+    --arcade-face:#fb526b;
+    --arcade-rim:#c4274c;
+    --arcade-base:#781938;
+    position:relative;
+    isolation:isolate;
+    display:grid;
+    flex:1 1 0;
+    place-items:center;
+    min-width:0;
+    min-height:60px;
+    height:clamp(60px,16.5vw,74px);
+    max-height:74px;
+    margin:0;
+    padding:0 0 5px;
+    border:5px solid #163457;
+    border-radius:50%;
+    outline:2px solid #8cd4fcaf;
+    outline-offset:-1px;
+    background:
+      radial-gradient(ellipse 45% 23% at 36% 24%,#ffffffe5,transparent 92%),
+      radial-gradient(ellipse 100% 96% at 50% 20%,var(--arcade-light) 5%,var(--arcade-face) 58%,var(--arcade-rim) 90%);
+    box-shadow:
+      inset 0 2px 2px #ffffff9c,
+      inset 0 -5px 3px #410e237a,
+      0 5px 0 var(--arcade-base),
+      0 8px 0 #032c59,
+      0 11px 9px #021e428a;
+    color:#fff;
+    font-size:clamp(26px,8vw,34px);
+    font-weight:1000;
+    line-height:1;
+    text-shadow:0 2px 1px #062d4b9e,0 0 3px #fff8;
+    transform:none;
+    filter:none;
+    transition:transform 100ms ease,box-shadow 100ms ease,filter 100ms ease;
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
+  }
+  /* Distinctive arcade candy buttons, not irregular jewels.
+     Color is decorative: the arrow remains the sole direction signifier. */
+  .directions button:nth-child(2) {
+    --arcade-light:#fff7a3;
+    --arcade-face:#ffc740;
+    --arcade-rim:#df8c18;
+    --arcade-base:#91550f;
+  }
+  .directions button:nth-child(3) {
+    --arcade-light:#c6ffb9;
+    --arcade-face:#49cf9a;
+    --arcade-rim:#138e72;
+    --arcade-base:#0b6156;
+  }
+  .directions button:nth-child(4) {
+    --arcade-light:#a4eaff;
+    --arcade-face:#37aff8;
+    --arcade-rim:#086ab7;
+    --arcade-base:#064274;
+  }
+  .directions button::before {
+    content:"";
+    position:absolute;
+    pointer-events:none;
+    inset:8% 16% auto 16%;
+    height:26%;
+    border-radius:50%;
+    background:radial-gradient(ellipse at center,#ffffffbb,#ffffff3b 68%,transparent 78%);
+    transform:rotate(-17deg);
+  }
+  .directions button::after { content:none; }
+  .directions button:enabled {
+    filter:saturate(1.17);
+    box-shadow:
+      inset 0 2px 2px #ffffff9c,
+      inset 0 -5px 3px #410e237a,
+      0 5px 0 var(--arcade-base),
+      0 8px 0 #032c59,
+      0 11px 9px #021e428a,
+      0 0 13px #e4ffff8c;
+  }
+  .directions button:disabled {
+    /* Arcade cabinets keep the physical buttons colorful even while idle.
+       Muted saturation and lower travel communicate a disabled command. */
+    background:
+      radial-gradient(ellipse 45% 23% at 36% 24%,#ffffffcf,transparent 92%),
+      radial-gradient(ellipse at 50% 20%,var(--arcade-light),var(--arcade-face) 60%,var(--arcade-rim));
+    border-color:#173657;
+    outline-color:#86b8d3;
+    color:#ffffffd9;
+    opacity:.82;
+    filter:saturate(.68) brightness(.82);
+    transform:none;
+    box-shadow:
+      inset 0 2px #ffffff9c,inset 0 -4px #062b5170,
+      0 2px 0 var(--arcade-base),0 4px 4px #021e4266;
+  }
+  .directions button:active:enabled {
+    transform:translateY(5px) scale(.97);
+    box-shadow:inset 0 2px 1px #fff9,inset 0 -2px #380d2466,0 1px 0 var(--arcade-base),0 3px 3px #021e4280;
+  }
+  .directions:has(button:enabled)::before {
+    background:linear-gradient(90deg,transparent,#ffffffad,#fff8b4,#ffffffad,transparent);
+    box-shadow:0 0 9px #ffef9685;
+  }
+  .directions:has(button:enabled) button:enabled { animation:none; }
+
+  /* Two physical command keys: an inset NAV key and an amber action key.
+     Preserve the existing Japanese labels, validity and press behavior. */
+  .actions {
+    align-items:stretch;
+    gap:9px;
+    margin:0 4px;
+    padding:7px 10px 12px;
+    border:3px solid #e2faff;
+    border-top:0;
+    border-radius:0 0 24px 24px;
+    background:linear-gradient(165deg,#163d74,#135e9a 65%,#063469);
+    box-shadow:inset 0 -4px #032954,0 5px 0 #074874,0 9px 12px #032b537d;
+  }
+  .actions #undo {
+    flex:0 0 clamp(71px,22vw,91px);
+    min-height:54px;
+    border:4px solid #17385b;
+    border-radius:35px;
+    background:
+      radial-gradient(ellipse 45% 24% at 34% 19%,#fff9,transparent 98%),
+      linear-gradient(165deg,#e9f9ff,#72bfe8 60%,#2578b6);
+    color:#11456f;
+    font-size:12px;
+    font-weight:1000;
+    text-shadow:0 1px #fff8;
+    box-shadow:inset 0 2px #fff9,inset 0 -4px #155f9f,0 4px 0 #071f43,0 6px 5px #041c3f9a;
+    transform:none;
+    touch-action:manipulation;
+  }
+  .actions #skip:enabled {
+    min-width:0;
+    min-height:54px;
+    padding:8px 9px;
+    border:4px solid #603922;
+    border-radius:35px;
+    background:
+      radial-gradient(ellipse 43% 27% at 32% 18%,#fffffff0,transparent 96%),
+      linear-gradient(165deg,#ffe99a,#ffb839 42%,#fa7e18 92%);
+    box-shadow:inset 0 2px #fff6bd,inset 0 -5px #b95012,0 5px 0 #633114,0 8px 7px #041b3d9c;
+    color:#fff;
+    font-size:clamp(11px,3vw,13px);
+    font-weight:1000;
+    text-shadow:0 2px 1px #70340d;
+    transform:none;
+    touch-action:manipulation;
+  }
+  .actions #skip:disabled {
+    min-height:54px;
+    border:3px solid #315578;
+    border-radius:35px;
+    background:linear-gradient(#b3ccdc,#789eb8);
+    color:#224b6b;
+    box-shadow:inset 0 2px #e4f5ff8c,inset 0 -3px #4e718e,0 2px #0c345d;
+    opacity:.68;
+    font-weight:900;
+    text-shadow:none;
+  }
+  .actions #undo:active:enabled,
+  .actions #skip:active:enabled {
+    transform:translateY(4px) scale(.99);
+    box-shadow:inset 0 2px #ffffffb2,inset 0 -1px #225c86,0 1px 0 #052c54;
+  }
+  .directions button:focus-visible,
+  .actions button:focus-visible {
+    outline:3px solid #ffeb66;
+    outline-offset:3px;
+  }
+}
+@media (max-width:355px) {
+  .directions { gap:5px; padding:15px 5px 14px; }
+  .directions button,
+  .directions button:nth-child(even) {
+    min-height:55px;
+    height:55px;
+    border-width:4px;
+    font-size:27px;
+  }
+  .actions { padding:7px 5px 11px; gap:6px; }
+  .actions #undo { flex-basis:68px; font-size:11px; }
+  .actions #skip:enabled { font-size:11px; }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  .directions button,
+  .actions #undo,
+  .actions #skip { transition:none; animation:none; }
+}
+
+
+/* RIGHT-HAND CROSSPAD | Actual engine controls, never a decorative fake UI.
+ * DOM arrows: 1=UP 2=RIGHT 3=DOWN 4=LEFT, from engine.DIRS.
+ * Approved board, logo, background, pawns and movement logic stay unchanged.
+ */
+@media (max-width:600px) {
+  .control-deck {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) clamp(157px,52%,188px);
+    align-items:stretch;
+    gap:7px;
+    margin:8px 3px 4px;
+    min-width:0;
+  }
+  /* The right-mounted three-by-three pad belongs to one compact arcade bezel. */
+  #directions.directions {
+    grid-column:2;
+    grid-row:1;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-template-rows:repeat(3,minmax(0,1fr));
+    gap:3px;
+    place-items:center;
+    min-width:0;
+    width:100%;
+    margin:0;
+    padding:9px 6px 13px;
+    border:2px solid #dbf7ff;
+    border-radius:26px;
+    background:
+      radial-gradient(ellipse 65% 55% at 50% 41%,#3e91ce66,transparent 95%),
+      linear-gradient(155deg,#154a88,#1166aa 64%,#083c79);
+    box-shadow:inset 0 3px #dbfaff8a,inset 0 -4px #052d60,0 5px 0 #064271,0 8px 12px #03406c72;
+  }
+  #directions.directions::before {
+    content:"";
+    position:relative;
+    display:block;
+    grid-column:2;
+    grid-row:2;
+    top:auto;right:auto;bottom:auto;left:auto;
+    width:58%;
+    height:58%;
+    border:1px solid #9ac8e4aa;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#9bdcff,#174e82 74%);
+    box-shadow:inset 0 1px #e2faff84,0 1px 3px #06376899;
+    pointer-events:none;
+  }
+  /* Keep the physical-button shape while making the layout a true +.
+     Specific selectors prevent legacy 4-across jewel rules from leaking in. */
+  #directions.directions button:nth-child(n) {
+    display:grid;
+    position:relative;
+    place-items:center;
+    justify-self:stretch;
+    align-self:stretch;
+    flex:none;
+    width:100%;
+    height:auto;
+    min-width:0;
+    min-height:44px;
+    max-height:none;
+    aspect-ratio:1 / 1;
+    margin:0;
+    padding:0 0 3px;
+    border:3px solid #193e66;
+    border-radius:50%;
+    outline:1px solid #a3e8ffae;
+    outline-offset:-1px;
+    font-size:clamp(23px,6.5vw,30px);
+    transform:none;
+    touch-action:manipulation;
+    -webkit-tap-highlight-color:transparent;
+  }
+  #directions.directions button:nth-child(1) {grid-column:2;grid-row:1;}
+  #directions.directions button:nth-child(2) {grid-column:3;grid-row:2;}
+  #directions.directions button:nth-child(3) {grid-column:2;grid-row:3;}
+  #directions.directions button:nth-child(4) {grid-column:1;grid-row:2;}
+  #directions.directions button:nth-child(n):active:enabled {
+    transform:translateY(3px) scale(.97);
+    box-shadow:inset 0 1px 1px #fff8,0 1px 0 var(--arcade-base),0 2px 4px #05294b80;
+  }
+  #directions.directions button:nth-child(n):disabled {
+    transform:none;
+    filter:saturate(.68) brightness(.82);
+    opacity:.82;
+  }
+  #directions.directions:has(button:enabled)::before {
+    background:radial-gradient(circle at 35% 30%,#d9f6ff,#207fc1 74%);
+    box-shadow:inset 0 1px #fff9,0 0 12px #d4f7ff93;
+  }
+  /* One cohesive controller: on the left are the existing two commands.
+     No added actions and no altered phase-dependent button labels. */
+  .control-deck .actions {
+    grid-column:1;
+    grid-row:1;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:center;
+    min-width:0;
+    gap:11px;
+    margin:0;
+    padding:9px 8px 13px;
+    border:2px solid #d9f7ff;
+    border-radius:24px;
+    background:linear-gradient(145deg,#144983,#1268a8 61%,#073b74);
+    box-shadow:inset 0 3px #b3edff83,inset 0 -4px #062e59,0 5px 0 #064271,0 8px 12px #03406c72;
+  }
+  .control-deck .actions #undo,
+  .control-deck .actions #skip {
+    box-sizing:border-box;
+    flex:0 0 auto;
+    width:100%;
+    min-width:0;
+    min-height:49px;
+    margin:0;
+    text-align:center;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    line-height:1.25;
+  }
+  .control-deck .actions #undo {
+    padding:7px 4px;
+    border-radius:26px;
+    font-size:12px;
+  }
+  .control-deck .actions #skip {
+    min-height:72px;
+    padding:9px 7px;
+    border-radius:25px;
+    font-size:clamp(11px,2.8vw,13px);
+  }
+  .control-deck .actions #skip:disabled {
+    min-height:72px;
+    font-size:11px;
+    line-height:1.35;
+    overflow-wrap:anywhere;
+  }
+  #directions.directions button:nth-child(n):focus-visible,
+  .control-deck .actions button:focus-visible {
+    outline:3px solid #ffea67;
+    outline-offset:2px;
+  }
+}
+@media (max-width:355px) {
+  .control-deck {
+    grid-template-columns:minmax(0,1fr) 157px;
+    gap:5px;
+    margin-inline:1px;
+  }
+  #directions.directions {gap:2px;padding:8px 5px 12px;}
+  #directions.directions button:nth-child(n) {font-size:24px;min-height:44px;border-width:3px;}
+  .control-deck .actions {gap:9px;padding:7px 5px 11px;}
+  .control-deck .actions #undo {font-size:11px;min-height:45px;}
+  .control-deck .actions #skip {font-size:11px;min-height:73px;padding:6px 3px;}
+}
+@media (min-width:601px) {
+  /* Wrapper should not affect established desktop layout or control order. */
+  .control-deck {display:contents;}
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  #directions.directions button:nth-child(n) {animation:none;transition:none;}
+}
+
+
+/* ONE CONTROLLER SHELL: no detached command cards outside the ice board. */
+@media (max-width:600px) {
+  .control-deck {
+    position:relative;
+    isolation:isolate;
+    gap:2px;
+    padding:4px 3px 8px;
+    border:3px solid #c9f4ff;
+    border-radius:27px;
+    background:
+      radial-gradient(ellipse at 76% 45%,#2f83c883,transparent 52%),
+      linear-gradient(155deg,#17518e,#146ab1 51%,#09396f 100%);
+    box-shadow:inset 0 3px #e6ffff9a,inset 0 -4px #062f5d,0 5px 0 #074677,0 9px 13px #063e6782;
+  }
+  .control-deck::before {
+    content:"";
+    pointer-events:none;
+    position:absolute;
+    top:17px; bottom:17px;
+    left:calc(100% - clamp(157px,52%,188px) - 6px);
+    width:2px;
+    border-radius:3px;
+    background:linear-gradient(180deg,transparent,#83d7ff75 28%,#c4efff9c 60%,transparent);
+  }
+  .control-deck .actions,
+  #directions.directions {
+    border:0;
+    border-radius:0;
+    background:transparent;
+    box-shadow:none;
+  }
+  .control-deck .actions {
+    padding:10px 6px 10px 5px;
+    gap:10px;
+    justify-content:center;
+  }
+  #directions.directions {padding:8px 5px 11px;}
+  .control-deck .actions #skip:disabled {
+    border:1px solid #a0c6dd68;
+    background:linear-gradient(#b3d8ec48,#80b9d76b);
+    box-shadow:inset 0 1px #ffffff24;
+    color:#e1f6ffd9;
+    text-shadow:0 1px #123f69;
+    opacity:1;
+    font-weight:800;
+  }
+}
+@media (max-width:355px) {
+  .control-deck{padding:3px 2px 7px;}
+  .control-deck .actions{padding:7px 3px 8px;}
+  #directions.directions{padding:8px 3px 11px;}
+}
+
+
+/* RIGHT-HAND CROSSPAD / ONE-PIECE CABINET REFINEMENT
+ * Cosmetic only: four actual legal slide commands, Undo and Skip are untouched.
+ * Remove a decorative centre "button" which could imply a fifth direction.
+ */
+@media (max-width:600px) {
+  .control-deck {
+    gap:5px;
+    padding:8px 7px 10px;
+    border:2px solid #defaff;
+    border-radius:25px 25px 29px 29px;
+    background:
+      radial-gradient(ellipse at 54% 0%,#85c6ed78,transparent 68%),
+      linear-gradient(155deg,#184f8c,#126caa 55%,#07386f);
+    box-shadow:
+      inset 0 2px 0 #e7ffff92,
+      inset 0 -4px 0 #062c5f,
+      0 5px 0 #06466e,
+      0 9px 15px #073e687a;
+  }
+  #directions.directions,
+  .control-deck .actions {
+    border:0;
+    border-radius:0;
+    background:transparent;
+    box-shadow:none;
+    margin:0;
+  }
+  .control-deck .actions {
+    padding:8px 5px;
+    gap:13px;
+    justify-content:center;
+  }
+  #directions.directions {
+    padding:3px 1px 7px;
+    gap:4px;
+  }
+  #directions.directions::before {
+    content:none;
+  }
+  #directions.directions button:nth-child(n):disabled {
+    color:#ffffffef;
+    text-shadow:0 1px 2px #17395cae;
+    filter:saturate(.74) brightness(.87);
+    opacity:.87;
+  }
+  #directions.directions button:nth-child(n):enabled {
+    filter:saturate(1.19);
+    box-shadow:
+      inset 0 2px 2px #ffffffb5,
+      inset 0 -5px 3px #410e237a,
+      0 5px 0 var(--arcade-base),
+      0 8px 0 #032c59,
+      0 11px 9px #021e428a,
+      0 0 13px #e4ffffa6;
+  }
+  .control-deck .actions #skip:disabled {
+    border:0;
+    border-radius:12px;
+    background:transparent;
+    box-shadow:none;
+    color:#e3f6ff;
+    font-size:clamp(10px,2.65vw,12px);
+    font-weight:900;
+    text-shadow:0 1px 2px #083567;
+    opacity:1;
+  }
+  #directions.directions button:nth-child(n):focus-visible,
+  .control-deck .actions button:focus-visible {
+    outline:3px solid #ffdf58;
+    outline-offset:2px;
+  }
+}
+@media (max-width:355px) {
+  .control-deck {padding:7px 5px 9px;gap:3px;}
+  .control-deck .actions {padding:6px 2px;gap:10px;}
+  #directions.directions {padding:4px 0 8px;gap:3px;}
+  .control-deck .actions #skip:disabled {font-size:10px;}
+}
+
+
+/* LIVE ARCADE FEEDBACK: optical press follows real gameplay phases.
+ * This animation is presentation-only and remains on the stable wrapper
+ * while src/app.js replaces the real directional button elements.
+ */
+@media (max-width:600px) {
+  .control-deck::after {
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:0;
+    pointer-events:none;
+    top:-9px;
+    right:5%;
+    width:48%;
+    height:22px;
+    border-radius:50%;
+    background:radial-gradient(ellipse,#c7f9ff,transparent 76%);
+    opacity:0;
+    transform:scale(.65);
+  }
+  .control-deck:has(#directions button:enabled)::after {
+    opacity:.45;
+    transform:scale(1);
+    transition:opacity 180ms ease,transform 180ms ease;
+  }
+  .control-deck[data-command-direction]::after {
+    opacity:1;
+    transform:scale(1.28);
+    background:radial-gradient(ellipse,#fff0a8 0%,#a6ecffb5 48%,transparent 75%);
+    animation:zurash-arcade-signal 530ms ease-out both;
+  }
+  .control-deck[data-command-direction] #directions.directions {
+    filter:drop-shadow(0 -2px 6px #fdfad28a);
+  }
+  .control-deck[data-command-direction="up"] #directions.directions button:nth-child(1),
+  .control-deck[data-command-direction="right"] #directions.directions button:nth-child(2),
+  .control-deck[data-command-direction="down"] #directions.directions button:nth-child(3),
+  .control-deck[data-command-direction="left"] #directions.directions button:nth-child(4) {
+    opacity:1;
+    filter:brightness(1.2) saturate(1.23);
+    transform:translateY(3px) scale(.97);
+    box-shadow:inset 0 1px 2px #ffffffcf,inset 0 -3px #22508480,
+      0 2px 0 var(--arcade-base),0 4px 4px #032547ad,0 0 15px #fff3a7d9;
+    transition:transform 90ms ease,box-shadow 90ms ease;
+  }
+  .control-deck[data-command-action="skip"] .actions #skip {
+    filter:brightness(1.15);
+    box-shadow:inset 0 1px #fff8,0 1px 0 #6b2d0f,0 0 16px #ffeb9db3;
+  }
+  .control-deck[data-command-action="skip"]::after {
+    opacity:1;
+    transform:scale(1.06);
+    background:radial-gradient(ellipse,#ffdb8acc,transparent 78%);
+    animation:zurash-arcade-signal 300ms ease-out both;
+  }
+  @keyframes zurash-arcade-signal {
+    0% {opacity:.9;transform:scale(.6);}
+    55% {opacity:1;transform:scale(1.2);}
+    100% {opacity:0;transform:scale(1.45);}
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  .control-deck::after,
+  .control-deck[data-command-direction]::after,
+  .control-deck[data-command-action="skip"]::after {
+    animation:none;
+    transition:none;
+    transform:none;
+    opacity:0;
+  }
+  .control-deck[data-command-direction="up"] #directions.directions button:nth-child(1),
+  .control-deck[data-command-direction="right"] #directions.directions button:nth-child(2),
+  .control-deck[data-command-direction="down"] #directions.directions button:nth-child(3),
+  .control-deck[data-command-direction="left"] #directions.directions button:nth-child(4) {
+    transition:none;
+    transform:none;
+    box-shadow:0 0 0 3px #fff2a2;
+  }
+}
+
+
+/* TURN HANDOFF / Phase is mirrored from the real #phaseBadge by
+ * mobile-command-feedback.js. Never invent a fifth control or change rules.
+ */
+@media (max-width:600px) {
+  .control-deck {
+    transition:border-color 180ms ease,box-shadow 180ms ease;
+  }
+  .control-deck[data-command-phase="wall"] {
+    border-color:#d9f7ff;
+  }
+  .control-deck[data-command-phase="slide"][data-command-ready="true"] {
+    border-color:#b1f0ff;
+    box-shadow:inset 0 2px #f1ffffa5,inset 0 -4px #062f5d,
+      0 5px 0 #06466e,0 9px 15px #073e687a,0 0 12px #a7f5ff70;
+  }
+  .control-deck[data-command-phase="wall"]::before {
+    background:linear-gradient(180deg,transparent,#ffda7e75 28%,#fcecbfa0 60%,transparent);
+  }
+  .control-deck[data-command-phase="slide"]::before {
+    background:linear-gradient(180deg,transparent,#71e1ff75 28%,#c7faff9c 60%,transparent);
+  }
+  /* The selected existing direction flashes briefly when the legal move
+     list first appears. Not a permanent pulsing target or a new action. */
+  .control-deck[data-command-handoff="slide"] #directions.directions button:enabled {
+    animation:zurash-glide-ready 360ms ease-out 1;
+  }
+  .control-deck[data-command-handoff="slide"]:not([data-command-direction])::after {
+    opacity:1;
+    background:radial-gradient(ellipse,#d0faff 12%,#77e2ffb3 52%,transparent 77%);
+    animation:zurash-arcade-handoff 420ms ease-out 1 both;
+  }
+  .control-deck[data-command-handoff="wall"] .actions #skip:enabled {
+    animation:zurash-action-ready 360ms ease-out 1;
+  }
+  .game:has(.control-deck[data-command-handoff]) #phaseBadge {
+    animation:zurash-phase-badge 360ms ease-out 1;
+  }
+  @keyframes zurash-glide-ready {
+    0% {filter:brightness(1.22) saturate(1.2);transform:translateY(2px) scale(.96);}
+    100% {filter:brightness(1.06) saturate(1.1);transform:none;}
+  }
+  @keyframes zurash-action-ready {
+    0% {filter:brightness(1.25);transform:translateY(2px) scale(.97);}
+    100% {filter:brightness(1);transform:none;}
+  }
+  @keyframes zurash-arcade-handoff {
+    0% {opacity:0;transform:scale(.7);}
+    40% {opacity:.9;transform:scale(1);}
+    100% {opacity:0;transform:scale(1.3);}
+  }
+  @keyframes zurash-phase-badge {
+    0% {filter:brightness(1.32);}
+    100% {filter:brightness(1);}
+  }
+}
+/* Respect BOTH the OS reduced-motion preference and the in-game motion OFF
+ * toggle. A static active-state contrast remains without animated flashing.
+ */
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  .control-deck,
+  .control-deck[data-command-handoff="slide"] #directions.directions button:enabled,
+  .control-deck[data-command-handoff="wall"] .actions #skip:enabled,
+  .game:has(.control-deck[data-command-handoff]) #phaseBadge {
+    animation:none;transition:none;
+  }
+  .control-deck[data-command-handoff="slide"]::after {animation:none;opacity:0;}
+}
+@media (max-width:600px) {
+  html[data-zurash-motion="still"] .control-deck,
+  html[data-zurash-motion="still"] .control-deck::after,
+  html[data-zurash-motion="still"] .control-deck[data-command-handoff="slide"] #directions.directions button:enabled,
+  html[data-zurash-motion="still"] .control-deck[data-command-handoff="wall"] .actions #skip:enabled,
+  html[data-zurash-motion="still"] .game:has(.control-deck[data-command-handoff]) #phaseBadge {
+    animation:none;transition:none;
+  }
+  html[data-zurash-motion="still"] .control-deck::after {opacity:0;}
+}

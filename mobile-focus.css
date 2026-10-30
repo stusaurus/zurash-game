@@ -1,0 +1,782 @@
+/* ZURASH! focused mobile play — second visual state, NOT a new game mode.
+ * The accepted background/logo/Triken are never changed.
+ * The live 7×7/A–E board and its geometry, scores, controls and AI stay native.
+ * Applied only after src/app.js confirms a valid #start action.
+ */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] main {
+    padding-top:2px;
+  }
+  /* Keep the full approved logo on the opening view; during the match
+     a compact wordmark replaces the large billboard, freeing the arena. */
+  html[data-zurash-match-view="play"] .mast {
+    display:none;
+  }
+  html[data-zurash-match-view="play"] header .brand {
+    font-size:0;
+    letter-spacing:normal;
+    text-decoration:none;
+  }
+  html[data-zurash-match-view="play"] header .brand span {
+    display:none;
+  }
+  html[data-zurash-match-view="play"] header .brand::after {
+    content:"ズラッシュ！";
+    display:inline-block;
+    font-size:clamp(16px,4.4vw,19px);
+    font-weight:1000;
+    letter-spacing:-.8px;
+    color:#f7feff;
+    text-shadow:0 2px 2px #073b7d,1px 0 #136dc3,-1px 0 #136dc3,
+      0 0 7px #a6eaff8a;
+    white-space:nowrap;
+  }
+  html[data-zurash-match-view="play"] .game {
+    padding-top:5px;
+    padding-bottom:7px;
+  }
+  /* The help entry remains reachable and meets a 44px touch height. */
+  html[data-zurash-match-view="play"] header #help {
+    min-height:44px;
+    padding:8px 11px;
+  }
+  html[data-zurash-match-view="play"] .game-top {
+    padding-inline:2px;
+    margin-bottom:4px;
+  }
+  html[data-zurash-match-view="play"] #scores.scores {
+    margin-bottom:4px;
+  }
+  /* Keep the complete turn instruction legible; visually attach it to
+     the arena rim, so neither its card nor an extra border competes. */
+  html[data-zurash-match-view="play"] .game .instruction {
+    min-height:45px;
+    border-color:#ccf3ffd6;
+    background:linear-gradient(180deg,#f0fbffe8 0%,#c6ecffda 66%,#a9def5d1 100%);
+    border-bottom:0;
+    box-shadow:inset 0 1px #fff9;
+  }
+  html[data-zurash-match-view="play"] .board-scroll {
+    border-color:#c8efffd6;
+    background:linear-gradient(#c4efffca,#b8e8f9d5 60%,#caefffc6);
+  }
+  html[data-zurash-match-view="play"] #scores.scores {
+    box-shadow:inset 0 1px #fffa,inset 0 -2px #2479b5,0 2px 5px #0e558462;
+  }
+  /* The controller is still a physical arcade unit, but is connected by
+     colour/light to the same ice as the arena, not by another blue card. */
+  html[data-zurash-match-view="play"] .game .control-deck {
+    margin-top:6px;
+    border-color:#d7f7ff;
+    background:
+      radial-gradient(ellipse 70% 95% at 50% -20%,#bfeeff6b,transparent 90%),
+      linear-gradient(165deg,#17548e,#1267a7 58%,#06396f);
+  }
+  html[data-zurash-match-view="play"] .game > .hint {
+    margin:7px 7px 0;
+    padding:0;
+    font-size:10px;
+    line-height:1.25;
+    color:#285b86;
+    text-shadow:0 1px #fff9;
+  }
+  html[data-zurash-match-view="play"] .game .last-move {
+    margin:6px 6px 0;
+    padding:5px 8px;
+    font-size:10px;
+    line-height:1.35;
+    background:#e5f6ffbf;
+    border:1px solid #a8daf3aa;
+    border-radius:11px;
+    box-shadow:none;
+  }
+  html[data-zurash-match-view="play"] .game .motion-control {
+    margin:4px auto 0;
+  }
+  html[data-zurash-match-view="play"] footer {
+    padding-top:5px;
+  }
+}
+@media (max-width:355px) {
+  html[data-zurash-match-view="play"] header .brand::after {
+    font-size:16px;
+  }
+  html[data-zurash-match-view="play"] .game {
+    padding-inline:4px;
+  }
+}
+/* All essential accessibility settings and tap sizes remain unchanged.
+ * The focus style does not animate, so no motion override is necessary. */
+
+
+/* ONE-WORLD FINISH / match-only visual harmonization, Oct 2026
+ * Top HUD, arena rail and arcade controller use the same frosted ice hardware.
+ * The approved board itself, playable positions, controls, and button hitboxes
+ * are deliberately not restyled, resized, moved or covered in this section.
+ */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] {
+    --zurash-frost-highlight:#eefcff;
+    --zurash-frost-edge:#aee8fc;
+    --zurash-frost-shadow:#0f689c;
+    --zurash-frost-ink:#0d4777;
+  }
+
+  /* The upper switch and score act as one compact HUD, not stacked cards. */
+  html[data-zurash-match-view="play"] .game-top {
+    margin:0 3px 4px;
+    gap:5px;
+  }
+  html[data-zurash-match-view="play"] .game-top .mode-switch {
+    background:linear-gradient(170deg,#134b86e3,#126badc9 58%,#10568ed7);
+    border:1px solid #c9f5ffc7;
+    border-radius:17px;
+    box-shadow:inset 0 1px #ecffff8c,0 1px 3px #0e57814e;
+  }
+  html[data-zurash-match-view="play"] .game-top #settings {
+    border-radius:15px;
+    background:linear-gradient(165deg,#f6ffffed,#c8effdec 52%,#8ed0f4e8);
+    border:1px solid #ecffffd4;
+    box-shadow:inset 0 2px #fff9,0 2px 3px #0b5b8947;
+  }
+
+  /* A continuous score strip: avatar and numerical score remain fully live. */
+  html[data-zurash-match-view="play"] #scores.scores {
+    margin:0 3px 5px;
+    gap:2px;
+    padding:3px;
+    min-height:66px;
+    border:1px solid #dcfaffdf;
+    border-radius:18px;
+    background:
+      linear-gradient(180deg,#ddf7ffb3 0%,#91d3efab 55%,#438dc4b9 100%);
+    box-shadow:inset 0 2px #ffffffad,inset 0 -2px #1b73ad8c,0 2px 4px #07537d59;
+  }
+  html[data-zurash-match-view="play"] #scores .score,
+  html[data-zurash-match-view="play"] #scores .score.p2 {
+    border:0;
+    min-width:0;
+    border-radius:14px;
+    box-shadow:inset 0 1px #ffffffad;
+    transition:filter 120ms ease;
+  }
+  html[data-zurash-match-view="play"] #scores .score.p1 {
+    background:linear-gradient(110deg,#fff3e4e6,#ffdcbaeb 70%,#f5b87ec9);
+  }
+  html[data-zurash-match-view="play"] #scores .score.p2 {
+    background:linear-gradient(105deg,#ecfcffeb,#c4eeffed 70%,#91ccefe0);
+  }
+  html[data-zurash-match-view="play"] #scores .score.current {
+    box-shadow:inset 0 1px #fff, inset 0 -3px #f1882d,0 0 6px #ffb54e73;
+  }
+  html[data-zurash-match-view="play"] #scores .score.current.p2 {
+    box-shadow:inset 0 1px #fff, inset 0 -3px #148be0,0 0 6px #6cd4ff78;
+  }
+  html[data-zurash-match-view="play"] #scores .score-count {
+    font-weight:1000;
+    text-shadow:0 1px #fffefa;
+  }
+  html[data-zurash-match-view="play"] #scores .score strong {
+    color:#124778;
+    font-weight:1000;
+  }
+
+  /* The top instruction is the actual arena lip: use a shared white-cyan rim
+     so the world isn't divided into another floating instruction card. */
+  html[data-zurash-match-view="play"] .game .instruction {
+    position:relative;
+    margin:3px 3px 0;
+    border:1px solid #d8faffdf;
+    border-bottom:0;
+    border-radius:15px 15px 0 0;
+    background:linear-gradient(180deg,#eafaffeb 0%,#bcebfbe8 78%,#a5daefdd 100%);
+    box-shadow:inset 0 2px #fff8;
+  }
+  html[data-zurash-match-view="play"] .board-scroll {
+    /* Preserve the original 2px arena gutter, or the live board shrinks. */
+    margin:0 2px;
+    border:1px solid #d8faffdf;
+    border-top:0;
+    border-bottom:0;
+    border-radius:0;
+    background:linear-gradient(180deg,#a7ddf2d6,#a4dbf2c5 52%,#d2f6ffd9);
+    box-shadow:inset 1px 0 #fff6,inset -1px 0 #fff6;
+  }
+  html[data-zurash-match-view="play"] .game #phaseTitle {color:#0a4479;}
+  html[data-zurash-match-view="play"] .game #message {color:#205d85;}
+  html[data-zurash-match-view="play"] .game #phaseBadge {
+    border-color:#fff0c0;
+    box-shadow:inset 0 1px #fff8,0 2px 0 #b66524,0 0 6px #ffbb5480;
+  }
+
+  /* The controller remains physically arcade-inspired. A carved ice bezel,
+     not a flat dark page card: direction caps keep their distinct colors. */
+  html[data-zurash-match-view="play"] .game .control-deck {
+    margin:6px 3px 3px;
+    border:2px solid #dbfaff;
+    border-radius:27px 27px 29px 29px;
+    background:
+      linear-gradient(135deg,#ffffff18 0%,transparent 30%,#d3f8ff0b 66%,transparent 84%),
+      radial-gradient(ellipse at 45% -10%,#91d8f67d,transparent 70%),
+      linear-gradient(160deg,#115e9b,#136ca6 55%,#063a74 100%);
+    box-shadow:inset 0 3px #fff7,inset 0 -4px #064d82,0 4px 0 #08608e,
+      0 7px 12px #064b7870;
+  }
+  html[data-zurash-match-view="play"] #directions.directions button:nth-child(n):focus-visible,
+  html[data-zurash-match-view="play"] .control-deck button:focus-visible,
+  html[data-zurash-match-view="play"] .game-top button:focus-visible {
+    outline:3px solid #ffe26b;
+    outline-offset:2px;
+  }
+  html[data-zurash-match-view="play"] .game .last-move {
+    background:#d8f2ffb9;
+    border-color:#c0e8ffad;
+    color:#195782;
+  }
+}
+@media (max-width:355px) {
+  html[data-zurash-match-view="play"] #scores.scores { min-height:64px; }
+  html[data-zurash-match-view="play"] #scores .score,
+  html[data-zurash-match-view="play"] #scores .score.p2 {
+    padding-top:4px; padding-bottom:4px;
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  html[data-zurash-match-view="play"] #scores .score,
+  html[data-zurash-match-view="play"] #scores .score.p2 {transition:none;}
+}
+
+
+
+/* SEAMLESS TOP VISOR — the mode selector is etched into the live score rail,
+ * instead of sitting in two floating UI cards. Match view only.
+ * Every existing button, label and mode handler remains unchanged. */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] .game-top {
+    position:relative;
+    display:flex;
+    align-items:stretch;
+    gap:0;
+    min-width:0;
+    min-height:46px;
+    margin:0 3px;
+    padding:2px 4px 0;
+    border:1px solid #ddfaffdf;
+    border-bottom:0;
+    border-radius:19px 19px 0 0;
+    background:linear-gradient(180deg,#d9f6ffcc 0%,#a3d9f1bd 68%,#92d2edb6 100%);
+    box-shadow:inset 0 2px #fff9;
+  }
+  html[data-zurash-match-view="play"] .game-top .mode-switch {
+    display:flex;
+    flex:1 1 auto;
+    align-self:stretch;
+    min-width:0;
+    min-height:44px;
+    gap:3px;
+    padding:1px 2px;
+    border:0;
+    border-radius:0;
+    background:none;
+    box-shadow:none;
+  }
+  html[data-zurash-match-view="play"] .game-top .mode-switch button {
+    flex:1 1 0;
+    min-width:0;
+    min-height:42px;
+    padding:6px 3px;
+    border:1px solid transparent;
+    border-radius:13px 13px 8px 8px;
+    background:transparent;
+    color:#175580;
+    box-shadow:none;
+    text-shadow:0 1px #fff8;
+    font-size:clamp(10px,2.7vw,12px);
+    font-weight:900;
+  }
+  html[data-zurash-match-view="play"] .game-top .mode-switch button.active {
+    border-color:#d7faffd0;
+    background:linear-gradient(155deg,#91dcffef,#2a9bdcef 56%,#1265a8);
+    box-shadow:inset 0 2px #e7ffffba,inset 0 -2px #12558da0;
+    color:white;
+    text-shadow:0 1px 2px #0a417a;
+  }
+  html[data-zurash-match-view="play"] .game-top #settings {
+    flex:0 0 auto;
+    align-self:stretch;
+    min-height:44px;
+    min-width:76px;
+    margin:0;
+    padding:6px 8px;
+    border:0;
+    border-left:1px solid #e7ffffb6;
+    border-radius:0 16px 0 0;
+    background:none;
+    box-shadow:none;
+    color:#135583;
+    font-size:clamp(10px,2.65vw,12px);
+    font-weight:900;
+    text-shadow:0 1px #fff9;
+  }
+  html[data-zurash-match-view="play"] .game-top #settings:active {
+    background:#d9f6ff75;
+  }
+  /* The scoreboard becomes the lower half of the same connected rail. */
+  html[data-zurash-match-view="play"] #scores.scores {
+    margin:0 3px 5px;
+    border-top:0;
+    border-radius:0 0 18px 18px;
+    box-shadow:inset 0 -2px #1b73ad85,0 3px 5px #0a537e5c;
+  }
+  html[data-zurash-match-view="play"] .game-top button:focus-visible {
+    position:relative;
+    z-index:1;
+    outline:3px solid #ffda57;
+    outline-offset:0;
+  }
+}
+@media (max-width:355px) {
+  html[data-zurash-match-view="play"] .game-top {
+    padding-inline:3px;
+  }
+  html[data-zurash-match-view="play"] .game-top .mode-switch {
+    gap:1px;
+    padding-inline:0;
+  }
+  html[data-zurash-match-view="play"] .game-top .mode-switch button {
+    font-size:10px;
+    padding-inline:1px;
+  }
+  html[data-zurash-match-view="play"] .game-top #settings {
+    min-width:70px;
+    padding-inline:4px;
+    font-size:10px;
+  }
+}
+
+
+
+/* FINAL CHROME PASS — quiet navigation with a real arcade hierarchy.
+ * Start screen stays unchanged. Only presentation on active mobile matches.
+ * The approved art, board geometry and existing button handlers stay intact.
+ */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:47px;
+    padding:1px 5px;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+  }
+  html[data-zurash-match-view="play"] header .brand {
+    display:inline-flex;
+    align-items:center;
+    min-height:44px;
+    padding:0 4px;
+    border:0;
+    background:transparent;
+  }
+  html[data-zurash-match-view="play"] header .brand::after {
+    font-size:clamp(16px,4.4vw,19px);
+    color:#faffff;
+    text-shadow:0 2px 2px #063a77,1px 0 #0965b1,-1px 0 #0965b1,
+      0 0 7px #a6eaff9a;
+  }
+
+  /* Recast the tall blue "遊び方" card as a compact physical help key.
+     The button retains its text + explicit accessible name in the DOM. */
+  html[data-zurash-match-view="play"] header #help {
+    display:grid;
+    place-items:center;
+    box-sizing:border-box;
+    flex:0 0 44px;
+    width:44px;
+    height:44px;
+    min-height:44px;
+    min-width:44px;
+    margin:0;
+    padding:0;
+    border:2px solid #d6f9ff;
+    border-radius:50%;
+    background:
+      radial-gradient(ellipse at 35% 20%,#ffffffec,transparent 49%),
+      linear-gradient(160deg,#e2faff,#81cdeb 56%,#348bc4);
+    color:transparent;
+    font-size:0;
+    line-height:1;
+    text-shadow:none;
+    box-shadow:inset 0 2px #fff9,inset 0 -3px #236a9f,
+      0 3px 0 #104e7c,0 4px 7px #07376465;
+    touch-action:manipulation;
+    -webkit-tap-highlight-color:transparent;
+  }
+  html[data-zurash-match-view="play"] header #help::before {
+    content:"?";
+    display:block;
+    font-size:23px;
+    font-weight:1000;
+    line-height:1;
+    color:#155b91;
+    text-shadow:0 1px #fff;
+  }
+  html[data-zurash-match-view="play"] header #help:active {
+    transform:translateY(2px);
+    box-shadow:inset 0 1px #fff8,inset 0 -1px #1d6f9e,0 1px 0 #104e7c;
+  }
+  html[data-zurash-match-view="play"] header #help:focus-visible,
+  html[data-zurash-match-view="play"] header .brand:focus-visible,
+  html[data-zurash-match-view="play"] #motionToggle:focus-visible {
+    outline:3px solid #ffe166;
+    outline-offset:2px;
+  }
+
+  /* Keep the rules reminder legible, but not a second menu.
+     It lives directly below the physical command deck. */
+  html[data-zurash-match-view="play"] .game > p.hint:not(#boardScrollHint) {
+    margin:7px 7px 0;
+    padding:4px 3px;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+    font-size:11px;
+    font-weight:700;
+    line-height:1.45;
+    color:#15517e;
+    text-shadow:0 1px #f6ffffcc;
+  }
+  /* "Motion" is a small hardware switch, not another competing action key. */
+  html[data-zurash-match-view="play"] .game .motion-control {
+    display:flex;
+    justify-content:flex-end;
+    margin:2px 6px 0;
+  }
+  html[data-zurash-match-view="play"] .game #motionToggle {
+    box-sizing:border-box;
+    min-height:44px;
+    min-width:86px;
+    margin:0;
+    padding:8px 11px;
+    border:1px solid #e1faffdf;
+    border-radius:22px;
+    background:linear-gradient(155deg,#e5f9ffe8,#a2ddf9de 70%,#6ab4e0d6);
+    color:#115582;
+    font-size:11px;
+    font-weight:900;
+    text-shadow:0 1px #fff9;
+    box-shadow:inset 0 1px #fff9,inset 0 -2px #479bc8,0 2px 3px #0b4e7b54;
+  }
+  html[data-zurash-match-view="play"] .game #motionToggle[aria-pressed="true"] {
+    background:linear-gradient(155deg,#f6fdff,#bceeff 68%,#61b8e9);
+    color:#075080;
+    border-color:#fff;
+  }
+  /* Branding is already supplied by the small top wordmark during play.
+     Remove decorative footer repetition only, never status or controls. */
+  html[data-zurash-match-view="play"] footer {display:none;}
+}
+@media (max-width:355px) {
+  html[data-zurash-match-view="play"] header {padding-inline:2px;}
+  html[data-zurash-match-view="play"] .game > p.hint:not(#boardScrollHint) {
+    font-size:10.5px;
+    margin-inline:3px;
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  html[data-zurash-match-view="play"] header #help {transition:none;}
+}
+
+
+/* STAR STOP / A glowing rule etched into the ice, not another floating card.
+ * The live game remains the source of truth for stars and possible moves.
+ * The text stays outside the interactive board and crosspad hit regions. */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] .game > p.star-tip.hint:not(#boardScrollHint) {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    min-height:32px;
+    margin:5px 4px 0;
+    padding:5px 7px;
+    border:0;
+    border-radius:0;
+    background:linear-gradient(90deg,transparent 0%,#effbfff0 14%,#f7fefff5 53%,#e4f8fff0 86%,transparent 100%);
+    box-shadow:none;
+    color:#10456f;
+    font-size:clamp(10.5px,2.95vw,12px);
+    font-weight:850;
+    line-height:1.35;
+    letter-spacing:0;
+    text-align:left;
+    text-shadow:0 1px #ffffff;
+  }
+  html[data-zurash-match-view="play"] .game > p.star-tip .star-tip-icon {
+    display:grid;
+    flex:0 0 25px;
+    width:25px;
+    height:25px;
+    place-items:center;
+    border-radius:50%;
+    border:1px solid #ffffffb9;
+    background:radial-gradient(circle at 30% 24%,#fffbe5,#ffe39e 46%,#fbb334 100%);
+    color:#e88d04;
+    font-size:17px;
+    font-weight:900;
+    line-height:1;
+    text-shadow:0 1px #fff8,0 0 3px #fff3a1;
+    box-shadow:inset 0 1px #fff8,0 1px 2px #0f5a7b24;
+  }
+  html[data-zurash-match-view="play"] .game > p.star-tip > span:last-child {
+    min-width:0;
+    max-width:100%;
+    overflow-wrap:anywhere;
+  }
+  /* Slightly tighten the idle space, but preserve a 44px motion-control target. */
+  html[data-zurash-match-view="play"] .game .motion-control {
+    margin-top:1px;
+  }
+}
+@media (max-width:355px) {
+  html[data-zurash-match-view="play"] .game > p.star-tip.hint:not(#boardScrollHint) {
+    gap:5px;
+    margin:5px 2px 0;
+    padding:4px 5px;
+    font-size:10.5px;
+    line-height:1.3;
+  }
+  html[data-zurash-match-view="play"] .game > p.star-tip .star-tip-icon {
+    flex-basis:23px;
+    width:23px;height:23px;
+    font-size:16px;
+  }
+}
+
+
+/* ICE MATERIAL MATCH — unify light direction and bevel depth of the raised
+   arena and physical controller. Surface paint only: no grid, sizing,
+   hit testing, character art, movement, or shadow overlay on game cells. */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] .game {
+    --arena-edge-glow:#d8faff;
+    --arena-edge-mid:#69bce6;
+    --arena-edge-dark:#176d9e;
+    --arena-ground-shadow:#043c6b78;
+  }
+  html[data-zurash-match-view="play"] .board-wrap {
+    border-color:var(--arena-edge-glow);
+    /* Bevel goes outward from the existing board border: no box sizing change. */
+    box-shadow:
+      inset 0 2px 0 #ffffffd9,
+      inset 0 -2px 0 #5db9e252,
+      0 3px 0 var(--arena-edge-mid),
+      0 7px 0 var(--arena-edge-dark),
+      0 11px 16px var(--arena-ground-shadow);
+  }
+  html[data-zurash-match-view="play"] .game .control-deck {
+    border-color:var(--arena-edge-glow);
+    background:
+      linear-gradient(150deg,#ffffff26 0%,transparent 28%,#d2f9ff0a 73%),
+      radial-gradient(ellipse at 53% -15%,#a7efffaa,transparent 69%),
+      linear-gradient(158deg,#236caa 0%,#1766a2 52%,#073a73 100%);
+    box-shadow:
+      inset 0 2px 0 #ffffffc7,
+      inset 0 -3px 0 #0e5183,
+      0 3px 0 var(--arena-edge-mid),
+      0 7px 0 var(--arena-edge-dark),
+      0 11px 16px var(--arena-ground-shadow);
+  }
+  /* A soft ice reflection shared between the board's upper lip and the
+     controller casing. Use backgrounds only, never interactive overlays. */
+  html[data-zurash-match-view="play"] .game .instruction {
+    border-color:var(--arena-edge-glow);
+    background:
+      linear-gradient(104deg,#ffffff47 0%,transparent 26%,#ffffff20 67%,transparent 95%),
+      linear-gradient(180deg,#ecfcfff2,#c6efffe2 74%,#a0dcf2d8);
+  }
+  html[data-zurash-match-view="play"] .game #phaseBadge {
+    box-shadow:inset 0 2px #ffffffc2,0 2px 0 #bc6928,0 3px 5px #093c5b49;
+  }
+  /* Decorative command-divider is stationary; all four real arrow buttons
+     keep their independently illuminated legal/disabled states. */
+  html[data-zurash-match-view="play"] .control-deck::before {
+    background:linear-gradient(180deg,transparent,#d7faff8c 30%,#8edcf8a3 58%,transparent);
+  }
+}
+
+
+/* FAST INPUT RESPONSE — tactile press begins at pointerdown, not click.
+ * All selectors target existing buttons; never intercept or invent a move. */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"]
+  .control-deck[data-command-press="up"] #directions.directions button:nth-child(1):enabled,
+  html[data-zurash-match-view="play"]
+  .control-deck[data-command-press="right"] #directions.directions button:nth-child(2):enabled,
+  html[data-zurash-match-view="play"]
+  .control-deck[data-command-press="down"] #directions.directions button:nth-child(3):enabled,
+  html[data-zurash-match-view="play"]
+  .control-deck[data-command-press="left"] #directions.directions button:nth-child(4):enabled {
+    transform:translateY(4px) scale(.96);
+    filter:brightness(1.22) saturate(1.19);
+    box-shadow:inset 0 2px 2px #fff9, inset 0 -1px #22508480,
+      0 1px 0 var(--arcade-base),0 3px 4px #022846c9,
+      0 0 12px #d5f6ffb5;
+    transition:transform 50ms ease-out,box-shadow 50ms ease-out,filter 50ms ease-out;
+  }
+  html[data-zurash-match-view="play"] .control-deck[data-command-press="skip"] #skip:enabled,
+  html[data-zurash-match-view="play"] .control-deck[data-command-press="undo"] #undo:enabled {
+    transform:translateY(3px) scale(.985);
+    filter:brightness(1.08);
+    box-shadow:inset 0 2px #fff6,0 1px 0 #133856,0 2px 3px #04213a94;
+    transition:transform 50ms ease-out,box-shadow 50ms ease-out;
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  html[data-zurash-match-view="play"] .control-deck[data-command-press] button {
+    transition:none !important;
+  }
+}
+@media (max-width:600px) {
+  html[data-zurash-motion="still"] .control-deck[data-command-press] button {
+    transition:none !important;
+  }
+}
+
+
+/* PHONE ERGONOMICS / Real iPhone browser viewport and home indicator.
+ * Reserve space only below the game; never shrink or float over the board.
+ * The research boards retain their native horizontal scroll behavior. */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] {
+    scroll-padding-bottom:calc(18px + env(safe-area-inset-bottom, 0px));
+  }
+  html[data-zurash-match-view="play"] main {
+    padding-bottom:calc(18px + env(safe-area-inset-bottom, 0px));
+  }
+  html[data-zurash-match-view="play"] .control-deck button,
+  html[data-zurash-match-view="play"] #motionToggle {
+    -webkit-user-select:none;
+    user-select:none;
+    -webkit-touch-callout:none;
+    touch-action:manipulation;
+    scroll-margin-bottom:calc(14px + env(safe-area-inset-bottom, 0px));
+  }
+  /* Allow a game board wider than the phone to scroll; touch does not
+     select decorative text and horizontal panning stays native. */
+  html[data-zurash-match-view="play"] .board-scroll {
+    overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+}
+
+
+/* THUMB-VIEW SCORE GLANCE — iPhone overlap correction, stage 23.
+ * The two actions and mirrored score occupy DISTINCT CSS grid tracks.
+ * Never position the score over a hitbox; preserve the native 44px+ controls,
+ * the right-hand crosspad, and board geometry. */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] .game .control-deck {
+    grid-template-rows:minmax(24px,auto) minmax(0,1fr);
+    column-gap:5px;
+    row-gap:0;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck #directions.directions {
+    grid-column:2;
+    grid-row:1 / span 2;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions {
+    grid-column:1;
+    grid-row:2;
+    justify-content:space-between;
+    gap:4px;
+    padding:2px 5px 3px;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions #undo {
+    min-height:44px;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions #skip {
+    min-height:69px;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .mobile-score-glance {
+    display:grid;
+    grid-column:1;
+    grid-row:1;
+    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+    align-items:center;
+    align-self:start;
+    justify-self:stretch;
+    position:relative;
+    z-index:2;
+    pointer-events:none;
+    top:auto;
+    left:auto;
+    width:100%;
+    min-width:0;
+    min-height:24px;
+    margin:0;
+    padding:2px 5px;
+    gap:2px;
+    box-sizing:border-box;
+    border:1px solid #c6f2ffb5;
+    border-radius:14px;
+    background:linear-gradient(170deg,#0b457dc9,#073368de);
+    box-shadow:inset 0 1px #ffffff4d,0 1px 2px #03254f63;
+    color:#f7feff;
+    font-size:clamp(10px,2.8vw,12px);
+    line-height:1.1;
+    font-variant-numeric:tabular-nums;
+    text-shadow:0 1px 2px #05294c;
+    white-space:nowrap;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance:not([data-ready="true"]) {
+    visibility:hidden;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    min-width:0;
+    opacity:.76;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player.current {
+    opacity:1;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player::before {
+    content:"";
+    flex:0 0 7px;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:linear-gradient(#ffdf8f,#f57e39);
+    box-shadow:0 0 0 1px #fff9,0 0 4px #ffc65d;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-p2::before {
+    background:linear-gradient(#d0faff,#49bded);
+    box-shadow:0 0 0 1px #fff9,0 0 4px #73ddff;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player.current b {
+    color:#fff2a5;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-turn {
+    font-size:clamp(8px,2.2vw,10px);
+    font-weight:800;
+    color:#d5f5ff;
+    letter-spacing:-.35px;
+  }
+}
+@media (max-width:355px) {
+  html[data-zurash-match-view="play"] .game .control-deck .mobile-score-glance {
+    padding-inline:2px;
+    gap:0;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions {
+    padding:1px 3px 2px;
+    gap:3px;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions #skip {
+    min-height:73px;
+  }
+}

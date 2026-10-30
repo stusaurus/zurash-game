@@ -1,3 +1,4 @@
+import { slideByBoard } from "./tap-target.js";
 import { test, expect } from "@playwright/test";
 import { initial, apply, movableWalls, key } from "../../src/engine.js";
 import { choose, seeded } from "../../src/ai.js";
@@ -13,7 +14,7 @@ async function doAction(page, state, action) {
       .click();
     await page.locator(`[data-cell="${action.wall.to}"]`).click();
   } else await page.locator("#skip").click();
-  await page.locator("#directions button").nth(action.dir).click();
+  await slideByBoard(page,action.dir);
   const n = apply(state, action);
   if (n.winner === null)
     await expect(page.locator("#turnCount")).toHaveText(`${n.ply + 1}手目`);
@@ -66,6 +67,12 @@ test("responsive board, dialogs, and exact reference asset", async ({
 test("wall selection, shift, undo, skip, slide, local handoff, victory and rematch", async ({
   page,
 }, testInfo) => {
+  // This is an entire seeded match (up to 100 plies), followed by Undo,
+  // final-move replay and rematch. Motion is independently covered by the
+  // dedicated WebKit glide regression tests; do not spend the CI budget on
+  // decorative transitions during this correctness-focused full playthrough.
+  test.setTimeout(180000);
+  await page.emulateMedia({reducedMotion:"reduce"});
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
   await local(page);
@@ -138,7 +145,7 @@ test("wall selection, shift, undo, skip, slide, local handoff, victory and remat
   await expect(page.locator("#result")).toBeHidden();
   await expect(page.locator("#turnCount")).toHaveText("1手目");
   await page.locator("#skip").click();
-  await page.locator("#directions button:not([disabled])").first().click();
+  await slideByBoard(page);
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect(page.locator("#phaseTitle")).toContainText("プレイヤー2");
   await page.locator("#undo").click();
@@ -153,7 +160,7 @@ test("CPU worker responds and undo returns to human turn; reset cancels pending 
   page.on("pageerror", (e) => errors.push(String(e)));
   await page.goto("/");
   await page.locator("#skip")[press]();
-  await page.locator("#directions button:not([disabled])").first()[press]();
+  await slideByBoard(page);
   await expect(page.locator("#turnCount")).toHaveText("3手目", {
     timeout: 30000,
   });
@@ -161,7 +168,7 @@ test("CPU worker responds and undo returns to human turn; reset cancels pending 
   await page.locator("#undo")[press]();
   await expect(page.locator("#turnCount")).toHaveText("1手目");
   await page.locator("#skip")[press]();
-  await page.locator("#directions button:not([disabled])").first()[press]();
+  await slideByBoard(page);
   await page.locator("#settings")[press]();
   await page.locator("#start")[press]();
   await expect(page.locator("#turnCount")).toHaveText("1手目");
@@ -177,7 +184,7 @@ test("CPU continues on turn four (second worker response)", async ({ page }, tes
   for (let humanTurn = 0; humanTurn < 2; humanTurn++) {
     await expect(page.locator("#skip")).toBeEnabled({ timeout: 30000 });
     await page.locator("#skip")[press]();
-    await page.locator("#directions button:not([disabled])").first()[press]();
+    await slideByBoard(page);
     await expect(page.locator("#turnCount")).toHaveText(
       `${2 * humanTurn + 3}手目`, { timeout: 30000 },
     );
@@ -198,7 +205,7 @@ test("challenge mode is selectable, survives CPU turns, and can switch to normal
   await page.locator("#start")[press]();
   await expect(page.locator("#scores")).toContainText("CPU（つよい）");
   await page.locator("#skip")[press]();
-  await page.locator("#directions button:not([disabled])").first()[press]();
+  await slideByBoard(page);
   await expect(page.locator("#turnCount")).toHaveText("3手目", { timeout: 30000 });
   await page.locator("#settings")[press]();
   await page.locator("#cpuLevel").selectOption("strong");
@@ -206,7 +213,7 @@ test("challenge mode is selectable, survives CPU turns, and can switch to normal
   await expect(page.locator("#scores")).toContainText("CPU（恐つよ）");
   for (let i = 0; i < 2; i++) {
     await page.locator("#skip")[press]();
-    await page.locator("#directions button:not([disabled])").first()[press]();
+    await slideByBoard(page);
     await expect(page.locator("#turnCount")).toHaveText(`${i * 2 + 3}手目`, { timeout: 30000 });
   }
   expect(errors).toEqual([]);

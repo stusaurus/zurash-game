@@ -104,6 +104,7 @@ function setPose(p, pose, duration = 0) {
     : null;
 }
 function resetMotion() {
+  clearIceVisual();
   facing.fill("right");
   tokenEls.forEach((el, p) => {
     clearTimeout(poseTimers[p]);
@@ -224,6 +225,9 @@ function render() {
       (target ? " target" : "") +
       (stop ? " stop" : "");
     b.dataset.cell = i;
+    // The board itself is the mobile glide controller. This is the real
+    // direction from slideOptions(), not a parallel movement calculation.
+    if (stop) b.dataset.slideDir = String(stop.dir);
     const item = state.players.includes(i)
       ? `プレイヤー${state.players.indexOf(i) + 1}`
       : wall >= 0
@@ -263,7 +267,7 @@ function render() {
   $("scores").innerHTML = [0, 1]
     .map(
       (p) =>
-        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === targetScore - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(targetScore - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${CPU_LEVEL_NAMES[activeSettings.level]}）` : "プレイヤー2"}</strong><small>${p === 0 ? "オレンジ" : "みずいろ"} · ${state.scores[p]} / ${targetScore}${state.scores[p] === targetScore - 1 && state.winner === null ? " · あと1個で勝ち！" : ""}</small></div>`,
+        `<div class="score p${p + 1} ${state.turn === p ? "current" : ""} ${state.scores[p] === targetScore - 1 && state.winner === null ? "match-point" : ""}"><span class="stars">${"★".repeat(state.scores[p])}${"☆".repeat(targetScore - state.scores[p])}</span><strong>${p === 0 ? (mode === "cpu" ? "あなた" : "プレイヤー1") : mode === "cpu" ? `CPU（${CPU_LEVEL_NAMES[activeSettings.level]}）` : "プレイヤー2"}</strong><small><span class="score-color">${p === 0 ? "オレンジ" : "みずいろ"} · </span><span class="score-count">${state.scores[p]} / ${targetScore}</span>${state.scores[p] === targetScore - 1 && state.winner === null ? '<span class="score-match"> · あと1個で勝ち！</span>' : ""}</small></div>`,
     )
     .join("");
   const last = moveLog.at(-1);
@@ -285,7 +289,7 @@ function render() {
         ? (phase === "wall" ? "壁をずらしています…" : "トリケンが滑走中！")
         : cpuTurn()
           ? "CPUが考えています…"
-          : `${mode === "cpu" ? "あなた" : `プレイヤー${state.turn + 1}`}：${phase === "wall" ? "壁をずらそう" : "方向を選んで滑ろう"}`;
+          : `${mode === "cpu" ? "あなた" : `プレイヤー${state.turn + 1}`}：${phase === "wall" ? "壁をずらそう" : (window.matchMedia("(max-width:600px)").matches ? "光るマスに滑ろう" : "方向を選んで滑ろう")}`;
   $("message").textContent =
     (seen.get(key(state)) || 0) >= 3
       ? "同じ配置が続いています。別の壁や方向を試そう。"
@@ -293,11 +297,15 @@ function render() {
         ? selected === null
           ? "光る壁をタップ。動かさず進んでもOK。"
           : "矢印のマスをタップして、壁を1マス移動。"
-        : "光る停止マス、または下の矢印をタップ。";
+        : window.matchMedia("(max-width:600px)").matches
+          ? "光る停止マスをタップして滑ろう！"
+          : "光る停止マス、または下の矢印をタップ。";
   $("turnCount").textContent = `${state.winner === null ? state.ply + 1 : state.ply}手目`;
   $("skip").disabled = locked || phase !== "wall";
   $("skip").textContent =
-    phase === "wall" ? "壁を動かさずに滑る →" : "停止マスか矢印を選ぼう";
+    phase === "wall"
+      ? (window.matchMedia("(max-width:600px)").matches ? "そのまま滑る" : "壁を動かさずに滑る →")
+      : (window.matchMedia("(max-width:600px)").matches ? "停止マスをタップ" : "停止マスか矢印を選ぼう");
   $("undo").disabled = learningActive() || busy || (!history.length && phase === "wall");
   renderLearning();
   $("directions").replaceChildren();
@@ -360,6 +368,59 @@ function flash(at) {
   void el.offsetWidth;
   el.classList.add("pop");
 }
+function showIceVisual(from, to, travelMs, landing = false, scored = false) {
+  // Visual-only, never a board cell or an input. Works for human and CPU.
+  if (!window.matchMedia("(max-width:600px)").matches || !shouldAnimate()) return;
+  const board = $("board"), wrap = board.parentElement;
+  let layer = wrap.querySelector(".ice-glide-vfx");
+  if (!layer) {
+    layer = document.createElement("div");
+    layer.className = "ice-glide-vfx";
+    layer.setAttribute("aria-hidden", "true");
+    wrap.append(layer);
+  }
+  layer.replaceChildren();
+  const width = widthOf(state), height = heightOf(state);
+  const fx = document.createElement("span");
+  if (landing) {
+    // Four short crystalline glints give a tactile "landing" sensation.
+    // They live outside #board, never create a tile or receive input.
+    const x = `${((to % width) + 0.5) / width * 100}%`;
+    const y = `${(Math.floor(to / width) + 0.5) / height * 100}%`;
+    layer.style.setProperty("--ice-cell-size", `${board.clientWidth / width}px`);
+    fx.className = scored ? "ice-landing scored" : "ice-landing";
+    fx.style.left = x;
+    fx.style.top = y;
+    for (const angle of [45, 135, 225, 315]) {
+      const shard = document.createElement("span");
+      shard.className = scored ? "ice-shard scored" : "ice-shard";
+      shard.style.left = x;
+      shard.style.top = y;
+      shard.style.setProperty("--ice-shard-angle", `${angle}deg`);
+      layer.append(shard);
+    }
+  } else {
+    const ax = ((from % width) + 0.5) / width * 100;
+    const ay = (Math.floor(from / width) + 0.5) / height * 100;
+    const bx = ((to % width) + 0.5) / width * 100;
+    const by = (Math.floor(to / width) + 0.5) / height * 100;
+    const vertical = Math.abs(by - ay) > .01;
+    fx.className = vertical ? "ice-streak vertical" : "ice-streak";
+    // The streak grows FROM the actual starting tile, so each direction
+    // has the correct orientation; no new state or move computation.
+    fx.classList.toggle("reverse", vertical ? by < ay : bx < ax);
+    fx.style.left = `${vertical ? ax : Math.min(ax, bx)}%`;
+    fx.style.top = `${vertical ? Math.min(ay, by) : ay}%`;
+    fx.style.width = vertical ? "4px" : `${Math.abs(bx - ax)}%`;
+    fx.style.height = vertical ? `${Math.abs(by - ay)}%` : "4px";
+    fx.style.transform = vertical ? "translateX(-50%)" : "translateY(-50%)";
+    fx.style.setProperty("--ice-travel-ms", `${travelMs}ms`);
+  }
+  layer.append(fx);
+}
+function clearIceVisual() {
+  $("board").parentElement.querySelector(".ice-glide-vfx")?.replaceChildren();
+}
 async function playSlide(dir) {
   if (busy || state.winner !== null) return;
   const myEpoch = epoch,
@@ -404,6 +465,7 @@ async function playSlide(dir) {
     if (myEpoch !== epoch) return;
   }
   setPose(player, "slide");
+  showIceVisual(startAt, endAt, travelMs);
   state = next;
   render();
   if (!reducedMotion) {
@@ -415,6 +477,7 @@ async function playSlide(dir) {
   setPose(player, reducedMotion ? "idle" : scored ? "collect" : "stop",
     reducedMotion ? 0 : scored ? 560 : 220);
   if (scored) flash(state.players[player]);
+  showIceVisual(startAt, endAt, travelMs, true, scored);
   if (learningSession && player === 0) {
     learningSession.observe(turnStart, {wall: wallIndex === -1 ? null : {wall: wallIndex, to: state.walls[wallIndex]}, dir});
   }
@@ -423,7 +486,13 @@ async function playSlide(dir) {
   turnStart = clone(state);
   remember();
   render();
+  // runCPU() also renders the live scores immediately. Apply the real
+  // pickup highlight AFTER that draw, or CPU games erase it in the same
+  // JavaScript turn before the mobile glance can mirror it.
   if (cpuTurn()) runCPU();
+  if (scored && shouldAnimate()) {
+    $("scores").querySelector(`.score.p${player + 1}`)?.classList.add("just-scored");
+  }
 }
 function stopCPU() {
   clearTimeout(cpuTimer);

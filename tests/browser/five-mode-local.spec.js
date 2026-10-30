@@ -1,3 +1,4 @@
+import { slideByBoard } from "./tap-target.js";
 import { test, expect } from '@playwright/test';
 import { initial, movableWalls, slideOptions, moveWall } from '../../src/engine.js';
 import { apply } from '../../src/engine.js';
@@ -27,12 +28,12 @@ for (const [index, size, target] of [[4,8,4],[5,9,3],[6,10,3],[7,6,4],[8,11,3]])
     await page.locator(`[data-cell="${wall.to}"]`).click();
     await expect(page.locator('#phaseBadge')).toHaveText('2');
     const dir=slideOptions(moveWall(state,wall))[0].dir;
-    await page.locator('#directions button').nth(dir).click();
+    await slideByBoard(page,dir);
     await expect(page.locator('#turnCount')).toHaveText('2手目');
     await page.locator('#undo').click();
     await expect(page.locator('#turnCount')).toHaveText('1手目');
     await page.locator('#skip').click();
-    await page.locator('#directions button:not([disabled])').first().click();
+    await slideByBoard(page);
     await expect(page.locator('#turnCount')).toHaveText('2手目');
     await page.locator('#settings').click();
     await expect(page.locator('#layout')).toHaveValue(String(index));
@@ -75,7 +76,7 @@ for (const f of fixtures) test(`研究盤面 ${f.mode}: 保存棋譜の得点、
       await page.locator(`[data-cell="${action.wall.to}"]`).click();
     } else await page.locator('#skip').click();
     const next = apply(state, action);
-    await page.locator('#directions button').nth(action.dir).click();
+    await slideByBoard(page,action.dir);
     if (next.scores[state.turn] > state.scores[state.turn]) {
       scores++;
       await expect(page.locator('#lastMove')).toContainText('ゲット');

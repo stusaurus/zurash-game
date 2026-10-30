@@ -26,9 +26,12 @@ jobs:
       - name: Prepare static files only
         run: |
           mkdir -p dist/src dist/assets
-          # Include every root stylesheet; the ice-world skin is not part
-          # of style.css and must survive the Pages static export.
+          # Publish all root-level stylesheets. The ice-world and mobile
+          # HUD are loaded dynamically, so omitting them silently breaks the UI.
           cp index.html *.css dist/
+          for stylesheet in style.css world.css world-mobile.css mobile-hud.css mobile-focus.css mobile-tap.css; do
+            test -s "dist/${stylesheet}"
+          done
           cp src/*.js dist/src/
           # Publish every committed visual asset, including future sprite frames.
           cp -a assets/. dist/assets/

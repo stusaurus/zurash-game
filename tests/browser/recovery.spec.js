@@ -1,3 +1,4 @@
+import { slideByBoard } from "./tap-target.js";
 import {test,expect} from '@playwright/test';
 for (const failure of ['constructor','postMessage','error','invalid','timeout']) {
  test(`CPU safely recovers from ${failure}`, async({page})=>{
@@ -17,7 +18,7 @@ for (const failure of ['constructor','postMessage','error','invalid','timeout'])
   for(let turn=0;turn<3;turn++){
    await expect(page.locator('#skip')).toBeEnabled();
    await page.locator('#skip').click();
-   await page.locator('#directions button:not([disabled])').first().click();
+   await slideByBoard(page);
    await expect(page.locator('#turnCount')).toHaveText(`${turn*2+3}手目`,{timeout:15000});
   }
   expect(errors).toEqual([]);
@@ -33,7 +34,7 @@ test('reset terminates thinking worker; a late reply cannot alter a new local ga
   };
  });
  await page.goto('/');
- await page.locator('#skip').click();await page.locator('#directions button:not([disabled])').first().click();
+ await page.locator('#skip').click();await slideByBoard(page);
  await expect(page.locator('#phaseTitle')).toContainText('CPUが考えています');
  await page.locator('#localMode').click();await page.locator('#start').click();
  await expect(page.locator('#turnCount')).toHaveText('1手目');
@@ -58,7 +59,7 @@ test('undo keeps match seed; confirmed new match replaces it',async({page})=>{
   window.Worker=class {postMessage(data){window.cpuRequests.push(data.seed);setTimeout(()=>this.onmessage?.({data:{id:data.id,error:'injected'}}),5);}terminate(){}};
  });
  await page.goto('/');
- const turn=async()=>{await page.locator('#skip').click();await page.locator('#directions button:not([disabled])').first().click();await expect(page.locator('#turnCount')).toHaveText('3手目');};
+ const turn=async()=>{await page.locator('#skip').click();await slideByBoard(page);await expect(page.locator('#turnCount')).toHaveText('3手目');};
  await turn();await page.locator('#undo').click();await turn();
  await page.locator('#settings').click();await page.locator('#start').click();await turn();
  expect(await page.evaluate(()=>window.cpuRequests)).toEqual([1001,1001,1002]);

@@ -1,3 +1,4 @@
+import { slideByBoard } from "./tap-target.js";
 import { test, expect } from "@playwright/test";
 
 async function enterLocalGame(page) {
@@ -13,7 +14,7 @@ test("Triken braces, glides, then lands at the valid destination", async ({ page
   page.on("pageerror", error => errors.push(String(error)));
   await enterLocalGame(page);
   const first = page.locator(".token.p1");
-  await expect(page.locator("#directions button").nth(1)).toBeEnabled();
+  await expect(page.locator('#board .cell.stop[data-slide-dir="1"]')).toBeEnabled();
   await page.evaluate(() => {
     const token = document.querySelector(".token.p1");
     window.__trikenFrames = [{ pose: token.dataset.pose, transform: token.style.transform }];
@@ -22,7 +23,7 @@ test("Triken braces, glides, then lands at the valid destination", async ({ page
     })).observe(token, { attributes: true, attributeFilter: ["data-pose"] });
   });
   const before = await first.getAttribute("style");
-  await page.locator("#directions button").nth(1).click();
+  await slideByBoard(page,1);
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect(first).toHaveAttribute("data-pose", /stop|collect|idle/);
   const { frames, duration } = await page.evaluate(() => ({
@@ -57,7 +58,7 @@ test("reduced motion skips anticipation and positional tween", async ({ page }) 
     new MutationObserver(() => window.__poses.push(token.dataset.pose))
       .observe(token, { attributes: true, attributeFilter: ["data-pose"] });
   });
-  await page.locator("#directions button").nth(1).click();
+  await slideByBoard(page,1);
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect(first).toHaveAttribute("data-pose", "idle");
   const observed = await page.evaluate(() => window.__poses);
@@ -70,7 +71,7 @@ test("starting a new match during windup cancels the previous slide", async ({ p
   await enterLocalGame(page);
   const startPosition = await page.locator(".token.p1").evaluate(el => el.style.transform);
   await page.evaluate(() => {
-    document.querySelector("#directions button:nth-child(2)").click();
+    document.querySelector('#board .cell.stop[data-slide-dir="1"]')?.click();
     document.querySelector("#settings").click();
     document.querySelector("#start").click();
   });

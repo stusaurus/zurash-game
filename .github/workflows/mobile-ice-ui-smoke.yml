@@ -1,0 +1,48 @@
+name: Mobile ice UI smoke
+
+on:
+  pull_request:
+    paths:
+      - "assets/ice-world-mobile.webp"
+      - "assets/zurash-approved-logo.webp"
+      - "src/mobile-world.js"
+      - "src/mobile-command-feedback.js"
+      - "src/app.js"
+      - "index.html"
+      - "world-mobile.css"
+      - "mobile-hud.css"
+      - "mobile-focus.css"
+      - "mobile-tap.css"
+      - "tests/browser/mobile-system-linked.spec.js"
+      - "tests/browser/tap-target.js"
+      - ".github/workflows/mobile-ice-ui-smoke.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mobile-smoke:
+    name: Real engine + mobile art (3 browsers)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Verify gameplay binding and approved artwork
+        run: npx playwright test tests/browser/mobile-system-linked.spec.js --project=chromium --project=webkit --project=iphone-webkit
+      - name: Upload real game screenshots and browser diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mobile-ice-ui-smoke
+          path: |
+            test-results/
+            playwright-report/
+          if-no-files-found: warn
+          retention-days: 14

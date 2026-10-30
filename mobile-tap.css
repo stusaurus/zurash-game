@@ -1,0 +1,377 @@
+/* ZURASH! mobile touch-first skin, stage 25.
+ * Rendering and input remain attached to app.js's real board cells.
+ * Desktop arrows stay in the DOM and work unchanged; on phones their
+ * redundant controller is visually removed, never replaced by fake UI. */
+@media (max-width:600px) {
+  .help-on-phone {display:inline;}
+  .help-on-desktop {display:none;}
+  #directions.directions { display:none !important; }
+  .game .control-deck {
+    display:grid;
+    position:relative;
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:auto auto;
+    align-items:center;
+    justify-items:stretch;
+    gap:5px;
+    padding:8px 9px 10px;
+    margin:7px 3px 3px;
+    min-height:0;
+    border:2px solid #d7f9ff;
+    border-radius:19px 19px 24px 24px;
+    background:
+      radial-gradient(ellipse at 50% 0%,#a9f1ff4d,transparent 65%),
+      linear-gradient(145deg,#154985,#0c609e 55%,#073867);
+    box-shadow:inset 0 2px #edffffa6,inset 0 -3px #062c55,0 3px 0 #074973,0 6px 12px #063e6769;
+  }
+  .control-deck::before,
+  .control-deck::after {content:none !important;animation:none !important;}
+  .game .control-deck .actions {
+    grid-column:1;
+    grid-row:2;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    padding:1px 3px 2px;
+    gap:9px;
+    min-width:0;
+    border:0;
+    margin:0;
+    background:transparent;
+    box-shadow:none;
+  }
+  .game .control-deck .actions #undo,
+  .game .control-deck .actions #skip {
+    box-sizing:border-box;
+    width:auto;
+    height:auto;
+    min-height:44px;
+    max-height:none;
+    padding:8px 12px;
+    margin:0;
+    font-size:clamp(11px,3vw,13px);
+    border-radius:18px;
+    line-height:1.2;
+    touch-action:manipulation;
+  }
+  .game .control-deck .actions #undo {
+    flex:0 0 auto;
+    min-width:86px;
+    max-width:120px;
+  }
+  .game .control-deck .actions #skip {
+    flex:1 1 auto;
+    max-width:235px;
+    min-width:100px;
+    background:linear-gradient(160deg,#f4ffea,#b3eebf 55%,#62c69a);
+    color:#0e6956;
+    border:2px solid #ecfff4;
+    box-shadow:inset 0 2px #fff9,inset 0 -2px #398e76,0 3px 0 #195f62;
+  }
+  .game .control-deck[data-command-phase="slide"] .actions #skip {
+    display:none !important;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .mobile-score-glance {
+    grid-column:1;
+    grid-row:1;
+    align-self:stretch;
+    justify-self:stretch;
+    position:relative;
+    width:100%;
+    max-width:none;
+    min-height:28px;
+    padding-inline:clamp(8px,3vw,13px);
+    margin:0;
+    left:auto;top:auto;
+    grid-template-columns:1fr auto 1fr;
+    font-size:clamp(12px,3.4vw,14px);
+    border-radius:14px;
+    border-color:#caefffe1;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-turn {
+    font-size:clamp(10px,2.7vw,12px);
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player::before {
+    width:9px;height:9px;flex-basis:9px;
+  }
+  /* Previous focus skin had a taller two-row arcade layout with a
+     69px skip key. Override it at matching specificity: the compact dock
+     needs only two >=44px actions and the 28px live-score strip.
+     Keep the size reduction structural rather than weakening QA limits. */
+  html[data-zurash-match-view="play"] .game .control-deck {
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:28px auto;
+    row-gap:3px;
+    column-gap:0;
+    padding:5px 8px 7px;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions {
+    grid-column:1;
+    grid-row:2;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:1px 2px 2px;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions #undo,
+  html[data-zurash-match-view="play"] .game .control-deck .actions #skip,
+  html[data-zurash-match-view="play"] .game .control-deck .actions #skip:disabled {
+    min-height:44px;
+    padding:7px 10px;
+    line-height:1.2;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .mobile-score-glance {
+    min-height:28px;
+    height:28px;
+    padding-block:2px;
+  }
+  /* The board owns sliding. Each destination really invokes the existing
+     legal slideOptions() click handler, including CPU and undo semantics. */
+  #board .cell.stop:not(:disabled) {
+    position:relative;
+    z-index:1;
+    isolation:isolate;
+    cursor:pointer;
+    background-color:#b5f6ed;
+    background-image:radial-gradient(circle at 50% 40%,#f7ffffd9,transparent 73%);
+    box-shadow:
+      inset 0 0 0 3px #43bdb9,
+      inset 0 0 0 5px #e8ffffcf,
+      0 0 10px #6ceaff9c;
+    animation:ice-tap-landing-ready 1300ms ease-out 2;
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
+  }
+  #board .cell.stop:not(:disabled)::after {
+    content:"";
+    position:absolute;
+    inset:20%;
+    border:2px solid #faffff;
+    border-radius:50%;
+    background:radial-gradient(circle at 42% 32%,#fff,#86e8f0c9 56%,#1ea6b263);
+    box-shadow:0 0 0 2px #31acb780,0 0 10px #d5ffff;
+    pointer-events:none;
+  }
+  /* Keep the real star art above the landing halo so a target never
+     appears empty when collecting a star. */
+  #board .cell.stop .star {position:relative;z-index:1;}
+  #board .cell.target:not(:disabled) {
+    cursor:pointer;
+    background-color:#ffe4a9;
+    box-shadow:inset 0 0 0 3px #e6a047,inset 0 0 0 5px #fff4cb,0 0 10px #ffd78c91;
+    animation:ice-tap-wall-ready 1200ms ease-out 2;
+    touch-action:manipulation;
+  }
+  #board .cell.wall.available:not(:disabled) {cursor:pointer;}
+  #board .cell.stop:not(:disabled):active,
+  #board .cell.target:not(:disabled):active {
+    filter:brightness(1.19) saturate(1.2);
+    transform:scale(.956);
+  }
+  /* A real legal tile responds the instant a finger touches it, before
+     click; releasing or scrolling cancels it without changing game state. */
+  #board .cell.stop:not(:disabled)[data-touch-preview="true"],
+  #board .cell.target:not(:disabled)[data-touch-preview="true"],
+  #board .cell.wall.available:not(:disabled)[data-touch-preview="true"] {
+    animation:none;
+    filter:brightness(1.2) saturate(1.13);
+    transform:scale(.95);
+    box-shadow:
+      inset 0 0 0 3px #f9ffff,
+      inset 0 0 0 6px #56d9f5,
+      0 0 12px #b3f8ffcc;
+    transition:transform 80ms ease-out,filter 80ms ease-out;
+    z-index:3;
+  }
+  #board .cell.target:not(:disabled)[data-touch-preview="true"] {
+    box-shadow:
+      inset 0 0 0 3px #ffffef,
+      inset 0 0 0 6px #ffc563,
+      0 0 12px #ffe7a9cf;
+  }
+  #board .cell.wall.available:not(:disabled)[data-touch-preview="true"] {
+    box-shadow:
+      inset 0 0 0 3px #faffff,
+      inset 0 0 0 6px #76d5f1,
+      0 0 12px #d6faffb8;
+  }
+  @media (prefers-reduced-motion:reduce) {
+    html:not([data-zurash-motion="animate"]) #board .cell[data-touch-preview="true"] {
+      transition:none;
+    }
+  }
+  html[data-zurash-motion="still"] #board .cell[data-touch-preview="true"] {
+    transition:none;
+  }
+  #board .cell.stop:focus-visible,
+  #board .cell.target:focus-visible,
+  #board .cell.wall.available:focus-visible {
+    outline:3px solid #ffbd3c;
+    outline-offset:-3px;
+    z-index:2;
+  }
+  @keyframes ice-tap-landing-ready {
+    0% {filter:brightness(1.28);}
+    60% {filter:brightness(1.06);}
+    100% {filter:brightness(1);}
+  }
+  @keyframes ice-tap-wall-ready {
+    0% {filter:brightness(1.2);}
+    100% {filter:brightness(1);}
+  }
+  /* Only luminous tracks, no new stars, pieces or selectable hit targets. */
+  .board-wrap .ice-glide-vfx {
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    border-radius:inherit;
+    z-index:6;
+  }
+  .ice-glide-vfx .ice-streak {
+    position:absolute;
+    pointer-events:none;
+    background:linear-gradient(90deg,transparent,#f4ffff,#8eeeffa6,#e8ffff);
+    border-radius:20px;
+    box-shadow:0 0 8px #d4ffff,0 0 14px #71ddffb0;
+    opacity:0;
+    /* The glow sweeps across the real route instead of appearing fully
+       drawn at the first frame. The move itself still belongs to app.js. */
+    transform-origin:left center;
+    animation:ice-swish-horizontal var(--ice-travel-ms,350ms) cubic-bezier(.22,.66,.28,1) both;
+  }
+  .ice-glide-vfx .ice-streak.reverse {
+    transform-origin:right center;
+    background:linear-gradient(270deg,transparent,#f4ffff,#8eeeffa6,#e8ffff);
+  }
+  .ice-glide-vfx .ice-streak.vertical {
+    background:linear-gradient(180deg,transparent,#f4ffff,#8eeeffa6,#e8ffff);
+    transform-origin:center top;
+    animation-name:ice-swish-vertical;
+  }
+  .ice-glide-vfx .ice-streak.vertical.reverse {
+    transform-origin:center bottom;
+    background:linear-gradient(0deg,transparent,#f4ffff,#8eeeffa6,#e8ffff);
+  }
+  .ice-glide-vfx .ice-landing {
+    position:absolute;
+    width:var(--ice-cell-size,42px);
+    height:var(--ice-cell-size,42px);
+    pointer-events:none;
+    border:3px solid #d9ffff;
+    border-radius:50%;
+    box-sizing:border-box;
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.25);
+    box-shadow:0 0 9px #b6ffff,0 0 17px #7ddfff6e;
+    animation:ice-landing-splash 380ms ease-out both;
+  }
+  /* Momentary crystalline flecks fan out from the real landing tile.
+     No new game objects: fragments are aria-hidden and pointer-transparent. */
+  .ice-glide-vfx .ice-shard {
+    position:absolute;
+    display:block;
+    width:clamp(3px,1vw,5px);
+    height:clamp(8px,2.1vw,13px);
+    margin:0;
+    border-radius:60% 60% 50% 50%;
+    pointer-events:none;
+    background:linear-gradient(160deg,#ffffff,#d3fdff 46%,#68d0fa);
+    box-shadow:0 0 6px #e5ffffd9,0 0 9px #70daff75;
+    opacity:0;
+    transform:translate(-50%,-50%) rotate(var(--ice-shard-angle,45deg));
+    transform-origin:center;
+    animation:ice-shard-splash 430ms cubic-bezier(.15,.68,.22,1) both;
+  }
+  .ice-glide-vfx .ice-landing.scored {
+    border-color:#fff4b3;
+    box-shadow:0 0 11px #fff2b3,0 0 18px #f9d26983;
+  }
+  .ice-glide-vfx .ice-shard.scored {
+    background:linear-gradient(160deg,#ffffff,#fff5bf 48%,#f2c25b);
+    box-shadow:0 0 6px #fff8dc,0 0 9px #ffc25789;
+  }
+  @keyframes ice-shard-splash {
+    0% {
+      opacity:0;
+      transform:translate(-50%,-50%) rotate(var(--ice-shard-angle,45deg)) translateY(0) scale(.45);
+    }
+    27% {opacity:.9;}
+    100% {
+      opacity:0;
+      transform:translate(-50%,-50%) rotate(var(--ice-shard-angle,45deg))
+        translateY(calc(var(--ice-cell-size,42px) * -.63)) scale(.72);
+    }
+  }
+  /* Direction-aware growth: the translucent streak follows Triken's
+     position before fading away at the exact stop tile. */
+  @keyframes ice-swish-horizontal {
+    0% {opacity:0;transform:translateY(-50%) scaleX(.04);filter:brightness(1.45);}
+    24% {opacity:.84;transform:translateY(-50%) scaleX(.32);}
+    75% {opacity:.78;transform:translateY(-50%) scaleX(1);}
+    100% {opacity:0;transform:translateY(-50%) scaleX(1);}
+  }
+  @keyframes ice-swish-vertical {
+    0% {opacity:0;transform:translateX(-50%) scaleY(.04);filter:brightness(1.45);}
+    24% {opacity:.84;transform:translateX(-50%) scaleY(.32);}
+    75% {opacity:.78;transform:translateX(-50%) scaleY(1);}
+    100% {opacity:0;transform:translateX(-50%) scaleY(1);}
+  }
+  @keyframes ice-landing-splash {
+    0% {opacity:0;transform:translate(-50%,-50%) scale(.25);}
+    35% {opacity:1;transform:translate(-50%,-50%) scale(.8);}
+    100% {opacity:0;transform:translate(-50%,-50%) scale(1.4);}
+  }
+  #scores .score.just-scored .stars,
+  #scores .score.just-scored .score-count,
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player.just-scored b {
+    animation:ice-score-twinkle 570ms ease-out 1;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player.just-scored {
+    opacity:1;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player.just-scored b {
+    color:#fff7b5;
+    text-shadow:0 0 7px #ffe687,0 0 12px #ffc96d;
+  }
+  @keyframes ice-score-twinkle {
+    0% {filter:brightness(1.5);text-shadow:0 0 7px #fff6b2;}
+    60% {filter:brightness(1.25);}
+    100% {filter:brightness(1);}
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  html:not([data-zurash-motion="animate"]) #board .cell.stop,
+  html:not([data-zurash-motion="animate"]) #board .cell.target,
+  html:not([data-zurash-motion="animate"]) #scores .score.just-scored .stars,
+  html:not([data-zurash-motion="animate"]) #scores .score.just-scored .score-count,
+  html:not([data-zurash-motion="animate"]) .mobile-score-glance .glance-player.just-scored b {
+    animation:none !important;
+  }
+}
+@media (max-width:600px) {
+  html[data-zurash-motion="still"] #board .cell.stop,
+  html[data-zurash-motion="still"] #board .cell.target,
+  html[data-zurash-motion="still"] #scores .score.just-scored .stars,
+  html[data-zurash-motion="still"] #scores .score.just-scored .score-count,
+  html[data-zurash-motion="still"] .mobile-score-glance .glance-player.just-scored b {
+    animation:none !important;
+  }
+}
+
+/* An explicit motion OFF must suppress ongoing decoration immediately,
+ * including the case where the setting is toggled during a slide. */
+@media (max-width:600px) {
+  html[data-zurash-motion="still"] .ice-glide-vfx {
+    display:none !important;
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  html:not([data-zurash-motion="animate"]) .ice-glide-vfx {
+    display:none !important;
+  }
+}

@@ -12,15 +12,17 @@
       content="壁をずらせ！ 勝利へ滑れ！ トリケンと遊ぶ、シンプルで奥深い戦略ボードゲーム。"
     />
     <title>ズラッシュ！ | ZURASH!</title>
-    <link rel="stylesheet" href="style.css?v=20261027-reaction2" />
+    <link rel="stylesheet" href="style.css?v=20261030-tap-first-v25" />
     <link rel="stylesheet" href="world.css?v=20261028" />
+    <!-- Approved art only loads when both images exist; game logic is unchanged. -->
+    <script type="module" src="src/mobile-world.js?v=20261031-board-press-v33"></script>
   </head>
   <body>
     <main>
       <header>
         <a class="brand" href="./" aria-label="ズラッシュ ホーム"
           >TIRANON <span>GAMES</span></a
-        ><button id="help" class="quiet">？ 遊び方</button>
+        ><button id="help" class="quiet" aria-label="遊び方を開く">？ 遊び方</button>
       </header>
       <section class="mast">
         <div>
@@ -67,10 +69,19 @@
         </div>
         <p id="boardScrollHint" class="hint" hidden>盤面を横にスライドして全体を見られます。</p>
         <p id="lastMove" class="last-move" aria-live="polite" hidden></p>
-        <div id="directions" class="directions" aria-label="滑る方向"></div>
-        <div class="actions">
-          <button id="undo">↶ 戻る</button
-          ><button id="skip" class="primary">壁を動かさずに滑る →</button>
+        <div class="control-deck" aria-label="ゲーム操作">
+          <div id="directions" class="directions" role="group" aria-label="滑る方向"></div>
+          <div class="actions">
+            <button id="undo">↶ 戻る</button
+            ><button id="skip" class="primary">壁を動かさずに滑る →</button>
+          </div>
+          <!-- Mirrored from the live score/turn DOM, for thumb-level visibility.
+               Decorative only: never a game input or an independent score. -->
+          <div id="mobileScoreGlance" class="mobile-score-glance" aria-hidden="true">
+            <span class="glance-player glance-p1"><b data-glance-score="1">–</b></span>
+            <span class="glance-turn" data-glance-turn>–</span>
+            <span class="glance-player glance-p2"><b data-glance-score="2">–</b></span>
+          </div>
         </div>
         <section id="learningPanel" hidden aria-label="学習CPUの記録">
           <p id="learningStats" aria-live="polite"></p>
@@ -79,7 +90,7 @@
           <button id="recordUnresolved" type="button">未決着として記録して終了</button>
           <button id="resetLearning" type="button">学習データをリセット</button>
         </section>
-        <p class="hint">★ は止まってゲット。通りすぎたら取れないよ。</p>
+        <p class="hint star-tip"><span class="star-tip-icon" aria-hidden="true">★</span><span>星は止まったらゲット！ 通りすぎても取れないよ。</span></p>
         <div class="motion-control"><button id="motionToggle" type="button"
           class="quiet" aria-label="トリケンと壁の動きを切り替える"
           aria-pressed="false">動き：自動</button></div>
@@ -134,7 +145,10 @@
         壁は、星・コマ・他の壁がある場所や盤外へは動かせません。どちらかが滑れなくなる壁移動・滑走もできません。
       </p>
       <p>
-        光る壁を選び、矢印のマスへ移動。その後、光る停止マスか方向ボタンをタップします。「戻る」はCPU対戦ではあなたの前の手番まで戻します。学習対戦では使えません。
+        光る壁を選び、矢印のマスへ移動。
+        <span class="help-on-phone">その後は光る停止マスをタップして滑ろう！ 壁を動かさないときは「そのまま滑る」を押します。</span>
+        <span class="help-on-desktop">その後、光る停止マスか方向ボタンを選びます。</span>
+        「戻る」はCPU対戦ではあなたの前の手番まで戻します。学習対戦では使えません。
       </p>
       <p>同じ配置が続いたときはお知らせします。自動で引き分けにはしません。</p>
       <button data-close="helpDialog" class="primary">さあ、ずらそう！</button>
@@ -171,6 +185,6 @@
       <p>開始すると、進行中の対戦はリセットされます。</p>
       <button id="start" class="primary">対戦をはじめる</button>
     </dialog>
-    <script type="module" src="src/app.js?v=20261027-reaction2"></script>
+    <script type="module" src="src/app.js?v=20261030-cpu-score-glow-v33"></script>
   </body>
 </html>
