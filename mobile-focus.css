@@ -672,23 +672,50 @@
 }
 
 
-/* THUMB-VIEW SCORE GLANCE — field-tested iPhone layout, stage 22.
- * Live scoreboard/turn values are mirrored by mobile-command-feedback.js.
- * This strip sits in UNUSED upper-left cabinet space above Undo: no extra
- * viewport height, new controls, board overlay, or altered touch targets. */
+/* THUMB-VIEW SCORE GLANCE — iPhone overlap correction, stage 23.
+ * The two actions and mirrored score occupy DISTINCT CSS grid tracks.
+ * Never position the score over a hitbox; preserve the native 44px+ controls,
+ * the right-hand crosspad, and board geometry. */
 @media (max-width:600px) {
+  html[data-zurash-match-view="play"] .game .control-deck {
+    grid-template-rows:minmax(24px,auto) minmax(0,1fr);
+    column-gap:5px;
+    row-gap:0;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck #directions.directions {
+    grid-column:2;
+    grid-row:1 / span 2;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions {
+    grid-column:1;
+    grid-row:2;
+    justify-content:space-between;
+    gap:4px;
+    padding:2px 5px 3px;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions #undo {
+    min-height:44px;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions #skip {
+    min-height:69px;
+  }
   html[data-zurash-match-view="play"] .game .control-deck .mobile-score-glance {
     display:grid;
+    grid-column:1;
+    grid-row:1;
     grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
     align-items:center;
-    position:absolute;
+    align-self:start;
+    justify-self:stretch;
+    position:relative;
     z-index:2;
     pointer-events:none;
-    top:6px;
-    left:12px;
-    width:calc(100% - clamp(157px,52%,188px) - 27px);
+    top:auto;
+    left:auto;
+    width:100%;
     min-width:0;
     min-height:24px;
+    margin:0;
     padding:2px 5px;
     gap:2px;
     box-sizing:border-box;
@@ -742,10 +769,14 @@
 }
 @media (max-width:355px) {
   html[data-zurash-match-view="play"] .game .control-deck .mobile-score-glance {
-    top:5px;
-    left:9px;
-    width:calc(100% - 157px - 19px);
     padding-inline:2px;
     gap:0;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions {
+    padding:1px 3px 2px;
+    gap:3px;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .actions #skip {
+    min-height:73px;
   }
 }
