@@ -12,7 +12,9 @@ on:
       - "world-mobile.css"
       - "mobile-hud.css"
       - "mobile-focus.css"
+      - "mobile-tap.css"
       - "tests/browser/mobile-system-linked.spec.js"
+      - "tests/browser/tap-target.js"
       - ".github/workflows/mobile-ice-ui-smoke.yml"
   workflow_dispatch:
 
