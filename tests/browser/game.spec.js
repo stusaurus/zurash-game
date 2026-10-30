@@ -66,6 +66,12 @@ test("responsive board, dialogs, and exact reference asset", async ({
 test("wall selection, shift, undo, skip, slide, local handoff, victory and rematch", async ({
   page,
 }, testInfo) => {
+  // This is an entire seeded match (up to 100 plies), followed by Undo,
+  // final-move replay and rematch. Motion is independently covered by the
+  // dedicated WebKit glide regression tests; do not spend the CI budget on
+  // decorative transitions during this correctness-focused full playthrough.
+  test.setTimeout(180000);
+  await page.emulateMedia({reducedMotion:"reduce"});
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
   await local(page);
