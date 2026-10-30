@@ -75,6 +75,13 @@
             <button id="undo">↶ 戻る</button
             ><button id="skip" class="primary">壁を動かさずに滑る →</button>
           </div>
+          <!-- Mirrored from the live score/turn DOM, for thumb-level visibility.
+               Decorative only: never a game input or an independent score. -->
+          <div id="mobileScoreGlance" class="mobile-score-glance" aria-hidden="true">
+            <span class="glance-player glance-p1"><b data-glance-score="1">–</b></span>
+            <span class="glance-turn" data-glance-turn>–</span>
+            <span class="glance-player glance-p2"><b data-glance-score="2">–</b></span>
+          </div>
         </div>
         <section id="learningPanel" hidden aria-label="学習CPUの記録">
           <p id="learningStats" aria-live="polite"></p>
