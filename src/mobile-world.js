@@ -33,7 +33,7 @@ function installApprovedMobileArt() {
     // Optional compact chrome after a valid match starts; never affects desktop.
     const focus = document.createElement("link");
     focus.rel = "stylesheet";
-    focus.href = "mobile-focus.css?v=20261030-thumb-glance-v16";
+    focus.href = "mobile-focus.css?v=20261030-glance-grid-v17";
     focus.media = "(max-width: 600px)";
     // Stylesheets added at runtime load asynchronously, especially in WebKit.
     // Install tactile listeners only after every skin layer settles, so an
