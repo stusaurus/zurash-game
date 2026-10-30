@@ -1,0 +1,223 @@
+/* ZURASH! mobile touch-first skin, stage 25.
+ * Rendering and input remain attached to app.js's real board cells.
+ * Desktop arrows stay in the DOM and work unchanged; on phones their
+ * redundant controller is visually removed, never replaced by fake UI. */
+@media (max-width:600px) {
+  #directions.directions { display:none !important; }
+  .game .control-deck {
+    display:grid;
+    position:relative;
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:auto auto;
+    align-items:center;
+    justify-items:stretch;
+    gap:5px;
+    padding:8px 9px 10px;
+    margin:7px 3px 3px;
+    min-height:0;
+    border:2px solid #d7f9ff;
+    border-radius:19px 19px 24px 24px;
+    background:
+      radial-gradient(ellipse at 50% 0%,#a9f1ff4d,transparent 65%),
+      linear-gradient(145deg,#154985,#0c609e 55%,#073867);
+    box-shadow:inset 0 2px #edffffa6,inset 0 -3px #062c55,0 3px 0 #074973,0 6px 12px #063e6769;
+  }
+  .control-deck::before,
+  .control-deck::after {content:none !important;animation:none !important;}
+  .game .control-deck .actions {
+    grid-column:1;
+    grid-row:2;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    padding:1px 3px 2px;
+    gap:9px;
+    min-width:0;
+    border:0;
+    margin:0;
+    background:transparent;
+    box-shadow:none;
+  }
+  .game .control-deck .actions #undo,
+  .game .control-deck .actions #skip {
+    box-sizing:border-box;
+    width:auto;
+    height:auto;
+    min-height:44px;
+    max-height:none;
+    padding:8px 12px;
+    margin:0;
+    font-size:clamp(11px,3vw,13px);
+    border-radius:18px;
+    line-height:1.2;
+    touch-action:manipulation;
+  }
+  .game .control-deck .actions #undo {
+    flex:0 0 auto;
+    min-width:86px;
+    max-width:120px;
+  }
+  .game .control-deck .actions #skip {
+    flex:1 1 auto;
+    max-width:235px;
+    min-width:100px;
+    background:linear-gradient(160deg,#f4ffea,#b3eebf 55%,#62c69a);
+    color:#0e6956;
+    border:2px solid #ecfff4;
+    box-shadow:inset 0 2px #fff9,inset 0 -2px #398e76,0 3px 0 #195f62;
+  }
+  .game .control-deck[data-command-phase="slide"] .actions #skip {
+    display:none !important;
+  }
+  html[data-zurash-match-view="play"] .game .control-deck .mobile-score-glance {
+    grid-column:1;
+    grid-row:1;
+    align-self:stretch;
+    justify-self:stretch;
+    position:relative;
+    width:100%;
+    max-width:none;
+    min-height:28px;
+    padding-inline:clamp(8px,3vw,13px);
+    margin:0;
+    left:auto;top:auto;
+    grid-template-columns:1fr auto 1fr;
+    font-size:clamp(12px,3.4vw,14px);
+    border-radius:14px;
+    border-color:#caefffe1;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-turn {
+    font-size:clamp(10px,2.7vw,12px);
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player::before {
+    width:9px;height:9px;flex-basis:9px;
+  }
+  /* The board owns sliding. Each destination really invokes the existing
+     legal slideOptions() click handler, including CPU and undo semantics. */
+  #board .cell.stop:not(:disabled) {
+    position:relative;
+    z-index:1;
+    isolation:isolate;
+    cursor:pointer;
+    background-color:#b5f6ed;
+    background-image:radial-gradient(circle at 50% 40%,#f7ffffd9,transparent 73%);
+    box-shadow:
+      inset 0 0 0 3px #43bdb9,
+      inset 0 0 0 5px #e8ffffcf,
+      0 0 10px #6ceaff9c;
+    animation:ice-tap-landing-ready 1300ms ease-out 2;
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
+  }
+  #board .cell.stop:not(:disabled)::after {
+    content:"";
+    position:absolute;
+    inset:20%;
+    border:2px solid #faffff;
+    border-radius:50%;
+    background:radial-gradient(circle at 42% 32%,#fff,#86e8f0c9 56%,#1ea6b263);
+    box-shadow:0 0 0 2px #31acb780,0 0 10px #d5ffff;
+    pointer-events:none;
+  }
+  #board .cell.target:not(:disabled) {
+    cursor:pointer;
+    background-color:#ffe4a9;
+    box-shadow:inset 0 0 0 3px #e6a047,inset 0 0 0 5px #fff4cb,0 0 10px #ffd78c91;
+    animation:ice-tap-wall-ready 1200ms ease-out 2;
+    touch-action:manipulation;
+  }
+  #board .cell.wall.available:not(:disabled) {cursor:pointer;}
+  #board .cell.stop:not(:disabled):active,
+  #board .cell.target:not(:disabled):active {
+    filter:brightness(1.19) saturate(1.2);
+    transform:scale(.956);
+  }
+  #board .cell.stop:focus-visible,
+  #board .cell.target:focus-visible,
+  #board .cell.wall.available:focus-visible {
+    outline:3px solid #ffbd3c;
+    outline-offset:-3px;
+    z-index:2;
+  }
+  @keyframes ice-tap-landing-ready {
+    0% {filter:brightness(1.28);}
+    60% {filter:brightness(1.06);}
+    100% {filter:brightness(1);}
+  }
+  @keyframes ice-tap-wall-ready {
+    0% {filter:brightness(1.2);}
+    100% {filter:brightness(1);}
+  }
+  /* Only luminous tracks, no new stars, pieces or selectable hit targets. */
+  .board-wrap .ice-glide-vfx {
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    border-radius:inherit;
+    z-index:6;
+  }
+  .ice-glide-vfx .ice-streak {
+    position:absolute;
+    pointer-events:none;
+    background:linear-gradient(90deg,transparent,#f4ffff,#8eeeffa6,#e8ffff);
+    border-radius:20px;
+    box-shadow:0 0 8px #d4ffff,0 0 14px #71ddffb0;
+    opacity:0;
+    animation:ice-swish var(--ice-travel-ms,350ms) ease-out both;
+  }
+  .ice-glide-vfx .ice-streak.vertical {
+    background:linear-gradient(180deg,transparent,#f4ffff,#8eeeffa6,#e8ffff);
+  }
+  .ice-glide-vfx .ice-landing {
+    position:absolute;
+    width:var(--ice-cell-size,42px);
+    height:var(--ice-cell-size,42px);
+    pointer-events:none;
+    border:3px solid #d9ffff;
+    border-radius:50%;
+    box-sizing:border-box;
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.25);
+    box-shadow:0 0 9px #b6ffff,0 0 17px #7ddfff6e;
+    animation:ice-landing-splash 380ms ease-out both;
+  }
+  @keyframes ice-swish {
+    0% {opacity:0;filter:brightness(1.4);}
+    25% {opacity:.88;}
+    75% {opacity:.65;}
+    100% {opacity:0;}
+  }
+  @keyframes ice-landing-splash {
+    0% {opacity:0;transform:translate(-50%,-50%) scale(.25);}
+    35% {opacity:1;transform:translate(-50%,-50%) scale(.8);}
+    100% {opacity:0;transform:translate(-50%,-50%) scale(1.4);}
+  }
+  #scores .score.just-scored .stars,
+  #scores .score.just-scored .score-count {
+    animation:ice-score-twinkle 570ms ease-out 1;
+  }
+  @keyframes ice-score-twinkle {
+    0% {filter:brightness(1.5);text-shadow:0 0 7px #fff6b2;}
+    60% {filter:brightness(1.25);}
+    100% {filter:brightness(1);}
+  }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) {
+  html:not([data-zurash-motion="animate"]) #board .cell.stop,
+  html:not([data-zurash-motion="animate"]) #board .cell.target,
+  html:not([data-zurash-motion="animate"]) #scores .score.just-scored .stars,
+  html:not([data-zurash-motion="animate"]) #scores .score.just-scored .score-count {
+    animation:none !important;
+  }
+}
+@media (max-width:600px) {
+  html[data-zurash-motion="still"] #board .cell.stop,
+  html[data-zurash-motion="still"] #board .cell.target,
+  html[data-zurash-motion="still"] #scores .score.just-scored .stars,
+  html[data-zurash-motion="still"] #scores .score.just-scored .score-count {
+    animation:none !important;
+  }
+}
