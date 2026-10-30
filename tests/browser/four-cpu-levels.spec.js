@@ -1,3 +1,4 @@
+import { slideByBoard } from "./tap-target.js";
 import { test, expect } from '@playwright/test';
 import { actions } from '../../src/engine.js';
 import { choose, seeded } from '../../src/ai.js';
@@ -33,7 +34,7 @@ for (const starter of [0,1]) {
       await page.locator('#start').click();
       if (starter===0) {
         await page.locator('#skip').click();
-        await page.locator('#directions button:not([disabled])').first().click();
+        await slideByBoard(page);
       }
       await expect(page.locator('#turnCount')).toHaveText(starter===0?'3手目':'2手目',{timeout:15000});
       await expect(page.locator('#cpuRecovery')).toBeHidden();
