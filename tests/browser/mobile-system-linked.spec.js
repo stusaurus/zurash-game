@@ -1,6 +1,6 @@
 import { slideByBoard } from "./tap-target.js";
 import { test, expect } from "@playwright/test";
-import { initial, movableWalls, moveWall, slideOptions, finishSlide } from "../../src/engine.js";
+import { initial, movableWalls, moveWall, slideOptions, finishSlide, actions, apply } from "../../src/engine.js";
 
 test("mobile screen remains bound to the real 7×7 engine and all legal interactions", async ({ page }, testInfo) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
@@ -933,4 +933,42 @@ test("directional ice streak grows from the real start toward right and left",as
   expect(parseFloat(tracks[1].origin)).toBeGreaterThan(parseFloat(tracks[0].origin));
   await expect(page.locator("#board .cell")).toHaveCount(49);
   await page.screenshot({path:testInfo.outputPath("touch-directional-ice-trail.png"),fullPage:true});
+});
+
+
+test("real star pickup briefly lights the mirrored thumb score without changing the rules",async ({page},testInfo)=>{
+  await page.setViewportSize({width:390,height:844});
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/");
+  await page.locator("#localMode").click();
+  await page.locator("#layout").selectOption("1");
+  await page.locator("#start").click();
+  const state=initial(1,0);
+  // This official board permits a score on the first turn. Derive a legal
+  // wall + slide from the real engine rather than injecting a fake score.
+  const action=actions(state).find(a=>apply(state,a).scores[0]===1);
+  expect(action).toBeTruthy();
+  expect(action.wall).not.toBeNull();
+  const next=apply(state,action);
+  expect(next.scores).toEqual([1,0]);
+  const glance=page.locator("#mobileScoreGlance");
+  await expect(glance).toBeVisible();
+  await expect(glance.locator(".glance-p1")).not.toHaveClass(/just-scored/);
+  await page.locator(`[data-cell="${state.walls[action.wall.wall]}"]`).click();
+  await page.locator(`[data-cell="${action.wall.to}"]`).click();
+  await expect(page.locator("#phaseBadge")).toHaveText("2");
+  await slideByBoard(page,action.dir);
+  await expect(page.locator("#turnCount")).toHaveText("2手目");
+  await expect(page.locator("#scores .score.p1.just-scored")).toHaveCount(1);
+  await expect(glance.locator("[data-glance-score='1']")).toHaveText("1");
+  await expect(glance.locator(".glance-p1.just-scored")).toHaveCount(1);
+  await expect(glance.locator(".glance-p2.just-scored")).toHaveCount(0);
+  await expect(glance.locator(".glance-p1 b")).toHaveCSS("animation-name","ice-score-twinkle");
+  await expect(glance).toHaveAttribute("aria-hidden","true");
+  await expect(page.locator(".ice-glide-vfx .ice-shard.scored")).toHaveCount(4);
+  await page.screenshot({path:testInfo.outputPath("real-star-thumb-score.png"),fullPage:true});
+  await page.locator("#undo").click();
+  await expect(page.locator("#turnCount")).toHaveText("1手目");
+  await expect(glance.locator("[data-glance-score='1']")).toHaveText("0");
+  await expect(glance.locator(".glance-p1")).not.toHaveClass(/just-scored/);
 });
