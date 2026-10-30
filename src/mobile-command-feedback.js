@@ -74,6 +74,69 @@ document.addEventListener("visibilitychange", () => {
   if (document.hidden) clearPreview();
 });
 
+/* Board-first tactile feedback.
+ * A lit cell is a real engine-validated DOM button from app.js. Preview
+ * begins at pointerdown, without invoking click or making any move.
+ * Cancellation, drag-to-scroll, keyboard release and window blur are safe. */
+let previewTile = null;
+let previewTilePointer = null;
+let previewTileTimer = null;
+function clearTilePreview() {
+  if (previewTileTimer !== null) clearTimeout(previewTileTimer);
+  previewTileTimer = null;
+  previewTile?.removeAttribute("data-touch-preview");
+  previewTile = null;
+  previewTilePointer = null;
+}
+function tileTarget(target) {
+  if (!mobile.matches || !(target instanceof Element)) return null;
+  const cell = target.closest("#board .cell");
+  return cell && !cell.disabled && cell.matches(".stop, .target, .wall.available")
+    ? cell : null;
+}
+document.addEventListener("pointerdown", event => {
+  if (event.isPrimary === false || event.button > 0) return;
+  const cell = tileTarget(event.target);
+  if (!cell) return;
+  clearTilePreview();
+  previewTile = cell;
+  previewTilePointer = { id:event.pointerId, x:event.clientX, y:event.clientY };
+  cell.dataset.touchPreview = "true";
+}, true);
+document.addEventListener("pointermove", event => {
+  if (!previewTilePointer || previewTilePointer.id !== event.pointerId) return;
+  if (Math.hypot(event.clientX - previewTilePointer.x, event.clientY - previewTilePointer.y) > 12)
+    clearTilePreview();
+}, true);
+document.addEventListener("pointerup", event => {
+  if (!previewTilePointer || previewTilePointer.id !== event.pointerId) return;
+  previewTilePointer = null;
+  previewTileTimer = setTimeout(clearTilePreview, 80);
+}, true);
+document.addEventListener("pointercancel", clearTilePreview, true);
+document.addEventListener("keydown", event => {
+  if ((event.key !== "Enter" && event.key !== " ") || event.repeat) return;
+  const cell = tileTarget(event.target);
+  if (!cell) return;
+  clearTilePreview();
+  previewTile = cell;
+  cell.dataset.touchPreview = "true";
+}, true);
+document.addEventListener("keyup", event => {
+  if (event.key === "Enter" || event.key === " ") clearTilePreview();
+}, true);
+document.addEventListener("click", () => {
+  // The original click proceeds normally; the preview is cosmetic only.
+  clearTilePreview();
+}, false);
+window.addEventListener("blur", clearTilePreview);
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) clearTilePreview();
+});
+mobile.addEventListener?.("change", () => {
+  if (!mobile.matches) clearTilePreview();
+});
+
 const deck = document.querySelector(".control-deck");
 const phaseBadge = document.querySelector("#phaseBadge");
 const arrowGroup = document.querySelector("#directions");
