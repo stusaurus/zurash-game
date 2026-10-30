@@ -192,12 +192,17 @@ test("legal board tap displays ice glide and landing without creating extra piec
   await target.click();
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect(page.locator(".ice-glide-vfx .ice-landing")).toHaveCount(1);
+  await expect(page.locator(".ice-glide-vfx .ice-shard")).toHaveCount(4);
+  expect(await page.locator(".ice-glide-vfx .ice-shard").evaluateAll(nodes =>
+    nodes.every(node => getComputedStyle(node).pointerEvents === "none")
+  )).toBe(true);
   await expect(page.locator("#board .cell")).toHaveCount(before);
   await expect(page.locator(".ice-glide-vfx")).toHaveAttribute("aria-hidden","true");
   await page.screenshot({path:testInfo.outputPath("tap-ice-landing.png"),fullPage:true});
   await page.locator("#undo").click();
   await expect(page.locator("#turnCount")).toHaveText("1手目");
   await expect(page.locator(".ice-glide-vfx .ice-landing")).toHaveCount(0);
+  await expect(page.locator(".ice-glide-vfx .ice-shard")).toHaveCount(0);
 });
 
 
@@ -214,6 +219,7 @@ test("reduced motion keeps landing cells tappable without decorative ice animati
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect(page.locator(".ice-glide-vfx .ice-streak")).toHaveCount(0);
   await expect(page.locator(".ice-glide-vfx .ice-landing")).toHaveCount(0);
+  await expect(page.locator(".ice-glide-vfx .ice-shard")).toHaveCount(0);
 });
 
 
@@ -852,4 +858,29 @@ test("all five named layouts use genuine tap-to-land while desktop arrows remain
   await expect(page.locator("#directions button:enabled").first()).toBeVisible();
   await page.locator("#directions button:enabled").first().click();
   await expect(page.locator("#turnCount")).toHaveText("2手目");
+});
+
+
+test("turning motion OFF hides active ice fragments without affecting slides",async ({page})=>{
+  await page.setViewportSize({width:390,height:844});
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("/");
+  await page.locator("#localMode").click();
+  await page.locator("#start").click();
+  await expect(page.locator("html")).toHaveAttribute("data-zurash-motion","animate");
+  await page.locator("#skip").click();
+  await page.locator("#board .cell.stop:not([disabled])").first().click();
+  await expect(page.locator("#turnCount")).toHaveText("2手目");
+  await expect(page.locator(".ice-glide-vfx .ice-shard")).toHaveCount(4);
+  await expect(page.locator(".ice-glide-vfx")).toBeVisible();
+  await page.locator("#motionToggle").click();
+  await expect(page.locator("html")).toHaveAttribute("data-zurash-motion","still");
+  await expect(page.locator(".ice-glide-vfx")).toBeHidden();
+  await page.locator("#undo").click();
+  await expect(page.locator("#turnCount")).toHaveText("1手目");
+  await expect(page.locator(".ice-glide-vfx .ice-shard")).toHaveCount(0);
+  await page.locator("#skip").click();
+  await page.locator("#board .cell.stop:not([disabled])").first().click();
+  await expect(page.locator("#turnCount")).toHaveText("2手目");
+  await expect(page.locator(".ice-glide-vfx .ice-shard")).toHaveCount(0);
 });
