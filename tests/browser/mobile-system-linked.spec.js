@@ -876,3 +876,70 @@ test("short-height iPhones keep crosspad scroll-reachable and reserve safe-area 
     await expect(page.locator("#turnCount")).toHaveText("2手目");
   }
 });
+
+
+test("iPhone thumb-view score mirror follows the real turn without covering controls",async ({page},testInfo)=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const width of [320,390,430]){
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    const glance=page.locator("#mobileScoreGlance");
+    // The opening screen keeps the accepted unaltered HUD.
+    await expect(glance).toBeHidden();
+    await expect(page.locator("#scores .score-count")).toHaveCount(2);
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    await expect(page.locator("html")).toHaveAttribute("data-zurash-match-view","play");
+    await expect(glance).toHaveAttribute("data-ready","true");
+    await expect(glance).toBeVisible();
+    await expect(glance.locator("[data-glance-turn]")).toHaveText("1手目");
+
+    async function verifyMirror(){
+      return page.evaluate(()=>{
+        const glance=document.querySelector("#mobileScoreGlance");
+        const source=[...document.querySelectorAll("#scores .score")];
+        const scores=[...glance.querySelectorAll("[data-glance-score]")].map(el=>el.textContent.trim());
+        const expected=source.map(card=>card.querySelector(".score-count").textContent.trim().split("/")[0].trim());
+        const turns=[...glance.querySelectorAll(".glance-player")].map(el=>el.classList.contains("current"));
+        const expectedTurns=source.map(card=>card.classList.contains("current"));
+        const box=el=>el.getBoundingClientRect();
+        const r=box(glance);
+        const controls=[...document.querySelectorAll("#directions button, #undo, #skip")];
+        const overlap=controls.some(el=>{
+          const b=box(el);
+          return r.left<b.right && r.right>b.left && r.top<b.bottom && r.bottom>b.top;
+        });
+        return {
+          scores,expected,turns,expectedTurns,turn:glance.querySelector("[data-glance-turn]").textContent.trim(),
+          realTurn:document.querySelector("#turnCount").textContent.trim(),
+          pointerEvents:getComputedStyle(glance).pointerEvents,
+          overlay:overlap,pageWidth:document.documentElement.scrollWidth,
+          viewportWidth:innerWidth,
+          outsideCabinet:r.left<box(document.querySelector(".control-deck")).left ||
+            r.right>box(document.querySelector(".control-deck")).right
+        };
+      });
+    }
+    let snapshot=await verifyMirror();
+    expect(snapshot.scores).toEqual(snapshot.expected);
+    expect(snapshot.turns).toEqual(snapshot.expectedTurns);
+    expect(snapshot.turn).toBe(snapshot.realTurn);
+    expect(snapshot.pointerEvents).toBe("none");
+    expect(snapshot.overlay).toBe(false);
+    expect(snapshot.outsideCabinet).toBe(false);
+    expect(snapshot.pageWidth).toBeLessThanOrEqual(snapshot.viewportWidth);
+
+    // The actual engine performs a legal move; the glance tracks its DOM.
+    await page.locator("#skip").click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    await page.locator("#directions button:enabled").first().click();
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+    await expect(glance.locator("[data-glance-turn]")).toHaveText("2手目");
+    snapshot=await verifyMirror();
+    expect(snapshot.scores).toEqual(snapshot.expected);
+    expect(snapshot.turns).toEqual(snapshot.expectedTurns);
+    expect(snapshot.turn).toBe(snapshot.realTurn);
+    expect(snapshot.overlay).toBe(false);
+    await page.screenshot({path:testInfo.outputPath("thumb-glance-"+width+".png"),fullPage:true});
+  }
+});
