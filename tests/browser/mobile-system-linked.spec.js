@@ -871,9 +871,17 @@ test("short-height iPhones keep crosspad scroll-reachable and reserve safe-area 
     expect(reach.right).toBeLessThanOrEqual(reach.viewportW+1);
     expect(reach.top).toBeGreaterThanOrEqual(0);
     expect(reach.bottom).toBeLessThanOrEqual(reach.viewportH+1);
+    // User's iPhone recording exposed the actual issue after scrolling:
+    // the original top scoreboard leaves the viewport. The mirrored
+    // read-only scoreboard must remain in view beside the real controller.
+    const glance=page.locator("#mobileScoreGlance");
+    await expect(glance).toBeVisible();
+    await expect(glance).toBeInViewport();
+    await expect(glance.locator("[data-glance-turn]")).toHaveText("1手目");
     await page.screenshot({path:testInfo.outputPath("short-iphone-"+viewport.width+"x"+viewport.height+".png"),fullPage:true});
     await key.click();
     await expect(page.locator("#turnCount")).toHaveText("2手目");
+    await expect(glance.locator("[data-glance-turn]")).toHaveText("2手目");
   }
 });
 
