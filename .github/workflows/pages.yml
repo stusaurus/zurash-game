@@ -26,7 +26,12 @@ jobs:
       - name: Prepare static files only
         run: |
           mkdir -p dist/src dist/assets
-          cp index.html style.css dist/
+          # Publish all root-level stylesheets. The ice-world and mobile
+          # HUD are loaded dynamically, so omitting them silently breaks the UI.
+          cp index.html *.css dist/
+          for stylesheet in style.css world.css world-mobile.css mobile-hud.css mobile-focus.css; do
+            test -s "dist/${stylesheet}"
+          done
           cp src/*.js dist/src/
           # Publish every committed visual asset, including future sprite frames.
           cp -a assets/. dist/assets/
