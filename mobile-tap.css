@@ -121,6 +121,9 @@
     box-shadow:0 0 0 2px #31acb780,0 0 10px #d5ffff;
     pointer-events:none;
   }
+  /* Keep the real star art above the landing halo so a target never
+     appears empty when collecting a star. */
+  #board .cell.stop .star {position:relative;z-index:1;}
   #board .cell.target:not(:disabled) {
     cursor:pointer;
     background-color:#ffe4a9;
