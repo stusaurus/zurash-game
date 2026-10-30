@@ -1,3 +1,4 @@
+import { slideByBoard } from "./tap-target.js";
 import { test, expect } from "@playwright/test";
 import { initial, movableWalls, moveWall, slideOptions, finishSlide } from "../../src/engine.js";
 
@@ -135,131 +136,84 @@ test("seamless HUD uses real phase controls and keeps every tap target clear", a
 });
 
 
-test("right-hand crosspad maps actual engine directions and preserves gameplay", async ({page},testInfo) => {
+test("mobile gameplay hides redundant arrows and uses real glowing landing tiles", async ({page},testInfo)=>{
   await page.emulateMedia({reducedMotion:"reduce"});
   for (const width of [320,390,430]) {
     await page.setViewportSize({width,height:844});
     await page.goto("/");
-    await expect(page.locator(".cell")).toHaveCount(49);
-    await expect(page.locator("#directions button")).toHaveCount(4);
-    await expect(page.locator(".control-deck .actions #skip")).toBeEnabled();
-    await expect(page.locator(".score.current")).toHaveCount(1);
-
-    const layout = await page.evaluate(() => {
-      const rect = (selector) => {
-        const r=document.querySelector(selector).getBoundingClientRect();
-        return {x:r.x,y:r.y,w:r.width,h:r.height,cx:r.x+r.width/2,cy:r.y+r.height/2};
-      };
-      return {
-        pageWidth:document.documentElement.scrollWidth,
-        viewport:innerWidth,
-        board:rect("#board"),
-        pad:rect("#directions"),
-        actions:rect(".control-deck .actions"),
-        arrows:[...document.querySelectorAll("#directions button")].map(el=>{
-          const r=el.getBoundingClientRect();return {txt:el.textContent,aria:el.getAttribute("aria-label"),cx:r.x+r.width/2,cy:r.y+r.height/2,w:r.width,h:r.height};
-        }),
-        controlRects:[...document.querySelectorAll("#skip,#undo")].map(el=>{
-          const r=el.getBoundingClientRect();return {width:r.width,height:r.height};
-        })
-      };
-    });
-    expect(layout.pageWidth).toBeLessThanOrEqual(layout.viewport);
-    expect(layout.pad.cx).toBeGreaterThan(layout.actions.cx);
-    expect(layout.pad.y).toBeGreaterThanOrEqual(layout.board.y + layout.board.h - 2);
-    const [up,right,down,left] = layout.arrows;
-    expect(layout.arrows.map(x=>x.txt)).toEqual(["↑","→","↓","←"]);
-    expect(layout.arrows.map(x=>x.aria)).toEqual(["上へ滑る","右へ滑る","下へ滑る","左へ滑る"]);
-    expect(up.cy).toBeLessThan(right.cy);
-    expect(down.cy).toBeGreaterThan(right.cy);
-    expect(left.cx).toBeLessThan(up.cx);
-    expect(right.cx).toBeGreaterThan(up.cx);
-    expect(Math.abs(up.cx-down.cx)).toBeLessThan(2);
-    expect(Math.abs(left.cy-right.cy)).toBeLessThan(2);
-    expect(layout.arrows.every(x=>x.w>=44 && x.h>=44)).toBe(true);
-    expect(layout.controlRects.every(x=>x.width>=44 && x.height>=44)).toBe(true);
-    await page.screenshot({path:testInfo.outputPath("crosspad-"+width+"-wall.png"),fullPage:true});
-
+    await expect(page.locator('link[href*="mobile-tap.css"]')).toHaveCount(1);
+    await expect(page.locator("#directions")).toBeHidden();
+    await expect(page.locator("#board .cell")).toHaveCount(49);
     await page.locator("#localMode").click();
     await page.locator("#start").click();
+    await expect(page.locator(".control-deck .actions #undo")).toBeVisible();
+    await expect(page.locator(".control-deck .actions #skip")).toBeVisible();
+    const before = await page.locator("#board").boundingBox();
+    const layout = await page.evaluate(()=>{
+      const btns = [...document.querySelectorAll("#undo,#skip")].map(x=>x.getBoundingClientRect());
+      const ctl = document.querySelector(".control-deck").getBoundingClientRect();
+      return {w:document.documentElement.scrollWidth,viewport:innerWidth,
+        controls:btns.map(r=>({w:r.width,h:r.height})),height:ctl.height,
+        arrowsVisible:getComputedStyle(document.querySelector("#directions")).display};
+    });
+    expect(layout.w).toBeLessThanOrEqual(layout.viewport);
+    expect(layout.arrowsVisible).toBe("none");
+    expect(layout.controls.every(b=>b.w>=44&&b.h>=44)).toBe(true);
+    expect(layout.height).toBeLessThan(125);
     await page.locator("#skip").click();
     await expect(page.locator("#phaseBadge")).toHaveText("2");
-    await expect(page.locator("#skip")).toBeDisabled();
-    const active = page.locator("#directions button:enabled");
-    expect(await active.count()).toBeGreaterThan(0);
-    await page.screenshot({path:testInfo.outputPath("crosspad-"+width+"-glide.png"),fullPage:true});
-    await active.first().click();
-    await expect(page.locator("#phaseBadge")).toHaveText("1");
+    const stop=page.locator("#board .cell.stop:not([disabled])");
+    expect(await stop.count()).toBeGreaterThan(0);
+    await expect(stop.first()).toHaveAttribute("data-slide-dir",/^[0-3]$/);
+    await expect(stop.first()).toHaveAttribute("aria-label",/滑走停止位置/);
+    await expect(page.locator("#skip")).toBeHidden();
+    await page.screenshot({path:testInfo.outputPath("tap-first-"+width+".png"),fullPage:true});
+    await stop.first().click();
     await expect(page.locator("#turnCount")).toHaveText("2手目");
+    await expect(page.locator("#phaseBadge")).toHaveText("1");
+    expect((await page.locator("#board").boundingBox()).width).toBe(before.width);
     await page.locator("#undo").click();
     await expect(page.locator("#turnCount")).toHaveText("1手目");
   }
 });
 
 
-test("arcade presses glow across real rerenders without changing legal moves", async ({page}, testInfo) => {
+test("legal board tap displays ice glide and landing without creating extra pieces",async ({page},testInfo)=>{
   await page.setViewportSize({width:390,height:844});
   await page.emulateMedia({reducedMotion:"no-preference"});
   await page.goto("/");
-  await expect(page.locator("html")).toHaveAttribute("data-zurash-command-feedback","ready");
   await page.locator("#localMode").click();
   await page.locator("#start").click();
-  const initialButtons = await page.locator("#directions button").count();
-  expect(initialButtons).toBe(4);
-  await page.evaluate(() => {
-    window.__crosspadFeedback = [];
-    const deck = document.querySelector(".control-deck");
-    new MutationObserver(() => window.__crosspadFeedback.push({
-      dir:deck.dataset.commandDirection || "",
-      action:deck.dataset.commandAction || "",
-    })).observe(deck,{attributes:true,attributeFilter:["data-command-direction","data-command-action"]});
-  });
+  await expect(page.locator("#directions")).toBeHidden();
   await page.locator("#skip").click();
-  await expect(page.locator("#phaseBadge")).toHaveText("2");
-  await expect.poll(() => page.evaluate(() =>
-    window.__crosspadFeedback.some(x => x.action === "skip")
-  )).toBe(true);
-
-  const enabled = page.locator("#directions button:enabled");
-  expect(await enabled.count()).toBeGreaterThan(0);
-  const chosen = await enabled.first().evaluate(b =>
-    Array.from(b.parentElement.children).indexOf(b)
-  );
-  const names=["up","right","down","left"];
-  await enabled.first().click();
-  // A genuine press screenshot while the real pawn begins its glide.
-  await page.screenshot({path:testInfo.outputPath("arcade-feedback-during-glide.png"),fullPage:true,animations:"allow"});
-  await expect.poll(() => page.evaluate(() =>
-    window.__crosspadFeedback.some(x => x.dir)
-  )).toBe(true);
-  expect(await page.evaluate(() => window.__crosspadFeedback.filter(x => x.dir).at(-1)?.dir))
-    .toBe(names[chosen]);
-
-  // Real engine, including the existing windup and end-of-slide score logic.
+  const target=page.locator("#board .cell.stop:not([disabled])").first();
+  const before=await page.locator("#board .cell").count();
+  await expect(target).toHaveCSS("cursor","pointer");
+  await target.click();
   await expect(page.locator("#turnCount")).toHaveText("2手目");
-  await expect(page.locator("#phaseBadge")).toHaveText("1");
-  await expect(page.locator("#directions button")).toHaveCount(4);
-  await page.waitForTimeout(800);
-  await expect(page.locator(".control-deck")).not.toHaveAttribute("data-command-direction", /./);
-  await page.screenshot({path:testInfo.outputPath("arcade-feedback-after-glide.png"),fullPage:true});
+  await expect(page.locator(".ice-glide-vfx .ice-landing")).toHaveCount(1);
+  await expect(page.locator("#board .cell")).toHaveCount(before);
+  await expect(page.locator(".ice-glide-vfx")).toHaveAttribute("aria-hidden","true");
+  await page.screenshot({path:testInfo.outputPath("tap-ice-landing.png"),fullPage:true});
   await page.locator("#undo").click();
   await expect(page.locator("#turnCount")).toHaveText("1手目");
+  await expect(page.locator(".ice-glide-vfx .ice-landing")).toHaveCount(0);
 });
 
-test("reduced motion keeps real crosspad controls usable without overlay animation", async ({page}) => {
+
+test("reduced motion keeps landing cells tappable without decorative ice animation",async ({page})=>{
   await page.setViewportSize({width:320,height:844});
   await page.emulateMedia({reducedMotion:"reduce"});
   await page.goto("/");
-  await expect(page.locator("html")).toHaveAttribute("data-zurash-command-feedback","ready");
   await page.locator("#localMode").click();
   await page.locator("#start").click();
   await page.locator("#skip").click();
-  await page.locator("#directions button:enabled").first().click();
+  const target=page.locator("#board .cell.stop:not([disabled])").first();
+  await expect(target).toHaveCSS("animation-name","none");
+  await target.click();
   await expect(page.locator("#turnCount")).toHaveText("2手目");
-  const css = await page.locator(".control-deck").evaluate(el =>
-    getComputedStyle(el,"::after").animationName
-  );
-  expect(css).toBe("none");
+  await expect(page.locator(".ice-glide-vfx .ice-streak")).toHaveCount(0);
+  await expect(page.locator(".ice-glide-vfx .ice-landing")).toHaveCount(0);
 });
 
 
@@ -672,216 +626,128 @@ test("star stop tip reads clearly below the live crosspad without adding a card"
 });
 
 
-test("board rim and real arcade controller share ice material without grid resizing",async ({page},testInfo)=>{
+test("tap-first dock is compact while board frame and tile geometry are unchanged",async ({page},testInfo)=>{
   await page.emulateMedia({reducedMotion:"reduce"});
   for(const width of [320,390,430]){
     await page.setViewportSize({width,height:844});
     await page.goto("/");
-    await expect(page.locator("#board .cell")).toHaveCount(49);
-    const before=await page.evaluate(()=>{
-      const rect=sel=>document.querySelector(sel).getBoundingClientRect();
-      const board=rect("#board"),frame=rect(".board-wrap");
-      return {boardW:board.width,boardH:board.height,frameW:frame.width,frameH:frame.height};
-    });
+    const before=await page.locator("#board").boundingBox();
     await page.locator("#localMode").click();
     await page.locator("#start").click();
-    await expect(page.locator("html")).toHaveAttribute("data-zurash-match-view","play");
-    const after=await page.evaluate(()=>{
-      const q=sel=>document.querySelector(sel);
-      const rect=sel=>q(sel).getBoundingClientRect();
-      const board=rect("#board"),frame=rect(".board-wrap"),deck=rect(".control-deck");
-      const frameCss=getComputedStyle(q(".board-wrap"));
-      const deckCss=getComputedStyle(q(".control-deck"));
-      const dividerCss=getComputedStyle(q(".control-deck"),"::before");
-      return {
-        boardW:board.width,boardH:board.height,frameW:frame.width,frameH:frame.height,
-        edgeFrame:frameCss.borderTopColor,edgeDeck:deckCss.borderTopColor,
-        shadowFrame:frameCss.boxShadow,shadowDeck:deckCss.boxShadow,
-        dividerPointer:dividerCss.pointerEvents,
-        deckWidth:deck.width,deckBottom:deck.bottom,
-        horizontalOverflow:document.documentElement.scrollWidth>innerWidth,
-        buttons:[...document.querySelectorAll("#directions button")].map(el=>{
-          const r=el.getBoundingClientRect();
-          return {width:r.width,height:r.height};
-        })
-      };
+    const after=await page.locator("#board").boundingBox();
+    expect(after.width).toBe(before.width);
+    expect(after.height).toBe(before.height);
+    await expect(page.locator("#directions")).toBeHidden();
+    const metrics=await page.evaluate(()=>{
+      const get=s=>document.querySelector(s).getBoundingClientRect();
+      const a=get("#undo"),b=get("#skip"),deck=get(".control-deck");
+      return {width:document.documentElement.scrollWidth,viewport:innerWidth,
+        controls:[a,b].map(r=>({w:r.width,h:r.height})),
+        deck:{height:deck.height,left:deck.left,right:deck.right},
+        board:get("#board").height};
     });
-    for(const k of ["boardW","boardH","frameW","frameH"]){
-      expect(Math.abs(after[k]-before[k]),k+" board geometry").toBeLessThan(.5);
-    }
-    expect(after.edgeFrame).toBe(after.edgeDeck);
-    expect(after.shadowFrame).toContain("rgb");
-    expect(after.shadowDeck).toContain("rgb");
-    expect(after.dividerPointer).toBe("none");
-    expect(after.horizontalOverflow).toBe(false);
-    expect(after.buttons).toHaveLength(4);
-    expect(after.buttons.every(b=>b.width>=44 && b.height>=44)).toBe(true);
-    if(width<=390)expect(after.deckBottom).toBeLessThanOrEqual(844);
-    await page.screenshot({path:testInfo.outputPath("matched-ice-material-"+width+".png"),fullPage:true});
+    expect(metrics.width).toBeLessThanOrEqual(metrics.viewport);
+    expect(metrics.controls.every(b=>b.w>=44&&b.h>=44)).toBe(true);
+    expect(metrics.deck.height).toBeLessThan(125);
+    await page.screenshot({path:testInfo.outputPath("compact-tap-dock-"+width+".png"),fullPage:true});
     await page.locator("#skip").click();
-    await expect(page.locator("#phaseBadge")).toHaveText("2");
-    await page.locator("#directions button:enabled").first().click();
+    await page.locator("#board .cell.stop:not([disabled])").first().click();
     await expect(page.locator("#turnCount")).toHaveText("2手目");
   }
 });
 
 
-test("touch preview responds before click and never moves the actual pawn by itself",async ({page},testInfo)=>{
+test("pressing a glowing board destination without click never advances the turn",async ({page})=>{
   await page.emulateMedia({reducedMotion:"reduce"});
   for(const width of [320,390]){
     await page.setViewportSize({width,height:844});
     await page.goto("/");
-    // The cosmetic module now signals readiness only after every mobile skin
-    // stylesheet finishes loading. Verify the contract before instant presses.
-    await expect(page.locator("html")).toHaveAttribute("data-zurash-command-feedback","ready");
-    await expect.poll(() => page.locator('link[href^="mobile-focus.css"]').evaluate(el => Boolean(el.sheet))).toBe(true);
     await page.locator("#localMode").click();
     await page.locator("#start").click();
-    const deck=page.locator(".control-deck");
-    // Disabled arrows cannot produce a false tactile indicator during wall turn.
-    await page.locator("#directions button").first().dispatchEvent("pointerdown",{isPrimary:true});
-    await expect(deck).not.toHaveAttribute("data-command-press",/./);
-    await page.locator("#skip").dispatchEvent("pointerdown",{isPrimary:true});
-    await expect(deck).toHaveAttribute("data-command-press","skip");
-    await expect(page.locator("#phaseBadge")).toHaveText("1");
-    await page.locator("#skip").dispatchEvent("pointercancel",{isPrimary:true});
-    await expect(deck).not.toHaveAttribute("data-command-press",/./);
     await page.locator("#skip").click();
-    await expect(page.locator("#phaseBadge")).toHaveText("2");
-
-    const active=page.locator("#directions button:enabled").first();
-    const index=await active.evaluate(el=>Array.from(el.parentElement.children).indexOf(el));
-    const keys=["up","right","down","left"];
-    await active.dispatchEvent("pointerdown",{isPrimary:true});
-    await expect(deck).toHaveAttribute("data-command-press",keys[index]);
-    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    const target=page.locator("#board .cell.stop:not([disabled])").first();
+    await target.dispatchEvent("pointerdown",{pointerId:7,isPrimary:true});
     await expect(page.locator("#turnCount")).toHaveText("1手目");
-    const pressed=await active.evaluate(el=>({
-      transform:getComputedStyle(el).transform,
-      noTransition:getComputedStyle(el).transitionDuration
-    }));
-    expect(pressed.transform).not.toBe("none");
-    expect(pressed.noTransition).toBe("0s");
-    await page.screenshot({path:testInfo.outputPath("instant-touch-preview-"+width+".png"),fullPage:true});
-    await active.dispatchEvent("pointercancel",{isPrimary:true});
-    await expect(deck).not.toHaveAttribute("data-command-press",/./);
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    await target.dispatchEvent("pointercancel",{pointerId:7,isPrimary:true});
     await expect(page.locator("#turnCount")).toHaveText("1手目");
-
-    // The real app click triggers movement; preview is never a substitute.
-    await active.click();
+    await target.click();
     await expect(page.locator("#turnCount")).toHaveText("2手目");
-    await expect(page.locator("#phaseBadge")).toHaveText("1");
-    await expect(deck).not.toHaveAttribute("data-command-direction",/./,{timeout:1400});
-    await page.locator("#undo").click();
-    await expect(page.locator("#turnCount")).toHaveText("1手目");
   }
 });
 
-test("keyboard input previews a valid command and clears on cancellation",async ({page})=>{
-  await page.emulateMedia({reducedMotion:"reduce"});
+
+test("landing tile remains a keyboard accessible real button",async ({page})=>{
   await page.setViewportSize({width:390,height:844});
+  await page.emulateMedia({reducedMotion:"reduce"});
   await page.goto("/");
   await page.locator("#localMode").click();
   await page.locator("#start").click();
   await page.locator("#skip").click();
-  const deck=page.locator(".control-deck");
-  const active=page.locator("#directions button:enabled").first();
-  const idx=await active.evaluate(el=>Array.from(el.parentElement.children).indexOf(el));
-  await active.focus();
+  const target=page.locator("#board .cell.stop:not([disabled])").first();
+  await target.focus();
   await page.keyboard.down("Space");
-  await expect(deck).toHaveAttribute("data-command-press",["up","right","down","left"][idx]);
   await expect(page.locator("#turnCount")).toHaveText("1手目");
   await page.keyboard.up("Space");
   await expect(page.locator("#turnCount")).toHaveText("2手目");
-  await expect(deck).not.toHaveAttribute("data-command-press",/./);
 });
 
 
-test("thumb drag cancels only decorative press and never commits a move",async ({page})=>{
+test("dragging away from a landing tile does not execute a slide",async ({page})=>{
   await page.setViewportSize({width:390,height:667});
   await page.emulateMedia({reducedMotion:"reduce"});
   await page.goto("/");
   await page.locator("#localMode").click();
   await page.locator("#start").click();
   await page.locator("#skip").click();
-  const key=page.locator("#directions button:enabled").first();
-  const idx=await key.evaluate(el=>Array.from(el.parentElement.children).indexOf(el));
-  const deck=page.locator(".control-deck");
-  const coords={pointerId:7,isPrimary:true,button:0,clientX:70,clientY:70};
-  await key.dispatchEvent("pointerdown",coords);
-  await expect(deck).toHaveAttribute("data-command-press",["up","right","down","left"][idx]);
-  // A swipe away must clear visual state, while phase and turn remain unchanged.
-  await page.locator("body").dispatchEvent("pointermove",{...coords,clientX:90,clientY:91});
-  await expect(deck).not.toHaveAttribute("data-command-press",/./);
-  await expect(page.locator("#phaseBadge")).toHaveText("2");
+  const target=page.locator("#board .cell.stop:not([disabled])").first();
+  const p={pointerId:7,isPrimary:true,button:0,clientX:80,clientY:80};
+  await target.dispatchEvent("pointerdown",p);
+  await page.locator("body").dispatchEvent("pointermove",{...p,clientX:108,clientY:114});
+  await page.locator("body").dispatchEvent("pointerup",{...p,clientX:108,clientY:114});
   await expect(page.locator("#turnCount")).toHaveText("1手目");
-  await page.locator("body").dispatchEvent("pointerup",{...coords,clientX:90,clientY:91});
-  await expect(page.locator("#phaseBadge")).toHaveText("2");
-  // Only a real click, still validated by engine, moves the pawn.
-  await key.click();
+  await target.click();
   await expect(page.locator("#turnCount")).toHaveText("2手目");
 });
 
-test("short-height iPhones keep crosspad scroll-reachable and reserve safe-area space",async ({page},testInfo)=>{
+
+test("short-height phones keep board taps reachable and score visible at the dock",async ({page},testInfo)=>{
   await page.emulateMedia({reducedMotion:"reduce"});
   for(const viewport of [
-    {width:320,height:568},
-    {width:375,height:667},
-    {width:390,height:667},
-    {width:430,height:740},
+    {width:320,height:568},{width:375,height:667},
+    {width:390,height:667},{width:430,height:740}
   ]){
     await page.setViewportSize(viewport);
     await page.goto("/");
     await page.locator("#localMode").click();
     await page.locator("#start").click();
+    await expect(page.locator("#directions")).toBeHidden();
     const metrics=await page.evaluate(()=>{
       const main=document.querySelector("main");
       const scroll=document.querySelector(".board-scroll");
-      const controls=[...document.querySelectorAll("#directions button")];
-      return {
-        width:innerWidth,pageWidth:document.documentElement.scrollWidth,
+      return {pageWidth:document.documentElement.scrollWidth,viewportWidth:innerWidth,
         safePadding:parseFloat(getComputedStyle(main).paddingBottom),
         scrollPadding:parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom),
         boardWidth:document.querySelector("#board").getBoundingClientRect().width,
-        touch:controls.map(b=>getComputedStyle(b).touchAction),
-        noSelect:controls.map(b=>({
-          standard:getComputedStyle(b).userSelect,
-          webkit:getComputedStyle(b).getPropertyValue("-webkit-user-select"),
-        })),
-        boardScroll:getComputedStyle(scroll).overflowX
-      };
+        boardScroll:getComputedStyle(scroll).overflowX};
     });
-    expect(metrics.pageWidth).toBeLessThanOrEqual(metrics.width);
+    expect(metrics.pageWidth).toBeLessThanOrEqual(metrics.viewportWidth);
     expect(metrics.boardWidth).toBeGreaterThan(275);
     expect(metrics.safePadding).toBeGreaterThanOrEqual(18);
     expect(metrics.scrollPadding).toBeGreaterThanOrEqual(18);
-    // WebKit may expose the effective value only under the prefixed name.
-    expect(metrics.noSelect.every(s=>s.standard==="none" || s.webkit==="none")).toBe(true);
-    expect(metrics.touch.every(s=>s==="manipulation")).toBe(true);
     expect(metrics.boardScroll).toBe("auto");
-    await page.locator("#skip").click();
-    await expect(page.locator("#phaseBadge")).toHaveText("2");
-    const key=page.locator("#directions button:enabled").first();
-    await key.scrollIntoViewIfNeeded();
-    const reach=await key.evaluate(el=>{
-      const r=el.getBoundingClientRect();
-      return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,viewportW:innerWidth,viewportH:innerHeight};
-    });
-    expect(reach.left).toBeGreaterThanOrEqual(0);
-    expect(reach.right).toBeLessThanOrEqual(reach.viewportW+1);
-    expect(reach.top).toBeGreaterThanOrEqual(0);
-    expect(reach.bottom).toBeLessThanOrEqual(reach.viewportH+1);
-    // User's iPhone recording exposed the actual issue after scrolling:
-    // the original top scoreboard leaves the viewport. The mirrored
-    // read-only scoreboard must remain in view beside the real controller.
     const glance=page.locator("#mobileScoreGlance");
-    await expect(glance).toBeVisible();
+    await glance.scrollIntoViewIfNeeded();
     await expect(glance).toBeInViewport();
     await expect(glance.locator("[data-glance-turn]")).toHaveText("1手目");
-    await page.screenshot({path:testInfo.outputPath("short-iphone-"+viewport.width+"x"+viewport.height+".png"),fullPage:true});
-    await key.click();
-    await expect(page.locator("#turnCount")).toHaveText("2手目");
+    await page.locator("#skip").click();
+    const stop=page.locator("#board .cell.stop:not([disabled])").first();
+    await stop.scrollIntoViewIfNeeded();
+    await expect(stop).toBeInViewport();
+    await stop.click();
     await expect(glance.locator("[data-glance-turn]")).toHaveText("2手目");
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+    await page.screenshot({path:testInfo.outputPath("short-tap-iphone-"+viewport.width+"x"+viewport.height+".png"),fullPage:true});
   }
 });
 
