@@ -670,3 +670,82 @@
     -webkit-overflow-scrolling:touch;
   }
 }
+
+
+/* THUMB-VIEW SCORE GLANCE — field-tested iPhone layout, stage 22.
+ * Live scoreboard/turn values are mirrored by mobile-command-feedback.js.
+ * This strip sits in UNUSED upper-left cabinet space above Undo: no extra
+ * viewport height, new controls, board overlay, or altered touch targets. */
+@media (max-width:600px) {
+  html[data-zurash-match-view="play"] .game .control-deck .mobile-score-glance {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+    align-items:center;
+    position:absolute;
+    z-index:2;
+    pointer-events:none;
+    top:6px;
+    left:12px;
+    width:calc(100% - clamp(157px,52%,188px) - 27px);
+    min-width:0;
+    min-height:24px;
+    padding:2px 5px;
+    gap:2px;
+    box-sizing:border-box;
+    border:1px solid #c6f2ffb5;
+    border-radius:14px;
+    background:linear-gradient(170deg,#0b457dc9,#073368de);
+    box-shadow:inset 0 1px #ffffff4d,0 1px 2px #03254f63;
+    color:#f7feff;
+    font-size:clamp(10px,2.8vw,12px);
+    line-height:1.1;
+    font-variant-numeric:tabular-nums;
+    text-shadow:0 1px 2px #05294c;
+    white-space:nowrap;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance:not([data-ready="true"]) {
+    visibility:hidden;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    min-width:0;
+    opacity:.76;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player.current {
+    opacity:1;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player::before {
+    content:"";
+    flex:0 0 7px;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:linear-gradient(#ffdf8f,#f57e39);
+    box-shadow:0 0 0 1px #fff9,0 0 4px #ffc65d;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-p2::before {
+    background:linear-gradient(#d0faff,#49bded);
+    box-shadow:0 0 0 1px #fff9,0 0 4px #73ddff;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-player.current b {
+    color:#fff2a5;
+  }
+  html[data-zurash-match-view="play"] .mobile-score-glance .glance-turn {
+    font-size:clamp(8px,2.2vw,10px);
+    font-weight:800;
+    color:#d5f5ff;
+    letter-spacing:-.35px;
+  }
+}
+@media (max-width:355px) {
+  html[data-zurash-match-view="play"] .game .control-deck .mobile-score-glance {
+    top:5px;
+    left:9px;
+    width:calc(100% - 157px - 19px);
+    padding-inline:2px;
+    gap:0;
+  }
+}
