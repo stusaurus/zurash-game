@@ -1,3 +1,4 @@
+import { slideByBoard } from "./tap-target.js";
 import { test, expect } from "@playwright/test";
 import { initial, apply, movableWalls, key } from "../../src/engine.js";
 import { choose, seeded } from "../../src/ai.js";
@@ -13,7 +14,7 @@ async function doAction(page, state, action) {
       .click();
     await page.locator(`[data-cell="${action.wall.to}"]`).click();
   } else await page.locator("#skip").click();
-  await page.locator("#directions button").nth(action.dir).click();
+  await slideByBoard(page,action.dir);
   const n = apply(state, action);
   if (n.winner === null)
     await expect(page.locator("#turnCount")).toHaveText(`${n.ply + 1}手目`);
@@ -144,7 +145,7 @@ test("wall selection, shift, undo, skip, slide, local handoff, victory and remat
   await expect(page.locator("#result")).toBeHidden();
   await expect(page.locator("#turnCount")).toHaveText("1手目");
   await page.locator("#skip").click();
-  await page.locator("#directions button:not([disabled])").first().click();
+  await slideByBoard(page);
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect(page.locator("#phaseTitle")).toContainText("プレイヤー2");
   await page.locator("#undo").click();
