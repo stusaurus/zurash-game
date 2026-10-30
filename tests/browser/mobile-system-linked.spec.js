@@ -817,3 +817,39 @@ test("iPhone thumb-view score mirror follows the real turn without covering cont
     await page.screenshot({path:testInfo.outputPath("thumb-glance-"+width+".png"),fullPage:true});
   }
 });
+
+
+test("all five named layouts use genuine tap-to-land while desktop arrows remain",async ({page},testInfo)=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.setViewportSize({width:390,height:844});
+  for (const [layout,name] of [[4,"A"],[5,"B"],[6,"C"],[7,"D"],[8,"E"]]) {
+    await page.goto("/");
+    await expect(page.locator('link[href*="mobile-tap.css"]')).toHaveCount(1);
+    await page.locator("#localMode").click();
+    await page.locator("#layout").selectOption(String(layout));
+    await page.locator("#start").click();
+    await expect(page.locator("#directions")).toBeHidden();
+    const cells=await page.locator("#board .cell").count();
+    expect(cells).toBeGreaterThan(0);
+    await page.locator("#skip").click();
+    const tiles=page.locator("#board .cell.stop:not([disabled])");
+    expect(await tiles.count()).toBeGreaterThan(0);
+    await expect(tiles.first()).toHaveAttribute("data-slide-dir",/^[0-3]$/);
+    await tiles.first().scrollIntoViewIfNeeded();
+    await tiles.first().click();
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+    await expect(page.locator("#board .cell")).toHaveCount(cells);
+    await expect(page.locator("#mobileScoreGlance [data-glance-turn]")).toHaveText("2手目");
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+    await page.screenshot({path:testInfo.outputPath("touch-mode-"+name+".png"),fullPage:true});
+  }
+  await page.setViewportSize({width:1024,height:768});
+  await page.goto("/");
+  await expect(page.locator("#directions")).toBeVisible();
+  await page.locator("#localMode").click();
+  await page.locator("#start").click();
+  await page.locator("#skip").click();
+  await expect(page.locator("#directions button:enabled").first()).toBeVisible();
+  await page.locator("#directions button:enabled").first().click();
+  await expect(page.locator("#turnCount")).toHaveText("2手目");
+});
