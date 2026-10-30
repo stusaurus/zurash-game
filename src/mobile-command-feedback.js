@@ -77,6 +77,46 @@ document.addEventListener("visibilitychange", () => {
 const deck = document.querySelector(".control-deck");
 const phaseBadge = document.querySelector("#phaseBadge");
 const arrowGroup = document.querySelector("#directions");
+
+/* Read-only score/turn mirror for the cabinet where the player's thumb rests.
+ * Observe the DOM rendered by app.js: NEVER maintain an independent game score.
+ * The original accessible scoreboard stays authoritative and unchanged. */
+const glance = document.querySelector("#mobileScoreGlance");
+const liveScores = document.querySelector("#scores");
+const liveTurn = document.querySelector("#turnCount");
+function syncGlance() {
+  if (!glance || !liveScores || !liveTurn) return;
+  const cards = [...liveScores.querySelectorAll(".score")];
+  if (cards.length !== 2) {
+    delete glance.dataset.ready;
+    return;
+  }
+  let valid = true;
+  cards.forEach((card, index) => {
+    const value = card.querySelector(".score-count")?.textContent.trim().match(/^\\d+/)?.[0];
+    const output = glance.querySelector(`[data-glance-score="${index + 1}"]`);
+    const player = glance.querySelector(`.glance-p${index + 1}`);
+    if (value === undefined || !output || !player) {
+      valid = false;
+      return;
+    }
+    output.textContent = value;
+    player.classList.toggle("current", card.classList.contains("current"));
+  });
+  const turn = liveTurn.textContent.trim();
+  if (!turn) valid = false;
+  const turnLabel = glance.querySelector("[data-glance-turn]");
+  if (!turnLabel) valid = false;
+  else turnLabel.textContent = turn;
+  if (valid) glance.dataset.ready = "true";
+  else delete glance.dataset.ready;
+}
+if (glance && liveScores && liveTurn) {
+  const glanceObserver = new MutationObserver(syncGlance);
+  glanceObserver.observe(liveScores, {childList:true,characterData:true,subtree:true});
+  glanceObserver.observe(liveTurn, {childList:true,characterData:true,subtree:true});
+  syncGlance();
+}
 let clearFeedback = null;
 let clearHandoff = null;
 let lastPhase = null;
