@@ -1,3 +1,4 @@
+import { slideByBoard } from "./tap-target.js";
 import { test, expect } from "@playwright/test";
 
 test("iPhone reduced-motion fallback explains apparent teleport; explicit ON restores travel", async ({ page }) => {
@@ -19,7 +20,7 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
   await page.locator("#localMode").click();
   await page.locator("#start").click();
   await page.locator("#skip").click();
-  await expect(page.locator("#directions button").nth(1)).toBeEnabled();
+  await expect(page.locator('#board .cell.stop[data-slide-dir="1"]')).toBeEnabled();
   const pawn = page.locator(".token.p1");
   const origin = await pawn.boundingBox();
   // Install a requestAnimationFrame recorder *before* starting travel.
@@ -51,7 +52,7 @@ test("iPhone reduced-motion fallback explains apparent teleport; explicit ON res
     });
     observer.observe(token, { attributes: true, attributeFilter: ["data-pose"] });
   });
-  await page.locator("#directions button").nth(1).click();
+  await slideByBoard(page,1);
   await expect(page.locator("#turnCount")).toHaveText("2手目");
   await expect.poll(() => page.evaluate(() => window.__trikenFlight.done)).toBe(true);
   const arrival = await pawn.boundingBox();
