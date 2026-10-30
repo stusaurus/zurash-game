@@ -398,7 +398,7 @@ function showIceVisual(from, to, travelMs, landing = false) {
     fx.style.top = `${vertical ? Math.min(ay, by) : ay}%`;
     fx.style.width = vertical ? "4px" : `${Math.abs(bx - ax)}%`;
     fx.style.height = vertical ? `${Math.abs(by - ay)}%` : "4px";
-    fx.style.transform = "translate(-50%,-50%)";
+    fx.style.transform = vertical ? "translateX(-50%)" : "translateY(-50%)";
     fx.style.setProperty("--ice-travel-ms", `${travelMs}ms`);
   }
   layer.append(fx);
