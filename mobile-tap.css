@@ -313,7 +313,8 @@
   html:not([data-zurash-motion="animate"]) #board .cell.stop,
   html:not([data-zurash-motion="animate"]) #board .cell.target,
   html:not([data-zurash-motion="animate"]) #scores .score.just-scored .stars,
-  html:not([data-zurash-motion="animate"]) #scores .score.just-scored .score-count {
+  html:not([data-zurash-motion="animate"]) #scores .score.just-scored .score-count,
+  html:not([data-zurash-motion="animate"]) .mobile-score-glance .glance-player.just-scored b {
     animation:none !important;
   }
 }
@@ -321,7 +322,8 @@
   html[data-zurash-motion="still"] #board .cell.stop,
   html[data-zurash-motion="still"] #board .cell.target,
   html[data-zurash-motion="still"] #scores .score.just-scored .stars,
-  html[data-zurash-motion="still"] #scores .score.just-scored .score-count {
+  html[data-zurash-motion="still"] #scores .score.just-scored .score-count,
+  html[data-zurash-motion="still"] .mobile-score-glance .glance-player.just-scored b {
     animation:none !important;
   }
 }
