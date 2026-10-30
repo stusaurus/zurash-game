@@ -37,7 +37,7 @@ test("mobile screen remains bound to the real 7×7 engine and all legal interact
   }
   const chosen = legal[0];
   const after = finishSlide(nextWallState, chosen.dir);
-  await page.locator("#directions button").nth(chosen.dir).click();
+  await slideByBoard(page,chosen.dir);
   await expect(page.locator("#turnCount")).toHaveText(`${after.ply + 1}手目`);
   await expect(page.locator(".cell .star")).toHaveCount(after.stars.length);
   await expect(page.locator("#scores")).toContainText(`${after.scores[0]} / 3`);
@@ -114,7 +114,7 @@ test("seamless HUD uses real phase controls and keeps every tap target clear", a
       viewportWidth:innerWidth,
       scoreWidth:document.querySelector("#scores").getBoundingClientRect().width,
       gameWidth:document.querySelector(".game").getBoundingClientRect().width,
-      controls:[...document.querySelectorAll("#directions button, #undo, #skip, #settings")]
+      controls:[...document.querySelectorAll("#undo, #skip, #settings")]
         .map(e=>({id:e.id||"direction",w:e.getBoundingClientRect().width,h:e.getBoundingClientRect().height})),
     }));
     expect(layout.documentWidth).toBeLessThanOrEqual(layout.viewportWidth);
@@ -127,9 +127,9 @@ test("seamless HUD uses real phase controls and keeps every tap target clear", a
     await page.locator("#skip").click();
     await expect(page.locator("#phaseBadge")).toHaveText("2");
     await expect(page.locator("#skip")).toBeDisabled();
-    expect(await page.locator("#directions button:enabled").count()).toBeGreaterThan(0);
+    expect(await page.locator("#board .cell.stop:not([disabled])").count()).toBeGreaterThan(0);
     await page.screenshot({path:testInfo.outputPath("seamless-glide-"+width+".png"),fullPage:true});
-    await page.locator("#directions button:enabled").first().click();
+    await slideByBoard(page);
     await expect(page.locator("#phaseBadge")).toHaveText("1");
     await expect(page.locator("#turnCount")).toHaveText("2手目");
   }
@@ -217,7 +217,7 @@ test("reduced motion keeps landing cells tappable without decorative ice animati
 });
 
 
-test("real wall move hands focus to legal crosspad and back after sliding", async ({page},testInfo) => {
+test("real wall move hands focus to legal landing tiles and back after sliding", async ({page},testInfo) => {
   await page.setViewportSize({width:390,height:844});
   await page.emulateMedia({reducedMotion:"no-preference"});
   await page.goto("/");
@@ -250,7 +250,7 @@ test("real wall move hands focus to legal crosspad and back after sliding", asyn
     window.__commandPhases.some(x=>x.handoff==="slide")
   )).toBe(true);
   await page.screenshot({path:testInfo.outputPath("handoff-real-wall-to-slide.png"),fullPage:true,animations:"allow"});
-  await page.locator("#directions button:enabled").first().click();
+  await slideByBoard(page);
   await expect(page.locator("#phaseBadge")).toHaveText("1");
   await expect(deck).toHaveAttribute("data-command-phase","wall");
   await expect(deck).toHaveAttribute("data-command-ready","false");
@@ -281,7 +281,7 @@ test("in-game motion OFF prevents phase sweep while preserving skip-and-glide",a
   await expect(deck).not.toHaveAttribute("data-command-handoff",/./);
   const animation=await deck.evaluate(el => getComputedStyle(el,"::after").animationName);
   expect(animation).toBe("none");
-  await page.locator("#directions button:enabled").first().click();
+  await slideByBoard(page);
   await expect(page.locator("#phaseBadge")).toHaveText("1");
   await expect(page.locator("#turnCount")).toHaveText("2手目");
 });
@@ -334,7 +334,7 @@ test("live Triken scoreboard HUD fits smartphones and tracks real score/phase",a
     await expect(page.locator("#phaseBadge")).toHaveText("2");
     await expect(page.locator(".control-deck")).toHaveAttribute("data-command-phase","slide");
     await page.screenshot({path:testInfo.outputPath("hud-score-"+width+"-slide.png"),fullPage:true});
-    await page.locator("#directions button:enabled").first().click();
+    await slideByBoard(page);
     await expect(page.locator("#phaseBadge")).toHaveText("1");
   }
 });
@@ -393,7 +393,7 @@ test("320px score numbers remain large and board stays prominent",async ({page},
     await page.locator("#localMode").click();
     await page.locator("#start").click();
     await page.locator("#skip").click();
-    await page.locator("#directions button:enabled").first().click();
+    await slideByBoard(page);
     await expect(page.locator("#scores .score-count")).toHaveCount(2);
     await expect(page.locator("#phaseBadge")).toHaveText("1");
   }
@@ -423,7 +423,7 @@ test("gameplay focus compacts only mobile chrome after a real game start",async 
       return {
         mast:box(".mast").height,boardTop:box("#board").top,boardW:box("#board").width,
         overflow:document.documentElement.scrollWidth>innerWidth,
-        allControls:[...document.querySelectorAll("#directions button,#skip,#undo,#settings,#help")]
+        allControls:[...document.querySelectorAll("#skip,#undo,#settings,#help")]
            .map(el=>({w:boxSelector(el).width,h:boxSelector(el).height})),
       };
       function boxSelector(el){return el.getBoundingClientRect();}
@@ -446,7 +446,7 @@ test("gameplay focus compacts only mobile chrome after a real game start",async 
     await page.screenshot({path:testInfo.outputPath("focused-match-"+width+".png"),fullPage:true});
     await page.locator("#skip").click();
     await expect(page.locator("#phaseBadge")).toHaveText("2");
-    await page.locator("#directions button:enabled").first().click();
+    await slideByBoard(page);
     await expect(page.locator("#turnCount")).toHaveText("2手目");
     await page.locator("#help").click();
     await expect(page.locator("#helpDialog")).toBeVisible();
@@ -507,13 +507,13 @@ test("live match menu and score become one connected frosted visor", async ({pag
     await page.locator('#setupDialog [data-close="setupDialog"]').first().click();
     await page.locator("#skip").click();
     await expect(page.locator("#phaseBadge")).toHaveText("2");
-    await page.locator("#directions button:enabled").first().click();
+    await slideByBoard(page);
     await expect(page.locator("#turnCount")).toHaveText("2手目");
   }
 });
 
 
-test("mobile play help and auxiliary chrome stay reachable without competing with crosspad",async ({page},testInfo)=>{
+test("mobile play help and auxiliary chrome stay reachable beside compact dock",async ({page},testInfo)=>{
   await page.emulateMedia({reducedMotion:"reduce"});
   for(const width of [320,390,430]){
     await page.setViewportSize({width,height:844});
@@ -565,13 +565,13 @@ test("mobile play help and auxiliary chrome stay reachable without competing wit
     await expect(page.locator("#motionToggle")).not.toHaveAttribute("aria-pressed",before);
     await page.locator("#skip").click();
     await expect(page.locator("#phaseBadge")).toHaveText("2");
-    await page.locator("#directions button:enabled").first().click();
+    await slideByBoard(page);
     await expect(page.locator("#turnCount")).toHaveText("2手目");
   }
 });
 
 
-test("star stop tip reads clearly below the live crosspad without adding a card",async ({page},testInfo)=>{
+test("star stop tip reads clearly below the compact touch dock without another card",async ({page},testInfo)=>{
   await page.emulateMedia({reducedMotion:"reduce"});
   for(const width of [320,390,430]){
     await page.setViewportSize({width,height:844});
@@ -620,7 +620,7 @@ test("star stop tip reads clearly below the live crosspad without adding a card"
     await page.screenshot({path:testInfo.outputPath("ice-star-rule-"+width+".png"),fullPage:true});
     await page.locator("#skip").click();
     await expect(page.locator("#phaseBadge")).toHaveText("2");
-    await page.locator("#directions button:enabled").first().click();
+    await slideByBoard(page);
     await expect(page.locator("#turnCount")).toHaveText("2手目");
   }
 });
@@ -778,7 +778,7 @@ test("iPhone thumb-view score mirror follows the real turn without covering cont
         const expectedTurns=source.map(card=>card.classList.contains("current"));
         const box=el=>el.getBoundingClientRect();
         const r=box(glance);
-        const controls=[...document.querySelectorAll("#directions button, #undo, #skip")];
+        const controls=[...document.querySelectorAll("#undo, #skip")];
         const overlap=controls.some(el=>{
           const b=box(el);
           return r.left<b.right && r.right>b.left && r.top<b.bottom && r.bottom>b.top;
@@ -806,7 +806,7 @@ test("iPhone thumb-view score mirror follows the real turn without covering cont
     // The actual engine performs a legal move; the glance tracks its DOM.
     await page.locator("#skip").click();
     await expect(page.locator("#phaseBadge")).toHaveText("2");
-    await page.locator("#directions button:enabled").first().click();
+    await slideByBoard(page);
     await expect(page.locator("#turnCount")).toHaveText("2手目");
     await expect(glance.locator("[data-glance-turn]")).toHaveText("2手目");
     snapshot=await verifyMirror();
