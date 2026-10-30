@@ -1010,3 +1010,50 @@ test("CPU score sparkle survives the thinking redraw and reaches the thumb HUD",
   await expect(page.locator("#scores .score-count").first()).toContainText("1 / 3");
   await expect(page.locator("[data-glance-score='1']")).toHaveText("1");
 });
+
+
+test("legal board buttons preview on pointerdown and cancel without moving",async ({page},testInfo)=>{
+  await page.emulateMedia({reducedMotion:"reduce"});
+  for(const width of [320,390]){
+    await page.setViewportSize({width,height:844});
+    await page.goto("/");
+    await expect(page.locator("html")).toHaveAttribute("data-zurash-command-feedback","ready");
+    await expect.poll(()=>page.locator('link[href*="mobile-tap.css"]').evaluate(el=>!!el.sheet)).toBe(true);
+    await page.locator("#localMode").click();
+    await page.locator("#start").click();
+    const wall=page.locator("#board .cell.wall.available:not([disabled])").first();
+    const finger={pointerId:17,isPrimary:true,button:0,clientX:40,clientY:50};
+    await wall.dispatchEvent("pointerdown",finger);
+    await expect(wall).toHaveAttribute("data-touch-preview","true");
+    await expect(wall).toHaveCSS("animation-name","none");
+    expect(await wall.evaluate(el=>getComputedStyle(el).transform)).not.toBe("none");
+    await expect(page.locator("#turnCount")).toHaveText("1手目");
+    // A scrolling gesture must erase its decorative press only.
+    await page.locator("body").dispatchEvent("pointermove",{...finger,clientX:60,clientY:75});
+    await expect(wall).not.toHaveAttribute("data-touch-preview",/./);
+    await expect(page.locator("#phaseBadge")).toHaveText("1");
+    await wall.click();
+    const target=page.locator("#board .cell.target:not([disabled])").first();
+    await target.dispatchEvent("pointerdown",finger);
+    await expect(target).toHaveAttribute("data-touch-preview","true");
+    await expect(page.locator("#phaseBadge")).toHaveText("1");
+    await target.dispatchEvent("pointercancel",finger);
+    await expect(target).not.toHaveAttribute("data-touch-preview",/./);
+    await target.click();
+    await expect(page.locator("#phaseBadge")).toHaveText("2");
+    const disabled=page.locator("#board .cell:disabled").first();
+    await disabled.dispatchEvent("pointerdown",finger);
+    await expect(disabled).not.toHaveAttribute("data-touch-preview",/./);
+    const stop=page.locator("#board .cell.stop:not([disabled])").first();
+    await stop.dispatchEvent("pointerdown",finger);
+    await expect(stop).toHaveAttribute("data-touch-preview","true");
+    await expect(page.locator("#turnCount")).toHaveText("1手目");
+    await page.screenshot({path:testInfo.outputPath("instant-board-touch-"+width+".png"),fullPage:true});
+    await stop.dispatchEvent("pointerup",finger);
+    await expect(stop).not.toHaveAttribute("data-touch-preview",/./,{timeout:1000});
+    await expect(page.locator("#turnCount")).toHaveText("1手目");
+    await stop.click();
+    await expect(page.locator("#turnCount")).toHaveText("2手目");
+    await expect(page.locator('#board .cell[data-touch-preview]')).toHaveCount(0);
+  }
+});
