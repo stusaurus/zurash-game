@@ -224,6 +224,9 @@ function render() {
       (target ? " target" : "") +
       (stop ? " stop" : "");
     b.dataset.cell = i;
+    // The board itself is the mobile glide controller. This is the real
+    // direction from slideOptions(), not a parallel movement calculation.
+    if (stop) b.dataset.slideDir = String(stop.dir);
     const item = state.players.includes(i)
       ? `プレイヤー${state.players.indexOf(i) + 1}`
       : wall >= 0
@@ -293,11 +296,15 @@ function render() {
         ? selected === null
           ? "光る壁をタップ。動かさず進んでもOK。"
           : "矢印のマスをタップして、壁を1マス移動。"
-        : "光る停止マス、または下の矢印をタップ。";
+        : window.matchMedia("(max-width:600px)").matches
+          ? "光る停止マスをタップして滑ろう！"
+          : "光る停止マス、または下の矢印をタップ。";
   $("turnCount").textContent = `${state.winner === null ? state.ply + 1 : state.ply}手目`;
   $("skip").disabled = locked || phase !== "wall";
   $("skip").textContent =
-    phase === "wall" ? "壁を動かさずに滑る →" : "停止マスか矢印を選ぼう";
+    phase === "wall"
+      ? (window.matchMedia("(max-width:600px)").matches ? "そのまま滑る" : "壁を動かさずに滑る →")
+      : (window.matchMedia("(max-width:600px)").matches ? "停止マスをタップ" : "停止マスか矢印を選ぼう");
   $("undo").disabled = learningActive() || busy || (!history.length && phase === "wall");
   renderLearning();
   $("directions").replaceChildren();
