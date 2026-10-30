@@ -38,11 +38,18 @@ function installApprovedMobileArt() {
     // Stylesheets added at runtime load asynchronously, especially in WebKit.
     // Install tactile listeners only after every skin layer settles, so an
     // immediate pointerdown never sets a press state before its CSS exists.
-    const skinReady = [css, hud, focus].map(link => new Promise(resolve => {
+    // Touch-first controls are a final responsive layer, loaded after the
+    // established ice skins. Desktop direction buttons remain unchanged.
+    const tap = document.createElement("link");
+    tap.rel = "stylesheet";
+    tap.href = "mobile-tap.css?v=20261030-tap-first-v1";
+    tap.media = "(max-width: 600px)";
+    const skinReady = [css, hud, focus, tap].map(link => new Promise(resolve => {
       link.addEventListener("load", resolve, {once: true});
       link.addEventListener("error", resolve, {once: true});
     }));
     document.head.append(focus);
+    document.head.append(tap);
     // Only cosmetic event feedback; board, engine and CPU remain authoritative.
     void Promise.all(skinReady)
       .then(() => import("./mobile-command-feedback.js?v=20261030-thumb-glance-v16"))
