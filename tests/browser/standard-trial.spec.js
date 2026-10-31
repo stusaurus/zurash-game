@@ -4,7 +4,7 @@ import {slideByBoard} from "./tap-target.js";
 
 test("opt-in 9×9 star-density comparison preserves real mobile play and beginner option",async({page},testInfo)=>{
   await page.emulateMedia({reducedMotion:"reduce"});
-  for(const width of [320,390]) for(const [index,starCount,target] of [[9,9,5],[10,7,4]]){
+  for(const width of [320,390]) for(const [index,starCount,target] of [[9,9,5],[10,7,4],[11,9,4]]){
     await page.setViewportSize({width,height:844});
     await page.goto("/");
     await expect(page.locator(".cell")).toHaveCount(49);
@@ -13,6 +13,7 @@ test("opt-in 9×9 star-density comparison preserves real mobile play and beginne
     await expect(page.locator("#layout option[value='0']")).toHaveText("はじまりの氷原");
     await expect(page.locator("#layout option[value='9']")).toContainText("新スタンダード 9×9");
     await expect(page.locator("#layout option[value='10']")).toContainText("星7");
+    await expect(page.locator("#layout option[value='11']")).toContainText("星9・先取4");
     await page.locator("#layout").selectOption(String(index));
     await page.locator("#start").click();
     await expect(page.locator("#board")).toHaveAttribute("aria-label","9×9のゲーム盤");
