@@ -9,8 +9,9 @@ const OUTPUT = process.env.REPORT ?? "reports/standard-trial-v2.json";
 const RECORDS = OUTPUT.replace(/\.json$/, ".jsonl");
 const PAIRS = Number(process.env.PAIRS ?? 8);
 const CAP = Number(process.env.MAX_PLIES ?? 96);
+const SEED_BASE = Number(process.env.SEED_BASE ?? 210031);
 if (!Number.isInteger(PAIRS) || PAIRS < 1 || PAIRS > 100 ||
-    !Number.isInteger(CAP) || CAP < 8 || CAP > 500)
+    !Number.isInteger(CAP) || CAP < 8 || CAP > 500 || !Number.isSafeInteger(SEED_BASE))
   throw Error("Invalid PAIRS / MAX_PLIES");
 
 const configs = [
@@ -42,7 +43,7 @@ function openingAudit(base,starter){
   };
 }
 function game(config,policy,pair,starter) {
-  const seed=210031+pair*211;
+  const seed=SEED_BASE+pair*211;
   const random=seeded(seed), seen=new Map();
   const original=config.build();
   let s={...original,turn:starter};
@@ -109,7 +110,7 @@ if(process.argv.includes("--verify")){
 fs.mkdirSync("reports",{recursive:true});
 fs.writeFileSync(RECORDS,"");
 const report={version:1,sourceCommit:process.env.GITHUB_SHA??"local",
-  parameters:{pairs:PAIRS,cap:CAP,matchups,seedFormula:"210031 + pair*211",
+  parameters:{pairs:PAIRS,cap:CAP,matchups,seedFormula:`${SEED_BASE} + pair*211`,
     pairedStarts:[0,1],pilot:true,policies:"existing production random and greedy"},
   notes:[
     "Exploratory pilot: tiny paired samples, not a proof of balance or enjoyment.",

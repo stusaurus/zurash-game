@@ -1,0 +1,173 @@
+{
+  "positionsExamined": 11,
+  "cases": [
+    {
+      "seed": 830041,
+      "starter": 0,
+      "ply": 6,
+      "players": [
+        33,
+        78
+      ],
+      "scores": [
+        1,
+        1
+      ],
+      "stars": [
+        13,
+        29,
+        34,
+        40,
+        46,
+        51,
+        67
+      ],
+      "walls": [
+        1,
+        9,
+        12,
+        27,
+        39,
+        50,
+        42,
+        68,
+        71,
+        79
+      ],
+      "threatCount": 26,
+      "immediateScores": 1,
+      "score": {
+        "wall": {
+          "wall": 3,
+          "to": 28
+        },
+        "dir": 3
+      },
+      "reply": {
+        "wall": null,
+        "dir": 0
+      },
+      "block": {
+        "wall": {
+          "wall": 6,
+          "to": 43
+        },
+        "dir": 2
+      },
+      "replyCount": 30
+    },
+    {
+      "seed": 830041,
+      "starter": 1,
+      "ply": 6,
+      "players": [
+        2,
+        47
+      ],
+      "scores": [
+        1,
+        1
+      ],
+      "stars": [
+        13,
+        29,
+        34,
+        40,
+        46,
+        51,
+        67
+      ],
+      "walls": [
+        1,
+        9,
+        12,
+        38,
+        30,
+        41,
+        53,
+        68,
+        71,
+        79
+      ],
+      "threatCount": 26,
+      "immediateScores": 1,
+      "score": {
+        "wall": {
+          "wall": 6,
+          "to": 52
+        },
+        "dir": 1
+      },
+      "reply": {
+        "wall": null,
+        "dir": 2
+      },
+      "block": {
+        "wall": {
+          "wall": 3,
+          "to": 39
+        },
+        "dir": 0
+      },
+      "replyCount": 28
+    },
+    {
+      "seed": 830252,
+      "starter": 0,
+      "ply": 5,
+      "players": [
+        78,
+        74
+      ],
+      "scores": [
+        1,
+        1
+      ],
+      "stars": [
+        13,
+        29,
+        34,
+        40,
+        46,
+        51,
+        67
+      ],
+      "walls": [
+        10,
+        9,
+        12,
+        28,
+        21,
+        50,
+        43,
+        68,
+        71,
+        79
+      ],
+      "threatCount": 1,
+      "immediateScores": 1,
+      "score": {
+        "wall": {
+          "wall": 4,
+          "to": 20
+        },
+        "dir": 0
+      },
+      "reply": {
+        "wall": {
+          "wall": 6,
+          "to": 42
+        },
+        "dir": 0
+      },
+      "block": {
+        "wall": {
+          "wall": 6,
+          "to": 44
+        },
+        "dir": 0
+      },
+      "replyCount": 56
+    }
+  ]
+}

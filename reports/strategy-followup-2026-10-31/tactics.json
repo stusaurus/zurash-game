@@ -1,0 +1,766 @@
+{
+  "positionsExamined": 11,
+  "cases": [
+    {
+      "seed": 830041,
+      "starter": 0,
+      "ply": 6,
+      "initial": {
+        "size": 9,
+        "target": 4,
+        "walls": [
+          1,
+          9,
+          12,
+          28,
+          30,
+          50,
+          52,
+          68,
+          71,
+          79
+        ],
+        "stars": [
+          6,
+          13,
+          29,
+          34,
+          40,
+          46,
+          51,
+          67,
+          74
+        ],
+        "players": [
+          72,
+          8
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      },
+      "history": [
+        {
+          "wall": {
+            "wall": 6,
+            "to": 43
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 69
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 68
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 4,
+            "to": 39
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 42
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 3,
+            "to": 27
+          },
+          "dir": 1
+        }
+      ],
+      "state": {
+        "size": 9,
+        "target": 4,
+        "walls": [
+          1,
+          9,
+          12,
+          27,
+          39,
+          50,
+          42,
+          68,
+          71,
+          79
+        ],
+        "stars": [
+          13,
+          29,
+          34,
+          40,
+          46,
+          51,
+          67
+        ],
+        "players": [
+          33,
+          78
+        ],
+        "scores": [
+          1,
+          1
+        ],
+        "turn": 0,
+        "ply": 6,
+        "winner": null
+      },
+      "threatCount": 26,
+      "immediateScores": 1,
+      "nonScoringActions": 88,
+      "score": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 28
+          },
+          "dir": 3
+        },
+        "result": {
+          "size": 9,
+          "target": 4,
+          "walls": [
+            1,
+            9,
+            12,
+            28,
+            39,
+            50,
+            42,
+            68,
+            71,
+            79
+          ],
+          "stars": [
+            13,
+            34,
+            40,
+            46,
+            51,
+            67
+          ],
+          "players": [
+            29,
+            78
+          ],
+          "scores": [
+            2,
+            1
+          ],
+          "turn": 1,
+          "ply": 7,
+          "winner": null
+        },
+        "opponentScoringReply": {
+          "wall": null,
+          "dir": 0
+        },
+        "opponentReplyResult": {
+          "size": 9,
+          "target": 4,
+          "walls": [
+            1,
+            9,
+            12,
+            28,
+            39,
+            50,
+            42,
+            68,
+            71,
+            79
+          ],
+          "stars": [
+            13,
+            34,
+            40,
+            46,
+            67
+          ],
+          "players": [
+            29,
+            51
+          ],
+          "scores": [
+            2,
+            2
+          ],
+          "turn": 0,
+          "ply": 8,
+          "winner": null
+        }
+      },
+      "block": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 43
+          },
+          "dir": 2
+        },
+        "result": {
+          "size": 9,
+          "target": 4,
+          "walls": [
+            1,
+            9,
+            12,
+            27,
+            39,
+            50,
+            43,
+            68,
+            71,
+            79
+          ],
+          "stars": [
+            13,
+            29,
+            34,
+            40,
+            46,
+            51,
+            67
+          ],
+          "players": [
+            69,
+            78
+          ],
+          "scores": [
+            1,
+            1
+          ],
+          "turn": 1,
+          "ply": 7,
+          "winner": null
+        },
+        "opponentReplies": 30,
+        "opponentScoringReplies": 0
+      }
+    },
+    {
+      "seed": 830041,
+      "starter": 1,
+      "ply": 6,
+      "initial": {
+        "size": 9,
+        "target": 4,
+        "walls": [
+          1,
+          9,
+          12,
+          28,
+          30,
+          50,
+          52,
+          68,
+          71,
+          79
+        ],
+        "stars": [
+          6,
+          13,
+          29,
+          34,
+          40,
+          46,
+          51,
+          67,
+          74
+        ],
+        "players": [
+          72,
+          8
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 1,
+        "ply": 0,
+        "winner": null
+      },
+      "history": [
+        {
+          "wall": {
+            "wall": 3,
+            "to": 37
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 2,
+            "to": 11
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 2,
+            "to": 12
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 5,
+            "to": 41
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 3,
+            "to": 38
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 6,
+            "to": 53
+          },
+          "dir": 3
+        }
+      ],
+      "state": {
+        "size": 9,
+        "target": 4,
+        "walls": [
+          1,
+          9,
+          12,
+          38,
+          30,
+          41,
+          53,
+          68,
+          71,
+          79
+        ],
+        "stars": [
+          13,
+          29,
+          34,
+          40,
+          46,
+          51,
+          67
+        ],
+        "players": [
+          2,
+          47
+        ],
+        "scores": [
+          1,
+          1
+        ],
+        "turn": 1,
+        "ply": 6,
+        "winner": null
+      },
+      "threatCount": 26,
+      "immediateScores": 1,
+      "nonScoringActions": 88,
+      "score": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 52
+          },
+          "dir": 1
+        },
+        "result": {
+          "size": 9,
+          "target": 4,
+          "walls": [
+            1,
+            9,
+            12,
+            38,
+            30,
+            41,
+            52,
+            68,
+            71,
+            79
+          ],
+          "stars": [
+            13,
+            29,
+            34,
+            40,
+            46,
+            67
+          ],
+          "players": [
+            2,
+            51
+          ],
+          "scores": [
+            1,
+            2
+          ],
+          "turn": 0,
+          "ply": 7,
+          "winner": null
+        },
+        "opponentScoringReply": {
+          "wall": null,
+          "dir": 2
+        },
+        "opponentReplyResult": {
+          "size": 9,
+          "target": 4,
+          "walls": [
+            1,
+            9,
+            12,
+            38,
+            30,
+            41,
+            52,
+            68,
+            71,
+            79
+          ],
+          "stars": [
+            13,
+            34,
+            40,
+            46,
+            67
+          ],
+          "players": [
+            29,
+            51
+          ],
+          "scores": [
+            2,
+            2
+          ],
+          "turn": 1,
+          "ply": 8,
+          "winner": null
+        }
+      },
+      "block": {
+        "action": {
+          "wall": {
+            "wall": 3,
+            "to": 39
+          },
+          "dir": 0
+        },
+        "result": {
+          "size": 9,
+          "target": 4,
+          "walls": [
+            1,
+            9,
+            12,
+            39,
+            30,
+            41,
+            53,
+            68,
+            71,
+            79
+          ],
+          "stars": [
+            13,
+            29,
+            34,
+            40,
+            46,
+            51,
+            67
+          ],
+          "players": [
+            2,
+            11
+          ],
+          "scores": [
+            1,
+            1
+          ],
+          "turn": 0,
+          "ply": 7,
+          "winner": null
+        },
+        "opponentReplies": 28,
+        "opponentScoringReplies": 0
+      }
+    },
+    {
+      "seed": 830252,
+      "starter": 0,
+      "ply": 5,
+      "initial": {
+        "size": 9,
+        "target": 4,
+        "walls": [
+          1,
+          9,
+          12,
+          28,
+          30,
+          50,
+          52,
+          68,
+          71,
+          79
+        ],
+        "stars": [
+          6,
+          13,
+          29,
+          34,
+          40,
+          46,
+          51,
+          67,
+          74
+        ],
+        "players": [
+          72,
+          8
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "turn": 0,
+        "ply": 0,
+        "winner": null
+      },
+      "history": [
+        {
+          "wall": {
+            "wall": 6,
+            "to": 43
+          },
+          "dir": 1
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 69
+          },
+          "dir": 3
+        },
+        {
+          "wall": {
+            "wall": 7,
+            "to": 68
+          },
+          "dir": 0
+        },
+        {
+          "wall": {
+            "wall": 0,
+            "to": 10
+          },
+          "dir": 2
+        },
+        {
+          "wall": {
+            "wall": 4,
+            "to": 21
+          },
+          "dir": 2
+        }
+      ],
+      "state": {
+        "size": 9,
+        "target": 4,
+        "walls": [
+          10,
+          9,
+          12,
+          28,
+          21,
+          50,
+          43,
+          68,
+          71,
+          79
+        ],
+        "stars": [
+          13,
+          29,
+          34,
+          40,
+          46,
+          51,
+          67
+        ],
+        "players": [
+          78,
+          74
+        ],
+        "scores": [
+          1,
+          1
+        ],
+        "turn": 1,
+        "ply": 5,
+        "winner": null
+      },
+      "threatCount": 1,
+      "immediateScores": 1,
+      "nonScoringActions": 82,
+      "score": {
+        "action": {
+          "wall": {
+            "wall": 4,
+            "to": 20
+          },
+          "dir": 0
+        },
+        "result": {
+          "size": 9,
+          "target": 4,
+          "walls": [
+            10,
+            9,
+            12,
+            28,
+            20,
+            50,
+            43,
+            68,
+            71,
+            79
+          ],
+          "stars": [
+            13,
+            34,
+            40,
+            46,
+            51,
+            67
+          ],
+          "players": [
+            78,
+            29
+          ],
+          "scores": [
+            1,
+            2
+          ],
+          "turn": 0,
+          "ply": 6,
+          "winner": null
+        },
+        "opponentScoringReply": {
+          "wall": {
+            "wall": 6,
+            "to": 42
+          },
+          "dir": 0
+        },
+        "opponentReplyResult": {
+          "size": 9,
+          "target": 4,
+          "walls": [
+            10,
+            9,
+            12,
+            28,
+            20,
+            50,
+            42,
+            68,
+            71,
+            79
+          ],
+          "stars": [
+            13,
+            34,
+            40,
+            46,
+            67
+          ],
+          "players": [
+            51,
+            29
+          ],
+          "scores": [
+            2,
+            2
+          ],
+          "turn": 1,
+          "ply": 7,
+          "winner": null
+        }
+      },
+      "block": {
+        "action": {
+          "wall": {
+            "wall": 6,
+            "to": 44
+          },
+          "dir": 0
+        },
+        "result": {
+          "size": 9,
+          "target": 4,
+          "walls": [
+            10,
+            9,
+            12,
+            28,
+            21,
+            50,
+            44,
+            68,
+            71,
+            79
+          ],
+          "stars": [
+            13,
+            29,
+            34,
+            40,
+            46,
+            51,
+            67
+          ],
+          "players": [
+            78,
+            2
+          ],
+          "scores": [
+            1,
+            1
+          ],
+          "turn": 0,
+          "ply": 6,
+          "winner": null
+        },
+        "opponentReplies": 56,
+        "opponentScoringReplies": 0
+      }
+    }
+  ]
+}
