@@ -18,8 +18,8 @@ test("beginner and existing A–E indices remain unchanged",()=>{
 test("9×9 seven-star trial has symmetric, distinct, legal opening choices",()=>{
   const index=LAYOUTS.length+RESEARCH_LAYOUTS.length;
   assert.equal(index,9); // A–E indices must remain stable.
-  assert.equal(TRIAL_LAYOUTS.length,2);
-  for(const [offset,starCount,target] of [[0,9,5],[1,7,4]]) {
+  assert.equal(TRIAL_LAYOUTS.length,3);
+  for(const [offset,starCount,target] of [[0,9,5],[1,7,4],[2,9,4]]) {
   const states=[initial(index+offset,0),initial(index+offset,1)];
   for(const s of states){
     assert.equal(s.size,9);
@@ -51,6 +51,12 @@ test("9×9 seven-star trial has symmetric, distinct, legal opening choices",()=>
   assert.deepEqual(dense.walls,sparse.walls);
   assert.deepEqual(dense.players,sparse.players);
   assert.ok(sparse.stars.every(s=>dense.stars.includes(s)));
+  const quick=initial(index+2);
+  assert.deepEqual(quick.walls,dense.walls);
+  assert.deepEqual(quick.stars,dense.stars);
+  assert.deepEqual(quick.players,dense.players);
+  assert.equal(quick.target,4);
+  assert.equal(dense.target,5);
   assert.ok(dense.stars.length/(dense.size*dense.size)>initial(0).stars.length/49,
     "Main candidate should not feel visually sparser than the beginner board");
 });
