@@ -1,0 +1,519 @@
+{
+  "version": 1,
+  "sourceCommit": "local",
+  "parameters": {
+    "pairs": 4,
+    "cap": 96,
+    "matchups": [
+      [
+        "greedy",
+        "greedy"
+      ],
+      [
+        "random",
+        "random"
+      ]
+    ],
+    "seedFormula": "830041 + pair*211",
+    "pairedStarts": [
+      0,
+      1
+    ],
+    "pilot": true,
+    "policies": "existing production random and greedy"
+  },
+  "notes": [
+    "Exploratory pilot: tiny paired samples, not a proof of balance or enjoyment.",
+    "Beginner vs new boards changes size, stars, walls and victory target: not causal.",
+    "Nine-star win4 is simulation-only to distinguish star-count from target-count changes.",
+    "The 9×9 wall and starting positions are fixed in all three trial conditions.",
+    "A capped game is unresolved, never a formal draw.",
+    "Heuristic-near moves are approximate AI scores, not proven strategic alternatives.",
+    "Number of AI plies does not establish human play duration.",
+    "Only one player starts on each side of fixed initial positions: swapping starts is not a full positional fairness test."
+  ],
+  "opening": [
+    {
+      "id": "beginner-7x7-5-star-win3",
+      "stars": 5,
+      "walls": 8,
+      "target": 3,
+      "openings": [
+        {
+          "starter": 0,
+          "legalActions": 56,
+          "distinctWallChoices": 29,
+          "uniqueLandingSquares": 4,
+          "immediateScoringMoves": 0,
+          "closeHeuristicActions": 55,
+          "closeHeuristicWallChoices": 29,
+          "closeHeuristicLandings": 3
+        },
+        {
+          "starter": 1,
+          "legalActions": 56,
+          "distinctWallChoices": 29,
+          "uniqueLandingSquares": 4,
+          "immediateScoringMoves": 0,
+          "closeHeuristicActions": 55,
+          "closeHeuristicWallChoices": 29,
+          "closeHeuristicLandings": 3
+        }
+      ]
+    },
+    {
+      "id": "trial-9x9-7-star-win4",
+      "stars": 7,
+      "walls": 10,
+      "target": 4,
+      "openings": [
+        {
+          "starter": 0,
+          "legalActions": 66,
+          "distinctWallChoices": 33,
+          "uniqueLandingSquares": 10,
+          "immediateScoringMoves": 0,
+          "closeHeuristicActions": 25,
+          "closeHeuristicWallChoices": 25,
+          "closeHeuristicLandings": 1
+        },
+        {
+          "starter": 1,
+          "legalActions": 66,
+          "distinctWallChoices": 33,
+          "uniqueLandingSquares": 10,
+          "immediateScoringMoves": 0,
+          "closeHeuristicActions": 25,
+          "closeHeuristicWallChoices": 25,
+          "closeHeuristicLandings": 1
+        }
+      ]
+    },
+    {
+      "id": "trial-9x9-9-star-win4",
+      "stars": 9,
+      "walls": 10,
+      "target": 4,
+      "openings": [
+        {
+          "starter": 0,
+          "legalActions": 62,
+          "distinctWallChoices": 31,
+          "uniqueLandingSquares": 10,
+          "immediateScoringMoves": 0,
+          "closeHeuristicActions": 15,
+          "closeHeuristicWallChoices": 15,
+          "closeHeuristicLandings": 1
+        },
+        {
+          "starter": 1,
+          "legalActions": 62,
+          "distinctWallChoices": 31,
+          "uniqueLandingSquares": 10,
+          "immediateScoringMoves": 0,
+          "closeHeuristicActions": 15,
+          "closeHeuristicWallChoices": 15,
+          "closeHeuristicLandings": 1
+        }
+      ]
+    },
+    {
+      "id": "trial-9x9-9-star-win5",
+      "stars": 9,
+      "walls": 10,
+      "target": 5,
+      "openings": [
+        {
+          "starter": 0,
+          "legalActions": 62,
+          "distinctWallChoices": 31,
+          "uniqueLandingSquares": 10,
+          "immediateScoringMoves": 0,
+          "closeHeuristicActions": 15,
+          "closeHeuristicWallChoices": 15,
+          "closeHeuristicLandings": 1
+        },
+        {
+          "starter": 1,
+          "legalActions": 62,
+          "distinctWallChoices": 31,
+          "uniqueLandingSquares": 10,
+          "immediateScoringMoves": 0,
+          "closeHeuristicActions": 15,
+          "closeHeuristicWallChoices": 15,
+          "closeHeuristicLandings": 1
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "beginner-7x7-5-star-win3",
+      "label": "はじまりの氷原",
+      "policy": "greedy/greedy",
+      "games": 8,
+      "decided": 8,
+      "undecided": 0,
+      "firstWins": 2,
+      "secondWins": 6,
+      "firstWinAmongDecided": 0.25,
+      "firstWinUnresolvedBounds": [
+        0.25,
+        0.25
+      ],
+      "decidedPlies": {
+        "count": 8,
+        "median": 12,
+        "p90": 16,
+        "max": 16
+      },
+      "observedPlies": {
+        "count": 8,
+        "median": 12,
+        "p90": 16,
+        "max": 16
+      },
+      "firstStarPlies": {
+        "count": 8,
+        "median": 4,
+        "p90": 10,
+        "max": 10
+      },
+      "maxQuiet": {
+        "count": 8,
+        "median": 5,
+        "p90": 9,
+        "max": 9
+      },
+      "longQuiet20": 0,
+      "repeated": 0,
+      "onePointFinishes": 1,
+      "comebacks": 1,
+      "distinctOpenings": 6,
+      "totalWallMoves": 90,
+      "totalActions": 90
+    },
+    {
+      "id": "beginner-7x7-5-star-win3",
+      "label": "はじまりの氷原",
+      "policy": "random/random",
+      "games": 8,
+      "decided": 3,
+      "undecided": 5,
+      "firstWins": 3,
+      "secondWins": 0,
+      "firstWinAmongDecided": 1,
+      "firstWinUnresolvedBounds": [
+        0.375,
+        1
+      ],
+      "decidedPlies": {
+        "count": 3,
+        "median": 87,
+        "p90": 93,
+        "max": 93
+      },
+      "observedPlies": {
+        "count": 8,
+        "median": 96,
+        "p90": 96,
+        "max": 96
+      },
+      "firstStarPlies": {
+        "count": 7,
+        "median": 25,
+        "p90": 52,
+        "max": 52
+      },
+      "maxQuiet": {
+        "count": 8,
+        "median": 42,
+        "p90": 96,
+        "max": 96
+      },
+      "longQuiet20": 8,
+      "repeated": 0,
+      "onePointFinishes": 0,
+      "comebacks": 2,
+      "distinctOpenings": 8,
+      "totalWallMoves": 683,
+      "totalActions": 721
+    },
+    {
+      "id": "trial-9x9-7-star-win4",
+      "label": "9×9 星7／先取4",
+      "policy": "greedy/greedy",
+      "games": 8,
+      "decided": 6,
+      "undecided": 2,
+      "firstWins": 5,
+      "secondWins": 1,
+      "firstWinAmongDecided": 0.833,
+      "firstWinUnresolvedBounds": [
+        0.625,
+        0.875
+      ],
+      "decidedPlies": {
+        "count": 6,
+        "median": 51,
+        "p90": 63,
+        "max": 63
+      },
+      "observedPlies": {
+        "count": 8,
+        "median": 53,
+        "p90": 96,
+        "max": 96
+      },
+      "firstStarPlies": {
+        "count": 8,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "maxQuiet": {
+        "count": 8,
+        "median": 33,
+        "p90": 56,
+        "max": 56
+      },
+      "longQuiet20": 6,
+      "repeated": 0,
+      "onePointFinishes": 4,
+      "comebacks": 2,
+      "distinctOpenings": 2,
+      "totalWallMoves": 462,
+      "totalActions": 467
+    },
+    {
+      "id": "trial-9x9-7-star-win4",
+      "label": "9×9 星7／先取4",
+      "policy": "random/random",
+      "games": 8,
+      "decided": 1,
+      "undecided": 7,
+      "firstWins": 0,
+      "secondWins": 1,
+      "firstWinAmongDecided": 0,
+      "firstWinUnresolvedBounds": [
+        0,
+        0.875
+      ],
+      "decidedPlies": {
+        "count": 1,
+        "median": 50,
+        "p90": 50,
+        "max": 50
+      },
+      "observedPlies": {
+        "count": 8,
+        "median": 96,
+        "p90": 96,
+        "max": 96
+      },
+      "firstStarPlies": {
+        "count": 6,
+        "median": 3,
+        "p90": 11,
+        "max": 11
+      },
+      "maxQuiet": {
+        "count": 8,
+        "median": 48,
+        "p90": 96,
+        "max": 96
+      },
+      "longQuiet20": 8,
+      "repeated": 0,
+      "onePointFinishes": 0,
+      "comebacks": 0,
+      "distinctOpenings": 8,
+      "totalWallMoves": 693,
+      "totalActions": 722
+    },
+    {
+      "id": "trial-9x9-9-star-win4",
+      "label": "9×9 星9／先取4（試遊比較）",
+      "policy": "greedy/greedy",
+      "games": 8,
+      "decided": 8,
+      "undecided": 0,
+      "firstWins": 3,
+      "secondWins": 5,
+      "firstWinAmongDecided": 0.375,
+      "firstWinUnresolvedBounds": [
+        0.375,
+        0.375
+      ],
+      "decidedPlies": {
+        "count": 8,
+        "median": 22,
+        "p90": 43,
+        "max": 43
+      },
+      "observedPlies": {
+        "count": 8,
+        "median": 22,
+        "p90": 43,
+        "max": 43
+      },
+      "firstStarPlies": {
+        "count": 8,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "maxQuiet": {
+        "count": 8,
+        "median": 11,
+        "p90": 21,
+        "max": 21
+      },
+      "longQuiet20": 2,
+      "repeated": 0,
+      "onePointFinishes": 0,
+      "comebacks": 6,
+      "distinctOpenings": 2,
+      "totalWallMoves": 213,
+      "totalActions": 215
+    },
+    {
+      "id": "trial-9x9-9-star-win4",
+      "label": "9×9 星9／先取4（試遊比較）",
+      "policy": "random/random",
+      "games": 8,
+      "decided": 1,
+      "undecided": 7,
+      "firstWins": 1,
+      "secondWins": 0,
+      "firstWinAmongDecided": 1,
+      "firstWinUnresolvedBounds": [
+        0.125,
+        1
+      ],
+      "decidedPlies": {
+        "count": 1,
+        "median": 85,
+        "p90": 85,
+        "max": 85
+      },
+      "observedPlies": {
+        "count": 8,
+        "median": 96,
+        "p90": 96,
+        "max": 96
+      },
+      "firstStarPlies": {
+        "count": 8,
+        "median": 8,
+        "p90": 92,
+        "max": 92
+      },
+      "maxQuiet": {
+        "count": 8,
+        "median": 53,
+        "p90": 91,
+        "max": 91
+      },
+      "longQuiet20": 8,
+      "repeated": 0,
+      "onePointFinishes": 0,
+      "comebacks": 0,
+      "distinctOpenings": 8,
+      "totalWallMoves": 725,
+      "totalActions": 757
+    },
+    {
+      "id": "trial-9x9-9-star-win5",
+      "label": "9×9 星9／先取5（主候補）",
+      "policy": "greedy/greedy",
+      "games": 8,
+      "decided": 8,
+      "undecided": 0,
+      "firstWins": 4,
+      "secondWins": 4,
+      "firstWinAmongDecided": 0.5,
+      "firstWinUnresolvedBounds": [
+        0.5,
+        0.5
+      ],
+      "decidedPlies": {
+        "count": 8,
+        "median": 45,
+        "p90": 71,
+        "max": 71
+      },
+      "observedPlies": {
+        "count": 8,
+        "median": 45,
+        "p90": 71,
+        "max": 71
+      },
+      "firstStarPlies": {
+        "count": 8,
+        "median": 3,
+        "p90": 3,
+        "max": 3
+      },
+      "maxQuiet": {
+        "count": 8,
+        "median": 17,
+        "p90": 27,
+        "max": 27
+      },
+      "longQuiet20": 4,
+      "repeated": 0,
+      "onePointFinishes": 1,
+      "comebacks": 6,
+      "distinctOpenings": 2,
+      "totalWallMoves": 360,
+      "totalActions": 362
+    },
+    {
+      "id": "trial-9x9-9-star-win5",
+      "label": "9×9 星9／先取5（主候補）",
+      "policy": "random/random",
+      "games": 8,
+      "decided": 0,
+      "undecided": 8,
+      "firstWins": 0,
+      "secondWins": 0,
+      "firstWinAmongDecided": null,
+      "firstWinUnresolvedBounds": [
+        0,
+        1
+      ],
+      "decidedPlies": {
+        "count": 0,
+        "median": null,
+        "p90": null,
+        "max": null
+      },
+      "observedPlies": {
+        "count": 8,
+        "median": 96,
+        "p90": 96,
+        "max": 96
+      },
+      "firstStarPlies": {
+        "count": 8,
+        "median": 8,
+        "p90": 92,
+        "max": 92
+      },
+      "maxQuiet": {
+        "count": 8,
+        "median": 53,
+        "p90": 91,
+        "max": 91
+      },
+      "longQuiet20": 8,
+      "repeated": 0,
+      "onePointFinishes": 0,
+      "comebacks": 0,
+      "distinctOpenings": 8,
+      "totalWallMoves": 735,
+      "totalActions": 768
+    }
+  ]
+}

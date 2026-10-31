@@ -1,0 +1,1744 @@
+{
+  "source": "strategy-followup first case",
+  "note": "All opponent replies and own replies enumerated, but heuristic evaluation at ply 3 is not a proof of game-theoretic advantage.",
+  "state": {
+    "size": 9,
+    "target": 4,
+    "walls": [
+      1,
+      9,
+      12,
+      27,
+      39,
+      50,
+      42,
+      68,
+      71,
+      79
+    ],
+    "stars": [
+      13,
+      29,
+      34,
+      40,
+      46,
+      51,
+      67
+    ],
+    "players": [
+      33,
+      78
+    ],
+    "scores": [
+      1,
+      1
+    ],
+    "turn": 0,
+    "ply": 6,
+    "winner": null
+  },
+  "branches": {
+    "score": {
+      "action": {
+        "wall": {
+          "wall": 3,
+          "to": 28
+        },
+        "dir": 3
+      },
+      "score": [
+        2,
+        1
+      ],
+      "replyCount": 60,
+      "scoringReplies": 26,
+      "allRepliesPermitImmediateOwnScore": false,
+      "minOwnScoringReplies": 0,
+      "adversarialHeuristicReply": {
+        "a": {
+          "wall": null,
+          "dir": 0
+        },
+        "score": true,
+        "value": 0,
+        "response": {
+          "wall": null,
+          "dir": 0
+        },
+        "ownScoring": 0
+      },
+      "allReplies": [
+        {
+          "a": {
+            "wall": null,
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 0,
+              "to": 2
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 0,
+              "to": 10
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 0,
+              "to": 0
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 1,
+              "to": 0
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 1,
+              "to": 10
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 1,
+              "to": 18
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 2,
+              "to": 21
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 2,
+              "to": 11
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 3,
+              "to": 37
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 3,
+              "to": 27
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 4,
+              "to": 30
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 4,
+              "to": 48
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 4,
+              "to": 38
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 5,
+              "to": 41
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 5,
+              "to": 59
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 7,
+              "to": 59
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 8,
+              "to": 62
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 8,
+              "to": 80
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 8,
+              "to": 70
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 9,
+              "to": 70
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 9,
+              "to": 80
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 0,
+          "response": {
+            "wall": null,
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 5,
+              "to": 49
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 9,
+          "response": {
+            "wall": {
+              "wall": 2,
+              "to": 3
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 7,
+              "to": 77
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 36,
+          "response": {
+            "wall": {
+              "wall": 7,
+              "to": 76
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 2,
+              "to": 3
+            },
+            "dir": 0
+          },
+          "score": true,
+          "value": 54,
+          "response": {
+            "wall": {
+              "wall": 2,
+              "to": 4
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 6,
+              "to": 33
+            },
+            "dir": 0
+          },
+          "score": false,
+          "value": 745,
+          "response": {
+            "wall": {
+              "wall": 4,
+              "to": 30
+            },
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 3,
+              "to": 27
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 754,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 28
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 7,
+              "to": 59
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 754,
+          "response": {
+            "wall": {
+              "wall": 1,
+              "to": 10
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 7,
+              "to": 69
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 754,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 33
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 9,
+              "to": 70
+            },
+            "dir": 1
+          },
+          "score": false,
+          "value": 754,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 33
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 9,
+              "to": 80
+            },
+            "dir": 1
+          },
+          "score": false,
+          "value": 754,
+          "response": {
+            "wall": {
+              "wall": 0,
+              "to": 2
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 1,
+              "to": 0
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 763,
+          "response": {
+            "wall": {
+              "wall": 2,
+              "to": 11
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 4,
+              "to": 38
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 763,
+          "response": {
+            "wall": {
+              "wall": 4,
+              "to": 37
+            },
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 5,
+              "to": 59
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 763,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 37
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 8,
+              "to": 80
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 763,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 37
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": null,
+            "dir": 3
+          },
+          "score": false,
+          "value": 772,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 1,
+              "to": 10
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 772,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 1,
+              "to": 18
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 772,
+          "response": {
+            "wall": {
+              "wall": 4,
+              "to": 30
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 2,
+              "to": 21
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 772,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 5,
+              "to": 41
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 772,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 5,
+              "to": 49
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 772,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 8,
+              "to": 62
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 772,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 37
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 8,
+              "to": 70
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 772,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 0,
+              "to": 2
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 781,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 0,
+              "to": 10
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 781,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 0,
+              "to": 0
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 781,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 2,
+              "to": 3
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 781,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 3,
+              "to": 37
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 781,
+          "response": {
+            "wall": {
+              "wall": 2,
+              "to": 11
+            },
+            "dir": 0
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 6,
+              "to": 33
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 781,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 37
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 6,
+              "to": 43
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 781,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 37
+            },
+            "dir": 3
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 6,
+              "to": 41
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 781,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 37
+            },
+            "dir": 3
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 9,
+              "to": 70
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 781,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 37
+            },
+            "dir": 3
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 9,
+              "to": 80
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 781,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 37
+            },
+            "dir": 3
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 2,
+              "to": 11
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 790,
+          "response": {
+            "wall": {
+              "wall": 4,
+              "to": 30
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 3,
+              "to": 19
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 790,
+          "response": {
+            "wall": {
+              "wall": 3,
+              "to": 20
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 4,
+              "to": 30
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 790,
+          "response": {
+            "wall": {
+              "wall": 2,
+              "to": 11
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 4,
+              "to": 48
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 790,
+          "response": {
+            "wall": {
+              "wall": 2,
+              "to": 11
+            },
+            "dir": 2
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 6,
+              "to": 41
+            },
+            "dir": 0
+          },
+          "score": false,
+          "value": 790,
+          "response": {
+            "wall": {
+              "wall": 8,
+              "to": 62
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 6,
+              "to": 43
+            },
+            "dir": 0
+          },
+          "score": false,
+          "value": 862,
+          "response": {
+            "wall": {
+              "wall": 8,
+              "to": 62
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        }
+      ]
+    },
+    "block": {
+      "action": {
+        "wall": {
+          "wall": 6,
+          "to": 43
+        },
+        "dir": 2
+      },
+      "score": [
+        1,
+        1
+      ],
+      "replyCount": 30,
+      "scoringReplies": 0,
+      "allRepliesPermitImmediateOwnScore": false,
+      "minOwnScoringReplies": 0,
+      "adversarialHeuristicReply": {
+        "a": {
+          "wall": {
+            "wall": 6,
+            "to": 44
+          },
+          "dir": 3
+        },
+        "score": false,
+        "value": 72,
+        "response": {
+          "wall": {
+            "wall": 6,
+            "to": 43
+          },
+          "dir": 1
+        },
+        "ownScoring": 0
+      },
+      "allReplies": [
+        {
+          "a": {
+            "wall": {
+              "wall": 6,
+              "to": 44
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 72,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 43
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 6,
+              "to": 52
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 72,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 43
+            },
+            "dir": 1
+          },
+          "ownScoring": 0
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 7,
+              "to": 59
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 700,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 8,
+              "to": 62
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 700,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 8,
+              "to": 80
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 700,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 8,
+              "to": 70
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 700,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 9,
+              "to": 70
+            },
+            "dir": 1
+          },
+          "score": false,
+          "value": 700,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 9,
+              "to": 80
+            },
+            "dir": 1
+          },
+          "score": false,
+          "value": 700,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": null,
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 0,
+              "to": 2
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 0,
+              "to": 10
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 0,
+              "to": 0
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 1,
+              "to": 0
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 1,
+              "to": 10
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 1,
+              "to": 18
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 2,
+              "to": 3
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 2,
+              "to": 21
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 2,
+              "to": 11
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 3,
+              "to": 18
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 3,
+              "to": 28
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 3,
+              "to": 36
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 4,
+              "to": 30
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 4,
+              "to": 48
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 5,
+              "to": 49
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 9,
+              "to": 70
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 9,
+              "to": 80
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 727,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 4,
+              "to": 38
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 736,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 5,
+              "to": 41
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 745,
+          "response": {
+            "wall": {
+              "wall": 5,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 2
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 5,
+              "to": 59
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 745,
+          "response": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 0
+          },
+          "ownScoring": 1
+        },
+        {
+          "a": {
+            "wall": {
+              "wall": 6,
+              "to": 42
+            },
+            "dir": 3
+          },
+          "score": false,
+          "value": 745,
+          "response": {
+            "wall": {
+              "wall": 5,
+              "to": 41
+            },
+            "dir": 0
+          },
+          "ownScoring": 27
+        }
+      ]
+    }
+  }
+}

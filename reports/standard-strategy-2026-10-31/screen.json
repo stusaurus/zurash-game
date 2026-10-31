@@ -1,0 +1,316 @@
+{
+  "seeds": [
+    148301
+  ],
+  "cap": 48,
+  "matchups": [
+    [
+      "greedy",
+      "greedy"
+    ],
+    [
+      "search",
+      "search"
+    ]
+  ],
+  "layouts": [
+    {
+      "id": "control",
+      "intent": "PR50 control",
+      "size": 9,
+      "target": 4,
+      "walls": [
+        1,
+        9,
+        12,
+        28,
+        30,
+        50,
+        52,
+        68,
+        71,
+        79
+      ],
+      "stars": [
+        6,
+        13,
+        29,
+        34,
+        40,
+        46,
+        51,
+        67,
+        74
+      ],
+      "players": [
+        72,
+        8
+      ]
+    },
+    {
+      "id": "stars",
+      "intent": "Move the paired near-corner stars outward to alter scoring lanes",
+      "size": 9,
+      "target": 4,
+      "walls": [
+        1,
+        9,
+        12,
+        28,
+        30,
+        50,
+        52,
+        68,
+        71,
+        79
+      ],
+      "stars": [
+        6,
+        14,
+        29,
+        34,
+        40,
+        46,
+        51,
+        66,
+        74
+      ],
+      "players": [
+        72,
+        8
+      ]
+    },
+    {
+      "id": "walls",
+      "intent": "Move the paired inner walls toward the edges to change stopping routes",
+      "size": 9,
+      "target": 4,
+      "walls": [
+        1,
+        9,
+        12,
+        19,
+        30,
+        50,
+        61,
+        68,
+        71,
+        79
+      ],
+      "stars": [
+        6,
+        13,
+        29,
+        34,
+        40,
+        46,
+        51,
+        67,
+        74
+      ],
+      "players": [
+        72,
+        8
+      ]
+    },
+    {
+      "id": "starts",
+      "intent": "Move both starting positions one row toward the centre",
+      "size": 9,
+      "target": 4,
+      "walls": [
+        1,
+        9,
+        12,
+        28,
+        30,
+        50,
+        52,
+        68,
+        71,
+        79
+      ],
+      "stars": [
+        6,
+        13,
+        29,
+        34,
+        40,
+        46,
+        51,
+        67,
+        74
+      ],
+      "players": [
+        63,
+        17
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "control",
+      "policy": "greedy/greedy",
+      "games": 4,
+      "decided": 4,
+      "unresolved": 0,
+      "firstWins": 2,
+      "side0": 4,
+      "median": 20,
+      "p90": 25,
+      "longQuiet": 0,
+      "comebacks": 2,
+      "onePoint": 0,
+      "openings": 2
+    },
+    {
+      "id": "control",
+      "policy": "search/search",
+      "games": 4,
+      "decided": 2,
+      "unresolved": 2,
+      "firstWins": 2,
+      "side0": 0,
+      "median": 25,
+      "p90": 25,
+      "longQuiet": 2,
+      "comebacks": 0,
+      "onePoint": 0,
+      "openings": 2
+    },
+    {
+      "id": "stars",
+      "policy": "greedy/greedy",
+      "games": 4,
+      "decided": 2,
+      "unresolved": 2,
+      "firstWins": 0,
+      "side0": 2,
+      "median": 32,
+      "p90": 32,
+      "longQuiet": 2,
+      "comebacks": 2,
+      "onePoint": 2,
+      "openings": 2
+    },
+    {
+      "id": "stars",
+      "policy": "search/search",
+      "games": 4,
+      "decided": 0,
+      "unresolved": 4,
+      "firstWins": 0,
+      "side0": 0,
+      "median": null,
+      "p90": null,
+      "longQuiet": 4,
+      "comebacks": 0,
+      "onePoint": 0,
+      "openings": 2
+    },
+    {
+      "id": "walls",
+      "policy": "greedy/greedy",
+      "games": 4,
+      "decided": 4,
+      "unresolved": 0,
+      "firstWins": 2,
+      "side0": 0,
+      "median": 14,
+      "p90": 15,
+      "longQuiet": 0,
+      "comebacks": 2,
+      "onePoint": 0,
+      "openings": 2
+    },
+    {
+      "id": "walls",
+      "policy": "search/search",
+      "games": 4,
+      "decided": 2,
+      "unresolved": 2,
+      "firstWins": 2,
+      "side0": 0,
+      "median": 17,
+      "p90": 17,
+      "longQuiet": 2,
+      "comebacks": 0,
+      "onePoint": 0,
+      "openings": 2
+    },
+    {
+      "id": "starts",
+      "policy": "greedy/greedy",
+      "games": 4,
+      "decided": 4,
+      "unresolved": 0,
+      "firstWins": 4,
+      "side0": 2,
+      "median": 11,
+      "p90": 11,
+      "longQuiet": 0,
+      "comebacks": 0,
+      "onePoint": 0,
+      "openings": 2
+    },
+    {
+      "id": "starts",
+      "policy": "search/search",
+      "games": 4,
+      "decided": 4,
+      "unresolved": 0,
+      "firstWins": 4,
+      "side0": 2,
+      "median": 15,
+      "p90": 19,
+      "longQuiet": 0,
+      "comebacks": 0,
+      "onePoint": 2,
+      "openings": 2
+    }
+  ],
+  "openings": [
+    {
+      "id": "control",
+      "legal": 62,
+      "landings": 10,
+      "nearActions": 15,
+      "nearLandings": 1,
+      "nearStates": 15,
+      "top": 211
+    },
+    {
+      "id": "stars",
+      "legal": 66,
+      "landings": 10,
+      "nearActions": 25,
+      "nearLandings": 1,
+      "nearStates": 25,
+      "top": 184
+    },
+    {
+      "id": "walls",
+      "legal": 66,
+      "landings": 9,
+      "nearActions": 22,
+      "nearLandings": 2,
+      "nearStates": 22,
+      "top": 211
+    },
+    {
+      "id": "starts",
+      "legal": 93,
+      "landings": 9,
+      "nearActions": 4,
+      "nearLandings": 1,
+      "nearStates": 4,
+      "top": 718
+    }
+  ],
+  "notes": [
+    "swap exchanges player identity, not an independent physical board on a 180-degree symmetric layout",
+    "search is beam-limited 2 ply; greedy is one-ply heuristic; not exact optimal play",
+    "cap is unresolved, not a draw",
+    "near scores are heuristic only, not evidence of strategically comparable moves"
+  ]
+}

@@ -12,6 +12,7 @@ import {
 } from "./engine.js";
 import { widthOf, heightOf } from "./geometry.js";
 import { RESEARCH_LAYOUTS } from "./research-layouts.js";
+import { TRIAL_LAYOUTS } from "./trial-layouts.js";
 import { choose } from "./ai.js";
 import { openLearning } from "./learning.js";
 const $ = (id) => document.getElementById(id);
@@ -709,7 +710,7 @@ $("setupDialog").addEventListener("close", () => {
 $("start").onclick = () => {
   const selectedLayout = Number($("layout").value);
   const selectedLevel = $("cpuLevel").value;
-  if (!Number.isInteger(selectedLayout) || selectedLayout < 0 || selectedLayout >= LAYOUTS.length + RESEARCH_LAYOUTS.length || !Object.prototype.hasOwnProperty.call(CPU_LEVEL_NAMES, selectedLevel)) {
+  if (!Number.isInteger(selectedLayout) || selectedLayout < 0 || selectedLayout >= LAYOUTS.length + RESEARCH_LAYOUTS.length + TRIAL_LAYOUTS.length || !Object.prototype.hasOwnProperty.call(CPU_LEVEL_NAMES, selectedLevel)) {
     $("researchModeNotice").textContent = "盤面とCPUの強さを選び直してください。";
     return;
   }
@@ -725,6 +726,13 @@ document
 for (const [i, layout] of RESEARCH_LAYOUTS.entries()) {
   const option = document.createElement("option");
   option.value = String(LAYOUTS.length + i);
+  option.textContent = layout.name;
+  $("layout").append(option);
+}
+// Research candidate remains opt-in; A–E keep their original indices.
+for (const [i, layout] of TRIAL_LAYOUTS.entries()) {
+  const option = document.createElement("option");
+  option.value = String(LAYOUTS.length + RESEARCH_LAYOUTS.length + i);
   option.textContent = layout.name;
   $("layout").append(option);
 }

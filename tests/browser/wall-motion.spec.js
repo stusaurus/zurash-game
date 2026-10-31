@@ -28,7 +28,8 @@ test("wall slides exactly one tile without changing the number of cells or rules
   const start = initial();
   const wall = movableWalls(start)[0];
   const source = start.walls[wall.wall], dest = wall.to;
-  const before = await page.locator(".cell").first().boundingBox();
+  const sourceBox = await page.locator(`[data-cell="${source}"]`).boundingBox();
+  const destBox = await page.locator(`[data-cell="${dest}"]`).boundingBox();
   await page.locator(`[data-cell="${source}"]`).click();
   await expect(page.locator(`[data-cell="${source}"].selected`)).toHaveCount(1);
   await page.locator(`[data-cell="${dest}"].target`).click();
@@ -50,8 +51,9 @@ test("wall slides exactly one tile without changing the number of cells or rules
   const parts = transform.slice(10, -1).replaceAll("px", "").split(",").map(Number);
   expect(parts).toHaveLength(2);
   expect(parts.every(Number.isFinite)).toBe(true);
-  expect(Math.abs(parts[0] - dx * before.width)).toBeLessThan(1);
-  expect(Math.abs(parts[1] - dy * before.height)).toBeLessThan(1);
+  // Cell spacing and fractional pixel rounding can differ by browser.
+  expect(Math.abs(parts[0] - (destBox.x - sourceBox.x))).toBeLessThan(1);
+  expect(Math.abs(parts[1] - (destBox.y - sourceBox.y))).toBeLessThan(1);
   // After a wall shift, the game is in slide phase: skip stays disabled,
   // while undo is available to reverse the uncompleted turn.
   await expect(page.locator("#skip")).toBeDisabled();
