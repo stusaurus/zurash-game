@@ -47,9 +47,9 @@ test("opt-in 9×9 star-density comparison preserves real mobile play and beginne
   }
 });
 
-test("star shift trial supports a CPU turn and restart",async({page})=>{
+for(const width of [390,1440]) test(`star shift trial CPU and restart at ${width}px`,async({page})=>{
   await page.emulateMedia({reducedMotion:"reduce"});
-  await page.setViewportSize({width:390,height:844});
+  await page.setViewportSize({width,height:844});
   await page.goto("/");
   await page.locator("#settings").click();
   await page.locator("#layout").selectOption("12");
