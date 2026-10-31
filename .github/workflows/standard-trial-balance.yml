@@ -1,0 +1,43 @@
+name: Standard board balance pilot
+
+on:
+  pull_request:
+    paths:
+      - "scripts/standard-trial-study.js"
+      - "src/trial-layouts.js"
+      - "src/engine.js"
+      - "src/ai.js"
+      - ".github/workflows/standard-trial-balance.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  balance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --check scripts/standard-trial-study.js
+      - name: Paired legal-engine pilot with both starting sides
+        env:
+          PAIRS: "8"
+          MAX_PLIES: "96"
+          REPORT: "reports/standard-trial-v2.json"
+        run: node scripts/standard-trial-study.js
+      - name: Replay every recorded move and resulting score
+        env:
+          REPORT: "reports/standard-trial-v2.json"
+        run: node scripts/standard-trial-study.js --verify
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: standard-board-balance-pilot
+          path: |
+            reports/standard-trial-v2.json
+            reports/standard-trial-v2.jsonl
+          retention-days: 30
