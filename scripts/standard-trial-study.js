@@ -16,7 +16,7 @@ if (!Number.isInteger(PAIRS) || PAIRS < 1 || PAIRS > 100 ||
 const configs = [
   {id:"beginner-7x7-5-star-win3", label:"はじまりの氷原", build:()=>initial(0)},
   {id:"trial-9x9-7-star-win4",label:"9×9 星7／先取4",build:()=>initial(10)},
-  {id:"trial-9x9-9-star-win4",label:"9×9 星9／先取4（研究用のみ）",build:()=>({...initial(9),target:4})},
+  {id:"trial-9x9-9-star-win4",label:"9×9 星9／先取4（試遊比較）",build:()=>initial(11)},
   {id:"trial-9x9-9-star-win5",label:"9×9 星9／先取5（主候補）",build:()=>initial(9)},
 ];
 const matchups = [["greedy","greedy"],["random","random"]];
@@ -124,6 +124,7 @@ const report={version:1,sourceCommit:process.env.GITHUB_SHA??"local",
   opening:configs.map(c=>({id:c.id,stars:c.build().stars.length,walls:c.build().walls.length,
     target:c.build().target??3,openings:[0,1].map(starter=>openingAudit(c.build(),starter))})),
   rows:[]};
+for(const audit of report.opening) console.log("OPENING_AUDIT "+JSON.stringify(audit));
 for(const config of configs){
   for(const matchup of matchups){
     const games=[];
