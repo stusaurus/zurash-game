@@ -1,5 +1,6 @@
 import {widthOf,heightOf,isPlayable,geometryKey,toBoardState} from "./geometry.js";
 import {RESEARCH_LAYOUTS} from "./research-layouts.js";
+import {TRIAL_LAYOUTS} from "./trial-layouts.js";
 export const SIZE = 7;
 export const DIRS = [
   { name: "上", dx: 0, dy: -1, icon: "↑" },
@@ -34,7 +35,7 @@ export const LAYOUTS = [
     players: [42, 6],
   },
 ];
-export const ALL_LAYOUTS = [...LAYOUTS, ...RESEARCH_LAYOUTS];
+export const ALL_LAYOUTS = [...LAYOUTS, ...RESEARCH_LAYOUTS, ...TRIAL_LAYOUTS];
 export const clone = (s) => structuredClone(s);
 export function initial(layout = 0, starter = 0) {
   const l = typeof layout === "object" ? layout : ALL_LAYOUTS[layout];
