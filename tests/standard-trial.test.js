@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {initial, LAYOUTS, ALL_LAYOUTS, actions, apply} from "../src/engine.js";
 import {RESEARCH_LAYOUTS} from "../src/research-layouts.js";
 import {TRIAL_LAYOUTS} from "../src/trial-layouts.js";
+import {CANDIDATES} from "../scripts/standard-candidate-layouts.js";
 
 test("beginner and existing A–E indices remain unchanged",()=>{
   assert.equal(initial(0).size,undefined);
@@ -18,8 +19,8 @@ test("beginner and existing A–E indices remain unchanged",()=>{
 test("9×9 seven-star trial has symmetric, distinct, legal opening choices",()=>{
   const index=LAYOUTS.length+RESEARCH_LAYOUTS.length;
   assert.equal(index,9); // A–E indices must remain stable.
-  assert.equal(TRIAL_LAYOUTS.length,3);
-  for(const [offset,starCount,target] of [[0,9,5],[1,7,4],[2,9,4]]) {
+  assert.equal(TRIAL_LAYOUTS.length,4);
+  for(const [offset,starCount,target] of [[0,9,5],[1,7,4],[2,9,4],[3,9,4]]) {
   const states=[initial(index+offset,0),initial(index+offset,1)];
   for(const s of states){
     assert.equal(s.size,9);
@@ -57,6 +58,13 @@ test("9×9 seven-star trial has symmetric, distinct, legal opening choices",()=>
   assert.deepEqual(quick.players,dense.players);
   assert.equal(quick.target,4);
   assert.equal(dense.target,5);
+  const shifted=initial(index+3);
+  assert.deepEqual(shifted.walls,quick.walls);
+  assert.deepEqual(shifted.players,quick.players);
+  assert.deepEqual(shifted.stars,[6,14,29,34,40,46,51,66,74]);
+  const studied=CANDIDATES.find(c=>c.id==='stars');
+  for(const field of ['size','target','walls','stars','players'])
+    assert.deepEqual(TRIAL_LAYOUTS[3][field],studied[field]);
   assert.ok(dense.stars.length/(dense.size*dense.size)>initial(0).stars.length/49,
     "Main candidate should not feel visually sparser than the beginner board");
 });

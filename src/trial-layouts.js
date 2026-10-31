@@ -32,6 +32,15 @@ export const TRIAL_LAYOUTS = [
     stars: [6, 13, 29, 34, 40, 46, 51, 67, 74],
     players: [...players],
   },
+  {
+    id: "standard-9x9-star-shift-experiment",
+    name: "【実験】9×9 星の位置ちがい（星9・先取4）",
+    size: 9,
+    target: 4,
+    walls: [...walls],
+    stars: [6, 14, 29, 34, 40, 46, 51, 66, 74],
+    players: [...players],
+  },
 ];
 // Both boards use 180°-rotation-symmetric objects, but geometric symmetry
 // never establishes fairness or human enjoyment.
